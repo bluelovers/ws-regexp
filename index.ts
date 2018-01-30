@@ -16,10 +16,10 @@ export class zhRegExp extends RegExp
 	constructor(str: RegExp, flags?: string, skip?: string)
 	constructor(str, flags = '', skip = '')
 	{
-		let [rs, f] = lib._word_zh(str, null, flags);
+		let [rs, f] = lib._word_zh(str, null, flags || str.flags);
 		let bool = (rs instanceof RegExp);
 
-		f = f || flags || '';
+		f = f || flags || rs.flags || '';
 
 		if (!bool)
 		{

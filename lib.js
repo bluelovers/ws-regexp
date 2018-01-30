@@ -77,7 +77,7 @@ function _word_zh(search, ret, flags = 'ig', skip) {
     let s = replace_literal(search, function (text) {
         return _word_zh_core(text, skip);
     });
-    flags = (s instanceof RegExp) ? null : flags;
+    flags = (s instanceof RegExp) ? s.flags : flags;
     return [s, ret, flags];
 }
 exports._word_zh = _word_zh;

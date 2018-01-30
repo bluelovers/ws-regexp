@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const lib = require("./lib");
 class zhRegExp extends RegExp {
     constructor(str, flags = '', skip = '') {
-        let [rs, f] = lib._word_zh(str, null, flags);
+        let [rs, f] = lib._word_zh(str, null, flags || str.flags);
         let bool = (rs instanceof RegExp);
-        f = f || flags || '';
+        f = f || flags || rs.flags || '';
         if (!bool) {
             super(rs, f);
         }

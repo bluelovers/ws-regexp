@@ -119,7 +119,7 @@ export function _word_zh(search, ret, flags = 'ig', skip?: string)
 	});
 
 	// @ts-ignore
-	flags = (s instanceof RegExp) ? null : flags;
+	flags = (s instanceof RegExp) ? s.flags : flags;
 
 	return [s, ret, flags];
 }
