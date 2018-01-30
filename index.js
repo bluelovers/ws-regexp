@@ -18,5 +18,12 @@ class zhRegExp extends RegExp {
     }
 }
 exports.zhRegExp = zhRegExp;
+function isRegExp(r) {
+    if ((r instanceof RegExp) || Object.prototype.toString.call(r) === '[object RegExp]') {
+        return r;
+    }
+    return null;
+}
+exports.isRegExp = isRegExp;
 exports.create = zhRegExp.create.bind(zhRegExp);
 exports.default = zhRegExp;

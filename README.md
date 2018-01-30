@@ -8,7 +8,12 @@
 
 ```ts
 import zhRegExp from 'regexp-cjk';
-import { zhRegExp, create } from 'regexp-cjk';
+import { zhRegExp, create, isRegExp } from 'regexp-cjk';
+```
+
+```ts
+new zhRegExp(string);
+new zhRegExp(RegExp);
 ```
 
 ```ts
@@ -40,4 +45,14 @@ import { zhRegExp, create } from 'regexp-cjk';
 /嫉妒吉[尔爾]|[懒嬾]惰吉[尔爾]|怠惰吉[尔爾]/
 /米[娅婭]・艾璐[罗羅儸]德/
 /神[学學]+(?:院|校|[园園])/
+```
+
+### api
+
+```ts
+export interface IApi
+{
+	(str: string, flags?: string, skip?: string): zhRegExp
+	(str: RegExp, flags?: string, skip?: string): zhRegExp
+}
 ```
