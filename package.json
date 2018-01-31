@@ -1,0 +1,42 @@
+{
+  "name": "tieba-harmony",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "big5",
+    "tieba",
+    "harmony",
+    "word",
+    "block",
+    "charset",
+    "check",
+    "euc-jp",
+    "expression",
+    "gb2312",
+    "gbk",
+    "generator",
+    "is",
+    "javascript",
+    "match",
+    "parse",
+    "re",
+    "regex",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression",
+    "test",
+    "tool",
+    "type",
+    "unicode"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "regexp-cjk": "^1.0.1"
+  }
+}
