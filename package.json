@@ -1,24 +1,22 @@
 {
   "name": "tieba-harmony",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "百度貼吧 關鍵字 和諧/反和諧 unescape / escape tieba harmony keywords",
   "keywords": [
     "big5",
-    "tieba",
-    "harmony",
-    "word",
     "block",
     "charset",
     "check",
     "euc-jp",
     "expression",
     "gb2312",
+    "unescape",
+    "escape",
+    "keywords",
+    "chinese",
     "gbk",
     "generator",
+    "harmony",
     "is",
     "javascript",
     "match",
@@ -30,13 +28,31 @@
     "regular",
     "regular expression",
     "test",
+    "tieba",
     "tool",
     "type",
-    "unicode"
+    "unicode",
+    "word"
   ],
-  "author": "",
+  "homepage": "https://github.com/bluelovers/node-tieba-harmony#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/node-tieba-harmony/issues"
+  },
   "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/node-tieba-harmony.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "regexp-cjk": "^1.0.1"
-  }
+  },
+  "devDependencies": {}
 }
