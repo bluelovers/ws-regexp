@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const regexp2_1 = require("regexp2");
 const chinese_convert_1 = require("chinese_convert");
 const StrUtil = require("str-util");
+const japanese = require("japanese");
 function replace_literal(r, cb) {
     let bool = (r instanceof RegExp);
     let rb = regexp2_1.parse(r);
@@ -36,10 +37,59 @@ function toRegexp(res, cb) {
     }
     return res.text;
 }
+let local_range = [
+    '〇一二三四五六七八九十'.split(''),
+    '零一二三四五六七八九十'.split(''),
+];
+[
+    ['common', '十'],
+    ['formal', '十'],
+    ['traditional', '拾'],
+    ['traditionalOld', '拾'],
+    ['simplified', '拾'],
+    ['traditional', '什'],
+    ['traditionalOld', '什'],
+    ['simplified', '什'],
+    ['chineseMilitary'],
+].forEach(function (key) {
+    let ls = japanese.predefineedTranscriptionConfigs.digits[key[0]];
+    if (ls) {
+        ls = Object.values(ls);
+        if (key[1]) {
+            ls.push(key[1]);
+        }
+        local_range.push(ls);
+    }
+});
 function _(b, cb) {
     switch (b.type) {
         case regexp2_1.types.CHARSET:
-            return b.text;
+            {
+                let text = '';
+                for (let a of b.body) {
+                    if (a.type == regexp2_1.types.RANGE) {
+                        let s = a.start.text;
+                        let e = a.end.text;
+                        let t;
+                        for (let r of local_range) {
+                            let i = r.indexOf(s);
+                            let j = r.indexOf(e, i);
+                            if (i !== -1 && j !== -1) {
+                                a.setBody(r.slice(i, j + 1));
+                                t = a.toString();
+                                break;
+                            }
+                        }
+                        if (!t) {
+                        }
+                        text += t || a.text;
+                    }
+                    else {
+                        text += a.text;
+                    }
+                }
+                return `[${text}]`;
+            }
         case regexp2_1.types.POSITIVE_LOOKAHEAD:
             return '(?=' + toRegexp(b, cb) + ')';
         case regexp2_1.types.NEGATIVE_LOOKAHEAD:

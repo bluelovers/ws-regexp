@@ -1,11 +1,38 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const lib = require("./lib");
+exports.defaultOptions = {};
 class zhRegExp extends RegExp {
-    constructor(str, flags = '', skip = '') {
-        let [rs, f] = lib._word_zh(str, null, flags || str.flags);
+    constructor(str, flags = null, options = {}) {
+        if (flags !== null && typeof flags == 'object') {
+            options = Object.assign({}, flags);
+            flags = options.flags || null;
+        }
+        if (typeof options == 'string') {
+            options = {
+                skip: options,
+            };
+        }
+        if (typeof options.flags == 'string') {
+            flags = options.flags;
+        }
+        let hasFlags = typeof flags == 'string';
+        let rs, f;
+        if (!options.disableZh) {
+            [rs, f] = lib._word_zh(str, null, flags || str.flags);
+        }
+        else if (!options.disableLocalRange) {
+            rs = lib.replace_literal(str, function (text) {
+                return text;
+            });
+        }
         let bool = (rs instanceof RegExp);
-        f = f || flags || rs.flags || '';
+        if (hasFlags) {
+            f = flags;
+        }
+        else {
+            f = f || flags || rs.flags || '';
+        }
         if (!bool) {
             super(rs, f);
         }
@@ -13,7 +40,7 @@ class zhRegExp extends RegExp {
             super(rs.source, f);
         }
     }
-    static create(str, flags = '', skip = '', ...argv) {
+    static create(str, flags = null, skip, ...argv) {
         return new this(str, flags, skip, ...argv);
     }
 }

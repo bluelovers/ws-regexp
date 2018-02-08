@@ -6,20 +6,75 @@ import * as lib from './lib';
 
 export interface IApi
 {
-	(str: string, flags?: string, skip?: string): zhRegExp
-	(str: RegExp, flags?: string, skip?: string): zhRegExp
+	(str: string | RegExp, flags?: string, options?: IOptions | string): zhRegExp,
+	(str: string | RegExp, options?: IOptions): zhRegExp,
 }
+
+export interface IOptions
+{
+	skip?: string,
+	disableZh?: boolean,
+	/**
+	 * disableLocalRange only work when disableZh is true
+	 */
+	disableLocalRange?: boolean,
+	flags?: string,
+}
+
+export const defaultOptions: IOptions = {
+
+};
 
 export class zhRegExp extends RegExp
 {
-	constructor(str: string, flags?: string, skip?: string)
-	constructor(str: RegExp, flags?: string, skip?: string)
-	constructor(str, flags = '', skip = '')
+	constructor(str: string | RegExp, flags?: string, options?: IOptions | string)
+	constructor(str: string | RegExp, options?: IOptions)
+	constructor(str, flags = null, options: IOptions | string = {})
 	{
-		let [rs, f] = lib._word_zh(str, null, flags || str.flags);
+		if (flags !== null && typeof flags == 'object')
+		{
+			options = Object.assign({}, flags) as IOptions;
+			flags = options.flags || null;
+		}
+
+		if (typeof options == 'string')
+		{
+			options = {
+				skip: options,
+			};
+		}
+
+		if (typeof options.flags == 'string')
+		{
+			flags = options.flags;
+		}
+
+		let hasFlags = typeof flags == 'string';
+
+		let rs, f;
+
+		if (!options.disableZh)
+		{
+			[rs, f] = lib._word_zh(str, null, flags || str.flags);
+		}
+		else if (!options.disableLocalRange)
+		{
+			rs = lib.replace_literal(str, function(text: string)
+			{
+				return text;
+			});
+		}
+
 		let bool = (rs instanceof RegExp);
 
-		f = f || flags || rs.flags || '';
+		if (hasFlags)
+		{
+			f = flags;
+		}
+		else
+		{
+			f = f || flags || rs.flags || '';
+		}
 
 		if (!bool)
 		{
@@ -31,7 +86,9 @@ export class zhRegExp extends RegExp
 		}
 	}
 
-	static create(str, flags = '', skip = '', ...argv)
+	static create(str: string | RegExp, flags?: string, options?: IOptions | string)
+	static create(str: string | RegExp, options?: IOptions)
+	static create(str, flags = null, skip?, ...argv)
 	{
 		return new this(str, flags, skip, ...argv);
 	}

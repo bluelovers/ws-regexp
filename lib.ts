@@ -5,10 +5,11 @@
 import { parse as regexpParse, types } from 'regexp2';
 import { cn2tw, tw2cn } from 'chinese_convert';
 import * as StrUtil from 'str-util';
+import * as japanese from 'japanese';
 
-export function replace_literal(r: string, cb : (text: string) => string): string
-export function replace_literal(r: RegExp, cb : (text: string) => string): RegExp
-export function replace_literal(r, cb : (text: string) => string)
+export function replace_literal(r: string, cb: (text: string) => string): string
+export function replace_literal(r: RegExp, cb: (text: string) => string): RegExp
+export function replace_literal(r, cb: (text: string) => string)
 {
 	let bool = (r instanceof RegExp);
 
@@ -33,7 +34,8 @@ function toRegexp(res, cb): string
 		}
 		else if (res.type == types.MATCH)
 		{
-			return res.body.reduce(function(a, b){
+			return res.body.reduce(function (a, b)
+			{
 				a.push(_(b, cb));
 
 				return a;
@@ -58,12 +60,97 @@ function toRegexp(res, cb): string
 	return res.text;
 }
 
+let local_range = [
+	'〇一二三四五六七八九十'.split(''),
+	'零一二三四五六七八九十'.split(''),
+];
+
+[
+	['common', '十'],
+	['formal', '十'],
+
+	['traditional', '拾'],
+	['traditionalOld', '拾'],
+	['simplified', '拾'],
+
+	['traditional', '什'],
+	['traditionalOld', '什'],
+	['simplified', '什'],
+
+	['chineseMilitary'],
+	//['vietnam'],
+
+].forEach(function (key)
+{
+	let ls = japanese.predefineedTranscriptionConfigs.digits[key[0]];
+	if (ls)
+	{
+		ls = Object.values(ls);
+		if (key[1])
+		{
+			ls.push(key[1]);
+		}
+
+		local_range.push(ls);
+	}
+});
+
+//console.log(local_range);
+
 function _(b, cb)
 {
 	switch (b.type)
 	{
 		case types.CHARSET:
-			return b.text;
+		{
+			let text = '';
+
+			for (let a of b.body)
+			{
+				if (a.type == types.RANGE)
+				{
+					let s = a.start.text;
+					let e = a.end.text;
+
+					let t: string;
+
+					for (let r of local_range)
+					{
+						let i = r.indexOf(s);
+						let j = r.indexOf(e, i);
+
+						if (i !== -1 && j !== -1)
+						{
+							//t = r.slice(i, j + 1).join('');
+
+							a.setBody(r.slice(i, j + 1));
+							//console.log(a);
+							t = a.toString();
+
+							//console.log(a);
+							//console.dir(a);
+
+							break;
+						}
+					}
+
+					if (!t)
+					{
+						//console.log(a);
+						//console.dir(a);
+					}
+
+					text += t || a.text;
+				}
+				else
+				{
+					text += a.text;
+				}
+			}
+
+			return `[${text}]`;
+			//return b.text;
+		}
 		case types.POSITIVE_LOOKAHEAD:
 			return '(?=' + toRegexp(b, cb) + ')';
 		case types.NEGATIVE_LOOKAHEAD:
@@ -136,7 +223,7 @@ export function _word_zh_core(search: string, skip: string)
 		let jt = StrUtil.jp2zht(char);
 		let js = StrUtil.jp2zhs(char);
 
-		let a =[
+		let a = [
 			char,
 			...zhtw_convert.tw(char),
 			...zhtw_convert.cn(char),

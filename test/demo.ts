@@ -13,9 +13,18 @@ import { zhRegExp, create } from '..';
 	'嫉妒吉尔|懒惰吉尔|怠惰吉尔',
 	'米娅・艾璐罗德',
 	`神学+(?:院|校|园)`,
+	/[一-十]/,
+	/[壹-拾]/,
+	`[壹-什]`,
+	`[洞-勾]`,
+	///[〇-𠃩]/,
+	///[𠃩]/,
+	`[四-七]罗`,
 ].forEach(function (value, index, array)
 {
-	let r = create(value as any);
+	let r = create(value as any, null, {
+		//disableZh: true,
+	});
 
 	console.log(r);
 });
