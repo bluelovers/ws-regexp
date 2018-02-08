@@ -10,6 +10,8 @@ export declare function _word_zh_core(search: string, skip: string): string;
 export declare namespace zhtw_convert {
     const table_jp: {
         'の': string[];
+        '劍': string[];
+        '剣': string[];
     };
     function tw(char: any): string[];
     function cn(char: any): string[];

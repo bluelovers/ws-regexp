@@ -21,6 +21,7 @@ import { zhRegExp, create } from '..';
 	///[𠃩]/,
 	`[四-七]罗`,
 	/([《（「『【])([^《（「『【』」》）】\n]{1,5})([』」》）】])/g,
+	'劍剑剣',
 ].forEach(function (value, index, array)
 {
 	let r = create(value as any, null, {

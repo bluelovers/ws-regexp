@@ -267,6 +267,16 @@ export namespace zhtw_convert
 			'之',
 			'的',
 		],
+		'劍': [
+			'劍',
+			'剑',
+			'剣',
+		],
+		'剣': [
+			'劍',
+			'剑',
+			'剣',
+		],
 	};
 
 	let _table_cn = Object.keys(_table)
