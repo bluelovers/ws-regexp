@@ -37,7 +37,7 @@ function toRegexp(res, cb) {
     }
     return res.text;
 }
-let local_range = [
+exports.local_range = [
     '〇一二三四五六七八九十'.split(''),
     '零一二三四五六七八九十'.split(''),
 ];
@@ -58,7 +58,7 @@ let local_range = [
         if (key[1]) {
             ls.push(key[1]);
         }
-        local_range.push(ls);
+        exports.local_range.push(ls);
     }
 });
 function _(b, cb) {
@@ -71,7 +71,7 @@ function _(b, cb) {
                         let s = a.start.text;
                         let e = a.end.text;
                         let t;
-                        for (let r of local_range) {
+                        for (let r of exports.local_range) {
                             let i = r.indexOf(s);
                             let j = r.indexOf(e, i);
                             if (i !== -1 && j !== -1) {
@@ -192,3 +192,5 @@ var zhtw_convert;
     }
     zhtw_convert.cn = cn;
 })(zhtw_convert = exports.zhtw_convert || (exports.zhtw_convert = {}));
+const self = require("./lib");
+exports.default = self;

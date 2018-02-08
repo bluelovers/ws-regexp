@@ -60,7 +60,7 @@ function toRegexp(res, cb): string
 	return res.text;
 }
 
-let local_range = [
+export let local_range = [
 	'〇一二三四五六七八九十'.split(''),
 	'零一二三四五六七八九十'.split(''),
 ];
@@ -299,3 +299,6 @@ export namespace zhtw_convert
 		return a;
 	}
 }
+
+import * as self from './lib';
+export default self;

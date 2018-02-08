@@ -1,5 +1,6 @@
 export declare function replace_literal(r: string, cb: (text: string) => string): string;
 export declare function replace_literal(r: RegExp, cb: (text: string) => string): RegExp;
+export declare let local_range: string[][];
 export declare function array_unique(array: any[]): any[];
 export declare const matchOperatorsRe: RegExp;
 export declare function regex_str(str: string): string;
@@ -13,3 +14,5 @@ export declare namespace zhtw_convert {
     function tw(char: any): string[];
     function cn(char: any): string[];
 }
+import * as self from './lib';
+export default self;
