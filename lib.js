@@ -66,6 +66,9 @@ function _(b, cb) {
         case regexp2_1.types.CHARSET:
             {
                 let text = '';
+                if (b.invert) {
+                    text += '^';
+                }
                 for (let a of b.body) {
                     if (a.type == regexp2_1.types.RANGE) {
                         let s = a.start.text;

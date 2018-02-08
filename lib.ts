@@ -105,6 +105,11 @@ function _(b, cb)
 		{
 			let text = '';
 
+			if (b.invert)
+			{
+				text += '^';
+			}
+
 			for (let a of b.body)
 			{
 				if (a.type == types.RANGE)
@@ -147,6 +152,8 @@ function _(b, cb)
 					text += a.text;
 				}
 			}
+
+			//console.dir(b);
 
 			return `[${text}]`;
 			//return b.text;
