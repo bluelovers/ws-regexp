@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -46,7 +46,7 @@
   "dependencies": {
     "chinese_convert": "^1.0.8",
     "regexp-util": "^1.1.0",
-    "regexp2": "^1.1.0",
+    "regexp2": "^1.2.0",
     "str-util": "^2.3.3"
   },
   "devDependencies": {}
