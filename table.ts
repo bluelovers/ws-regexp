@@ -134,7 +134,7 @@ export const table = array_unique([
  * @type {string[][]}
  */
 export const table2 = array_unique([
-	['裸体', '果体',],
+	['裸体', '果体', new String('裸$2')],
 	['奴隷', '奴隶',],
 ]);
 
@@ -144,7 +144,7 @@ export const table3 = array_unique([
 ]);
 
 
-export function array_unique<T>(array: T[]): T[]
+export function array_unique<T>(array: Partial<T>[]): Partial<T>[]
 {
 	return array.filter(function (el, index, arr)
 	{

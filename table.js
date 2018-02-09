@@ -121,7 +121,7 @@ exports.table = array_unique([
     '蛋疼',
 ]);
 exports.table2 = array_unique([
-    ['裸体', '果体',],
+    ['裸体', '果体', new String('裸$2')],
     ['奴隷', '奴隶',],
 ]);
 exports.table3 = array_unique([

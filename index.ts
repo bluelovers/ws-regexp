@@ -2,7 +2,8 @@
  * Created by user on 2018/1/31/031.
  */
 
-import { create } from 'regexp-cjk';
+import { create, IApi } from 'regexp-cjk';
+
 export * from './table';
 import { table, table2, table3, array_unique } from './table';
 
@@ -13,11 +14,12 @@ export const SP_ESCAPE = '（河蟹）';
 
 export interface IOptions
 {
-	toRegExp?: () => RegExp,
+	toRegExp?: IApi,
+	fnSplitChar?: (s: string) => string[],
 
 	count?: number;
 
-	followReturn?: boolean,
+	staticReturn?: boolean,
 
 	tables?,
 
@@ -26,44 +28,25 @@ export interface IOptions
 
 export function escape(text: string, options: IOptions = {})
 {
-	let flags = typeof options.flags == 'string' ? options.flags : 'ig';
-
-	let t = (options.tables || [])
-		.concat(table2)
-		.concat(table3)
-		.reduce(function (a, b)
-		{
-			if (Array.isArray(b))
-			{
-				a = a.concat(b);
-			}
-			else
-			{
-				a.push(b);
-			}
-
-			return a;
-		}, [])
-		.concat(table)
-	;
-
 	let count = options.count || 1;
 	const fn = options.toRegExp ? options.toRegExp : create;
 
 	do
 	{
-		t.forEach(function (value: string, index, array)
+		loopTable(function (value, index, array, options)
 		{
-			let a = new Array(value.split('').length).fill(0).map(function (value, index, array)
+			let sa = options.fnSplitChar(value);
+
+			let a = new Array(sa.length).fill(0).map(function (value, index, array)
 			{
 				return '$' + (index + 1);
 			});
 			let r = a.join(SP_ESCAPE);
 
-			let s = fn('(' + value.split('').join(')(') + ')', flags);
+			let s = fn('(' + sa.join(')(') + ')', options.flags);
 
 			text = text.replace(s, r);
-		});
+		}, options);
 	}
 	while (--count > 0);
 
@@ -72,50 +55,99 @@ export function escape(text: string, options: IOptions = {})
 
 export function unescape(text: string, options: IOptions = {})
 {
-	let flags = typeof options.flags == 'string' ? options.flags : 'ig';
-
-	let t = (options.tables || [])
-		.concat(table2)
-		.concat(table3)
-		.reduce(function (a, b)
-		{
-			if (Array.isArray(b))
-			{
-				a = a.concat(b);
-			}
-			else
-			{
-				a.push(b);
-			}
-
-			return a;
-		}, [])
-		.concat(table)
-	;
-
 	let count = options.count || 1;
 	const fn = options.toRegExp ? options.toRegExp : create;
 
-	t.forEach(function (value: string, index, array)
+	loopTable(function (value, index, array, options, cache)
 	{
-		let rs = fn('(' + value.split('').join(')' + SP_KEY + '(') + ')', flags);
-		let s = new RegExp(rs.source.split(SP_KEY).join(SP_REGEXP), flags);
+		let sa = options.fnSplitChar(value);
 
-		let a = new Array(value.split('').length).fill(0).map(function (value, index, array)
+		let rs = fn('(' + sa.join(')' + SP_KEY + '(') + ')', options.flags);
+		let s = new RegExp(rs.source.split(SP_KEY).join(SP_REGEXP), options.flags);
+
+		let r;
+
+		if (typeof cache.retLast != 'undefined' && cache.retLast !== null && !(cache.retLast instanceof String))
 		{
-			return '$' + (index + 1);
-		});
-		let r = a.join('');
+			r = cache.retLast;
+		}
+		else if (!options.staticReturn && cache.retLast instanceof String)
+		{
+			r = cache.retLast.toString();
+		}
+		else if (!options.staticReturn && array.length == 1)
+		{
+			r = new Array(sa.length)
+				.fill(0)
+				.map(function (value, index, array)
+				{
+					return '$' + (index + 1);
+				}).join('')
+			;
+		}
+		else
+		{
+			r = array[0];
+		}
 
 		text = text.replace(s, r);
-	});
+	}, options);
 
 	return text;
 }
 
 export function getTable(options: IOptions = {}): [string, string, string][]
 {
-	let flags = typeof options.flags == 'string' ? options.flags : 'ig';
+	return loopTable(function (value, index, array, options, cache)
+	{
+		let rs: [string, string, string];
+
+		let s = options.fnSplitChar(value);
+		let r;
+
+		if (typeof cache.retLast != 'undefined' && cache.retLast !== null && !(cache.retLast instanceof String))
+		{
+			r = cache.retLast;
+		}
+		else if (!options.staticReturn && cache.retLast instanceof String)
+		{
+			r = cache.retLast.toString();
+		}
+		else if (!options.staticReturn && array.length == 1)
+		{
+			r = new Array(s.length)
+				.fill(0)
+				.map(function (value, index, array)
+				{
+					return '$' + (index + 1);
+				}).join('')
+			;
+		}
+		else
+		{
+			r = array[0];
+		}
+
+		rs = [s.join(SP_KEY), r, options.flags];
+
+		return rs;
+	}, options);
+}
+
+export interface ICache
+{
+	[key: string]: any,
+	[index: number]: any,
+	retLast?: String | Function,
+}
+
+export function loopTable(cb: (value: string, index: number, array: string[], options: IOptions, cache?: ICache) => any,
+	options: IOptions
+)
+{
+	options.flags = typeof options.flags == 'string' ? options.flags : 'ig';
+	options.fnSplitChar = options.fnSplitChar || splitChar;
+	options.toRegExp = options.toRegExp || create;
 
 	return (options.tables || [])
 		.concat(table2)
@@ -124,39 +156,32 @@ export function getTable(options: IOptions = {}): [string, string, string][]
 		.reduce(function (a, b)
 		{
 			let c;
-			c = Array.isArray(b) ? b : [b];
+			c = Array.isArray(b) ? b.slice() : [b];
+
+			const cache: ICache = {};
+
+			if (c.length > 1 && typeof c[c.length - 1] != 'string')
+			{
+				cache.retLast = c.pop();
+			}
 
 			c.forEach(function (value, index, array)
 			{
-				let rs: [string, string, string];
-
-				let s = value.split('');
-				let r;
-
-				if (c.length == 1 && options.followReturn)
-				{
-					r = new Array(s.length)
-						.fill(0)
-						.map(function (value, index, array)
-						{
-							return '$' + (index + 1);
-						}).join('')
-					;
-				}
-				else
-				{
-					r = c[0];
-				}
-
-				rs = [s.join(SP_KEY), r, flags];
+				let rs = cb(value, index, array, options, cache);
 
 				a.push(rs);
 			});
 
 			return a;
-		}, [] as [string, string, string][])
+		}, [])
 		;
 }
 
+export function splitChar(s: string): string[]
+{
+	return s.split('');
+}
+
 import * as self from './index';
+
 export default self;
