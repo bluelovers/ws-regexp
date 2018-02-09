@@ -1,6 +1,6 @@
 {
   "name": "tieba-harmony",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "百度貼吧 關鍵字 和諧/反和諧 unescape / escape tieba harmony keywords",
   "keywords": [
     "big5",
@@ -19,6 +19,9 @@
     "javascript",
     "keywords",
     "match",
+    "node-novel",
+    "novel",
+    "novel-text",
     "parse",
     "re",
     "regex",
