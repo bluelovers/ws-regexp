@@ -3,10 +3,11 @@
  */
 
 import { create } from 'regexp-cjk';
-import { table, table2 } from './table';
+export * from './table';
+import { table, table2, table3, array_unique } from './table';
 
 export const SP_KEY = '#_@_#';
-export const SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・。·])';
+export const SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・。·]|\\*|□|圌)';
 
 export const SP_ESCAPE = '（河蟹）';
 
@@ -15,11 +16,21 @@ export interface IOptions
 	toRegExp?: () => RegExp,
 
 	count?: number;
+
+	followReturn?: boolean,
+
+	tables?,
+
+	flags?: string,
 }
 
 export function escape(text: string, options: IOptions = {})
 {
-	let t = table2
+	let flags = typeof options.flags == 'string' ? options.flags : 'ig';
+
+	let t = (options.tables || [])
+		.concat(table2)
+		.concat(table3)
 		.reduce(function (a, b)
 		{
 			if (Array.isArray(b))
@@ -49,8 +60,7 @@ export function escape(text: string, options: IOptions = {})
 			});
 			let r = a.join(SP_ESCAPE);
 
-			let s = fn('(' + value.split('').join(')(') + ')', 'ig');
-
+			let s = fn('(' + value.split('').join(')(') + ')', flags);
 
 			text = text.replace(s, r);
 		});
@@ -62,7 +72,11 @@ export function escape(text: string, options: IOptions = {})
 
 export function unescape(text: string, options: IOptions = {})
 {
-	let t = table2
+	let flags = typeof options.flags == 'string' ? options.flags : 'ig';
+
+	let t = (options.tables || [])
+		.concat(table2)
+		.concat(table3)
 		.reduce(function (a, b)
 		{
 			if (Array.isArray(b))
@@ -84,8 +98,8 @@ export function unescape(text: string, options: IOptions = {})
 
 	t.forEach(function (value: string, index, array)
 	{
-		let rs = fn('(' + value.split('').join(')' + SP_KEY + '(') + ')', 'ig');
-		let s = new RegExp(rs.source.split(SP_KEY).join(SP_REGEXP), 'ig');
+		let rs = fn('(' + value.split('').join(')' + SP_KEY + '(') + ')', flags);
+		let s = new RegExp(rs.source.split(SP_KEY).join(SP_REGEXP), flags);
 
 		let a = new Array(value.split('').length).fill(0).map(function (value, index, array)
 		{
@@ -101,9 +115,11 @@ export function unescape(text: string, options: IOptions = {})
 
 export function getTable(options: IOptions = {}): [string, string, string][]
 {
-	const fn = options.toRegExp ? options.toRegExp : create;
+	let flags = typeof options.flags == 'string' ? options.flags : 'ig';
 
-	return table2
+	return (options.tables || [])
+		.concat(table2)
+		.concat(table3)
 		.concat(table)
 		.reduce(function (a, b)
 		{
@@ -114,7 +130,25 @@ export function getTable(options: IOptions = {}): [string, string, string][]
 			{
 				let rs: [string, string, string];
 
-				rs = [value.split('').join(SP_KEY), c[0], 'ig'];
+				let s = value.split('');
+				let r;
+
+				if (c.length == 1 && options.followReturn)
+				{
+					r = new Array(s.length)
+						.fill(0)
+						.map(function (value, index, array)
+						{
+							return '$' + (index + 1);
+						}).join('')
+					;
+				}
+				else
+				{
+					r = c[0];
+				}
+
+				rs = [s.join(SP_KEY), r, flags];
 
 				a.push(rs);
 			});

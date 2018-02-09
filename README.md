@@ -5,7 +5,15 @@
 
 `npm install tieba-harmony`
 
+## table
+
+> 歡迎提供更多詞庫
+
+* [table 詞庫](table.ts)
+
 ## demo
+
+* [API](index.d.ts)
 
 ```ts
 import tiebaHarmony from 'tieba-harmony';
