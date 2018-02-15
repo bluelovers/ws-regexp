@@ -3,7 +3,7 @@
  */
 
 import { parse as regexpParse, types } from 'regexp2';
-import { cn2tw, tw2cn } from 'chinese_convert';
+import { cn2tw, tw2cn } from './lib/convert';
 import * as StrUtil from 'str-util';
 import * as japanese from 'japanese';
 
@@ -299,6 +299,8 @@ export namespace zhtw_convert
 
 		a.push(cn2tw(char));
 
+		//console.log('cn2tw', char, a);
+
 		return a;
 	}
 
@@ -312,6 +314,8 @@ export namespace zhtw_convert
 		}
 
 		a.push(tw2cn(char));
+
+		//console.log('tw2cn', char, a);
 
 		return a;
 	}

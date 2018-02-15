@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const regexp2_1 = require("regexp2");
-const chinese_convert_1 = require("chinese_convert");
+const convert_1 = require("./lib/convert");
 const StrUtil = require("str-util");
 const japanese = require("japanese");
 function replace_literal(r, cb) {
@@ -191,7 +191,7 @@ var zhtw_convert;
         if (_table[char]) {
             a.push(_table[char]);
         }
-        a.push(chinese_convert_1.cn2tw(char));
+        a.push(convert_1.cn2tw(char));
         return a;
     }
     zhtw_convert.tw = tw;
@@ -200,7 +200,7 @@ var zhtw_convert;
         if (_table_cn[char]) {
             a.push(_table_cn[char]);
         }
-        a.push(chinese_convert_1.tw2cn(char));
+        a.push(convert_1.tw2cn(char));
         return a;
     }
     zhtw_convert.cn = cn;
