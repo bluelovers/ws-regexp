@@ -12,6 +12,7 @@ export declare namespace zhtw_convert {
         'の': string[];
         '劍': string[];
         '剣': string[];
+        '画': string[];
     };
     function tw(char: any): string[];
     function cn(char: any): string[];

@@ -23,6 +23,8 @@ import { zhRegExp, create } from '..';
 	/([《（「『【])([^《（「『【』」》）】\n]{1,5})([』」》）】])/g,
 	'劍剑剣',
 	'悪食',
+	'魯_鲁',
+	'画_划_劃_畫',
 ].forEach(function (value, index, array)
 {
 	let r = create(value as any, null, {

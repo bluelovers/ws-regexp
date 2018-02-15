@@ -156,6 +156,7 @@ function _word_zh_core(search, skip) {
             a = a.concat(zhtw_convert.table_jp[char]);
         }
         a = array_unique(a);
+        a.sort();
         return a.length > 1 ? '[' + a.join('') + ']' : a[0];
     });
 }
@@ -179,6 +180,12 @@ var zhtw_convert;
             '劍',
             '剑',
             '剣',
+        ],
+        '画': [
+            '划',
+            '画',
+            '劃',
+            '畫',
         ],
     };
     let _table_cn = Object.keys(_table)
