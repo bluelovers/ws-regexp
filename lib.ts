@@ -284,6 +284,14 @@ export namespace zhtw_convert
 			'劃',
 			'畫',
 		],
+		'砲': [
+			'砲',
+			'炮',
+		],
+		'炮': [
+			'砲',
+			'炮',
+		],
 	};
 
 	let _table_cn = Object.keys(_table)
