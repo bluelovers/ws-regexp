@@ -2,4 +2,4 @@
 /test/
 /.idea/
 /docs/
-/package-lock.json
+#/package-lock.json
