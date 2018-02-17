@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const regexp2_1 = require("regexp2");
-const convert_1 = require("./lib/convert");
-const StrUtil = require("str-util");
 const japanese = require("japanese");
+const cjk_conv_1 = require("cjk-conv");
 function replace_literal(r, cb) {
     let bool = (r instanceof RegExp);
     let rb = regexp2_1.parse(r);
@@ -139,86 +138,10 @@ function _word_zh_core(search, skip) {
         if (skip && skip.indexOf(char) != -1) {
             return char;
         }
-        let jt = StrUtil.jp2zht(char);
-        let js = StrUtil.jp2zhs(char);
-        let a = [
-            char,
-            ...zhtw_convert.tw(char),
-            ...zhtw_convert.cn(char),
-        ];
-        if (!skip || skip.indexOf(jt) == -1) {
-            a = a.concat(...zhtw_convert.cn(jt));
-        }
-        if (!skip || skip.indexOf(js) == -1) {
-            a = a.concat(...zhtw_convert.tw(js));
-        }
-        if (zhtw_convert.table_jp[char]) {
-            a = a.concat(zhtw_convert.table_jp[char]);
-        }
-        a = array_unique(a);
-        a.sort();
+        let a = cjk_conv_1.default.zhTable.auto(char);
         return a.length > 1 ? '[' + a.join('') + ']' : a[0];
     });
 }
 exports._word_zh_core = _word_zh_core;
-var zhtw_convert;
-(function (zhtw_convert) {
-    let _table = {
-        '罗': '羅',
-    };
-    zhtw_convert.table_jp = {
-        'の': [
-            '之',
-            '的',
-        ],
-        '劍': [
-            '劍',
-            '剑',
-            '剣',
-        ],
-        '剣': [
-            '劍',
-            '剑',
-            '剣',
-        ],
-        '画': [
-            '划',
-            '画',
-            '劃',
-            '畫',
-        ],
-        '砲': [
-            '砲',
-            '炮',
-        ],
-        '炮': [
-            '砲',
-            '炮',
-        ],
-    };
-    let _table_cn = Object.keys(_table)
-        .reduce(function (a, b) {
-        a[_table[b]] = b;
-        return a;
-    }, {});
-    function tw(char) {
-        let a = [];
-        if (_table[char]) {
-            a.push(_table[char]);
-        }
-        a.push(convert_1.cn2tw(char));
-        return a;
-    }
-    zhtw_convert.tw = tw;
-    function cn(char) {
-        let a = [];
-        if (_table_cn[char]) {
-            a.push(_table_cn[char]);
-        }
-        a.push(convert_1.tw2cn(char));
-        return a;
-    }
-    zhtw_convert.cn = cn;
-})(zhtw_convert = exports.zhtw_convert || (exports.zhtw_convert = {}));
 const self = require("./lib");
 exports.default = self;

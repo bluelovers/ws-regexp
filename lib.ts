@@ -6,6 +6,7 @@ import { parse as regexpParse, types } from 'regexp2';
 import { cn2tw, tw2cn } from './lib/convert';
 import * as StrUtil from 'str-util';
 import * as japanese from 'japanese';
+import cjkConv from 'cjk-conv';
 
 export function replace_literal(r: string, cb: (text: string) => string): string
 export function replace_literal(r: RegExp, cb: (text: string) => string): RegExp
@@ -227,6 +228,7 @@ export function _word_zh_core(search: string, skip: string)
 			return char;
 		}
 
+		/*
 		let jt = StrUtil.jp2zht(char);
 		let js = StrUtil.jp2zhs(char);
 
@@ -252,11 +254,14 @@ export function _word_zh_core(search: string, skip: string)
 
 		a = array_unique(a);
 		a.sort();
+		*/
+		let a = cjkConv.zhTable.auto(char);
 
 		return a.length > 1 ? '[' + a.join('') + ']' : a[0];
 	});
 }
 
+/*
 export namespace zhtw_convert
 {
 	let _table = {
@@ -335,6 +340,7 @@ export namespace zhtw_convert
 		return a;
 	}
 }
+*/
 
 import * as self from './lib';
 export default self;

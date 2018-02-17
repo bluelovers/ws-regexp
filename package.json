@@ -1,34 +1,65 @@
 {
   "name": "regexp-cjk",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
+    "char",
+    "character",
+    "characters",
     "charset",
     "check",
+    "chinese",
+    "cjk",
+    "cn",
+    "cn2tw",
+    "conv",
+    "conversion",
+    "convert",
     "euc-jp",
     "expression",
     "gb2312",
     "gbk",
     "generator",
+    "hanja",
     "is",
+    "japanese",
     "javascript",
+    "jp2zhs",
+    "jp2zht",
+    "kanji",
     "match",
+    "node-novel",
     "parse",
     "re",
-    "regex",
     "regex",
     "regexp",
     "regular",
     "regular expression",
+    "simplified",
+    "str-util",
     "test",
     "tool",
+    "traditional",
+    "transform",
+    "tw",
+    "tw2cn",
     "type",
-    "unicode"
+    "unicode",
+    "util",
+    "words",
+    "zh",
+    "zh2jp",
+    "zhs",
+    "zht"
   ],
   "homepage": "https://github.com/bluelovers/regexp-cjk#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/regexp-cjk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-cjk.git"
   },
   "license": "ISC",
   "author": "",
@@ -36,15 +67,12 @@
   "directories": {
     "test": "test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bluelovers/regexp-cjk.git"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "chinese_convert": "^1.0.8",
+    "cjk-conv": "^1.0.0",
     "japanese": "^1.2.0",
     "regexp-util": "^1.2.0",
     "regexp2": "^1.2.0",
