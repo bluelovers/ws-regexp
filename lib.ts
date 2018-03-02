@@ -3,7 +3,6 @@
  */
 
 import { parse as regexpParse, types } from 'regexp2';
-import { cn2tw, tw2cn } from './lib/convert';
 import * as StrUtil from 'str-util';
 import * as japanese from 'japanese';
 import cjkConv from 'cjk-conv';

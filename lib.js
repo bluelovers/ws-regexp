@@ -1,4 +1,7 @@
 "use strict";
+/**
+ * Created by user on 2018/1/31/031.
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
 const regexp2_1 = require("regexp2");
 const japanese = require("japanese");
@@ -33,6 +36,7 @@ function toRegexp(res, cb) {
         return toRegexp(res.left, cb) + '|' + toRegexp(res.right, cb);
     }
     else {
+        //console.log(res, res.type);
     }
     return res.text;
 }
@@ -60,6 +64,7 @@ exports.local_range = [
         exports.local_range.push(ls);
     }
 });
+//console.log(local_range);
 function _(b, cb) {
     switch (b.type) {
         case regexp2_1.types.CHARSET:
@@ -77,12 +82,18 @@ function _(b, cb) {
                             let i = r.indexOf(s);
                             let j = r.indexOf(e, i);
                             if (i !== -1 && j !== -1) {
+                                //t = r.slice(i, j + 1).join('');
                                 a.setBody(r.slice(i, j + 1));
+                                //console.log(a);
                                 t = a.toString();
+                                //console.log(a);
+                                //console.dir(a);
                                 break;
                             }
                         }
                         if (!t) {
+                            //console.log(a);
+                            //console.dir(a);
                         }
                         text += t || a.text;
                     }
@@ -90,19 +101,23 @@ function _(b, cb) {
                         text += a.text;
                     }
                 }
+                //console.dir(b);
                 return `[${text}]`;
+                //return b.text;
             }
         case regexp2_1.types.POSITIVE_LOOKAHEAD:
             return '(?=' + toRegexp(b, cb) + ')';
         case regexp2_1.types.NEGATIVE_LOOKAHEAD:
             return '(?!' + toRegexp(b, cb) + ')';
         case regexp2_1.types.CAPTURE_GROUP:
+            //console.log(b.body, b.type, b.body.type);
             return '(' + toRegexp(b, cb) + ')';
         case regexp2_1.types.NON_CAPTURE_GROUP:
             return '(?:' + toRegexp(b, cb) + ')';
         case regexp2_1.types.MATCH:
             return toRegexp(b, cb);
         case regexp2_1.types.QUANTIFIED:
+            //console.log(888, b, b.type);
             return _(b.body, cb) + toRegexp(b.quantifier, cb);
         case regexp2_1.types.LITERAL:
             let text = b.text;
@@ -129,6 +144,7 @@ function _word_zh(search, ret, flags = 'ig', skip) {
     let s = replace_literal(search, function (text) {
         return _word_zh_core(text, skip);
     });
+    // @ts-ignore
     flags = (s instanceof RegExp) ? s.flags : flags;
     return [s, ret, flags];
 }
@@ -138,10 +154,117 @@ function _word_zh_core(search, skip) {
         if (skip && skip.indexOf(char) != -1) {
             return char;
         }
+        /*
+        let jt = StrUtil.jp2zht(char);
+        let js = StrUtil.jp2zhs(char);
+
+        let a = [
+            char,
+            ...zhtw_convert.tw(char),
+            ...zhtw_convert.cn(char),
+        ];
+
+        if (!skip || skip.indexOf(jt) == -1)
+        {
+            a = a.concat(...zhtw_convert.cn(jt));
+        }
+        if (!skip || skip.indexOf(js) == -1)
+        {
+            a = a.concat(...zhtw_convert.tw(js));
+        }
+
+        if (zhtw_convert.table_jp[char])
+        {
+            a = a.concat(zhtw_convert.table_jp[char]);
+        }
+
+        a = array_unique(a);
+        a.sort();
+        */
         let a = cjk_conv_1.default.zhTable.auto(char);
         return a.length > 1 ? '[' + a.join('') + ']' : a[0];
     });
 }
 exports._word_zh_core = _word_zh_core;
+/*
+export namespace zhtw_convert
+{
+    let _table = {
+        '罗': '羅',
+    };
+
+    export const table_jp = {
+        'の': [
+            '之',
+            '的',
+        ],
+        '劍': [
+            '劍',
+            '剑',
+            '剣',
+        ],
+        '剣': [
+            '劍',
+            '剑',
+            '剣',
+        ],
+        '画': [
+            '划',
+            '画',
+            '劃',
+            '畫',
+        ],
+        '砲': [
+            '砲',
+            '炮',
+        ],
+        '炮': [
+            '砲',
+            '炮',
+        ],
+    };
+
+    let _table_cn = Object.keys(_table)
+        .reduce(function (a, b)
+        {
+            a[_table[b]] = b;
+
+            return a;
+        }, {})
+    ;
+
+    export function tw(char): string[]
+    {
+        let a = [];
+
+        if (_table[char])
+        {
+            a.push(_table[char])
+        }
+
+        a.push(cn2tw(char));
+
+        //console.log('cn2tw', char, a);
+
+        return a;
+    }
+
+    export function cn(char): string[]
+    {
+        let a = [];
+
+        if (_table_cn[char])
+        {
+            a.push(_table_cn[char])
+        }
+
+        a.push(tw2cn(char));
+
+        //console.log('tw2cn', char, a);
+
+        return a;
+    }
+}
+*/
 const self = require("./lib");
 exports.default = self;

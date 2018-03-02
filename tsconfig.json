@@ -26,16 +26,16 @@
     "locale": "zh-TW",
     "pretty": true,
 
-    "removeComments": true,
+    //"removeComments": true,
 
-    "baseUrl": ".",
-    "sourceRoot": ".",
-    "rootDir": ".",
-    "outDir": ".",
-
-    "paths": {
-
-    },
+//    "baseUrl": ".",
+//    "sourceRoot": ".",
+//    "rootDir": ".",
+//    "outDir": ".",
+//
+//    "paths": {
+//
+//    },
 
     "traceResolution": true,
     "newLine": "lf"

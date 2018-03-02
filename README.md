@@ -72,3 +72,19 @@ export interface IApi
 	(str: RegExp, flags?: string, skip?: string): zhRegExp
 }
 ```
+
+#### support check
+
+```ts
+console.log(zhRegExp.support);
+```
+
+```ts
+export declare const support: {
+    readonly leftContext: boolean;
+    readonly rightContext: boolean;
+    readonly lastParen: boolean;
+    readonly lastMatch: boolean;
+    readonly input: boolean;
+};
+```
