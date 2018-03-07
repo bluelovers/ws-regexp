@@ -1,7 +1,7 @@
 import { IApi } from 'regexp-cjk';
 export * from './table';
 export declare const SP_KEY = "#_@_#";
-export declare const SP_REGEXP = "(?:@|（·?）|-|/|\\(\\)|%|￥|_|\\?|？|\\||#|\\$|[（\\(](?:和谐|河蟹)[\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\.|[・。·]|\\*|□|圌)";
+export declare const SP_REGEXP = "(?:@|（·?）|-|/|\\(\\)|%|￥|_|\\?|？|\\||#|\\$|[（\\(](?:和谐|河蟹)[\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\.|[・。·]|\\*|□|圌|[=＝])";
 export declare const SP_ESCAPE = "（河蟹）";
 export interface IOptions {
     toRegExp?: IApi;

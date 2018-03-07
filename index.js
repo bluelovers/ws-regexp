@@ -7,7 +7,7 @@ const regexp_cjk_1 = require("regexp-cjk");
 __export(require("./table"));
 const table_1 = require("./table");
 exports.SP_KEY = '#_@_#';
-exports.SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・。·]|\\*|□|圌)';
+exports.SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・。·]|\\*|□|圌|[=＝])';
 exports.SP_ESCAPE = '（河蟹）';
 function escape(text, options = {}) {
     let count = options.count || 1;
