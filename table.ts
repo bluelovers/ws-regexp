@@ -159,6 +159,8 @@ export const table = array_unique([
 	'断頭',
 	'虐杀',
 
+	'色女',
+
 ]);
 
 /**
@@ -174,8 +176,10 @@ export const table2 = array_unique([
 export const table3 = array_unique([
 	['強姦', '弓虽姦'],
 	['強奸', '弓虽女干', '弓虽奸'],
-]);
 
+	['娼婦', '女昌妇'],
+	['娼妓', '女昌妓', '女昌女支'],
+]);
 
 export function array_unique<T>(array: Partial<T>[]): Partial<T>[]
 {

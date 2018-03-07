@@ -150,6 +150,7 @@ exports.table = array_unique([
     '断頭台',
     '断頭',
     '虐杀',
+    '色女',
 ]);
 exports.table2 = array_unique([
     ['裸体', '果体', new String('裸$2')],
@@ -158,6 +159,8 @@ exports.table2 = array_unique([
 exports.table3 = array_unique([
     ['強姦', '弓虽姦'],
     ['強奸', '弓虽女干', '弓虽奸'],
+    ['娼婦', '女昌妇'],
+    ['娼妓', '女昌妓', '女昌女支'],
 ]);
 function array_unique(array) {
     return array.filter(function (el, index, arr) {
