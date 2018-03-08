@@ -160,6 +160,10 @@ export const table = array_unique([
 	'虐杀',
 
 	'色女',
+	'麻藥',
+
+	'反国家',
+	'殺戮',
 
 ]);
 

@@ -151,6 +151,9 @@ exports.table = array_unique([
     '断頭',
     '虐杀',
     '色女',
+    '麻藥',
+    '反国家',
+    '殺戮',
 ]);
 exports.table2 = array_unique([
     ['裸体', '果体', new String('裸$2')],
