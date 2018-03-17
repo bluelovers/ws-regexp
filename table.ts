@@ -165,6 +165,10 @@ export const table = array_unique([
 	'反国家',
 	'殺戮',
 
+	'侵犯',
+	'賄賂',
+	'斩首',
+
 ]);
 
 /**
