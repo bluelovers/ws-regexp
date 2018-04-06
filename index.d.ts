@@ -1,8 +1,10 @@
 import { IApi } from 'regexp-cjk';
 export * from './table';
 export declare const SP_KEY = "#_@_#";
-export declare const SP_REGEXP = "(?:@|（·?）|-|/|\\(\\)|%|￥|_|\\?|？|\\||#|\\$|[（\\(](?:和谐|河蟹)[\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\.|[・。·]|\\*|□|圌|[=＝]|\\\\\\\\|\\/\\/|、|｜)";
+export declare const SP_REGEXP = "(?:@|（·?）|-|/|\\(\\)|%|￥|_|\\?|？|\\||#|\\$|[（\\(](?:和谐|河蟹)[\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\.|[・·]|\\*|□|圌|[=＝]|\\\\\\\\|\\/\\/|｜)";
+export declare const SP_REGEXP_UNSAFE: string;
 export declare const SP_ESCAPE = "（河蟹）";
+export declare const SP_REGEXP_STRICT: string;
 export interface IOptions {
     toRegExp?: IApi;
     fnSplitChar?: (s: string) => string[];
@@ -10,6 +12,8 @@ export interface IOptions {
     staticReturn?: boolean;
     tables?: any;
     flags?: string;
+    unsafe?: boolean;
+    strict?: boolean;
 }
 export declare function escape(text: string, options?: IOptions): string;
 export declare function unescape(text: string, options?: IOptions): string;

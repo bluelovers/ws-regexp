@@ -8,9 +8,12 @@ export * from './table';
 import { table, table2, table3, array_unique } from './table';
 
 export const SP_KEY = '#_@_#';
-export const SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・。·]|\\*|□|圌|[=＝]|\\\\\\\\|\\\/\\\/|、|｜)';
+
+export const SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・·]|\\*|□|圌|[=＝]|\\\\\\\\|\\\/\\\/|｜)';
+export const SP_REGEXP_UNSAFE = '(?:' + SP_REGEXP + '|、|。)';
 
 export const SP_ESCAPE = '（河蟹）';
+export const SP_REGEXP_STRICT = `(?:${SP_ESCAPE})`;
 
 export interface IOptions
 {
@@ -24,6 +27,9 @@ export interface IOptions
 	tables?,
 
 	flags?: string,
+
+	unsafe?: boolean,
+	strict?: boolean,
 }
 
 export function escape(text: string, options: IOptions = {})
@@ -58,12 +64,17 @@ export function unescape(text: string, options: IOptions = {})
 	let count = options.count || 1;
 	const fn = options.toRegExp ? options.toRegExp : create;
 
+	const SP_REGEXP_RUNTIME = options.strict ?
+		SP_REGEXP_STRICT :
+		( options.unsafe ? SP_REGEXP_UNSAFE : SP_REGEXP )
+	;
+
 	loopTable(function (value, index, array, options, cache)
 	{
 		let sa = options.fnSplitChar(value);
 
 		let rs = fn('(' + sa.join(')' + SP_KEY + '(') + ')', options.flags);
-		let s = new RegExp(rs.source.split(SP_KEY).join(SP_REGEXP), options.flags);
+		let s = new RegExp(rs.source.split(SP_KEY).join(SP_REGEXP_RUNTIME), options.flags);
 
 		let r;
 
