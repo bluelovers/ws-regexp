@@ -25,6 +25,7 @@ import { zhRegExp, create } from '..';
 	'悪食',
 	'魯_鲁',
 	'画_划_劃_畫',
+	'と',
 ].forEach(function (value, index, array)
 {
 	let r = create(value as any, null, {
