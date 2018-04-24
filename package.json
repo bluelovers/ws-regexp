@@ -22,6 +22,7 @@
     "gbk",
     "generator",
     "hanja",
+    "hanzi",
     "is",
     "japanese",
     "javascript",
@@ -71,11 +72,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "cjk-conv": "^1.0.8",
+    "cjk-conv": "^1.0.31",
     "japanese": "^1.2.0",
-    "regexp-util": "^1.2.0",
+    "regexp-util": "^1.2.2",
     "regexp2": "^1.2.0",
     "str-util": "^2.3.13"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/xregexp": "^3.0.29",
+    "xregexp": "^4.1.1"
+  }
 }
