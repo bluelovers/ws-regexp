@@ -4,6 +4,7 @@
 
 import lib, { hasSupportFlag, testFlag } from './lib';
 import FlagsName from './lib/flags';
+import PatternSupport, { testPattern } from './lib/pattern';
 
 const _support = {
 	/**
@@ -47,6 +48,12 @@ const _support = {
 		y: boolean,
 		[key: string]: boolean
 	},
+
+	pattern: Object.keys(PatternSupport).reduce(function (a, key)
+	{
+		a[key] = testPattern(key);
+		return a;
+	}, PatternSupport),
 };
 
 {

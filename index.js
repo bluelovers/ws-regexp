@@ -5,6 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const lib_1 = require("./lib");
 const flags_1 = require("./lib/flags");
+const pattern_1 = require("./lib/pattern");
 const _support = {
     /**
      * flag support with name
@@ -29,6 +30,10 @@ const _support = {
      * all flag support without name
      */
     flagsAll: {},
+    pattern: Object.keys(pattern_1.default).reduce(function (a, key) {
+        a[key] = pattern_1.testPattern(key);
+        return a;
+    }, pattern_1.default),
 };
 {
     let flagsAll = {};

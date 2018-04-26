@@ -27,22 +27,23 @@ console.log(support);
 
 ```ts
 { flags: 
-   { dotAll: true,
-     s: true,
-     sticky: true,
-     y: true,
-     unicode: true,
-     u: true,
-     freeSpacing: false,
-     x: false,
-     n: false,
-     multiline: true,
+   { multiline: true,
      m: true,
      global: true,
      g: true,
      ignoreCase: true,
-     i: true },
-  flagsAll: { g: true, i: true, m: true, s: true, u: true, y: true } }
+     i: true,
+     sticky: true,
+     y: true,
+     unicode: true,
+     u: true,
+     dotAll: true,
+     s: true,
+     freeSpacing: false,
+     x: false,
+     n: false },
+  flagsAll: { g: true, i: true, m: true, s: true, u: true, y: true },
+  pattern: { namedCapturingGroups: true } }
 ```
 
 ## link

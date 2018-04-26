@@ -29,6 +29,9 @@ export declare const support: Readonly<{
         u: boolean;
         y: boolean;
     };
+    pattern: {
+        namedCapturingGroups: boolean;
+    };
 }>;
 export import hasSupportFlag = lib.hasSupportFlag;
 export import testFlag = lib.testFlag;
