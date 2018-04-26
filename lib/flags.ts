@@ -24,6 +24,8 @@ export enum FlagsName
 	// ---------------
 
 	/**
+	 * dot match all mode
+	 * node.js 10
 	 *
 	 * @link http://2ality.com/2017/07/regexp-dotall-flag.html
 	 * @code

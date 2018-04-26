@@ -8,60 +8,6 @@ export { FlagsName };
  */
 export declare function hasSupportFlag(flag: string, RegExpClass?: typeof RegExp, skipPatternCheck?: boolean): boolean;
 export declare function testFlag(flag: string, RegExpClass?: typeof RegExp, flagsPattern?: {
-    readonly dotAll?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly s?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly sticky?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly y?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly unicode?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly u?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly freeSpacing?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly x?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
-    readonly n?: {
-        0: string;
-        1: string;
-        2: any;
-        3?: string | IFlagsPatternTestFn;
-    }[];
     readonly multiline?: {
         0: string;
         1: string;
@@ -93,6 +39,60 @@ export declare function testFlag(flag: string, RegExpClass?: typeof RegExp, flag
         3?: string | IFlagsPatternTestFn;
     }[];
     readonly i?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly sticky?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly y?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly unicode?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly u?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly dotAll?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly s?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly freeSpacing?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly x?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly n?: {
         0: string;
         1: string;
         2: any;

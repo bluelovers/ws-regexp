@@ -4,21 +4,21 @@
 import lib from './lib';
 export declare const support: Readonly<{
     flags: {
-        readonly dotAll: boolean;
-        readonly s: boolean;
-        readonly sticky: boolean;
-        readonly y: boolean;
-        readonly unicode: boolean;
-        readonly u: boolean;
-        readonly freeSpacing: boolean;
-        readonly x: boolean;
-        readonly n: boolean;
         readonly multiline: boolean;
         readonly m: boolean;
         readonly global: boolean;
         readonly g: boolean;
         readonly ignoreCase: boolean;
         readonly i: boolean;
+        readonly sticky: boolean;
+        readonly y: boolean;
+        readonly unicode: boolean;
+        readonly u: boolean;
+        readonly dotAll: boolean;
+        readonly s: boolean;
+        readonly freeSpacing: boolean;
+        readonly x: boolean;
+        readonly n: boolean;
     };
     flagsAll: {
         [key: string]: boolean;
