@@ -36,16 +36,28 @@ export function hasSupportFlag(flag: string, RegExpClass: typeof RegExp = RegExp
 	return isSupported;
 }
 
-export function testFlag(flag: string, RegExpClass: typeof RegExp = RegExp, flagsPattern = FlagsPattern)
+export function testFlag(flag: string, RegExpClass?: typeof RegExp, testPattern?: typeof FlagsPattern): boolean
+export function testFlag(flag: string, RegExpClass?: ICreateRegExp, testPattern?: typeof FlagsPattern): boolean
+// @ts-ignore
+export function testFlag<T>(flag: string, RegExpClass: ITypeCreateRegExp<T> = RegExp, testPattern = FlagsPattern): boolean
 {
-	if (flagsPattern[flag] && flagsPattern[flag].length)
+	if (testPattern[flag] && testPattern[flag].length)
 	{
-		return flagsPattern[flag].every(function (v)
+		return testPattern[flag].every(function (v)
 		{
 			let [pattern, input, value, fn] = v;
 			let bool: boolean;
 
-			let r = new RegExpClass(pattern, flag);
+			let r: RegExp;
+
+			if (typeof (<ICreateRegExp>RegExpClass).create == 'function')
+			{
+				r = (<ICreateRegExp>RegExpClass).create(pattern, flag);
+			}
+			else
+			{
+				r = new (<typeof RegExp>RegExpClass)(pattern, flag);
+			}
 
 			if (fn)
 			{
@@ -71,6 +83,7 @@ export function testFlag(flag: string, RegExpClass: typeof RegExp = RegExp, flag
 }
 
 import * as self from './index';
+import { PatternTest } from './pattern';
 
 export default self;
 
@@ -130,3 +143,16 @@ export interface IFlagsAll
 
 	[key: string]: boolean
 }
+
+export interface ICreateRegExp
+{
+	create?(pattern, flag)
+	create?(pattern, flag?)
+	create?(pattern, flag?, ...argv)
+}
+
+export type ITypeCreateRegExp<T> =
+	T extends typeof RegExp ? typeof RegExp :
+		T extends ICreateRegExp ? ICreateRegExp :
+			any
+	;

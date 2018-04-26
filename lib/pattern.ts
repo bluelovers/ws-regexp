@@ -2,6 +2,8 @@
  * Created by user on 2018/4/26/026.
  */
 
+import { ICreateRegExp, ITypeCreateRegExp } from './index';
+
 export const PatternSupport = {
 	namedCapturingGroups: false,
 	namedCapturingGroupsUnicode: false,
@@ -33,10 +35,13 @@ export const PatternTest: {
 
 export interface IPatternTestFn
 {
-	(r: RegExp, value: any, input: string, pattern: string, RegExpClass: typeof RegExp, flag: string): boolean,
+	<T>(r: RegExp, value: any, input: string, pattern: string, RegExpClass: ITypeCreateRegExp<T>, flag: string): boolean,
 }
 
-export function testPattern(name: string, RegExpClass: typeof RegExp = RegExp, testPattern = PatternTest)
+export function testPattern(name: string, RegExpClass?: typeof RegExp, testPattern?: typeof PatternTest): boolean
+export function testPattern(name: string, RegExpClass?: ICreateRegExp, testPattern?: typeof PatternTest): boolean
+// @ts-ignore
+export function testPattern<T>(name: string, RegExpClass: ITypeCreateRegExp<T> = RegExp, testPattern = PatternTest): boolean
 {
 	if (testPattern[name] && testPattern[name].length)
 	{
@@ -49,7 +54,16 @@ export function testPattern(name: string, RegExpClass: typeof RegExp = RegExp, t
 				let [pattern, flag, input, value, fn] = v;
 				let bool: boolean;
 
-				let r = new RegExpClass(pattern, flag);
+				let r: RegExp;
+
+				if (typeof (<ICreateRegExp>RegExpClass).create == 'function')
+				{
+					r = (<ICreateRegExp>RegExpClass).create(pattern, flag);
+				}
+				else
+				{
+					r = new (<typeof RegExp>RegExpClass)(pattern, flag);
+				}
 
 				if (fn)
 				{

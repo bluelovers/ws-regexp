@@ -28,9 +28,9 @@ const _support = {
         return a;
     }, {}),
     /**
-     * all flag support without name
+     * all flag support without name and pattern test
      */
-    flagsAll: index_1.testFlagsAll(),
+    flagsAll: index_1.testFlagsAll(RegExp, true),
     /**
      * pattern support
      */

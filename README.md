@@ -17,6 +17,15 @@ hasSupportFlag(flag: string, RegExpClass?: typeof RegExp, skipPatternCheck?: boo
 testFlag(flag: string, RegExpClass?: typeof RegExp, flagsPattern?): boolean
 ```
 
+`RegExpClass` can be Object with `create`, for some class can't create by `new`
+
+```ts
+export interface ICreateRegExp
+{
+	create(pattern: string, flag?: string, ...argv)
+}
+```
+
 ## demo
 
 ```ts

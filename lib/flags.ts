@@ -2,6 +2,8 @@
  * Created by user on 2018/4/26/026.
  */
 
+import { ICreateRegExp, ITypeCreateRegExp } from './index';
+
 export enum FlagsName
 {
 	multiline = 'm',
@@ -71,7 +73,7 @@ export const FlagsPattern: {
 
 export interface IFlagsPatternTestFn
 {
-	(r: RegExp, value: any, input: string, pattern: string, RegExpClass: typeof RegExp, flag: string): boolean,
+	<T>(r: RegExp, value: any, input: string, pattern: string, RegExpClass: ITypeCreateRegExp<T>, flag: string): boolean,
 }
 
 export default FlagsName;

@@ -2,10 +2,10 @@
  * Created by user on 2018/4/26/026.
  */
 
-import lib, { hasSupportFlag, testFlag } from './lib';
+import lib, { hasSupportFlag, testFlag, ICreateRegExp, IFlagsAll, ITypeCreateRegExp } from './lib';
 import FlagsName from './lib/flags';
 import { testFlagsAll } from './lib/index';
-import libPattern, { PatternSupport, testPattern } from './lib/pattern';
+import libPattern, { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
 
 const _support = {
 	/**
@@ -38,9 +38,9 @@ const _support = {
 		}),
 
 	/**
-	 * all flag support without name
+	 * all flag support without name and pattern test
 	 */
-	flagsAll: testFlagsAll(),
+	flagsAll: testFlagsAll(RegExp, true),
 
 	/**
 	 * pattern support
