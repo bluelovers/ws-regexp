@@ -1,0 +1,26 @@
+{
+  "name": "regexp-support",
+  "version": "1.0.0",
+  "description": "check RegExp ( regular expressions ) support",
+  "keywords": [
+    "check",
+    "es2018",
+    "flag",
+    "flags",
+    "is",
+    "re",
+    "regex",
+    "regexp",
+    "regular expression",
+    "support",
+    "supported",
+    "unicode",
+    "valid"
+  ],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
