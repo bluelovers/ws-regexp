@@ -2,10 +2,16 @@
  * Created by user on 2018/4/26/026.
  */
 export declare enum FlagsName {
-    s = "s",
+    multiline = "m",
+    m = "m",
+    global = "g",
+    g = "g",
+    ignoreCase = "i",
+    i = "i",
+    sticky = "y",
     y = "y",
-    x = "x",
-    n = "n",
+    unicode = "u",
+    u = "u",
     /**
      *
      * @link http://2ality.com/2017/07/regexp-dotall-flag.html
@@ -17,7 +23,10 @@ export declare enum FlagsName {
      * @type {string}
      */
     dotAll = "s",
-    sticky = "y",
+    s = "s",
+    freeSpacing = "x",
+    x = "x",
+    n = "n",
 }
 export declare const FlagsPattern: {
     [k in keyof typeof FlagsName]?: {

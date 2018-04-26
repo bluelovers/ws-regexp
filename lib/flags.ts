@@ -4,10 +4,24 @@
 
 export enum FlagsName
 {
-	s = 's',
+	multiline = 'm',
+	m = 'm',
+
+	global = 'g',
+	g = 'g',
+
+	ignoreCase = 'i',
+	i = 'i',
+
+	// ---------------
+
+	sticky = 'y',
 	y = 'y',
-	x = 'x',
-	n = 'n',
+
+	unicode = 'u',
+	u = 'u',
+
+	// ---------------
 
 	/**
 	 *
@@ -20,7 +34,15 @@ export enum FlagsName
 	 * @type {string}
 	 */
 	dotAll = 's',
-	sticky = 'y',
+	s = 's',
+
+	// ---------------
+
+	freeSpacing = 'x',
+	x = 'x',
+
+	n = 'n',
+
 }
 
 Object

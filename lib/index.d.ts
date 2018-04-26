@@ -5,20 +5,46 @@ import FlagsName, { IFlagsPatternTestFn } from './flags';
 export { FlagsName };
 /**
  * Check whether a RegExp flag is supported
- *
- * @param {string} flag
- * @param {typeof RegExp} RegExpClass
- * @returns {boolean}
  */
-export declare function hasSupportFlag(flag: string, RegExpClass?: typeof RegExp): boolean;
+export declare function hasSupportFlag(flag: string, RegExpClass?: typeof RegExp, skipPatternCheck?: boolean): boolean;
 export declare function testFlag(flag: string, RegExpClass?: typeof RegExp, flagsPattern?: {
+    readonly dotAll?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
     readonly s?: {
         0: string;
         1: string;
         2: any;
         3?: string | IFlagsPatternTestFn;
     }[];
+    readonly sticky?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
     readonly y?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly unicode?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly u?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly freeSpacing?: {
         0: string;
         1: string;
         2: any;
@@ -36,13 +62,37 @@ export declare function testFlag(flag: string, RegExpClass?: typeof RegExp, flag
         2: any;
         3?: string | IFlagsPatternTestFn;
     }[];
-    readonly dotAll?: {
+    readonly multiline?: {
         0: string;
         1: string;
         2: any;
         3?: string | IFlagsPatternTestFn;
     }[];
-    readonly sticky?: {
+    readonly m?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly global?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly g?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly ignoreCase?: {
+        0: string;
+        1: string;
+        2: any;
+        3?: string | IFlagsPatternTestFn;
+    }[];
+    readonly i?: {
         0: string;
         1: string;
         2: any;

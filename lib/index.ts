@@ -8,12 +8,8 @@ export { FlagsName }
 
 /**
  * Check whether a RegExp flag is supported
- *
- * @param {string} flag
- * @param {typeof RegExp} RegExpClass
- * @returns {boolean}
  */
-export function hasSupportFlag(flag: string, RegExpClass: typeof RegExp = RegExp)
+export function hasSupportFlag(flag: string, RegExpClass: typeof RegExp = RegExp, skipPatternCheck?: boolean)
 {
 	if (!flag || typeof flag != 'string' || flag.length != 1)
 	{
@@ -23,7 +19,7 @@ export function hasSupportFlag(flag: string, RegExpClass: typeof RegExp = RegExp
 	let isSupported: boolean = null;
 	try
 	{
-		if (FlagsPattern[flag])
+		if (!skipPatternCheck && FlagsPattern[flag])
 		{
 			isSupported = testFlag(flag, RegExpClass);
 		}

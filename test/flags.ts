@@ -2,6 +2,8 @@
  * Created by user on 2018/4/26/026.
  */
 
-import lib from '../lib';
+import support from '..';
 
-console.log(lib.hasSupportFlag('y'));
+console.dir(support, {
+	colors: true
+});

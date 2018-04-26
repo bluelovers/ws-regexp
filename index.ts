@@ -6,6 +6,9 @@ import lib, { hasSupportFlag, testFlag } from './lib';
 import FlagsName from './lib/flags';
 
 const _support = {
+	/**
+	 * flag support with name
+	 */
 	flags: Object
 		.keys(FlagsName)
 		.reduce(function (a, flags)
@@ -18,7 +21,7 @@ const _support = {
 			}
 			else if (FlagsName[flags] in a)
 			{
-				bool = FlagsName[flags];
+				bool = a[FlagsName[flags]];
 			}
 			else
 			{
@@ -30,8 +33,45 @@ const _support = {
 			return a;
 		}, {} as {
 			[k in keyof typeof FlagsName]: boolean
-		})
+		}),
+
+	/**
+	 * all flag support without name
+	 */
+	flagsAll: {} as {
+		g: boolean,
+		i: boolean,
+		m: boolean,
+		s: boolean,
+		u: boolean,
+		y: boolean,
+		[key: string]: boolean
+	},
 };
+
+{
+	let flagsAll = {};
+
+	for (let i = 65; i <= 90; i++)
+	{
+		let k1 = String.fromCharCode(i);
+		let k2 = String.fromCharCode(i + 32);
+
+		flagsAll[k1] = hasSupportFlag(k1);
+		flagsAll[k2] = hasSupportFlag(k2);
+	}
+
+	// @ts-ignore
+	_support.flagsAll = Object.keys(flagsAll).sort().reduce(function (a, flag)
+	{
+		if (flagsAll[flag])
+		{
+			a[flag] = flagsAll[flag];
+		}
+
+		return a;
+	}, {});
+}
 
 export const support = Object.freeze(_support);
 
