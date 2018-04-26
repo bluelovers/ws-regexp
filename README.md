@@ -25,6 +25,8 @@ import support from 'regexp-support';
 console.log(support);
 ```
 
+### node.js 10
+
 ```ts
 { flags: 
    { multiline: true,
@@ -43,7 +45,66 @@ console.log(support);
      x: false,
      n: false },
   flagsAll: { g: true, i: true, m: true, s: true, u: true, y: true },
-  pattern: { namedCapturingGroups: true } }
+  pattern: 
+   { namedCapturingGroups: true,
+     namedCapturingGroupsUnicode: true,
+     namedCapturingGroupsEmoji: false } }
+```
+
+### node.js 9
+
+> by test on RunKit
+
+```ts
+{ flags: 
+   { multiline: true,
+     m: true,
+     global: true,
+     g: true,
+     ignoreCase: true,
+     i: true,
+     sticky: true,
+     y: true,
+     unicode: true,
+     u: true,
+     dotAll: true,
+     s: true,
+     freeSpacing: false,
+     x: false,
+     n: false },
+  flagsAll: { g: true, i: true, m: true, s: true, u: true, y: true },
+  pattern: 
+   { namedCapturingGroups: false,
+     namedCapturingGroupsUnicode: false,
+     namedCapturingGroupsEmoji: false } }
+```
+
+### node.js 8
+
+> by test on RunKit
+
+```ts
+{ flags: 
+   { multiline: true,
+     m: true,
+     global: true,
+     g: true,
+     ignoreCase: true,
+     i: true,
+     sticky: true,
+     y: true,
+     unicode: true,
+     u: true,
+     dotAll: true,
+     s: true,
+     freeSpacing: false,
+     x: false,
+     n: false },
+  flagsAll: { g: true, i: true, m: true, s: true, u: true, y: true },
+  pattern: 
+   { namedCapturingGroups: false,
+     namedCapturingGroupsUnicode: false,
+     namedCapturingGroupsEmoji: false } }
 ```
 
 ## link
