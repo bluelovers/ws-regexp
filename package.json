@@ -1,6 +1,6 @@
 {
   "name": "regexp-support",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "check RegExp ( regular expressions ) support",
   "keywords": [
     "check",
@@ -8,6 +8,7 @@
     "flag",
     "flags",
     "is",
+    "pattern",
     "re",
     "regex",
     "regexp",

@@ -101,3 +101,21 @@ export declare function testFlag(flag: string, RegExpClass?: typeof RegExp, flag
 }): boolean;
 import * as self from './index';
 export default self;
+export declare function testFlagsAll(RegExpClass?: typeof RegExp, skipPatternCheck?: boolean): {
+    g: boolean;
+    i: boolean;
+    m: boolean;
+    s: boolean;
+    u: boolean;
+    y: boolean;
+    [key: string]: boolean;
+};
+export interface IFlagsAll {
+    g: boolean;
+    i: boolean;
+    m: boolean;
+    s: boolean;
+    u: boolean;
+    y: boolean;
+    [key: string]: boolean;
+}

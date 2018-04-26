@@ -5,6 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const lib_1 = require("./lib");
 const flags_1 = require("./lib/flags");
+const index_1 = require("./lib/index");
 const pattern_1 = require("./lib/pattern");
 const _support = {
     /**
@@ -29,29 +30,17 @@ const _support = {
     /**
      * all flag support without name
      */
-    flagsAll: {},
-    pattern: Object.keys(pattern_1.default).reduce(function (a, key) {
+    flagsAll: index_1.testFlagsAll(),
+    /**
+     * pattern support
+     */
+    pattern: Object.keys(pattern_1.PatternSupport).reduce(function (a, key) {
         a[key] = pattern_1.testPattern(key);
         return a;
-    }, pattern_1.default),
+    }, {}),
 };
-{
-    let flagsAll = {};
-    for (let i = 65; i <= 90; i++) {
-        let k1 = String.fromCharCode(i);
-        let k2 = String.fromCharCode(i + 32);
-        flagsAll[k1] = lib_1.hasSupportFlag(k1);
-        flagsAll[k2] = lib_1.hasSupportFlag(k2);
-    }
-    // @ts-ignore
-    _support.flagsAll = Object.keys(flagsAll).sort().reduce(function (a, flag) {
-        if (flagsAll[flag]) {
-            a[flag] = flagsAll[flag];
-        }
-        return a;
-    }, {});
-}
 exports.support = Object.freeze(_support);
 exports.hasSupportFlag = lib_1.default.hasSupportFlag;
 exports.testFlag = lib_1.default.testFlag;
+exports.testPattern = pattern_1.default.testPattern;
 exports.default = exports.support;

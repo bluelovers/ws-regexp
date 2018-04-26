@@ -4,41 +4,30 @@
 
 export const PatternSupport = {
 	namedCapturingGroups: false,
+	namedCapturingGroupsUnicode: false,
+	namedCapturingGroupsEmoji: false,
 };
 
 export const PatternTest: {
-	[k in keyof typeof PatternSupport]?: {
-		0: string,
-		1: string,
-		2: string,
-		3: boolean | any,
-		4?: string | IPatternTestFn,
-	}[]
+	[k in keyof typeof PatternSupport]?: IPatternTestRow[]
 } = {
+	/**
+	 * A-Z, a-z, 0-9, $, and _
+	 */
 	namedCapturingGroups: [
-		['U\\+(?<naïve嬢の日常>[0-9A-F]{4})', '', 'U+2620', {
-			groups: { 'naïve嬢の日常': '2620' },
-		}, function (r, value, input)
-		{
-			let ret = r.exec(input) as RegExpExecArray & {
-				groups: {
-					[key: string]: string,
-				}
-			};
-
-			return ret.groups && Object
-				.entries(ret.groups)
-				.every(function (v)
-				{
-					let [key, v1] = v;
-					let v2 = value.groups[key];
-
-					//console.log(key, v1, v2, v1 === v2);
-
-					return v1 === v2;
-				})
-			;
-		}],
+		testNamedCapturingGroups('Az'),
+		testNamedCapturingGroups('_09'),
+		testNamedCapturingGroups('$'),
+	],
+	namedCapturingGroupsUnicode: [
+		testNamedCapturingGroups('naïve嬢の日常'),
+		testNamedCapturingGroups('Русский'),
+		testNamedCapturingGroups('naïve'),
+		testNamedCapturingGroups('嬢の日常'),
+		testNamedCapturingGroups('𠬠', 'u'),
+	],
+	namedCapturingGroupsEmoji: [
+		testNamedCapturingGroups('👩', 'u'),
 	],
 };
 
@@ -96,4 +85,41 @@ export function testPattern(name: string, RegExpClass: typeof RegExp = RegExp, t
 	return null;
 }
 
-export default PatternSupport;
+export function testNamedCapturingGroups(key: string, flags?: string): IPatternTestRow
+{
+	return [`U\\+(?<${key}>[0-9A-F]{4})`, flags || '', 'U+2620', {
+		groups: { [key]: '2620' },
+	}, function (r, value, input)
+	{
+		let ret = r.exec(input) as RegExpExecArray & {
+			groups: {
+				[key: string]: string,
+			}
+		};
+
+		return ret.groups && Object
+			.entries(ret.groups)
+			.every(function (v)
+			{
+				let [key, v1] = v;
+				let v2 = value.groups[key];
+
+				//console.log(key, v1, v2, v1 === v2);
+
+				return v1 === v2;
+			})
+			;
+	}];
+}
+
+export interface IPatternTestRow
+{
+	0: string,
+	1: string,
+	2: string,
+	3: boolean | any,
+	4?: string | IPatternTestFn,
+}
+
+import * as self from './pattern';
+export default self;

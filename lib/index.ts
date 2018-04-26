@@ -71,4 +71,62 @@ export function testFlag(flag: string, RegExpClass: typeof RegExp = RegExp, flag
 }
 
 import * as self from './index';
+
 export default self;
+
+export function testFlagsAll(RegExpClass: typeof RegExp = RegExp, skipPatternCheck?: boolean): {
+	g: boolean,
+	i: boolean,
+	m: boolean,
+	s: boolean,
+	u: boolean,
+	y: boolean,
+
+	[key: string]: boolean
+}
+{
+	let flagsAll = {} as IFlagsAll;
+
+	for (let i = 65; i <= 90; i++)
+	{
+		let k1 = String.fromCharCode(i);
+		let k2 = String.fromCharCode(i + 32);
+
+		flagsAll[k1] = hasSupportFlag(k1, RegExpClass, skipPatternCheck);
+
+		flagsAll[k2] = hasSupportFlag(k2, RegExpClass, skipPatternCheck);
+	}
+
+	let def = [
+		'g',
+		'i',
+		'm',
+		's',
+		'u',
+		'y',
+	];
+
+	flagsAll = Object.keys(flagsAll).sort().reduce(function (a, flag)
+	{
+		if (flagsAll[flag] || def.includes(flag))
+		{
+			a[flag] = flagsAll[flag];
+		}
+
+		return a;
+	}, {} as IFlagsAll);
+
+	return flagsAll;
+}
+
+export interface IFlagsAll
+{
+	g: boolean,
+	i: boolean,
+	m: boolean,
+	s: boolean,
+	u: boolean,
+	y: boolean,
+
+	[key: string]: boolean
+}

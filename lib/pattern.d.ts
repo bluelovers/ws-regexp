@@ -3,26 +3,27 @@
  */
 export declare const PatternSupport: {
     namedCapturingGroups: boolean;
+    namedCapturingGroupsUnicode: boolean;
+    namedCapturingGroupsEmoji: boolean;
 };
 export declare const PatternTest: {
-    [k in keyof typeof PatternSupport]?: {
-        0: string;
-        1: string;
-        2: string;
-        3: boolean | any;
-        4?: string | IPatternTestFn;
-    }[];
+    [k in keyof typeof PatternSupport]?: IPatternTestRow[];
 };
 export interface IPatternTestFn {
     (r: RegExp, value: any, input: string, pattern: string, RegExpClass: typeof RegExp, flag: string): boolean;
 }
 export declare function testPattern(name: string, RegExpClass?: typeof RegExp, testPattern?: {
-    namedCapturingGroups?: {
-        0: string;
-        1: string;
-        2: string;
-        3: any;
-        4?: string | IPatternTestFn;
-    }[];
+    namedCapturingGroups?: self.IPatternTestRow[];
+    namedCapturingGroupsUnicode?: self.IPatternTestRow[];
+    namedCapturingGroupsEmoji?: self.IPatternTestRow[];
 }): boolean;
-export default PatternSupport;
+export declare function testNamedCapturingGroups(key: string, flags?: string): IPatternTestRow;
+export interface IPatternTestRow {
+    0: string;
+    1: string;
+    2: string;
+    3: boolean | any;
+    4?: string | IPatternTestFn;
+}
+import * as self from './pattern';
+export default self;
