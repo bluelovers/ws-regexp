@@ -1,0 +1,42 @@
+{
+  "name": "regexp-helper",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "check",
+    "es2018",
+    "esnext",
+    "flag",
+    "flags",
+    "helper",
+    "is",
+    "pattern",
+    "re",
+    "regex",
+    "regexp",
+    "regular expression",
+    "support",
+    "supported",
+    "unicode",
+    "util",
+    "valid"
+  ],
+  "homepage": "https://github.com/bluelovers/regexp-helper#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-helper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-helper.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "local-link": "npm link regexp-support",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "regexp-support": "^1.0.6"
+  }
+}
