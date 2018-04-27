@@ -3,6 +3,9 @@
  */
 import { ICreateRegExp } from './index';
 import { IPatternTestRow } from './pattern';
+/**
+ * @link https://www.regular-expressions.info/posixbrackets.html
+ */
 export declare enum POXIX {
     alnum = "alnum",
     alpha = "alpha",

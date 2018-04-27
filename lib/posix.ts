@@ -5,6 +5,9 @@
 import { ICreateRegExp, ITypeCreateRegExp } from './index';
 import { IPatternTestFn, IPatternTestRow, testPattern } from './pattern';
 
+/**
+ * @link https://www.regular-expressions.info/posixbrackets.html
+ */
 export enum POXIX
 {
 	alnum = 'alnum',
