@@ -34,6 +34,31 @@ import support from 'regexp-support';
 console.log(support);
 ```
 
+### desc
+
+#### lookAheadPositive, lookAheadNegative
+
+* `aa(?=bb)`
+* `aa(?!bb)`
+
+#### lookBehindPositive
+
+* `(?<=\$)foo`
+
+```ts
+const RE_DOLLAR_PREFIX = /(?<=\\$)foo/g;
+'$foo %foo foo'.replace(RE_DOLLAR_PREFIX, 'bar'); // => '$bar %foo foo'
+```
+
+#### lookBehindNegative
+
+* `(?<!\$)foo`
+
+```ts
+const RE_NO_DOLLAR_PREFIX = /(?<!\\$)foo/g;
+'$foo %foo foo'.replace(RE_NO_DOLLAR_PREFIX, 'bar'); // => '$foo %bar bar'
+```
+
 ### node.js 10
 
 ```ts
@@ -57,7 +82,11 @@ console.log(support);
   pattern: 
    { namedCapturingGroups: true,
      namedCapturingGroupsUnicode: true,
-     namedCapturingGroupsEmoji: false } }
+     namedCapturingGroupsEmoji: false,
+     lookAheadPositive: true,
+     lookAheadNegative: true,
+     lookBehindPositive: true,
+     lookBehindNegative: true } }
 ```
 
 ### node.js 9

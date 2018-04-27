@@ -1,10 +1,11 @@
 {
   "name": "regexp-support",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "check RegExp ( regular expressions ) support",
   "keywords": [
     "check",
     "es2018",
+    "esnext",
     "flag",
     "flags",
     "is",

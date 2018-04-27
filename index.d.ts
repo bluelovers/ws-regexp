@@ -34,6 +34,10 @@ export declare const support: Readonly<{
         namedCapturingGroups: boolean;
         namedCapturingGroupsUnicode: boolean;
         namedCapturingGroupsEmoji: boolean;
+        lookAheadPositive: boolean;
+        lookAheadNegative: boolean;
+        lookBehindPositive: boolean;
+        lookBehindNegative: boolean;
     };
 }>;
 export import hasSupportFlag = lib.hasSupportFlag;

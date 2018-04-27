@@ -6,6 +6,10 @@ export declare const PatternSupport: {
     namedCapturingGroups: boolean;
     namedCapturingGroupsUnicode: boolean;
     namedCapturingGroupsEmoji: boolean;
+    lookAheadPositive: boolean;
+    lookAheadNegative: boolean;
+    lookBehindPositive: boolean;
+    lookBehindNegative: boolean;
 };
 export declare const PatternTest: {
     [k in keyof typeof PatternSupport]?: IPatternTestRow[];

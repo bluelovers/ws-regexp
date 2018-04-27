@@ -8,6 +8,12 @@ export const PatternSupport = {
 	namedCapturingGroups: false,
 	namedCapturingGroupsUnicode: false,
 	namedCapturingGroupsEmoji: false,
+
+	lookAheadPositive: false,
+	lookAheadNegative: false,
+
+	lookBehindPositive: false,
+	lookBehindNegative: false,
 };
 
 export const PatternTest: {
@@ -30,6 +36,30 @@ export const PatternTest: {
 	],
 	namedCapturingGroupsEmoji: [
 		testNamedCapturingGroups('👩', 'u'),
+	],
+
+	lookAheadPositive: [
+		['aa(?=bb)', '', 'aabb', true, 'test'],
+	],
+
+	lookAheadNegative: [
+		['aa(?!bb)', '', 'aabb', false, 'test'],
+	],
+
+	lookBehindPositive: [
+		['(?<=\\$)foo', 'g', '$foo %foo foo', '$ %foo foo', 'replace'],
+		['(?<=\\$)foo', 'g', '$foo %foo foo', '$bar %foo foo', function <T>(r: RegExp, value: any, input: string, pattern: string, RegExpClass: ITypeCreateRegExp<T>, flag: string)
+		{
+			return input.replace(r, 'bar') === value;
+		}],
+	],
+
+	lookBehindNegative: [
+		['(?<!\\$)foo', 'g', '$foo %foo foo', '$foo % ', 'replace'],
+		['(?<!\\$)foo', 'g', '$foo %foo foo', '$foo %bar bar', function <T>(r: RegExp, value: any, input: string, pattern: string, RegExpClass: ITypeCreateRegExp<T>, flag: string)
+		{
+			return input.replace(r, 'bar') === value;
+		}],
 	],
 };
 
@@ -73,7 +103,20 @@ export function testPattern<T>(name: string, RegExpClass: ITypeCreateRegExp<T> =
 					}
 					else
 					{
-						bool = r[fn](input) === value;
+						let ret;
+
+						switch (fn)
+						{
+							case 'replace':
+								ret = input.replace(r, '');
+
+								bool = ret === value;
+
+								break;
+							default:
+								bool = r[fn](input) === value;
+								break;
+						}
 					}
 				}
 				else
