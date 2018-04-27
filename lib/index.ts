@@ -48,16 +48,7 @@ export function testFlag<T>(flag: string, RegExpClass: ITypeCreateRegExp<T> = Re
 			let [pattern, input, value, fn] = v;
 			let bool: boolean;
 
-			let r: RegExp;
-
-			if (typeof (<ICreateRegExp>RegExpClass).create == 'function')
-			{
-				r = (<ICreateRegExp>RegExpClass).create(pattern, flag);
-			}
-			else
-			{
-				r = new (<typeof RegExp>RegExpClass)(pattern, flag);
-			}
+			let r = createRegExp(pattern, flag, RegExpClass);
 
 			if (fn)
 			{
@@ -156,3 +147,20 @@ export type ITypeCreateRegExp<T> =
 		T extends ICreateRegExp ? ICreateRegExp :
 			any
 	;
+
+// @ts-ignore
+export function createRegExp<T>(pattern: string, flag?: string, RegExpClass: ITypeCreateRegExp<T> = RegExp)
+{
+	let r: RegExp;
+
+	if (typeof (<ICreateRegExp>RegExpClass).create == 'function')
+	{
+		r = (<ICreateRegExp>RegExpClass).create(pattern, flag);
+	}
+	else
+	{
+		r = new (<typeof RegExp>RegExpClass)(pattern, flag);
+	}
+
+	return r;
+}

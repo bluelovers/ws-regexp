@@ -2,7 +2,7 @@
  * Created by user on 2018/4/26/026.
  */
 
-import { ICreateRegExp, ITypeCreateRegExp } from './index';
+import { createRegExp, ICreateRegExp, ITypeCreateRegExp } from './index';
 
 export const PatternSupport = {
 	namedCapturingGroups: false,
@@ -68,32 +68,23 @@ export interface IPatternTestFn
 	<T>(r: RegExp, value: any, input: string, pattern: string, RegExpClass: ITypeCreateRegExp<T>, flag: string): boolean,
 }
 
-export function testPattern(name: string, RegExpClass?: typeof RegExp, testPattern?: typeof PatternTest): boolean
-export function testPattern(name: string, RegExpClass?: ICreateRegExp, testPattern?: typeof PatternTest): boolean
+export function testPattern(name: string, RegExpClass?: typeof RegExp, testPatterns?: typeof PatternTest): boolean
+export function testPattern(name: string, RegExpClass?: ICreateRegExp, testPatterns?: typeof PatternTest): boolean
 // @ts-ignore
-export function testPattern<T>(name: string, RegExpClass: ITypeCreateRegExp<T> = RegExp, testPattern = PatternTest): boolean
+export function testPattern<T>(name: string, RegExpClass: ITypeCreateRegExp<T> = RegExp, testPatterns = PatternTest): boolean
 {
-	if (testPattern[name] && testPattern[name].length)
+	if (testPatterns[name] && testPatterns[name].length)
 	{
 		let bool: boolean = false;
 
 		try
 		{
-			bool = testPattern[name].every(function (v)
+			bool = testPatterns[name].every(function (v)
 			{
 				let [pattern, flag, input, value, fn] = v;
 				let bool: boolean;
 
-				let r: RegExp;
-
-				if (typeof (<ICreateRegExp>RegExpClass).create == 'function')
-				{
-					r = (<ICreateRegExp>RegExpClass).create(pattern, flag);
-				}
-				else
-				{
-					r = new (<typeof RegExp>RegExpClass)(pattern, flag);
-				}
+				let r = createRegExp(pattern, flag, RegExpClass);
 
 				if (fn)
 				{

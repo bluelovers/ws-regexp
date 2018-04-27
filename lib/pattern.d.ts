@@ -17,8 +17,8 @@ export declare const PatternTest: {
 export interface IPatternTestFn {
     <T>(r: RegExp, value: any, input: string, pattern: string, RegExpClass: ITypeCreateRegExp<T>, flag: string): boolean;
 }
-export declare function testPattern(name: string, RegExpClass?: typeof RegExp, testPattern?: typeof PatternTest): boolean;
-export declare function testPattern(name: string, RegExpClass?: ICreateRegExp, testPattern?: typeof PatternTest): boolean;
+export declare function testPattern(name: string, RegExpClass?: typeof RegExp, testPatterns?: typeof PatternTest): boolean;
+export declare function testPattern(name: string, RegExpClass?: ICreateRegExp, testPatterns?: typeof PatternTest): boolean;
 export declare function testNamedCapturingGroups(key: string, flags?: string): IPatternTestRow;
 export interface IPatternTestRow {
     0: string;
