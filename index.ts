@@ -50,7 +50,25 @@ const _support = {
 		a[key] = testPattern(key);
 		return a;
 	}, {} as typeof PatternSupport),
+
+	hasFlagsProp: /x/g.flags === 'g',
+
+	nativeFlags: '',
 };
+
+_support.nativeFlags = Object
+	.keys(_support.flagsAll)
+	.reduce(function (a, f)
+	{
+		if (_support.flagsAll[f])
+		{
+			a.push(f);
+		}
+
+		return a;
+	}, [] as string[])
+	.join('')
+;
 
 export const support = Object.freeze(_support);
 

@@ -38,8 +38,11 @@ export function hasSupportFlag(flag: string, RegExpClass: typeof RegExp = RegExp
 
 export function testFlag(flag: string, RegExpClass?: typeof RegExp, testPattern?: typeof FlagsPattern): boolean
 export function testFlag(flag: string, RegExpClass?: ICreateRegExp, testPattern?: typeof FlagsPattern): boolean
-// @ts-ignore
-export function testFlag<T>(flag: string, RegExpClass: ITypeCreateRegExp<T> = RegExp, testPattern = FlagsPattern): boolean
+export function testFlag<T>(flag: string,
+	// @ts-ignore
+	RegExpClass: ITypeCreateRegExp<T> = RegExp,
+	testPattern = FlagsPattern
+): boolean
 {
 	if (testPattern[flag] && testPattern[flag].length)
 	{
@@ -138,13 +141,16 @@ export interface IFlagsAll
 export interface ICreateRegExp
 {
 	create?(pattern, flag)
+
 	create?(pattern, flag?)
+
 	create?(pattern, flag?, ...argv)
 }
 
 export type ITypeCreateRegExp<T> =
 	T extends typeof RegExp ? typeof RegExp :
 		T extends ICreateRegExp ? ICreateRegExp :
+			//T extends RegExpConstructor ? RegExpConstructor :
 			any
 	;
 

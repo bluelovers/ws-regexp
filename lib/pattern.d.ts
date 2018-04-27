@@ -6,6 +6,8 @@ export declare const PatternSupport: {
     namedCapturingGroups: boolean;
     namedCapturingGroupsUnicode: boolean;
     namedCapturingGroupsEmoji: boolean;
+    namedCapturingGroupsBackreference: boolean;
+    namedCapturingGroupsDuplicate: boolean;
     lookAheadPositive: boolean;
     lookAheadNegative: boolean;
     lookBehindPositive: boolean;

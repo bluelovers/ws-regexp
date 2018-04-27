@@ -34,11 +34,15 @@ export declare const support: Readonly<{
         namedCapturingGroups: boolean;
         namedCapturingGroupsUnicode: boolean;
         namedCapturingGroupsEmoji: boolean;
+        namedCapturingGroupsBackreference: boolean;
+        namedCapturingGroupsDuplicate: boolean;
         lookAheadPositive: boolean;
         lookAheadNegative: boolean;
         lookBehindPositive: boolean;
         lookBehindNegative: boolean;
     };
+    hasFlagsProp: boolean;
+    nativeFlags: string;
 }>;
 export import hasSupportFlag = lib.hasSupportFlag;
 export import testFlag = lib.testFlag;

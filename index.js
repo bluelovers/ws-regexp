@@ -38,7 +38,18 @@ const _support = {
         a[key] = pattern_1.testPattern(key);
         return a;
     }, {}),
+    hasFlagsProp: /x/g.flags === 'g',
+    nativeFlags: '',
 };
+_support.nativeFlags = Object
+    .keys(_support.flagsAll)
+    .reduce(function (a, f) {
+    if (_support.flagsAll[f]) {
+        a.push(f);
+    }
+    return a;
+}, [])
+    .join('');
 exports.support = Object.freeze(_support);
 exports.hasSupportFlag = lib_1.default.hasSupportFlag;
 exports.testFlag = lib_1.default.testFlag;

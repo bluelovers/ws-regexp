@@ -9,6 +9,9 @@ export const PatternSupport = {
 	namedCapturingGroupsUnicode: false,
 	namedCapturingGroupsEmoji: false,
 
+	namedCapturingGroupsBackreference: false,
+	namedCapturingGroupsDuplicate: false,
+
 	lookAheadPositive: false,
 	lookAheadNegative: false,
 
@@ -36,6 +39,15 @@ export const PatternTest: {
 	],
 	namedCapturingGroupsEmoji: [
 		testNamedCapturingGroups('👩', 'u'),
+	],
+
+	namedCapturingGroupsBackreference: [
+		['^(?<half>.*).\\k<half>$', 'u', 'a*a', true, 'test'],
+		['^(?<half>.*).\\k<half>$', 'u', 'a*b', false, 'test'],
+	],
+
+	namedCapturingGroupsDuplicate: [
+		['^(?:(?<half>b)|(?<half>a)).\\k<half>$', 'u', 'a*a', true, 'test'],
 	],
 
 	lookAheadPositive: [

@@ -83,10 +83,14 @@ const RE_NO_DOLLAR_PREFIX = /(?<!\\$)foo/g;
    { namedCapturingGroups: true,
      namedCapturingGroupsUnicode: true,
      namedCapturingGroupsEmoji: false,
+     namedCapturingGroupsBackreference: true,
+     namedCapturingGroupsDuplicate: false,
      lookAheadPositive: true,
      lookAheadNegative: true,
      lookBehindPositive: true,
-     lookBehindNegative: true } }
+     lookBehindNegative: true },
+  hasFlagsProp: true,
+  nativeFlags: 'gimsuy' }
 ```
 
 ### node.js 9
