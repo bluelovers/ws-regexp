@@ -6,8 +6,8 @@ import lib, { hasSupportFlag, testFlag, ICreateRegExp, IFlagsAll, ITypeCreateReg
 import { FlagsName } from './lib/flags';
 import { testFlagsAll } from './lib/index';
 import libPattern, { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
-import { testPrototype } from './lib/proto/prototype';
-import { testStatic } from './lib/proto/static';
+import { testPrototype, IRegExpPrototype } from './lib/proto/prototype';
+import { testStatic, IRegExpStatic } from './lib/proto/static';
 import { testSymbol } from './lib/symbol';
 
 const _support = {
@@ -87,6 +87,8 @@ export import FlagsName = FlagsName
 export { hasSupportFlag };
 export { testFlag };
 export { testPattern };
+
+export { IRegExpPrototype, IRegExpStatic }
 
 type valueof<T> = T[keyof T];
 

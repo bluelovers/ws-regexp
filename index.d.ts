@@ -4,6 +4,8 @@
 import { hasSupportFlag, testFlag } from './lib';
 import { FlagsName } from './lib/flags';
 import { testPattern } from './lib/pattern';
+import { IRegExpPrototype } from './lib/proto/prototype';
+import { IRegExpStatic } from './lib/proto/static';
 export declare const support: Readonly<{
     nativeFlags: string;
     flags: {
@@ -93,4 +95,5 @@ export import FlagsName = FlagsName;
 export { hasSupportFlag };
 export { testFlag };
 export { testPattern };
+export { IRegExpPrototype, IRegExpStatic };
 export default support;
