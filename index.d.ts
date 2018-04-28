@@ -4,6 +4,7 @@
 import lib from './lib';
 import libPattern from './lib/pattern';
 export declare const support: Readonly<{
+    nativeFlags: string;
     flags: {
         readonly multiline: boolean;
         readonly m: boolean;
@@ -41,8 +42,44 @@ export declare const support: Readonly<{
         lookBehindPositive: boolean;
         lookBehindNegative: boolean;
     };
-    hasFlagsProp: boolean;
-    nativeFlags: string;
+    prototype: {
+        exec?: boolean;
+        test?: boolean;
+        readonly source?: boolean;
+        readonly global?: boolean;
+        readonly ignoreCase?: boolean;
+        readonly multiline?: boolean;
+        lastIndex?: boolean;
+        compile?: boolean;
+        readonly flags?: boolean;
+        readonly sticky?: boolean;
+        readonly unicode?: boolean;
+        dotAll?: boolean;
+    };
+    static: {
+        readonly prototype?: boolean;
+        $1?: boolean;
+        $2?: boolean;
+        $3?: boolean;
+        $4?: boolean;
+        $5?: boolean;
+        $6?: boolean;
+        $7?: boolean;
+        $8?: boolean;
+        $9?: boolean;
+        lastMatch?: boolean;
+        input?: boolean;
+        $_?: boolean;
+        '$&'?: boolean;
+        lastParen?: boolean;
+        '$+'?: boolean;
+        leftContext?: boolean;
+        '$`'?: boolean;
+        rightContext?: boolean;
+        '$\''?: boolean;
+        $10?: boolean;
+        $100?: boolean;
+    };
 }>;
 export import hasSupportFlag = lib.hasSupportFlag;
 export import testFlag = lib.testFlag;

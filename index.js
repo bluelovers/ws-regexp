@@ -7,7 +7,10 @@ const lib_1 = require("./lib");
 const flags_1 = require("./lib/flags");
 const index_1 = require("./lib/index");
 const pattern_1 = require("./lib/pattern");
+const prototype_1 = require("./lib/proto/prototype");
+const static_1 = require("./lib/proto/static");
 const _support = {
+    nativeFlags: '',
     /**
      * flag support with name
      */
@@ -38,8 +41,9 @@ const _support = {
         a[key] = pattern_1.testPattern(key);
         return a;
     }, {}),
-    hasFlagsProp: /x/g.flags === 'g',
-    nativeFlags: '',
+    //hasFlagsProp: /x/g.flags === 'g',
+    prototype: prototype_1.testPrototype(),
+    static: static_1.testStatic(),
 };
 _support.nativeFlags = Object
     .keys(_support.flagsAll)

@@ -6,8 +6,13 @@ import lib, { hasSupportFlag, testFlag, ICreateRegExp, IFlagsAll, ITypeCreateReg
 import FlagsName from './lib/flags';
 import { testFlagsAll } from './lib/index';
 import libPattern, { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
+import { testPrototype } from './lib/proto/prototype';
+import { testStatic } from './lib/proto/static';
 
 const _support = {
+
+	nativeFlags: '',
+
 	/**
 	 * flag support with name
 	 */
@@ -51,9 +56,11 @@ const _support = {
 		return a;
 	}, {} as typeof PatternSupport),
 
-	hasFlagsProp: /x/g.flags === 'g',
+	//hasFlagsProp: /x/g.flags === 'g',
 
-	nativeFlags: '',
+	prototype: testPrototype(),
+
+	static: testStatic(),
 };
 
 _support.nativeFlags = Object
