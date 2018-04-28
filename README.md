@@ -62,7 +62,8 @@ const RE_NO_DOLLAR_PREFIX = /(?<!\\$)foo/g;
 ### node.js 10
 
 ```ts
-{ flags: 
+{ nativeFlags: 'gimsuy',
+  flags: 
    { multiline: true,
      m: true,
      global: true,
@@ -89,8 +90,44 @@ const RE_NO_DOLLAR_PREFIX = /(?<!\\$)foo/g;
      lookAheadNegative: true,
      lookBehindPositive: true,
      lookBehindNegative: true },
-  hasFlagsProp: true,
-  nativeFlags: 'gimsuy' }
+  prototype: 
+   { source: true,
+     flags: true,
+     lastIndex: true,
+     dotAll: true,
+     global: true,
+     ignoreCase: true,
+     multiline: true,
+     sticky: true,
+     unicode: true },
+  static: 
+   { '$1': true,
+     '$2': true,
+     '$3': true,
+     '$4': true,
+     '$5': true,
+     '$6': true,
+     '$7': true,
+     '$8': true,
+     '$9': true,
+     input: true,
+     '$_': true,
+     lastMatch: true,
+     '$&': true,
+     lastParen: true,
+     '$+': true,
+     leftContext: true,
+     '$`': true,
+     rightContext: true,
+     '$\'': true,
+     '$10': false,
+     '$100': false },
+  symbol: 
+   { species: false,
+     match: true,
+     replace: true,
+     search: true,
+     split: true } }
 ```
 
 ### node.js 9
