@@ -2,7 +2,7 @@
  * Created by user on 2018/4/28/028.
  */
 
-import support from '../../regexp-support/index';
+import support, { hasSupportFlag, FlagsName } from 'regexp-support';
 
 export const RE_NATIVE_FLAGS = new RegExp(`[${support.nativeFlags}]`, 'g');
 export const RE_NON_NATIVE_FLAGS = new RegExp(`[^${support.nativeFlags}]`, 'g');
