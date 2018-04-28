@@ -30,12 +30,23 @@ export const PROTOTYPE = {
 // @ts-ignore
 export function testPrototype<T>(RegExpClass: ITypeCreateRegExp<T> = RegExp)
 {
-	let r = createRegExp('', '', RegExpClass);
+	const flags = 'g';
+
+	let r = createRegExp('', flags, RegExpClass);
 
 	return Object.keys(PROTOTYPE)
 		.reduce(function (a, b)
 		{
-			a[b] = (b in r);
+			switch (b)
+			{
+				case 'flags':
+					// @ts-ignore
+					a[b] = (b in r) && r[b] === flags;
+					break;
+				default:
+					a[b] = (b in r);
+					break;
+			}
 
 			return a;
 		}, {} as typeof PROTOTYPE)

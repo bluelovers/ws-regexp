@@ -46,7 +46,7 @@ console.log(support);
 * `(?<=\$)foo`
 
 ```ts
-const RE_DOLLAR_PREFIX = /(?<=\\$)foo/g;
+const RE_DOLLAR_PREFIX = /(?<=\$)foo/g;
 '$foo %foo foo'.replace(RE_DOLLAR_PREFIX, 'bar'); // => '$bar %foo foo'
 ```
 
@@ -55,7 +55,7 @@ const RE_DOLLAR_PREFIX = /(?<=\\$)foo/g;
 * `(?<!\$)foo`
 
 ```ts
-const RE_NO_DOLLAR_PREFIX = /(?<!\\$)foo/g;
+const RE_NO_DOLLAR_PREFIX = /(?<!\$)foo/g;
 '$foo %foo foo'.replace(RE_NO_DOLLAR_PREFIX, 'bar'); // => '$foo %bar bar'
 ```
 
