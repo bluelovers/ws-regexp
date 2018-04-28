@@ -3,18 +3,19 @@
  */
 
 import lib, { hasSupportFlag, testFlag, ICreateRegExp, IFlagsAll, ITypeCreateRegExp } from './lib';
-import FlagsName from './lib/flags';
+import { FlagsName } from './lib/flags';
 import { testFlagsAll } from './lib/index';
 import libPattern, { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
 import { testPrototype } from './lib/proto/prototype';
 import { testStatic } from './lib/proto/static';
+import { testSymbol } from './lib/symbol';
 
 const _support = {
 
 	nativeFlags: '',
 
 	/**
-	 * flag support with name
+	 * flag support with name and pattern test
 	 */
 	flags: Object
 		.keys(FlagsName)
@@ -61,6 +62,8 @@ const _support = {
 	prototype: testPrototype(),
 
 	static: testStatic(),
+
+	symbol: testSymbol(),
 };
 
 _support.nativeFlags = Object
@@ -79,9 +82,11 @@ _support.nativeFlags = Object
 
 export const support = Object.freeze(_support);
 
-export import hasSupportFlag = lib.hasSupportFlag
-export import testFlag = lib.testFlag
-export import testPattern = libPattern.testPattern
+export import FlagsName = FlagsName
+
+export { hasSupportFlag };
+export { testFlag };
+export { testPattern };
 
 type valueof<T> = T[keyof T];
 

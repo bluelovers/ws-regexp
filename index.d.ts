@@ -1,8 +1,9 @@
 /**
  * Created by user on 2018/4/26/026.
  */
-import lib from './lib';
-import libPattern from './lib/pattern';
+import { hasSupportFlag, testFlag } from './lib';
+import { FlagsName } from './lib/flags';
+import { testPattern } from './lib/pattern';
 export declare const support: Readonly<{
     nativeFlags: string;
     flags: {
@@ -80,8 +81,16 @@ export declare const support: Readonly<{
         $10?: boolean;
         $100?: boolean;
     };
+    symbol: {
+        species: boolean;
+        match: boolean;
+        replace: boolean;
+        search: boolean;
+        split: boolean;
+    };
 }>;
-export import hasSupportFlag = lib.hasSupportFlag;
-export import testFlag = lib.testFlag;
-export import testPattern = libPattern.testPattern;
+export import FlagsName = FlagsName;
+export { hasSupportFlag };
+export { testFlag };
+export { testPattern };
 export default support;

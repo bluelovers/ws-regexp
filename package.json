@@ -1,6 +1,6 @@
 {
   "name": "regexp-support",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "check RegExp ( regular expressions ) support",
   "keywords": [
     "check",
@@ -32,7 +32,7 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "index.js",
+  "main": "index",
   "directories": {
     "lib": "lib",
     "test": "test"
