@@ -90,6 +90,7 @@ export declare const support: Readonly<{
         search: boolean;
         split: boolean;
     };
+    objectStringTag: string;
 }>;
 export import FlagsName = FlagsName;
 export { hasSupportFlag };

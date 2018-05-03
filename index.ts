@@ -64,6 +64,8 @@ const _support = {
 	static: testStatic(),
 
 	symbol: testSymbol(),
+
+	objectStringTag: Object.prototype.toString.call(/a/) as string,
 };
 
 _support.nativeFlags = Object

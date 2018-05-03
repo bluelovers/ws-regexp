@@ -49,6 +49,7 @@ const _support = {
     prototype: prototype_1.testPrototype(),
     static: static_1.testStatic(),
     symbol: symbol_1.testSymbol(),
+    objectStringTag: Object.prototype.toString.call(/a/),
 };
 _support.nativeFlags = Object
     .keys(_support.flagsAll)
