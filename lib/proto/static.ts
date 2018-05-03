@@ -129,12 +129,50 @@ export const REGEXP_STATIC = {
 // @ts-ignore
 export function testStatic<T>(RegExpClass: ITypeCreateRegExp<T> = RegExp)
 {
-	let r = RegExpClass;
+	let rc = RegExpClass;
+	let re = createRegExp('(wor)(ld)', 'g', RegExpClass);
+
+	re.test('hello world!');
 
 	return Object.keys(REGEXP_STATIC)
 		.reduce(function (a, b)
 		{
-			a[b] = (b in r);
+			a[b] = (b in rc);
+
+			if (a[b])
+			{
+				switch (b)
+				{
+					case 'leftContext':
+					case '$`':
+						a[b] = rc[b] === 'hello ';
+						break;
+					case 'rightContext':
+					case "$'":
+						a[b] = rc[b] === '!';
+						break;
+					case 'lastParen':
+					case "$+":
+						a[b] = rc[b] === 'ld';
+						break;
+					case 'lastMatch':
+					case '$&':
+						a[b] = rc[b] === 'world';
+						break;
+					case 'input':
+					case '$_':
+						a[b] = rc[b] === 'hello world!';
+						break;
+					case '$1':
+						a[b] = rc[b] === 'wor';
+						break;
+					case '$2':
+						a[b] = rc[b] === 'ld';
+						break;
+					default:
+						//console.log(b, rc[b]);
+				}
+			}
 
 			return a;
 		}, {} as typeof REGEXP_STATIC)
