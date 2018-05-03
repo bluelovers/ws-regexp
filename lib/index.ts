@@ -37,6 +37,11 @@ export function stripNonNativeFlags(flags: string)
 	return flags.replace(RE_NON_NATIVE_FLAGS, '');
 }
 
+export function isNativeFlags(flags: string)
+{
+	return (flags === '') || !RE_NON_NATIVE_FLAGS.test(flags);
+}
+
 /**
  * Returns native `RegExp` flags used by a regex object.
  *

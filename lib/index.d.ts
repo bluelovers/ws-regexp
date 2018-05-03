@@ -4,6 +4,7 @@ export declare const hasFlagsProp: boolean;
 export declare function getNativeFlags<T extends RegExp>(target: T): string;
 export declare function getNativeFlags(target: string): string;
 export declare function stripNonNativeFlags(flags: string): string;
+export declare function isNativeFlags(flags: string): boolean;
 /**
  * Returns native `RegExp` flags used by a regex object.
  *
