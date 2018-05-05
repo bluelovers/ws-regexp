@@ -13,7 +13,7 @@ export function _word_zh(search: string, ret, flags?, skip?: string)
 export function _word_zh(search: RegExp, ret, flags?, skip?: string)
 export function _word_zh(search, ret, flags = 'ig', skip?: string)
 {
-	let s: RegExp;
+	let s: RegExp | string;
 
 	if (search instanceof RegExp)
 	{
@@ -27,10 +27,10 @@ export function _word_zh(search, ret, flags = 'ig', skip?: string)
 	{
 		s = new zhRegExp(search, flags, {
 			skip,
-		});
+		}).source;
 	}
 
-	return [s.source, ret, flags];
+	return [s, ret, flags];
 }
 
 export function _word_zh_core(search: string, skip?: string)

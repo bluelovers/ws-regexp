@@ -276,7 +276,7 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 							source = '(?:' + source + ')';
 							break;
 						case 'CharacterClass':
-							source = '[' + source + ']';
+							source = '[' + (ast.negate ? '^' : '') + source + ']';
 							break;
 						case 'Assertion':
 
