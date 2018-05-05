@@ -2,7 +2,6 @@
  * Created by user on 2018/1/31/031.
  */
 
-import lib from './lib';
 import { _word_zh_core } from './lib/conv';
 import ParserEventEmitter, { ParserEventEmitterEvent } from './lib/event';
 import { local_range } from './lib/local';

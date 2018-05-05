@@ -1,5 +1,7 @@
 /**
  * Created by user on 2018/1/31/031.
+ *
+ * 已廢棄
  */
 
 import cjkConv from 'cjk-conv';
