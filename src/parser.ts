@@ -89,6 +89,9 @@ function addCommonElement(
 class RegExpParserState {
     readonly strict: boolean
     readonly ecmaVersion: 5 | 2015 | 2016 | 2017 | 2018
+
+    readonly disableChkCharacterClassRange: boolean
+
     private _node: AppendableNode = DummyPattern
     private _flags: Flags = DummyFlags
     private _disjunctionStartStack: number[] = []
@@ -100,6 +103,7 @@ class RegExpParserState {
     constructor(options?: RegExpParser.Options) {
         this.strict = Boolean(options && options.strict)
         this.ecmaVersion = (options && options.ecmaVersion) || 2018
+        this.disableChkCharacterClassRange = Boolean(options && options.disableChkCharacterClassRange)
     }
 
     get pattern(): Pattern {
@@ -537,6 +541,8 @@ export namespace RegExpParser {
          *   and Unicode Property Escape.
          */
         ecmaVersion?: 5 | 2015 | 2016 | 2017 | 2018
+
+        disableChkCharacterClassRange?: boolean
     }
 }
 

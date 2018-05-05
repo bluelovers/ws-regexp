@@ -138,6 +138,8 @@ export namespace RegExpValidator {
          */
         ecmaVersion?: 5 | 2015 | 2016 | 2017 | 2018
 
+        disableChkCharacterClassRange?: boolean
+
         /**
          * A function that is called when the validator entered a RegExp literal.
          * @param start The 0-based index of the first character.
@@ -1719,7 +1721,7 @@ export class RegExpValidator {
                         if (this.strict) {
                             this.raise("Invalid character class")
                         }
-                    } else if (left > right) {
+                    } else if (!this._options.disableChkCharacterClassRange && left > right) {
                         this.raise("Range out of order in character class")
                     } else {
                         this.onCharacterClassRange(

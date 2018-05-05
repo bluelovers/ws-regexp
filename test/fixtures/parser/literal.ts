@@ -1,6 +1,6 @@
-import assert from "assert"
-import fs from "fs"
-import path from "path"
+import * as assert from "assert"
+import * as fs from "fs"
+import * as path from "path"
 
 type FixtureData = {
     [filename: string]: {
@@ -13,6 +13,7 @@ type FixtureData = {
     }
 }
 
+// @ts-ignore
 const Fixtures: FixtureData = {}
 const fixturesRoot = path.join(__dirname, "literal")
 for (const filename of fs.readdirSync(fixturesRoot)) {
