@@ -15,10 +15,10 @@ import { zhRegExp, create } from '..';
 	`神学+(?:院|校|园)`,
 	/[一-十]/,
 	/[壹-拾]/,
-	`[壹-什]`,
+	`[柒捌玖什壹-什柒捌玖]`,
 	`[洞-勾]`,
 	///[〇-𠃩]/,
-	///[𠃩]/,
+	/[𠃩]/,
 	`[四-七]罗`,
 	/([《（「『【])([^《（「『【』」》）】\n]{1,5})([』」》）】])/g,
 	'劍剑剣',
@@ -28,9 +28,11 @@ import { zhRegExp, create } from '..';
 	'と',
 ].forEach(function (value, index, array)
 {
+	let source = value instanceof RegExp ? value.source : value;
+
 	let r = create(value as any, null, {
 		//disableZh: true,
 	});
 
-	console.log(r);
+	console.dir(r);
 });

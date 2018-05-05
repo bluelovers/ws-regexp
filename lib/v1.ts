@@ -2,10 +2,11 @@
  * Created by user on 2018/1/31/031.
  */
 
-import { parse as regexpParse, types } from 'regexp2';
-import * as StrUtil from 'str-util';
-import * as japanese from 'japanese';
 import cjkConv from 'cjk-conv';
+
+import { parse as regexpParse, types } from 'regexp2';
+import { local_range } from './local';
+import * as self from './v1';
 
 export function replace_literal(r: string, cb: (text: string) => string): string
 export function replace_literal(r: RegExp, cb: (text: string) => string): RegExp
@@ -59,41 +60,6 @@ function toRegexp(res, cb): string
 
 	return res.text;
 }
-
-export let local_range = [
-	'〇一二三四五六七八九十'.split(''),
-	'零一二三四五六七八九十'.split(''),
-];
-
-[
-	['common', '十'],
-	['formal', '十'],
-
-	['traditional', '拾'],
-	['traditionalOld', '拾'],
-	['simplified', '拾'],
-
-	['traditional', '什'],
-	['traditionalOld', '什'],
-	['simplified', '什'],
-
-	['chineseMilitary'],
-	//['vietnam'],
-
-].forEach(function (key)
-{
-	let ls = japanese.predefineedTranscriptionConfigs.digits[key[0]];
-	if (ls)
-	{
-		ls = Object.values(ls);
-		if (key[1])
-		{
-			ls.push(key[1]);
-		}
-
-		local_range.push(ls);
-	}
-});
 
 //console.log(local_range);
 
@@ -218,7 +184,7 @@ export function _word_zh(search, ret, flags = 'ig', skip?: string)
 	return [s, ret, flags];
 }
 
-export function _word_zh_core(search: string, skip: string)
+export function _word_zh_core(search: string, skip?: string)
 {
 	return search.replace(/[\u4E00-\u9FFFのと]/g, function (char)
 	{
@@ -340,6 +306,4 @@ export namespace zhtw_convert
 	}
 }
 */
-
-import * as self from './lib';
 export default self;

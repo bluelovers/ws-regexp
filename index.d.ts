@@ -1,9 +1,11 @@
-import _support from './support';
+import { IAstToStringOptions } from './lib/parse';
+import _support from 'regexp-support';
+import RegexpHelper from 'regexp-helper';
 export interface IApi<T = zhRegExp> {
     (str: string | RegExp, flags?: string, options?: IOptions | string): T;
     (str: string | RegExp, options?: IOptions): T;
 }
-export interface IOptions {
+export declare type IOptions = {
     skip?: string;
     disableZh?: boolean;
     /**
@@ -15,11 +17,12 @@ export interface IOptions {
      * allow str is /a/g
      */
     parseRegularExpressionString?: boolean;
-}
+} & IAstToStringOptions;
 export declare const defaultOptions: IOptions;
 export declare class zhRegExp extends RegExp {
     source: string;
     flags: string;
+    dotAll: boolean;
     ignoreCase: boolean;
     global: boolean;
     multiline: boolean;
@@ -56,8 +59,8 @@ export declare class zhRegExp extends RegExp {
      * @alias $_
      */
     static readonly input: string;
-    constructor(str: string | RegExp, flags?: string, options?: IOptions | string);
-    constructor(str: string | RegExp, options?: IOptions);
+    constructor(str: string | RegExp, flags?: string, options?: IOptions | string, ...argv: any[]);
+    constructor(str: string | RegExp, options?: IOptions, ...argv: any[]);
     static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptions | string): T;
     static create<T = zhRegExp>(str: string | RegExp, options?: IOptions): T;
     getStatic<T = typeof zhRegExp>(): T;
@@ -72,10 +75,11 @@ export declare class zhRegExp extends RegExp {
         input: string;
     };
     static readonly support: typeof _support;
-    static isRegExp<T>(r: T): T & RegExp | null;
-    static isRegExp(r: RegExp): RegExp;
+}
+export declare namespace zhRegExp {
+    export import isRegExp = RegexpHelper.isRegExp;
 }
 export declare const parseRegularExpressionString: typeof zhRegExp.parseRegularExpressionString;
-export declare const isRegExp: typeof zhRegExp.isRegExp;
+export declare const isRegExp: typeof RegexpHelper.isRegExp;
 export declare const create: typeof zhRegExp.create;
 export default zhRegExp;

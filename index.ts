@@ -3,7 +3,12 @@
  */
 
 import lib from './lib';
-import _support from './support';
+import { _word_zh_core } from './lib/conv';
+import ParserEventEmitter, { ParserEventEmitterEvent } from './lib/event';
+import { local_range } from './lib/local';
+import { IAstToStringOptions, parseRegExp } from './lib/parse';
+import _support from 'regexp-support';
+import RegexpHelper, { isRegExp as _isRegExp } from 'regexp-helper';
 
 export interface IApi<T = zhRegExp>
 {
@@ -11,8 +16,7 @@ export interface IApi<T = zhRegExp>
 	(str: string | RegExp, options?: IOptions): T,
 }
 
-export interface IOptions
-{
+export type IOptions = {
 	skip?: string,
 	disableZh?: boolean,
 	/**
@@ -25,7 +29,7 @@ export interface IOptions
 	 * allow str is /a/g
 	 */
 	parseRegularExpressionString?: boolean,
-}
+} & IAstToStringOptions;
 
 export const defaultOptions: IOptions = {};
 
@@ -33,6 +37,8 @@ export class zhRegExp extends RegExp
 {
 	public source: string;
 	public flags: string;
+
+	public dotAll: boolean;
 
 	public ignoreCase: boolean;
 	public global: boolean;
@@ -73,9 +79,9 @@ export class zhRegExp extends RegExp
 	 */
 	public static readonly input: string;
 
-	constructor(str: string | RegExp, flags?: string, options?: IOptions | string)
-	constructor(str: string | RegExp, options?: IOptions)
-	constructor(str, flags = null, options: IOptions | string = {})
+	constructor(str: string | RegExp, flags?: string, options?: IOptions | string, ...argv)
+	constructor(str: string | RegExp, options?: IOptions, ...argv)
+	constructor(str, flags = null, options: IOptions | string = {}, ...argv)
 	{
 		if (flags !== null && typeof flags == 'object')
 		{
@@ -95,6 +101,97 @@ export class zhRegExp extends RegExp
 			flags = options.flags;
 		}
 
+		let hasFlags = typeof flags == 'string';
+
+		if (1 && (!options.disableZh || !options.disableLocalRange))
+		{
+			let ev: ParserEventEmitter;
+
+			if (str instanceof RegExp)
+			{
+				let ast = parseRegExp(str.toString());
+				ev = new ParserEventEmitter(ast);
+			}
+			else
+			{
+				if (options.parseRegularExpressionString && typeof str == 'string')
+				{
+					let m = zhRegExp.parseRegularExpressionString(str);
+					if (m)
+					{
+						str = m.source;
+						flags = hasFlags ? flags : m.flags;
+					}
+				}
+
+				ev = ParserEventEmitter.create(str, flags || '');
+			}
+
+			if (!options.disableZh)
+			{
+				ev.on(ParserEventEmitterEvent.default, function (ast)
+				{
+					ast.old_raw = ast.old_raw || ast.raw;
+					ast.raw = _word_zh_core(ast.raw);
+					ev.emit(ParserEventEmitterEvent.change, ast);
+				});
+			}
+
+			if (!options.disableLocalRange)
+			{
+				ev.on(ParserEventEmitterEvent.class_range, function (ast, ...argv)
+				{
+					let s = ast.min.raw;
+					let e = ast.max.raw;
+
+					for (let r of local_range)
+					{
+						let i = r.indexOf(s);
+						let j = r.indexOf(e, i);
+
+						if (i !== -1 && j !== -1)
+						{
+							ast.old_raw = ast.old_raw || ast.raw;
+							ast.raw = r.slice(i, j + 1).join('');
+
+							ev.emit(ParserEventEmitterEvent.change, ast);
+							break;
+						}
+					}
+				});
+			}
+
+			ev.resume();
+
+			//options.sortClass = true;
+
+			str = ev.getSource(!!options.debugChanged
+				|| !options.noUniqueClass
+				|| options.sortClass
+				, options);
+			flags = hasFlags ? flags : ev.flags;
+		}
+		else
+		{
+			if (options.parseRegularExpressionString && typeof str == 'string')
+			{
+				let m = zhRegExp.parseRegularExpressionString(str);
+				if (m)
+				{
+					str = new RegExp(m.source, m.flags);
+					flags = hasFlags ? flags : str.flags;
+				}
+			}
+			else if (str instanceof RegExp)
+			{
+				str = str.source;
+				flags = hasFlags ? flags : str.flags;
+			}
+		}
+
+		super(str, flags || '');
+
+		/*
 		if (options.parseRegularExpressionString && typeof str == 'string')
 		{
 			let m = zhRegExp.parseRegularExpressionString(str);
@@ -139,6 +236,7 @@ export class zhRegExp extends RegExp
 		{
 			super(rs.source, f);
 		}
+		*/
 	}
 
 	static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptions | string): T
@@ -185,6 +283,7 @@ export class zhRegExp extends RegExp
 		return _support;
 	}
 
+	/*
 	static isRegExp<T>(r: T): T & RegExp | null
 	static isRegExp(r: RegExp): RegExp
 	static isRegExp(r)
@@ -196,6 +295,12 @@ export class zhRegExp extends RegExp
 
 		return null;
 	}
+	*/
+}
+
+export namespace zhRegExp
+{
+	export import isRegExp = RegexpHelper.isRegExp;
 }
 
 export const parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
