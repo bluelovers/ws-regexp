@@ -1,6 +1,6 @@
 {
   "name": "regexpp2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Regular expression parser for ECMAScript 2018.",
   "keywords": [
     "abstract",
@@ -19,27 +19,22 @@
     "tree",
     "validator"
   ],
-  "homepage": "https://github.com/mysticatea/regexpp#readme",
+  "homepage": "https://github.com/bluelovers/regexpp#readme",
   "bugs": {
-    "url": "https://github.com/mysticatea/regexpp/issues"
+    "url": "https://github.com/bluelovers/regexpp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mysticatea/regexpp.git"
+    "url": "git+https://github.com/bluelovers/regexpp.git"
   },
   "license": "MIT",
   "author": "Toru Nagashima (https://github.com/mysticatea)",
   "main": "./src/index.js",
-
   "types": "./index.d.ts",
-
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "prepare": "npm run build:dts",
-
-    "npm-publish": "npm publish",
-
-    "build:dts": "dts-bundle --name regexpp2 --main ./src/index.d.ts --out ../index.d.ts",
-
     "_build": "run-s build:*",
     "_build:dts": "dts-bundle --name regexpp --main .temp/index.d.ts --out ../index.d.ts",
     "_build:js": "rollup -c rollup-js.config.js",
@@ -56,7 +51,10 @@
     "_update:ids": "ts-node tools/update-unicode-ids.ts",
     "_update:test": "ts-node tools/update-fixtures.ts",
     "_version": "npm run -s build",
-    "_watch": "npm run -s test -- --watch-extensions .ts --watch --growl"
+    "_watch": "npm run -s test -- --watch-extensions .ts --watch --growl",
+    "build:dts": "dts-bundle --name regexpp2 --main ./src/index.d.ts --out ../index.d.ts",
+    "npm-publish": "npm publish",
+    "prepare": "npm run build:dts"
   },
   "dependencies": {},
   "devDependencies": {
