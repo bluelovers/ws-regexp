@@ -22,9 +22,13 @@ export enum ParserEventEmitterEvent
 
 	other = 'other',
 
+	uniset = 'uniset',
+
 	class_default = 'class_default',
 	class_range = 'class_range',
 	class_other = 'class_other',
+
+	class_uniset = 'class_uniset',
 
 	change = 'change',
 }
@@ -136,6 +140,12 @@ export class ParserEventEmitter extends EventEmitter
 				event = ParserEventEmitterEvent.class_range;
 
 				break;
+
+			case 'CharacterSet':
+				event = eventPrefix + ParserEventEmitterEvent.uniset;
+
+				break;
+
 			case 'CapturingGroup':
 			case 'Group':
 			case 'Assertion':

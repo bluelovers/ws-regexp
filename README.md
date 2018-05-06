@@ -4,6 +4,19 @@
 
 `npm install regexp-cjk`
 
+## api
+
+version 2.x
+
+* [index.d.ts](index.d.ts)
+* [event.d.ts](lib/event.d.ts)
+
+* allow use regexp event do something u need.
+* remove useless double pattern
+* sort pattern class
+* auto match cjk hanzi/chinese
+* human pattern class char range `[一-十]` => `[一二三四五六七八九十]`
+
 ## demo
 
 ```ts

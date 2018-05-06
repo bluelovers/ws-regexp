@@ -25,7 +25,7 @@ class zhRegExp extends RegExp {
             flags = options.flags;
         }
         let hasFlags = typeof flags == 'string';
-        if (1 && (!options.disableZh || !options.disableLocalRange)) {
+        if (1 && (!options.disableZh || !options.disableLocalRange || options.on)) {
             let ev;
             if (str instanceof RegExp) {
                 let ast = parse_1.parseRegExp(str.toString());
@@ -62,6 +62,14 @@ class zhRegExp extends RegExp {
                             break;
                         }
                     }
+                });
+            }
+            if (options.on) {
+                Object
+                    .keys(options.on)
+                    .forEach(function (event) {
+                    // @ts-ignore
+                    ev.on(event, options.on[event]);
                 });
             }
             ev.resume();

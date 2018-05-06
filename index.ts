@@ -3,7 +3,7 @@
  */
 
 import { _word_zh_core } from './lib/conv';
-import ParserEventEmitter, { ParserEventEmitterEvent } from './lib/event';
+import ParserEventEmitter, { ParserEventEmitterEvent, IParserEventEmitterListener } from './lib/event';
 import { local_range } from './lib/local';
 import { IAstToStringOptions, parseRegExp } from './lib/parse';
 import _support from 'regexp-support';
@@ -28,6 +28,11 @@ export type IOptions = {
 	 * allow str is /a/g
 	 */
 	parseRegularExpressionString?: boolean,
+
+	on?: {
+		[k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
+	},
+
 } & IAstToStringOptions;
 
 export const defaultOptions: IOptions = {};
@@ -102,7 +107,7 @@ export class zhRegExp extends RegExp
 
 		let hasFlags = typeof flags == 'string';
 
-		if (1 && (!options.disableZh || !options.disableLocalRange))
+		if (1 && (!options.disableZh || !options.disableLocalRange || options.on))
 		{
 			let ev: ParserEventEmitter;
 
@@ -158,6 +163,18 @@ export class zhRegExp extends RegExp
 						}
 					}
 				});
+			}
+
+			if (options.on)
+			{
+				Object
+					.keys(options.on)
+					.forEach(function (event)
+					{
+						// @ts-ignore
+						ev.on(event, (options as IOptions).on[event])
+					})
+				;
 			}
 
 			ev.resume();

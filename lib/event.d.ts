@@ -10,9 +10,11 @@ export declare enum ParserEventEmitterEvent {
     default = "default",
     class = "class",
     other = "other",
+    uniset = "uniset",
     class_default = "class_default",
     class_range = "class_range",
     class_other = "class_other",
+    class_uniset = "class_uniset",
     change = "change",
 }
 export declare class ParserEventEmitter extends EventEmitter {

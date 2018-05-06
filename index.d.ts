@@ -1,3 +1,4 @@
+import { ParserEventEmitterEvent, IParserEventEmitterListener } from './lib/event';
 import { IAstToStringOptions } from './lib/parse';
 import _support from 'regexp-support';
 import RegexpHelper from 'regexp-helper';
@@ -17,6 +18,9 @@ export declare type IOptions = {
      * allow str is /a/g
      */
     parseRegularExpressionString?: boolean;
+    on?: {
+        [k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
+    };
 } & IAstToStringOptions;
 export declare const defaultOptions: IOptions;
 export declare class zhRegExp extends RegExp {
