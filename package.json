@@ -78,7 +78,7 @@
     "emoji-regex": "^6.5.1",
     "japanese": "^1.2.0",
     "regexp-helper": "^1.0.1",
-    "regexp-support": "^1.0.14",
+    "regexp-support": "^1.0.15",
     "regexpp2": "^1.1.0",
     "str-util": "^2.3.16",
     "uni-string": "^1.0.1"
