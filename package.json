@@ -30,7 +30,9 @@
   "license": "MIT",
   "author": "Toru Nagashima (https://github.com/mysticatea)",
   "main": "./src/index.js",
-  "types": "./index.d.ts",
+  "types": [
+    "./index.d.ts"
+  ],
   "directories": {
     "test": "test"
   },
