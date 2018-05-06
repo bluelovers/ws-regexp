@@ -14,6 +14,7 @@ export declare const UNICODE_BLOCKS: {
     InBasic_Latin: boolean;
 };
 export declare const UNICODE_BLOCKS_ALL: {
+    InBasic_Latin: boolean;
     "InAdlam": boolean;
     "InAegean_Numbers": boolean;
     "InAhom": boolean;
@@ -35,7 +36,6 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InBalinese": boolean;
     "InBamum": boolean;
     "InBamum_Supplement": boolean;
-    "InBasic_Latin": boolean;
     "InBassa_Vah": boolean;
     "InBatak": boolean;
     "InBengali": boolean;
@@ -300,6 +300,7 @@ export declare const PatternTest: {
 };
 export declare const testUnicodeBlocks: {
     (name: string, RegExpClass?: RegExpConstructor, testPatterns?: {
+        InBasic_Latin?: IPatternTestRow[];
         "InAdlam"?: IPatternTestRow[];
         "InAegean_Numbers"?: IPatternTestRow[];
         "InAhom"?: IPatternTestRow[];
@@ -321,7 +322,6 @@ export declare const testUnicodeBlocks: {
         "InBalinese"?: IPatternTestRow[];
         "InBamum"?: IPatternTestRow[];
         "InBamum_Supplement"?: IPatternTestRow[];
-        "InBasic_Latin"?: IPatternTestRow[];
         "InBassa_Vah"?: IPatternTestRow[];
         "InBatak"?: IPatternTestRow[];
         "InBengali"?: IPatternTestRow[];
@@ -582,6 +582,7 @@ export declare const testUnicodeBlocks: {
         "InZanabazar_Square"?: IPatternTestRow[];
     }): boolean;
     (name: string, RegExpClass?: ICreateRegExp, testPatterns?: {
+        InBasic_Latin?: IPatternTestRow[];
         "InAdlam"?: IPatternTestRow[];
         "InAegean_Numbers"?: IPatternTestRow[];
         "InAhom"?: IPatternTestRow[];
@@ -603,7 +604,6 @@ export declare const testUnicodeBlocks: {
         "InBalinese"?: IPatternTestRow[];
         "InBamum"?: IPatternTestRow[];
         "InBamum_Supplement"?: IPatternTestRow[];
-        "InBasic_Latin"?: IPatternTestRow[];
         "InBassa_Vah"?: IPatternTestRow[];
         "InBatak"?: IPatternTestRow[];
         "InBengali"?: IPatternTestRow[];
@@ -864,6 +864,7 @@ export declare const testUnicodeBlocks: {
         "InZanabazar_Square"?: IPatternTestRow[];
     }): boolean;
     <T>(name: string, RegExpClass?: ITypeCreateRegExp<T>, testPatterns?: {
+        InBasic_Latin?: IPatternTestRow[];
         "InAdlam"?: IPatternTestRow[];
         "InAegean_Numbers"?: IPatternTestRow[];
         "InAhom"?: IPatternTestRow[];
@@ -885,7 +886,6 @@ export declare const testUnicodeBlocks: {
         "InBalinese"?: IPatternTestRow[];
         "InBamum"?: IPatternTestRow[];
         "InBamum_Supplement"?: IPatternTestRow[];
-        "InBasic_Latin"?: IPatternTestRow[];
         "InBassa_Vah"?: IPatternTestRow[];
         "InBatak"?: IPatternTestRow[];
         "InBengali"?: IPatternTestRow[];
@@ -1147,6 +1147,7 @@ export declare const testUnicodeBlocks: {
     }): boolean;
 };
 export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<T>, testPatterns?: {
+    InBasic_Latin?: IPatternTestRow[];
     "InAdlam"?: IPatternTestRow[];
     "InAegean_Numbers"?: IPatternTestRow[];
     "InAhom"?: IPatternTestRow[];
@@ -1168,7 +1169,6 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InBalinese"?: IPatternTestRow[];
     "InBamum"?: IPatternTestRow[];
     "InBamum_Supplement"?: IPatternTestRow[];
-    "InBasic_Latin"?: IPatternTestRow[];
     "InBassa_Vah"?: IPatternTestRow[];
     "InBatak"?: IPatternTestRow[];
     "InBengali"?: IPatternTestRow[];
@@ -1428,6 +1428,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InYijing_Hexagram_Symbols"?: IPatternTestRow[];
     "InZanabazar_Square"?: IPatternTestRow[];
 }): {
+    InBasic_Latin: boolean;
     "InAdlam": boolean;
     "InAegean_Numbers": boolean;
     "InAhom": boolean;
@@ -1449,7 +1450,6 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InBalinese": boolean;
     "InBamum": boolean;
     "InBamum_Supplement": boolean;
-    "InBasic_Latin": boolean;
     "InBassa_Vah": boolean;
     "InBatak": boolean;
     "InBengali": boolean;

@@ -152,6 +152,4 @@ export { testPattern };
 
 export { IRegExpPrototype, IRegExpStatic }
 
-type valueof<T> = T[keyof T];
-
 export default support

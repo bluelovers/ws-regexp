@@ -6,6 +6,8 @@ import FlagsName, { FlagsPattern, IFlagsPatternTestFn } from './flags';
 
 export { FlagsName }
 
+type valueof<T> = T[keyof T];
+
 /**
  * Check whether a RegExp flag is supported
  */

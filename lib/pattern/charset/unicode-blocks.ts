@@ -28,6 +28,8 @@ export const UNICODE_BLOCKS = {
 
 export const UNICODE_BLOCKS_ALL = {
 	...CACHE_BLOCKS,
+
+	...UNICODE_BLOCKS,
 };
 
 export const PatternTest: {

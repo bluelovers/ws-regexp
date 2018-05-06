@@ -25,10 +25,17 @@ export const UNICODE_SCRIPTS = {
 	Greek: false,
 	Latin: false,
 
+	Katakana: false,
+	Hiragana: false,
+
+	Han: false,
+	Hangul: false,
+
 };
 
 export const UNICODE_SCRIPTS_ALL = {
 	...CACHE_SCRIPTS,
+	...UNICODE_SCRIPTS,
 };
 
 export const PatternTest: {
@@ -52,6 +59,25 @@ export const PatternTest: {
 	Katakana: [
 
 		['^\\p{Script=Katakana}+$', 'u', 'カタカナ', true, 'test'],
+
+	],
+
+	Hiragana: [
+
+		['^\\p{Script=Hiragana}+$', 'u', 'ひらがな', true, 'test'],
+
+	],
+
+	Han: [
+
+		['^\\p{Script=Han}+$', 'u', 'カタカナ', false, 'test'],
+		['^\\p{Script=Han}+$', 'u', '可以知道', true, 'test'],
+
+	],
+
+	Hangul: [
+
+		['^\\p{Script=Hangul}+$', 'u', '\u1190', true, 'test'],
 
 	],
 

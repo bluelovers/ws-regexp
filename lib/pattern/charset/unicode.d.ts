@@ -10,6 +10,9 @@ export declare const KEY_SUFFIX = "}";
  * @link http://2ality.com/2017/07/regexp-unicode-property-escapes.html
  * @link https://en.wikipedia.org/wiki/Unicode_character_property
  * @link http://www.wellho.net/regex/javare.html
+ * @link https://zhuanlan.zhihu.com/p/33335629
+ * @link https://github.com/Icemic/huozi.js/blob/master/lib/isCJK.js
+ * @link https://github.com/ethantw/Han/blob/master/src/js/regex/unicode.js
  */
 export declare const UNICODE: {
     White_Space: boolean;
@@ -26,6 +29,8 @@ export declare const UNICODE: {
     XDigit: boolean;
     Space: boolean;
     Decimal_Digit_Number: boolean;
+    Ideographic: boolean;
+    Unified_Ideograph: boolean;
 };
 export declare const UNICODE_ALL: {
     White_Space: boolean;
@@ -42,6 +47,8 @@ export declare const UNICODE_ALL: {
     XDigit: boolean;
     Space: boolean;
     Decimal_Digit_Number: boolean;
+    Ideographic: boolean;
+    Unified_Ideograph: boolean;
     "ASCII": boolean;
     "Alphabetic": boolean;
     "Any": boolean;
@@ -147,6 +154,8 @@ export declare const _testUnicode: {
         XDigit?: IPatternTestRow[];
         Space?: IPatternTestRow[];
         Decimal_Digit_Number?: IPatternTestRow[];
+        Ideographic?: IPatternTestRow[];
+        Unified_Ideograph?: IPatternTestRow[];
         "ASCII"?: IPatternTestRow[];
         "Alphabetic"?: IPatternTestRow[];
         "Any"?: IPatternTestRow[];
@@ -245,6 +254,8 @@ export declare const _testUnicode: {
         XDigit?: IPatternTestRow[];
         Space?: IPatternTestRow[];
         Decimal_Digit_Number?: IPatternTestRow[];
+        Ideographic?: IPatternTestRow[];
+        Unified_Ideograph?: IPatternTestRow[];
         "ASCII"?: IPatternTestRow[];
         "Alphabetic"?: IPatternTestRow[];
         "Any"?: IPatternTestRow[];
@@ -343,6 +354,8 @@ export declare const _testUnicode: {
         XDigit?: IPatternTestRow[];
         Space?: IPatternTestRow[];
         Decimal_Digit_Number?: IPatternTestRow[];
+        Ideographic?: IPatternTestRow[];
+        Unified_Ideograph?: IPatternTestRow[];
         "ASCII"?: IPatternTestRow[];
         "Alphabetic"?: IPatternTestRow[];
         "Any"?: IPatternTestRow[];
@@ -443,6 +456,8 @@ export declare function testUnicodeAll<T>(RegExpClass?: ITypeCreateRegExp<T>, te
     XDigit?: IPatternTestRow[];
     Space?: IPatternTestRow[];
     Decimal_Digit_Number?: IPatternTestRow[];
+    Ideographic?: IPatternTestRow[];
+    Unified_Ideograph?: IPatternTestRow[];
     "ASCII"?: IPatternTestRow[];
     "Alphabetic"?: IPatternTestRow[];
     "Any"?: IPatternTestRow[];
@@ -540,6 +555,8 @@ export declare function testUnicodeAll<T>(RegExpClass?: ITypeCreateRegExp<T>, te
     XDigit: boolean;
     Space: boolean;
     Decimal_Digit_Number: boolean;
+    Ideographic: boolean;
+    Unified_Ideograph: boolean;
     "ASCII": boolean;
     "Alphabetic": boolean;
     "Any": boolean;

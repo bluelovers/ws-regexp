@@ -112,6 +112,8 @@ export declare const support: Readonly<{
             XDigit: boolean;
             Space: boolean;
             Decimal_Digit_Number: boolean;
+            Ideographic: boolean;
+            Unified_Ideograph: boolean;
             "ASCII": boolean;
             "Alphabetic": boolean;
             "Any": boolean;
