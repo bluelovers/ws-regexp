@@ -3,7 +3,6 @@
  */
 
 import support from '..';
+import { log_dir } from '../lib/util/index';
 
-console.dir(support, {
-	colors: true
-});
+log_dir(support);

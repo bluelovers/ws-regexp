@@ -1,6 +1,6 @@
 {
   "name": "regexp-support",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "check RegExp ( regular expressions ) support",
   "keywords": [
     "check",
@@ -39,5 +39,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.2",
+    "fs-extra": "^6.0.0",
+    "globby": "^8.0.1",
+    "xregexp": "^4.1.1"
   }
 }

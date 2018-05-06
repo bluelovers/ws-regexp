@@ -2,8 +2,8 @@
  * Created by user on 2018/4/27/027.
  */
 
-import { ICreateRegExp, ITypeCreateRegExp } from './index';
-import { IPatternTestFn, IPatternTestRow, testPattern } from './pattern';
+import { ICreateRegExp, ITypeCreateRegExp } from '../../index';
+import { IPatternTestFn, IPatternTestRow, testPattern } from '../../pattern';
 
 /**
  * @link https://www.regular-expressions.info/posixbrackets.html

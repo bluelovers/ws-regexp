@@ -17,6 +17,8 @@ export const PatternSupport = {
 
 	lookBehindPositive: false,
 	lookBehindNegative: false,
+
+	dotUnicodeEmoji: false,
 };
 
 export const PatternTest: {
@@ -72,6 +74,12 @@ export const PatternTest: {
 		{
 			return input.replace(r, 'bar') === value;
 		}],
+	],
+
+	dotUnicodeEmoji: [
+
+		['^.$', 'u', '😀', true, 'test'],
+
 	],
 };
 

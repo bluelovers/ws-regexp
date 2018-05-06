@@ -34,6 +34,10 @@ import support from 'regexp-support';
 console.log(support);
 ```
 
+## todo
+
+* need more test on unicode set [unicode.ts](lib/pattern/charset/unicode.ts) , [unicode-script.ts](lib/pattern/charset/unicode-script.ts)
+
 ### desc
 
 #### lookAheadPositive, lookAheadNegative

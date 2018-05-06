@@ -6,10 +6,17 @@ import lib, { hasSupportFlag, testFlag, ICreateRegExp, IFlagsAll, ITypeCreateReg
 import { FlagsName } from './lib/flags';
 import { testFlagsAll } from './lib/index';
 import libPattern, { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
+import { testUnicodeAll, UNICODE_ALL } from './lib/pattern/charset/unicode';
+import { testUnicodeScriptAll, UNICODE_SCRIPTS_ALL } from './lib/pattern/charset/unicode-script';
 import { testPrototype, IRegExpPrototype } from './lib/proto/prototype';
 import { testStatic, IRegExpStatic } from './lib/proto/static';
 import { testSymbol } from './lib/symbol';
 
+/**
+ * @link https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F
+ * @link https://www.regular-expressions.info/posixbrackets.html
+ * @link http://2ality.com/archive.html?tag=regexp
+ */
 const _support = {
 
 	nativeFlags: '',
@@ -66,6 +73,40 @@ const _support = {
 	symbol: testSymbol(),
 
 	objectStringTag: Object.prototype.toString.call(/a/) as string,
+
+	unicodeSet: (() => {
+
+		return {
+
+			//unicodeKeys: Object.keys(UNICODE_ALL),
+			//scriptKeys: Object.keys(UNICODE_SCRIPTS_ALL),
+
+			unicode: Object.entries(testUnicodeAll())
+				.reduce(function (a, b)
+				{
+					if (b[1] !== null)
+					{
+						a[b[0]] = b[1];
+					}
+
+					return a;
+				}, {} as Partial<ReturnType<typeof testUnicodeAll>>),
+
+			script: Object.entries(testUnicodeScriptAll())
+				.reduce(function (a, b)
+				{
+					if (b[1] !== null)
+					{
+						a[b[0]] = b[1];
+					}
+
+					return a;
+				}, {} as Partial<ReturnType<typeof testUnicodeScriptAll>>),
+
+		};
+
+	})(),
+
 };
 
 _support.nativeFlags = Object
@@ -84,8 +125,7 @@ _support.nativeFlags = Object
 
 export const support = Object.freeze(_support);
 
-export import FlagsName = FlagsName
-
+export { FlagsName }
 export { hasSupportFlag };
 export { testFlag };
 export { testPattern };
