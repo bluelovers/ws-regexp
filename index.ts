@@ -7,6 +7,7 @@ import { FlagsName } from './lib/flags';
 import { testFlagsAll } from './lib/index';
 import libPattern, { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
 import { testUnicodeAll, UNICODE_ALL } from './lib/pattern/charset/unicode';
+import { testUnicodeBlocksAll } from './lib/pattern/charset/unicode-blocks';
 import { testUnicodeScriptAll, UNICODE_SCRIPTS_ALL } from './lib/pattern/charset/unicode-script';
 import { testPrototype, IRegExpPrototype } from './lib/proto/prototype';
 import { testStatic, IRegExpStatic } from './lib/proto/static';
@@ -78,10 +79,14 @@ const _support = {
 
 		return {
 
+			unicode: false,
+			script: false,
+			blocks: false,
+
 			//unicodeKeys: Object.keys(UNICODE_ALL),
 			//scriptKeys: Object.keys(UNICODE_SCRIPTS_ALL),
 
-			unicode: Object.entries(testUnicodeAll())
+			unicodeTest: Object.entries(testUnicodeAll())
 				.reduce(function (a, b)
 				{
 					if (b[1] !== null)
@@ -92,7 +97,7 @@ const _support = {
 					return a;
 				}, {} as Partial<ReturnType<typeof testUnicodeAll>>),
 
-			script: Object.entries(testUnicodeScriptAll())
+			scriptTest: Object.entries(testUnicodeScriptAll())
 				.reduce(function (a, b)
 				{
 					if (b[1] !== null)
@@ -103,11 +108,26 @@ const _support = {
 					return a;
 				}, {} as Partial<ReturnType<typeof testUnicodeScriptAll>>),
 
+			blocksTest: Object.entries(testUnicodeBlocksAll())
+				.reduce(function (a, b)
+				{
+					if (b[1] !== null)
+					{
+						a[b[0]] = b[1];
+					}
+
+					return a;
+				}, {} as Partial<ReturnType<typeof testUnicodeBlocksAll>>),
+
 		};
 
 	})(),
 
 };
+
+_support.unicodeSet.unicode = Object.values(_support.unicodeSet.unicodeTest).includes(true);
+_support.unicodeSet.script = Object.values(_support.unicodeSet.scriptTest).includes(true);
+_support.unicodeSet.blocks = Object.values(_support.unicodeSet.blocksTest).includes(true);
 
 _support.nativeFlags = Object
 	.keys(_support.flagsAll)

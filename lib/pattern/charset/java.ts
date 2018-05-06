@@ -26,7 +26,6 @@ export enum JAVA
 	xdigit = 'XDigit',
 }
 
-
 import * as self from './';
 export default self;
 

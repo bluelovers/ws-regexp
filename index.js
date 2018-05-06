@@ -12,6 +12,7 @@ const index_1 = require("./lib/index");
 const pattern_1 = require("./lib/pattern");
 exports.testPattern = pattern_1.testPattern;
 const unicode_1 = require("./lib/pattern/charset/unicode");
+const unicode_blocks_1 = require("./lib/pattern/charset/unicode-blocks");
 const unicode_script_1 = require("./lib/pattern/charset/unicode-script");
 const prototype_1 = require("./lib/proto/prototype");
 const static_1 = require("./lib/proto/static");
@@ -60,16 +61,26 @@ const _support = {
     objectStringTag: Object.prototype.toString.call(/a/),
     unicodeSet: (() => {
         return {
+            unicode: false,
+            script: false,
+            blocks: false,
             //unicodeKeys: Object.keys(UNICODE_ALL),
             //scriptKeys: Object.keys(UNICODE_SCRIPTS_ALL),
-            unicode: Object.entries(unicode_1.testUnicodeAll())
+            unicodeTest: Object.entries(unicode_1.testUnicodeAll())
                 .reduce(function (a, b) {
                 if (b[1] !== null) {
                     a[b[0]] = b[1];
                 }
                 return a;
             }, {}),
-            script: Object.entries(unicode_script_1.testUnicodeScriptAll())
+            scriptTest: Object.entries(unicode_script_1.testUnicodeScriptAll())
+                .reduce(function (a, b) {
+                if (b[1] !== null) {
+                    a[b[0]] = b[1];
+                }
+                return a;
+            }, {}),
+            blocksTest: Object.entries(unicode_blocks_1.testUnicodeBlocksAll())
                 .reduce(function (a, b) {
                 if (b[1] !== null) {
                     a[b[0]] = b[1];
@@ -79,6 +90,9 @@ const _support = {
         };
     })(),
 };
+_support.unicodeSet.unicode = Object.values(_support.unicodeSet.unicodeTest).includes(true);
+_support.unicodeSet.script = Object.values(_support.unicodeSet.scriptTest).includes(true);
+_support.unicodeSet.blocks = Object.values(_support.unicodeSet.blocksTest).includes(true);
 _support.nativeFlags = Object
     .keys(_support.flagsAll)
     .reduce(function (a, f) {

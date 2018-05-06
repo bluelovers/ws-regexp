@@ -19,6 +19,8 @@ export const PatternSupport = {
 	lookBehindNegative: false,
 
 	dotUnicodeEmoji: false,
+
+	classSub: false,
 };
 
 export const PatternTest: {
@@ -80,6 +82,14 @@ export const PatternTest: {
 
 		['^.$', 'u', '😀', true, 'test'],
 
+	],
+
+	/**
+	 * @link http://www.wellho.net/regex/javare.html
+	 */
+	classSub: [
+		['[a-z&&[^m-p]]', '', 'm', false, 'test'],
+		['[a-z&&[^m-p]]', '', 'a', true, 'test'],
 	],
 };
 

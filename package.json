@@ -1,6 +1,6 @@
 {
   "name": "regexp-support",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "check RegExp ( regular expressions ) support",
   "keywords": [
     "check",
@@ -45,6 +45,7 @@
     "@types/fs-extra": "^5.0.2",
     "fs-extra": "^6.0.0",
     "globby": "^8.0.1",
+    "randexp": "^0.4.9",
     "xregexp": "^4.1.1"
   }
 }
