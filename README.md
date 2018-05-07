@@ -2,6 +2,8 @@
 
 ## API
 
+[index.d.ts](index.d.ts)
+
 ```ts
 export declare const REGEXP_TO_STRING_TAG: string;
 export declare function toHex(n: number, toUpperCase?: boolean): string;
