@@ -9,7 +9,7 @@
 version 2.x
 
 * [index.d.ts](index.d.ts)
-* [event.d.ts](lib/event.d.ts)
+* [event.d.ts](https://github.com/bluelovers/regexp-parser-event)
 
 * allow use regexp event do something u need.
 * remove useless double pattern
