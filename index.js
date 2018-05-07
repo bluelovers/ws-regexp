@@ -5,9 +5,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const conv_1 = require("./lib/conv");
 const event_1 = require("./lib/event");
-const local_1 = require("./lib/local");
 const parse_1 = require("./lib/parse");
 const regexp_support_1 = require("regexp-support");
+const regexp_range_1 = require("regexp-range");
 const regexp_helper_1 = require("regexp-helper");
 exports.defaultOptions = {};
 class zhRegExp extends RegExp {
@@ -44,7 +44,7 @@ class zhRegExp extends RegExp {
             if (!options.disableZh) {
                 ev.on(event_1.ParserEventEmitterEvent.default, function (ast) {
                     ast.old_raw = ast.old_raw || ast.raw;
-                    ast.raw = conv_1._word_zh_core(ast.raw);
+                    ast.raw = conv_1._word_zh_core(ast.raw, options.skip);
                     ev.emit(event_1.ParserEventEmitterEvent.change, ast);
                 });
             }
@@ -52,16 +52,33 @@ class zhRegExp extends RegExp {
                 ev.on(event_1.ParserEventEmitterEvent.class_range, function (ast, ...argv) {
                     let s = ast.min.raw;
                     let e = ast.max.raw;
-                    for (let r of local_1.local_range) {
+                    let ret = regexp_range_1.default(s, e, {
+                        createRegExpString: true,
+                    });
+                    if (ret) {
+                        if (options.allowLocalRangeAutoZh) {
+                            ret = conv_1._word_zh_core2(ret, options.skip);
+                        }
+                        ast.old_raw = ast.old_raw || ast.raw;
+                        ast.raw = ret;
+                        ev.emit(event_1.ParserEventEmitterEvent.change, ast);
+                    }
+                    /*
+                    for (let r of local_range)
+                    {
                         let i = r.indexOf(s);
                         let j = r.indexOf(e, i);
-                        if (i !== -1 && j !== -1) {
+
+                        if (i !== -1 && j !== -1)
+                        {
                             ast.old_raw = ast.old_raw || ast.raw;
                             ast.raw = r.slice(i, j + 1).join('');
-                            ev.emit(event_1.ParserEventEmitterEvent.change, ast);
+
+                            ev.emit(ParserEventEmitterEvent.change, ast);
                             break;
                         }
                     }
+                    */
                 });
             }
             if (options.on) {

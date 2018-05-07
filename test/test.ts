@@ -13,7 +13,7 @@ let ev: ParserEventEmitter;
 
 //ev = ParserEventEmitter.create('(?<!魯)👧[^2👧👧👧🏻1]👧🏼🏽👧🏾👧🏿(?<=魯)(魔[象象象]|哥雷姆|哥雷魯|GOLEM|哥雷鲁|(?:[一-十]))(?=777)(?!666)', 'u');
 
-ev = ParserEventEmitter.create('[\\p{N}]\\P{L}', 'u');
+ev = ParserEventEmitter.create('\\p{InAdlam}', 'u');
 
 //ev = ParserEventEmitter.create('x+?y*?z?', 'u');
 

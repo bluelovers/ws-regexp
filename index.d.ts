@@ -13,6 +13,7 @@ export declare type IOptions = {
      * disableLocalRange only work when disableZh is true
      */
     disableLocalRange?: boolean;
+    allowLocalRangeAutoZh?: boolean;
     flags?: string;
     /**
      * allow str is /a/g

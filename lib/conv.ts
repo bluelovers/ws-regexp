@@ -21,6 +21,21 @@ export function _word_zh_core(search: string, skip?: string)
 	});
 }
 
+export function _word_zh_core2(search: string, skip?: string)
+{
+	return search.replace(/[\u4E00-\u9FFFのと]/g, function (char)
+	{
+		if (skip && skip.indexOf(char) != -1)
+		{
+			return char;
+		}
+
+		let a = cjkConv.zhTable.auto(char);
+
+		return a.join('');
+	});
+}
+
 import * as self from './conv';
 export default self;
 

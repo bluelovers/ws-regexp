@@ -2,11 +2,12 @@
  * Created by user on 2018/1/31/031.
  */
 
-import { _word_zh_core } from './lib/conv';
+import { _word_zh_core, _word_zh_core2 } from './lib/conv';
 import ParserEventEmitter, { ParserEventEmitterEvent, IParserEventEmitterListener } from './lib/event';
 import { local_range } from './lib/local';
 import { IAstToStringOptions, parseRegExp } from './lib/parse';
 import _support from 'regexp-support';
+import regexpRange from 'regexp-range';
 import RegexpHelper, { isRegExp as _isRegExp } from 'regexp-helper';
 
 export interface IApi<T = zhRegExp>
@@ -22,6 +23,7 @@ export type IOptions = {
 	 * disableLocalRange only work when disableZh is true
 	 */
 	disableLocalRange?: boolean,
+	allowLocalRangeAutoZh?: boolean,
 	flags?: string,
 
 	/**
@@ -136,7 +138,7 @@ export class zhRegExp extends RegExp
 				ev.on(ParserEventEmitterEvent.default, function (ast)
 				{
 					ast.old_raw = ast.old_raw || ast.raw;
-					ast.raw = _word_zh_core(ast.raw);
+					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip);
 					ev.emit(ParserEventEmitterEvent.change, ast);
 				});
 			}
@@ -148,6 +150,23 @@ export class zhRegExp extends RegExp
 					let s = ast.min.raw;
 					let e = ast.max.raw;
 
+					let ret = regexpRange(s, e, {
+						createRegExpString: true,
+					});
+					if (ret)
+					{
+						if ((options as IOptions).allowLocalRangeAutoZh)
+						{
+							ret = _word_zh_core2(ret, (options as IOptions).skip);
+						}
+
+						ast.old_raw = ast.old_raw || ast.raw;
+						ast.raw = ret;
+
+						ev.emit(ParserEventEmitterEvent.change, ast);
+					}
+
+					/*
 					for (let r of local_range)
 					{
 						let i = r.indexOf(s);
@@ -162,6 +181,7 @@ export class zhRegExp extends RegExp
 							break;
 						}
 					}
+					*/
 				});
 			}
 
