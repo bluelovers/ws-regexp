@@ -117,7 +117,9 @@ export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean) {
  */
 export function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter = /./ug) {
 	return string.replace(filter, function($0, $1) {
-		return toUnicode($0, noMerge, !noWrap);
+		let s = toUnicode($0, noMerge, !noWrap);
+
+		return noLeadingSolidus ? s.replace(/\\/, '') : s;
 	});
 }
 

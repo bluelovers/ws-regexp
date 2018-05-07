@@ -94,7 +94,8 @@ exports.unicodeUnEscape = unicodeUnEscape;
  */
 function unicodeEscape(string, noLeadingSolidus, noMerge, noWrap, filter = /./ug) {
     return string.replace(filter, function ($0, $1) {
-        return toUnicode($0, noMerge, !noWrap);
+        let s = toUnicode($0, noMerge, !noWrap);
+        return noLeadingSolidus ? s.replace(/\\/, '') : s;
     });
 }
 exports.unicodeEscape = unicodeEscape;
