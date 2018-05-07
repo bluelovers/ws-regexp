@@ -1,0 +1,36 @@
+{
+  "name": "regexp-parser-event",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "build",
+    "emitter",
+    "emoji",
+    "event",
+    "literal",
+    "parser",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression"
+  ],
+  "homepage": "https://github.com/bluelovers/regexp-parser-event#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-parser-event/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-parser-event.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "regexp-parser-literal": "^1.0.0",
+    "regexpp2": "^1.1.1"
+  }
+}
