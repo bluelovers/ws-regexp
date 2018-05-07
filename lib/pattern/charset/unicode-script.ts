@@ -163,7 +163,7 @@ export function testUnicodeScriptAll<T>(RegExpClass: ITypeCreateRegExp<T> = RegE
 {
 	return Object.keys(UNICODE_SCRIPTS_ALL).reduce(function (a, key)
 	{
-		a[key] = testUnicodeScript(key);
+		a[key] = testUnicodeScript(key, RegExpClass, testPatterns);
 		return a;
 	}, {} as typeof UNICODE_SCRIPTS_ALL);
 }

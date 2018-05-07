@@ -52,7 +52,7 @@ export function testUnicodeBlocksAll<T>(RegExpClass: ITypeCreateRegExp<T> = RegE
 {
 	return Object.keys(UNICODE_BLOCKS_ALL).reduce(function (a, key)
 	{
-		a[key] = testUnicodeBlocks(key);
+		a[key] = testUnicodeBlocks(key, RegExpClass, testPatterns);
 		return a;
 	}, {} as typeof UNICODE_BLOCKS_ALL);
 }

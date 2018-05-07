@@ -396,12 +396,12 @@ export function testUnicodeAll<T>(RegExpClass: ITypeCreateRegExp<T> = RegExp, te
 {
 	return Object.keys(UNICODE_ALL).reduce(function (a, name)
 	{
-		a[name] = testUnicode(name);
+		a[name] = testUnicode(name, RegExpClass, testPatterns);
 
 		if (0 && UNICODE_NAME_ALIAS_ALL[name] && typeof a[UNICODE_NAME_ALIAS_ALL[name]] != 'boolean')
 		{
 			let k = UNICODE_NAME_ALIAS_ALL[name];
-			a[k] = testUnicode(k);
+			a[k] = testUnicode(k, RegExpClass, testPatterns);
 		}
 
 		return a;
