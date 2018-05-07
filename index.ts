@@ -3,18 +3,11 @@
  */
 
 import { _word_zh_core, _word_zh_core2 } from './lib/conv';
-import ParserEventEmitter, { ParserEventEmitterEvent, IParserEventEmitterListener } from './lib/event';
-import { local_range } from './lib/local';
-import { IAstToStringOptions, parseRegExp } from './lib/parse';
+import ParserEventEmitter, { ParserEventEmitterEvent, IParserEventEmitterListener } from 'regexp-parser-event';
+import { IAstToStringOptions, parseRegExp } from 'regexp-parser-literal';
 import _support from 'regexp-support';
 import regexpRange from 'regexp-range';
 import RegexpHelper, { isRegExp as _isRegExp } from 'regexp-helper';
-
-export interface IApi<T = zhRegExp>
-{
-	(str: string | RegExp, flags?: string, options?: IOptions | string): T,
-	(str: string | RegExp, options?: IOptions): T,
-}
 
 export type IOptions = {
 	skip?: string,
@@ -318,20 +311,6 @@ export class zhRegExp extends RegExp
 	{
 		return _support;
 	}
-
-	/*
-	static isRegExp<T>(r: T): T & RegExp | null
-	static isRegExp(r: RegExp): RegExp
-	static isRegExp(r)
-	{
-		if ((r instanceof RegExp) || Object.prototype.toString.call(r) === '[object RegExp]')
-		{
-			return r;
-		}
-
-		return null;
-	}
-	*/
 }
 
 export namespace zhRegExp
@@ -343,20 +322,10 @@ export const parseRegularExpressionString = zhRegExp.parseRegularExpressionStrin
 export const isRegExp = zhRegExp.isRegExp;
 export const create = zhRegExp.create.bind(zhRegExp) as typeof zhRegExp.create;
 
-/*
-export function isRegExp(r: RegExp): RegExp
-export function isRegExp(r): RegExp | null
-export function isRegExp(r)
+export interface IApi<T = zhRegExp>
 {
-	if ((r instanceof RegExp) || Object.prototype.toString.call(r) === '[object RegExp]')
-	{
-		return r;
-	}
-
-	return null;
+	(str: string | RegExp, flags?: string, options?: IOptions | string): T,
+	(str: string | RegExp, options?: IOptions): T,
 }
-
-export const create = zhRegExp.create.bind(zhRegExp) as IApi<zhRegExp>;
-*/
 
 export default zhRegExp;

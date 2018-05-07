@@ -5,7 +5,6 @@
  */
 
 import cjkConv from 'cjk-conv';
-import ParserEventEmitter, { ParserEventEmitterEvent } from './event';
 import { zhRegExp } from '..';
 export * from './v1';
 

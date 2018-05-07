@@ -4,8 +4,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const conv_1 = require("./lib/conv");
-const event_1 = require("./lib/event");
-const parse_1 = require("./lib/parse");
+const regexp_parser_event_1 = require("regexp-parser-event");
+const regexp_parser_literal_1 = require("regexp-parser-literal");
 const regexp_support_1 = require("regexp-support");
 const regexp_range_1 = require("regexp-range");
 const regexp_helper_1 = require("regexp-helper");
@@ -28,8 +28,8 @@ class zhRegExp extends RegExp {
         if (1 && (!options.disableZh || !options.disableLocalRange || options.on)) {
             let ev;
             if (str instanceof RegExp) {
-                let ast = parse_1.parseRegExp(str.toString());
-                ev = new event_1.default(ast);
+                let ast = regexp_parser_literal_1.parseRegExp(str.toString());
+                ev = new regexp_parser_event_1.default(ast);
             }
             else {
                 if (options.parseRegularExpressionString && typeof str == 'string') {
@@ -39,17 +39,17 @@ class zhRegExp extends RegExp {
                         flags = hasFlags ? flags : m.flags;
                     }
                 }
-                ev = event_1.default.create(str, flags || '');
+                ev = regexp_parser_event_1.default.create(str, flags || '');
             }
             if (!options.disableZh) {
-                ev.on(event_1.ParserEventEmitterEvent.default, function (ast) {
+                ev.on(regexp_parser_event_1.ParserEventEmitterEvent.default, function (ast) {
                     ast.old_raw = ast.old_raw || ast.raw;
                     ast.raw = conv_1._word_zh_core(ast.raw, options.skip);
-                    ev.emit(event_1.ParserEventEmitterEvent.change, ast);
+                    ev.emit(regexp_parser_event_1.ParserEventEmitterEvent.change, ast);
                 });
             }
             if (!options.disableLocalRange) {
-                ev.on(event_1.ParserEventEmitterEvent.class_range, function (ast, ...argv) {
+                ev.on(regexp_parser_event_1.ParserEventEmitterEvent.class_range, function (ast, ...argv) {
                     let s = ast.min.raw;
                     let e = ast.max.raw;
                     let ret = regexp_range_1.default(s, e, {
@@ -61,7 +61,7 @@ class zhRegExp extends RegExp {
                         }
                         ast.old_raw = ast.old_raw || ast.raw;
                         ast.raw = ret;
-                        ev.emit(event_1.ParserEventEmitterEvent.change, ast);
+                        ev.emit(regexp_parser_event_1.ParserEventEmitterEvent.change, ast);
                     }
                     /*
                     for (let r of local_range)
@@ -194,19 +194,4 @@ exports.zhRegExp = zhRegExp;
 exports.parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
 exports.isRegExp = zhRegExp.isRegExp;
 exports.create = zhRegExp.create.bind(zhRegExp);
-/*
-export function isRegExp(r: RegExp): RegExp
-export function isRegExp(r): RegExp | null
-export function isRegExp(r)
-{
-    if ((r instanceof RegExp) || Object.prototype.toString.call(r) === '[object RegExp]')
-    {
-        return r;
-    }
-
-    return null;
-}
-
-export const create = zhRegExp.create.bind(zhRegExp) as IApi<zhRegExp>;
-*/
 exports.default = zhRegExp;
