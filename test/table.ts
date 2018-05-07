@@ -14,6 +14,15 @@ import * as util from "util";
 util.inspect.defaultOptions.colors = true;
 
 let tests = [
+
+	'「',
+	'…',
+	'※',
+
+	'？',
+	'Ｖ',
+	'５',
+
 	//'!',
 
 	'👧👧👧🏻',
