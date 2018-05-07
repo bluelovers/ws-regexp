@@ -95,6 +95,32 @@ export function surrogatePair(codepoint: number)
 	});
 }
 
+/**
+ * https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+ *
+ * @code
+ * unicodeUnEscape('\\u{48}\\u{65}\\u{6c}\\u{6c}\\u{6f}\\u{20}\\u{77}\\u{6f}\\u{72}\\u{6c}\\u{64}') // => 'Hello world'
+ * unicodeUnEscape('\\u{20bb7}') // => '𠮷'
+ */
+export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean) {
+	// note: this will match `u{123}` (no leading `\`) as well
+	const r = noLeadingSolidus ? /u\{([0-9a-fA-F]{1,8})\}/g : /\\u\{([0-9a-fA-F]{1,8})\}/g;
+
+	return string.replace(r, function($0, $1) {
+		return String.fromCodePoint(parseInt($1, 16));
+	});
+}
+
+/**
+ * @code
+ * unicodeEscape('𠮷') // => '\\u{20bb7}'
+ */
+export function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter = /./ug) {
+	return string.replace(filter, function($0, $1) {
+		return toUnicode($0, noMerge, !noWrap);
+	});
+}
+
 import * as self from './index';
 
 export default self as Readonly<typeof self>;

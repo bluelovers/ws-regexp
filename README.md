@@ -35,6 +35,19 @@ export declare function surrogatePair(codepoint: number): [number, number] & {
     h: number;
     l: number;
 };
+/**
+ * https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+ *
+ * @code
+ * unicodeUnEscape('\\u{48}\\u{65}\\u{6c}\\u{6c}\\u{6f}\\u{20}\\u{77}\\u{6f}\\u{72}\\u{6c}\\u{64}') // => 'Hello world'
+ * unicodeUnEscape('\\u{20bb7}') // => '𠮷'
+ */
+export declare function unicodeUnEscape(string: string, noLeadingSolidus?: boolean): string;
+/**
+ * @code
+ * unicodeEscape('𠮷') // => '\\u{20bb7}'
+ */
+export declare function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter?: RegExp): string;
 import * as self from './index';
 declare const _default: Readonly<typeof self>;
 export default _default;

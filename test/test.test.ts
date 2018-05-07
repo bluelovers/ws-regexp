@@ -2,7 +2,7 @@
  * Created by user on 2018/5/7/007.
  */
 
-import core, { surrogatePair, toHex, toUnicode } from '../index';
+import core, { surrogatePair, toHex, toUnicode, unicodeUnEscape } from '../index';
 import { chai, relative, expect, path, assert, util, mochaAsync } from './_local-dev';
 
 // @ts-ignore
@@ -92,6 +92,21 @@ describe(relative(__filename), () =>
 			//assert.isOk(actual.value, util.inspect(actual));
 
 			//done();
+		});
+	});
+
+	describe(`unicodeUnEscape`, () =>
+	{
+		it(`\\u{20bb7} => 𠮷`, async function ()
+		{
+			expect(unicodeUnEscape('\\u{20bb7}')).to.be.deep.equal('𠮷');
+			expect(unicodeUnEscape(core.toUnicode('𠮷'))).to.be.deep.equal('𠮷');
+			expect('\u{20bb7}').to.be.deep.equal('𠮷');
+		});
+
+		it(`Hello world`, async function ()
+		{
+			expect(unicodeUnEscape('\\u{48}\\u{65}\\u{6c}\\u{6c}\\u{6f}\\u{20}\\u{77}\\u{6f}\\u{72}\\u{6c}\\u{64}')).to.be.deep.equal('Hello world');
 		});
 	});
 });
