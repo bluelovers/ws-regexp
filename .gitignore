@@ -24,3 +24,4 @@ tests/*.js
 tests/*.d.ts
 tests/temp*
 
+/yarn-error.log
