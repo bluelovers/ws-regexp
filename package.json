@@ -1,0 +1,36 @@
+{
+  "name": "regexp-parser-literal",
+  "version": "1.0.0",
+  "description": "## API",
+  "keywords": [
+    "build",
+    "emoji",
+    "literal",
+    "parser",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression"
+  ],
+  "homepage": "https://github.com/bluelovers/regexp-parser-literal#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-parser-literal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-parser-literal.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "array-uniq": "^2.0.0",
+    "emoji-regex": "^6.5.1",
+    "regexpp2": "^1.1.1",
+    "uni-string": "^1.0.1"
+  }
+}
