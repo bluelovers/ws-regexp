@@ -1,45 +1,46 @@
 {
-  "name": "execall",
+  "name": "execall2",
   "version": "1.0.0",
   "description": "Find multiple RegExp matches in a string",
+  "keywords": [
+    "all",
+    "exec",
+    "execall",
+    "expression",
+    "find",
+    "findall",
+    "global",
+    "immutable",
+    "many",
+    "match",
+    "matches",
+    "multiple",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "str",
+    "string"
+  ],
+  "homepage": "https://github.com/sindresorhus/execall#readme",
+  "bugs": {
+    "url": "https://github.com/sindresorhus/execall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/execall.git"
+  },
   "license": "MIT",
-  "repository": "sindresorhus/execall",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "ava"
-  },
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
   "files": [
     "index.js"
   ],
-  "keywords": [
-    "regex",
-    "regexp",
-    "re",
-    "regular",
-    "expression",
-    "exec",
-    "match",
-    "matches",
-    "execall",
-    "all",
-    "find",
-    "findall",
-    "immutable",
-    "string",
-    "str",
-    "multiple",
-    "many",
-    "global"
-  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
   "dependencies": {
-    "clone-regexp": "^1.0.0"
+    "clone-regexp": "^2.1.0"
   },
   "devDependencies": {
     "ava": "*"
