@@ -4,27 +4,34 @@
   "description": "Find multiple RegExp matches in a string",
   "keywords": [
     "all",
+    "capturing",
+    "es2018",
     "exec",
     "execall",
     "expression",
     "find",
     "findall",
     "global",
+    "groups",
     "immutable",
     "many",
     "match",
     "matches",
     "multiple",
+    "named",
+    "named capturing",
+    "named capturing groups",
     "re",
     "regex",
     "regexp",
     "regular",
+    "regular expression",
     "str",
     "string"
   ],
-  "homepage": "https://github.com/sindresorhus/execall#readme",
+  "homepage": "https://github.com/bluelovers/execall#readme",
   "bugs": {
-    "url": "https://github.com/sindresorhus/execall/issues"
+    "url": "https://github.com/bluelovers/execall/issues"
   },
   "repository": {
     "type": "git",
@@ -32,17 +39,15 @@
   },
   "license": "MIT",
   "author": "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
-  "files": [
-    "index.js"
-  ],
-  "main": "index.js",
+  "main": "index",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "ava"
+    "test": "node ./test/test"
   },
   "dependencies": {
     "clone-regexp": "^2.1.0"
   },
-  "devDependencies": {
-    "ava": "*"
-  }
+  "devDependencies": {}
 }
