@@ -57,5 +57,52 @@ export function _getNativeFlags<T extends RegExp>(regex: T)
 		;
 }
 
+export type valueof<T> = T[keyof T];
+
+export function prototypeToFlagsArray<T extends Partial<{
+	[k in keyof typeof FlagsName]?
+} & {
+	[k: string]: any
+}>, R = Partial<typeof FlagsName> & {
+	[k: string]: string
+}>(inputObject: T,
+	// @ts-ignore
+	flagMap: R = FlagsName
+): valueof<R>[]
+{
+	return Object
+		.keys(flagMap)
+		.reduce(function (a, name)
+		{
+			if (inputObject[name] === true
+				&& (name in flagMap)
+				&& (a.indexOf(flagMap[name]) === -1)
+			)
+			{
+				a.push(flagMap[name]);
+			}
+
+			return a;
+		}, [] as valueof<R>[])
+		.sort()
+	;
+}
+
+export function prototypeToFlags<T extends Partial<{
+	[k in keyof typeof FlagsName]?
+} & {
+	[k: string]: any
+}>, R = Partial<typeof FlagsName> & {
+	[k: string]: string
+}>(inputObject: T,
+	// @ts-ignore
+	flagMap: R = FlagsName
+): string
+{
+	return prototypeToFlagsArray(inputObject, flagMap)
+		.join('')
+		;
+}
+
 import * as self from './index';
 export default self;
