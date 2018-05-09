@@ -21,6 +21,8 @@ export const PatternSupport = {
 	dotUnicodeEmoji: false,
 
 	classSub: false,
+
+	unicodeWrap: false,
 };
 
 export const PatternTest: {
@@ -90,6 +92,10 @@ export const PatternTest: {
 	classSub: [
 		['[a-z&&[^m-p]]', '', 'm', false, 'test'],
 		['[a-z&&[^m-p]]', '', 'a', true, 'test'],
+	],
+
+	unicodeWrap: [
+		['^\\u{20bb7}$', 'u', '𠮷', true, 'test'],
 	],
 };
 

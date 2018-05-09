@@ -46,6 +46,7 @@ export declare const support: Readonly<{
         lookBehindNegative: boolean;
         dotUnicodeEmoji: boolean;
         classSub: boolean;
+        unicodeWrap: boolean;
     };
     prototype: {
         exec?: boolean;

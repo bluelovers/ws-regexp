@@ -14,6 +14,7 @@ export declare const PatternSupport: {
     lookBehindNegative: boolean;
     dotUnicodeEmoji: boolean;
     classSub: boolean;
+    unicodeWrap: boolean;
 };
 export declare const PatternTest: {
     [k in keyof typeof PatternSupport]?: IPatternTestRow[];
