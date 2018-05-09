@@ -99,6 +99,10 @@ function unicodeEscape(string, noLeadingSolidus, noMerge, noWrap, filter = /./ug
     });
 }
 exports.unicodeEscape = unicodeEscape;
+function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+exports.escapeRegExp = escapeRegExp;
 const self = require("./index");
 exports.default = self;
 Object.freeze(self);

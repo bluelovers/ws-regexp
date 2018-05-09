@@ -18,7 +18,7 @@ console.dir(/[𠮷]/u.test('𠮷'));
 console.dir(/[\u{20bb7}]/u.test('𠮷'));
 console.dir(/[\ud842\udfb7]/u.test('𠮷'));
 
-console.dir('\ud842\udfb7', toHex('\ud842\udfb7'.codePointAt(0)));
+console.dir(['\ud842\udfb7', toHex('\ud842\udfb7'.codePointAt(0))]);
 
 console.dir(surrogatePair('𠮷'.codePointAt(0)));
 

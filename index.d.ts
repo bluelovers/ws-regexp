@@ -43,6 +43,7 @@ export declare function unicodeUnEscape(string: string, noLeadingSolidus?: boole
  * unicodeEscape('𠮷') // => '\\u{20bb7}'
  */
 export declare function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter?: RegExp): string;
+export declare function escapeRegExp(str: string): string;
 import * as self from './index';
 declare const _default: Readonly<typeof self>;
 export default _default;

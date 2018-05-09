@@ -1,4 +1,3 @@
-
 export const REGEXP_TO_STRING_TAG = Object.prototype.toString.call(/a/) as string;
 
 export function toHex(n: number, toUpperCase?: boolean)
@@ -102,11 +101,13 @@ export function surrogatePair(codepoint: number)
  * unicodeUnEscape('\\u{48}\\u{65}\\u{6c}\\u{6c}\\u{6f}\\u{20}\\u{77}\\u{6f}\\u{72}\\u{6c}\\u{64}') // => 'Hello world'
  * unicodeUnEscape('\\u{20bb7}') // => '𠮷'
  */
-export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean) {
+export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean)
+{
 	// note: this will match `u{123}` (no leading `\`) as well
 	const r = noLeadingSolidus ? /u\{([0-9a-fA-F]{1,8})\}/g : /\\u\{([0-9a-fA-F]{1,8})\}/g;
 
-	return string.replace(r, function($0, $1) {
+	return string.replace(r, function ($0, $1)
+	{
 		return String.fromCodePoint(parseInt($1, 16));
 	});
 }
@@ -115,12 +116,24 @@ export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean) {
  * @code
  * unicodeEscape('𠮷') // => '\\u{20bb7}'
  */
-export function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter = /./ug) {
-	return string.replace(filter, function($0, $1) {
+export function unicodeEscape(string: string,
+	noLeadingSolidus?: boolean,
+	noMerge?: boolean,
+	noWrap?: boolean,
+	filter = /./ug
+)
+{
+	return string.replace(filter, function ($0, $1)
+	{
 		let s = toUnicode($0, noMerge, !noWrap);
 
 		return noLeadingSolidus ? s.replace(/\\/, '') : s;
 	});
+}
+
+export function escapeRegExp(str: string)
+{
+	return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 import * as self from './index';
