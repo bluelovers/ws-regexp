@@ -10,7 +10,7 @@ declare let _execAll: ((inputRegExp: RegExp, input: string) => (RegExpExecArray 
     readonly re: RegExp;
     readonly input: string;
 }) & {
-    execAll(inputRegExp: RegExp, input: string): (RegExpExecArray & string[] & {
+    execall(inputRegExp: RegExp, input: string): (RegExpExecArray & string[] & {
         index: number;
         groups?: {
             [k: string]: string;
@@ -34,5 +34,6 @@ declare let _execAll: ((inputRegExp: RegExp, input: string) => (RegExpExecArray 
         readonly re: RegExp;
         readonly input: string;
     };
+    SYMBOL: symbol;
 };
 export = _execAll;

@@ -1,5 +1,7 @@
 import * as cloneRegexp from 'clone-regexp';
 
+const S = Symbol.for('execall');
+
 function execAll(inputRegExp: RegExp, input: string)
 {
 	let match: RegExpExecArray & string[] & {
@@ -12,7 +14,8 @@ function execAll(inputRegExp: RegExp, input: string)
 		},
 
 	};
-	let matches = [] as (typeof match & {
+
+	type IMatches = (typeof match & {
 		match: string,
 		sub: string[],
 
@@ -20,6 +23,8 @@ function execAll(inputRegExp: RegExp, input: string)
 		readonly re: RegExp,
 		readonly input: string,
 	};
+
+	let matches = [] as IMatches;
 
 	let re: RegExp = cloneRegexp(inputRegExp);
 	let isGlobal = re.global;
@@ -31,6 +36,8 @@ function execAll(inputRegExp: RegExp, input: string)
 		matches.push(Object.assign(match, {
 			match: match[0],
 			sub: match.slice(1),
+
+			[S]: matches,
 		}));
 
 		if (!isGlobal)
@@ -56,11 +63,15 @@ function execAll(inputRegExp: RegExp, input: string)
 	return matches;
 }
 
+// @ts-ignore
 let _execAll = execAll as typeof execAll & {
-	execAll(inputRegExp: RegExp, input: string): ReturnType<typeof execAll>,
+	execall(inputRegExp: RegExp, input: string): ReturnType<typeof execAll>,
 	default(inputRegExp: RegExp, input: string): ReturnType<typeof execAll>,
+
+	SYMBOL: symbol,
 };
 
-_execAll.default = _execAll.execAll = execAll;
+_execAll.SYMBOL = S;
+_execAll.default = _execAll.execall = execAll;
 
 export = _execAll;

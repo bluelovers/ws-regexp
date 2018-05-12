@@ -1,5 +1,6 @@
 "use strict";
 const cloneRegexp = require("clone-regexp");
+const S = Symbol.for('execall');
 function execAll(inputRegExp, input) {
     let match;
     let matches = [];
@@ -10,6 +11,7 @@ function execAll(inputRegExp, input) {
         matches.push(Object.assign(match, {
             match: match[0],
             sub: match.slice(1),
+            [S]: matches,
         }));
         if (!isGlobal) {
             break;
@@ -29,6 +31,8 @@ function execAll(inputRegExp, input) {
     });
     return matches;
 }
+// @ts-ignore
 let _execAll = execAll;
-_execAll.default = _execAll.execAll = execAll;
+_execAll.SYMBOL = S;
+_execAll.default = _execAll.execall = execAll;
 module.exports = _execAll;

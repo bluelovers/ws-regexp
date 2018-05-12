@@ -22,6 +22,30 @@ const execall = require('execall2');
 
 ```ts
 let t = execall(/(?<k>.)/g, '123456789');
+
+console.dir(t, {
+	colors: true,
+});
+
+console.log('getOwnPropertyNames', Object.getOwnPropertyNames(t));
+
+let {re, input} = t;
+
+console.log('== hidden property ==');
+
+console.dir({re, input}, {
+	colors: true,
+});
+
+console.log('== hidden property symbol ==');
+
+// @ts-ignore
+console.dir([execall.SYMBOL, t[0][execall.SYMBOL] === t], {
+	colors: true,
+});
+
+console.log('== JSON.stringify ==');
+console.log(JSON.stringify(t));
 ```
 
 ```ts
@@ -37,6 +61,10 @@ let t = execall(/(?<k>.)/g, '123456789');
 getOwnPropertyNames [ '0', '1', '2', '3', '4', '5', '6', '7', '8', 'length', 're', 'input' ]
 == hidden property ==
 { re: /(?<k>.)/g, input: '123456789' }
+== hidden property symbol ==
+[ Symbol(execall), true ]
+== JSON.stringify ==
+[["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7","7"],["8","8"],["9","9"]]
 ```
 
 ```ts
