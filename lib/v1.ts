@@ -5,9 +5,10 @@
  */
 
 import cjkConv from 'cjk-conv';
+import regexpRange from 'regexp-range';
 
 import { parse as regexpParse, types } from 'regexp2';
-import { local_range } from './local';
+
 import * as self from './v1';
 
 export function replace_literal(r: string, cb: (text: string) => string): string
@@ -85,33 +86,9 @@ function _(b, cb)
 					let s = a.start.text;
 					let e = a.end.text;
 
-					let t: string;
-
-					for (let r of local_range)
-					{
-						let i = r.indexOf(s);
-						let j = r.indexOf(e, i);
-
-						if (i !== -1 && j !== -1)
-						{
-							//t = r.slice(i, j + 1).join('');
-
-							a.setBody(r.slice(i, j + 1));
-							//console.log(a);
-							t = a.toString();
-
-							//console.log(a);
-							//console.dir(a);
-
-							break;
-						}
-					}
-
-					if (!t)
-					{
-						//console.log(a);
-						//console.dir(a);
-					}
+					let t = regexpRange(s, e, {
+						createRegExpString: true,
+					});
 
 					text += t || a.text;
 				}
