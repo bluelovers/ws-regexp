@@ -76,6 +76,11 @@ class ParserEventEmitter extends EventEmitter {
             case 'CharacterSet':
                 event = eventPrefix + ParserEventEmitterEvent.uniset;
                 break;
+            case 'Quantifier':
+                do_elements = true;
+                // @ts-ignore
+                sub_elements = [inputAst.element];
+                break;
             case 'CapturingGroup':
             case 'Group':
             case 'Assertion':

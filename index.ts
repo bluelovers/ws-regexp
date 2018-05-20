@@ -143,6 +143,14 @@ export class ParserEventEmitter extends EventEmitter
 
 				break;
 
+			case 'Quantifier':
+
+				do_elements = true;
+				// @ts-ignore
+				sub_elements = [inputAst.element];
+
+				break;
+
 			case 'CapturingGroup':
 			case 'Group':
 			case 'Assertion':
