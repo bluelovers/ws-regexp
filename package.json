@@ -79,16 +79,16 @@
   "dependencies": {
     "array-uniq": "^2.0.0",
     "cjk-conv": "^1.0.35",
-    "regexp-helper": "^1.0.4",
-    "regexp-parser-event": "^1.0.0",
+    "regexp-helper": "^1.0.5",
+    "regexp-parser-event": "^1.0.1",
     "regexp-parser-literal": "^1.0.0",
     "regexp-range": "^1.0.2",
-    "regexp-support": "^1.0.19",
+    "regexp-support": "^1.0.20",
     "regexpp2": "^1.1.1",
-    "uni-string": "^1.0.1"
+    "uni-string": "^1.0.2"
   },
   "devDependencies": {
-    "@types/node": "^10.0.4",
+    "@types/node": "^10.1.2",
     "regexp-util": "^1.2.2",
     "regexp2": "^1.2.0"
   }
