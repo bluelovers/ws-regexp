@@ -1,6 +1,4 @@
 export declare const table: Partial<{
-    padStart: (maxLength: number, fillString?: string) => string;
-    padEnd: (maxLength: number, fillString?: string) => string;
     toString: () => string;
     charAt: (pos: number) => string;
     charCodeAt: (index: number) => number;
@@ -49,7 +47,6 @@ export declare const table: Partial<{
     readonly length: number;
     substr: (from: number, length?: number) => string;
     valueOf: () => string;
-    [Symbol.iterator]: () => IterableIterator<string>;
     codePointAt: (pos: number) => number;
     includes: (searchString: string, position?: number) => boolean;
     endsWith: (searchString: string, endPosition?: number) => boolean;
@@ -75,17 +72,19 @@ export declare const table: Partial<{
     strike: () => string;
     sub: () => string;
     sup: () => string;
+    [Symbol.iterator]: () => IterableIterator<string>;
+    padStart: (maxLength: number, fillString?: string) => string;
+    padEnd: (maxLength: number, fillString?: string) => string;
 }>[];
 export declare const table2: Partial<{
-    includes: (searchElement: String, fromIndex?: number) => boolean;
     length: number;
     toString: () => string;
     toLocaleString: () => string;
     push: (...items: String[]) => number;
     pop: () => String;
     concat: {
-        (...items: ReadonlyArray<String>[]): String[];
-        (...items: (String | ReadonlyArray<String>)[]): String[];
+        (...items: ConcatArray<String>[]): String[];
+        (...items: (String | ConcatArray<String>)[]): String[];
     };
     join: (separator?: string) => string;
     reverse: () => String[];
@@ -117,6 +116,17 @@ export declare const table2: Partial<{
         (callbackfn: (previousValue: String, currentValue: String, currentIndex: number, array: String[]) => String, initialValue: String): String;
         <U>(callbackfn: (previousValue: U, currentValue: String, currentIndex: number, array: String[]) => U, initialValue: U): U;
     };
+    find: {
+        <S extends String>(predicate: (this: void, value: String, index: number, obj: String[]) => value is S, thisArg?: any): S;
+        (predicate: (value: String, index: number, obj: String[]) => boolean, thisArg?: any): String;
+    };
+    findIndex: (predicate: (value: String, index: number, obj: String[]) => boolean, thisArg?: any) => number;
+    fill: (value: String, start?: number, end?: number) => String[];
+    copyWithin: (target: number, start: number, end?: number) => String[];
+    [Symbol.iterator]: () => IterableIterator<String>;
+    entries: () => IterableIterator<[number, String]>;
+    keys: () => IterableIterator<number>;
+    values: () => IterableIterator<String>;
     [Symbol.unscopables]: () => {
         copyWithin: boolean;
         entries: boolean;
@@ -126,28 +136,17 @@ export declare const table2: Partial<{
         keys: boolean;
         values: boolean;
     };
-    [Symbol.iterator]: () => IterableIterator<String>;
-    entries: () => IterableIterator<[number, String]>;
-    keys: () => IterableIterator<number>;
-    values: () => IterableIterator<String>;
-    find: {
-        <S extends String>(predicate: (this: void, value: String, index: number, obj: String[]) => value is S, thisArg?: any): S;
-        (predicate: (value: String, index: number, obj: String[]) => boolean, thisArg?: any): String;
-    };
-    findIndex: (predicate: (value: String, index: number, obj: String[]) => boolean, thisArg?: any) => number;
-    fill: (value: String, start?: number, end?: number) => String[];
-    copyWithin: (target: number, start: number, end?: number) => String[];
+    includes: (searchElement: String, fromIndex?: number) => boolean;
 }>[];
 export declare const table3: Partial<{
-    includes: (searchElement: string, fromIndex?: number) => boolean;
     length: number;
     toString: () => string;
     toLocaleString: () => string;
     push: (...items: string[]) => number;
     pop: () => string;
     concat: {
-        (...items: ReadonlyArray<string>[]): string[];
-        (...items: (string | ReadonlyArray<string>)[]): string[];
+        (...items: ConcatArray<string>[]): string[];
+        (...items: (string | ConcatArray<string>)[]): string[];
     };
     join: (separator?: string) => string;
     reverse: () => string[];
@@ -179,6 +178,17 @@ export declare const table3: Partial<{
         (callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string;
         <U>(callbackfn: (previousValue: U, currentValue: string, currentIndex: number, array: string[]) => U, initialValue: U): U;
     };
+    find: {
+        <S extends string>(predicate: (this: void, value: string, index: number, obj: string[]) => value is S, thisArg?: any): S;
+        (predicate: (value: string, index: number, obj: string[]) => boolean, thisArg?: any): string;
+    };
+    findIndex: (predicate: (value: string, index: number, obj: string[]) => boolean, thisArg?: any) => number;
+    fill: (value: string, start?: number, end?: number) => string[];
+    copyWithin: (target: number, start: number, end?: number) => string[];
+    [Symbol.iterator]: () => IterableIterator<string>;
+    entries: () => IterableIterator<[number, string]>;
+    keys: () => IterableIterator<number>;
+    values: () => IterableIterator<string>;
     [Symbol.unscopables]: () => {
         copyWithin: boolean;
         entries: boolean;
@@ -188,17 +198,7 @@ export declare const table3: Partial<{
         keys: boolean;
         values: boolean;
     };
-    [Symbol.iterator]: () => IterableIterator<string>;
-    entries: () => IterableIterator<[number, string]>;
-    keys: () => IterableIterator<number>;
-    values: () => IterableIterator<string>;
-    find: {
-        <S extends string>(predicate: (this: void, value: string, index: number, obj: string[]) => value is S, thisArg?: any): S;
-        (predicate: (value: string, index: number, obj: string[]) => boolean, thisArg?: any): string;
-    };
-    findIndex: (predicate: (value: string, index: number, obj: string[]) => boolean, thisArg?: any) => number;
-    fill: (value: string, start?: number, end?: number) => string[];
-    copyWithin: (target: number, start: number, end?: number) => string[];
+    includes: (searchElement: string, fromIndex?: number) => boolean;
 }>[];
 export declare function array_unique<T>(array: Partial<T>[]): Partial<T>[];
 import * as self from './table';
