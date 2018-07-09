@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -78,7 +78,7 @@
   },
   "dependencies": {
     "array-uniq": "^2.0.0",
-    "cjk-conv": "^1.0.35",
+    "cjk-conv": "^1.0.44",
     "regexp-helper": "^1.0.5",
     "regexp-parser-event": "^1.0.1",
     "regexp-parser-literal": "^1.0.0",
@@ -88,7 +88,7 @@
     "uni-string": "^1.0.2"
   },
   "devDependencies": {
-    "@types/node": "^10.1.2",
+    "@types/node": "^10.5.2",
     "regexp-util": "^1.2.2",
     "regexp2": "^1.2.0"
   }
