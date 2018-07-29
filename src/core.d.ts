@@ -1,3 +1,6 @@
+/**
+ * Created by user on 2018/5/7/007.
+ */
 import TABLE_RANGE from './table';
 export { TABLE_RANGE };
 export declare type IOptions = {
