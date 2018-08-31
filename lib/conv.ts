@@ -8,7 +8,7 @@ import cjkConv from 'cjk-conv';
 
 export function _word_zh_core(search: string, skip?: string)
 {
-	return search.replace(/[\u4E00-\u9FFFのと]/ug, function (char)
+	return search.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}のと]/ug, function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
 		{
@@ -23,7 +23,7 @@ export function _word_zh_core(search: string, skip?: string)
 
 export function _word_zh_core2(search: string, skip?: string)
 {
-	return search.replace(/[\u4E00-\u9FFFのと]/ug, function (char)
+	return search.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}のと]/ug, function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
 		{

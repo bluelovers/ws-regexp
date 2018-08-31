@@ -26,6 +26,7 @@ import { zhRegExp, create } from '..';
 	'魯_鲁',
 	'画_划_劃_畫',
 	'と',
+	'分割线',
 ].forEach(function (value, index, array)
 {
 	let source = value instanceof RegExp ? value.source : value;

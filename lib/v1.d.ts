@@ -1,3 +1,8 @@
+/**
+ * Created by user on 2018/1/31/031.
+ *
+ * 已廢棄
+ */
 import * as self from './v1';
 export declare function replace_literal(r: string, cb: (text: string) => string): string;
 export declare function replace_literal(r: RegExp, cb: (text: string) => string): RegExp;

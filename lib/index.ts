@@ -34,7 +34,7 @@ export function _word_zh(search, ret, flags = 'ig', skip?: string)
 
 export function _word_zh_core(search: string, skip?: string)
 {
-	return search.replace(/[\u4E00-\u9FFFのと]/g, function (char)
+	return search.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}のと]/ug, function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
 		{

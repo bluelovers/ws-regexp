@@ -1,3 +1,6 @@
+/**
+ * Created by user on 2018/1/31/031.
+ */
 import { ParserEventEmitterEvent, IParserEventEmitterListener } from 'regexp-parser-event';
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import _support from 'regexp-support';
