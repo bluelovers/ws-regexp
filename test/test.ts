@@ -1,6 +1,8 @@
 import { _word_zh_core } from '../lib/conv';
+// @ts-ignore
 import ParserEventEmitter, { ParserEventEmitterEvent } from '../lib/event';
 import cjkConv from 'cjk-conv';
+// @ts-ignore
 import { local_range } from '../lib/local';
 
 import * as util from 'util';
