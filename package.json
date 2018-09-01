@@ -2,19 +2,30 @@
   "name": "@node-novel/pattern-split",
   "version": "1.0.0",
   "description": "try output RegExp Pattern as readable string list",
+  "homepage": "https://github.com/bluelovers/node-novel-pattern-split#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/node-novel-pattern-split/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/node-novel-pattern-split.git"
+  },
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "array-hyper-unique": "^1.0.2",
     "regexp-cjk": "^2.0.10",
     "regexp-parser-literal": "^1.0.0",
     "regexpp2": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
