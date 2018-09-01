@@ -51,6 +51,21 @@ describe(relative(__filename), () =>
 				'女佣', '女僕'
 			],
 			],
+			[
+				[new RegExp(`(女佣|女僕)`)], [
+				'(女佣|女僕)',
+			],
+			],
+			[
+				[new RegExp(`女佣|女僕`)], [
+				'女佣', '女僕'
+			],
+			],
+			[
+				[new RegExp(`(?:女佣|女僕)`)], [
+				'女佣', '女僕'
+			],
+			],
 		];
 
 		tests.forEach(function (testcase)
@@ -92,6 +107,27 @@ describe(relative(__filename), () =>
 			],
 			[
 				[`(?:女佣|女僕)`, {
+					allowCapturingGroup: true,
+				}], [
+				'女佣', '女僕'
+			],
+			],
+			[
+				[new RegExp(`(女佣|女僕)`), {
+					allowCapturingGroup: true,
+				}], [
+				'女佣', '女僕'
+			],
+			],
+			[
+				[new RegExp(`女佣|女僕`), {
+					allowCapturingGroup: true,
+				}], [
+				'女佣', '女僕'
+			],
+			],
+			[
+				[new RegExp(`(?:女佣|女僕)`), {
 					allowCapturingGroup: true,
 				}], [
 				'女佣', '女僕'
