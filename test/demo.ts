@@ -4,6 +4,13 @@
 
 import novelPatternSplit = require('../');
 
+console.dir(novelPatternSplit, {
+	depth: null,
+	colors: true,
+});
+
+console.log(novelPatternSplit.getRawString);
+
 let tests = [
 	`(女佣|女僕)`,
 	`女佣|女僕`,

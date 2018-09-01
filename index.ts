@@ -121,6 +121,9 @@ export function getRawString(raw: string | TemplateStringsArray | any)
 
 export default novelPatternSplit;
 // @ts-ignore
-Object.assign(novelPatternSplit, exports);
+Object.assign(novelPatternSplit, exports, {
+	getRawString,
+	novelPatternSplit,
+});
 // @ts-ignore
 export = novelPatternSplit;

@@ -1,6 +1,6 @@
 {
   "name": "@node-novel/pattern-split",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "try output RegExp Pattern as readable string list",
   "homepage": "https://github.com/bluelovers/node-novel-pattern-split#readme",
   "bugs": {

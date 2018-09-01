@@ -78,5 +78,8 @@ function getRawString(raw) {
 }
 exports.default = novelPatternSplit;
 // @ts-ignore
-Object.assign(novelPatternSplit, exports);
+Object.assign(novelPatternSplit, exports, {
+    getRawString,
+    novelPatternSplit,
+});
 module.exports = novelPatternSplit;
