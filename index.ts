@@ -10,7 +10,7 @@ import { array_unique, lazy_unique } from 'array-hyper-unique';
 export interface INovelPatternSplitOptions
 {
 	useRawString?: boolean,
-	allowCapturingGroup?: boolean,
+	breakingMode?: boolean,
 }
 
 export function novelPatternSplit(input: string | RegExp, options: INovelPatternSplitOptions = {})
@@ -30,9 +30,38 @@ export function novelPatternSplit(input: string | RegExp, options: INovelPattern
 	let p = parseRegExp(r.toString());
 	let d: Disjunction;
 
-	if (p.pattern.elements.length == 1)
+	let p_list = p.pattern.elements.slice();
+
+	if (options.breakingMode && p_list.length > 1)
 	{
-		let p2 = p.pattern.elements[0];
+		let d0 = p_list[0];
+
+		while (
+			d0
+			&& d0.type == 'Assertion'
+			&& d0.kind == 'lookbehind'
+			)
+		{
+			p_list.shift();
+			d0 = p_list[0];
+		}
+
+		d0 = p_list[p_list.length - 1];
+
+		while (
+			d0
+			&& d0.type == 'Assertion'
+			&& d0.kind == 'lookahead'
+			)
+		{
+			p_list.pop();
+			d0 = p_list[p_list.length - 1];
+		}
+	}
+
+	if (p_list.length == 1)
+	{
+		let p2 = p_list[0];
 
 		if (p2.type === 'Disjunction')
 		{
@@ -45,7 +74,7 @@ export function novelPatternSplit(input: string | RegExp, options: INovelPattern
 			d = p2.elements[0] as Disjunction;
 		}
 		else if (
-			options.allowCapturingGroup
+			options.breakingMode
 			&& p2.type == 'CapturingGroup'
 			&& p2.elements.length == 1
 			&& p2.elements[0].type === 'Disjunction')
