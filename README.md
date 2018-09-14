@@ -27,7 +27,7 @@ tests.forEach(function (input)
 {
 	let ret1 = novelPatternSplit(input);
 	let ret2 = novelPatternSplit(input, {
-		allowCapturingGroup: true,
+		breakingMode: true,
 	});
 
 	console.dir({

@@ -15,13 +15,14 @@ let tests = [
 	`(女佣|女僕)`,
 	`女佣|女僕`,
 	`(?:女佣|女僕)`,
+	`(?<![ァ-ヴーｱ-ﾝﾞｰ])(震夜)(?![ァ-ヴーｱ-ﾝﾞｰ])`
 ];
 
 tests.forEach(function (input)
 {
 	let ret1 = novelPatternSplit(input);
 	let ret2 = novelPatternSplit(input, {
-		allowCapturingGroup: true,
+		breakingMode: true,
 	});
 
 	console.dir({

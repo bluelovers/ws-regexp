@@ -131,6 +131,11 @@ describe(relative(__filename), () =>
 				'ソフィア', '索菲亞'
 			],
 			],
+			[
+				[new RegExp(`(?<![ァ-ヴーｱ-ﾝﾞｰ])(震夜)(?![ァ-ヴーｱ-ﾝﾞｰ])`), _options], [
+					'震夜'
+				],
+			],
 		];
 
 		tests.forEach(function (testcase)

@@ -34,6 +34,7 @@ function novelPatternSplit(input, options = {}) {
             p_list.pop();
             d0 = p_list[p_list.length - 1];
         }
+        //console.log(p_list);
     }
     if (p_list.length == 1) {
         let p2 = p_list[0];
@@ -51,10 +52,22 @@ function novelPatternSplit(input, options = {}) {
             && p2.elements[0].type === 'Disjunction') {
             d = p2.elements[0];
         }
+        else if (options.breakingMode
+            && p2.type == 'CapturingGroup') {
+            let bool = p2.elements
+                .every(function (elem) {
+                return elem.type == 'Character';
+            });
+            if (bool) {
+                d = p2;
+            }
+        }
         else if (0) {
-            console.log({
+            console.dir({
                 p2,
                 d,
+            }, {
+                depth: 5,
             });
         }
     }
@@ -72,6 +85,17 @@ function novelPatternSplit(input, options = {}) {
             }, []);
             if (c.length) {
                 patterns = array_hyper_unique_1.array_unique(c);
+            }
+        }
+    }
+    else if (d && d.type === 'CapturingGroup') {
+        if (d.elements) {
+            let c = d.elements.reduce(function (a, b) {
+                a.push(regexp_parser_literal_1.astToString(b));
+                return a;
+            }, []);
+            if (c.length) {
+                patterns = [c.join('')];
             }
         }
     }
