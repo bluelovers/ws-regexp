@@ -34,7 +34,10 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InArrows": boolean;
     "InAvestan": boolean;
     "InBalinese": boolean;
-    "InBamum": boolean;
+    "InBamum": boolean; /**
+     * @link http://2ality.com/2017/07/regexp-unicode-property-escapes.html
+     * @link https://en.wikipedia.org/wiki/Unicode_character_property
+     */
     "InBamum_Supplement": boolean;
     "InBassa_Vah": boolean;
     "InBatak": boolean;
@@ -1448,7 +1451,10 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InArrows": boolean;
     "InAvestan": boolean;
     "InBalinese": boolean;
-    "InBamum": boolean;
+    "InBamum": boolean; /**
+     * @link http://2ality.com/2017/07/regexp-unicode-property-escapes.html
+     * @link https://en.wikipedia.org/wiki/Unicode_character_property
+     */
     "InBamum_Supplement": boolean;
     "InBassa_Vah": boolean;
     "InBatak": boolean;

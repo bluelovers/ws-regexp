@@ -219,7 +219,7 @@ export declare const UNICODE_ALL: {
 export declare enum UNICODE_NAME_ALIAS {
     Quotation_Mark = "QMark",
     Pattern_Syntax = "Pat_Syn",
-    Ideographic = "Ideo",
+    Ideographic = "Ideo"
 }
 export declare const UNICODE_NAME_ALIAS_ALL: {
     "C": string;
@@ -298,7 +298,7 @@ export declare const UNICODE_NAME_ALIAS_ALL: {
     "Paragraph_Separator": string;
     "Zs": string;
     "Space_Separator": string;
-} & typeof self.UNICODE_NAME_ALIAS;
+} & typeof UNICODE_NAME_ALIAS;
 /**
  * @todo test more
  */

@@ -20,7 +20,7 @@ export declare enum POXIX {
     space = "space",
     upper = "upper",
     word = "word",
-    xdigit = "xdigit",
+    xdigit = "xdigit"
 }
 export declare const PatternTest: {
     [k in keyof typeof POXIX]?: IPatternTestRow[];

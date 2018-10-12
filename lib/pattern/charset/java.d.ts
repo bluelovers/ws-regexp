@@ -1,4 +1,7 @@
 /**
+ * Created by user on 2018/5/6/006.
+ */
+/**
  * @link https://www.regular-expressions.info/posixbrackets.html
  */
 export declare enum JAVA {
@@ -14,7 +17,7 @@ export declare enum JAVA {
     punct = "Punct",
     space = "Space",
     upper = "Upper",
-    xdigit = "XDigit",
+    xdigit = "XDigit"
 }
 import * as self from './';
 export default self;

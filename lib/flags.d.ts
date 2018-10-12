@@ -29,7 +29,7 @@ export declare enum FlagsName {
     s = "s",
     freeSpacing = "x",
     x = "x",
-    n = "n",
+    n = "n"
 }
 export declare const FlagsPattern: {
     [k in keyof typeof FlagsName]?: {

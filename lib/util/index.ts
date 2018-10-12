@@ -6,7 +6,7 @@ import { ICreateRegExp, ITypeCreateRegExp } from '../index';
 import { testPattern } from '../pattern';
 import * as util from 'util';
 
-util.inspect.defaultOptions.colors = true;
+//util.inspect.defaultOptions.colors = true;
 
 export function log_dir(...argv)
 {
@@ -16,7 +16,7 @@ export function log_dir(...argv)
 			colors: true,
 		});
 
-		a.push(c)
+		a.push(c);
 
 		return a;
 	}, []);

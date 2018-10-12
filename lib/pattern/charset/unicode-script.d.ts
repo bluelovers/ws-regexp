@@ -1,3 +1,6 @@
+/**
+ * Created by user on 2018/5/6/006.
+ */
 import { ICreateRegExp, ITypeCreateRegExp } from '../../index';
 import { IPatternTestRow } from '../../pattern';
 export declare const KEY_PREFIX = "\\p{Script=";
@@ -308,7 +311,7 @@ export declare enum UNICODE_SCRIPTS_NAME_ALIAS {
     Hiragana = "Hira",
     Latin = "Latn",
     Tamil = "Taml",
-    Tibetan = "Tibt",
+    Tibetan = "Tibt"
 }
 export declare const PatternTest: {
     [k in keyof typeof UNICODE_SCRIPTS_ALL]?: IPatternTestRow[];

@@ -8,7 +8,11 @@ import { IRegExpPrototype } from './lib/proto/prototype';
 import { IRegExpStatic } from './lib/proto/static';
 export declare const support: Readonly<{
     nativeFlags: string;
+    /**
+     * flag support with name and pattern test
+     */
     flags: {
+        [x: number]: boolean;
         readonly multiline: boolean;
         readonly m: boolean;
         readonly global: boolean;
@@ -25,6 +29,9 @@ export declare const support: Readonly<{
         readonly x: boolean;
         readonly n: boolean;
     };
+    /**
+     * all flag support without name and pattern test
+     */
     flagsAll: {
         [key: string]: boolean;
         g: boolean;
@@ -34,6 +41,9 @@ export declare const support: Readonly<{
         u: boolean;
         y: boolean;
     };
+    /**
+     * pattern support
+     */
     pattern: {
         namedCapturingGroups: boolean;
         namedCapturingGroupsUnicode: boolean;
