@@ -21,6 +21,10 @@ export declare type IOptions = {
     on?: {
         [k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
     };
+    /**
+     * allow set `CjkConv.zhTable.auto`
+     */
+    zhTable?: (char: string) => string[];
 } & IAstToStringOptions;
 export declare const defaultOptions: IOptions;
 export declare class zhRegExp extends RegExp {

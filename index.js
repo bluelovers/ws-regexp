@@ -9,6 +9,7 @@ const regexp_parser_literal_1 = require("regexp-parser-literal");
 const regexp_support_1 = require("regexp-support");
 const regexp_range_1 = require("regexp-range");
 const regexp_helper_1 = require("regexp-helper");
+const cjk_conv_1 = require("cjk-conv");
 exports.defaultOptions = {};
 class zhRegExp extends RegExp {
     constructor(str, flags = null, options = {}, ...argv) {
@@ -27,6 +28,7 @@ class zhRegExp extends RegExp {
         let hasFlags = typeof flags == 'string';
         if (1 && (!options.disableZh || !options.disableLocalRange || options.on)) {
             let ev;
+            const zhTable = options.zhTable || cjk_conv_1.default.zhTable.auto;
             if (str instanceof RegExp) {
                 let ast = regexp_parser_literal_1.parseRegExp(str.toString());
                 ev = new regexp_parser_event_1.default(ast);
@@ -44,7 +46,7 @@ class zhRegExp extends RegExp {
             if (!options.disableZh) {
                 ev.on(regexp_parser_event_1.ParserEventEmitterEvent.default, function (ast) {
                     ast.old_raw = ast.old_raw || ast.raw;
-                    ast.raw = conv_1._word_zh_core(ast.raw, options.skip);
+                    ast.raw = conv_1._word_zh_core(ast.raw, options.skip, zhTable);
                     ev.emit(regexp_parser_event_1.ParserEventEmitterEvent.change, ast);
                 });
             }
@@ -57,7 +59,7 @@ class zhRegExp extends RegExp {
                     });
                     if (ret) {
                         if (options.allowLocalRangeAutoZh) {
-                            ret = conv_1._word_zh_core2(ret, options.skip);
+                            ret = conv_1._word_zh_core2(ret, options.skip, zhTable);
                         }
                         ast.old_raw = ast.old_raw || ast.raw;
                         ast.raw = ret;

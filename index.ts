@@ -8,6 +8,7 @@ import { IAstToStringOptions, parseRegExp } from 'regexp-parser-literal';
 import _support from 'regexp-support';
 import regexpRange from 'regexp-range';
 import RegexpHelper, { isRegExp as _isRegExp } from 'regexp-helper';
+import CjkConv from 'cjk-conv';
 
 export type IOptions = {
 	skip?: string,
@@ -27,6 +28,11 @@ export type IOptions = {
 	on?: {
 		[k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
 	},
+
+	/**
+	 * allow set `CjkConv.zhTable.auto`
+	 */
+	zhTable?: (char: string) => string[]
 
 } & IAstToStringOptions;
 
@@ -106,6 +112,8 @@ export class zhRegExp extends RegExp
 		{
 			let ev: ParserEventEmitter;
 
+			const zhTable = options.zhTable || CjkConv.zhTable.auto
+
 			if (str instanceof RegExp)
 			{
 				let ast = parseRegExp(str.toString());
@@ -131,7 +139,7 @@ export class zhRegExp extends RegExp
 				ev.on(ParserEventEmitterEvent.default, function (ast)
 				{
 					ast.old_raw = ast.old_raw || ast.raw;
-					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip);
+					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTable);
 					ev.emit(ParserEventEmitterEvent.change, ast);
 				});
 			}
@@ -150,7 +158,7 @@ export class zhRegExp extends RegExp
 					{
 						if ((options as IOptions).allowLocalRangeAutoZh)
 						{
-							ret = _word_zh_core2(ret, (options as IOptions).skip);
+							ret = _word_zh_core2(ret, (options as IOptions).skip, zhTable);
 						}
 
 						ast.old_raw = ast.old_raw || ast.raw;
