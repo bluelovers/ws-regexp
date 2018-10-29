@@ -1,5 +1,5 @@
 
-import * as _array_uniq from 'array-uniq';
+import { array_unique } from 'array-hyper-unique';
 import * as regexpp from 'regexpp2';
 import { AST } from 'regexpp2';
 import * as EmojiRegex from 'emoji-regex';
@@ -10,6 +10,8 @@ export const EMOJI_REGEX = EmojiRegex() as RegExp;
 export const defaultRegExpParser = createRegExpParser({
 	disableChkCharacterClassRange: true,
 });
+
+export { array_unique }
 
 export function createRegExpParser(options?: regexpp.RegExpParser.Options)
 {
@@ -320,6 +322,7 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 					}, [] as string[])
 				;
 
+				// @ts-ignore
 				a = array_unique<string>(a);
 
 				source = a.join('|');
@@ -362,11 +365,6 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 export type INodePlus = {
 	changed?: boolean,
 	old_raw?: string,
-}
-
-export function array_unique<T>(arr: T[]): Partial<T>[]
-{
-	return _array_uniq(arr);
 }
 
 import * as self from './index';

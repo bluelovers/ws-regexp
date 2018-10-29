@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _array_uniq = require("array-uniq");
+const array_hyper_unique_1 = require("array-hyper-unique");
+exports.array_unique = array_hyper_unique_1.array_unique;
 const regexpp = require("regexpp2");
 const EmojiRegex = require("emoji-regex");
 const uni_string_1 = require("uni-string");
@@ -159,7 +160,7 @@ function astToString(ast, options = {}) {
                             }, []);
                         }
                         if (do_unique) {
-                            a = array_unique(a);
+                            a = array_hyper_unique_1.array_unique(a);
                         }
                         if (options.sortClass) {
                             a.sort();
@@ -202,7 +203,8 @@ function astToString(ast, options = {}) {
                     a.push(source);
                     return a;
                 }, []);
-                a = array_unique(a);
+                // @ts-ignore
+                a = array_hyper_unique_1.array_unique(a);
                 source = a.join('|');
                 _update_ = true;
             }
@@ -230,9 +232,5 @@ function astToString(ast, options = {}) {
     return source;
 }
 exports.astToString = astToString;
-function array_unique(arr) {
-    return _array_uniq(arr);
-}
-exports.array_unique = array_unique;
 const self = require("./index");
 exports.default = self;

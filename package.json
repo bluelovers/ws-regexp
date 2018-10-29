@@ -1,16 +1,18 @@
 {
   "name": "regexp-parser-literal",
-  "version": "1.0.0",
-  "description": "## API",
+  "version": "1.0.1",
+  "description": "RegExp AST Parser",
   "keywords": [
     "build",
     "emoji",
     "literal",
     "parser",
     "re",
+    "ast",
     "regex",
     "regexp",
     "regular",
+    "expression",
     "regular expression"
   ],
   "homepage": "https://github.com/bluelovers/regexp-parser-literal#readme",
@@ -28,9 +30,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "array-uniq": "^2.0.0",
-    "emoji-regex": "^6.5.1",
+    "array-hyper-unique": "^1.0.7",
+    "emoji-regex": "^7.0.1",
     "regexpp2": "^1.1.1",
-    "uni-string": "^1.0.1"
+    "uni-string": "^1.0.2"
   }
 }

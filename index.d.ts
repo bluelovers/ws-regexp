@@ -1,7 +1,9 @@
+import { array_unique } from 'array-hyper-unique';
 import * as regexpp from 'regexpp2';
 import { AST } from 'regexpp2';
 export declare const EMOJI_REGEX: RegExp;
 export declare const defaultRegExpParser: regexpp.RegExpParser;
+export { array_unique };
 export declare function createRegExpParser(options?: regexpp.RegExpParser.Options): regexpp.RegExpParser;
 export declare function parseRegExp(input: string, objRegExpParser?: regexpp.RegExpParser): regexpp.AST.RegExpLiteral;
 export declare function parseFlags(input: string, objRegExpParser?: regexpp.RegExpParser): regexpp.AST.Flags;
@@ -18,6 +20,5 @@ export declare type INodePlus = {
     changed?: boolean;
     old_raw?: string;
 };
-export declare function array_unique<T>(arr: T[]): Partial<T>[];
 import * as self from './index';
 export default self;
