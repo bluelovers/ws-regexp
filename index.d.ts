@@ -83,6 +83,7 @@ export declare class zhRegExp extends RegExp {
         input: string;
     };
     static readonly support: typeof _support;
+    static readonly version: string;
 }
 export declare namespace zhRegExp {
     export import isRegExp = RegexpHelper.isRegExp;
@@ -94,4 +95,5 @@ export interface IApi<T = zhRegExp> {
     (str: string | RegExp, flags?: string, options?: IOptions | string): T;
     (str: string | RegExp, options?: IOptions): T;
 }
+export declare const version: string;
 export default zhRegExp;

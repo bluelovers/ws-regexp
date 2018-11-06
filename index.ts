@@ -9,6 +9,7 @@ import _support from 'regexp-support';
 import regexpRange from 'regexp-range';
 import RegexpHelper, { isRegExp as _isRegExp } from 'regexp-helper';
 import CjkConv from 'cjk-conv';
+import PackageJson = require('./package.json')
 
 export type IOptions = {
 	skip?: string,
@@ -319,6 +320,11 @@ export class zhRegExp extends RegExp
 	{
 		return _support;
 	}
+
+	static get version(): string
+	{
+		return PackageJson.version
+	}
 }
 
 export namespace zhRegExp
@@ -335,5 +341,7 @@ export interface IApi<T = zhRegExp>
 	(str: string | RegExp, flags?: string, options?: IOptions | string): T,
 	(str: string | RegExp, options?: IOptions): T,
 }
+
+export const version: string = PackageJson.version;
 
 export default zhRegExp;

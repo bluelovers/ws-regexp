@@ -10,6 +10,7 @@ const regexp_support_1 = require("regexp-support");
 const regexp_range_1 = require("regexp-range");
 const regexp_helper_1 = require("regexp-helper");
 const cjk_conv_1 = require("cjk-conv");
+const PackageJson = require("./package.json");
 exports.defaultOptions = {};
 class zhRegExp extends RegExp {
     constructor(str, flags = null, options = {}, ...argv) {
@@ -188,6 +189,9 @@ class zhRegExp extends RegExp {
     static get support() {
         return regexp_support_1.default;
     }
+    static get version() {
+        return PackageJson.version;
+    }
 }
 exports.zhRegExp = zhRegExp;
 (function (zhRegExp) {
@@ -196,4 +200,5 @@ exports.zhRegExp = zhRegExp;
 exports.parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
 exports.isRegExp = zhRegExp.isRegExp;
 exports.create = zhRegExp.create.bind(zhRegExp);
+exports.version = PackageJson.version;
 exports.default = zhRegExp;
