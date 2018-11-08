@@ -21,6 +21,8 @@
 
     "strict": false,
 
+    "resolveJsonModule": true,
+
     //"forceConsistentCasingInFileNames": true,
 
     "locale": "zh-TW",
