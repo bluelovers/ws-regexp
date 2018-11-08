@@ -49,10 +49,15 @@ export function arraySep(arr: string[])
 
 	ret.sort();
 
+	ret = array_unique(ret);
+
 	return ret
 }
 
-export function arrayToRegExp<T extends string | RegExp | zhRegExp>(arr: T[], unique?: boolean)
+/**
+ * @example arrayToRegExp(arraySep(star).map(v => v.join('')))
+ */
+export function arrayToRegExp<T extends string | RegExp | zhRegExp>(arr: T[], unique: boolean = true)
 {
 	let ret = arr.map(function (v)
 	{

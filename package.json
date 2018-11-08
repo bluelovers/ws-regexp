@@ -63,5 +63,7 @@
     "regexp-cjk": "^2.0.13",
     "uni-string": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "random-extra": "^2.8.0"
+  }
 }
