@@ -17,6 +17,7 @@ $ npm install execall2
 import execall from 'execall2';
 import * as execall from 'execall2';
 import { execall } from 'execall2';
+import execall = require('execall2');
 const execall = require('execall2');
 ```
 
@@ -88,9 +89,13 @@ execall(/(\d+)/g, '$200 and $400');
 
 ## API
 
-### execall(re, input)
+### execall(re, input, options?: IExecAllOptions)
 
 Returns an array of objects with a match, sub-matches, and index.
+
+```ts
+declare function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: string, options?: IExecAllOptions<T>): IMatches<T>;
+```
 
 #### re
 
@@ -102,6 +107,22 @@ Regular expression to match against the `input`.
 
 Type: `string`
 
+#### options
+
+Type: `IExecAllOptions`
+
+```ts
+export interface IExecAllOptions<T extends RegExp = RegExp>
+{
+	resetLastIndex?: boolean,
+	cloneRegexp?: ICloneRegexp<T>,
+}
+
+export interface ICloneRegexp<T extends RegExp = RegExp>
+{
+	(inputRegExp: T | RegExp, ...argv): T
+}
+```
 
 ## License
 

@@ -1,34 +1,84 @@
-import * as cloneRegexp from 'clone-regexp';
+import * as _cloneRegexp from 'clone-regexp';
 
 const S = Symbol.for('execall');
 
-function execAll(inputRegExp: RegExp, input: string)
+export interface IExecAllOptions<T extends RegExp = RegExp>
 {
-	let match: RegExpExecArray & string[] & {
+	resetLastIndex?: boolean,
+	/**
+	 * allow change cloneRegexp function
+	 */
+	cloneRegexp?: ICloneRegexp<T>,
+}
 
-		index: number,
-		//input: string,
+export interface ICloneRegexp<T extends RegExp = RegExp>
+{
+	(inputRegExp: T | RegExp, ...argv): T
+}
 
-		groups?: {
-			[k: string]: string,
-		},
+export type IExecAllRegExpExecArray<T extends RegExp = RegExp> = RegExpExecArray & string[] & {
 
-	};
+	/**
+	 * The 0-based index of the match in the string.
+	 */
+	index: number,
+	//input: string,
 
-	type IMatches = (typeof match & {
-		match: string,
-		sub: string[],
+	/**
+	 * es2018
+	 */
+	groups?: {
+		[k: string]: string,
+	},
 
-	})[] & {
-		readonly re: RegExp,
-		readonly input: string,
-	};
+	//[S]: IMatches<T>
+};
 
-	let matches = [] as IMatches;
+export type IMatches<T extends RegExp = RegExp> = (IExecAllRegExpExecArray<T> & {
+	match: string,
+	sub: string[],
+})[] & {
+	/**
+	 * regular expressions
+	 *
+	 * @readonly
+	 */
+	readonly re: T,
+	/**
+	 * regular expressions that contains the string against which a regular expression is matched.
+	 *
+	 * @readonly
+	 */
+	readonly input: string,
+	/**
+	 * last matched index
+	 *
+	 * @readonly
+	 */
+	readonly lastIndex: number,
+};
 
-	let re: RegExp = cloneRegexp(inputRegExp);
+function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: string, options?: IExecAllOptions<T>): IMatches<T>
+{
+	let match: IExecAllRegExpExecArray<T>;
+
+	options = options || {};
+
+	const cloneRegexp: ICloneRegexp<T> = options.cloneRegexp || _cloneRegexp;
+
+	let matches = [] as IMatches<T>;
+
+	let re = cloneRegexp(inputRegExp);
 	let isGlobal = re.global;
 
+	if (options.resetLastIndex)
+	{
+		re.lastIndex = 0;
+	}
+
+	let lastIndex = 0;
+
+	// @ts-ignore
 	while (match = re.exec(input))
 	{
 		delete match.input;
@@ -40,6 +90,8 @@ function execAll(inputRegExp: RegExp, input: string)
 			[S]: matches,
 		}));
 
+		lastIndex = re.lastIndex;
+
 		if (!isGlobal)
 		{
 			break;
@@ -50,13 +102,22 @@ function execAll(inputRegExp: RegExp, input: string)
 		re: {
 			value: re,
 			enumerable: false,
-			configurable: true,
+			configurable: false,
+			writable: false,
 		},
 
 		input: {
 			value: input,
 			enumerable: false,
-			configurable: true,
+			configurable: false,
+			writable: false,
+		},
+
+		lastIndex: {
+			value: lastIndex,
+			enumerable: false,
+			configurable: false,
+			writable: false,
 		},
 	});
 
@@ -65,13 +126,22 @@ function execAll(inputRegExp: RegExp, input: string)
 
 // @ts-ignore
 let _execAll = execAll as typeof execAll & {
-	execall(inputRegExp: RegExp, input: string): ReturnType<typeof execAll>,
-	default(inputRegExp: RegExp, input: string): ReturnType<typeof execAll>,
+	execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: string, options?: IExecAllOptions): IMatches<T>,
+	default<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: string, options?: IExecAllOptions): IMatches<T>,
 
-	SYMBOL: symbol,
+	SYMBOL: typeof S,
 };
 
+export { S as SYMBOL }
+export { _execAll as execall }
+// @ts-ignore
+export default _execAll
+
 _execAll.SYMBOL = S;
+// @ts-ignore
 _execAll.default = _execAll.execall = execAll;
 
+Object.defineProperty(_execAll, "__esModule", { value: true });
+
+// @ts-ignore
 export = _execAll;
