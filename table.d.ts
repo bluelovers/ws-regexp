@@ -1,4 +1,12 @@
+/**
+ * Created by user on 2018/1/31/031.
+ */
 /// <reference types="node" />
+/**
+ * 和諧/河蟹
+ *
+ * @type {string[][]}
+ */
 export declare const table: Partial<{
     toString: () => string;
     charAt: (pos: number) => string;
@@ -79,6 +87,11 @@ export declare const table: Partial<{
     trimLeft: () => string;
     trimRight: () => string;
 }>[];
+/**
+ * 去和諧時會以第一個項目為返回結果
+ *
+ * @type {string[][]}
+ */
 export declare const table2: String[][];
 export declare const table3: string[][];
 export declare function array_unique<T>(array: Partial<T>[]): Partial<T>[];

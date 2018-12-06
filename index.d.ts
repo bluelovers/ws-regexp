@@ -1,3 +1,6 @@
+/**
+ * Created by user on 2018/1/31/031.
+ */
 import { IApi } from 'regexp-cjk';
 export * from './table';
 export declare const SP_KEY = "#_@_#";

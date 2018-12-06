@@ -43,6 +43,9 @@ export const star = arrCjk([
 	'馬的',
 	'麻痹',
 	'麻痺',
+	'傢伙',
+	'家伙',
+	'蠢蛋',
 ]);
 
 star.sort();

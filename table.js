@@ -1,5 +1,13 @@
 "use strict";
+/**
+ * Created by user on 2018/1/31/031.
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 和諧/河蟹
+ *
+ * @type {string[][]}
+ */
 exports.table = array_unique([
     '噁心',
     '触手',
@@ -170,6 +178,11 @@ exports.table = array_unique([
     '背叛',
     '性女',
 ]);
+/**
+ * 去和諧時會以第一個項目為返回結果
+ *
+ * @type {string[][]}
+ */
 exports.table2 = array_unique([
     ['裸体', '果体', new String('裸$2')],
     ['奴隷', '奴隶',],
@@ -188,3 +201,4 @@ function array_unique(array) {
 exports.array_unique = array_unique;
 const self = require("./table");
 exports.default = self;
+//export default exports;

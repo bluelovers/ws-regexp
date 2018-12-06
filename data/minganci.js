@@ -1,5 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * https://github.com/FangHeXie/download
+ */
 exports.data = {
     low: [
         ["主席", ""],
