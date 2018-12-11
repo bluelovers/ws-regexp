@@ -1,6 +1,6 @@
 {
   "name": "@node-novel/pattern-split",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "try output RegExp Pattern as readable string list",
   "homepage": "https://github.com/bluelovers/node-novel-pattern-split#readme",
   "bugs": {
@@ -20,9 +20,9 @@
     "test": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.js\""
   },
   "dependencies": {
-    "array-hyper-unique": "^1.0.2",
-    "regexp-cjk": "^2.0.10",
-    "regexp-parser-literal": "^1.0.0",
+    "array-hyper-unique": "^1.0.7",
+    "regexp-cjk": "^2.0.14",
+    "regexp-parser-literal": "^1.0.1",
     "regexpp2": "^1.1.1"
   },
   "publishConfig": {
