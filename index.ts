@@ -9,6 +9,12 @@ export interface IExecAllOptions<T extends RegExp = RegExp>
 	 * allow change cloneRegexp function
 	 */
 	cloneRegexp?: ICloneRegexp<T>,
+
+	/**
+	 * only use this when u know what u doing
+	 */
+	leftContext?: boolean,
+	rightContext?: boolean,
 }
 
 export interface ICloneRegexp<T extends RegExp = RegExp>
@@ -37,6 +43,10 @@ export type IExecAllRegExpExecArray<T extends RegExp = RegExp> = RegExpExecArray
 export type IMatches<T extends RegExp = RegExp> = (IExecAllRegExpExecArray<T> & {
 	match: string,
 	sub: string[],
+
+	leftContext?: string,
+	rightContext?: string,
+
 })[] & {
 	/**
 	 * regular expressions
@@ -78,6 +88,11 @@ function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: stri
 
 	let lastIndex = 0;
 
+	let { rightContext, leftContext } = options;
+
+	rightContext = !!rightContext;
+	leftContext = !!leftContext;
+
 	// @ts-ignore
 	while (match = re.exec(input))
 	{
@@ -86,6 +101,11 @@ function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: stri
 		matches.push(Object.assign(match, {
 			match: match[0],
 			sub: match.slice(1),
+
+			// @ts-ignore
+			leftContext: leftContext && RegExp.leftContext,
+			// @ts-ignore
+			rightContext: rightContext && RegExp.rightContext,
 
 			[S]: matches,
 		}));

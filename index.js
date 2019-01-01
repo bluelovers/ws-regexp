@@ -12,12 +12,19 @@ function execAll(inputRegExp, input, options) {
         re.lastIndex = 0;
     }
     let lastIndex = 0;
+    let { rightContext, leftContext } = options;
+    rightContext = !!rightContext;
+    leftContext = !!leftContext;
     // @ts-ignore
     while (match = re.exec(input)) {
         delete match.input;
         matches.push(Object.assign(match, {
             match: match[0],
             sub: match.slice(1),
+            // @ts-ignore
+            leftContext: leftContext && RegExp.leftContext,
+            // @ts-ignore
+            rightContext: rightContext && RegExp.rightContext,
             [S]: matches,
         }));
         lastIndex = re.lastIndex;

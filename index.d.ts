@@ -5,6 +5,11 @@ export interface IExecAllOptions<T extends RegExp = RegExp> {
      * allow change cloneRegexp function
      */
     cloneRegexp?: ICloneRegexp<T>;
+    /**
+     * only use this when u know what u doing
+     */
+    leftContext?: boolean;
+    rightContext?: boolean;
 }
 export interface ICloneRegexp<T extends RegExp = RegExp> {
     (inputRegExp: T | RegExp, ...argv: any[]): T;
@@ -24,6 +29,8 @@ export declare type IExecAllRegExpExecArray<T extends RegExp = RegExp> = RegExpE
 export declare type IMatches<T extends RegExp = RegExp> = (IExecAllRegExpExecArray<T> & {
     match: string;
     sub: string[];
+    leftContext?: string;
+    rightContext?: string;
 })[] & {
     /**
      * regular expressions
