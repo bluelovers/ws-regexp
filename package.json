@@ -1,6 +1,6 @@
 {
   "name": "regexp-parser-event",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "keywords": [
     "build",
@@ -30,7 +30,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "regexp-parser-literal": "^1.0.0",
+    "regexp-parser-literal": "^1.0.1",
     "regexpp2": "^1.1.1"
   }
 }

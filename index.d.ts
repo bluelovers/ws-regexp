@@ -12,7 +12,7 @@ export declare enum ParserEventEmitterEvent {
     class_range = "class_range",
     class_other = "class_other",
     class_uniset = "class_uniset",
-    change = "change",
+    change = "change"
 }
 export declare class ParserEventEmitter extends EventEmitter {
     astRegExpLiteral: AST.RegExpLiteral & INodePlus;
