@@ -1,6 +1,6 @@
 {
   "name": "regexp-helper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "keywords": [
     "check",
@@ -37,7 +37,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "regexp-helper-core": "^1.0.0",
-    "regexp-support": "^1.0.15"
+    "regexp-helper-core": "^1.0.5",
+    "regexp-support": "^1.0.22"
   }
 }

@@ -60,7 +60,7 @@ export function _getNativeFlags<T extends RegExp>(regex: T)
 export type valueof<T> = T[keyof T];
 
 export function prototypeToFlagsArray<T extends Partial<{
-	[k in keyof typeof FlagsName]?
+	[k in keyof typeof FlagsName]?: any
 } & {
 	[k: string]: any
 }>, R = Partial<typeof FlagsName> & {
@@ -89,7 +89,7 @@ export function prototypeToFlagsArray<T extends Partial<{
 }
 
 export function prototypeToFlags<T extends Partial<{
-	[k in keyof typeof FlagsName]?
+	[k in keyof typeof FlagsName]?: any
 } & {
 	[k: string]: any
 }>, R = Partial<typeof FlagsName> & {
