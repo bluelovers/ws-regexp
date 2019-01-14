@@ -14,5 +14,5 @@ export declare function _createFnTestPattern<R>(initTestPatterns: R): {
     (name: string, RegExpClass?: ICreateRegExp, testPatterns?: R): boolean;
     <T>(name: string, RegExpClass?: ITypeCreateRegExp<T>, testPatterns?: R): boolean;
 };
-import * as self from './index';
-export default self;
+declare const _default: typeof import(".");
+export default _default;

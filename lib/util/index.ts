@@ -4,7 +4,7 @@
 
 import { ICreateRegExp, ITypeCreateRegExp } from '../index';
 import { testPattern } from '../pattern';
-import * as util from 'util';
+import util = require('util');
 
 //util.inspect.defaultOptions.colors = true;
 
@@ -53,6 +53,4 @@ export function _createFnTestPattern<R>(initTestPatterns: R): {
 	};
 }
 
-import * as self from './index';
-
-export default self;
+export default exports as typeof import('./index');
