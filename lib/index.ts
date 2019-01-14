@@ -5,6 +5,7 @@
  */
 
 import cjkConv from 'cjk-conv';
+import zhTable, { IOptions } from 'cjk-conv/lib/zh/table/index';
 import { zhRegExp } from '..';
 export * from './v1';
 
@@ -41,7 +42,7 @@ export function _word_zh_core(search: string, skip?: string)
 			return char;
 		}
 
-		let a = cjkConv.zhTable.auto(char);
+		let a = zhTable.auto(char);
 
 		return a.length > 1 ? '[' + a.join('') + ']' : a[0];
 	});
@@ -49,6 +50,5 @@ export function _word_zh_core(search: string, skip?: string)
 
 //export type valueof<T> = T[keyof T];
 
-import * as self from './index';
-export default self;
+export default exports as typeof import('./index');
 

@@ -3,5 +3,5 @@
  */
 import { array_unique } from 'array-hyper-unique';
 export { array_unique };
-import * as self from './util';
-export default self;
+declare const _default: typeof import("./util");
+export default _default;

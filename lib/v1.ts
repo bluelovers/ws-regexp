@@ -6,10 +6,12 @@
 
 import cjkConv from 'cjk-conv';
 import regexpRange from 'regexp-range';
+import zhTable, { IOptions } from 'cjk-conv/lib/zh/table/index';
+import { array_unique } from './util';
 
 import { parse as regexpParse, types } from 'regexp2';
 
-import * as self from './v1';
+export { array_unique }
 
 export function replace_literal(r: string, cb: (text: string) => string): string
 export function replace_literal(r: RegExp, cb: (text: string) => string): RegExp
@@ -131,14 +133,6 @@ function _(b, cb)
 	return b.toString();
 }
 
-export function array_unique(array: any[])
-{
-	return array.filter(function (el, index, arr)
-	{
-		return index == arr.indexOf(el);
-	});
-}
-
 export const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
 export function regex_str(str: string)
@@ -199,7 +193,7 @@ export function _word_zh_core(search: string, skip?: string)
 		a = array_unique(a);
 		a.sort();
 		*/
-		let a = cjkConv.zhTable.auto(char);
+		let a = zhTable.auto(char);
 
 		return a.length > 1 ? '[' + a.join('') + ']' : a[0];
 	});
@@ -285,4 +279,5 @@ export namespace zhtw_convert
 	}
 }
 */
-export default self;
+
+export default exports as typeof import('./v1');

@@ -36,8 +36,6 @@ export function _multiEqual(a, b, ...argv)
 	return false;
 }
 
-import * as self from './support';
-
 export const support = (function (): {
 	readonly leftContext: boolean;
 	readonly rightContext: boolean;
@@ -46,7 +44,7 @@ export const support = (function (): {
 	readonly input: boolean;
 }
 {
-	let s = Object.assign({}, self);
+	let s = Object.assign({}, exports as typeof import('./support'));
 	delete s.default;
 	// @ts-ignore
 	delete s.support;
