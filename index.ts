@@ -7,7 +7,7 @@ import ParserEventEmitter, { ParserEventEmitterEvent, IParserEventEmitterListene
 import { IAstToStringOptions, parseRegExp } from 'regexp-parser-literal';
 import _support from 'regexp-support';
 import regexpRange from 'regexp-range';
-import RegexpHelper, { isRegExp as _isRegExp } from 'regexp-helper';
+import RegexpHelper = require('regexp-helper');
 import CjkConv from 'cjk-conv';
 import PackageJson = require('./package.json');
 import zhTable from 'cjk-conv/lib/zh/table/index';
@@ -335,8 +335,8 @@ export namespace zhRegExp
 	export import isRegExp = RegexpHelper.isRegExp;
 }
 
-export const parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
-export const isRegExp = zhRegExp.isRegExp;
+export import parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
+export import isRegExp = zhRegExp.isRegExp;
 export const create = zhRegExp.create.bind(zhRegExp) as typeof zhRegExp.create;
 
 export interface IApi<T = zhRegExp>

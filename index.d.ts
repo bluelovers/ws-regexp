@@ -4,7 +4,7 @@
 import { ParserEventEmitterEvent, IParserEventEmitterListener } from 'regexp-parser-event';
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import _support from 'regexp-support';
-import RegexpHelper from 'regexp-helper';
+import RegexpHelper = require('regexp-helper');
 export declare type IOptions = {
     skip?: string;
     disableZh?: boolean;
@@ -89,8 +89,8 @@ export declare class zhRegExp extends RegExp {
 export declare namespace zhRegExp {
     export import isRegExp = RegexpHelper.isRegExp;
 }
-export declare const parseRegularExpressionString: typeof zhRegExp.parseRegularExpressionString;
-export declare const isRegExp: typeof RegexpHelper.isRegExp;
+export import parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
+export import isRegExp = zhRegExp.isRegExp;
 export declare const create: typeof zhRegExp.create;
 export interface IApi<T = zhRegExp> {
     (str: string | RegExp, flags?: string, options?: IOptions | string): T;
