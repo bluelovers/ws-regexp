@@ -10,7 +10,7 @@ import regexpRange from 'regexp-range';
 import RegexpHelper = require('regexp-helper');
 import CjkConv from 'cjk-conv';
 import PackageJson = require('./package.json');
-import zhTable from 'cjk-conv/lib/zh/table/index';
+import zhTable = require('cjk-conv/lib/zh/table/index');
 
 export type IOptions = {
 	skip?: string,

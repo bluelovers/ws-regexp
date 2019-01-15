@@ -2,7 +2,8 @@
  * Created by user on 2018/5/5/005.
  */
 
-import zhTable, { IOptions } from 'cjk-conv/lib/zh/table/index';
+import { IOptions } from 'cjk-conv/lib/zh/table/index';
+import zhTable = require('cjk-conv/lib/zh/table/index');
 
 //console.log(cjkConv.zhTable.auto('魯'));
 
