@@ -26,7 +26,9 @@
     "locale": "zh-TW",
     "pretty": true,
 
-//    "removeComments": true,
+    "resolveJsonModule": true,
+
+    //    "removeComments": true,
 
 //    "baseUrl": ".",
 //    "sourceRoot": ".",

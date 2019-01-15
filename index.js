@@ -17,5 +17,4 @@ exports.prototypeToFlagsArray = lib_1.prototypeToFlagsArray;
 const parse_1 = require("./lib/parse");
 exports.parseRegularExpressionString = parse_1.parseRegularExpressionString;
 exports.nativeFlags = regexp_support_1.default.nativeFlags;
-const self = require("./index");
-exports.default = self;
+exports.default = exports;

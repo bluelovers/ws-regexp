@@ -104,5 +104,4 @@ export function prototypeToFlags<T extends Partial<{
 		;
 }
 
-import * as self from './index';
-export default self;
+export default exports as typeof import('./index');
