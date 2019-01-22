@@ -1,6 +1,3 @@
-/**
- * Created by user on 2018/5/5/005.
- */
 import { IOptions } from 'cjk-conv/lib/zh/table/index';
 import zhTable = require('cjk-conv/lib/zh/table/index');
 export declare function zhTableAutoGreedyTable(s: string, options?: IOptions): string[];
