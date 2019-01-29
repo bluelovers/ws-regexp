@@ -19,3 +19,8 @@ test
 .gitkeep
 
 /.*
+
+*.ts
+!*.d.ts
+/tools/
+*.iml

@@ -1,6 +1,6 @@
 {
   "name": "regexpp2",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Regular expression parser for ECMAScript 2018.",
   "keywords": [
     "abstract",
@@ -56,17 +56,16 @@
     "_watch": "npm run -s test -- --watch-extensions .ts --watch --growl",
     "build:dts": "dts-bundle --name regexpp2 --main ./src/index.d.ts --out ../index.d.ts",
     "npm-publish": "npm publish",
-    "prepare": "npm run build:dts"
+    "prepublishOnly": "npm run build:dts"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/mocha": "^5.2.0",
-    "@types/node": "^10.0.4",
-    "dts-bundle": "^0.7.3",
-    "mocha": "^5.1.1",
-    "npm-run-all": "^4.1.2",
-    "prettier": "^1.12.1",
-    "rimraf": "^2.6.2"
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.19",
+    "mocha": "^5.2.0"
+  },
+  "peerDependencies": {
+    "dts-bundle": "^0.7.3"
   },
   "engines": {
     "node": ">=4.0.0"
