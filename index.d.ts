@@ -1,5 +1,5 @@
 import { array_unique } from 'array-hyper-unique';
-import * as regexpp from 'regexpp2';
+import regexpp = require('regexpp2');
 import { AST } from 'regexpp2';
 export declare const EMOJI_REGEX: RegExp;
 export declare const defaultRegExpParser: regexpp.RegExpParser;
@@ -20,5 +20,5 @@ export declare type INodePlus = {
     changed?: boolean;
     old_raw?: string;
 };
-import * as self from './index';
-export default self;
+declare const _default: typeof import(".");
+export default _default;

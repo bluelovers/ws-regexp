@@ -115,7 +115,7 @@ function astToString(ast, options = {}) {
                 if (ast.elements) {
                     let do_unique = !options.noUniqueClass;
                     // @ts-ignore
-                    let a = ast.elements
+                    let aaa = ast.elements
                         .reduce(function (a, item) {
                         let s = astToString(item, options);
                         if (do_unique
@@ -134,7 +134,7 @@ function astToString(ast, options = {}) {
                             let last_is_emoji;
                             let last_is_zwj;
                             let EMOJI_SPLIT = new RegExp('(' + exports.EMOJI_REGEX.source + ')', exports.EMOJI_REGEX.flags);
-                            a = a.reduce(function (a, b) {
+                            aaa = aaa.reduce(function (a, b) {
                                 let current_is_zwj = /\u200D/.test(b);
                                 let current_is_emoji = EmojiRegex().test(b);
                                 if (last_is_emoji) {
@@ -160,13 +160,13 @@ function astToString(ast, options = {}) {
                             }, []);
                         }
                         if (do_unique) {
-                            a = array_hyper_unique_1.array_unique(a);
+                            aaa = array_hyper_unique_1.array_unique(aaa);
                         }
                         if (options.sortClass) {
-                            a.sort();
+                            aaa.sort();
                         }
                     }
-                    source = a.join('');
+                    source = aaa.join('');
                     switch (ast.type) {
                         case 'CapturingGroup':
                             source = '(' + source + ')';
@@ -232,5 +232,4 @@ function astToString(ast, options = {}) {
     return source;
 }
 exports.astToString = astToString;
-const self = require("./index");
-exports.default = self;
+exports.default = exports;

@@ -1,8 +1,8 @@
 
 import { array_unique } from 'array-hyper-unique';
-import * as regexpp from 'regexpp2';
+import regexpp = require('regexpp2');
 import { AST } from 'regexpp2';
-import * as EmojiRegex from 'emoji-regex';
+import EmojiRegex = require('emoji-regex');
 import UString from 'uni-string';
 
 export const EMOJI_REGEX = EmojiRegex() as RegExp;
@@ -185,7 +185,7 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 					let do_unique = !options.noUniqueClass;
 
 					// @ts-ignore
-					let a = ast.elements
+					let aaa = ast.elements
 						.reduce(function (a, item: AST.Node & INodePlus)
 						{
 							let s = astToString(item, options);
@@ -216,7 +216,7 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 
 							let EMOJI_SPLIT = new RegExp('(' + EMOJI_REGEX.source + ')', EMOJI_REGEX.flags);
 
-							a = a.reduce(function (a, b: string)
+							aaa = aaa.reduce(function (a, b: string)
 							{
 								let current_is_zwj = /\u200D/.test(b);
 								let current_is_emoji = EmojiRegex().test(b);
@@ -255,16 +255,16 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 
 						if (do_unique)
 						{
-							a = array_unique(a);
+							aaa = array_unique(aaa);
 						}
 
 						if (options.sortClass)
 						{
-							a.sort();
+							aaa.sort();
 						}
 					}
 
-					source = a.join('');
+					source = aaa.join('');
 
 					switch (ast.type)
 					{
@@ -367,6 +367,4 @@ export type INodePlus = {
 	old_raw?: string,
 }
 
-import * as self from './index';
-
-export default self;
+export default exports as typeof import ('./index');
