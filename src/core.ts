@@ -2,19 +2,37 @@
  * Created by user on 2018/5/7/007.
  */
 
-import * as _fillRange from 'fill-range';
+import _fillRange = require('fill-range');
 import TABLE_RANGE from './table';
+import { array_unique_overwrite } from 'array-hyper-unique';
 
 export { TABLE_RANGE }
 
 export type IOptions = {
 
+	/**
+	 * 字元範圍表
+	 */
 	dataTables?: typeof TABLE_RANGE,
 
+	/**
+	 * 回傳 陣列
+	 */
 	arrayMode?: boolean,
 
+	/**
+	 * 回傳 字串
+	 */
 	createRegExpString?: boolean,
+	/**
+	 * 回傳由 [] 包覆的字串
+	 */
 	createRegExpClass?: boolean,
+
+	/**
+	 * 找到第一個就停止
+	 */
+	findFirstOne?: boolean,
 }
 
 export function matchRange(from, to, options: IOptions & {
@@ -28,30 +46,43 @@ export function matchRange(from, to, options: IOptions = {}): string[] | string
 	let s = from;
 	let e = to;
 
-	let ret: string[] = null;
+	let ret: string[] = [];
+
+	let findFirstOne = !!options.findFirstOne;
 
 	Object
 		.keys(options.dataTables)
-		.some(function (key)
+		.some(function (key: keyof typeof options.dataTables): boolean
 		{
-			return options.dataTables[key].some(function (arr)
+			let bool: boolean;
+
+			options.dataTables[key].some(function (arr): boolean
 			{
 				let i = arr.indexOf(s);
 				let j = arr.indexOf(e, i);
 
 				if (i !== -1 && j !== -1)
 				{
-					ret = arr.slice(i, j + 1);
-					return true;
+					ret.push(...arr.slice(i, j + 1));
+
+					bool = true;
+					return findFirstOne;
 				}
-			})
+			});
+
+			if (bool)
+			{
+				return true;
+			}
 		})
 	;
 
-	if (ret === null)
+	if (!ret || !ret.length)
 	{
 		return null;
 	}
+
+	array_unique_overwrite(ret);
 
 	if (options.createRegExpString)
 	{
@@ -119,14 +150,21 @@ export function fillRange(from, to, options: IOptions = {}): string[]
 	return ret;
 }
 
-export function getOptions(options: IOptions)
+export function getOptions(options: IOptions): IOptions
 {
-	let opts = Object.assign({}, options);
+	let opts = Object.assign({} as IOptions, options);
 
 	opts.dataTables = opts.dataTables || TABLE_RANGE;
 
 	return opts;
 }
 
-import * as self from '../index';
-export default self;
+matchRange.matchRange = matchRange;
+matchRange.getOptions = getOptions;
+matchRange.toRegExpString = toRegExpString;
+matchRange.TABLE_RANGE = TABLE_RANGE;
+matchRange.fillRange = fillRange;
+
+matchRange.default = matchRange;
+
+export default exports as typeof import('./core');

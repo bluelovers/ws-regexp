@@ -3,8 +3,9 @@
  */
 
 import matchRange, { TABLE_RANGE } from '..';
+//import matchRange, { TABLE_RANGE } from 'regexp-range';
 
-//console.log(TABLE_RANGE);
+console.dir(TABLE_RANGE);
 
 //console.log(matchRange);
 
@@ -18,4 +19,13 @@ console.dir(matchRange('二', '七', {
 console.dir(matchRange('二', '七', {
 	createRegExpString: true,
 	createRegExpClass: true,
+}));
+
+console.dir(matchRange('壹', '什', {
+	createRegExpString: true,
+}));
+
+console.dir(matchRange('壹', '什', {
+	createRegExpString: true,
+	findFirstOne: true,
 }));

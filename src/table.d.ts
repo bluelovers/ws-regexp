@@ -3,6 +3,6 @@
  */
 export declare let table_range: {
     chinese: string[][];
-    circle: any;
+    circle: string[][];
 };
 export default table_range;

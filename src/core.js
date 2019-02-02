@@ -6,26 +6,34 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const _fillRange = require("fill-range");
 const table_1 = require("./table");
 exports.TABLE_RANGE = table_1.default;
+const array_hyper_unique_1 = require("array-hyper-unique");
 function matchRange(from, to, options = {}) {
     options = getOptions(options);
     let s = from;
     let e = to;
-    let ret = null;
+    let ret = [];
+    let findFirstOne = !!options.findFirstOne;
     Object
         .keys(options.dataTables)
         .some(function (key) {
-        return options.dataTables[key].some(function (arr) {
+        let bool;
+        options.dataTables[key].some(function (arr) {
             let i = arr.indexOf(s);
             let j = arr.indexOf(e, i);
             if (i !== -1 && j !== -1) {
-                ret = arr.slice(i, j + 1);
-                return true;
+                ret.push(...arr.slice(i, j + 1));
+                bool = true;
+                return findFirstOne;
             }
         });
+        if (bool) {
+            return true;
+        }
     });
-    if (ret === null) {
+    if (!ret || !ret.length) {
         return null;
     }
+    array_hyper_unique_1.array_unique_overwrite(ret);
     if (options.createRegExpString) {
         return toRegExpString(ret, options.createRegExpClass);
     }
@@ -75,5 +83,10 @@ function getOptions(options) {
     return opts;
 }
 exports.getOptions = getOptions;
-const self = require("../index");
-exports.default = self;
+matchRange.matchRange = matchRange;
+matchRange.getOptions = getOptions;
+matchRange.toRegExpString = toRegExpString;
+matchRange.TABLE_RANGE = table_1.default;
+matchRange.fillRange = fillRange;
+matchRange.default = matchRange;
+exports.default = exports;

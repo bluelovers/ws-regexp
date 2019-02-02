@@ -51,6 +51,4 @@ export let list_range_raw = [
 
 export let list_range = listRawToRange(list_range_raw);
 
-//console.log(list_range);
-
 export default list_range;

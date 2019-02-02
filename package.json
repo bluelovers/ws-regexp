@@ -1,7 +1,21 @@
 {
   "name": "regexp-range",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "create regex class range string `[一-十]` `[⓪-㊿]` ...",
+  "keywords": [
+    "chinese",
+    "expression",
+    "fill",
+    "generator",
+    "number",
+    "range",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression",
+    "util"
+  ],
   "homepage": "https://github.com/bluelovers/regexp-range#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/regexp-range/issues"
@@ -20,6 +34,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "array-hyper-unique": "^1.0.7",
     "fill-range": "^6.0.0",
     "japanese": "^1.2.0"
   },

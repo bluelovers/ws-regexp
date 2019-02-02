@@ -2,7 +2,7 @@
  * Created by user on 2018/5/7/007.
  */
 
-import * as japanese from 'japanese';
+import japanese = require('japanese');
 
 export let list_range = [
 	'〇一二三四五六七八九十'.split(''),

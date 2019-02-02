@@ -44,5 +44,4 @@ exports.list_range_raw = [
     ],
 ];
 exports.list_range = util_1.listRawToRange(exports.list_range_raw);
-//console.log(list_range);
 exports.default = exports.list_range;

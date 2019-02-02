@@ -2,12 +2,11 @@
  * Created by user on 2018/5/7/007.
  */
 
-export function listRawToRange(list_range_raw)
+export function listRawToRange(list_range_raw): string[][]
 {
 	return list_range_raw.reduce(function (a, data)
 	{
-
-		let c = data.reduce(function (a, v)
+		let c: string[] = data.reduce(function (a2: string[], v)
 		{
 			let s: string | string[];
 
@@ -43,24 +42,20 @@ export function listRawToRange(list_range_raw)
 
 			if (Array.isArray(s))
 			{
-				a = a.concat(s);
+				a2 = a2.concat(s);
 			}
 			else
 			{
-				a.push(s);
+				a2.push(s);
 			}
 
-			return a;
+			return a2;
 		}, [] as string[]);
 
 		a.push(c);
-
-		//console.log(c.length);
 
 		return a;
 	}, [] as string[][])
 }
 
-import * as self from './util';
-export default self;
-
+export default exports as typeof import('./util');
