@@ -29,3 +29,7 @@ console.dir(matchRange('壹', '什', {
 	createRegExpString: true,
 	findFirstOne: true,
 }));
+
+console.dir(matchRange('三', '五', {
+	createRegExpString: true,
+}));
