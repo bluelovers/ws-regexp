@@ -44,6 +44,5 @@ export declare function unicodeUnEscape(string: string, noLeadingSolidus?: boole
  */
 export declare function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter?: RegExp): string;
 export declare function escapeRegExp(str: string): string;
-import * as self from './index';
-declare const _default: Readonly<typeof self>;
+declare const _default: Readonly<typeof import(".")>;
 export default _default;

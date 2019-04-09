@@ -136,8 +136,6 @@ export function escapeRegExp(str: string)
 	return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-import * as self from './index';
+export default exports as Readonly<typeof import('./index')>
 
-export default self as Readonly<typeof self>;
-
-Object.freeze(self);
+Object.freeze(exports);
