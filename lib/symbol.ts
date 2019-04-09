@@ -30,6 +30,4 @@ export function testSymbol<T>(RegExpClass: ITypeCreateRegExp<T> = RegExp)
 		;
 }
 
-import * as self from './symbol';
-export default self;
-
+export default exports as typeof import('./symbol');

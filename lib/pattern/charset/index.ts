@@ -7,5 +7,4 @@ export function _wrapToRegexName(name: string, prefix: string, suffix: string)
 	return prefix + name + suffix;
 }
 
-import * as self from './index';
-export default self;
+export default exports as typeof import('./index');

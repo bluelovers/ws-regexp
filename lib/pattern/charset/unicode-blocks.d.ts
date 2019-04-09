@@ -1716,5 +1716,5 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InZanabazar_Square": boolean;
 };
 export declare function wrapToRegexName(name: string, negation?: boolean): string;
-import * as self from './unicode-script';
-export default self;
+declare const _default: typeof import("./unicode-script");
+export default _default;

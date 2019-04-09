@@ -69,6 +69,4 @@ export function wrapToRegexName(name: string, negation?: boolean)
 	return _wrapToRegexName(name, prefix, KEY_SUFFIX);
 }
 
-import * as self from './unicode-script';
-
-export default self;
+export default exports as typeof import('./unicode-script');

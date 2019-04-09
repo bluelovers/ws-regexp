@@ -17,7 +17,7 @@ export declare const PROTOTYPE: {
     readonly flags?: boolean;
     readonly sticky?: boolean;
     readonly unicode?: boolean;
-    dotAll?: boolean;
+    readonly dotAll?: boolean;
 };
 export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     exec?: boolean;
@@ -31,7 +31,7 @@ export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     readonly flags?: boolean;
     readonly sticky?: boolean;
     readonly unicode?: boolean;
-    dotAll?: boolean;
+    readonly dotAll?: boolean;
 };
-import * as self from './prototype';
-export default self;
+declare const _default: typeof import("./prototype");
+export default _default;

@@ -70,7 +70,7 @@ export declare const support: Readonly<{
         readonly flags?: boolean;
         readonly sticky?: boolean;
         readonly unicode?: boolean;
-        dotAll?: boolean;
+        readonly dotAll?: boolean;
     };
     static: {
         readonly prototype?: boolean;

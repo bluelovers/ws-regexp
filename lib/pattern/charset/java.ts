@@ -26,6 +26,4 @@ export enum JAVA
 	xdigit = 'XDigit',
 }
 
-import * as self from './';
-export default self;
-
+export default exports as typeof import('./java');

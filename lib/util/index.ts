@@ -49,6 +49,7 @@ export function _createFnTestPattern<R>(initTestPatterns: R): {
 		testPatterns = initTestPatterns
 	): boolean =>
 	{
+		// @ts-ignore
 		return testPattern(name, RegExpClass, testPatterns);
 	};
 }

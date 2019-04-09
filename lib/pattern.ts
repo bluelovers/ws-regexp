@@ -205,5 +205,4 @@ export interface IPatternTestRow
 	4?: string | IPatternTestFn,
 }
 
-import * as self from './pattern';
-export default self;
+export default exports as typeof import('./pattern');

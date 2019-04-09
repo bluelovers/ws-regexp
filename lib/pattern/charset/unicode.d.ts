@@ -1223,5 +1223,5 @@ export declare function testUnicodeAll<T>(RegExpClass?: ITypeCreateRegExp<T>, te
     "XIDS": boolean;
 };
 export declare function wrapToRegexName(name: string, negation?: boolean): string;
-import * as self from './unicode';
-export default self;
+declare const _default: typeof import("./unicode");
+export default _default;

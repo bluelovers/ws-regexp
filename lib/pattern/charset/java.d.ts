@@ -19,5 +19,5 @@ export declare enum JAVA {
     upper = "Upper",
     xdigit = "XDigit"
 }
-import * as self from './';
-export default self;
+declare const _default: typeof import("./java");
+export default _default;

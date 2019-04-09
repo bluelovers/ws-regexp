@@ -32,5 +32,5 @@ export interface IPatternTestRow {
     3: boolean | any;
     4?: string | IPatternTestFn;
 }
-import * as self from './pattern';
-export default self;
+declare const _default: typeof import("./pattern");
+export default _default;
