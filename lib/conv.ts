@@ -4,6 +4,7 @@
 
 import { IOptions } from 'cjk-conv/lib/zh/table/index';
 import zhTable = require('cjk-conv/lib/zh/table/index');
+import { _re_cjk_conv } from './util';
 
 //console.log(cjkConv.zhTable.auto('魯'));
 
@@ -16,7 +17,7 @@ export function zhTableAutoGreedyTable(s: string, options: IOptions = {})
 
 export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable.auto)
 {
-	return search.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}のと]/ug, function (char)
+	return search.replace(_re_cjk_conv('ug'), function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
 		{
@@ -31,7 +32,7 @@ export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable
 
 export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTable.auto)
 {
-	return search.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}のと]/ug, function (char)
+	return search.replace(_re_cjk_conv('ug'), function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
 		{
