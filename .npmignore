@@ -25,6 +25,9 @@ tests/*.js
 tests/*.d.ts
 tests/temp*
 
+*.ts
+!*.d.ts
+
 bin/*.d.ts
 
 /packages/*/bin/*.d.ts

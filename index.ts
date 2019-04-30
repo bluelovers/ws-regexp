@@ -5,7 +5,7 @@ import { cn2tw_min, tw2cn_min } from 'cjk-conv/lib/zh/convert/min';
 import { cn2tw, tw2cn, IOptions as IOptionsCore } from 'cjk-conv/lib/zh/convert';
 
 import FastGlob = require('fast-glob');
-import fs = require('fs-extra');
+import fs = require('fs-iconv');
 import Bluebird = require('bluebird');
 import JsDiff = require('diff');
 import { console } from 'debug-color2';
@@ -68,7 +68,9 @@ export function handldTarget(search: string | string[], options?: IOptions)
 					let label = `${idx+1}/${index+1}/${arrayLength}`;
 
 					console.debug(`[start] (${label}) ${file}`);
-					let txt_old = String(await fs.readFile(file));
+					let txt_old = String(await fs.loadFile(file, {
+						autoDecode: true,
+					}));
 
 					let txt_new = handleContext(txt_old, options);
 
@@ -93,9 +95,13 @@ export function handldTarget(search: string | string[], options?: IOptions)
 						}
 
 						await fs.writeFile(file, txt_new);
-					}
 
-					console.debug(`[done] (${label}) ${file}`);
+						console.success(`[done] (${label}) ${file}`);
+					}
+					else
+					{
+						console.gray.debug(`[done] (${label}) ${file}`);
+					}
 
 					return file;
 				}

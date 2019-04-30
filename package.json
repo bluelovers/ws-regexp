@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cli version for cjk-conv ( cn2tw_min, tw2cn_min, cn2tw, tw2cn )",
   "keywords": [
     "char",
@@ -50,19 +50,19 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.0.7",
-    "bluebird": "^3.5.3",
-    "cjk-conv": "^1.1.16",
+    "bluebird": "^3.5.4",
+    "cjk-conv": "^1.1.40",
     "crlf-normalize": "^1.0.3",
     "debug-color2": "^1.0.7",
     "diff": "^4.0.1",
     "fast-glob": "^2.2.6",
     "fs-extra": "^7.0.1",
-    "fs-iconv": "^1.3.6",
-    "yargs": "^13.2.1"
+    "fs-iconv": "^2.0.6",
+    "yargs": "^13.2.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.1",
-    "@types/yargs": "^12.0.9"
+    "@bluelovers/tsconfig": "^1.0.3",
+    "@types/yargs": "^13.0.0"
   },
   "preferGlobal": true
 }
