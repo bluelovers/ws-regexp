@@ -21,7 +21,8 @@ export declare type IOptions = {
     on?: {
         [k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
     };
-    greedyTable?: boolean;
+    greedyTable?: boolean | number;
+    unsafe?: boolean;
     /**
      * allow set `CjkConv.zhTable.auto`
      */

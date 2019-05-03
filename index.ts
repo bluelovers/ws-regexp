@@ -31,7 +31,8 @@ export type IOptions = {
 		[k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
 	},
 
-	greedyTable?: boolean,
+	greedyTable?: boolean | number,
+	unsafe?: boolean,
 
 	/**
 	 * allow set `CjkConv.zhTable.auto`
@@ -143,7 +144,7 @@ export class zhRegExp extends RegExp
 				ev.on(ParserEventEmitterEvent.default, function (ast)
 				{
 					ast.old_raw = ast.old_raw || ast.raw;
-					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn);
+					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn, options as IOptions);
 					ev.emit(ParserEventEmitterEvent.change, ast);
 				});
 			}
@@ -162,7 +163,7 @@ export class zhRegExp extends RegExp
 					{
 						if ((options as IOptions).allowLocalRangeAutoZh)
 						{
-							ret = _word_zh_core2(ret, (options as IOptions).skip, zhTableFn);
+							ret = _word_zh_core2(ret, (options as IOptions).skip, zhTableFn, options as IOptions);
 						}
 
 						ast.old_raw = ast.old_raw || ast.raw;

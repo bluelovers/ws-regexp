@@ -5,18 +5,34 @@
 import { IOptions } from 'cjk-conv/lib/zh/table/index';
 import zhTable = require('cjk-conv/lib/zh/table/index');
 import { _re_cjk_conv } from './util';
+import { IOptions as IOptionsRegExp } from '..';
 
 //console.log(cjkConv.zhTable.auto('魯'));
 
 export function zhTableAutoGreedyTable(s: string, options: IOptions = {})
 {
-	// @ts-ignore
-	options.greedyTable = true;
+
+	if (true || (options.greedyTable as any | 0) > 1)
+	{
+		options.safe = false;
+	}
+
+	options.greedyTable = options.greedyTable || true;
+
 	return zhTable.auto(s, options)
 }
 
-export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable.auto)
+export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable.auto, options: IOptionsRegExp = {})
 {
+	let opts: IOptions;
+
+	if (options.unsafe || true)
+	{
+		opts = {
+			safe: false,
+		}
+	}
+
 	return search.replace(_re_cjk_conv('ug'), function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
@@ -24,14 +40,23 @@ export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable
 			return char;
 		}
 
-		let a = zhTableFn(char);
+		let a = zhTableFn(char, opts);
 
 		return a.length > 1 ? '[' + a.join('') + ']' : a[0];
 	});
 }
 
-export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTable.auto)
+export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTable.auto, options: IOptionsRegExp = {})
 {
+	let opts: IOptions;
+
+	if (options.unsafe || true)
+	{
+		opts = {
+			safe: false,
+		}
+	}
+
 	return search.replace(_re_cjk_conv('ug'), function (char)
 	{
 		if (skip && skip.indexOf(char) != -1)
@@ -39,7 +64,7 @@ export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTabl
 			return char;
 		}
 
-		let a = zhTableFn(char);
+		let a = zhTableFn(char, opts);
 
 		return a.join('');
 	});
