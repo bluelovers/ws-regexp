@@ -1,30 +1,23 @@
 import {
-    AlternativeElement,
-    AnyCharacterSet,
-    Assertion,
+    Alternative,
     Backreference,
     CapturingGroup,
-    Character,
     CharacterClass,
+    CharacterClassElement,
     CharacterClassRange,
-    Disjunction,
-    Element,
-    EscapeCharacterSet,
     Flags,
     Group,
     RegExpLiteral,
     LookaroundAssertion,
     Pattern,
-    QuantifiableElement,
     Quantifier,
-    UnicodePropertyCharacterSet,
 } from "./ast"
-import { assert, last } from "./util"
+import { HyphenMinus } from "./unicode"
 import { RegExpValidator } from "./validator"
 
 type AppendableNode =
     | Pattern
-    | Disjunction
+    | Alternative
     | Group
     | CapturingGroup
     | CharacterClass
@@ -34,93 +27,36 @@ const DummyPattern = {} as Pattern
 const DummyFlags = {} as Flags
 const DummyCapturingGroup = {} as CapturingGroup
 
-/**
- * Convert given elements to an alternative.
- * This doesn't clone the array, so the return value is `elements` itself.
- * @param elements Elements to convert.
- */
-function elementsToAlternative(
-    elements: Element[],
-    parent: Disjunction,
-): AlternativeElement[] {
-    for (const element of elements) {
-        assert(element.type !== "Disjunction")
-        element.parent = parent
-    }
-    return elements as AlternativeElement[]
-}
-
-function addAlternativeElement(
-    parent:
-        | Pattern
-        | Disjunction
-        | Group
-        | CapturingGroup
-        | LookaroundAssertion,
-    node:
-        | Group
-        | CapturingGroup
-        | Quantifier
-        | CharacterClass
-        | Assertion
-        | AnyCharacterSet
-        | Backreference,
-): void {
-    if (parent.type === "Disjunction") {
-        last(parent.alternatives)!.push(node)
-    } else {
-        parent.elements.push(node)
-    }
-}
-
-function addCommonElement(
-    parent: AppendableNode,
-    node: EscapeCharacterSet | UnicodePropertyCharacterSet | Character,
-): void {
-    if (parent.type === "Disjunction") {
-        last(parent.alternatives)!.push(node)
-    } else if (parent.type === "CharacterClass") {
-        parent.elements.push(node)
-    } else {
-        parent.elements.push(node)
-    }
-}
-
 class RegExpParserState {
-    readonly strict: boolean
-    readonly ecmaVersion: 5 | 2015 | 2016 | 2017 | 2018
-
-    readonly disableChkCharacterClassRange: boolean
-
+    public readonly strict: boolean
+    public readonly ecmaVersion: 5 | 2015 | 2016 | 2017 | 2018
     private _node: AppendableNode = DummyPattern
     private _flags: Flags = DummyFlags
-    private _disjunctionStartStack: number[] = []
     private _backreferences: Backreference[] = []
     private _capturingGroups: CapturingGroup[] = []
 
-    source: string = ""
+    public source = ""
 
-    constructor(options?: RegExpParser.Options) {
+    public constructor(options?: RegExpParser.Options) {
         this.strict = Boolean(options && options.strict)
         this.ecmaVersion = (options && options.ecmaVersion) || 2018
-        this.disableChkCharacterClassRange = Boolean(options && options.disableChkCharacterClassRange)
     }
 
-    get pattern(): Pattern {
+    public get pattern(): Pattern {
         if (this._node.type !== "Pattern") {
             throw new Error("UnknownError")
         }
         return this._node
     }
 
-    get flags(): Flags {
+    public get flags(): Flags {
         if (this._flags.type !== "Flags") {
             throw new Error("UnknownError")
         }
         return this._flags
     }
 
-    onFlags(
+    public onFlags(
         start: number,
         end: number,
         global: boolean,
@@ -145,20 +81,20 @@ class RegExpParserState {
         }
     }
 
-    onPatternEnter(start: number): void {
+    public onPatternEnter(start: number): void {
         this._node = {
             type: "Pattern",
             parent: null,
             start,
             end: start,
             raw: "",
-            elements: [],
+            alternatives: [],
         }
         this._backreferences.length = 0
         this._capturingGroups.length = 0
     }
 
-    onPatternLeave(start: number, end: number): void {
+    public onPatternLeave(start: number, end: number): void {
         this._node.end = end
         this._node.raw = this.source.slice(start, end)
 
@@ -173,187 +109,185 @@ class RegExpParserState {
         }
     }
 
-    onDisjunctionEnter(start: number): void {
-        this._disjunctionStartStack.push(start)
-    }
-
-    onDisjunctionLeave(start: number, end: number): void {
-        this._disjunctionStartStack.pop()
-    }
-
-    onAlternativeEnter(start: number, index: number): void {
-        if (index === 0) {
-            return
-        }
-
-        const parentNode = this._node
+    public onAlternativeEnter(start: number): void {
+        const parent = this._node
         if (
-            parentNode.type === "Disjunction" ||
-            parentNode.type === "CharacterClass"
+            parent.type !== "Assertion" &&
+            parent.type !== "CapturingGroup" &&
+            parent.type !== "Group" &&
+            parent.type !== "Pattern"
         ) {
             throw new Error("UnknownError")
         }
 
-        const prevNode = last(parentNode.elements)
-        if (prevNode != null && prevNode.type === "Disjunction") {
-            this._node = prevNode
-            prevNode.alternatives.push([])
-        } else {
-            this._node = {
-                type: "Disjunction",
-                parent: parentNode,
-                start: last(this._disjunctionStartStack)!,
-                end: start,
-                raw: "",
-                alternatives: [],
-            }
-            const elements = elementsToAlternative(
-                parentNode.elements,
-                this._node,
-            )
-            this._node.alternatives.push(elements, [])
-            parentNode.elements = [this._node]
+        this._node = {
+            type: "Alternative",
+            parent,
+            start,
+            end: start,
+            raw: "",
+            elements: [],
         }
+        parent.alternatives.push(this._node)
     }
 
-    onAlternativeLeave(start: number, end: number, index: number): void {
-        if (index === 0) {
-            return
+    public onAlternativeLeave(start: number, end: number): void {
+        const node = this._node
+        if (node.type !== "Alternative") {
+            throw new Error("UnknownError")
         }
-        this._node.end = end
-        this._node.raw = this.source.slice(this._node.start, end)
-        this._node = this._node.parent as AppendableNode
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
     }
 
-    onGroupEnter(start: number): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+    public onGroupEnter(start: number): void {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
         this._node = {
             type: "Group",
-            parent: parentNode,
+            parent,
             start,
             end: start,
             raw: "",
-            elements: [],
+            alternatives: [],
         }
-        addAlternativeElement(parentNode, this._node)
+        parent.elements.push(this._node)
     }
 
-    onGroupLeave(start: number, end: number): void {
-        this._node.end = end
-        this._node.raw = this.source.slice(start, end)
-        this._node = this._node.parent as AppendableNode
+    public onGroupLeave(start: number, end: number): void {
+        const node = this._node
+        if (node.type !== "Group" || node.parent.type !== "Alternative") {
+            throw new Error("UnknownError")
+        }
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
     }
 
-    onCapturingGroupEnter(start: number, name: string | null): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+    public onCapturingGroupEnter(start: number, name: string | null): void {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
         this._node = {
             type: "CapturingGroup",
-            parent: parentNode,
+            parent,
             start,
             end: start,
             raw: "",
             name,
-            elements: [],
+            alternatives: [],
             references: [],
         }
-        addAlternativeElement(parentNode, this._node)
+        parent.elements.push(this._node)
         this._capturingGroups.push(this._node)
     }
 
-    onCapturingGroupLeave(
-        start: number,
-        end: number,
-        name: string | null,
-    ): void {
-        this._node.end = end
-        this._node.raw = this.source.slice(start, end)
-        this._node = this._node.parent as AppendableNode
+    public onCapturingGroupLeave(start: number, end: number): void {
+        const node = this._node
+        if (
+            node.type !== "CapturingGroup" ||
+            node.parent.type !== "Alternative"
+        ) {
+            throw new Error("UnknownError")
+        }
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
     }
 
-    onQuantifier(
+    public onQuantifier(
         start: number,
         end: number,
         min: number,
         max: number,
         greedy: boolean,
     ): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
         // Replace the last element.
-        const elements =
-            parentNode.type === "Disjunction"
-                ? last(parentNode.alternatives)!
-                : parentNode.elements
-        const prevNode = elements.pop()!
+        const element = parent.elements.pop()
+        if (
+            element == null ||
+            element.type === "Quantifier" ||
+            (element.type === "Assertion" && element.kind !== "lookahead")
+        ) {
+            throw new Error("UnknownError")
+        }
+
         const node: Quantifier = {
             type: "Quantifier",
-            parent: parentNode,
-            start,
+            parent,
+            start: element.start,
             end,
-            raw: this.source.slice(start, end),
+            raw: this.source.slice(element.start, end),
             min,
             max,
             greedy,
-            element: prevNode as QuantifiableElement,
+            element,
         }
-        elements.push(node)
-        prevNode.parent = node
+        parent.elements.push(node)
+        element.parent = node
     }
 
-    onLookaroundAssertionEnter(
+    public onLookaroundAssertionEnter(
         start: number,
         kind: "lookahead" | "lookbehind",
         negate: boolean,
     ): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
         this._node = {
             type: "Assertion",
-            parent: parentNode,
+            parent,
             start,
             end: start,
             raw: "",
             kind,
             negate,
-            elements: [],
+            alternatives: [],
         } as LookaroundAssertion
-        addAlternativeElement(parentNode, this._node)
+        parent.elements.push(this._node)
     }
 
-    onLookaroundAssertionLeave(
-        start: number,
-        end: number,
-        kind: "lookahead" | "lookbehind",
-        negate: boolean,
-    ): void {
-        this._node.end = end
-        this._node.raw = this.source.slice(start, end)
-        this._node = this._node.parent as AppendableNode
-    }
-
-    onEdgeAssertion(start: number, end: number, kind: "start" | "end"): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+    public onLookaroundAssertionLeave(start: number, end: number): void {
+        const node = this._node
+        if (node.type !== "Assertion" || node.parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
-        addAlternativeElement(parentNode, {
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
+    }
+
+    public onEdgeAssertion(
+        start: number,
+        end: number,
+        kind: "start" | "end",
+    ): void {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
+            throw new Error("UnknownError")
+        }
+
+        parent.elements.push({
             type: "Assertion",
-            parent: parentNode,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
@@ -361,20 +295,20 @@ class RegExpParserState {
         })
     }
 
-    onWordBoundaryAssertion(
+    public onWordBoundaryAssertion(
         start: number,
         end: number,
         kind: "word",
         negate: boolean,
     ): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
-        addAlternativeElement(parentNode, {
+        parent.elements.push({
             type: "Assertion",
-            parent: parentNode,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
@@ -383,15 +317,15 @@ class RegExpParserState {
         })
     }
 
-    onAnyCharacterSet(start: number, end: number, kind: "any"): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+    public onAnyCharacterSet(start: number, end: number, kind: "any"): void {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
-        addAlternativeElement(parentNode, {
+        parent.elements.push({
             type: "CharacterSet",
-            parent: parentNode,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
@@ -399,15 +333,20 @@ class RegExpParserState {
         })
     }
 
-    onEscapeCharacterSet(
+    public onEscapeCharacterSet(
         start: number,
         end: number,
         kind: "digit" | "space" | "word",
         negate: boolean,
     ): void {
-        addCommonElement(this._node, {
+        const parent = this._node
+        if (parent.type !== "Alternative" && parent.type !== "CharacterClass") {
+            throw new Error("UnknownError")
+        }
+
+        ;(parent.elements as CharacterClassElement[]).push({
             type: "CharacterSet",
-            parent: this._node,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
@@ -416,7 +355,7 @@ class RegExpParserState {
         })
     }
 
-    onUnicodePropertyCharacterSet(
+    public onUnicodePropertyCharacterSet(
         start: number,
         end: number,
         kind: "property",
@@ -424,9 +363,14 @@ class RegExpParserState {
         value: string | null,
         negate: boolean,
     ): void {
-        addCommonElement(this._node, {
+        const parent = this._node
+        if (parent.type !== "Alternative" && parent.type !== "CharacterClass") {
+            throw new Error("UnknownError")
+        }
+
+        ;(parent.elements as CharacterClassElement[]).push({
             type: "CharacterSet",
-            parent: this._node,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
@@ -437,10 +381,15 @@ class RegExpParserState {
         })
     }
 
-    onCharacter(start: number, end: number, value: number): void {
-        addCommonElement(this._node, {
+    public onCharacter(start: number, end: number, value: number): void {
+        const parent = this._node
+        if (parent.type !== "Alternative" && parent.type !== "CharacterClass") {
+            throw new Error("UnknownError")
+        }
+
+        ;(parent.elements as CharacterClassElement[]).push({
             type: "Character",
-            parent: this._node,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
@@ -448,78 +397,95 @@ class RegExpParserState {
         })
     }
 
-    onBackreference(start: number, end: number, ref: number | string): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+    public onBackreference(
+        start: number,
+        end: number,
+        ref: number | string,
+    ): void {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
         const node: Backreference = {
             type: "Backreference",
-            parent: parentNode,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
             ref,
             resolved: DummyCapturingGroup,
         }
-        addAlternativeElement(parentNode, node)
+        parent.elements.push(node)
         this._backreferences.push(node)
     }
 
-    onCharacterClassEnter(start: number, negate: boolean): void {
-        const parentNode = this._node
-        if (parentNode.type === "CharacterClass") {
+    public onCharacterClassEnter(start: number, negate: boolean): void {
+        const parent = this._node
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
         this._node = {
             type: "CharacterClass",
-            parent: parentNode,
+            parent,
             start,
             end: start,
             raw: "",
             negate,
             elements: [],
         }
-        addAlternativeElement(parentNode, this._node)
+        parent.elements.push(this._node)
     }
 
-    onCharacterClassLeave(start: number, end: number, negate: boolean): void {
-        this._node.end = end
-        this._node.raw = this.source.slice(start, end)
-        this._node = this._node.parent as AppendableNode
+    public onCharacterClassLeave(start: number, end: number): void {
+        const node = this._node
+        if (
+            node.type !== "CharacterClass" ||
+            node.parent.type !== "Alternative"
+        ) {
+            throw new Error("UnknownError")
+        }
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
     }
 
-    onCharacterClassRange(
-        start: number,
-        end: number,
-        min: number,
-        max: number,
-    ): void {
-        const parentNode = this._node
-        if (parentNode.type !== "CharacterClass") {
+    public onCharacterClassRange(start: number, end: number): void {
+        const parent = this._node
+        if (parent.type !== "CharacterClass") {
             throw new Error("UnknownError")
         }
 
         // Replace the last three elements.
-        const elements = parentNode.elements
-        const rightNode = elements.pop() as Character
-        elements.pop() // hyphen
-        const leftNode = elements.pop() as Character
+        const elements = parent.elements
+        const max = elements.pop()
+        const hyphen = elements.pop()
+        const min = elements.pop()
+        if (
+            !min ||
+            !max ||
+            !hyphen ||
+            min.type !== "Character" ||
+            max.type !== "Character" ||
+            hyphen.type !== "Character" ||
+            hyphen.value !== HyphenMinus
+        ) {
+            throw new Error("UnknownError")
+        }
+
         const node: CharacterClassRange = {
             type: "CharacterClassRange",
-            parent: parentNode,
+            parent,
             start,
             end,
             raw: this.source.slice(start, end),
-            min: leftNode,
-            max: rightNode,
+            min,
+            max,
         }
-        assert(leftNode != null && leftNode.type === "Character")
-        assert(rightNode != null && rightNode.type === "Character")
-        leftNode.parent = node
-        rightNode.parent = node
+        min.parent = node
+        max.parent = node
         elements.push(node)
     }
 }
@@ -541,8 +507,6 @@ export namespace RegExpParser {
          *   and Unicode Property Escape.
          */
         ecmaVersion?: 5 | 2015 | 2016 | 2017 | 2018
-
-        disableChkCharacterClassRange?: boolean
     }
 }
 
@@ -554,7 +518,7 @@ export class RegExpParser {
      * Initialize this parser.
      * @param options The options of parser.
      */
-    constructor(options?: RegExpParser.Options) {
+    public constructor(options?: RegExpParser.Options) {
         this._state = new RegExpParserState(options)
         this._validator = new RegExpValidator(this._state)
     }
@@ -566,9 +530,9 @@ export class RegExpParser {
      * @param end The end index in the source code.
      * @returns The AST of the given regular expression.
      */
-    parseLiteral(
+    public parseLiteral(
         source: string,
-        start: number = 0,
+        start = 0,
         end: number = source.length,
     ): RegExpLiteral {
         this._state.source = source
@@ -596,9 +560,9 @@ export class RegExpParser {
      * @param end The end index in the source code.
      * @returns The AST of the given flags.
      */
-    parseFlags(
+    public parseFlags(
         source: string,
-        start: number = 0,
+        start = 0,
         end: number = source.length,
     ): Flags {
         this._state.source = source
@@ -614,11 +578,11 @@ export class RegExpParser {
      * @param uFlag The flag to set unicode mode.
      * @returns The AST of the given pattern.
      */
-    parsePattern(
+    public parsePattern(
         source: string,
-        start: number = 0,
+        start = 0,
         end: number = source.length,
-        uFlag: boolean = false,
+        uFlag = false,
     ): Pattern {
         this._state.source = source
         this._validator.validatePattern(source, start, end, uFlag)

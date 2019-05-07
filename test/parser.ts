@@ -1,6 +1,6 @@
 import * as assert from "assert"
 import { parseRegExpLiteral, RegExpParser } from "../src/index"
-import { cloneWithoutCircular } from "../tools/clone-without-circular"
+import { cloneWithoutCircular } from "../scripts/clone-without-circular"
 import { Fixtures } from "./fixtures/parser/literal"
 
 function generateAST(source: string, options: RegExpParser.Options): object {
@@ -19,6 +19,22 @@ describe("parseRegExpLiteral function:", () => {
         const options = fixture.options
 
         describe(`${filename} (options=${JSON.stringify(options)})`, () => {
+            if (filename.indexOf("-valid") !== -1) {
+                it("should not contain any invalid test case", () => {
+                    for (const source of Object.keys(fixture.patterns)) {
+                        const result = fixture.patterns[source]
+                        assert("ast" in result, `${source} is invalid`)
+                    }
+                })
+            } else if (filename.indexOf("-invalid") !== -1) {
+                it("should not contain any valid test case", () => {
+                    for (const source of Object.keys(fixture.patterns)) {
+                        const result = fixture.patterns[source]
+                        assert("error" in result, `${source} is valid`)
+                    }
+                })
+            }
+
             for (const source of Object.keys(fixture.patterns)) {
                 const result = fixture.patterns[source]
                 if ("ast" in result) {
@@ -50,29 +66,22 @@ describe("parseRegExpLiteral function:", () => {
             }
         })
     }
+
+    it("should parse RegExp object", () => {
+        const actual = cloneWithoutCircular(parseRegExpLiteral(/[A-Z]+/))
+        const expected = cloneWithoutCircular(parseRegExpLiteral("/[A-Z]+/"))
+
+        assert.deepStrictEqual(actual, expected)
+    })
 })
 
-for (const filename of Object.keys(Fixtures)) {
-    const fixture = Fixtures[filename]
-    const options = fixture.options
-
-    if (filename.indexOf("-valid") !== -1) {
-        describe(filename, () => {
-            it("should not contain any invalid test case", () => {
-                for (const source of Object.keys(fixture.patterns)) {
-                    const result = fixture.patterns[source]
-                    assert("ast" in result, `${source} is invalid`)
-                }
-            })
+describe("RegExpParser:", () => {
+    describe("parsePattern function", () => {
+        it("should throw syntax error on '\\'.", () => {
+            assert.throws(
+                () => new RegExpParser().parsePattern("\\"),
+                /\\ at end of pattern/,
+            )
         })
-    } else if (filename.indexOf("-invalid") !== -1) {
-        describe(filename, () => {
-            it("should not contain any valid test case", () => {
-                for (const source of Object.keys(fixture.patterns)) {
-                    const result = fixture.patterns[source]
-                    assert("error" in result, `${source} is valid`)
-                }
-            })
-        })
-    }
-}
+    })
+})
