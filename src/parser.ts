@@ -30,6 +30,9 @@ const DummyCapturingGroup = {} as CapturingGroup
 class RegExpParserState {
     public readonly strict: boolean
     public readonly ecmaVersion: 5 | 2015 | 2016 | 2017 | 2018
+
+    readonly disableChkCharacterClassRange: boolean
+
     private _node: AppendableNode = DummyPattern
     private _flags: Flags = DummyFlags
     private _backreferences: Backreference[] = []
@@ -40,6 +43,7 @@ class RegExpParserState {
     public constructor(options?: RegExpParser.Options) {
         this.strict = Boolean(options && options.strict)
         this.ecmaVersion = (options && options.ecmaVersion) || 2018
+        this.disableChkCharacterClassRange = Boolean(options && options.disableChkCharacterClassRange)
     }
 
     public get pattern(): Pattern {
@@ -507,6 +511,8 @@ export namespace RegExpParser {
          *   and Unicode Property Escape.
          */
         ecmaVersion?: 5 | 2015 | 2016 | 2017 | 2018
+
+        disableChkCharacterClassRange?: boolean
     }
 }
 
