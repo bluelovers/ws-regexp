@@ -13,7 +13,7 @@
         "raw": "/\\p/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 3,
           "raw": "\\p",
@@ -39,7 +39,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 4,
           "end": 4,
           "raw": "",
@@ -61,7 +61,7 @@
         "raw": "/\\p{/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 4,
           "raw": "\\p{",
@@ -95,7 +95,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 5,
           "end": 5,
           "raw": "",
@@ -117,7 +117,7 @@
         "raw": "/\\p{ASCII/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 9,
           "raw": "\\p{ASCII",
@@ -191,7 +191,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 10,
           "end": 10,
           "raw": "",
@@ -213,7 +213,7 @@
         "raw": "/\\p{ASCII}/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "\\p{ASCII}",
@@ -295,7 +295,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 11,
           "raw": "",
@@ -317,7 +317,7 @@
         "raw": "/\\p{ASCII}/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "\\p{ASCII}",
@@ -346,7 +346,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 12,
           "raw": "u",
@@ -368,7 +368,7 @@
         "raw": "/\\p{Emoji}/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "\\p{Emoji}",
@@ -397,7 +397,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 12,
           "raw": "u",
@@ -419,7 +419,7 @@
         "raw": "/\\p{General_Category=Letter}/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 28,
           "raw": "\\p{General_Category=Letter}",
@@ -448,7 +448,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 29,
           "end": 30,
           "raw": "u",
@@ -470,7 +470,7 @@
         "raw": "/\\p{Script=Hiragana}/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 20,
           "raw": "\\p{Script=Hiragana}",
@@ -499,7 +499,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 21,
           "end": 22,
           "raw": "u",
@@ -521,7 +521,7 @@
         "raw": "/[\\p{Script=Hiragana}\\-\\p{Script=Katakana}]/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 43,
           "raw": "[\\p{Script=Hiragana}\\-\\p{Script=Katakana}]",
@@ -579,7 +579,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 44,
           "end": 45,
           "raw": "u",
@@ -601,7 +601,7 @@
         "raw": "/\\P{Letter}/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 11,
           "raw": "\\P{Letter}",
@@ -630,7 +630,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 12,
           "end": 13,
           "raw": "u",

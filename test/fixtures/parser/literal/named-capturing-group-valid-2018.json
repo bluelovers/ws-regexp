@@ -13,7 +13,7 @@
         "raw": "/(a)/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 4,
           "raw": "(a)",
@@ -59,7 +59,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 5,
           "end": 5,
           "raw": "",
@@ -81,7 +81,7 @@
         "raw": "/(?:a)/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 6,
           "raw": "(?:a)",
@@ -125,7 +125,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 7,
           "end": 7,
           "raw": "",
@@ -147,7 +147,7 @@
         "raw": "/(?<a>)/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 7,
           "raw": "(?<a>)",
@@ -184,7 +184,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 8,
           "end": 8,
           "raw": "",
@@ -206,7 +206,7 @@
         "raw": "/\\k/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 3,
           "raw": "\\k",
@@ -232,7 +232,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 4,
           "end": 4,
           "raw": "",
@@ -254,7 +254,7 @@
         "raw": "/\\k<a>/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 6,
           "raw": "\\k<a>",
@@ -304,7 +304,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 7,
           "end": 7,
           "raw": "",
@@ -326,7 +326,7 @@
         "raw": "/(?<a>a)\\k<a>/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 13,
           "raw": "(?<a>a)\\k<a>",
@@ -383,7 +383,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 14,
           "end": 14,
           "raw": "",
@@ -405,7 +405,7 @@
         "raw": "/(?<a>a)\\k<a>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 13,
           "raw": "(?<a>a)\\k<a>",
@@ -462,7 +462,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 14,
           "end": 15,
           "raw": "u",
@@ -484,7 +484,7 @@
         "raw": "/(?<a>a)\\1/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "(?<a>a)\\1",
@@ -541,7 +541,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 11,
           "raw": "",
@@ -563,7 +563,7 @@
         "raw": "/(?<a>a)\\1/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "(?<a>a)\\1",
@@ -620,7 +620,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 12,
           "raw": "u",
@@ -642,7 +642,7 @@
         "raw": "/(?<a>a)\\2/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "(?<a>a)\\2",
@@ -696,7 +696,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 11,
           "raw": "",
@@ -718,7 +718,7 @@
         "raw": "/(?<a>a)(?<b>a)/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 15,
           "raw": "(?<a>a)(?<b>a)",
@@ -792,7 +792,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 16,
           "end": 16,
           "raw": "",
@@ -814,7 +814,7 @@
         "raw": "/(?<a>a)(?<b>a)/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 15,
           "raw": "(?<a>a)(?<b>a)",
@@ -888,7 +888,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 16,
           "end": 17,
           "raw": "u",
@@ -910,7 +910,7 @@
         "raw": "/\\k<a>(?<a>a)/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 13,
           "raw": "\\k<a>(?<a>a)",
@@ -967,7 +967,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 14,
           "end": 14,
           "raw": "",
@@ -989,7 +989,7 @@
         "raw": "/\\k<a>(?<a>a)/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 13,
           "raw": "\\k<a>(?<a>a)",
@@ -1046,7 +1046,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 14,
           "end": 15,
           "raw": "u",
@@ -1068,7 +1068,7 @@
         "raw": "/\\1(?<a>a)/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "\\1(?<a>a)",
@@ -1125,7 +1125,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 11,
           "raw": "",
@@ -1147,7 +1147,7 @@
         "raw": "/\\1(?<a>a)/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 10,
           "raw": "\\1(?<a>a)",
@@ -1204,7 +1204,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 11,
           "end": 12,
           "raw": "u",
@@ -1226,7 +1226,7 @@
         "raw": "/(?<$abc>a)\\k<$abc>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 19,
           "raw": "(?<$abc>a)\\k<$abc>",
@@ -1283,7 +1283,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 20,
           "end": 21,
           "raw": "u",
@@ -1305,7 +1305,7 @@
         "raw": "/(?<あ>a)\\k<あ>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 13,
           "raw": "(?<あ>a)\\k<あ>",
@@ -1362,7 +1362,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 14,
           "end": 15,
           "raw": "u",
@@ -1384,7 +1384,7 @@
         "raw": "/(?<𠮷>a)\\k<\\u{20bb7}>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 22,
           "raw": "(?<𠮷>a)\\k<\\u{20bb7}>",
@@ -1441,7 +1441,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 23,
           "end": 24,
           "raw": "u",
@@ -1463,7 +1463,7 @@
         "raw": "/(?<\\uD842\\uDFB7>a)\\k<\\u{20bb7}>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 32,
           "raw": "(?<\\uD842\\uDFB7>a)\\k<\\u{20bb7}>",
@@ -1520,7 +1520,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 33,
           "end": 34,
           "raw": "u",
@@ -1542,7 +1542,7 @@
         "raw": "/(?<\\u{20bb7}>a)\\k<\\uD842\\uDFB7>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 32,
           "raw": "(?<\\u{20bb7}>a)\\k<\\uD842\\uDFB7>",
@@ -1599,7 +1599,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 33,
           "end": 34,
           "raw": "u",
@@ -1621,7 +1621,7 @@
         "raw": "/(?<abc>a)\\k<\\u0061\\u0062\\u0063>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 32,
           "raw": "(?<abc>a)\\k<\\u0061\\u0062\\u0063>",
@@ -1678,7 +1678,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 33,
           "end": 34,
           "raw": "u",
@@ -1700,7 +1700,7 @@
         "raw": "/(?<\\u0061\\u0062\\u0063>a)\\k<abc>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 32,
           "raw": "(?<\\u0061\\u0062\\u0063>a)\\k<abc>",
@@ -1757,7 +1757,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 33,
           "end": 34,
           "raw": "u",
@@ -1779,7 +1779,7 @@
         "raw": "/(?<\\u0061\\u0062\\u0063>a)\\k<\\u{61}\\u{62}\\u{63}>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 47,
           "raw": "(?<\\u0061\\u0062\\u0063>a)\\k<\\u{61}\\u{62}\\u{63}>",
@@ -1836,7 +1836,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 48,
           "end": 49,
           "raw": "u",
@@ -1858,7 +1858,7 @@
         "raw": "/(?<a1>a)\\k<a1>/u",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 15,
           "raw": "(?<a1>a)\\k<a1>",
@@ -1915,7 +1915,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 16,
           "end": 17,
           "raw": "u",

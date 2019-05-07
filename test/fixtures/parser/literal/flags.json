@@ -13,7 +13,7 @@
         "raw": "/(?:)/g",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 5,
           "raw": "(?:)",
@@ -48,7 +48,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 6,
           "end": 7,
           "raw": "g",
@@ -70,7 +70,7 @@
         "raw": "/(?:)/i",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 5,
           "raw": "(?:)",
@@ -105,7 +105,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 6,
           "end": 7,
           "raw": "i",
@@ -127,7 +127,7 @@
         "raw": "/(?:)/m",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 5,
           "raw": "(?:)",
@@ -162,7 +162,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 6,
           "end": 7,
           "raw": "m",
@@ -184,7 +184,7 @@
         "raw": "/(?:)/gi",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 5,
           "raw": "(?:)",
@@ -219,7 +219,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 6,
           "end": 8,
           "raw": "gi",
@@ -241,7 +241,7 @@
         "raw": "/(?:)/mg",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 5,
           "raw": "(?:)",
@@ -276,7 +276,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 6,
           "end": 8,
           "raw": "mg",
@@ -298,7 +298,7 @@
         "raw": "/(?:)/mig",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 5,
           "raw": "(?:)",
@@ -333,7 +333,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 6,
           "end": 9,
           "raw": "mig",

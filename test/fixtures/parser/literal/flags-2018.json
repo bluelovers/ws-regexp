@@ -13,7 +13,7 @@
         "raw": "/./s",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 2,
           "raw": ".",
@@ -39,7 +39,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 3,
           "end": 4,
           "raw": "s",

@@ -13,7 +13,7 @@
         "raw": "/\\k/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 3,
           "raw": "\\k",
@@ -39,7 +39,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 4,
           "end": 4,
           "raw": "",
@@ -61,7 +61,7 @@
         "raw": "/\\k<a>/",
         "pattern": {
           "type": "Pattern",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 1,
           "end": 6,
           "raw": "\\k<a>",
@@ -111,7 +111,7 @@
         },
         "flags": {
           "type": "Flags",
-          "parent": "♻️..",
+          "parent": "♻️../",
           "start": 7,
           "end": 7,
           "raw": "",

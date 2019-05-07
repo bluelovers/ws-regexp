@@ -1,5 +1,5 @@
-import fs from "fs"
-import path from "path"
+import fs = require("fs")
+import path = require("path")
 
 type FixtureData = {
     [filename: string]: {

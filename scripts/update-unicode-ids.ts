@@ -1,9 +1,11 @@
-import fs from "fs"
-import http from "http"
+import fs = require("fs")
+import http = require("http")
+import path = require("path")
+// @ts-ignore
 import { CLIEngine } from "eslint"
 
 const DB_URL = "http://unicode.org/Public/UNIDATA/DerivedCoreProperties.txt"
-const FILE_PATH = "src/unicode/ids.ts"
+const FILE_PATH = path.join(__dirname, '..', "src/unicode/ids.ts")
 const ID_START = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Start /i
 const ID_CONTINUE = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Continue /i
 const BORDER = 0x7f
@@ -29,7 +31,7 @@ enum Mode {
         let m: RegExpExecArray | null = null
         if (banner === "") {
             logger.log("Processing data... (%s)", line.slice(2))
-            banner = `/* Generated from ${line.slice(2)} */`
+            banner = `/* Generated from ${line.slice(2)} */\n// @formatter:off`
         } else if ((m = ID_START.exec(line)) != null) {
             const min = parseInt(m[1], 16)
             const max = m[2] ? parseInt(m[2], 16) : min

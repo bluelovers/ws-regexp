@@ -1,6 +1,6 @@
-import * as assert from "assert"
-import * as fs from "fs"
-import * as path from "path"
+import assert = require("assert")
+import fs = require("fs")
+import path = require("path")
 
 type FixtureData = {
     [filename: string]: {
@@ -24,6 +24,8 @@ for (const filename of fs.readdirSync(fixturesRoot)) {
 
 export function save(): void {
     for (const filename of Object.keys(Fixtures)) {
+        let dir = path.join(fixturesRoot, filename)
+        !fs.existsSync(dir) && fs.mkdirSync(path.dirname(dir))
         fs.writeFileSync(
             path.join(fixturesRoot, filename),
             JSON.stringify(Fixtures[filename], null, 2),

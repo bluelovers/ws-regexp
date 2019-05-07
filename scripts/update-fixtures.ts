@@ -1,6 +1,6 @@
 import { AST, parseRegExpLiteral, visitRegExpAST } from "../src/index"
-import * as Parser from "../test/fixtures/parser/literal"
-import * as Visitor from "../test/fixtures/visitor"
+import Parser = require("../test/fixtures/parser/literal")
+import Visitor = require("../test/fixtures/visitor")
 import { cloneWithoutCircular } from "./clone-without-circular"
 
 for (const filename of Object.keys(Parser.Fixtures)) {

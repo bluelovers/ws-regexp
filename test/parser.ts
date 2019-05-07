@@ -1,4 +1,4 @@
-import * as assert from "assert"
+import assert = require("assert")
 import { parseRegExpLiteral, RegExpParser } from "../src/index"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
 import { Fixtures } from "./fixtures/parser/literal"
