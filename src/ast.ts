@@ -1,6 +1,14 @@
 /**
  * The type which includes all nodes.
  */
+import {
+    EnumKindAssertion,
+    EnumKindCharacterSet,
+    EnumKindEdgeAssertion,
+    EnumKindEscapeCharacterSet,
+    EnumTypeNode,
+} from './const';
+
 export type Node = BranchNode | LeafNode
 
 /**
@@ -95,7 +103,7 @@ export interface NodeBase {
  * The root node.
  */
 export interface RegExpLiteral extends NodeBase {
-    type: "RegExpLiteral"
+    type: EnumTypeNode.RegExpLiteral
     parent: null
     pattern: Pattern
     flags: Flags
@@ -105,7 +113,7 @@ export interface RegExpLiteral extends NodeBase {
  * The pattern.
  */
 export interface Pattern extends NodeBase {
-    type: "Pattern"
+    type: EnumTypeNode.Pattern
     parent: RegExpLiteral | null
     elements: Element[]
 }
@@ -115,7 +123,7 @@ export interface Pattern extends NodeBase {
  * E.g. `a|b`
  */
 export interface Disjunction extends NodeBase {
-    type: "Disjunction"
+    type: EnumTypeNode.Disjunction
     parent: Pattern | Group | CapturingGroup | LookaroundAssertion
     alternatives: AlternativeElement[][]
 }
@@ -125,7 +133,7 @@ export interface Disjunction extends NodeBase {
  * E.g. `(?:ab)`
  */
 export interface Group extends NodeBase {
-    type: "Group"
+    type: EnumTypeNode.Group
     parent:
         | Pattern
         | Disjunction
@@ -141,7 +149,7 @@ export interface Group extends NodeBase {
  * E.g. `(ab)`, `(?<name>ab)`
  */
 export interface CapturingGroup extends NodeBase {
-    type: "CapturingGroup"
+    type: EnumTypeNode.CapturingGroup
     parent:
         | Pattern
         | Disjunction
@@ -164,7 +172,7 @@ export type LookaroundAssertion = LookaheadAssertion | LookbehindAssertion
  * E.g. `(?=ab)`, `(?!ab)`
  */
 export interface LookaheadAssertion extends NodeBase {
-    type: "Assertion"
+    type: EnumTypeNode.LookaheadAssertion
     parent:
         | Pattern
         | Disjunction
@@ -172,7 +180,7 @@ export interface LookaheadAssertion extends NodeBase {
         | CapturingGroup
         | Quantifier
         | LookaroundAssertion
-    kind: "lookahead"
+    kind: EnumKindAssertion.LookaheadAssertion
     negate: boolean
     elements: Element[]
 }
@@ -182,9 +190,9 @@ export interface LookaheadAssertion extends NodeBase {
  * E.g. `(?<=ab)`, `(?<!ab)`
  */
 export interface LookbehindAssertion extends NodeBase {
-    type: "Assertion"
+    type: EnumTypeNode.LookbehindAssertion
     parent: Pattern | Disjunction | Group | CapturingGroup | LookaroundAssertion
-    kind: "lookbehind"
+    kind: EnumKindAssertion.LookbehindAssertion
     negate: boolean
     elements: Element[]
 }
@@ -194,7 +202,7 @@ export interface LookbehindAssertion extends NodeBase {
  * E.g. `a?`, `a*`, `a+`, `a{1,2}`, `a??`, `a*?`, `a+?`, `a{1,2}?`
  */
 export interface Quantifier extends NodeBase {
-    type: "Quantifier"
+    type: EnumTypeNode.Quantifier
     parent: Pattern | Disjunction | Group | CapturingGroup | LookaroundAssertion
     min: number
     max: number // can be Number.POSITIVE_INFINITY
@@ -207,7 +215,7 @@ export interface Quantifier extends NodeBase {
  * E.g. `[ab]`, `[^ab]`
  */
 export interface CharacterClass extends NodeBase {
-    type: "CharacterClass"
+    type: EnumTypeNode.CharacterClass
     parent:
         | Pattern
         | Disjunction
@@ -224,7 +232,7 @@ export interface CharacterClass extends NodeBase {
  * E.g. `[a-b]`
  */
 export interface CharacterClassRange extends NodeBase {
-    type: "CharacterClassRange"
+    type: EnumTypeNode.CharacterClassRange
     parent: CharacterClass
     min: Character
     max: Character
@@ -245,7 +253,7 @@ export type BoundaryAssertion = EdgeAssertion | WordBoundaryAssertion
  * E.g. `^`, `$`
  */
 export interface EdgeAssertion extends NodeBase {
-    type: "Assertion"
+    type: EnumTypeNode.EdgeAssertion
     parent:
         | Pattern
         | Disjunction
@@ -253,7 +261,7 @@ export interface EdgeAssertion extends NodeBase {
         | CapturingGroup
         | Quantifier
         | LookaroundAssertion
-    kind: "start" | "end"
+    kind: EnumKindEdgeAssertion
 }
 
 /**
@@ -261,7 +269,7 @@ export interface EdgeAssertion extends NodeBase {
  * E.g. `\b`, `\B`
  */
 export interface WordBoundaryAssertion extends NodeBase {
-    type: "Assertion"
+    type: EnumTypeNode.WordBoundaryAssertion
     parent:
         | Pattern
         | Disjunction
@@ -269,7 +277,7 @@ export interface WordBoundaryAssertion extends NodeBase {
         | CapturingGroup
         | Quantifier
         | LookaroundAssertion
-    kind: "word"
+    kind: EnumKindAssertion.WordBoundaryAssertion
     negate: boolean
 }
 
@@ -286,7 +294,7 @@ export type CharacterSet =
  * E.g. `.`
  */
 export interface AnyCharacterSet extends NodeBase {
-    type: "CharacterSet"
+    type: EnumTypeNode.AnyCharacterSet
     parent:
         | Pattern
         | Disjunction
@@ -294,7 +302,7 @@ export interface AnyCharacterSet extends NodeBase {
         | CapturingGroup
         | Quantifier
         | LookaroundAssertion
-    kind: "any"
+    kind: EnumKindCharacterSet.AnyCharacterSet
 }
 
 /**
@@ -302,7 +310,7 @@ export interface AnyCharacterSet extends NodeBase {
  * E.g. `\d`, `\s`, `\w`, `\D`, `\S`, `\W`
  */
 export interface EscapeCharacterSet extends NodeBase {
-    type: "CharacterSet"
+    type: EnumTypeNode.EscapeCharacterSet
     parent:
         | Pattern
         | Disjunction
@@ -311,7 +319,7 @@ export interface EscapeCharacterSet extends NodeBase {
         | Quantifier
         | CharacterClass
         | LookaroundAssertion
-    kind: "digit" | "space" | "word"
+    kind: EnumKindEscapeCharacterSet
     negate: boolean
 }
 
@@ -320,7 +328,7 @@ export interface EscapeCharacterSet extends NodeBase {
  * E.g. `\p{ASCII}`, `\P{ASCII}`, `\p{Script=Hiragana}`
  */
 export interface UnicodePropertyCharacterSet extends NodeBase {
-    type: "CharacterSet"
+    type: EnumTypeNode.UnicodePropertyCharacterSet
     parent:
         | Pattern
         | Disjunction
@@ -329,7 +337,7 @@ export interface UnicodePropertyCharacterSet extends NodeBase {
         | Quantifier
         | CharacterClass
         | LookaroundAssertion
-    kind: "property"
+    kind: EnumKindCharacterSet.UnicodePropertyCharacterSet
     key: string
     value: string | null
     negate: boolean
@@ -341,7 +349,7 @@ export interface UnicodePropertyCharacterSet extends NodeBase {
  * E.g. `a`, `あ`, `✿`, `\x65`, `\u0065`, `\u{65}`, `\/`
  */
 export interface Character extends NodeBase {
-    type: "Character"
+    type: EnumTypeNode.Character
     parent:
         | Pattern
         | Disjunction
@@ -359,7 +367,7 @@ export interface Character extends NodeBase {
  * E.g. `\1`, `\k<name>`
  */
 export interface Backreference extends NodeBase {
-    type: "Backreference"
+    type: EnumTypeNode.Backreference
     parent:
         | Pattern
         | Disjunction
@@ -375,7 +383,7 @@ export interface Backreference extends NodeBase {
  * The flags.
  */
 export interface Flags extends NodeBase {
-    type: "Flags"
+    type: EnumTypeNode.Flags
     parent: RegExpLiteral | null
     dotAll: boolean
     global: boolean

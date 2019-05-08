@@ -1,4 +1,5 @@
-import { CapturingGroup, CharacterClass, Disjunction, Flags, Group, RegExpLiteral, LookaroundAssertion, Pattern } from "./ast";
+import { CapturingGroup, CharacterClass, Disjunction, Flags, Group, LookaroundAssertion, Pattern, RegExpLiteral } from "./ast";
+import { EnumEcmaVersion } from './const';
 export declare type AppendableNode = Pattern | Disjunction | Group | CapturingGroup | CharacterClass | LookaroundAssertion;
 export declare namespace RegExpParser {
     /**
@@ -15,7 +16,7 @@ export declare namespace RegExpParser {
          * - `2018` added `s` flag, Named Capturing Group, Lookbehind Assertion,
          *   and Unicode Property Escape.
          */
-        ecmaVersion?: 5 | 2015 | 2016 | 2017 | 2018;
+        ecmaVersion?: EnumEcmaVersion;
         disableChkCharacterClassRange?: boolean;
     }
 }

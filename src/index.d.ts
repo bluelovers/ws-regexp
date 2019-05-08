@@ -2,6 +2,7 @@ import AST = require("./ast");
 import { RegExpParser } from "./parser";
 import { RegExpValidator } from "./validator";
 import { RegExpVisitor } from "./visitor";
+export * from "./const";
 export { AST, RegExpParser, RegExpValidator };
 /**
  * Parse a given regular expression literal then make AST object.
