@@ -42,7 +42,7 @@
     "npm-publish": "npm publish",
     "prepublishOnly": "npm run sort-package-json && npm run test",
     "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "_mocha --require ts-node/register --reporter dot --timeout 10000 \"test/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
+    "test": "npx mocha --require ts-node/register --reporter dot --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
     "update:ids": "ts-node scripts/update-unicode-ids.ts",
     "update:test": "ts-node scripts/update-fixtures.ts"
   },
