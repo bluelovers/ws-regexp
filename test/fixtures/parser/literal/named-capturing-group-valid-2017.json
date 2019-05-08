@@ -17,23 +17,14 @@
           "start": 1,
           "end": 3,
           "raw": "\\k",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "Character",
               "parent": "♻️../..",
               "start": 1,
               "end": 3,
               "raw": "\\k",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 3,
-                  "raw": "\\k",
-                  "value": 107
-                }
-              ]
+              "value": 107
             }
           ]
         },
@@ -65,47 +56,38 @@
           "start": 1,
           "end": 6,
           "raw": "\\k<a>",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "Character",
               "parent": "♻️../..",
               "start": 1,
+              "end": 3,
+              "raw": "\\k",
+              "value": 107
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 3,
+              "end": 4,
+              "raw": "<",
+              "value": 60
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 4,
+              "end": 5,
+              "raw": "a",
+              "value": 97
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 5,
               "end": 6,
-              "raw": "\\k<a>",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 3,
-                  "raw": "\\k",
-                  "value": 107
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 3,
-                  "end": 4,
-                  "raw": "<",
-                  "value": 60
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 4,
-                  "end": 5,
-                  "raw": "a",
-                  "value": 97
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 5,
-                  "end": 6,
-                  "raw": ">",
-                  "value": 62
-                }
-              ]
+              "raw": ">",
+              "value": 62
             }
           ]
         },

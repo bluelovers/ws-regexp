@@ -1,4 +1,4 @@
-const PropertyData: Object & { [key: string]: Set<string> } = {
+const _PropertyData = {
     $LONE: new Set([
         "ASCII",
         "ASCII_Hex_Digit",
@@ -455,10 +455,26 @@ const PropertyData: Object & { [key: string]: Set<string> } = {
         "Zanabazar_Square",
         "Zanb",
     ]),
+};
+
+interface IPropertyData
+{
+    readonly $LONE: Set<string>;
+    readonly General_Category: Set<string>;
+    readonly Script: Set<string>;
+
+    readonly gc: IPropertyData["General_Category"];
+    readonly sc: IPropertyData["Script"];
+    readonly Script_Extensions: IPropertyData["Script"];
+    readonly scx: IPropertyData["Script"];
 }
 
-PropertyData.gc = PropertyData.General_Category
-PropertyData.sc = PropertyData.Script_Extensions = PropertyData.scx =
-    PropertyData.Script
+export const PropertyData: IPropertyData = _PropertyData as any;
 
-export { PropertyData }
+// @ts-ignore
+PropertyData.gc = PropertyData.General_Category;
+// @ts-ignore
+PropertyData.sc = PropertyData.Script_Extensions = PropertyData.scx =
+    PropertyData.Script;
+
+export default PropertyData

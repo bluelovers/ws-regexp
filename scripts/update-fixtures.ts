@@ -21,6 +21,8 @@ for (const filename of Object.keys(Parser.Fixtures)) {
     Parser.save()
 }
 
+process.exit();
+
 for (const filename of Object.keys(Visitor.Fixtures)) {
     const fixture = Visitor.Fixtures[filename]
     const options = fixture.options

@@ -17,23 +17,14 @@
           "start": 1,
           "end": 3,
           "raw": "\\p",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "Character",
               "parent": "♻️../..",
               "start": 1,
               "end": 3,
               "raw": "\\p",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 3,
-                  "raw": "\\p",
-                  "value": 112
-                }
-              ]
+              "value": 112
             }
           ]
         },
@@ -65,31 +56,22 @@
           "start": 1,
           "end": 4,
           "raw": "\\p{",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "Character",
               "parent": "♻️../..",
               "start": 1,
+              "end": 3,
+              "raw": "\\p",
+              "value": 112
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 3,
               "end": 4,
-              "raw": "\\p{",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 3,
-                  "raw": "\\p",
-                  "value": 112
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 3,
-                  "end": 4,
-                  "raw": "{",
-                  "value": 123
-                }
-              ]
+              "raw": "{",
+              "value": 123
             }
           ]
         },
@@ -121,71 +103,62 @@
           "start": 1,
           "end": 9,
           "raw": "\\p{ASCII",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "Character",
               "parent": "♻️../..",
               "start": 1,
+              "end": 3,
+              "raw": "\\p",
+              "value": 112
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 3,
+              "end": 4,
+              "raw": "{",
+              "value": 123
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 4,
+              "end": 5,
+              "raw": "A",
+              "value": 65
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 5,
+              "end": 6,
+              "raw": "S",
+              "value": 83
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 6,
+              "end": 7,
+              "raw": "C",
+              "value": 67
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 7,
+              "end": 8,
+              "raw": "I",
+              "value": 73
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 8,
               "end": 9,
-              "raw": "\\p{ASCII",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 3,
-                  "raw": "\\p",
-                  "value": 112
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 3,
-                  "end": 4,
-                  "raw": "{",
-                  "value": 123
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 4,
-                  "end": 5,
-                  "raw": "A",
-                  "value": 65
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 5,
-                  "end": 6,
-                  "raw": "S",
-                  "value": 83
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 6,
-                  "end": 7,
-                  "raw": "C",
-                  "value": 67
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 7,
-                  "end": 8,
-                  "raw": "I",
-                  "value": 73
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 8,
-                  "end": 9,
-                  "raw": "I",
-                  "value": 73
-                }
-              ]
+              "raw": "I",
+              "value": 73
             }
           ]
         },
@@ -217,79 +190,70 @@
           "start": 1,
           "end": 10,
           "raw": "\\p{ASCII}",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "Character",
               "parent": "♻️../..",
               "start": 1,
+              "end": 3,
+              "raw": "\\p",
+              "value": 112
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 3,
+              "end": 4,
+              "raw": "{",
+              "value": 123
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 4,
+              "end": 5,
+              "raw": "A",
+              "value": 65
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 5,
+              "end": 6,
+              "raw": "S",
+              "value": 83
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 6,
+              "end": 7,
+              "raw": "C",
+              "value": 67
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 7,
+              "end": 8,
+              "raw": "I",
+              "value": 73
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 8,
+              "end": 9,
+              "raw": "I",
+              "value": 73
+            },
+            {
+              "type": "Character",
+              "parent": "♻️../..",
+              "start": 9,
               "end": 10,
-              "raw": "\\p{ASCII}",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 3,
-                  "raw": "\\p",
-                  "value": 112
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 3,
-                  "end": 4,
-                  "raw": "{",
-                  "value": 123
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 4,
-                  "end": 5,
-                  "raw": "A",
-                  "value": 65
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 5,
-                  "end": 6,
-                  "raw": "S",
-                  "value": 83
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 6,
-                  "end": 7,
-                  "raw": "C",
-                  "value": 67
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 7,
-                  "end": 8,
-                  "raw": "I",
-                  "value": 73
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 8,
-                  "end": 9,
-                  "raw": "I",
-                  "value": 73
-                },
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 9,
-                  "end": 10,
-                  "raw": "}",
-                  "value": 125
-                }
-              ]
+              "raw": "}",
+              "value": 125
             }
           ]
         },

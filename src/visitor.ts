@@ -1,5 +1,5 @@
 import {
-    Alternative,
+    //Alternative,
     Assertion,
     Backreference,
     CapturingGroup,
@@ -16,6 +16,7 @@ import {
 } from "./ast"
 
 /**
+ * @deprecated merge not done, don't use
  * The visitor to walk on AST.
  */
 export class RegExpVisitor {

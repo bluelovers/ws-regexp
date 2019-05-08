@@ -17,23 +17,14 @@
           "start": 1,
           "end": 2,
           "raw": ".",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "CharacterSet",
               "parent": "♻️../..",
               "start": 1,
               "end": 2,
               "raw": ".",
-              "elements": [
-                {
-                  "type": "CharacterSet",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 2,
-                  "raw": ".",
-                  "kind": "any"
-                }
-              ]
+              "kind": "any"
             }
           ]
         },
@@ -65,23 +56,14 @@
           "start": 1,
           "end": 2,
           "raw": ".",
-          "alternatives": [
+          "elements": [
             {
-              "type": "Alternative",
+              "type": "CharacterSet",
               "parent": "♻️../..",
               "start": 1,
               "end": 2,
               "raw": ".",
-              "elements": [
-                {
-                  "type": "CharacterSet",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 2,
-                  "raw": ".",
-                  "kind": "any"
-                }
-              ]
+              "kind": "any"
             }
           ]
         },
