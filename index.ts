@@ -5,13 +5,12 @@ import { AST } from 'regexpp2';
 import EmojiRegex = require('emoji-regex');
 import UString from 'uni-string';
 
-export const EMOJI_REGEX = EmojiRegex() as RegExp;
+// @ts-ignore
+export const EMOJI_REGEX: RegExp = EmojiRegex();
 
 export const defaultRegExpParser = createRegExpParser({
 	disableChkCharacterClassRange: true,
 });
-
-export { array_unique }
 
 export function createRegExpParser(options?: regexpp.RegExpParser.Options)
 {
@@ -69,7 +68,7 @@ export function fakePatternToRegExpLiteral(pattern: AST.Pattern | string,
 		flags = typeof flags == 'string' ? parseFlags(flags, objRegExpParser) : flags;
 		pattern = typeof pattern == 'string' ? parsePattern(pattern, flags.unicode, objRegExpParser) : pattern;
 
-		data = {
+		data = <AST.RegExpLiteral>{
 			type: "RegExpLiteral",
 			parent: null,
 			start: 0,
@@ -219,7 +218,7 @@ export function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus,
 							aaa = aaa.reduce(function (a, b: string)
 							{
 								let current_is_zwj = /\u200D/.test(b);
-								let current_is_emoji = EmojiRegex().test(b);
+								let current_is_emoji = EMOJI_REGEX.test(b);
 
 								if (last_is_emoji)
 								{
