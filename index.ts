@@ -1,7 +1,6 @@
-
 import { AST } from "regexpp2";
-import * as regexpp from 'regexpp2';
-import * as EventEmitter from 'events';
+import regexpp = require('regexpp2');
+import EventEmitter = require('events');
 
 import Parser, {
 	astToString,
@@ -9,8 +8,10 @@ import Parser, {
 	parseFlags,
 	parsePattern,
 	INodePlus,
-	IAstToStringOptions
+	IAstToStringOptions,
 } from 'regexp-parser-literal';
+
+import { AppendableNode } from 'regexpp2/src/parser';
 
 export enum ParserEventEmitterEvent
 {
@@ -30,6 +31,8 @@ export enum ParserEventEmitterEvent
 	change = 'change',
 }
 
+type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
+
 export class ParserEventEmitter extends EventEmitter
 {
 	astRegExpLiteral: AST.RegExpLiteral & INodePlus = null;
@@ -45,7 +48,7 @@ export class ParserEventEmitter extends EventEmitter
 			inputAst = fakePatternToRegExpLiteral(inputAst, flags);
 		}
 
-		this.astRegExpLiteral = inputAst;
+		this.astRegExpLiteral = inputAst as AST.RegExpLiteral;
 
 		this.on(ParserEventEmitterEvent.change, function (ast)
 		{
@@ -68,7 +71,19 @@ export class ParserEventEmitter extends EventEmitter
 	{
 		const self = this;
 
-		this.astRegExpLiteral.pattern.elements.forEach(function (item)
+		/*
+		0 && console.dir(this.astRegExpLiteral.pattern, {
+			depth: null,
+			colors: true,
+		});
+		*/
+
+		let pattern = this.astRegExpLiteral.pattern;
+
+		// @ts-ignore
+		let elems = pattern.alternatives || pattern.elements;
+
+		elems.forEach(function (item)
 		{
 			self._lookup_sub(item, self);
 		});
@@ -76,7 +91,7 @@ export class ParserEventEmitter extends EventEmitter
 		return this;
 	}
 
-	emit<T extends AST.Element | AST.CharacterClassElement>(eventName: keyof typeof ParserEventEmitterEvent,
+	emit<T extends INodeInput>(eventName: keyof typeof ParserEventEmitterEvent,
 		inputAst: T & INodePlus,
 		...args
 	): boolean
@@ -84,13 +99,25 @@ export class ParserEventEmitter extends EventEmitter
 		return super.emit(eventName, inputAst, ...args, eventName);
 	}
 
-	on(eventName: keyof typeof ParserEventEmitterEvent, listener: IParserEventEmitterListener<AST.Element>): this
-	on(eventName: 'default', listener: IParserEventEmitterListener<AST.Character>): this
-	on(eventName: 'class', listener: IParserEventEmitterListener<AST.CharacterClass>): this
-	on(eventName: 'class_default', listener: IParserEventEmitterListener<AST.Character>): this
-	on(eventName: 'class_range', listener: IParserEventEmitterListener<AST.CharacterClassRange>): this
-	on(eventName: 'class_other', listener: IParserEventEmitterListener<AST.CharacterClassElement>): this
-	on(eventName: keyof typeof ParserEventEmitterEvent, listener: IParserEventEmitterListener<any>): this
+	on<E extends ParserEventEmitterEvent.default>(eventName: E,
+		listener: IParserEventEmitterListener<AST.Character, E>,
+	): this
+	on<E extends ParserEventEmitterEvent.class>(eventName: E,
+		listener: IParserEventEmitterListener<AST.CharacterClass, E>,
+	): this
+	on<E extends ParserEventEmitterEvent.class_default>(eventName: E,
+		listener: IParserEventEmitterListener<AST.Character, E>,
+	): this
+	on<E extends ParserEventEmitterEvent.class_range>(eventName: E,
+		listener: IParserEventEmitterListener<AST.CharacterClassRange, E>,
+	): this
+	on<E extends ParserEventEmitterEvent.other>(eventName: E,
+		listener: IParserEventEmitterListener<AST.CharacterClassElement, E>,
+	): this
+	on<E extends ParserEventEmitterEvent>(eventName: ParserEventEmitterEvent,
+		listener: IParserEventEmitterListener<AST.Element, E>,
+	): this
+	on(eventName: ParserEventEmitterEvent, listener: IParserEventEmitterListener<any, ParserEventEmitterEvent>): this
 	{
 		return super.on(eventName, listener);
 	}
@@ -107,10 +134,10 @@ export class ParserEventEmitter extends EventEmitter
 		}
 	}
 
-	protected _lookup_sub<T extends AST.Element | AST.CharacterClassElement>(inputAst: T & INodePlus,
+	protected _lookup_sub<T extends INodeInput>(inputAst: T & INodePlus,
 		myEmitter: ParserEventEmitter,
 		parent?,
-		eventPrefix: string = ''
+		eventPrefix: string = '',
 	)
 	{
 		const self = this;
@@ -156,19 +183,36 @@ export class ParserEventEmitter extends EventEmitter
 			case 'Assertion':
 				do_elements = true;
 				break;
-			case 'Disjunction':
 
-				(inputAst as AST.Disjunction).alternatives
+			// @ts-ignore
+			case 'Alternative':
+
+				// @ts-ignore
+				(inputAst as AST.Alternative).elements
 					.forEach(function (items)
 					{
-						items.forEach(function (item)
-						{
-							self._lookup_sub(item, myEmitter, inputAst, sub_prefix);
-						});
-					})
+						self._lookup_sub(items, myEmitter, inputAst, sub_prefix);
+					});
 				;
 
 				break;
+
+				// @ts-ignore
+		case 'Disjunction':
+
+			// @ts-ignore
+			(inputAst as AST.Disjunction).alternatives
+				.forEach(function (items)
+				{
+					items.forEach(function (item)
+					{
+						self._lookup_sub(item, myEmitter, inputAst, sub_prefix);
+					});
+				})
+			;
+
+			break;
+
 			default:
 
 				if (eventPrefix === 'class_')
@@ -192,6 +236,12 @@ export class ParserEventEmitter extends EventEmitter
 		{
 			// @ts-ignore
 			sub_elements = inputAst.elements;
+
+			if (typeof sub_elements == 'undefined')
+			{
+				// @ts-ignore
+				sub_elements = inputAst.alternatives;
+			}
 		}
 
 		if (!inputAst.type)
@@ -303,9 +353,9 @@ export class ParserEventEmitter extends EventEmitter
 	}
 }
 
-export interface IParserEventEmitterListener<T extends AST.Element | AST.CharacterClassElement>
+export interface IParserEventEmitterListener<T extends INodeInput, E extends keyof typeof ParserEventEmitterEvent>
 {
-	(inputAst: T & INodePlus, eventName: keyof typeof ParserEventEmitterEvent)
+	(inputAst: T & INodePlus, eventName: E)
 }
 
 export default ParserEventEmitter;
