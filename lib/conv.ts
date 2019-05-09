@@ -29,6 +29,8 @@ export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable
 	if (options.unsafe || true)
 	{
 		opts = {
+			// @ts-ignore
+			greedyTable: options.greedyTable,
 			safe: false,
 		}
 	}
@@ -53,6 +55,8 @@ export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTabl
 	if (options.unsafe || true)
 	{
 		opts = {
+			// @ts-ignore
+			greedyTable: options.greedyTable,
 			safe: false,
 		}
 	}

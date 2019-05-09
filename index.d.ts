@@ -19,7 +19,7 @@ export declare type IOptions = {
      */
     parseRegularExpressionString?: boolean;
     on?: {
-        [k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
+        [k in ParserEventEmitterEvent]?: IParserEventEmitterListener<any, ParserEventEmitterEvent>;
     };
     greedyTable?: boolean | number;
     unsafe?: boolean;

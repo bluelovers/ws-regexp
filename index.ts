@@ -28,7 +28,7 @@ export type IOptions = {
 	parseRegularExpressionString?: boolean,
 
 	on?: {
-		[k in keyof typeof ParserEventEmitterEvent]?: IParserEventEmitterListener<any>;
+		[k in ParserEventEmitterEvent]?: IParserEventEmitterListener<any, ParserEventEmitterEvent>;
 	},
 
 	greedyTable?: boolean | number,
@@ -145,6 +145,7 @@ export class zhRegExp extends RegExp
 				{
 					ast.old_raw = ast.old_raw || ast.raw;
 					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn, options as IOptions);
+
 					ev.emit(ParserEventEmitterEvent.change, ast);
 				});
 			}
