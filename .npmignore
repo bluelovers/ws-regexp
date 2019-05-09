@@ -51,3 +51,5 @@ bin/*.d.ts
 
 yarn-error.log
 tsconfig.json.tpl
+
+/.*
