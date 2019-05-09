@@ -1,6 +1,8 @@
+import { EnumError } from './const';
+
 export function assert(condition: boolean, message?: string): void {
     if (!condition) {
-        throw new Error(message || "AssertionError")
+        throw new Error(message || EnumError.AssertionError)
     }
 }
 

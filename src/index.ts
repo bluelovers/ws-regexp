@@ -1,7 +1,7 @@
 import AST = require("./ast")
 import { RegExpParser } from "./parser"
 import { RegExpValidator } from "./validator"
-import { RegExpVisitor } from "./visitor"
+//import { RegExpVisitor } from "./visitor"
 
 export * from "./const"
 
@@ -32,9 +32,13 @@ export function validateRegExpLiteral(
     return new RegExpValidator(options).validateLiteral(source)
 }
 
+/*
 export function visitRegExpAST(
     node: AST.Node,
     handlers: RegExpVisitor.Handlers,
 ): void {
     new RegExpVisitor(handlers).visit(node)
 }
+ */
+
+export default exports as typeof import('./index');

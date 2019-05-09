@@ -392,3 +392,5 @@ export interface Flags extends NodeBase {
     sticky: boolean
     unicode: boolean
 }
+
+export default exports as typeof import('./ast');

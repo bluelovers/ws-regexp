@@ -132,7 +132,8 @@ export declare const enum EnumEcmaVersion {
     v2018 = 2018
 }
 export declare const enum EnumError {
-    UnknownError = "UnknownError"
+    UnknownError = "UnknownError",
+    AssertionError = "AssertionError"
 }
 declare const _default: typeof import("./const");
 export default _default;

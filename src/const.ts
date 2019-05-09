@@ -165,7 +165,8 @@ export const enum EnumEcmaVersion
 
 export const enum EnumError
 {
-	UnknownError = "UnknownError"
+	UnknownError = "UnknownError",
+	AssertionError = "AssertionError",
 }
 
 export default exports as typeof import('./const');
