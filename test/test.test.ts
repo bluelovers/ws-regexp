@@ -7,7 +7,8 @@
 /// <reference types="node" />
 
 import { chai, relative, expect, path, assert, util, mochaAsync } from './_local-dev';
-import zhRegExp from '..';
+import zhRegExp, { ParserEventEmitterEvent } from '..';
+import { EventEmitter } from 'events';
 
 // @ts-ignore
 describe(relative(__filename), () =>
@@ -41,6 +42,60 @@ describe(relative(__filename), () =>
 				.not
 				.equal(`^(?:戰記)$`)
 			;
+		});
+
+		// @ts-ignore
+		it(`event.on`, function ()
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
+
+			let bool: boolean;
+
+			let actual = new zhRegExp(`^(?:戰記)$`, '', {
+				greedyTable: true,
+				on: {
+					[ParserEventEmitterEvent.change](ast, event)
+					{
+						console.dir({
+							ast,
+							event,
+						});
+
+						bool = true;
+					}
+				}
+			});
+			let expected = /^\^\(\?:\[[^\[\]]{2,}\]\[[^\[\]]{2,}\]\)\$$/;
+
+			expect(actual.source)
+				.match(expected)
+				.not
+				.equal(`^(?:戰記)$`)
+			;
+
+			expect(bool).is.ok;
+		});
+
+		// @ts-ignore
+		it(`not change`, function ()
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
+
+			let bool: boolean;
+
+			let actual = new zhRegExp(`111`, '', {
+				greedyTable: true,
+				on: {
+					[ParserEventEmitterEvent.change](ast, event)
+					{
+						bool = true;
+					}
+				}
+			});
+
+			expect(bool).not.ok;
 		});
 
 	});

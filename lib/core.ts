@@ -241,7 +241,7 @@ export function setupParserEventEmitter(ev: ParserEventEmitter, options: IOption
 					.keys(conf)
 					.forEach(function (event: ParserEventEmitterEvent)
 					{
-						ev.on(event, (options as IOptions).on[event])
+						ev.on(event, conf[event])
 					})
 				;
 
