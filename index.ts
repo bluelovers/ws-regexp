@@ -3,46 +3,26 @@
  */
 
 import { _word_zh_core, _word_zh_core2, zhTableAutoGreedyTable } from './lib/conv';
-import ParserEventEmitter, { ParserEventEmitterEvent, IParserEventEmitterListener } from 'regexp-parser-event';
 import { IAstToStringOptions, parseRegExp } from 'regexp-parser-literal';
+import { IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent, INodeInput } from 'regexp-parser-event';
 import _support from 'regexp-support';
 import regexpRange from 'regexp-range';
+import { coreHandler, IOptions, parseRegularExpressionString, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore } from './lib/core';
 import RegexpHelper = require('regexp-helper');
-import CjkConv from 'cjk-conv';
-import PackageJson = require('./package.json');
+//import PackageJson = require('./package.json');
 import zhTable = require('cjk-conv/lib/zh/table/index');
+import { isRegExp } from 'regexp-helper';
+import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 
-export { ParserEventEmitterEvent, IParserEventEmitterListener }
+export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
 
-export type IOptions = {
-	skip?: string,
-	disableZh?: boolean,
-	/**
-	 * disableLocalRange only work when disableZh is true
-	 */
-	disableLocalRange?: boolean,
-	allowLocalRangeAutoZh?: boolean,
-	flags?: string,
+export { IOptions, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore }
 
-	/**
-	 * allow str is /a/g
-	 */
-	parseRegularExpressionString?: boolean,
+export { IOptionsZhTable }
 
-	on?: {
-		[k in ParserEventEmitterEvent]?: IParserEventEmitterListener<any, ParserEventEmitterEvent>;
-	},
-
-	greedyTable?: boolean | number,
-	unsafe?: boolean,
-
-	/**
-	 * allow set `CjkConv.zhTable.auto`
-	 */
-	zhTable?: (char: string) => string[]
-
-} & IAstToStringOptions;
-
+/**
+ * @deprecated
+ */
 export const defaultOptions: IOptions = {};
 
 export class zhRegExp extends RegExp
@@ -91,145 +71,17 @@ export class zhRegExp extends RegExp
 	 */
 	public static readonly input: string;
 
-	constructor(str: string | RegExp, flags?: string, options?: IOptions | string, ...argv)
-	constructor(str: string | RegExp, options?: IOptions, ...argv)
-	constructor(str, flags = null, options: IOptions | string = {}, ...argv)
+	constructor(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv)
+	constructor(str: string | RegExp, options?: IOptionsInput, ...argv)
+	constructor(str, _flags = null, options: IOptionsInput | string = {}, ...argv)
 	{
-		if (flags !== null && typeof flags == 'object')
-		{
-			options = Object.assign({}, flags) as IOptions;
-			flags = options.flags || null;
-		}
+		let { source, flags } = coreHandler(str, _flags, options, ...argv);
 
-		if (typeof options == 'string')
-		{
-			options = {
-				skip: options,
-			};
-		}
-
-		if (typeof options.flags == 'string')
-		{
-			flags = options.flags;
-		}
-
-		let hasFlags = typeof flags == 'string';
-
-		if (1 && (!options.disableZh || !options.disableLocalRange || options.on))
-		{
-			let ev: ParserEventEmitter;
-
-			const zhTableFn = options.zhTable || (options.greedyTable ? zhTableAutoGreedyTable : zhTable.auto);
-
-			if (str instanceof RegExp)
-			{
-				let ast = parseRegExp(str.toString());
-				// @ts-ignore
-				ev = new ParserEventEmitter(ast);
-			}
-			else
-			{
-				if (options.parseRegularExpressionString && typeof str == 'string')
-				{
-					let m = zhRegExp.parseRegularExpressionString(str);
-					if (m)
-					{
-						str = m.source;
-						flags = hasFlags ? flags : m.flags;
-					}
-				}
-
-				ev = ParserEventEmitter.create(str, flags || '');
-			}
-
-			if (!options.disableZh)
-			{
-				ev.on(ParserEventEmitterEvent.default, function (ast)
-				{
-					ast.old_raw = ast.old_raw || ast.raw;
-
-					let raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn, options as IOptions);
-
-					if (ast.raw !== raw)
-					{
-						ast.raw = raw;
-						ev.emit(ParserEventEmitterEvent.change, ast);
-					}
-				});
-			}
-
-			if (!options.disableLocalRange)
-			{
-				ev.on(ParserEventEmitterEvent.class_range, function (ast, ...argv)
-				{
-					let s = ast.min.raw;
-					let e = ast.max.raw;
-
-					let ret = regexpRange(s, e, {
-						createRegExpString: true,
-					});
-					if (ret)
-					{
-						if ((options as IOptions).allowLocalRangeAutoZh)
-						{
-							ret = _word_zh_core2(ret, (options as IOptions).skip, zhTableFn, options as IOptions);
-						}
-
-						ast.old_raw = ast.old_raw || ast.raw;
-
-						if (ast.raw !== ret)
-						{
-							ast.raw = ret;
-
-							ev.emit(ParserEventEmitterEvent.change, ast);
-						}
-					}
-				});
-			}
-
-			if (options.on)
-			{
-				Object
-					.keys(options.on)
-					.forEach(function (event)
-					{
-						// @ts-ignore
-						ev.on(event, (options as IOptions).on[event])
-					})
-				;
-			}
-
-			ev.resume();
-
-			str = ev.getSource(!!options.debugChanged
-				|| !options.noUniqueClass
-				|| options.sortClass
-				, options);
-			flags = hasFlags ? flags : ev.flags;
-		}
-		else
-		{
-			if (options.parseRegularExpressionString && typeof str == 'string')
-			{
-				let m = zhRegExp.parseRegularExpressionString(str);
-				if (m)
-				{
-					str = new RegExp(m.source, m.flags);
-					flags = hasFlags ? flags : str.flags;
-				}
-			}
-			else if (str instanceof RegExp)
-			{
-				str = str.source;
-				flags = hasFlags ? flags : str.flags;
-			}
-		}
-
-		super(str, flags || '');
+		super(source, flags);
 	}
 
-	static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptions | string): T
-	static create<T = zhRegExp>(str: string | RegExp, options?: IOptions): T
+	static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptionsInput | string): T
+	static create<T = zhRegExp>(str: string | RegExp, options?: IOptionsInput): T
 	static create<T = zhRegExp>(str, flags = null, skip?, ...argv)
 	{
 		return new this(str, flags, skip, ...argv);
@@ -251,20 +103,7 @@ export class zhRegExp extends RegExp
 
 	static parseRegularExpressionString(str: string)
 	{
-		let m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
-		if (m)
-		{
-			let [s, d, r, f] = m;
-
-			return {
-				source: typeof r !== 'undefined' ? r : '',
-				flags: typeof f !== 'undefined' ? f : '',
-				slash: s,
-				input: str,
-			};
-		}
-
-		return null;
+		return parseRegularExpressionString(str);
 	}
 
 	static get support(): typeof _support
@@ -274,7 +113,7 @@ export class zhRegExp extends RegExp
 
 	static get version(): string
 	{
-		return PackageJson.version
+		return require('./package.json').version
 	}
 }
 
@@ -283,9 +122,9 @@ export namespace zhRegExp
 	export import isRegExp = RegexpHelper.isRegExp;
 }
 
-export import parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
-export import isRegExp = zhRegExp.isRegExp;
 export const create = zhRegExp.create.bind(zhRegExp) as typeof zhRegExp.create;
+
+export { isRegExp, parseRegularExpressionString }
 
 export interface IApi<T = zhRegExp>
 {
@@ -293,6 +132,14 @@ export interface IApi<T = zhRegExp>
 	(str: string | RegExp, options?: IOptions): T,
 }
 
-export const version: string = PackageJson.version;
+// @ts-ignore
+export const version: string;
+
+Object.defineProperty(exports, "version", {
+	get()
+	{
+		return require('./package.json').version
+	}
+});
 
 export default zhRegExp;

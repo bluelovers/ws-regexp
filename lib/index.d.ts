@@ -7,5 +7,3 @@ import { _word_zh_core } from './conv';
 export declare function _word_zh(search: string, ret: any, flags?: any, skip?: string): any;
 export declare function _word_zh(search: RegExp, ret: any, flags?: any, skip?: string): any;
 export { _word_zh_core };
-declare const _default: typeof import(".");
-export default _default;

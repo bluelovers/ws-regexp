@@ -5,11 +5,12 @@
 import { IOptions } from 'cjk-conv/lib/zh/table/index';
 import zhTable = require('cjk-conv/lib/zh/table/index');
 import { _re_cjk_conv } from './util';
-import { IOptions as IOptionsRegExp } from '..';
+import { IOptions as IOptionsRegExp } from './core';
+import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 
 //console.log(cjkConv.zhTable.auto('魯'));
 
-export function zhTableAutoGreedyTable(s: string, options: IOptions = {})
+export function zhTableAutoGreedyTable(s: string, options: IOptionsZhTable = {})
 {
 
 	if (true || (options.greedyTable as any | 0) > 1)
@@ -24,7 +25,7 @@ export function zhTableAutoGreedyTable(s: string, options: IOptions = {})
 
 export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable.auto, options: IOptionsRegExp = {})
 {
-	let opts: IOptions;
+	let opts: IOptionsZhTable;
 
 	if (options.unsafe || true)
 	{
@@ -50,7 +51,7 @@ export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable
 
 export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTable.auto, options: IOptionsRegExp = {})
 {
-	let opts: IOptions;
+	let opts: IOptionsZhTable;
 
 	if (options.unsafe || true)
 	{
@@ -73,5 +74,3 @@ export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTabl
 		return a.join('');
 	});
 }
-
-export default exports as typeof import('./conv');

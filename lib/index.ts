@@ -35,8 +35,3 @@ export function _word_zh(search, ret, flags = 'ig', skip?: string)
 }
 
 export { _word_zh_core }
-
-//export type valueof<T> = T[keyof T];
-
-export default exports as typeof import('./index');
-

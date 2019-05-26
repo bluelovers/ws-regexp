@@ -7,5 +7,3 @@ export { array_unique };
  * for regexp-cjk only
  */
 export declare function _re_cjk_conv(flags?: string): RegExp;
-declare const _default: typeof import("./util");
-export default _default;

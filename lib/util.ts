@@ -14,5 +14,3 @@ export function _re_cjk_conv(flags?: string)
 {
 	return _re_cjk_conv2(flags, 'のと');
 }
-
-export default exports as typeof import('./util');

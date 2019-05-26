@@ -1,34 +1,19 @@
 /**
  * Created by user on 2018/1/31/031.
  */
-import { ParserEventEmitterEvent, IParserEventEmitterListener } from 'regexp-parser-event';
 import { IAstToStringOptions } from 'regexp-parser-literal';
+import { IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent, INodeInput } from 'regexp-parser-event';
 import _support from 'regexp-support';
+import { IOptions, parseRegularExpressionString, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore } from './lib/core';
 import RegexpHelper = require('regexp-helper');
-export { ParserEventEmitterEvent, IParserEventEmitterListener };
-export declare type IOptions = {
-    skip?: string;
-    disableZh?: boolean;
-    /**
-     * disableLocalRange only work when disableZh is true
-     */
-    disableLocalRange?: boolean;
-    allowLocalRangeAutoZh?: boolean;
-    flags?: string;
-    /**
-     * allow str is /a/g
-     */
-    parseRegularExpressionString?: boolean;
-    on?: {
-        [k in ParserEventEmitterEvent]?: IParserEventEmitterListener<any, ParserEventEmitterEvent>;
-    };
-    greedyTable?: boolean | number;
-    unsafe?: boolean;
-    /**
-     * allow set `CjkConv.zhTable.auto`
-     */
-    zhTable?: (char: string) => string[];
-} & IAstToStringOptions;
+import { isRegExp } from 'regexp-helper';
+import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
+export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
+export { IOptions, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore };
+export { IOptionsZhTable };
+/**
+ * @deprecated
+ */
 export declare const defaultOptions: IOptions;
 export declare class zhRegExp extends RegExp {
     source: string;
@@ -70,10 +55,10 @@ export declare class zhRegExp extends RegExp {
      * @alias $_
      */
     static readonly input: string;
-    constructor(str: string | RegExp, flags?: string, options?: IOptions | string, ...argv: any[]);
-    constructor(str: string | RegExp, options?: IOptions, ...argv: any[]);
-    static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptions | string): T;
-    static create<T = zhRegExp>(str: string | RegExp, options?: IOptions): T;
+    constructor(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv: any[]);
+    constructor(str: string | RegExp, options?: IOptionsInput, ...argv: any[]);
+    static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptionsInput | string): T;
+    static create<T = zhRegExp>(str: string | RegExp, options?: IOptionsInput): T;
     getStatic<T = typeof zhRegExp>(): T;
     /**
      * @todo
@@ -91,9 +76,8 @@ export declare class zhRegExp extends RegExp {
 export declare namespace zhRegExp {
     export import isRegExp = RegexpHelper.isRegExp;
 }
-export import parseRegularExpressionString = zhRegExp.parseRegularExpressionString;
-export import isRegExp = zhRegExp.isRegExp;
 export declare const create: typeof zhRegExp.create;
+export { isRegExp, parseRegularExpressionString };
 export interface IApi<T = zhRegExp> {
     (str: string | RegExp, flags?: string, options?: IOptions | string): T;
     (str: string | RegExp, options?: IOptions): T;
