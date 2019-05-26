@@ -15,7 +15,7 @@ export declare enum ParserEventEmitterEvent {
     class_uniset = "class_uniset",
     change = "change"
 }
-declare type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
+export declare type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
 export declare class ParserEventEmitter extends EventEmitter {
     astRegExpLiteral: AST.RegExpLiteral & INodePlus;
     constructor(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags);

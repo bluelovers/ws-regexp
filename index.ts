@@ -31,7 +31,7 @@ export enum ParserEventEmitterEvent
 	change = 'change',
 }
 
-type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
+export type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
 
 export class ParserEventEmitter extends EventEmitter
 {
