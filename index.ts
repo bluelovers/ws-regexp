@@ -12,6 +12,8 @@ import CjkConv from 'cjk-conv';
 import PackageJson = require('./package.json');
 import zhTable = require('cjk-conv/lib/zh/table/index');
 
+export { ParserEventEmitterEvent, IParserEventEmitterListener }
+
 export type IOptions = {
 	skip?: string,
 	disableZh?: boolean,
@@ -122,6 +124,7 @@ export class zhRegExp extends RegExp
 			if (str instanceof RegExp)
 			{
 				let ast = parseRegExp(str.toString());
+				// @ts-ignore
 				ev = new ParserEventEmitter(ast);
 			}
 			else
@@ -144,9 +147,14 @@ export class zhRegExp extends RegExp
 				ev.on(ParserEventEmitterEvent.default, function (ast)
 				{
 					ast.old_raw = ast.old_raw || ast.raw;
-					ast.raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn, options as IOptions);
 
-					ev.emit(ParserEventEmitterEvent.change, ast);
+					let raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn, options as IOptions);
+
+					if (ast.raw !== raw)
+					{
+						ast.raw = raw;
+						ev.emit(ParserEventEmitterEvent.change, ast);
+					}
 				});
 			}
 
@@ -168,27 +176,14 @@ export class zhRegExp extends RegExp
 						}
 
 						ast.old_raw = ast.old_raw || ast.raw;
-						ast.raw = ret;
 
-						ev.emit(ParserEventEmitterEvent.change, ast);
-					}
-
-					/*
-					for (let r of local_range)
-					{
-						let i = r.indexOf(s);
-						let j = r.indexOf(e, i);
-
-						if (i !== -1 && j !== -1)
+						if (ast.raw !== ret)
 						{
-							ast.old_raw = ast.old_raw || ast.raw;
-							ast.raw = r.slice(i, j + 1).join('');
+							ast.raw = ret;
 
 							ev.emit(ParserEventEmitterEvent.change, ast);
-							break;
 						}
 					}
-					*/
 				});
 			}
 
@@ -205,8 +200,6 @@ export class zhRegExp extends RegExp
 			}
 
 			ev.resume();
-
-			//options.sortClass = true;
 
 			str = ev.getSource(!!options.debugChanged
 				|| !options.noUniqueClass
@@ -233,53 +226,6 @@ export class zhRegExp extends RegExp
 		}
 
 		super(str, flags || '');
-
-		/*
-		if (options.parseRegularExpressionString && typeof str == 'string')
-		{
-			let m = zhRegExp.parseRegularExpressionString(str);
-			if (m)
-			{
-				str = new RegExp(m.source, m.flags);
-			}
-		}
-
-		let hasFlags = typeof flags == 'string';
-
-		let rs, f;
-
-		if (!options.disableZh)
-		{
-			[rs, f] = lib._word_zh(str, null, flags || str.flags);
-		}
-		else if (!options.disableLocalRange)
-		{
-			rs = lib.replace_literal(str, function (text: string)
-			{
-				return text;
-			});
-		}
-
-		let bool = (rs instanceof RegExp);
-
-		if (hasFlags)
-		{
-			f = flags;
-		}
-		else
-		{
-			f = f || flags || rs.flags || '';
-		}
-
-		if (!bool)
-		{
-			super(rs, f);
-		}
-		else
-		{
-			super(rs.source, f);
-		}
-		*/
 	}
 
 	static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptions | string): T

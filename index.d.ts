@@ -5,6 +5,7 @@ import { ParserEventEmitterEvent, IParserEventEmitterListener } from 'regexp-par
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import _support from 'regexp-support';
 import RegexpHelper = require('regexp-helper');
+export { ParserEventEmitterEvent, IParserEventEmitterListener };
 export declare type IOptions = {
     skip?: string;
     disableZh?: boolean;
