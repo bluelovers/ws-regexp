@@ -22,6 +22,10 @@ export declare class ParserEventEmitter extends EventEmitter {
     constructor(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags);
     static create(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags): ParserEventEmitter;
     resume(): this;
+    /**
+     * same as this.emit(ParserEventEmitterEvent.change, ast)
+     */
+    emitChange<T extends INodeInput>(inputAst: T & INodePlus, ...args: any[]): boolean;
     emit<T extends INodeInput>(eventName: ParserEventEmitterEvent, inputAst: T & INodePlus, ...args: any[]): boolean;
     on<E extends ParserEventEmitterEvent.default>(eventName: E, listener: IParserEventEmitterListener<AST.Character, E>): this;
     on<E extends ParserEventEmitterEvent.class>(eventName: E, listener: IParserEventEmitterListener<AST.CharacterClass, E>): this;

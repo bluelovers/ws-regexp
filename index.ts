@@ -95,6 +95,14 @@ export class ParserEventEmitter extends EventEmitter
 		return this;
 	}
 
+	/**
+	 * same as this.emit(ParserEventEmitterEvent.change, ast)
+	 */
+	emitChange<T extends INodeInput>(inputAst: T & INodePlus, ...args)
+	{
+		return this.emit(ParserEventEmitterEvent.change, inputAst, ...args)
+	}
+
 	emit<T extends INodeInput>(eventName: ParserEventEmitterEvent,
 		inputAst: T & INodePlus,
 		...args
