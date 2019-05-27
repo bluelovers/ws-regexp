@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -80,13 +80,14 @@
     "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run test",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\""
+    "test:local": "npx mocha --require ts-node/register \"!(node_modules)\\**\\*.+(test|spec).ts\"",
+    "test": "npm run test:local"
   },
   "dependencies": {
     "array-hyper-unique": "^1.0.7",
-    "cjk-conv": "^1.1.56",
+    "cjk-conv": "^1.1.57",
     "regexp-helper": "^1.0.8",
-    "regexp-parser-event": "^1.1.1",
+    "regexp-parser-event": "^1.1.2",
     "regexp-parser-literal": "^1.1.0",
     "regexp-range": "^1.0.7",
     "regexp-support": "^1.0.24"
