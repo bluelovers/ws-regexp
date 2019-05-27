@@ -4,7 +4,7 @@ import regexpp = require('regexpp2');
 import EventEmitter = require('events');
 import { INodePlus, IAstToStringOptions } from 'regexp-parser-literal';
 import { AppendableNode } from 'regexpp2/src/parser';
-export declare enum ParserEventEmitterEvent {
+export declare const enum ParserEventEmitterEvent {
     default = "default",
     class = "class",
     other = "other",
@@ -15,13 +15,14 @@ export declare enum ParserEventEmitterEvent {
     class_uniset = "class_uniset",
     change = "change"
 }
+export declare const ParserEventEmitterEventList: ParserEventEmitterEvent[];
 export declare type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
 export declare class ParserEventEmitter extends EventEmitter {
     astRegExpLiteral: AST.RegExpLiteral & INodePlus;
     constructor(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags);
     static create(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags): ParserEventEmitter;
     resume(): this;
-    emit<T extends INodeInput>(eventName: keyof typeof ParserEventEmitterEvent, inputAst: T & INodePlus, ...args: any[]): boolean;
+    emit<T extends INodeInput>(eventName: ParserEventEmitterEvent, inputAst: T & INodePlus, ...args: any[]): boolean;
     on<E extends ParserEventEmitterEvent.default>(eventName: E, listener: IParserEventEmitterListener<AST.Character, E>): this;
     on<E extends ParserEventEmitterEvent.class>(eventName: E, listener: IParserEventEmitterListener<AST.CharacterClass, E>): this;
     on<E extends ParserEventEmitterEvent.class_default>(eventName: E, listener: IParserEventEmitterListener<AST.Character, E>): this;
@@ -39,6 +40,6 @@ export declare class ParserEventEmitter extends EventEmitter {
     toRegExp<T extends RegExp>(RegExpClass?: typeof RegExp): RegExp;
 }
 export interface IParserEventEmitterListener<T extends INodeInput, E extends keyof typeof ParserEventEmitterEvent> {
-    (inputAst: T & INodePlus, eventName: E): any;
+    (inputAst: T & INodePlus, eventName: E, emitter: ParserEventEmitter, ...argv: unknown[]): any;
 }
 export default ParserEventEmitter;
