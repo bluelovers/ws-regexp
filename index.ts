@@ -147,7 +147,9 @@ export function _coreFn(raw: string, {
 	{
 		if (autoVoice)
 		{
-			arr.push(...getVoiceAll(raw))
+			let ret = getVoiceAll(raw);
+
+			ret && arr.push(...ret)
 		}
 
 		if (autoFullHaif)
