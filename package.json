@@ -1,0 +1,41 @@
+{
+  "name": "regexp-cjk-plugin-extra",
+  "version": "1.0.0",
+  "description": "a regexp-cjk plugin demo for regexp-cjk ( 自動配對 五十音的清/濁音  ,  半形/全形 ,  deburr )",
+  "keywords": [],
+  "homepage": "https://github.com/bluelovers/regexp-cjk-plugin-extra#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-cjk-plugin-extra/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-cjk-plugin-extra.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc npm run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run test",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "npx mocha \"!(node_modules)/**/*.+(test|spec).js\""
+  },
+  "dependencies": {
+    "array-hyper-unique": "^1.0.7",
+    "lodash.deburr": "^4.1.0",
+    "str-util": "^2.3.21",
+    "uni-string": "^1.1.2"
+  },
+  "devDependencies": {
+    "regexp-cjk": "^3.3.3",
+    "regexp-parser-event": "^1.1.3"
+  },
+  "peerDependencies": {
+    "cjk-conv": "^1.1.58"
+  }
+}
