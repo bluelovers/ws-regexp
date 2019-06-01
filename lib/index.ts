@@ -78,10 +78,7 @@ export function testFlag<T>(flag: string,
 	return false;
 }
 
-import * as self from './index';
 import { PatternTest } from './pattern';
-
-export default self;
 
 export function testFlagsAll(RegExpClass: typeof RegExp = RegExp, skipPatternCheck?: boolean): {
 	g: boolean,
@@ -172,3 +169,5 @@ export function createRegExp<T>(pattern: string, flag?: string, RegExpClass: ITy
 
 	return r;
 }
+
+export default exports as typeof import('./index');
