@@ -9,8 +9,6 @@ export { FlagsName };
 export declare function hasSupportFlag(flag: string, RegExpClass?: typeof RegExp, skipPatternCheck?: boolean): boolean;
 export declare function testFlag(flag: string, RegExpClass?: typeof RegExp, testPattern?: typeof FlagsPattern): boolean;
 export declare function testFlag(flag: string, RegExpClass?: ICreateRegExp, testPattern?: typeof FlagsPattern): boolean;
-import * as self from './index';
-export default self;
 export declare function testFlagsAll(RegExpClass?: typeof RegExp, skipPatternCheck?: boolean): {
     g: boolean;
     i: boolean;
@@ -36,3 +34,5 @@ export interface ICreateRegExp {
 }
 export declare type ITypeCreateRegExp<T> = T extends typeof RegExp ? typeof RegExp : T extends ICreateRegExp ? ICreateRegExp : any;
 export declare function createRegExp<T>(pattern: string, flag?: string, RegExpClass?: ITypeCreateRegExp<T>): RegExp;
+declare const _default: typeof import(".");
+export default _default;

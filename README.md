@@ -8,6 +8,8 @@
 npm install regexp-support
 ```
 
+[version test log](test/log)
+
 ## Api
 
 allow u check support on other RegExp base class
