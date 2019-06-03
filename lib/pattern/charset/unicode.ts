@@ -205,8 +205,11 @@ export const PatternTest: {
 
 	Punctuation: [
 //		['^\\p{Punctuation}+$', 'u', '!"#$%&\'()*+,-./:;<=>\?@\[\\\]^_`{|}~', true, 'test'],
+		['^[\\p{Punctuation}]+$', 'u', 'az', false, 'test'],
+		['^[\\p{Punctuation}]+$', 'u', '-', true, 'test'],
 		['^\\p{Punctuation}+$', 'u', 'az', false, 'test'],
 		['^\\p{Punctuation}+$', 'u', '-', true, 'test'],
+		['^[\\p{Punctuation}]+$', 'u', 'P', false, 'test'],
 	],
 
 	Dash_Punctuation: [

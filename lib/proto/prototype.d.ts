@@ -33,5 +33,3 @@ export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     readonly unicode?: boolean;
     readonly dotAll?: boolean;
 };
-declare const _default: typeof import("./prototype");
-export default _default;

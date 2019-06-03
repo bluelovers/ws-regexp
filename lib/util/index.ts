@@ -4,7 +4,7 @@
 
 import { ICreateRegExp, ITypeCreateRegExp } from '../index';
 import { testPattern } from '../pattern';
-import util = require('util');
+import * as util from 'util';
 
 //util.inspect.defaultOptions.colors = true;
 
@@ -22,12 +22,6 @@ export function log_dir(...argv)
 	}, []);
 
 	console.log(...argv);
-}
-
-export function require_default(file: string)
-{
-	let data = require(file);
-	return data.__esModule && data.default || data;
 }
 
 export interface IFnTestPattern<R>
@@ -53,5 +47,3 @@ export function _createFnTestPattern<R>(initTestPatterns: R): {
 		return testPattern(name, RegExpClass, testPatterns);
 	};
 }
-
-export default exports as typeof import('./index');

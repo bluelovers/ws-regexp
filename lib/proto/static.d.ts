@@ -127,5 +127,3 @@ export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     $10?: boolean;
     $100?: boolean;
 };
-declare const _default: typeof import("./static");
-export default _default;

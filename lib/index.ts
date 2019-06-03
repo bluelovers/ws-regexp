@@ -169,5 +169,3 @@ export function createRegExp<T>(pattern: string, flag?: string, RegExpClass: ITy
 
 	return r;
 }
-
-export default exports as typeof import('./index');

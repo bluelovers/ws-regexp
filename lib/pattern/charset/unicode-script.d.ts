@@ -297,6 +297,13 @@ export declare const UNICODE_SCRIPTS_ALL: {
     "Yiii": boolean;
     "Zanabazar_Square": boolean;
     "Zanb": boolean;
+    "Dogra": boolean;
+    "Gunjala_Gondi": boolean;
+    "Hanifi_Rohingya": boolean;
+    "Makasar": boolean;
+    "Medefaidrin": boolean;
+    "Old_Sogdian": boolean;
+    "Sogdian": boolean;
 };
 export declare enum UNICODE_SCRIPTS_NAME_ALIAS {
     Arabic = "Arab",
@@ -596,6 +603,13 @@ export declare const _testUnicodeScript: {
         "Yiii"?: IPatternTestRow[];
         "Zanabazar_Square"?: IPatternTestRow[];
         "Zanb"?: IPatternTestRow[];
+        "Dogra"?: IPatternTestRow[];
+        "Gunjala_Gondi"?: IPatternTestRow[];
+        "Hanifi_Rohingya"?: IPatternTestRow[];
+        "Makasar"?: IPatternTestRow[];
+        "Medefaidrin"?: IPatternTestRow[];
+        "Old_Sogdian"?: IPatternTestRow[];
+        "Sogdian"?: IPatternTestRow[];
     }): boolean;
     (name: string, RegExpClass?: ICreateRegExp, testPatterns?: {
         Greek?: IPatternTestRow[];
@@ -876,6 +890,13 @@ export declare const _testUnicodeScript: {
         "Yiii"?: IPatternTestRow[];
         "Zanabazar_Square"?: IPatternTestRow[];
         "Zanb"?: IPatternTestRow[];
+        "Dogra"?: IPatternTestRow[];
+        "Gunjala_Gondi"?: IPatternTestRow[];
+        "Hanifi_Rohingya"?: IPatternTestRow[];
+        "Makasar"?: IPatternTestRow[];
+        "Medefaidrin"?: IPatternTestRow[];
+        "Old_Sogdian"?: IPatternTestRow[];
+        "Sogdian"?: IPatternTestRow[];
     }): boolean;
     <T>(name: string, RegExpClass?: ITypeCreateRegExp<T>, testPatterns?: {
         Greek?: IPatternTestRow[];
@@ -1156,6 +1177,13 @@ export declare const _testUnicodeScript: {
         "Yiii"?: IPatternTestRow[];
         "Zanabazar_Square"?: IPatternTestRow[];
         "Zanb"?: IPatternTestRow[];
+        "Dogra"?: IPatternTestRow[];
+        "Gunjala_Gondi"?: IPatternTestRow[];
+        "Hanifi_Rohingya"?: IPatternTestRow[];
+        "Makasar"?: IPatternTestRow[];
+        "Medefaidrin"?: IPatternTestRow[];
+        "Old_Sogdian"?: IPatternTestRow[];
+        "Sogdian"?: IPatternTestRow[];
     }): boolean;
 };
 export declare function testUnicodeScript<T>(name: string, RegExpClass?: ITypeCreateRegExp<T>, testPatterns?: typeof PatternTest): boolean;
@@ -1438,6 +1466,13 @@ export declare function testUnicodeScriptAll<T>(RegExpClass?: ITypeCreateRegExp<
     "Yiii"?: IPatternTestRow[];
     "Zanabazar_Square"?: IPatternTestRow[];
     "Zanb"?: IPatternTestRow[];
+    "Dogra"?: IPatternTestRow[];
+    "Gunjala_Gondi"?: IPatternTestRow[];
+    "Hanifi_Rohingya"?: IPatternTestRow[];
+    "Makasar"?: IPatternTestRow[];
+    "Medefaidrin"?: IPatternTestRow[];
+    "Old_Sogdian"?: IPatternTestRow[];
+    "Sogdian"?: IPatternTestRow[];
 }): {
     Greek: boolean;
     Latin: boolean;
@@ -1717,7 +1752,12 @@ export declare function testUnicodeScriptAll<T>(RegExpClass?: ITypeCreateRegExp<
     "Yiii": boolean;
     "Zanabazar_Square": boolean;
     "Zanb": boolean;
+    "Dogra": boolean;
+    "Gunjala_Gondi": boolean;
+    "Hanifi_Rohingya": boolean;
+    "Makasar": boolean;
+    "Medefaidrin": boolean;
+    "Old_Sogdian": boolean;
+    "Sogdian": boolean;
 };
 export declare function wrapToRegexName(name: string, negation?: boolean): string;
-declare const _default: typeof import("./unicode-script");
-export default _default;

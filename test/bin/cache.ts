@@ -1,9 +1,3 @@
-import { require_default } from '../../lib/util/index';
-
-/**
- * Created by user on 2018/5/6/006.
- */
-
 import * as path from 'path';
 import * as globby from 'globby';
 import * as fs from 'fs-extra';
@@ -16,10 +10,10 @@ export const XREGEXP_PATH = path.dirname(require.resolve('xregexp/package.json')
 
 export const XREGEXP_PATH_DATA = path.join(XREGEXP_PATH, 'tools/output') as string;
 
-const PropertyData = require_default(REGEXPP_PATH_DATA).PropertyData;
-
 (async () =>
 {
+
+	const PropertyData = await import(REGEXPP_PATH_DATA).then(v => v.default);
 
 	let output = [];
 	let def = [
@@ -69,7 +63,7 @@ globby([
 		{
 			let name = path.parse(value).name;
 
-			let data = getData(name);
+			let data = await getData(name);
 
 			let aa = {};
 
@@ -105,5 +99,5 @@ export function getData(name: string)
 {
 	let file = path.join(XREGEXP_PATH_DATA, name);
 
-	return require_default(file);
+	return import(file);
 }

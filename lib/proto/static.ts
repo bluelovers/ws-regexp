@@ -178,5 +178,3 @@ export function testStatic<T>(RegExpClass: ITypeCreateRegExp<T> = RegExp)
 		}, {} as typeof REGEXP_STATIC)
 		;
 }
-
-export default exports as typeof import('./static');

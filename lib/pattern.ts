@@ -204,5 +204,3 @@ export interface IPatternTestRow
 	3: boolean | any,
 	4?: string | IPatternTestFn,
 }
-
-export default exports as typeof import('./pattern');

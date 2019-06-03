@@ -47,4 +47,4 @@ export function testPOXIX<T>(name: string, RegExpClass: ITypeCreateRegExp<T> = R
 	return testPattern(name, RegExpClass, testPatterns);
 }
 
-export default exports as typeof import('./posix');
+export default POXIX;

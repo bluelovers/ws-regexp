@@ -72,6 +72,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InCham": boolean;
     "InCherokee": boolean;
     "InCherokee_Supplement": boolean;
+    "InChess_Symbols": boolean;
     "InCombining_Diacritical_Marks": boolean;
     "InCombining_Diacritical_Marks_Extended": boolean;
     "InCombining_Diacritical_Marks_For_Symbols": boolean;
@@ -95,6 +96,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InDevanagari": boolean;
     "InDevanagari_Extended": boolean;
     "InDingbats": boolean;
+    "InDogra": boolean;
     "InDomino_Tiles": boolean;
     "InDuployan": boolean;
     "InEarly_Dynastic_Cuneiform": boolean;
@@ -113,6 +115,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InGeometric_Shapes": boolean;
     "InGeometric_Shapes_Extended": boolean;
     "InGeorgian": boolean;
+    "InGeorgian_Extended": boolean;
     "InGeorgian_Supplement": boolean;
     "InGlagolitic": boolean;
     "InGlagolitic_Supplement": boolean;
@@ -121,6 +124,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InGreek_And_Coptic": boolean;
     "InGreek_Extended": boolean;
     "InGujarati": boolean;
+    "InGunjala_Gondi": boolean;
     "InGurmukhi": boolean;
     "InHalfwidth_And_Fullwidth_Forms": boolean;
     "InHangul_Compatibility_Jamo": boolean;
@@ -128,6 +132,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InHangul_Jamo_Extended_A": boolean;
     "InHangul_Jamo_Extended_B": boolean;
     "InHangul_Syllables": boolean;
+    "InHanifi_Rohingya": boolean;
     "InHanunoo": boolean;
     "InHatran": boolean;
     "InHebrew": boolean;
@@ -138,6 +143,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InIdeographic_Description_Characters": boolean;
     "InIdeographic_Symbols_And_Punctuation": boolean;
     "InImperial_Aramaic": boolean;
+    "InIndic_Siyaq_Numbers": boolean;
     "InInscriptional_Pahlavi": boolean;
     "InInscriptional_Parthian": boolean;
     "InJavanese": boolean;
@@ -175,6 +181,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InLydian": boolean;
     "InMahajani": boolean;
     "InMahjong_Tiles": boolean;
+    "InMakasar": boolean;
     "InMalayalam": boolean;
     "InMandaic": boolean;
     "InManichaean": boolean;
@@ -182,6 +189,8 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InMasaram_Gondi": boolean;
     "InMathematical_Alphanumeric_Symbols": boolean;
     "InMathematical_Operators": boolean;
+    "InMayan_Numerals": boolean;
+    "InMedefaidrin": boolean;
     "InMeetei_Mayek": boolean;
     "InMeetei_Mayek_Extensions": boolean;
     "InMende_Kikakui": boolean;
@@ -217,6 +226,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InOld_North_Arabian": boolean;
     "InOld_Permic": boolean;
     "InOld_Persian": boolean;
+    "InOld_Sogdian": boolean;
     "InOld_South_Arabian": boolean;
     "InOld_Turkic": boolean;
     "InOptical_Character_Recognition": boolean;
@@ -247,6 +257,7 @@ export declare const UNICODE_BLOCKS_ALL: {
     "InSinhala": boolean;
     "InSinhala_Archaic_Numbers": boolean;
     "InSmall_Form_Variants": boolean;
+    "InSogdian": boolean;
     "InSora_Sompeng": boolean;
     "InSoyombo": boolean;
     "InSpacing_Modifier_Letters": boolean;
@@ -358,6 +369,7 @@ export declare const testUnicodeBlocks: {
         "InCham"?: IPatternTestRow[];
         "InCherokee"?: IPatternTestRow[];
         "InCherokee_Supplement"?: IPatternTestRow[];
+        "InChess_Symbols"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks_Extended"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks_For_Symbols"?: IPatternTestRow[];
@@ -381,6 +393,7 @@ export declare const testUnicodeBlocks: {
         "InDevanagari"?: IPatternTestRow[];
         "InDevanagari_Extended"?: IPatternTestRow[];
         "InDingbats"?: IPatternTestRow[];
+        "InDogra"?: IPatternTestRow[];
         "InDomino_Tiles"?: IPatternTestRow[];
         "InDuployan"?: IPatternTestRow[];
         "InEarly_Dynastic_Cuneiform"?: IPatternTestRow[];
@@ -399,6 +412,7 @@ export declare const testUnicodeBlocks: {
         "InGeometric_Shapes"?: IPatternTestRow[];
         "InGeometric_Shapes_Extended"?: IPatternTestRow[];
         "InGeorgian"?: IPatternTestRow[];
+        "InGeorgian_Extended"?: IPatternTestRow[];
         "InGeorgian_Supplement"?: IPatternTestRow[];
         "InGlagolitic"?: IPatternTestRow[];
         "InGlagolitic_Supplement"?: IPatternTestRow[];
@@ -407,6 +421,7 @@ export declare const testUnicodeBlocks: {
         "InGreek_And_Coptic"?: IPatternTestRow[];
         "InGreek_Extended"?: IPatternTestRow[];
         "InGujarati"?: IPatternTestRow[];
+        "InGunjala_Gondi"?: IPatternTestRow[];
         "InGurmukhi"?: IPatternTestRow[];
         "InHalfwidth_And_Fullwidth_Forms"?: IPatternTestRow[];
         "InHangul_Compatibility_Jamo"?: IPatternTestRow[];
@@ -414,6 +429,7 @@ export declare const testUnicodeBlocks: {
         "InHangul_Jamo_Extended_A"?: IPatternTestRow[];
         "InHangul_Jamo_Extended_B"?: IPatternTestRow[];
         "InHangul_Syllables"?: IPatternTestRow[];
+        "InHanifi_Rohingya"?: IPatternTestRow[];
         "InHanunoo"?: IPatternTestRow[];
         "InHatran"?: IPatternTestRow[];
         "InHebrew"?: IPatternTestRow[];
@@ -424,6 +440,7 @@ export declare const testUnicodeBlocks: {
         "InIdeographic_Description_Characters"?: IPatternTestRow[];
         "InIdeographic_Symbols_And_Punctuation"?: IPatternTestRow[];
         "InImperial_Aramaic"?: IPatternTestRow[];
+        "InIndic_Siyaq_Numbers"?: IPatternTestRow[];
         "InInscriptional_Pahlavi"?: IPatternTestRow[];
         "InInscriptional_Parthian"?: IPatternTestRow[];
         "InJavanese"?: IPatternTestRow[];
@@ -461,6 +478,7 @@ export declare const testUnicodeBlocks: {
         "InLydian"?: IPatternTestRow[];
         "InMahajani"?: IPatternTestRow[];
         "InMahjong_Tiles"?: IPatternTestRow[];
+        "InMakasar"?: IPatternTestRow[];
         "InMalayalam"?: IPatternTestRow[];
         "InMandaic"?: IPatternTestRow[];
         "InManichaean"?: IPatternTestRow[];
@@ -468,6 +486,8 @@ export declare const testUnicodeBlocks: {
         "InMasaram_Gondi"?: IPatternTestRow[];
         "InMathematical_Alphanumeric_Symbols"?: IPatternTestRow[];
         "InMathematical_Operators"?: IPatternTestRow[];
+        "InMayan_Numerals"?: IPatternTestRow[];
+        "InMedefaidrin"?: IPatternTestRow[];
         "InMeetei_Mayek"?: IPatternTestRow[];
         "InMeetei_Mayek_Extensions"?: IPatternTestRow[];
         "InMende_Kikakui"?: IPatternTestRow[];
@@ -503,6 +523,7 @@ export declare const testUnicodeBlocks: {
         "InOld_North_Arabian"?: IPatternTestRow[];
         "InOld_Permic"?: IPatternTestRow[];
         "InOld_Persian"?: IPatternTestRow[];
+        "InOld_Sogdian"?: IPatternTestRow[];
         "InOld_South_Arabian"?: IPatternTestRow[];
         "InOld_Turkic"?: IPatternTestRow[];
         "InOptical_Character_Recognition"?: IPatternTestRow[];
@@ -533,6 +554,7 @@ export declare const testUnicodeBlocks: {
         "InSinhala"?: IPatternTestRow[];
         "InSinhala_Archaic_Numbers"?: IPatternTestRow[];
         "InSmall_Form_Variants"?: IPatternTestRow[];
+        "InSogdian"?: IPatternTestRow[];
         "InSora_Sompeng"?: IPatternTestRow[];
         "InSoyombo"?: IPatternTestRow[];
         "InSpacing_Modifier_Letters"?: IPatternTestRow[];
@@ -640,6 +662,7 @@ export declare const testUnicodeBlocks: {
         "InCham"?: IPatternTestRow[];
         "InCherokee"?: IPatternTestRow[];
         "InCherokee_Supplement"?: IPatternTestRow[];
+        "InChess_Symbols"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks_Extended"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks_For_Symbols"?: IPatternTestRow[];
@@ -663,6 +686,7 @@ export declare const testUnicodeBlocks: {
         "InDevanagari"?: IPatternTestRow[];
         "InDevanagari_Extended"?: IPatternTestRow[];
         "InDingbats"?: IPatternTestRow[];
+        "InDogra"?: IPatternTestRow[];
         "InDomino_Tiles"?: IPatternTestRow[];
         "InDuployan"?: IPatternTestRow[];
         "InEarly_Dynastic_Cuneiform"?: IPatternTestRow[];
@@ -681,6 +705,7 @@ export declare const testUnicodeBlocks: {
         "InGeometric_Shapes"?: IPatternTestRow[];
         "InGeometric_Shapes_Extended"?: IPatternTestRow[];
         "InGeorgian"?: IPatternTestRow[];
+        "InGeorgian_Extended"?: IPatternTestRow[];
         "InGeorgian_Supplement"?: IPatternTestRow[];
         "InGlagolitic"?: IPatternTestRow[];
         "InGlagolitic_Supplement"?: IPatternTestRow[];
@@ -689,6 +714,7 @@ export declare const testUnicodeBlocks: {
         "InGreek_And_Coptic"?: IPatternTestRow[];
         "InGreek_Extended"?: IPatternTestRow[];
         "InGujarati"?: IPatternTestRow[];
+        "InGunjala_Gondi"?: IPatternTestRow[];
         "InGurmukhi"?: IPatternTestRow[];
         "InHalfwidth_And_Fullwidth_Forms"?: IPatternTestRow[];
         "InHangul_Compatibility_Jamo"?: IPatternTestRow[];
@@ -696,6 +722,7 @@ export declare const testUnicodeBlocks: {
         "InHangul_Jamo_Extended_A"?: IPatternTestRow[];
         "InHangul_Jamo_Extended_B"?: IPatternTestRow[];
         "InHangul_Syllables"?: IPatternTestRow[];
+        "InHanifi_Rohingya"?: IPatternTestRow[];
         "InHanunoo"?: IPatternTestRow[];
         "InHatran"?: IPatternTestRow[];
         "InHebrew"?: IPatternTestRow[];
@@ -706,6 +733,7 @@ export declare const testUnicodeBlocks: {
         "InIdeographic_Description_Characters"?: IPatternTestRow[];
         "InIdeographic_Symbols_And_Punctuation"?: IPatternTestRow[];
         "InImperial_Aramaic"?: IPatternTestRow[];
+        "InIndic_Siyaq_Numbers"?: IPatternTestRow[];
         "InInscriptional_Pahlavi"?: IPatternTestRow[];
         "InInscriptional_Parthian"?: IPatternTestRow[];
         "InJavanese"?: IPatternTestRow[];
@@ -743,6 +771,7 @@ export declare const testUnicodeBlocks: {
         "InLydian"?: IPatternTestRow[];
         "InMahajani"?: IPatternTestRow[];
         "InMahjong_Tiles"?: IPatternTestRow[];
+        "InMakasar"?: IPatternTestRow[];
         "InMalayalam"?: IPatternTestRow[];
         "InMandaic"?: IPatternTestRow[];
         "InManichaean"?: IPatternTestRow[];
@@ -750,6 +779,8 @@ export declare const testUnicodeBlocks: {
         "InMasaram_Gondi"?: IPatternTestRow[];
         "InMathematical_Alphanumeric_Symbols"?: IPatternTestRow[];
         "InMathematical_Operators"?: IPatternTestRow[];
+        "InMayan_Numerals"?: IPatternTestRow[];
+        "InMedefaidrin"?: IPatternTestRow[];
         "InMeetei_Mayek"?: IPatternTestRow[];
         "InMeetei_Mayek_Extensions"?: IPatternTestRow[];
         "InMende_Kikakui"?: IPatternTestRow[];
@@ -785,6 +816,7 @@ export declare const testUnicodeBlocks: {
         "InOld_North_Arabian"?: IPatternTestRow[];
         "InOld_Permic"?: IPatternTestRow[];
         "InOld_Persian"?: IPatternTestRow[];
+        "InOld_Sogdian"?: IPatternTestRow[];
         "InOld_South_Arabian"?: IPatternTestRow[];
         "InOld_Turkic"?: IPatternTestRow[];
         "InOptical_Character_Recognition"?: IPatternTestRow[];
@@ -815,6 +847,7 @@ export declare const testUnicodeBlocks: {
         "InSinhala"?: IPatternTestRow[];
         "InSinhala_Archaic_Numbers"?: IPatternTestRow[];
         "InSmall_Form_Variants"?: IPatternTestRow[];
+        "InSogdian"?: IPatternTestRow[];
         "InSora_Sompeng"?: IPatternTestRow[];
         "InSoyombo"?: IPatternTestRow[];
         "InSpacing_Modifier_Letters"?: IPatternTestRow[];
@@ -922,6 +955,7 @@ export declare const testUnicodeBlocks: {
         "InCham"?: IPatternTestRow[];
         "InCherokee"?: IPatternTestRow[];
         "InCherokee_Supplement"?: IPatternTestRow[];
+        "InChess_Symbols"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks_Extended"?: IPatternTestRow[];
         "InCombining_Diacritical_Marks_For_Symbols"?: IPatternTestRow[];
@@ -945,6 +979,7 @@ export declare const testUnicodeBlocks: {
         "InDevanagari"?: IPatternTestRow[];
         "InDevanagari_Extended"?: IPatternTestRow[];
         "InDingbats"?: IPatternTestRow[];
+        "InDogra"?: IPatternTestRow[];
         "InDomino_Tiles"?: IPatternTestRow[];
         "InDuployan"?: IPatternTestRow[];
         "InEarly_Dynastic_Cuneiform"?: IPatternTestRow[];
@@ -963,6 +998,7 @@ export declare const testUnicodeBlocks: {
         "InGeometric_Shapes"?: IPatternTestRow[];
         "InGeometric_Shapes_Extended"?: IPatternTestRow[];
         "InGeorgian"?: IPatternTestRow[];
+        "InGeorgian_Extended"?: IPatternTestRow[];
         "InGeorgian_Supplement"?: IPatternTestRow[];
         "InGlagolitic"?: IPatternTestRow[];
         "InGlagolitic_Supplement"?: IPatternTestRow[];
@@ -971,6 +1007,7 @@ export declare const testUnicodeBlocks: {
         "InGreek_And_Coptic"?: IPatternTestRow[];
         "InGreek_Extended"?: IPatternTestRow[];
         "InGujarati"?: IPatternTestRow[];
+        "InGunjala_Gondi"?: IPatternTestRow[];
         "InGurmukhi"?: IPatternTestRow[];
         "InHalfwidth_And_Fullwidth_Forms"?: IPatternTestRow[];
         "InHangul_Compatibility_Jamo"?: IPatternTestRow[];
@@ -978,6 +1015,7 @@ export declare const testUnicodeBlocks: {
         "InHangul_Jamo_Extended_A"?: IPatternTestRow[];
         "InHangul_Jamo_Extended_B"?: IPatternTestRow[];
         "InHangul_Syllables"?: IPatternTestRow[];
+        "InHanifi_Rohingya"?: IPatternTestRow[];
         "InHanunoo"?: IPatternTestRow[];
         "InHatran"?: IPatternTestRow[];
         "InHebrew"?: IPatternTestRow[];
@@ -988,6 +1026,7 @@ export declare const testUnicodeBlocks: {
         "InIdeographic_Description_Characters"?: IPatternTestRow[];
         "InIdeographic_Symbols_And_Punctuation"?: IPatternTestRow[];
         "InImperial_Aramaic"?: IPatternTestRow[];
+        "InIndic_Siyaq_Numbers"?: IPatternTestRow[];
         "InInscriptional_Pahlavi"?: IPatternTestRow[];
         "InInscriptional_Parthian"?: IPatternTestRow[];
         "InJavanese"?: IPatternTestRow[];
@@ -1025,6 +1064,7 @@ export declare const testUnicodeBlocks: {
         "InLydian"?: IPatternTestRow[];
         "InMahajani"?: IPatternTestRow[];
         "InMahjong_Tiles"?: IPatternTestRow[];
+        "InMakasar"?: IPatternTestRow[];
         "InMalayalam"?: IPatternTestRow[];
         "InMandaic"?: IPatternTestRow[];
         "InManichaean"?: IPatternTestRow[];
@@ -1032,6 +1072,8 @@ export declare const testUnicodeBlocks: {
         "InMasaram_Gondi"?: IPatternTestRow[];
         "InMathematical_Alphanumeric_Symbols"?: IPatternTestRow[];
         "InMathematical_Operators"?: IPatternTestRow[];
+        "InMayan_Numerals"?: IPatternTestRow[];
+        "InMedefaidrin"?: IPatternTestRow[];
         "InMeetei_Mayek"?: IPatternTestRow[];
         "InMeetei_Mayek_Extensions"?: IPatternTestRow[];
         "InMende_Kikakui"?: IPatternTestRow[];
@@ -1067,6 +1109,7 @@ export declare const testUnicodeBlocks: {
         "InOld_North_Arabian"?: IPatternTestRow[];
         "InOld_Permic"?: IPatternTestRow[];
         "InOld_Persian"?: IPatternTestRow[];
+        "InOld_Sogdian"?: IPatternTestRow[];
         "InOld_South_Arabian"?: IPatternTestRow[];
         "InOld_Turkic"?: IPatternTestRow[];
         "InOptical_Character_Recognition"?: IPatternTestRow[];
@@ -1097,6 +1140,7 @@ export declare const testUnicodeBlocks: {
         "InSinhala"?: IPatternTestRow[];
         "InSinhala_Archaic_Numbers"?: IPatternTestRow[];
         "InSmall_Form_Variants"?: IPatternTestRow[];
+        "InSogdian"?: IPatternTestRow[];
         "InSora_Sompeng"?: IPatternTestRow[];
         "InSoyombo"?: IPatternTestRow[];
         "InSpacing_Modifier_Letters"?: IPatternTestRow[];
@@ -1205,6 +1249,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InCham"?: IPatternTestRow[];
     "InCherokee"?: IPatternTestRow[];
     "InCherokee_Supplement"?: IPatternTestRow[];
+    "InChess_Symbols"?: IPatternTestRow[];
     "InCombining_Diacritical_Marks"?: IPatternTestRow[];
     "InCombining_Diacritical_Marks_Extended"?: IPatternTestRow[];
     "InCombining_Diacritical_Marks_For_Symbols"?: IPatternTestRow[];
@@ -1228,6 +1273,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InDevanagari"?: IPatternTestRow[];
     "InDevanagari_Extended"?: IPatternTestRow[];
     "InDingbats"?: IPatternTestRow[];
+    "InDogra"?: IPatternTestRow[];
     "InDomino_Tiles"?: IPatternTestRow[];
     "InDuployan"?: IPatternTestRow[];
     "InEarly_Dynastic_Cuneiform"?: IPatternTestRow[];
@@ -1246,6 +1292,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InGeometric_Shapes"?: IPatternTestRow[];
     "InGeometric_Shapes_Extended"?: IPatternTestRow[];
     "InGeorgian"?: IPatternTestRow[];
+    "InGeorgian_Extended"?: IPatternTestRow[];
     "InGeorgian_Supplement"?: IPatternTestRow[];
     "InGlagolitic"?: IPatternTestRow[];
     "InGlagolitic_Supplement"?: IPatternTestRow[];
@@ -1254,6 +1301,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InGreek_And_Coptic"?: IPatternTestRow[];
     "InGreek_Extended"?: IPatternTestRow[];
     "InGujarati"?: IPatternTestRow[];
+    "InGunjala_Gondi"?: IPatternTestRow[];
     "InGurmukhi"?: IPatternTestRow[];
     "InHalfwidth_And_Fullwidth_Forms"?: IPatternTestRow[];
     "InHangul_Compatibility_Jamo"?: IPatternTestRow[];
@@ -1261,6 +1309,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InHangul_Jamo_Extended_A"?: IPatternTestRow[];
     "InHangul_Jamo_Extended_B"?: IPatternTestRow[];
     "InHangul_Syllables"?: IPatternTestRow[];
+    "InHanifi_Rohingya"?: IPatternTestRow[];
     "InHanunoo"?: IPatternTestRow[];
     "InHatran"?: IPatternTestRow[];
     "InHebrew"?: IPatternTestRow[];
@@ -1271,6 +1320,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InIdeographic_Description_Characters"?: IPatternTestRow[];
     "InIdeographic_Symbols_And_Punctuation"?: IPatternTestRow[];
     "InImperial_Aramaic"?: IPatternTestRow[];
+    "InIndic_Siyaq_Numbers"?: IPatternTestRow[];
     "InInscriptional_Pahlavi"?: IPatternTestRow[];
     "InInscriptional_Parthian"?: IPatternTestRow[];
     "InJavanese"?: IPatternTestRow[];
@@ -1308,6 +1358,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InLydian"?: IPatternTestRow[];
     "InMahajani"?: IPatternTestRow[];
     "InMahjong_Tiles"?: IPatternTestRow[];
+    "InMakasar"?: IPatternTestRow[];
     "InMalayalam"?: IPatternTestRow[];
     "InMandaic"?: IPatternTestRow[];
     "InManichaean"?: IPatternTestRow[];
@@ -1315,6 +1366,8 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InMasaram_Gondi"?: IPatternTestRow[];
     "InMathematical_Alphanumeric_Symbols"?: IPatternTestRow[];
     "InMathematical_Operators"?: IPatternTestRow[];
+    "InMayan_Numerals"?: IPatternTestRow[];
+    "InMedefaidrin"?: IPatternTestRow[];
     "InMeetei_Mayek"?: IPatternTestRow[];
     "InMeetei_Mayek_Extensions"?: IPatternTestRow[];
     "InMende_Kikakui"?: IPatternTestRow[];
@@ -1350,6 +1403,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InOld_North_Arabian"?: IPatternTestRow[];
     "InOld_Permic"?: IPatternTestRow[];
     "InOld_Persian"?: IPatternTestRow[];
+    "InOld_Sogdian"?: IPatternTestRow[];
     "InOld_South_Arabian"?: IPatternTestRow[];
     "InOld_Turkic"?: IPatternTestRow[];
     "InOptical_Character_Recognition"?: IPatternTestRow[];
@@ -1380,6 +1434,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InSinhala"?: IPatternTestRow[];
     "InSinhala_Archaic_Numbers"?: IPatternTestRow[];
     "InSmall_Form_Variants"?: IPatternTestRow[];
+    "InSogdian"?: IPatternTestRow[];
     "InSora_Sompeng"?: IPatternTestRow[];
     "InSoyombo"?: IPatternTestRow[];
     "InSpacing_Modifier_Letters"?: IPatternTestRow[];
@@ -1489,6 +1544,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InCham": boolean;
     "InCherokee": boolean;
     "InCherokee_Supplement": boolean;
+    "InChess_Symbols": boolean;
     "InCombining_Diacritical_Marks": boolean;
     "InCombining_Diacritical_Marks_Extended": boolean;
     "InCombining_Diacritical_Marks_For_Symbols": boolean;
@@ -1512,6 +1568,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InDevanagari": boolean;
     "InDevanagari_Extended": boolean;
     "InDingbats": boolean;
+    "InDogra": boolean;
     "InDomino_Tiles": boolean;
     "InDuployan": boolean;
     "InEarly_Dynastic_Cuneiform": boolean;
@@ -1530,6 +1587,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InGeometric_Shapes": boolean;
     "InGeometric_Shapes_Extended": boolean;
     "InGeorgian": boolean;
+    "InGeorgian_Extended": boolean;
     "InGeorgian_Supplement": boolean;
     "InGlagolitic": boolean;
     "InGlagolitic_Supplement": boolean;
@@ -1538,6 +1596,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InGreek_And_Coptic": boolean;
     "InGreek_Extended": boolean;
     "InGujarati": boolean;
+    "InGunjala_Gondi": boolean;
     "InGurmukhi": boolean;
     "InHalfwidth_And_Fullwidth_Forms": boolean;
     "InHangul_Compatibility_Jamo": boolean;
@@ -1545,6 +1604,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InHangul_Jamo_Extended_A": boolean;
     "InHangul_Jamo_Extended_B": boolean;
     "InHangul_Syllables": boolean;
+    "InHanifi_Rohingya": boolean;
     "InHanunoo": boolean;
     "InHatran": boolean;
     "InHebrew": boolean;
@@ -1555,6 +1615,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InIdeographic_Description_Characters": boolean;
     "InIdeographic_Symbols_And_Punctuation": boolean;
     "InImperial_Aramaic": boolean;
+    "InIndic_Siyaq_Numbers": boolean;
     "InInscriptional_Pahlavi": boolean;
     "InInscriptional_Parthian": boolean;
     "InJavanese": boolean;
@@ -1592,6 +1653,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InLydian": boolean;
     "InMahajani": boolean;
     "InMahjong_Tiles": boolean;
+    "InMakasar": boolean;
     "InMalayalam": boolean;
     "InMandaic": boolean;
     "InManichaean": boolean;
@@ -1599,6 +1661,8 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InMasaram_Gondi": boolean;
     "InMathematical_Alphanumeric_Symbols": boolean;
     "InMathematical_Operators": boolean;
+    "InMayan_Numerals": boolean;
+    "InMedefaidrin": boolean;
     "InMeetei_Mayek": boolean;
     "InMeetei_Mayek_Extensions": boolean;
     "InMende_Kikakui": boolean;
@@ -1634,6 +1698,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InOld_North_Arabian": boolean;
     "InOld_Permic": boolean;
     "InOld_Persian": boolean;
+    "InOld_Sogdian": boolean;
     "InOld_South_Arabian": boolean;
     "InOld_Turkic": boolean;
     "InOptical_Character_Recognition": boolean;
@@ -1664,6 +1729,7 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InSinhala": boolean;
     "InSinhala_Archaic_Numbers": boolean;
     "InSmall_Form_Variants": boolean;
+    "InSogdian": boolean;
     "InSora_Sompeng": boolean;
     "InSoyombo": boolean;
     "InSpacing_Modifier_Letters": boolean;
@@ -1716,5 +1782,3 @@ export declare function testUnicodeBlocksAll<T>(RegExpClass?: ITypeCreateRegExp<
     "InZanabazar_Square": boolean;
 };
 export declare function wrapToRegexName(name: string, negation?: boolean): string;
-declare const _default: typeof import("./unicode-script");
-export default _default;

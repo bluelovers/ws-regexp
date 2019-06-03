@@ -16,5 +16,3 @@ export declare function testSymbol<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     search: boolean;
     split: boolean;
 };
-declare const _default: typeof import("./symbol");
-export default _default;

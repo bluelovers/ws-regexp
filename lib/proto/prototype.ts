@@ -52,5 +52,3 @@ export function testPrototype<T>(RegExpClass: ITypeCreateRegExp<T> = RegExp)
 		}, {} as typeof PROTOTYPE)
 	;
 }
-
-export default exports as typeof import('./prototype');

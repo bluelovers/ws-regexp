@@ -54,6 +54,7 @@ declare const _default: {
     "InCham": boolean;
     "InCherokee": boolean;
     "InCherokee_Supplement": boolean;
+    "InChess_Symbols": boolean;
     "InCombining_Diacritical_Marks": boolean;
     "InCombining_Diacritical_Marks_Extended": boolean;
     "InCombining_Diacritical_Marks_For_Symbols": boolean;
@@ -77,6 +78,7 @@ declare const _default: {
     "InDevanagari": boolean;
     "InDevanagari_Extended": boolean;
     "InDingbats": boolean;
+    "InDogra": boolean;
     "InDomino_Tiles": boolean;
     "InDuployan": boolean;
     "InEarly_Dynastic_Cuneiform": boolean;
@@ -95,6 +97,7 @@ declare const _default: {
     "InGeometric_Shapes": boolean;
     "InGeometric_Shapes_Extended": boolean;
     "InGeorgian": boolean;
+    "InGeorgian_Extended": boolean;
     "InGeorgian_Supplement": boolean;
     "InGlagolitic": boolean;
     "InGlagolitic_Supplement": boolean;
@@ -103,6 +106,7 @@ declare const _default: {
     "InGreek_And_Coptic": boolean;
     "InGreek_Extended": boolean;
     "InGujarati": boolean;
+    "InGunjala_Gondi": boolean;
     "InGurmukhi": boolean;
     "InHalfwidth_And_Fullwidth_Forms": boolean;
     "InHangul_Compatibility_Jamo": boolean;
@@ -110,6 +114,7 @@ declare const _default: {
     "InHangul_Jamo_Extended_A": boolean;
     "InHangul_Jamo_Extended_B": boolean;
     "InHangul_Syllables": boolean;
+    "InHanifi_Rohingya": boolean;
     "InHanunoo": boolean;
     "InHatran": boolean;
     "InHebrew": boolean;
@@ -120,6 +125,7 @@ declare const _default: {
     "InIdeographic_Description_Characters": boolean;
     "InIdeographic_Symbols_And_Punctuation": boolean;
     "InImperial_Aramaic": boolean;
+    "InIndic_Siyaq_Numbers": boolean;
     "InInscriptional_Pahlavi": boolean;
     "InInscriptional_Parthian": boolean;
     "InJavanese": boolean;
@@ -157,6 +163,7 @@ declare const _default: {
     "InLydian": boolean;
     "InMahajani": boolean;
     "InMahjong_Tiles": boolean;
+    "InMakasar": boolean;
     "InMalayalam": boolean;
     "InMandaic": boolean;
     "InManichaean": boolean;
@@ -164,6 +171,8 @@ declare const _default: {
     "InMasaram_Gondi": boolean;
     "InMathematical_Alphanumeric_Symbols": boolean;
     "InMathematical_Operators": boolean;
+    "InMayan_Numerals": boolean;
+    "InMedefaidrin": boolean;
     "InMeetei_Mayek": boolean;
     "InMeetei_Mayek_Extensions": boolean;
     "InMende_Kikakui": boolean;
@@ -199,6 +208,7 @@ declare const _default: {
     "InOld_North_Arabian": boolean;
     "InOld_Permic": boolean;
     "InOld_Persian": boolean;
+    "InOld_Sogdian": boolean;
     "InOld_South_Arabian": boolean;
     "InOld_Turkic": boolean;
     "InOptical_Character_Recognition": boolean;
@@ -229,6 +239,7 @@ declare const _default: {
     "InSinhala": boolean;
     "InSinhala_Archaic_Numbers": boolean;
     "InSmall_Form_Variants": boolean;
+    "InSogdian": boolean;
     "InSora_Sompeng": boolean;
     "InSoyombo": boolean;
     "InSpacing_Modifier_Letters": boolean;

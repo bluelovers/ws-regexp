@@ -29,6 +29,7 @@ declare const _default: {
     "Cyrillic": boolean;
     "Deseret": boolean;
     "Devanagari": boolean;
+    "Dogra": boolean;
     "Duployan": boolean;
     "Egyptian_Hieroglyphs": boolean;
     "Elbasan": boolean;
@@ -39,9 +40,11 @@ declare const _default: {
     "Grantha": boolean;
     "Greek": boolean;
     "Gujarati": boolean;
+    "Gunjala_Gondi": boolean;
     "Gurmukhi": boolean;
     "Han": boolean;
     "Hangul": boolean;
+    "Hanifi_Rohingya": boolean;
     "Hanunoo": boolean;
     "Hatran": boolean;
     "Hebrew": boolean;
@@ -69,11 +72,13 @@ declare const _default: {
     "Lycian": boolean;
     "Lydian": boolean;
     "Mahajani": boolean;
+    "Makasar": boolean;
     "Malayalam": boolean;
     "Mandaic": boolean;
     "Manichaean": boolean;
     "Marchen": boolean;
     "Masaram_Gondi": boolean;
+    "Medefaidrin": boolean;
     "Meetei_Mayek": boolean;
     "Mende_Kikakui": boolean;
     "Meroitic_Cursive": boolean;
@@ -96,6 +101,7 @@ declare const _default: {
     "Old_North_Arabian": boolean;
     "Old_Permic": boolean;
     "Old_Persian": boolean;
+    "Old_Sogdian": boolean;
     "Old_South_Arabian": boolean;
     "Old_Turkic": boolean;
     "Oriya": boolean;
@@ -116,6 +122,7 @@ declare const _default: {
     "Siddham": boolean;
     "SignWriting": boolean;
     "Sinhala": boolean;
+    "Sogdian": boolean;
     "Sora_Sompeng": boolean;
     "Soyombo": boolean;
     "Sundanese": boolean;

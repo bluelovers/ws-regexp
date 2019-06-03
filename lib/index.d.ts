@@ -34,5 +34,3 @@ export interface ICreateRegExp {
 }
 export declare type ITypeCreateRegExp<T> = T extends typeof RegExp ? typeof RegExp : T extends ICreateRegExp ? ICreateRegExp : any;
 export declare function createRegExp<T>(pattern: string, flag?: string, RegExpClass?: ITypeCreateRegExp<T>): RegExp;
-declare const _default: typeof import(".");
-export default _default;

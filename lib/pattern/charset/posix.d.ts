@@ -27,5 +27,4 @@ export declare const PatternTest: {
 };
 export declare function testPOXIX(name: string, RegExpClass?: typeof RegExp, testPattern?: typeof PatternTest): boolean;
 export declare function testPOXIX(name: string, RegExpClass?: ICreateRegExp, testPattern?: typeof PatternTest): boolean;
-declare const _default: typeof import("./posix");
-export default _default;
+export default POXIX;

@@ -179,5 +179,3 @@ export function wrapToRegexName(name: string, negation?: boolean)
 
 	return _wrapToRegexName(name, prefix, KEY_SUFFIX);
 }
-
-export default exports as typeof import('./unicode-script');
