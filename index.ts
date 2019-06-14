@@ -209,21 +209,21 @@ export class ParserEventEmitter extends EventEmitter
 
 				break;
 
-				// @ts-ignore
-		case 'Disjunction':
-
 			// @ts-ignore
-			(inputAst as AST.Disjunction).alternatives
-				.forEach(function (items)
-				{
-					items.forEach(function (item)
-					{
-						self._lookup_sub(item, myEmitter, inputAst, sub_prefix);
-					});
-				})
-			;
+			case 'Disjunction':
 
-			break;
+				// @ts-ignore
+				(inputAst as AST.Disjunction).alternatives
+					.forEach(function (items)
+					{
+						items.forEach(function (item)
+						{
+							self._lookup_sub(item, myEmitter, inputAst, sub_prefix);
+						});
+					})
+				;
+
+				break;
 
 			default:
 
