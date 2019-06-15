@@ -11,6 +11,7 @@ import UString from 'uni-string/src/core';
 import getVoiceAll from 'cjk-conv/lib/jp/table_voice';
 import { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
 import deburr = require('lodash.deburr');
+import { astNotChanged } from 'regexp-cjk/lib/plugin';
 
 export type ICacheMap = Map<string, string[]>
 
@@ -91,14 +92,12 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 
 		default(ast, eventName, ev)
 		{
-			ast.old_raw = ast.old_raw || ast.raw;
-
 			const raw = ast.raw;
 
 			/**
 			 * 確保 此節點沒有被其他修改過
 			 */
-			if (!ast.changed && ast.old_raw === raw && UString.size(raw) == 1)
+			if (astNotChanged(ast) && UString.size(raw) == 1)
 			{
 				let arr = _coreFn(raw, {
 					autoDeburr,
