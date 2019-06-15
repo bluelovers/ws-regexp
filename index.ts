@@ -9,7 +9,7 @@ import { _get as _getArrayTable } from 'cjk-conv/lib/zh/table/table';
 import { IOptionsOn } from 'regexp-cjk/lib/core';
 import UString from 'uni-string/src/core';
 import getVoiceAll from 'cjk-conv/lib/jp/table_voice';
-import { ParserEventEmitterEvent } from 'regexp-parser-event';
+import { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
 import deburr = require('lodash.deburr');
 
 export type ICacheMap = Map<string, string[]>
@@ -38,7 +38,9 @@ export interface IZhRegExpPluginOptionsCore
 	/**
 	 * if return null | undefined then will skip current node
 	 */
-	callback?(raw: string): string | string[]
+	callback?(raw: string): string | string[],
+
+	on?: IOptionsOn<INodeInput>,
 }
 
 export type IZhRegExpPluginOptions = IZhRegExpPluginOptionsCore & {
@@ -84,6 +86,9 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 	}
 
 	return <IOptionsOn>{
+
+		...options.on,
+
 		default(ast, eventName, ev)
 		{
 			ast.old_raw = ast.old_raw || ast.raw;

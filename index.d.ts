@@ -2,6 +2,7 @@
  * Created by user on 2019/5/27.
  */
 import { IOptionsOn } from 'regexp-cjk/lib/core';
+import { INodeInput } from 'regexp-parser-event';
 export declare type ICacheMap = Map<string, string[]>;
 export interface IZhRegExpPluginOptionsCore {
     /**
@@ -26,6 +27,7 @@ export interface IZhRegExpPluginOptionsCore {
      * if return null | undefined then will skip current node
      */
     callback?(raw: string): string | string[];
+    on?: IOptionsOn<INodeInput>;
 }
 export declare type IZhRegExpPluginOptions = IZhRegExpPluginOptionsCore & {
     /**
