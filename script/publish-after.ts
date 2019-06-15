@@ -5,6 +5,7 @@
 import path from 'path';
 import * as PackageJson from '../package.json';
 import { async as crossSpawn } from 'cross-spawn-extra';
+import gitRoot from 'git-root2';
 
 (async () =>
 {
@@ -13,9 +14,7 @@ import { async as crossSpawn } from 'cross-spawn-extra';
 	let gitroot: string;
 
 	// @ts-ignore
-	gitroot = await import('git-root2');
-	// @ts-ignore
-	gitroot = gitroot(__dirname);
+	gitroot = gitRoot(__dirname);
 
 	if (!gitroot || path.relative(gitroot, project_root))
 	{
