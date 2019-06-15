@@ -1,7 +1,8 @@
 import { AST } from "regexpp2";
-import regexpp = require('regexpp2');
-import EventEmitter = require('events');
+import * as regexpp from 'regexpp2';
+import EventEmitter from 'events';
 import { array_unique } from 'array-hyper-unique';
+import { ITSPartialRecord, ITSOverwrite } from 'ts-type';
 
 import Parser, {
 	astToString,
@@ -35,7 +36,7 @@ export const enum ParserEventEmitterEvent
 // @ts-ignore
 export const ParserEventEmitterEventList = Object.freeze(array_unique(Object.values(ParserEventEmitterEvent))) as ParserEventEmitterEvent[];
 
-export type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode;
+export type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode | AST.CharacterSet;
 
 export class ParserEventEmitter extends EventEmitter
 {
@@ -125,6 +126,9 @@ export class ParserEventEmitter extends EventEmitter
 	): this
 	on<E extends ParserEventEmitterEvent.other>(eventName: E,
 		listener: IParserEventEmitterListener<AST.CharacterClassElement, E>,
+	): this
+	on<E extends ParserEventEmitterEvent.uniset>(eventName: E,
+		listener: IParserEventEmitterListener<AST.CharacterSet, E>,
 	): this
 	on<E extends ParserEventEmitterEvent>(eventName: ParserEventEmitterEvent,
 		listener: IParserEventEmitterListener<AST.Element, E>,
@@ -380,6 +384,44 @@ export class ParserEventEmitter extends EventEmitter
 	{
 		return this.astRegExpLiteral.flags;
 	}
+
+}
+
+export interface IParserEventEmitterListenerMap<T extends INodeInput = INodeInput> extends ITSOverwrite<ITSPartialRecord<ParserEventEmitterEvent, IParserEventEmitterListener<any, ParserEventEmitterEvent>>,
+{
+	/**
+	 * 一般性 文字 節點
+	 */
+	[ParserEventEmitterEvent.default]?: IParserEventEmitterListener<AST.Character, ParserEventEmitterEvent.default>;
+
+	/**
+	 * /[xxx]/ 這類
+	 */
+	[ParserEventEmitterEvent.class]?: IParserEventEmitterListener<AST.CharacterClass, ParserEventEmitterEvent.class>;
+
+	/**
+	 * /[xxx]/ 之中的 xxx
+	 */
+	[ParserEventEmitterEvent.class_default]?: IParserEventEmitterListener<AST.Character, ParserEventEmitterEvent.class_default>;
+
+	/**
+	 * /[0-9]/ 之中的 0-9
+	 */
+	[ParserEventEmitterEvent.class_range]?: IParserEventEmitterListener<AST.CharacterClassRange, ParserEventEmitterEvent.class_range>;
+
+	/**
+	 * /[\p{xxxx}]/ 之中的 \p{xxxx}
+	 */
+	[ParserEventEmitterEvent.class_uniset]?: IParserEventEmitterListener<AST.CharacterSet, ParserEventEmitterEvent.class_uniset>;
+
+	[ParserEventEmitterEvent.other]?: IParserEventEmitterListener<AST.CharacterClassElement, ParserEventEmitterEvent.other>;
+
+	/**
+	 * \p{xxxx}
+	 */
+	[ParserEventEmitterEvent.uniset]?: IParserEventEmitterListener<AST.CharacterSet, ParserEventEmitterEvent.uniset>;
+}>
+{
 
 }
 
