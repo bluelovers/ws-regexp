@@ -2,17 +2,30 @@
  * Created by user on 2018/1/31/031.
  */
 
-import { _word_zh_core, _word_zh_core2, zhTableAutoGreedyTable } from './lib/conv';
-import { IAstToStringOptions, parseRegExp } from 'regexp-parser-literal';
-import { IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent, INodeInput } from 'regexp-parser-event';
+import { IAstToStringOptions } from 'regexp-parser-literal';
+import {
+	INodeInput,
+	IParserEventEmitterListener,
+	ParserEventEmitter,
+	ParserEventEmitterEvent,
+} from 'regexp-parser-event';
 import _support from 'regexp-support';
-import regexpRange from 'regexp-range';
-import { coreHandler, IOptions, parseRegularExpressionString, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore } from './lib/core';
-import RegexpHelper = require('regexp-helper');
-//import PackageJson = require('./package.json');
-import zhTable = require('cjk-conv/lib/zh/table/index');
+import {
+	coreHandler,
+	ICoreHandlerReturn,
+	IOptions,
+	IOptionsCore,
+	IOptionsInput,
+	IOptionsOn,
+	IOptionsRuntime,
+	parseRegularExpressionString,
+	SymDefaults,
+} from './lib/core';
 import { isRegExp } from 'regexp-helper';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
+import merge from 'lodash/merge';
+import RegexpHelper = require('regexp-helper');
+import mergeOptions, { getSettingOptions } from './lib/mergeOptions';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
 
@@ -71,6 +84,46 @@ export class zhRegExp extends RegExp
 	 */
 	public static readonly input: string;
 
+	/**
+	 * default value only exists and work when use `zhRegExp.use(defaultOptions)`
+	 */
+	public static readonly [SymDefaults]: IOptionsInput;
+
+	/**
+	 * create a new zhRegExp class with default value
+	 * @example `zhRegExp.use(defaultOptions)`
+	 */
+	static use(defaultOptions: IOptionsInput): typeof zhRegExp
+	{
+		defaultOptions = mergeOptions({}, this[SymDefaults], defaultOptions);
+
+		const zhRegExpNew = new Proxy(zhRegExp, {
+			// @ts-ignore
+			construct(target: typeof zhRegExp, argArray: unknown, newTarget?: any)
+			{
+				let { str, flags, options, argv } = getSettingOptions(...argArray as [any, any]);
+
+				options = mergeOptions({}, defaultOptions, options);
+
+				return new zhRegExp(str, flags, options, ...argv);
+			},
+
+			// @ts-ignore
+			get(target: keyof zhRegExp, key: keyof zhRegExp |typeof SymDefaults)
+			{
+				if (key === SymDefaults)
+				{
+					return defaultOptions
+				}
+
+				return target[key];
+			},
+
+		});
+
+		return zhRegExpNew
+	}
+
 	constructor(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv)
 	constructor(str: string | RegExp, options?: IOptionsInput, ...argv)
 	constructor(str, _flags = null, options: IOptionsInput | string = {}, ...argv)
@@ -106,9 +159,9 @@ export class zhRegExp extends RegExp
 		return parseRegularExpressionString(str);
 	}
 
-	static get support(): typeof _support
+	static get support()
 	{
-		return _support;
+		return require('regexp-support').default as typeof import('regexp-support').default;
 	}
 
 	static get version(): string

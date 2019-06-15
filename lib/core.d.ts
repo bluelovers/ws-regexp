@@ -1,8 +1,9 @@
 import { IAstToStringOptions } from 'regexp-parser-literal';
-import { IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent, INodeInput } from 'regexp-parser-event';
+import { INodeInput, IParserEventEmitterListener, IParserEventEmitterListenerMap, ParserEventEmitter, ParserEventEmitterEvent } from 'regexp-parser-event';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptionsZhTable };
+export declare const SymDefaults: unique symbol;
 export declare type IOptionsCore = {
     skip?: string;
     disableZh?: boolean;
@@ -38,9 +39,8 @@ export interface ICoreHandlerReturn<T extends INodeInput = INodeInput> {
     flags: string;
     options: IOptionsRuntime<T>;
 }
-export declare type IOptionsOn<T extends INodeInput = INodeInput> = {
-    [k in ParserEventEmitterEvent]?: IParserEventEmitterListener<T, ParserEventEmitterEvent>;
-};
+export interface IOptionsOn<T extends INodeInput = INodeInput> extends IParserEventEmitterListenerMap<T> {
+}
 export declare function coreHandler(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv: any[]): ICoreHandlerReturn;
 export declare function coreHandler(str: string | RegExp, options?: IOptionsInput, ...argv: any[]): ICoreHandlerReturn;
 export declare function parseRegularExpressionString(str: string): {
@@ -49,6 +49,5 @@ export declare function parseRegularExpressionString(str: string): {
     slash: string;
     input: string;
 };
-export declare function fixOptionsOn<T extends INodeInput = INodeInput>(options?: IOptionsInput<T>): IOptionsRuntime<T>;
 export declare function setupParserEventEmitter(ev: ParserEventEmitter, options: IOptionsInput): ParserEventEmitter;
 export default coreHandler;
