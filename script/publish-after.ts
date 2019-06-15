@@ -2,8 +2,8 @@
  * Created by user on 2018/7/24/024.
  */
 
-import path = require('path');
-import PackageJson = require('../package.json');
+import path from 'path';
+import * as PackageJson from '../package.json';
 import { async as crossSpawn } from 'cross-spawn-extra';
 
 (async () =>

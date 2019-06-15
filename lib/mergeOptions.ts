@@ -2,8 +2,8 @@
  * Created by user on 2019/6/15.
  */
 
-import mergeWith = require('lodash/mergeWith');
-import isArray = require('lodash/isArray');
+import mergeWith from 'lodash/mergeWith';
+import isArray from 'lodash/isArray';
 import { IOptions, IOptionsInput, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './core';
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { INodeInput } from 'regexp-parser-event';

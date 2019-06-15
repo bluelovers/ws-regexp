@@ -6,7 +6,7 @@ import { INodeInput, IParserEventEmitterListener, ParserEventEmitter, ParserEven
 import { ICoreHandlerReturn, IOptions, IOptionsCore, IOptionsInput, IOptionsOn, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './lib/core';
 import { isRegExp } from 'regexp-helper';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
-import RegexpHelper = require('regexp-helper');
+import * as RegexpHelper from 'regexp-helper';
 import { parseRegularExpressionString } from './lib/getSource';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptions, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore };
@@ -213,11 +213,7 @@ export declare class zhRegExp extends RegExp {
                 "digit": boolean;
                 "Enclosing_Mark": boolean;
                 "Me": boolean;
-                "Final_Punctuation": boolean; /**
-                 * The non-standard input property is a static property of regular expressions that contains the string against which a regular expression is matched. RegExp.$_ is an alias for this property.
-                 *
-                 * @alias $_
-                 */
+                "Final_Punctuation": boolean;
                 "Pf": boolean;
                 "Format": boolean;
                 "Cf": boolean;
@@ -230,14 +226,19 @@ export declare class zhRegExp extends RegExp {
                 "Zl": boolean;
                 "Lowercase_Letter": boolean;
                 "Ll": boolean;
-                "Mark": boolean;
+                "Mark": boolean; /**
+                 * default value only exists and work when use `zhRegExp.use(defaultOptions)`
+                 */
                 "M": boolean;
                 "Combining_Mark": boolean;
                 "Math_Symbol": boolean;
                 "Sm": boolean;
                 "Modifier_Letter": boolean;
                 "Lm": boolean;
-                "Modifier_Symbol": boolean;
+                "Modifier_Symbol": boolean; /**
+                 * create a new zhRegExp class with default value
+                 * @example `zhRegExp.use(defaultOptions)`
+                 */
                 "Sk": boolean;
                 "Nonspacing_Mark": boolean;
                 "Mn": boolean;

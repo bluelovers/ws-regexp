@@ -11,7 +11,8 @@ import regexpRange from 'regexp-range';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 import { fixOptions, getSettingOptions } from './mergeOptions';
 import getRegExpSourcePattern from './getSource';
-import zhTable = require('cjk-conv/lib/zh/table/index');
+import * as zhTable from 'cjk-conv/lib/zh/table/index';
+import { auto as zhTableAuto } from 'cjk-conv/lib/zh/table/index';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
 
@@ -103,7 +104,7 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 	{
 		let ev = ParserEventEmitter.create(str, flags || '');
 
-		const zhTableFn = options.zhTable || (options.greedyTable ? zhTableAutoGreedyTable : zhTable.auto);
+		const zhTableFn = options.zhTable || (options.greedyTable ? zhTableAutoGreedyTable : zhTableAuto);
 
 		if (!options.disableZh)
 		{

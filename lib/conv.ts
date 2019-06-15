@@ -3,7 +3,7 @@
  */
 
 import { IOptions } from 'cjk-conv/lib/zh/table/index';
-import zhTable = require('cjk-conv/lib/zh/table/index');
+import { auto as zhTableAuto } from 'cjk-conv/lib/zh/table/index';
 import { _re_cjk_conv } from './util';
 import { IOptions as IOptionsRegExp } from './core';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
@@ -20,10 +20,10 @@ export function zhTableAutoGreedyTable(s: string, options: IOptionsZhTable = {})
 
 	options.greedyTable = options.greedyTable || true;
 
-	return zhTable.auto(s, options)
+	return zhTableAuto(s, options)
 }
 
-export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable.auto, options: IOptionsRegExp = {})
+export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTableAuto, options: IOptionsRegExp = {})
 {
 	let opts: IOptionsZhTable;
 
@@ -49,7 +49,7 @@ export function _word_zh_core(search: string, skip?: string, zhTableFn = zhTable
 	});
 }
 
-export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTable.auto, options: IOptionsRegExp = {})
+export function _word_zh_core2(search: string, skip?: string, zhTableFn = zhTableAuto, options: IOptionsRegExp = {})
 {
 	let opts: IOptionsZhTable;
 

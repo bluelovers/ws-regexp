@@ -23,7 +23,7 @@ import {
 import { isRegExp } from 'regexp-helper';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 import merge from 'lodash/merge';
-import RegexpHelper = require('regexp-helper');
+import * as RegexpHelper from 'regexp-helper';
 import mergeOptions, { getSettingOptions } from './lib/mergeOptions';
 import { parseRegularExpressionString } from './lib/getSource';
 
