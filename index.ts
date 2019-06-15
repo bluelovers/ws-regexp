@@ -364,6 +364,23 @@ export class ParserEventEmitter extends EventEmitter
 	{
 		return new RegExpClass(this.source, this.flags);
 	}
+
+	/**
+	 * this will not update changes
+	 */
+	get astSource()
+	{
+		return this.astRegExpLiteral.pattern;
+	}
+
+	/**
+	 * this will not update changes
+	 */
+	get astFlags()
+	{
+		return this.astRegExpLiteral.flags;
+	}
+
 }
 
 export interface IParserEventEmitterListener<T extends INodeInput, E extends keyof typeof ParserEventEmitterEvent>

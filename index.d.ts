@@ -42,6 +42,14 @@ export declare class ParserEventEmitter extends EventEmitter {
     changed: boolean;
     toString(overwrite?: boolean, options?: IAstToStringOptions): string;
     toRegExp<T extends RegExp>(RegExpClass?: typeof RegExp): RegExp;
+    /**
+     * this will not update changes
+     */
+    readonly astSource: AST.Pattern;
+    /**
+     * this will not update changes
+     */
+    readonly astFlags: AST.Flags;
 }
 export interface IParserEventEmitterListener<T extends INodeInput, E extends keyof typeof ParserEventEmitterEvent> {
     (inputAst: T & INodePlus, eventName: E, emitter: ParserEventEmitter, ...argv: unknown[]): any;
