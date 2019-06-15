@@ -113,6 +113,14 @@ export function fixOptions<T extends INodeInput = INodeInput>(options?: IOptions
 		}
 	}
 
+	if (removeEmptyOn && options.onCore)
+	{
+		if (!options.onCore.length)
+		{
+			delete options.onCore;
+		}
+	}
+
 	// @ts-ignore
 	return options
 }

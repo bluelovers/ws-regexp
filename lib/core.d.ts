@@ -1,6 +1,7 @@
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import { INodeInput, IParserEventEmitterListener, IParserEventEmitterListenerMap, ParserEventEmitter, ParserEventEmitterEvent } from 'regexp-parser-event';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
+import { IGetSettingOptions } from './mergeOptions';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptionsZhTable };
 export declare const SymDefaults: unique symbol;
@@ -27,7 +28,22 @@ export declare type IOptionsCore = {
      * allow set `CjkConv.zhTable.auto`
      */
     zhTable?(char: string, options?: IOptionsZhTable): string[];
+    /**
+     * 用來解決插件需求
+     */
+    onCore?: IOptionsOnCore[];
 } & IAstToStringOptions;
+export interface IOptionsOnCore {
+    /**
+     * 執行於分析參數後 執行 核心處理前
+     * 回傳的物件會取代參數
+     */
+    beforeStart?(opts: IGetSettingOptions & {
+        hasFlags: boolean;
+    }): IGetSettingOptions & {
+        hasFlags: boolean;
+    };
+}
 export declare type IOptions<T extends INodeInput = INodeInput> = IOptionsCore & {
     on?: IOptionsOn<T> | IOptionsOn<T>[];
 };

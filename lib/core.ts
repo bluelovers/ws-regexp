@@ -9,7 +9,7 @@ import {
 } from 'regexp-parser-event';
 import regexpRange from 'regexp-range';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
-import { fixOptions, getSettingOptions } from './mergeOptions';
+import { fixOptions, getSettingOptions, IGetSettingOptions } from './mergeOptions';
 import getRegExpSourcePattern from './getSource';
 import * as zhTable from 'cjk-conv/lib/zh/table/index';
 import { auto as zhTableAuto } from 'cjk-conv/lib/zh/table/index';
@@ -45,9 +45,27 @@ export type IOptionsCore = {
 	/**
 	 * allow set `CjkConv.zhTable.auto`
 	 */
-	zhTable?(char: string, options?: IOptionsZhTable): string[]
+	zhTable?(char: string, options?: IOptionsZhTable): string[],
+
+	/**
+	 * 用來解決插件需求
+	 */
+	onCore?: IOptionsOnCore[],
 
 } & IAstToStringOptions;
+
+export interface IOptionsOnCore
+{
+	/**
+	 * 執行於分析參數後 執行 核心處理前
+	 * 回傳的物件會取代參數
+	 */
+	beforeStart?(opts: IGetSettingOptions & {
+		hasFlags: boolean,
+	}): IGetSettingOptions & {
+		hasFlags: boolean,
+	};
+}
 
 export type IOptions<T extends INodeInput = INodeInput> = IOptionsCore & {
 	on?: IOptionsOn<T> | IOptionsOn<T>[],
@@ -99,6 +117,21 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 	({ source, hasFlags, flags } = getRegExpSourcePattern(opts));
 
 	str = source;
+
+	if (options.onCore)
+	{
+		let optsNew = options.onCore.reduce((a, setting) => {
+			return setting.beforeStart(a);
+		}, {
+			str,
+			flags,
+			options,
+			argv,
+			hasFlags,
+		});
+
+		({ str, options, flags, argv, hasFlags } = optsNew);
+	}
 
 	if ((!options.disableZh || !options.disableLocalRange || options.on))
 	{
