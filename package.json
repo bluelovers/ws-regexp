@@ -1,7 +1,7 @@
 {
   "name": "regexp-cjk-plugin-escape-unicode-property",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "use regexpu for escape unicode property in regexp-cjk",
   "keywords": [
     "char",
     "character",
@@ -39,9 +39,20 @@
     "unicode",
     "unicode property"
   ],
+  "homepage": "https://github.com/bluelovers/regexp-cjk-plugin-escape-unicode-property#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-cjk-plugin-escape-unicode-property/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-cjk-plugin-escape-unicode-property.git"
+  },
   "license": "ISC",
   "author": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
