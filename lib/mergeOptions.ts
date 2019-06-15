@@ -64,10 +64,11 @@ export function mergeOptions<T extends INodeInput = INodeInput>(base: IOptionsIn
 
 	if (arr.length > 1)
 	{
-		base = (mergeWith as Function)(...arr.map(o =>
+		base = mergeWith(...(arr.map(o =>
 		{
 			return fixOptions(o);
-		}) as [T, T], customizer);
+			// @ts-ignore
+		})), customizer);
 	}
 
 	return fixOptions(base);

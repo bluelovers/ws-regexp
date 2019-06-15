@@ -13,6 +13,7 @@ import { fixOptions, getSettingOptions, IGetSettingOptions } from './mergeOption
 import getRegExpSourcePattern from './getSource';
 import * as zhTable from 'cjk-conv/lib/zh/table/index';
 import { auto as zhTableAuto } from 'cjk-conv/lib/zh/table/index';
+import { astNotChanged, astOldRaw } from './plugin';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
 
@@ -60,7 +61,13 @@ export interface IOptionsOnCore
 	 * 執行於分析參數後 執行 核心處理前
 	 * 回傳的物件會取代參數
 	 */
-	beforeStart?(opts: IGetSettingOptions & {
+	beforeStart?(opts: IGetSettingOptions<string> & {
+		hasFlags: boolean,
+	}): IGetSettingOptions & {
+		hasFlags: boolean,
+	};
+
+	afterStart?(opts: IGetSettingOptions<string> & {
 		hasFlags: boolean,
 	}): IGetSettingOptions & {
 		hasFlags: boolean,
@@ -121,6 +128,12 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 	if (options.onCore)
 	{
 		let optsNew = options.onCore.reduce((a, setting) => {
+
+			if (!setting.beforeStart)
+			{
+				return a
+			}
+
 			return setting.beforeStart(a);
 		}, {
 			str,
@@ -143,7 +156,7 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 		{
 			ev.on(ParserEventEmitterEvent.default, function (ast)
 			{
-				ast.old_raw = ast.old_raw || ast.raw;
+				astOldRaw(ast);
 
 				let raw = _word_zh_core(ast.raw, (options as IOptions).skip, zhTableFn, options as IOptions);
 
@@ -172,7 +185,7 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 						ret = _word_zh_core2(ret, (options as IOptions).skip, zhTableFn, options as IOptions);
 					}
 
-					ast.old_raw = ast.old_raw || ast.raw;
+					astOldRaw(ast);
 
 					if (ast.raw !== ret)
 					{
@@ -195,6 +208,27 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 		flags = hasFlags ? flags : ev.flags;
 	}
 
+	if (options.onCore)
+	{
+		let optsNew = options.onCore.reduce((a, setting) => {
+
+			if (!setting.afterStart)
+			{
+				return a
+			}
+
+			return setting.afterStart(a);
+		}, {
+			str,
+			flags,
+			options,
+			argv,
+			hasFlags,
+		});
+
+		({ str, options, flags, argv, hasFlags } = optsNew);
+	}
+
 	return {
 		source: str,
 		flags: flags || '',
@@ -215,7 +249,7 @@ export function setupParserEventEmitter(ev: ParserEventEmitter, options: IOption
 					.keys(conf)
 					.forEach(function (event: ParserEventEmitterEvent)
 					{
-						ev.on(event, conf[event])
+						ev.on(event, conf[event] as any)
 					})
 				;
 			})

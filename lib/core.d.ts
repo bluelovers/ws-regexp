@@ -38,7 +38,12 @@ export interface IOptionsOnCore {
      * 執行於分析參數後 執行 核心處理前
      * 回傳的物件會取代參數
      */
-    beforeStart?(opts: IGetSettingOptions & {
+    beforeStart?(opts: IGetSettingOptions<string> & {
+        hasFlags: boolean;
+    }): IGetSettingOptions & {
+        hasFlags: boolean;
+    };
+    afterStart?(opts: IGetSettingOptions<string> & {
         hasFlags: boolean;
     }): IGetSettingOptions & {
         hasFlags: boolean;
