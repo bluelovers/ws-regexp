@@ -15,6 +15,7 @@ export declare type IOptionsCore = {
     flags?: string;
     /**
      * allow str is /a/g
+     * @deprecated
      */
     parseRegularExpressionString?: boolean;
     /**
@@ -41,13 +42,8 @@ export interface ICoreHandlerReturn<T extends INodeInput = INodeInput> {
 }
 export interface IOptionsOn<T extends INodeInput = INodeInput> extends IParserEventEmitterListenerMap<T> {
 }
-export declare function coreHandler(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv: any[]): ICoreHandlerReturn;
-export declare function coreHandler(str: string | RegExp, options?: IOptionsInput, ...argv: any[]): ICoreHandlerReturn;
-export declare function parseRegularExpressionString(str: string): {
-    source: string;
-    flags: string;
-    slash: string;
-    input: string;
-};
+export declare type IRegExpUserInput = string | RegExp;
+export declare function coreHandler(str: IRegExpUserInput, flags?: string, options?: IOptionsInput | string, ...argv: any[]): ICoreHandlerReturn;
+export declare function coreHandler(str: IRegExpUserInput, options?: IOptionsInput, ...argv: any[]): ICoreHandlerReturn;
 export declare function setupParserEventEmitter(ev: ParserEventEmitter, options: IOptionsInput): ParserEventEmitter;
 export default coreHandler;

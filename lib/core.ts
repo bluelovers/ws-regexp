@@ -1,14 +1,16 @@
 import { _word_zh_core, _word_zh_core2, zhTableAutoGreedyTable } from './conv';
-import { IAstToStringOptions, parseRegExp } from 'regexp-parser-literal';
+import { IAstToStringOptions } from 'regexp-parser-literal';
 import {
 	INodeInput,
-	IParserEventEmitterListener, IParserEventEmitterListenerMap,
+	IParserEventEmitterListener,
+	IParserEventEmitterListenerMap,
 	ParserEventEmitter,
 	ParserEventEmitterEvent,
 } from 'regexp-parser-event';
 import regexpRange from 'regexp-range';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 import { fixOptions, getSettingOptions } from './mergeOptions';
+import getRegExpSourcePattern from './getSource';
 import zhTable = require('cjk-conv/lib/zh/table/index');
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
@@ -29,6 +31,7 @@ export type IOptionsCore = {
 
 	/**
 	 * allow str is /a/g
+	 * @deprecated
 	 */
 	parseRegularExpressionString?: boolean,
 
@@ -70,49 +73,37 @@ export type IOptionsOn<T extends INodeInput = INodeInput> = {
 
 export interface IOptionsOn<T extends INodeInput = INodeInput> extends IParserEventEmitterListenerMap<T>
 {
-
+	//
 }
 
-export function coreHandler(str: string | RegExp,
+export type IRegExpUserInput = string | RegExp;
+
+export function coreHandler(str: IRegExpUserInput,
 	flags?: string,
 	options?: IOptionsInput | string,
 	...argv
 ): ICoreHandlerReturn
-export function coreHandler(str: string | RegExp, options?: IOptionsInput, ...argv): ICoreHandlerReturn
+export function coreHandler(str: IRegExpUserInput, options?: IOptionsInput, ...argv): ICoreHandlerReturn
 export function coreHandler(str, flags = null, options: IOptionsInput | string = {}, ...argv): ICoreHandlerReturn
 {
-	({ str, flags, options, argv } = getSettingOptions(str, flags, options, ...argv));
+	const opts = getSettingOptions(str, flags, options, ...argv);
 
-	let hasFlags = typeof flags == 'string';
+	let source: string;
+	let hasFlags: boolean;
+
+	({ options, argv } = opts);
 
 	options = fixOptions(options);
 
-	if (1 && (!options.disableZh || !options.disableLocalRange || options.on))
+	({ source, hasFlags, flags } = getRegExpSourcePattern(opts));
+
+	str = source;
+
+	if ((!options.disableZh || !options.disableLocalRange || options.on))
 	{
-		let ev: ParserEventEmitter;
+		let ev = ParserEventEmitter.create(str, flags || '');
 
 		const zhTableFn = options.zhTable || (options.greedyTable ? zhTableAutoGreedyTable : zhTable.auto);
-
-		if (str instanceof RegExp)
-		{
-			let ast = parseRegExp(str.toString());
-			// @ts-ignore
-			ev = new ParserEventEmitter(ast);
-		}
-		else
-		{
-			if (options.parseRegularExpressionString && typeof str == 'string')
-			{
-				let m = parseRegularExpressionString(str);
-				if (m)
-				{
-					str = m.source;
-					flags = hasFlags ? flags : m.flags;
-				}
-			}
-
-			ev = ParserEventEmitter.create(str, flags || '');
-		}
 
 		if (!options.disableZh)
 		{
@@ -169,23 +160,6 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 			, options);
 		flags = hasFlags ? flags : ev.flags;
 	}
-	else
-	{
-		if (options.parseRegularExpressionString && typeof str == 'string')
-		{
-			let m = parseRegularExpressionString(str);
-			if (m)
-			{
-				str = new RegExp(m.source, m.flags);
-				flags = hasFlags ? flags : str.flags;
-			}
-		}
-		else if (str instanceof RegExp)
-		{
-			str = str.source;
-			flags = hasFlags ? flags : str.flags;
-		}
-	}
 
 	return {
 		source: str,
@@ -194,29 +168,13 @@ export function coreHandler(str, flags = null, options: IOptionsInput | string =
 	}
 }
 
-export function parseRegularExpressionString(str: string)
-{
-	let m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
-	if (m)
-	{
-		let [s, d, r, f] = m;
-
-		return {
-			source: typeof r !== 'undefined' ? r : '',
-			flags: typeof f !== 'undefined' ? f : '',
-			slash: s,
-			input: str,
-		};
-	}
-
-	return null;
-}
-
 export function setupParserEventEmitter(ev: ParserEventEmitter, options: IOptionsInput)
 {
-	if (options.on)
+	const onList = fixOptions(options).on;
+
+	if (onList)
 	{
-		fixOptions(options).on
+		onList
 			.forEach((conf) =>
 			{
 				Object
@@ -226,7 +184,6 @@ export function setupParserEventEmitter(ev: ParserEventEmitter, options: IOption
 						ev.on(event, conf[event])
 					})
 				;
-
 			})
 		;
 	}

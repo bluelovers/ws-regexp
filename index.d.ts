@@ -3,10 +3,11 @@
  */
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import { INodeInput, IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent } from 'regexp-parser-event';
-import { ICoreHandlerReturn, IOptions, IOptionsCore, IOptionsInput, IOptionsOn, IOptionsRuntime, parseRegularExpressionString, SymDefaults } from './lib/core';
+import { ICoreHandlerReturn, IOptions, IOptionsCore, IOptionsInput, IOptionsOn, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './lib/core';
 import { isRegExp } from 'regexp-helper';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 import RegexpHelper = require('regexp-helper');
+import { parseRegularExpressionString } from './lib/getSource';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptions, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore };
 export { IOptionsZhTable };
@@ -63,10 +64,12 @@ export declare class zhRegExp extends RegExp {
      * @example `zhRegExp.use(defaultOptions)`
      */
     static use(defaultOptions: IOptionsInput): typeof zhRegExp;
-    constructor(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv: any[]);
-    constructor(str: string | RegExp, options?: IOptionsInput, ...argv: any[]);
-    static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptionsInput | string): T;
-    static create<T = zhRegExp>(str: string | RegExp, options?: IOptionsInput): T;
+    constructor(str: IRegExpUserInput, options?: IOptionsInput, ...argv: any[]);
+    constructor(str: IRegExpUserInput, flags?: string, options?: IOptionsInput, ...argv: any[]);
+    constructor(str: IRegExpUserInput, flags: string, skip: string, ...argv: any[]);
+    constructor(str: IRegExpUserInput, flags: string, options?: IOptionsInput | string, ...argv: any[]);
+    static create<T = zhRegExp>(str: IRegExpUserInput, flags?: string, options?: IOptionsInput | string): T;
+    static create<T = zhRegExp>(str: IRegExpUserInput, options?: IOptionsInput): T;
     getStatic<T = typeof zhRegExp>(): T;
     /**
      * @todo
@@ -179,6 +182,11 @@ export declare class zhRegExp extends RegExp {
                 Digit: boolean;
                 Alnum: boolean;
                 Punct: boolean;
+                /**
+                 * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
+                 *
+                 * @alias $`
+                 */
                 Graph: boolean;
                 Blank: boolean;
                 Cntrl: boolean;
@@ -205,7 +213,11 @@ export declare class zhRegExp extends RegExp {
                 "digit": boolean;
                 "Enclosing_Mark": boolean;
                 "Me": boolean;
-                "Final_Punctuation": boolean;
+                "Final_Punctuation": boolean; /**
+                 * The non-standard input property is a static property of regular expressions that contains the string against which a regular expression is matched. RegExp.$_ is an alias for this property.
+                 *
+                 * @alias $_
+                 */
                 "Pf": boolean;
                 "Format": boolean;
                 "Cf": boolean;
@@ -398,9 +410,7 @@ export declare class zhRegExp extends RegExp {
                 "Carian": boolean;
                 "Cari": boolean;
                 "Caucasian_Albanian": boolean;
-                "Aghb": boolean; /**
-                 * @todo
-                 */
+                "Aghb": boolean;
                 "Chakma": boolean;
                 "Cakm": boolean;
                 "Cham": boolean;
@@ -410,6 +420,9 @@ export declare class zhRegExp extends RegExp {
                 "Zyyy": boolean;
                 "Coptic": boolean;
                 "Copt": boolean;
+                /**
+                 * @todo
+                 */
                 "Qaac": boolean;
                 "Cuneiform": boolean;
                 "Xsux": boolean;
@@ -731,10 +744,6 @@ export declare class zhRegExp extends RegExp {
                 "InEmoticons": boolean;
                 "InEnclosed_Alphanumeric_Supplement": boolean;
                 "InEnclosed_Alphanumerics": boolean;
-                /**
-                 * create a new zhRegExp class with default value
-                 * @example `zhRegExp.use(defaultOptions)`
-                 */
                 "InEnclosed_CJK_Letters_And_Months": boolean;
                 "InEnclosed_Ideographic_Supplement": boolean;
                 "InEthiopic": boolean;

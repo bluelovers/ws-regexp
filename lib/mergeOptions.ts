@@ -4,7 +4,7 @@
 
 import mergeWith = require('lodash/mergeWith');
 import isArray = require('lodash/isArray');
-import { IOptions, IOptionsInput, IOptionsRuntime, SymDefaults } from './core';
+import { IOptions, IOptionsInput, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './core';
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { INodeInput } from 'regexp-parser-event';
 import zhRegExp from '../index';
@@ -17,12 +17,20 @@ export function customizer(objValue, srcValue)
 	}
 }
 
-export function getSettingOptions(str, flags = null, options: IOptionsInput | string = {}, ...argv)
+export interface IGetSettingOptions<S extends IRegExpUserInput = IRegExpUserInput>
+{
+	str: S;
+	flags: string;
+	options: IOptionsInput;
+	argv: any[];
+}
+
+export function getSettingOptions<S extends IRegExpUserInput = IRegExpUserInput>(str: S, flags: IOptionsInput | string = null, options: IOptionsInput | string = {}, ...argv): IGetSettingOptions<S>
 {
 	if (flags !== null && typeof flags == 'object')
 	{
 		options = Object.assign({}, flags) as IOptions;
-		flags = options.flags || null;
+		flags = (options.flags || null) as string;
 	}
 
 	if (typeof options == 'string')
@@ -39,7 +47,7 @@ export function getSettingOptions(str, flags = null, options: IOptionsInput | st
 
 	return {
 		str,
-		flags,
+		flags: flags as string,
 		options,
 		argv,
 	}
@@ -84,7 +92,7 @@ export function MergeDefaultOptions(target: typeof zhRegExp): typeof zhRegExp
 }
  */
 
-export function fixOptions<T extends INodeInput = INodeInput>(options?: IOptionsInput<T>): IOptionsRuntime<T>
+export function fixOptions<T extends INodeInput = INodeInput>(options?: IOptionsInput<T>, removeEmptyOn?: boolean): IOptionsRuntime<T>
 {
 	if (options.on)
 	{
@@ -98,6 +106,11 @@ export function fixOptions<T extends INodeInput = INodeInput>(options?: IOptions
 		}
 
 		options.on = options.on.filter(v => v);
+
+		if (removeEmptyOn && !options.on.length)
+		{
+			delete options.on;
+		}
 	}
 
 	// @ts-ignore

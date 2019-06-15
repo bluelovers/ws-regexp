@@ -17,8 +17,7 @@ import {
 	IOptionsCore,
 	IOptionsInput,
 	IOptionsOn,
-	IOptionsRuntime,
-	parseRegularExpressionString,
+	IOptionsRuntime, IRegExpUserInput,
 	SymDefaults,
 } from './lib/core';
 import { isRegExp } from 'regexp-helper';
@@ -26,6 +25,7 @@ import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 import merge from 'lodash/merge';
 import RegexpHelper = require('regexp-helper');
 import mergeOptions, { getSettingOptions } from './lib/mergeOptions';
+import { parseRegularExpressionString } from './lib/getSource';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
 
@@ -101,7 +101,7 @@ export class zhRegExp extends RegExp
 			// @ts-ignore
 			construct(target: typeof zhRegExp, argArray: unknown, newTarget?: any)
 			{
-				let { str, flags, options, argv } = getSettingOptions(...argArray as [any, any]);
+				let { str, flags, options, argv } = getSettingOptions(...argArray as [IRegExpUserInput, any]);
 
 				options = mergeOptions({}, defaultOptions, options);
 
@@ -124,17 +124,19 @@ export class zhRegExp extends RegExp
 		return zhRegExpNew
 	}
 
-	constructor(str: string | RegExp, flags?: string, options?: IOptionsInput | string, ...argv)
-	constructor(str: string | RegExp, options?: IOptionsInput, ...argv)
-	constructor(str, _flags = null, options: IOptionsInput | string = {}, ...argv)
+	constructor(str: IRegExpUserInput, options?: IOptionsInput, ...argv)
+	constructor(str: IRegExpUserInput, flags?: string, options?: IOptionsInput, ...argv)
+	constructor(str: IRegExpUserInput, flags: string, skip: string, ...argv)
+	constructor(str: IRegExpUserInput, flags: string, options?: IOptionsInput | string, ...argv)
+	constructor(str, ...argv)
 	{
-		let { source, flags } = coreHandler(str, _flags, options, ...argv);
+		let { source, flags } = coreHandler(str, ...argv);
 
 		super(source, flags);
 	}
 
-	static create<T = zhRegExp>(str: string | RegExp, flags?: string, options?: IOptionsInput | string): T
-	static create<T = zhRegExp>(str: string | RegExp, options?: IOptionsInput): T
+	static create<T = zhRegExp>(str: IRegExpUserInput, flags?: string, options?: IOptionsInput | string): T
+	static create<T = zhRegExp>(str: IRegExpUserInput, options?: IOptionsInput): T
 	static create<T = zhRegExp>(str, flags = null, skip?, ...argv)
 	{
 		return new this(str, flags, skip, ...argv);
