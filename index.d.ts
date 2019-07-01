@@ -84,7 +84,6 @@ export declare class zhRegExp extends RegExp {
     static readonly support: Readonly<{
         nativeFlags: string;
         flags: {
-            [x: number]: boolean;
             readonly multiline: boolean;
             readonly m: boolean;
             readonly global: boolean;
@@ -139,11 +138,7 @@ export declare class zhRegExp extends RegExp {
             readonly dotAll?: boolean;
         };
         static: {
-            readonly prototype?: boolean; /**
-             * The non-standard lastMatch property is a static and read-only property of regular expressions that contains the last matched characters. RegExp.$& is an alias for this property.
-             *
-             * @alias $&
-             */
+            readonly prototype?: boolean;
             $1?: boolean;
             $2?: boolean;
             $3?: boolean;
@@ -154,11 +149,7 @@ export declare class zhRegExp extends RegExp {
             $8?: boolean;
             $9?: boolean;
             lastMatch?: boolean;
-            input?: boolean; /**
-             * The non-standard input property is a static property of regular expressions that contains the string against which a regular expression is matched. RegExp.$_ is an alias for this property.
-             *
-             * @alias $_
-             */
+            input?: boolean;
             $_?: boolean;
             '$&'?: boolean;
             lastParen?: boolean;
@@ -191,6 +182,11 @@ export declare class zhRegExp extends RegExp {
                 Digit: boolean;
                 Alnum: boolean;
                 Punct: boolean;
+                /**
+                 * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
+                 *
+                 * @alias $`
+                 */
                 Graph: boolean;
                 Blank: boolean;
                 Cntrl: boolean;
@@ -230,14 +226,19 @@ export declare class zhRegExp extends RegExp {
                 "Zl": boolean;
                 "Lowercase_Letter": boolean;
                 "Ll": boolean;
-                "Mark": boolean;
+                "Mark": boolean; /**
+                 * default value only exists and work when use `zhRegExp.use(defaultOptions)`
+                 */
                 "M": boolean;
                 "Combining_Mark": boolean;
                 "Math_Symbol": boolean;
                 "Sm": boolean;
                 "Modifier_Letter": boolean;
                 "Lm": boolean;
-                "Modifier_Symbol": boolean;
+                "Modifier_Symbol": boolean; /**
+                 * create a new zhRegExp class with default value
+                 * @example `zhRegExp.use(defaultOptions)`
+                 */
                 "Sk": boolean;
                 "Nonspacing_Mark": boolean;
                 "Mn": boolean;
@@ -420,6 +421,9 @@ export declare class zhRegExp extends RegExp {
                 "Zyyy": boolean;
                 "Coptic": boolean;
                 "Copt": boolean;
+                /**
+                 * @todo
+                 */
                 "Qaac": boolean;
                 "Cuneiform": boolean;
                 "Xsux": boolean;
