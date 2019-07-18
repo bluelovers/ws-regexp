@@ -29,7 +29,15 @@ export type IOptionsCore = {
 	 */
 	disableLocalRange?: boolean,
 	allowLocalRangeAutoZh?: boolean,
+	/**
+	 * 強制複寫 flags 設定
+	 * 但當使用於 zhRegExp.use 內時 則會自動被轉換為 defaultFlags
+	 */
 	flags?: string,
+	/**
+	 * 當沒有設定 flags 時的預設值
+	 */
+	defaultFlags?: string,
 
 	/**
 	 * allow str is /a/g

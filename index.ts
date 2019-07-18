@@ -24,7 +24,7 @@ import { isRegExp } from 'regexp-helper';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
 import merge from 'lodash/merge';
 import * as RegexpHelper from 'regexp-helper';
-import mergeOptions, { getSettingOptions } from './lib/mergeOptions';
+import mergeOptions, { getSettingOptions, mergeOptions2 } from './lib/mergeOptions';
 import { parseRegularExpressionString } from './lib/getSource';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
@@ -95,7 +95,7 @@ export class zhRegExp extends RegExp
 	 */
 	static use(defaultOptions: IOptionsInput): typeof zhRegExp
 	{
-		defaultOptions = mergeOptions({}, this[SymDefaults], defaultOptions);
+		defaultOptions = mergeOptions2({}, this[SymDefaults], defaultOptions);
 
 		const zhRegExpNew = new Proxy(zhRegExp, {
 			// @ts-ignore

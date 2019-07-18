@@ -53,6 +53,24 @@ export function getSettingOptions<S extends IRegExpUserInput = IRegExpUserInput>
 	}
 }
 
+/**
+ * for `zhRegExp.use` only
+ */
+export function mergeOptions2<T extends INodeInput = INodeInput>(base: IOptionsInput<T> = {} as IOptionsInput<T>,
+	...opts: IOptionsInput<T>[]
+): IOptionsRuntime<T>
+{
+	let ret = mergeOptions(base, ...opts);
+
+	if (typeof ret.flags === 'string')
+	{
+		ret.defaultFlags = ret.flags;
+		delete ret.flags;
+	}
+
+	return ret;
+}
+
 export function mergeOptions<T extends INodeInput = INodeInput>(base: IOptionsInput<T> = {} as IOptionsInput<T>,
 	...opts: IOptionsInput<T>[]
 ): IOptionsRuntime<T>

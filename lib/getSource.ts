@@ -21,6 +21,8 @@ export function parseRegularExpressionString(str: string)
 export function getRegExpSourcePattern(opts: IGetSettingOptions)
 {
 	const { str, options } = opts;
+	const { defaultFlags } = options;
+
 	const hasFlags = typeof opts.flags == 'string';
 
 	let source: string;
@@ -63,6 +65,11 @@ export function getRegExpSourcePattern(opts: IGetSettingOptions)
 	}
 
 	flags = hasFlags ? opts.flags : flags;
+
+	if (defaultFlags && (flags == null || flags === ''))
+	{
+		flags = defaultFlags;
+	}
 
 	return {
 		source,

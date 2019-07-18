@@ -182,12 +182,12 @@ export declare class zhRegExp extends RegExp {
                 Digit: boolean;
                 Alnum: boolean;
                 Punct: boolean;
+                Graph: boolean;
                 /**
                  * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
                  *
                  * @alias $`
                  */
-                Graph: boolean;
                 Blank: boolean;
                 Cntrl: boolean;
                 XDigit: boolean;
@@ -201,7 +201,11 @@ export declare class zhRegExp extends RegExp {
                 "Pe": boolean;
                 "Connector_Punctuation": boolean;
                 "Pc": boolean;
-                "Control": boolean;
+                "Control": boolean; /**
+                 * The non-standard lastMatch property is a static and read-only property of regular expressions that contains the last matched characters. RegExp.$& is an alias for this property.
+                 *
+                 * @alias $&
+                 */
                 "Cc": boolean;
                 "cntrl": boolean;
                 "Currency_Symbol": boolean;
@@ -214,7 +218,11 @@ export declare class zhRegExp extends RegExp {
                 "Enclosing_Mark": boolean;
                 "Me": boolean;
                 "Final_Punctuation": boolean;
-                "Pf": boolean;
+                "Pf": boolean; /**
+                 * The non-standard input property is a static property of regular expressions that contains the string against which a regular expression is matched. RegExp.$_ is an alias for this property.
+                 *
+                 * @alias $_
+                 */
                 "Format": boolean;
                 "Cf": boolean;
                 "Initial_Punctuation": boolean;
@@ -226,19 +234,17 @@ export declare class zhRegExp extends RegExp {
                 "Zl": boolean;
                 "Lowercase_Letter": boolean;
                 "Ll": boolean;
-                "Mark": boolean; /**
+                "Mark": boolean;
+                "M": boolean;
+                /**
                  * default value only exists and work when use `zhRegExp.use(defaultOptions)`
                  */
-                "M": boolean;
                 "Combining_Mark": boolean;
                 "Math_Symbol": boolean;
                 "Sm": boolean;
                 "Modifier_Letter": boolean;
                 "Lm": boolean;
-                "Modifier_Symbol": boolean; /**
-                 * create a new zhRegExp class with default value
-                 * @example `zhRegExp.use(defaultOptions)`
-                 */
+                "Modifier_Symbol": boolean;
                 "Sk": boolean;
                 "Nonspacing_Mark": boolean;
                 "Mn": boolean;
@@ -421,10 +427,10 @@ export declare class zhRegExp extends RegExp {
                 "Zyyy": boolean;
                 "Coptic": boolean;
                 "Copt": boolean;
+                "Qaac": boolean;
                 /**
                  * @todo
                  */
-                "Qaac": boolean;
                 "Cuneiform": boolean;
                 "Xsux": boolean;
                 "Cypriot": boolean;
@@ -708,7 +714,11 @@ export declare class zhRegExp extends RegExp {
                 "InCJK_Unified_Ideographs_Extension_F": boolean;
                 "InCarian": boolean;
                 "InCaucasian_Albanian": boolean;
-                "InChakma": boolean;
+                "InChakma": boolean; /**
+                 * The non-standard rightContext property is a static and read-only property of regular expressions that contains the substring following the most recent match. RegExp.$' is an alias for this property.
+                 *
+                 * @alias $'
+                 */
                 "InCham": boolean;
                 "InCherokee": boolean;
                 "InCherokee_Supplement": boolean;
