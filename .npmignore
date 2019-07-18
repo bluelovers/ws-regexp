@@ -26,3 +26,5 @@ test
 ### jsonly_bin template
 bin/*.ts
 bin/*.d.ts
+/*.tpl
+*.tgz
