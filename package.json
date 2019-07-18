@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "3.3.6",
+  "version": "3.3.7",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -85,8 +85,8 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.0.7",
-    "cjk-conv": "^1.1.68",
-    "lodash": "^4.17.11",
+    "cjk-conv": "^1.1.82",
+    "lodash": "^4.17.14",
     "regexp-helper": "^1.0.8",
     "regexp-parser-event": "^1.1.5",
     "regexp-parser-literal": "^1.1.0",
@@ -95,7 +95,7 @@
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.12",
-    "@types/lodash": "^4.14.135",
+    "@types/lodash": "^4.14.136",
     "@types/node": "^12",
     "cross-spawn-extra": "^1.0.6",
     "git-root2": "^1.0.7"
