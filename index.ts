@@ -1,3 +1,4 @@
+/// <reference lib="es2018.regexp" />
 import _cloneRegexp = require('clone-regexp');
 
 function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
@@ -5,7 +6,7 @@ function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	options?: IExecAllOptions<T>,
 ): IMatches<T>
 {
-	let match: IExecAllRegExpExecArray<T>;
+	let match: IMatchesRow<T>;
 	options = options || {};
 
 	const { resetLastIndex = true, cloneRegexp = _cloneRegexp as ICloneRegexp<T>, removeHiddenData } = options;
@@ -27,12 +28,11 @@ function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	rightContext = !!rightContext;
 	leftContext = !!leftContext;
 
-	// @ts-ignore
-	while (match = re.exec(input))
+	while (match = re.exec(input) as IMatchesRow<T>)
 	{
 		delete match.input;
 
-		matches.push(Object.assign(match, {
+		matches.push(Object.assign(match, <Partial<IMatchesRow<T>>>{
 			match: match[0],
 			sub: match.slice(1),
 
@@ -87,9 +87,12 @@ import IExecAllOptions = execAll.IExecAllOptions;
 import IMatches = execAll.IMatches;
 import IExecAllRegExpExecArray = execAll.IExecAllRegExpExecArray;
 import ICloneRegexp = execAll.ICloneRegexp;
+import IMatchesRow = execAll.IMatchesRow;
 
 namespace execAll
 {
+	export const SYMBOL = Symbol.for('execall');
+
 	export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 		input: string,
 		options?: IExecAllOptions<T>,
@@ -123,7 +126,8 @@ namespace execAll
 		(inputRegExp: T | RegExp, ...argv): T
 	}
 
-	export type IExecAllRegExpExecArray<T extends RegExp = RegExp> = RegExpExecArray & string[] & {
+	export interface IExecAllRegExpExecArray<T extends RegExp = RegExp> extends RegExpExecArray
+	{
 
 		/**
 		 * The 0-based index of the match in the string.
@@ -138,17 +142,19 @@ namespace execAll
 			[k: string]: string,
 		},
 
-		//[S]: IMatches<T>
-	};
+		[SYMBOL]: IMatches<T>
+	}
 
-	export type IMatches<T extends RegExp = RegExp> = (IExecAllRegExpExecArray<T> & {
+	export interface IMatchesRow<T extends RegExp = RegExp> extends IExecAllRegExpExecArray<T>
+	{
 		match: string,
 		sub: string[],
 
 		leftContext?: string,
 		rightContext?: string,
+	}
 
-	})[] & {
+	export type IMatches<T extends RegExp = RegExp> = IMatchesRow<T>[] & {
 		/**
 		 * regular expressions
 		 *
@@ -168,8 +174,6 @@ namespace execAll
 		 */
 		readonly lastIndex: number,
 	};
-
-	export const SYMBOL = Symbol.for('execall');
 }
 
 import SYMBOL = execAll.SYMBOL;

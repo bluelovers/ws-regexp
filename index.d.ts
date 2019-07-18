@@ -1,3 +1,4 @@
+/// <reference lib="es2018.regexp" />
 declare function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: string, options?: IExecAllOptions<T>): IMatches<T>;
 declare namespace execAll {
     var default: typeof execAll;
@@ -5,6 +6,7 @@ declare namespace execAll {
 import IExecAllOptions = execAll.IExecAllOptions;
 import IMatches = execAll.IMatches;
 declare namespace execAll {
+    const SYMBOL: unique symbol;
     function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp, input: string, options?: IExecAllOptions<T>): IMatches<T>;
     interface IExecAllOptions<T extends RegExp = RegExp> {
         resetLastIndex?: boolean;
@@ -22,7 +24,7 @@ declare namespace execAll {
     interface ICloneRegexp<T extends RegExp = RegExp> {
         (inputRegExp: T | RegExp, ...argv: any[]): T;
     }
-    type IExecAllRegExpExecArray<T extends RegExp = RegExp> = RegExpExecArray & string[] & {
+    interface IExecAllRegExpExecArray<T extends RegExp = RegExp> extends RegExpExecArray {
         /**
          * The 0-based index of the match in the string.
          */
@@ -33,13 +35,15 @@ declare namespace execAll {
         groups?: {
             [k: string]: string;
         };
-    };
-    type IMatches<T extends RegExp = RegExp> = (IExecAllRegExpExecArray<T> & {
+        [SYMBOL]: IMatches<T>;
+    }
+    interface IMatchesRow<T extends RegExp = RegExp> extends IExecAllRegExpExecArray<T> {
         match: string;
         sub: string[];
         leftContext?: string;
         rightContext?: string;
-    })[] & {
+    }
+    type IMatches<T extends RegExp = RegExp> = IMatchesRow<T>[] & {
         /**
          * regular expressions
          *
@@ -59,6 +63,5 @@ declare namespace execAll {
          */
         readonly lastIndex: number;
     };
-    const SYMBOL: unique symbol;
 }
 export = execAll;
