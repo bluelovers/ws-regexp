@@ -41,7 +41,7 @@ function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 			// @ts-ignore
 			rightContext: rightContext && RegExp.rightContext,
 
-			[SYMBOL]: matches,
+			[SYMBOL]: removeHiddenData ? null : matches,
 		}));
 
 		lastIndex = re.lastIndex;
