@@ -22,7 +22,6 @@ import {
 } from './lib/core';
 import { isRegExp } from 'regexp-helper';
 import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
-import merge from 'lodash/merge';
 import * as RegexpHelper from 'regexp-helper';
 import mergeOptions, { getSettingOptions, mergeOptions2 } from './lib/mergeOptions';
 import { parseRegularExpressionString } from './lib/getSource';
