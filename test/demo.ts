@@ -7,7 +7,10 @@ import createZhRegExpPlugin, { IZhRegExpPluginOptions } from 'regexp-cjk-plugin-
 
 let options: IZhRegExpPluginOptions = {
 	autoDeburr: true,
-}
+	autoFullHaif: true,
+	autoLocale: true,
+	autoVoice: true,
+};
 
 let re = new zhRegExp(/déjà vu/ui, {
 	on: [
