@@ -12,7 +12,7 @@ let options: IZhRegExpPluginOptions = {
 	autoVoice: true,
 };
 
-let re = new zhRegExp(/déjà vu/ui, {
+let re = new zhRegExp(/＊＋－．＼／？］［）（　／/ui, {
 	on: [
 		createZhRegExpPlugin(options)
 	],
