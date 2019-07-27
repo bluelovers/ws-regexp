@@ -131,6 +131,11 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 				case '\\-':
 				case '-':
 				case '\\\\':
+				case '－':
+				case '＼':
+				case '／':
+				case '［':
+				case '］':
 
 					arr = _coreFn(raw2, {
 						autoDeburr,
@@ -142,9 +147,15 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 					})
 						.map(v =>
 						{
-							if (v === '-')
+							switch (v)
 							{
-								return '\\-';
+								case '-':
+								case '\\':
+								case '/':
+								case '\/':
+								case '[':
+								case ']':
+									return '\\' + v;
 							}
 
 							return v === raw2 ? raw3 : v

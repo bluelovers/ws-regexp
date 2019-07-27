@@ -211,6 +211,217 @@ describe(relative(__filename), () =>
 				input: / déjà =<>\(\)\[\] \\ \/\?\.-\+\*vu[\-]/ui,
 				expected: `[ 　][dｄ][eé][jｊ][aà][ 　][=＝][<＜][>＞][(（][)）][\\[［][\\]］][ 　][\\\\＼][ 　][\\/／][?？][.．][\\-－][+＋][*＊][vｖ][uｕ][\\-]`,
 			},
+
+			{
+				title: null,
+				input: /／/ui,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: /　/ui,
+				expected: `[ 　]`,
+			},
+			{
+				title: null,
+				input: /（/ui,
+				expected: `[(（]`,
+			},
+			{
+				title: null,
+				input: /）/ui,
+				expected: `[)）]`,
+			},
+			{
+				title: null,
+				input: /［/ui,
+				expected: `[\\[［]`,
+			},
+			{
+				title: null,
+				input: /］/ui,
+				expected: `[\\]］]`,
+			},
+			{
+				title: null,
+				input: /？/ui,
+				expected: `[?？]`,
+			},
+			{
+				title: null,
+				input: /／/ui,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: /＼/ui,
+				expected: `[\\\\＼]`,
+			},
+			{
+				title: null,
+				input: /．/ui,
+				expected: `[.．]`,
+			},
+			{
+				title: null,
+				input: /－/ui,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /－/i,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /＋/ui,
+				expected: `[+＋]`,
+			},
+			{
+				title: null,
+				input: /＊/ui,
+				expected: `[*＊]`,
+			},
+
+			// -----------------
+
+			{
+				title: null,
+				input: /\//i,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: / /i,
+				expected: `[ 　]`,
+			},
+			{
+				title: null,
+				input: /\(/i,
+				expected: `[(（]`,
+			},
+			{
+				title: null,
+				input: /\)/i,
+				expected: `[)）]`,
+			},
+			{
+				title: null,
+				input: /\[/i,
+				expected: `[\\[［]`,
+			},
+			{
+				title: null,
+				input: /\]/i,
+				expected: `[\\]］]`,
+			},
+			{
+				title: null,
+				input: /\?/i,
+				expected: `[?？]`,
+			},
+			{
+				title: null,
+				input: /\//i,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: /\\/i,
+				expected: `[\\\\＼]`,
+			},
+			{
+				title: null,
+				input: /\./i,
+				expected: `[.．]`,
+			},
+			{
+				title: null,
+				input: /-/i,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /\-/i,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /\+/i,
+				expected: `[+＋]`,
+			},
+			{
+				title: null,
+				input: /\*/i,
+				expected: `[*＊]`,
+			},
+
+			{
+				title: null,
+				input: /／/i,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: /　/i,
+				expected: `[ 　]`,
+			},
+			{
+				title: null,
+				input: /（/i,
+				expected: `[(（]`,
+			},
+			{
+				title: null,
+				input: /）/i,
+				expected: `[)）]`,
+			},
+			{
+				title: null,
+				input: /［/i,
+				expected: `[\\[［]`,
+			},
+			{
+				title: null,
+				input: /］/i,
+				expected: `[\\]］]`,
+			},
+			{
+				title: null,
+				input: /？/i,
+				expected: `[?？]`,
+			},
+			{
+				title: null,
+				input: /／/i,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: /＼/i,
+				expected: `[\\\\＼]`,
+			},
+			{
+				title: null,
+				input: /．/i,
+				expected: `[.．]`,
+			},
+			{
+				title: null,
+				input: /－/i,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /＋/i,
+				expected: `[+＋]`,
+			},
+			{
+				title: null,
+				input: /＊/i,
+				expected: `[*＊]`,
+			},
+
 		].forEach(conf => {
 
 			let { title, input, expected } = conf;
