@@ -15,6 +15,13 @@ describe(relative(__filename), () =>
 {
 	let currentTest: Mocha.Test;
 
+	let allOptions: IZhRegExpPluginOptions = Object.freeze({
+		autoDeburr: true,
+		autoFullHaif: true,
+		autoLocale: true,
+		autoVoice: true,
+	});
+
 	beforeEach(function ()
 	{
 		currentTest = this.currentTest;
@@ -121,6 +128,111 @@ describe(relative(__filename), () =>
 				expect(actual.source).to.not.equal(source);
 			});
 		}
+
+	});
+
+	// @ts-ignore
+	describe(`escape`, () =>
+	{
+
+		[
+			{
+				title: null,
+				input: /\//ui,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: / /ui,
+				expected: `[ 　]`,
+			},
+			{
+				title: null,
+				input: /\(/ui,
+				expected: `[(（]`,
+			},
+			{
+				title: null,
+				input: /\)/ui,
+				expected: `[)）]`,
+			},
+			{
+				title: null,
+				input: /\[/ui,
+				expected: `[\\[［]`,
+			},
+			{
+				title: null,
+				input: /\]/ui,
+				expected: `[\\]］]`,
+			},
+			{
+				title: null,
+				input: /\?/ui,
+				expected: `[?？]`,
+			},
+			{
+				title: null,
+				input: /\//ui,
+				expected: `[\\/／]`,
+			},
+			{
+				title: null,
+				input: /\\/ui,
+				expected: `[\\\\＼]`,
+			},
+			{
+				title: null,
+				input: /\./ui,
+				expected: `[.．]`,
+			},
+			{
+				title: null,
+				input: /-/ui,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /\-/i,
+				expected: `[\\-－]`,
+			},
+			{
+				title: null,
+				input: /\+/ui,
+				expected: `[+＋]`,
+			},
+			{
+				title: null,
+				input: /\*/ui,
+				expected: `[*＊]`,
+			},
+			{
+				title: null,
+				input: / déjà =<>\(\)\[\] \\ \/\?\.-\+\*vu[\-]/ui,
+				expected: `[ 　][dｄ][eé][jｊ][aà][ 　][=＝][<＜][>＞][(（][)）][\\[［][\\]］][ 　][\\\\＼][ 　][\\/／][?？][.．][\\-－][+＋][*＊][vｖ][uｕ][\\-]`,
+			},
+		].forEach(conf => {
+
+			let { title, input, expected } = conf;
+
+			it(String(title || input), () => {
+
+				let source = input.source;
+
+				let actual = new zhRegExp(input, {
+					on: [
+						createZhRegExpPlugin(allOptions)
+					],
+				});
+
+				console.dir(actual);
+
+				expect(actual.source).to.not.equal(source);
+				expect(actual.source).to.equal(expected);
+
+			});
+
+		});
 
 	});
 });

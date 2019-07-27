@@ -4,7 +4,15 @@
 
 import { array_unique_overwrite } from 'array-hyper-unique'
 import StrUtil from 'str-util';
-import { FullHalfCore, toFullNumber, toHalfNumber, toFullEnglish, toHalfEnglish, toFullWidth, toHalfWidth } from 'str-util/lib/fullhalf';
+import {
+	FullHalfCore,
+	toFullNumber,
+	toHalfNumber,
+	toFullEnglish,
+	toHalfEnglish,
+	toFullWidth,
+	toHalfWidth,
+} from 'str-util/lib/fullhalf';
 import { _get as _getArrayTable } from 'cjk-conv/lib/zh/table/table';
 import { IOptionsOn } from 'regexp-cjk/lib/core';
 import UString from 'uni-string/src/core';
@@ -92,36 +100,92 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 
 		default(ast, eventName, ev)
 		{
-			const raw = ast.raw;
-
 			/**
 			 * 確保 此節點沒有被其他修改過
 			 */
-			if (astNotChanged(ast) && UString.size(raw) == 1)
+			if (!astNotChanged(ast))
 			{
-				let arr = _coreFn(raw, {
-					autoDeburr,
-					autoFullHaif,
-					autoLocale,
-					autoVoice,
-					cacheMap,
-					callback,
-				});
+				return;
+			}
 
-				if (arr && arr.length > 1)
-				{
-					ast.raw = '[' + arr.join('') + ']';
+			const raw = ast.raw;
+			let arr: string[];
 
-					/**
-					 * trigger change if not will not update node
-					 *
-					 * ev.emitChange(ast);
-					 * or
-					 * ev.emit(ParserEventEmitterEvent.change, , ast);
-					 */
-					ev.emitChange(ast);
-					//ev.emit(ParserEventEmitterEvent.change, , ast);
-				}
+			let raw2 = raw.replace(/^\\/, '');
+			let raw3: string = raw;
+
+			switch (raw)
+			{
+				case '\\.':
+				case '\\(':
+				case '\\)':
+				case '\\*':
+				case '\\?':
+				case '\\+':
+
+					raw3 = raw2;
+
+				case '\\[':
+				case '\\]':
+				case '\\/':
+				case '\\-':
+				case '-':
+				case '\\\\':
+
+					arr = _coreFn(raw2, {
+						autoDeburr,
+						autoFullHaif,
+						autoLocale,
+						autoVoice,
+						cacheMap,
+						callback,
+					})
+						.map(v =>
+						{
+							if (v === '-')
+							{
+								return '\\-';
+							}
+
+							return v === raw2 ? raw3 : v
+						})
+					;
+
+					break;
+				default:
+
+					if (UString.size(raw) == 1)
+					{
+						arr = _coreFn(raw, {
+							autoDeburr,
+							autoFullHaif,
+							autoLocale,
+							autoVoice,
+							cacheMap,
+							callback,
+						});
+					}
+					else
+					{
+						//console.dir(ast);
+					}
+
+					break;
+			}
+
+			if (arr && arr.length > 1)
+			{
+				ast.raw = '[' + arr.join('') + ']';
+
+				/**
+				 * trigger change if not will not update node
+				 *
+				 * ev.emitChange(ast);
+				 * or
+				 * ev.emit(ParserEventEmitterEvent.change, , ast);
+				 */
+				ev.emitChange(ast);
+				//ev.emit(ParserEventEmitterEvent.change, , ast);
 			}
 		},
 	}
