@@ -22,3 +22,4 @@ test
 /yarn-error.log
 *.ts
 !*.d.ts
+/tsconfig.tsbuildinfo

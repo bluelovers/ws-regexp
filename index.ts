@@ -51,6 +51,14 @@ export function toUnicode(charCode: number | string, noMerge?: boolean, wrap?: b
 	return _toUnicode(charCode, wrap);
 }
 
+export function toUnicode2(charCode: number | string, options: {
+	noMerge?: boolean,
+	wrap?: boolean
+} = {})
+{
+	return toUnicode(charCode, options.noMerge, options.wrap)
+}
+
 export function _toUnicode(charCode: number, wrap?: boolean)
 {
 	let hex = toHex(charCode);
@@ -112,6 +120,13 @@ export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean)
 	});
 }
 
+export function unicodeUnEscape2(string: string, options: {
+	noLeadingSolidus?: boolean,
+} = {})
+{
+	return unicodeUnEscape(string, options.noLeadingSolidus)
+}
+
 /**
  * @code
  * unicodeEscape('𠮷') // => '\\u{20bb7}'
@@ -129,6 +144,16 @@ export function unicodeEscape(string: string,
 
 		return noLeadingSolidus ? s.replace(/\\/, '') : s;
 	});
+}
+
+export function unicodeEscape2(string: string, options: {
+	noLeadingSolidus?: boolean,
+	noMerge?: boolean,
+	noWrap?: boolean,
+	filter?: RegExp
+} = {})
+{
+	return unicodeEscape(string, options.noLeadingSolidus, options.noMerge, options.noWrap, options.filter)
 }
 
 export function escapeRegExp(str: string)

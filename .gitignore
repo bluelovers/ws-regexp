@@ -25,3 +25,4 @@ tests/*.d.ts
 tests/temp*
 
 /yarn-error.log
+*.tsbuildinfo

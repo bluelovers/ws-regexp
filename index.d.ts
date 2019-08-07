@@ -13,6 +13,10 @@ export declare function toHex(n: number, toUpperCase?: boolean): string;
  * /[\ud842\udfb7]/u.test('𠮷')
  */
 export declare function toUnicode(charCode: number | string, noMerge?: boolean, wrap?: boolean): string;
+export declare function toUnicode2(charCode: number | string, options?: {
+    noMerge?: boolean;
+    wrap?: boolean;
+}): string;
 export declare function _toUnicode(charCode: number, wrap?: boolean): string;
 export declare function isDoubleUnicode(str: string): boolean;
 export declare function isRegExp<T extends RegExp>(r: T): T & RegExp;
@@ -38,11 +42,20 @@ export declare function surrogatePair(codepoint: number): [number, number] & {
  * unicodeUnEscape('\\u{20bb7}') // => '𠮷'
  */
 export declare function unicodeUnEscape(string: string, noLeadingSolidus?: boolean): string;
+export declare function unicodeUnEscape2(string: string, options?: {
+    noLeadingSolidus?: boolean;
+}): string;
 /**
  * @code
  * unicodeEscape('𠮷') // => '\\u{20bb7}'
  */
 export declare function unicodeEscape(string: string, noLeadingSolidus?: boolean, noMerge?: boolean, noWrap?: boolean, filter?: RegExp): string;
+export declare function unicodeEscape2(string: string, options?: {
+    noLeadingSolidus?: boolean;
+    noMerge?: boolean;
+    noWrap?: boolean;
+    filter?: RegExp;
+}): string;
 export declare function escapeRegExp(str: string): string;
 declare const _default: Readonly<typeof import(".")>;
 export default _default;
