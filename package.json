@@ -1,17 +1,38 @@
 {
   "name": "romaja",
   "version": "0.1.0",
-  "description": "",
+  "description": "String conversion utility to romanize Korean characters",
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
     "test:watch": "npx jest --watchAll",
     "test:coverage": "npx jest --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "alphabet",
+    "chosungul"
+    "hangeul",
+    "hangul",
+    "korean",
+    "language",
+    "romaja",
+    "romaji",
+    "romanization",
+    "transliteration",
+    "unicode"
+  ],
+  "author": "James Moon <mooniker@gmail.com>",
+  "license": "UNLICENSED",
   "devDependencies": {
     "jest": "^24.9.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooniker/romaja.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mooniker/romaja/issues"
+  },
+  "homepage": "https://github.com/mooniker/romaja#readme"
 }
