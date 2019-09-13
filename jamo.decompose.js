@@ -32,11 +32,19 @@ const getFinalJamo = syllable => {
   return finalConsonants[getFinalJamoIdx(syllable)];
 };
 
-const decompose = (syllable, start = START) => {
+const decomposeSyllable = syllable => {
   const initial = getInitialJamo(syllable);
   const medial = getMedialJamo(syllable);
   const final = getFinalJamo(syllable);
   return final ? [initial, medial, final] : [initial, medial];
 };
 
-module.exports = { getInitialJamo, getMedialJamo, getFinalJamo, decompose };
+const decompose = word => word.split("").map(decomposeSyllable);
+
+module.exports = {
+  getInitialJamo,
+  getMedialJamo,
+  getFinalJamo,
+  decomposeSyllable,
+  decompose
+};

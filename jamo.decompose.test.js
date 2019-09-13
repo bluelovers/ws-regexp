@@ -67,22 +67,29 @@ describe("Jamo decompose", () => {
   });
 
   test("should extract ㅎ, ㅏ, ㄴ from 한 (54620)", () => {
-    expect(decompose("한")).toStrictEqual(["ㅎ", "ㅏ", "ㄴ"]);
+    expect(decompose("한")).toStrictEqual([["ㅎ", "ㅏ", "ㄴ"]]);
   });
 
   test("should extract ㄱ, ㅜ, ㄱ from 국", () => {
-    expect(decompose("국")).toStrictEqual(["ㄱ", "ㅜ", "ㄱ"]);
+    expect(decompose("국")).toStrictEqual([["ㄱ", "ㅜ", "ㄱ"]]);
   });
 
   test("should extract ㅁ, ㅏ, ㄹ from 말", () => {
-    expect(decompose("말")).toStrictEqual(["ㅁ", "ㅏ", "ㄹ"]);
+    expect(decompose("말")).toStrictEqual([["ㅁ", "ㅏ", "ㄹ"]]);
   });
 
   test("should extract ㅁ, ㅜ, ㄴ from 문", () => {
-    expect(decompose("문")).toStrictEqual(["ㅁ", "ㅜ", "ㄴ"]);
+    expect(decompose("문")).toStrictEqual([["ㅁ", "ㅜ", "ㄴ"]]);
   });
 
   test("should extract ㅁ, ㅐ, ㅇ from 맹", () => {
-    expect(decompose("맹")).toStrictEqual(["ㅁ", "ㅐ", "ㅇ"]);
+    expect(decompose("맹")).toStrictEqual([["ㅁ", "ㅐ", "ㅇ"]]);
+  });
+
+  test("should extract [[ㅁ, ㅜ, ㄴ],[ㅁ, ㅐ, ㅇ]] from 문맹", () => {
+    expect(decompose("문맹")).toStrictEqual([
+      ["ㅁ", "ㅜ", "ㄴ"],
+      ["ㅁ", "ㅐ", "ㅇ"]
+    ]);
   });
 });

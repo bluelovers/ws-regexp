@@ -1,12 +1,12 @@
 const { HANGUL_SYLLABLE_BLOCK } = require("./constants");
 const { START, END } = HANGUL_SYLLABLE_BLOCK;
-const { decompose } = require("./jamo.decompose");
+const { decomposeSyllable } = require("./jamo.decompose");
 const rr = require("./jamo.rr");
 const isHangul = char =>
   char.charCodeAt(0) >= START && char.charCodeAt(0) <= END;
 
 const toRomaja = char => {
-  return decompose(char)
+  return decomposeSyllable(char)
     .map((jamo, idx) => {
       try {
         const geulja = rr[jamo].rr;
