@@ -1,3 +1,4 @@
+// choseong
 const initialConsonants = [
   "ㄱ", // 0
   "ㄲ",
@@ -20,6 +21,7 @@ const initialConsonants = [
   "ㅎ"
 ];
 
+// jungseong
 const medialVowels = [
   "ㅏ",
   "ㅐ",
@@ -44,6 +46,7 @@ const medialVowels = [
   "ㅣ"
 ];
 
+// jongseong
 const finalConsonants = [
   null,
   "ㄱ",

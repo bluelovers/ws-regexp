@@ -186,5 +186,9 @@ module.exports = {
     rrt: "Jo-seon Min-ju-ju-ui In-min Gong-hwa-gug",
     ck: "Чосон Минчучуыи Инмин Конъхвакук",
     ckr: "Choson Minchuchu'i Inmin Kon'hvakuk"
+  },
+  훈민정음: {
+    rr: "Hunminjeong'eum",
+    rrt: "Hun-min-jeong-eum"
   }
 };
