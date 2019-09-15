@@ -1,60 +1,105 @@
 module.exports = {
   // simple vowels
-  ㅏ: { rr: "a", mr: "a" },
+  ㅏ: "a",
   ㅓ: { rr: "eo", mr: "ŏ" },
-  ㅗ: { rr: "o", mr: "o" },
-  ㅜ: { rr: "u" },
+  ㅗ: "o",
+  ㅜ: "u",
   ㅡ: { rr: "eu", mr: "ŭ" },
-  ㅣ: { rr: "i" },
-  ㅐ: { rr: "ae", mr: "ae" },
-  ㅔ: { rr: "e", mr: "e" },
+  ㅣ: "i",
+  ㅐ: "ae",
+  ㅔ: "e",
   ㅚ: { rr: "oe" },
   ㅟ: { rr: "w" },
   // Diphtongs
-  ㅑ: { rr: "ya", mr: "ya" },
+  ㅑ: "ya",
   ㅕ: { rr: "yeo", mr: "yŏ" },
-  ㅛ: { rr: "yo" },
-  ㅠ: { rr: "yu" },
-  ㅒ: { rr: "yae", mr: "yae" },
-  ㅖ: { rr: "ye", mr: "ye" },
-  ㅘ: { rr: "wa" },
-  ㅙ: { rr: "wae" },
-  ㅟ: { rr: "wi" },
+  ㅛ: "yo",
+  ㅠ: "yu",
+  ㅒ: "yae",
+  ㅖ: "ye",
+  ㅘ: "wa",
+  ㅙ: "wae",
+  ㅟ: "wi",
   ㅝ: { rr: "wo", mr: "wŏ" },
-  ㅞ: { rr: "we" },
+  ㅞ: "we",
   ㅢ: { rr: "ui", mr: "ŭi" },
   // Plosives (stops)
-  ㄱ: { rr: ["g", "k"], mr: "k" },
-  // ㄱ: { rr: "g" },
-  ㄲ: { rr: ["kk", "k"] },
-  // ㄲ: { rr: "kk" },
-  ㅋ: { rr: "k" },
-  ㄷ: { rr: ["d", "t"] },
-  // ㄷ: { rr: "d" },
-  // ㄸ: { rr: ["tt", '-'] },
-  ㄸ: { rr: "tt" },
-  ㅌ: { rr: "t" },
-  ㅂ: { rr: ["b", "p"] },
-  // ㅂ: { rr: "b" },
-  ㅃ: { rr: "pp" },
-  ㅍ: { rr: "p" },
+  ㄱ: {
+    rr: [
+      "g",
+      {
+        default: "k",
+        ㅇ: "g",
+        ㄴ: "ngn",
+        ㄹ: "ngn",
+        ㅁ: "ngm",
+        ㅎ: "kh, k"
+      }
+    ],
+    mr: "k"
+  },
+  ㄲ: ["kk", "k"],
+  ㅋ: "k",
+  ㄷ: [
+    "d",
+    {
+      default: "t",
+      ㅇ: ["d", "j"],
+      ㄴ: "nn",
+      ㄹ: "nn",
+      ㅁ: "nm",
+      ㅌ: "t-t",
+      ㅎ: ["th", "t", "ch"]
+    }
+  ],
+  ㄸ: "tt",
+  ㅌ: [
+    "t",
+    {
+      default: "t",
+      ㅇ: ["t", "ch"],
+      ㄴ: "nn",
+      ㄹ: "nn",
+      ㅁ: "nm",
+      ㅌ: "t-t",
+      ㅎ: ["th", "t", "ch"]
+    }
+  ],
+  ㅂ: [
+    "b",
+    { default: "p", ㅇ: "b", ㄴ: "mn", ㄹ: "mn", ㅁ: "mm", ㅎ: ["ph", "p"] }
+  ],
+  ㅃ: "pp",
+  ㅍ: "p",
   // Affricates
-  ㅈ: { rr: "j" },
-  ㅉ: { rr: "jj" },
-  ㅊ: { rr: ["ch", "t"] },
-  // ㅊ: { rr: "ch" },
+  ㅈ: [
+    "j",
+    { "": "t", ㄴ: "nn", ㄹ: "nn", ㅁ: "nm", ㅌ: "t-t", ㅎ: ["th", "t", "ch"] }
+  ],
+  ㅉ: "jj",
+  ㅊ: [
+    "ch",
+    {
+      default: "t",
+      ㅇ: "ch",
+      ㄴ: "nn",
+      ㄹ: "nn",
+      ㅁ: "nm",
+      ㅌ: "t-t",
+      ㅎ: ["th", "t", "ch"]
+    }
+  ],
   // Fricatives
-  ㅅ: { rr: "s" },
-  ㅆ: { rr: "ss" },
-  ㅎ: { rr: "h" },
+  ㅅ: ["s", { default: "s", ㅇ: "s", ㄴ: "nn", ㄹ: "nn", ㅁ: "nm" }],
+  ㅆ: "ss",
+  ㅎ: ["h", { default: "h", ㅇ: "h", ㄴ: "nn", ㄹ: "nn", ㅁ: "nm" }],
   // Nasals
-  ㄴ: { rr: "n" },
-  ㅁ: { rr: "m" },
-  ㅇ: { rr: [null, "ng"] },
-  // ㅇ: { rr: "/ng" },
+  ㄴ: ["n", { default: "n", ㄱ: "n-g", ㄹ: ["ll", "nn"] }],
+  ㅁ: "m",
+  ㅇ: [null, { default: "ng", ㅇ: "ng-", ㄹ: "ngn" }],
   // Liquids
-  ㄹ: { rr: ["r", "l"] },
-  // ㄹ: { rr: "r/l" },
+  ㄹ: ["r", "l"],
   // composite jamo
-  ㄺ: { rr: "lg" }
+  ㄺ: "lg",
+  null: ""
 };
