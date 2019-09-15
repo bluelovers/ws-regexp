@@ -1,5 +1,5 @@
 const { decomposeSyllable } = require("./jamo.decompose");
-const { HANGUL } = require("./constants");
+const { HANGUL } = require("./unicode-blocks");
 const [START, END] = HANGUL.SYLLABLES;
 const rr = require("./jamo.rr");
 const isHangul = char =>

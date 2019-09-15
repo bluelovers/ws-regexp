@@ -1,7 +1,7 @@
 // The precomposed hangul syllables in the Hangul Syllables block in Unicode are algorithmically defined, using the following formula:
 // [(initial) × 588 + (medial) × 28 + (final)] + 44032
 
-const { HANGUL } = require("./constants");
+const { HANGUL } = require("./unicode-blocks");
 const [START] = HANGUL.SYLLABLES;
 
 const { initialConsonants, medialVowels, finalConsonants } = require("./jamo");

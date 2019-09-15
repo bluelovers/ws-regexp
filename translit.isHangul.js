@@ -1,4 +1,4 @@
-const { HANGUL } = require("./constants");
+const { HANGUL } = require("./unicode-blocks");
 
 const isHangul = char => {
   if (typeof char !== "string") {

@@ -1,6 +1,6 @@
 const isHangul = require("./translit.isHangul");
 const jamoLib = require("./jamo");
-const { BASIC_LATIN, CJK_UNIFIED_IDEOGRAPHS } = require("./constants");
+const { BASIC_LATIN, CJK_UNIFIED_IDEOGRAPHS } = require("./unicode-blocks");
 
 describe("isHangul", () => {
   test("should return null for a nonstring input", () => {
