@@ -1,6 +1,6 @@
-const { HANGUL_SYLLABLE_BLOCK } = require("./constants");
-const { START, END } = HANGUL_SYLLABLE_BLOCK;
 const { decomposeSyllable } = require("./jamo.decompose");
+const { HANGUL } = require("./constants");
+const [START, END] = HANGUL.SYLLABLES;
 const rr = require("./jamo.rr");
 const isHangul = char =>
   char.charCodeAt(0) >= START && char.charCodeAt(0) <= END;

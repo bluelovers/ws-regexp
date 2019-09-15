@@ -27,7 +27,8 @@
   "author": "James Moon <mooniker@gmail.com>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "unicode": "^12.1.0"
   },
   "dependencies": {},
   "repository": {
