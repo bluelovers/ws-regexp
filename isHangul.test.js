@@ -1,4 +1,4 @@
-const isHangul = require("./translit.isHangul");
+const isHangul = require("./isHangul");
 const jamoLib = require("./jamo");
 const { BASIC_LATIN, CJK_UNIFIED_IDEOGRAPHS } = require("./unicode-blocks");
 
@@ -6,7 +6,7 @@ describe("isHangul", () => {
   test("should return null for a nonstring input", () => {
     expect(isHangul()).toBeNull();
   });
-  
+
   // test every letter in the jamo library
   Object.entries(jamoLib).forEach(testJamoSet);
 
@@ -21,7 +21,7 @@ describe("isHangul", () => {
     }
   });
 
-  // test very CJK ideograph
+  // test every Chinese/Japanese/Korean ideograph in Unicode block
   describe("CJK unified characters", () => {
     const [start, stop] = CJK_UNIFIED_IDEOGRAPHS;
     for (let charCode = start; charCode <= stop; charCode += 1) {

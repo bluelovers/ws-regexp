@@ -1,6 +1,6 @@
-const isHangul = require("./translit.isHangul");
+const isHangul = require("./isHangul");
 
-const romanize = require("./jamo.rr");
+const romanize = require("./jamo-to-roman");
 
 const translitJamo = (input, position = 0, prev, method = "rr") => {
   // if given input is hangul, kick off romanization lookup

@@ -1,4 +1,4 @@
-const translitJamo = require("./translit.jamo");
+const translitJamo = require("./romanize.jamo");
 
 describe("translitJamo", () => {
   test("should transliterate j as j", () => {
