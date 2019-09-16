@@ -66,39 +66,67 @@ describe("Jamo decompose", () => {
     expect(getFinalJamo("맹")).toBe("ㅇ");
   });
 
-  test("should extract ㅎ, ㅏ, ㄴ from 한 (54620)", () => {
+  test("should extract [[ㅎ,ㅏ,ㄴ]] from 한", () => {
     expect(decompose("한")).toStrictEqual([["ㅎ", "ㅏ", "ㄴ"]]);
   });
 
-  test("should extract ㄱ, ㅜ, ㄱ from 국", () => {
+  test("should extract [[ㄱ,ㅜ,ㄱ]] from 국", () => {
     expect(decompose("국")).toStrictEqual([["ㄱ", "ㅜ", "ㄱ"]]);
   });
 
-  test("should extract ㅁ, ㅏ, ㄹ from 말", () => {
+  test("should extract [[ㅁ,ㅏ,ㄹ]] from 말", () => {
     expect(decompose("말")).toStrictEqual([["ㅁ", "ㅏ", "ㄹ"]]);
   });
 
-  test("should extract ㅁ, ㅜ, ㄴ from 문", () => {
+  test("should extract [[ㅁ,ㅜ,ㄴ]] from 문", () => {
     expect(decompose("문")).toStrictEqual([["ㅁ", "ㅜ", "ㄴ"]]);
   });
 
-  test("should extract ㅁ, ㅐ, ㅇ from 맹", () => {
+  test("should extract [[ㅁ,ㅐ,ㅇ]] from 맹", () => {
     expect(decompose("맹")).toStrictEqual([["ㅁ", "ㅐ", "ㅇ"]]);
   });
 
-  test("should extract [[ㅁ, ㅜ, ㄴ],[ㅁ, ㅐ, ㅇ]] from 문맹", () => {
+  test("should extract [[ㅁ,ㅜ,ㄴ],[ㅁ,ㅐ,ㅇ]] from 문맹", () => {
     expect(decompose("문맹")).toStrictEqual([
       ["ㅁ", "ㅜ", "ㄴ"],
       ["ㅁ", "ㅐ", "ㅇ"]
     ]);
   });
 
-  test("should extract [[ㅇ,ㅝ,ㄹ],[ㄴ,ㅏ,ㅁ],[ㅎ,ㅏ],[ㄷ,ㅏ]]", () => {
+  test("should extract [ㅁ,ㅜ,ㄴ,ㅁ,ㅐ,ㅇ] (flattened) from 문맹", () => {
+    expect(decompose("문맹", { flat: true })).toStrictEqual([
+      "ㅁ",
+      "ㅜ",
+      "ㄴ",
+      "ㅁ",
+      "ㅐ",
+      "ㅇ"
+    ]);
+  });
+
+  test("should extract [[ㅇ,ㅝ,ㄹ],[ㄴ,ㅏ,ㅁ],[ㅎ,ㅏ],[ㄷ,ㅏ]] from 월남하다", () => {
     expect(decompose("월남하다")).toStrictEqual([
       ["ㅇ", "ㅝ", "ㄹ"],
       ["ㄴ", "ㅏ", "ㅁ"],
       ["ㅎ", "ㅏ"],
       ["ㄷ", "ㅏ"]
+    ]);
+  });
+
+  test("should extract [ㅇ,ㅝ,ㄹ,ㄴ,ㅏ,ㅁ,ㅎ,ㅏ,ㄷ,ㅏ] (flattened) from 월남하다", () => {
+    const decomposed = decompose("월남하다", { flat: true });
+    expect(decomposed).toHaveLength(10);
+    expect(decomposed).toStrictEqual([
+      "ㅇ",
+      "ㅝ",
+      "ㄹ",
+      "ㄴ",
+      "ㅏ",
+      "ㅁ",
+      "ㅎ",
+      "ㅏ",
+      "ㄷ",
+      "ㅏ"
     ]);
   });
 });

@@ -39,7 +39,14 @@ const decomposeSyllable = syllable => {
   return final ? [initial, medial, final] : [initial, medial];
 };
 
-const decompose = word => word.split("").map(decomposeSyllable);
+const decompose = (word, options = {}) => {
+  const syllabary = word.split("").map(decomposeSyllable);
+  return options.flat || options.flatten
+    ? // Array.flat() from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat#reduce_and_concat
+      syllabary.reduce((acc, val) => acc.concat(val), [])
+    : // as is
+      syllabary;
+};
 
 module.exports = {
   getInitialJamo,
