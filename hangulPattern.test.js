@@ -1,4 +1,4 @@
-const hangulPattern = require("./romanize.hangulPattern");
+const hangulPattern = require("./hangulPattern");
 const { HANGUL } = require("./unicode-blocks");
 
 const hangulBlockBoundaryRegex = () =>
