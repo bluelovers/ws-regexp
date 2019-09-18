@@ -3,8 +3,34 @@ const jamoLib = require("./jamo");
 const { BASIC_LATIN, CJK_UNIFIED_IDEOGRAPHS } = require("./unicode-blocks");
 
 describe("isHangul", () => {
-  test("should return null for a nonstring input", () => {
-    expect(isHangul()).toBeNull();
+  describe("should return null", () => {
+    test("for an undefined input", () => {
+      expect(isHangul()).toBeNull();
+    });
+
+    test("for a null input", () => {
+      expect(isHangul(null)).toBeNull();
+    });
+
+    test("for an object input", () => {
+      expect(isHangul({})).toBeNull();
+    });
+
+    test("for a number input", () => {
+      expect(isHangul(1945)).toBeNull();
+    });
+  });
+
+  test("should return truthy for ㄱ", () => {
+    expect(isHangul("ㄱ")).toBeTruthy();
+  });
+
+  test("should return truthy for ㅏ", () => {
+    expect(isHangul("ㅏ")).toBeTruthy();
+  });
+
+  test("should return truthy for 가", () => {
+    expect(isHangul("가")).toBeTruthy();
   });
 
   // test every letter in the jamo library
