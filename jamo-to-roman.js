@@ -74,7 +74,14 @@ module.exports = {
   // Affricates
   ㅈ: [
     "j",
-    { "": "t", ㄴ: "nn", ㄹ: "nn", ㅁ: "nm", ㅌ: "t-t", ㅎ: ["th", "t", "ch"] }
+    {
+      default: "t",
+      ㄴ: "nn",
+      ㄹ: "nn",
+      ㅁ: "nm",
+      ㅌ: "t-t",
+      ㅎ: ["th", "t", "ch"]
+    }
   ],
   ㅉ: "jj",
   ㅊ: [

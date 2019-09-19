@@ -1,58 +1,44 @@
-const translitJamo = require("./romanize.jamo");
+const romanizeJamo = require("./romanize.jamo");
 
-describe("translitJamo", () => {
-  test("should transliterate j as j", () => {
-    expect(translitJamo("j")).toBe("j");
+describe("romanizeJamo", () => {
+  describe("should let be already Roman/romanized strings as is", () => {
+    ["j", "jamo", "Romaja", "string"].forEach(str => {
+      test(str, () => {
+        expect(romanizeJamo(str)).toBe(str);
+      });
+    });
   });
 
-  test("should transliterate g as g", () => {
-    expect(translitJamo("g")).toBe("g");
+
+  // describe('should romanize 가"')
+
+  test("should romanize ㅈ as j", () => {
+    expect(romanizeJamo("ㅈ")).toBe("j");
   });
 
-  test("should transliterate b as b", () => {
-    expect(translitJamo("b")).toBe("b");
-  });
-
-  test("should transliterate [d,t] as d", () => {
-    // expect(translitJamo(["d", "t"])).toBe("d");
-    expect(translitJamo(["d", "t"])).toBe("d");
-  });
-
-  test("should transliterate [d,t] as d", () => {
-    expect(translitJamo(["d", "t"], 1)).toBe("t");
-  });
-
-  test("should transliterate ㅈ as j", () => {
-    expect(translitJamo("ㅈ")).toBe("j");
-  });
-
-  test("should transliterate ㅈ as j", () => {
-    expect(translitJamo("ㅈ")).toBe("j");
-  });
-
-  describe("ㄷ", () => {
-    test("should transliterate ㄷ as initial as d", () => {
-      expect(translitJamo("ㄷ")).toBe("d");
+  describe("should romanize ㄷ", () => {
+    test("as initial as d", () => {
+      expect(romanizeJamo("ㄷ")).toBe("d");
     });
 
-    test("should transliterate ㄷ as final as t", () => {
-      expect(translitJamo("ㄷ", 2)).toBe("t");
+    test("as final as t", () => {
+      expect(romanizeJamo("ㄷ", 2)).toBe("t");
     });
 
-    test("should transliterate final ㄷ followed by initial ㄴ as d", () => {
-      expect(translitJamo("ㄷ", 2, "ㄴ")).toBe("nn");
+    test("followed by initial ㄴ as d", () => {
+      expect(romanizeJamo("ㄷ", 2, "ㄴ")).toBe("nn");
     });
 
-    test("should transliterate final ㄷ followed by initial ㄴ as d", () => {
-      expect(translitJamo("ㄷ", 2, "ㄹ")).toBe("nn");
+    test("followed by initial ㄴ as d", () => {
+      expect(romanizeJamo("ㄷ", 2, "ㄹ")).toBe("nn");
     });
 
-    test("should transliterate final ㄷ followed by initial ㅁ as d", () => {
-      expect(translitJamo("ㄷ", 2, "ㅁ")).toBe("nm");
+    test("followed by initial ㅁ as d", () => {
+      expect(romanizeJamo("ㄷ", 2, "ㅁ")).toBe("nm");
     });
 
-    test("should transliterate final ㄷ followed by initial ㅌ as d", () => {
-      expect(translitJamo("ㄷ", 2, "ㅌ")).toBe("t-t");
+    test("followed by initial ㅌ as d", () => {
+      expect(romanizeJamo("ㄷ", 2, "ㅌ")).toBe("t-t");
     });
   });
 });

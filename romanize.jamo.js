@@ -1,11 +1,19 @@
 const isHangul = require("./isHangul");
 
-const romanize = require("./jamo-to-roman");
+const roman = require("./jamo-to-roman");
 
-const translitJamo = (input, position = 0, prev, method = "rr") => {
-  // if given input is hangul, kick off romanization lookup
-  if (isHangul(input)) {
-    return lookup(romanize[input]);
+const romanizeJamo = (input, idx, next, method = "rr") => {
+  if (!method) {
+    throw new Error("Invalid method for " + input);
+  }
+  // if given input is hangul, look up jamo in dictionarys
+  if (isHangul(input) && roman[input]) {
+    // console.log({ roman: roman[input] });
+    return lookup(roman[input]);
+  }
+
+  if (!input) {
+    throw new Error(`${input} not recognized.`);
   }
 
   // else if string, assume romanization completed
@@ -16,20 +24,34 @@ const translitJamo = (input, position = 0, prev, method = "rr") => {
   // if input from lookup is array
   // transliteration depends on jamo position
   if (Array.isArray(input)) {
-    const i = position && position > 0 ? 1 : 0;
-    return lookup(input[i]);
-  }
-
-  if (typeof input !== "object") {
-    throw new Error("Nonobject should not get here.", input, typeof input);
+    const isJongseong = !idx ? 0 : 1;
+    if (!input[isJongseong]) {
+      throw new Error("Invalid jamo position", input);
+    }
+    return lookup(input[isJongseong]);
   }
 
   // if provided jamo lookup object has key for requested method
-  return lookup(input[method] || input[prev] || input["default"]);
+  if (method && input[method]) {
+    return lookup(input[method]);
+  }
+
+  if (next && input[next]) {
+    return lookup(input[next]);
+  }
+
+  if (!input.default) {
+    throw new Error("Default jongseong not found");
+  }
+
+  return lookup(input.default);
 
   function lookup(key) {
-    return translitJamo(key, position, prev, method);
+    if (!method) {
+      console.log("why", { method });
+    }
+    return romanizeJamo(key, idx, next, method);
   }
 };
 
-module.exports = translitJamo;
+module.exports = romanizeJamo;
