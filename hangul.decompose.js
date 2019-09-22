@@ -1,29 +1,50 @@
-// 3.12 Conjoining Jamo Behavior
+// Common constraints (based on the pseudocode provided in the Unicode spec):
 
 const SBase = 0xac00;
 const LBase = 0x1100;
 const VBase = 0x1161;
-const TBase = 0x11a7; // one less than the beginning of the range of trailing consonants
+
+const TBase = 0x11a7; // one less than the beginning of the range of trailing consonants, which starts at 0x11a8
 const LCount = 19;
-// one more than the number of trailing consonants relevant to the decomposition algorithm: : (0x11C2 - 0x11A8 + 1) + 1
 const VCount = 21;
-const TCount = 28;
-// number of precomposed Hangul syllables starting with the same leading consonant, counting both the LV_Syllables and the LVT_Syllables for each possible trailing consonant
+const TCount = 28; // one more than the number of trailing consonants relevant to the decomposition algorithm: (0x11C2 - 0x11A8 + 1) + 1
+
+/*
+Number of precomposed Hangul syllables starting with the same leading consonant, counting both
+- LV_Syllables and
+- LVT_Syllables
+for each possible trailing consonant
+*/
 const NCount = VCount * TCount; // 588
+
+// Total number of precomposed Hangul syllables
 const SCount = LCount * NCount; // 11172 - total number of precomposed Hangul syllables
 
-function arithmeticDecompositionMapingLV(s) {
-  const SIndex = s - SBase;
+/**
+ * Returns an integer division quotient (rounded down)
+ *
+ * @param {number} dividend
+ * @param {number} divisor
+ */
+const intDiv = (dividend, divisor) => Math.floor(dividend / divisor);
 
-  const LIndex = Math.floor(SIndex / NCount); // integer division rounded down
-  const VIndex = Math.floor((SIndex % NCount) / TCount);
+/**
+ *
+ * @param {(string|integer)} s
+ * @returns {integer}
+ */
+function arithmeticDecompositionMappingLV(s) {
+  const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
+
+  const LIndex = intDiv(SIndex, NCount); // integer division rounded down
+  const VIndex = intDiv(SIndex % NCount, TCount);
   const LPart = LBase + LIndex;
   const VPart = VBase + VIndex;
   return [LPart, VPart];
 }
 
-function arithmeticDecompositionMapingLVT(s) {
-  const SIndex = s - SBase;
+function arithmeticDecompositionMappingLVT(s) {
+  const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
 
   const LVIndex = (SIndex / TCount) * TCount;
   const TIndex = SIndex % TCount;
@@ -33,28 +54,43 @@ function arithmeticDecompositionMapingLVT(s) {
   return [LVPart, TPart];
 }
 
-function fullCanonicalDecomposition(s) {
-  const SIndex = s.charCodeAt(0) - SBase;
+/**
+ * Returns a canonical decomposition of a precomposed/composite Hangul syllable
+ * using the algorithm described in the Unicode Standard, which is to say,
+ * returns the code points for the individual letters (jamo) for a given Hangul
+ * character's code point.
+ *
+ * The algorithm is described the core specification (v. 12.1, Chapter 3) in the section "3.12 Conjoining Jamo Behavior" (pp. 142-151).
+ *
+ * @param {(string|integer)} s
+ * @returns {array}
+ */
+function decomposeHangulChar(s) {
+  const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
 
-  const LIndex = Math.floor(SIndex / NCount);
-  const VIndex = Math.floor((SIndex % NCount) / TCount);
+  const LVPart = arithmeticDecompositionMappingLV(s);
   const TIndex = SIndex % TCount;
-  const LPart = LBase + LIndex;
-  const VPart = VBase + VIndex;
 
   if (TIndex > 0) {
     const TPart = TBase + TIndex;
-    return [LPart, VPart, TPart];
+    return LVPart.concat([TPart]);
   }
 
-  return [LPart, VPart];
+  return LVPart;
 }
 
-// const hexToUnicodeChar = hex => String.fromCodePoint(hex);
+/**
+ * Returns a mapping of each Hangul character provided to an array of code points for the decomposed letters (jamo)
+ *
+ * @param {string} word
+ * @returns {array}
+ */
+const decomposeHangul = word => [...word].map(decomposeHangulChar);
 
 module.exports = {
-  arithmeticDecompositionMapingLV,
-  arithmeticDecompositionMapingLVT,
-  fullCanonicalDecomposition
-  //   hexToUnicodeChar
+  intDiv,
+  arithmeticDecompositionMappingLV,
+  arithmeticDecompositionMappingLVT,
+  decomposeHangulChar,
+  decomposeHangul
 };
