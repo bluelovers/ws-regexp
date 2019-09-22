@@ -29,9 +29,10 @@ const SCount = LCount * NCount; // 11172 - total number of precomposed Hangul sy
 const intDiv = (dividend, divisor) => Math.floor(dividend / divisor);
 
 /**
- *
+ * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
+ * 
  * @param {(string|integer)} s
- * @returns {integer}
+ * @returns {array}
  */
 function arithmeticDecompositionMappingLV(s) {
   const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
@@ -43,6 +44,12 @@ function arithmeticDecompositionMappingLV(s) {
   return [LPart, VPart];
 }
 
+/**
+ * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LVT" Hangul syllable types
+ * 
+ * @param {(string|integer)} s
+ * @returns {array}
+ */
 function arithmeticDecompositionMappingLVT(s) {
   const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
 
@@ -56,11 +63,17 @@ function arithmeticDecompositionMappingLVT(s) {
 
 /**
  * Returns a canonical decomposition of a precomposed/composite Hangul syllable
- * using the algorithm described in the Unicode Standard, which is to say,
- * returns the code points for the individual letters (jamo) for a given Hangul
- * character's code point.
+ * 
+ * Based on "Full Canonical Decomposition" as described in Unicode core spec as
+ * a recursive application of canonical decomposition mappings.
+ * 
+ * In other words:
+ * 
+ * This function returns the code points for the letters (jamo) derived
+ * algorithmically from a given Hangul syllable's code point.
  *
- * The algorithm is described the core specification (v. 12.1, Chapter 3) in the section "3.12 Conjoining Jamo Behavior" (pp. 142-151).
+ * The algorithm is described the core specification (v. 12.1, Chapter 3) in
+ * the section "3.12 Conjoining Jamo Behavior" (pp. 142-151).
  *
  * @param {(string|integer)} s
  * @returns {array}
