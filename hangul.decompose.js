@@ -17,7 +17,7 @@ const intDiv = (dividend, divisor) => Math.floor(dividend / divisor);
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
- * 
+ *
  * @param {(string|integer)} s
  * @returns {array}
  */
@@ -33,7 +33,7 @@ function arithmeticDecompositionMappingLV(s) {
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LVT" Hangul syllable types
- * 
+ *
  * @param {(string|integer)} s
  * @returns {array}
  */
@@ -49,18 +49,18 @@ function arithmeticDecompositionMappingLVT(s) {
 }
 
 /**
- * Returns a canonical decomposition of a precomposed/composite Hangul syllable
- * 
- * Based on "Full Canonical Decomposition" as described in Unicode core spec as
- * a recursive application of canonical decomposition mappings.
- * 
- * In other words:
- * 
- * This function returns the code points for the letters (jamo) derived
- * algorithmically from a given Hangul syllable's code point.
+ * Derives a canonical decomposition of a precomposed/composite Hangul syllable
  *
- * The algorithm is described the core specification (v. 12.1, Chapter 3) in
- * the section "3.12 Conjoining Jamo Behavior" (pp. 142-151).
+ * Based on "Full Canonical Decomposition" as described in Unicode core
+ * specification for canonical decomposition mappings.
+ *
+ * In other words:
+ *
+ * This function computes the code points for the Hangul letters (jamo) derived
+ * algorithmically for a given Hangul syllable's code point.
+ *
+ * The algorithm is described in the core spec (v. 12.1, Chapter 3), under section
+ * "3.12 Conjoining Jamo Behavior" (pp. 142-151).
  *
  * @param {(string|integer)} s
  * @returns {array}
