@@ -3,7 +3,7 @@ const {
   arithmeticDecompositionMappingLVT,
   decomposeHangulChar,
   decomposeHangul
-} = require("./hangul.decompose");
+} = require("./decompose");
 
 const hangulHexCases = {
   훈: [0x1112, 0x116e, 0x11ab],

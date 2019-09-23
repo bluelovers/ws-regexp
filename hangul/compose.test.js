@@ -1,4 +1,4 @@
-const { arithmeticPrimaryCompositeMapping } = require("./hangul.compose");
+const { arithmeticPrimaryCompositeMapping } = require("./compose");
 
 describe("arithmeticPrimaryCompositeMapping", () => {
   test(`should compose (0x1111, 0x1171, 0x11b6) ${String.fromCodePoint(

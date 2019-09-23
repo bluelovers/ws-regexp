@@ -1,4 +1,4 @@
-const { getHangulCharName } = require("./hangul.characterNameGeneration");
+const { getHangulCharName } = require("./characterNameGeneration");
 const lo = require("unicode/category/Lo");
 
 const hangulCharNames = {

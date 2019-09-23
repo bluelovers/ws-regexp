@@ -3,13 +3,13 @@ const {
   computeLIndex,
   computeVIndex,
   computeTIndex
-} = require("./hangul.computations");
+} = require("./computations");
 
 const {
   JAMO_L_TABLE,
   JAMO_V_TABLE,
   JAMO_T_TABLE
-} = require("./hangul.shortNames");
+} = require("./shortNames");
 
 /**
  * Generates a letter/jamo-derived short name for a given precomposed Hangul syllable

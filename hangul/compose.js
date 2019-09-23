@@ -5,7 +5,7 @@ const {
   TBase,
   NCount,
   TCount
-} = require("./hangul.constraints");
+} = require("./constraints");
 
 /**
  * Computes a precomposed/composite syllable mapping for a given a Hangul letter (jamo) sequence

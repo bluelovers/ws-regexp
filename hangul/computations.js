@@ -1,4 +1,4 @@
-const { SBase, NCount, TCount, SCount } = require("./hangul.constraints");
+const { SBase, NCount, TCount, SCount } = require("./constraints");
 
 /**
  * Returns an integer division quotient (rounded down)
