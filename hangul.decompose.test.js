@@ -1,5 +1,4 @@
 const {
-  intDiv,
   arithmeticDecompositionMappingLV,
   arithmeticDecompositionMappingLVT,
   decomposeHangulChar,
@@ -21,16 +20,6 @@ const hangulHexCases = {
   양: [0x110b, 0x1163, 0x11bc],
   퓛: [0x1111, 0x1171, 0x11b6]
 };
-
-describe("intDiv", () => {
-  test("should divide 5 by 2 and round the quotient down to the nearest integer", () => {
-    expect(intDiv(5, 2)).toBe(2);
-  });
-
-  test("should divide 4 by 2 and arrive at an integer quotient (no rounding needed)", () => {
-    expect(intDiv(4, 2)).toBe(2);
-  });
-});
 
 describe("arithmeticDecompositionMappingLV", () => {
   test("should pull out correct code points for ㅍ and ㅟ from 0xd4db (퓛)", () => {

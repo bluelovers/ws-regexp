@@ -1,16 +1,15 @@
 // Common constraints (based on the pseudocode provided in the Unicode spec)
 
-const LCount = 19;
-const VCount = 21;
-const TCount = 28; // one more than the number of trailing consonants relevant to the decomposition algorithm: (0x11C2 - 0x11A8 + 1) + 1
+const LCount = 19; // number of lead consonants in Hangul
 
-/*
-Number of precomposed Hangul syllables starting with the same leading consonant, counting both
-- LV_Syllables and
-- LVT_Syllables
-for each possible trailing consonant
-*/
-const NCount = VCount * TCount; // 588
+// Number of LV_Syllables per each leading consonant
+const VCount = 21; // i.e. number of vowels in Hangul
+
+// Number of LVT_Syllables per each possible trailing consonant
+const TCount = 28; // ie. the number of letters in Hangul
+
+// Number of precomposed Hangul syllables
+const NCount = VCount * TCount; // VCount * TCount = 588
 
 module.exports = {
   SBase: 0xac00,
@@ -23,9 +22,7 @@ module.exports = {
   LCount,
   VCount,
   TCount,
-
-  // Number of precomposed Hangul syllables
-  NCount, // 588,
+  NCount, // 588
 
   // Total number of precomposed Hangul syllables (11172)
   SCount: LCount * NCount

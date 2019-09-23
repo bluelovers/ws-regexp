@@ -1,19 +1,12 @@
-const {
-  SBase,
-  LBase,
-  VBase,
-  TBase,
-  NCount,
-  TCount
-} = require("./hangul.constraints");
+const { SBase, LBase, VBase, TBase } = require("./hangul.constraints");
 
-/**
- * Returns an integer division quotient (rounded down)
- *
- * @param {number} dividend
- * @param {number} divisor
- */
-const intDiv = (dividend, divisor) => Math.floor(dividend / divisor);
+const {
+  computeSIndex,
+  computeLIndex,
+  computeVIndex,
+  computeLVIndex,
+  computeTIndex
+} = require("./hangul.computations");
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
@@ -22,12 +15,13 @@ const intDiv = (dividend, divisor) => Math.floor(dividend / divisor);
  * @returns {array}
  */
 function arithmeticDecompositionMappingLV(s) {
-  const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
+  const SIndex = computeSIndex(s);
+  const LIndex = computeLIndex(SIndex);
+  const VIndex = computeVIndex(SIndex);
 
-  const LIndex = intDiv(SIndex, NCount); // integer division rounded down
-  const VIndex = intDiv(SIndex % NCount, TCount);
   const LPart = LBase + LIndex;
   const VPart = VBase + VIndex;
+
   return [LPart, VPart];
 }
 
@@ -38,10 +32,10 @@ function arithmeticDecompositionMappingLV(s) {
  * @returns {array}
  */
 function arithmeticDecompositionMappingLVT(s) {
-  const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
+  const SIndex = computeSIndex(s);
+  const LVIndex = computeLVIndex(SIndex);
+  const TIndex = computeTIndex(SIndex);
 
-  const LVIndex = (SIndex / TCount) * TCount;
-  const TIndex = SIndex % TCount;
   const LVPart = SBase + LVIndex;
   const TPart = TBase + TIndex;
 
@@ -69,7 +63,7 @@ function decomposeHangulChar(s) {
   const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
 
   const LVPart = arithmeticDecompositionMappingLV(s);
-  const TIndex = SIndex % TCount;
+  const TIndex = computeTIndex(SIndex);
 
   if (TIndex > 0) {
     const TPart = TBase + TIndex;
@@ -88,7 +82,6 @@ function decomposeHangulChar(s) {
 const decomposeHangul = word => [...word].map(decomposeHangulChar);
 
 module.exports = {
-  intDiv,
   arithmeticDecompositionMappingLV,
   arithmeticDecompositionMappingLVT,
   decomposeHangulChar,
