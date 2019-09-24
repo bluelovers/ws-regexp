@@ -1,13 +1,39 @@
-const { arithmeticPrimaryCompositeMapping } = require("./compose");
+const {
+  computeTIndexFromTPart,
+  arithmeticPrimaryCompositeMapping
+} = require("./compose");
+
+describe("computeTIndexFromTPart", () => {
+  test("should be tested", () => {
+    expect(computeTIndexFromTPart());
+  });
+});
+
+const testCases = [
+  {
+    jamoCodePoints: [0x1111, 0x1171, 0x11b6],
+    expectedCodePoint: 0xd4db
+  }
+  // { // TODO
+  //   jamoCodePoints: [0x1100, 0x1162],
+  //   expectedCodePoint: 0xac1c
+  // }
+];
 
 describe("arithmeticPrimaryCompositeMapping", () => {
-  test(`should compose (0x1111, 0x1171, 0x11b6) ${String.fromCodePoint(
-    0x1111,
-    0x1171,
-    0x11b6
-  )} to 0xd4db (${String.fromCodePoint(0xd4db)})`, () => {
-    expect(arithmeticPrimaryCompositeMapping(0x1111, 0x1171, 0x11b6)).toBe(
-      0xd4db
-    );
+  testCases.forEach(({ jamoCodePoints, expectedCodePoint }) => {
+    test(`should compose (${jamoCodePoints.join(", ")}) (${String.fromCodePoint(
+      ...jamoCodePoints
+    )}) to ${expectedCodePoint} (${String.fromCodePoint(
+      expectedCodePoint
+    )})`, () => {
+      expect(arithmeticPrimaryCompositeMapping(...jamoCodePoints)).toBe(
+        expectedCodePoint
+      );
+    });
   });
+});
+
+describe("arithmeticPrimaryCompositeMappingWithLVPart", () => {
+  test.todo("should be tested");
 });
