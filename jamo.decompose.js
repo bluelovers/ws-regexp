@@ -4,13 +4,13 @@
 const { HANGUL } = require("./unicode-blocks");
 const [START] = HANGUL.SYLLABLES;
 
-const { initialConsonants, medialVowels, finalConsonants } = require("./jamo");
+const [initialConsonants, medialVowels, finalConsonants] = require("./jamo");
 
 const getInitialJamoIdx = syllable =>
   Math.floor((syllable.charCodeAt(0) - START) / 588);
 
 const getInitialJamo = syllable =>
-  initialConsonants[getInitialJamoIdx(syllable)];
+  initialConsonants[getInitialJamoIdx(syllable)].jamo;
 
 const getMedialJamoIdx = syllable => {
   const hangulCode = syllable.charCodeAt(0) - START;
@@ -19,7 +19,7 @@ const getMedialJamoIdx = syllable => {
   return medial;
 };
 
-const getMedialJamo = syllable => medialVowels[getMedialJamoIdx(syllable)];
+const getMedialJamo = syllable => medialVowels[getMedialJamoIdx(syllable)].jamo;
 
 const getFinalJamoIdx = syllable => {
   const hangulCode = syllable.charCodeAt(0) - START;
@@ -29,7 +29,8 @@ const getFinalJamoIdx = syllable => {
 };
 
 const getFinalJamo = syllable => {
-  return finalConsonants[getFinalJamoIdx(syllable)];
+  const finalJamoIdx = getFinalJamoIdx(syllable);
+  return finalJamoIdx ? finalConsonants[getFinalJamoIdx(syllable)].jamo : null;
 };
 
 const decomposeSyllable = syllable => {

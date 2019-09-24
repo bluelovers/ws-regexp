@@ -1,85 +1,81 @@
-// choseong
-const initialConsonants = [
-  "ㄱ", // 0
-  "ㄲ", // ㄱㄱ
-  "ㄴ",
-  "ㄷ",
-  "ㄸ", // ㄷㄷ
-  "ㄹ", // 5
-  "ㅁ",
-  "ㅂ",
-  "ㅃ", // ㅂㅂ
-  "ㅅ",
-  "ㅆ", // ㅅㅅ
-  "ㅇ",
-  "ㅈ",
-  "ㅉ", // ㅈㅈ
-  "ㅊ",
-  "ㅋ", // 15
-  "ㅌ",
-  "ㅍ",
-  "ㅎ"
-];
+// "...what have the Romans ever done for us?"
 
-// jungseong
-const medialVowels = [
-  "ㅏ",
-  "ㅐ",
-  "ㅑ",
-  "ㅒ",
-  "ㅓ",
-  "ㅔ",
-  "ㅕ",
-  "ㅖ",
-  "ㅗ",
-  "ㅘ", // ㅗㅏ
-  "ㅙ", // ㅗㅐ
-  "ㅚ",
-  "ㅛ",
-  "ㅜ",
-  "ㅝ", // ㅜㅓ
-  "ㅞ", // ㅜㅔ
-  "ㅟ", // ㅜㅣ
-  "ㅠ",
-  "ㅡ",
-  "ㅢ", // ㅡㅣ
-  "ㅣ"
+module.exports = [
+  // choseong
+  [
+    { jamo: "ㄱ", roman: "g" },
+    { jamo: "ㄲ", roman: "gg" },
+    { jamo: "ㄴ", roman: "n" },
+    { jamo: "ㄷ", roman: "d" },
+    { jamo: "ㄸ", roman: "dd" },
+    { jamo: "ㄹ", roman: "r" },
+    { jamo: "ㅁ", roman: "m" },
+    { jamo: "ㅂ", roman: "b" },
+    { jamo: "ㅃ", roman: "bb" },
+    { jamo: "ㅅ", roman: "s" },
+    { jamo: "ㅆ", roman: "ss" },
+    { jamo: "ㅇ", roman: "" },
+    { jamo: "ㅈ", roman: "j" },
+    { jamo: "ㅉ", roman: "jj" },
+    { jamo: "ㅊ", roman: "ch" },
+    { jamo: "ㅋ", roman: "k" },
+    { jamo: "ㅌ", roman: "t" },
+    { jamo: "ㅍ", roman: "p" },
+    { jamo: "ㅎ", roman: "h" }
+  ],
+  // jungseong
+  [
+    { jamo: "ㅏ", roman: "a" },
+    { jamo: "ㅐ", roman: "ae" },
+    { jamo: "ㅑ", roman: "yeo" },
+    { jamo: "ㅒ", roman: "yae" },
+    { jamo: "ㅓ", roman: "eo" },
+    { jamo: "ㅔ", roman: "ye" },
+    { jamo: "ㅕ", roman: "yeo" },
+    { jamo: "ㅖ", roman: "ye" },
+    { jamo: "ㅗ", roman: "o" },
+    { jamo: "ㅘ", roman: "wa" },
+    { jamo: "ㅙ", roman: "wae" },
+    { jamo: "ㅚ", roman: "woe" },
+    { jamo: "ㅛ", roman: "yo" },
+    { jamo: "ㅜ", roman: "u" },
+    { jamo: "ㅝ", roman: "wo" },
+    { jamo: "ㅞ", roman: "we" },
+    { jamo: "ㅟ", roman: "wi" },
+    { jamo: "ㅠ", roman: "yu" },
+    { jamo: "ㅡ", roman: "eu" },
+    { jamo: "ㅢ", roman: "ui" },
+    { jamo: "ㅣ", roman: "i" }
+  ],
+  // jongseong
+  [
+    null,
+    { jamo: "ㄱ", roman: "k" },
+    { jamo: "ㄲ", roman: "k" },
+    { jamo: "ㄳ", roman: "k" },
+    { jamo: "ㄴ", roman: "n" },
+    { jamo: "ㄵ", roman: "n" },
+    { jamo: "ㄶ", roman: "n" },
+    { jamo: "ㄷ", roman: "d" },
+    { jamo: "ㄹ", roman: "l" },
+    { jamo: "ㄺ", roman: "r" },
+    { jamo: "ㄻ", roman: "lm" },
+    { jamo: "ㄼ", roman: "lb" },
+    { jamo: "ㄽ", roman: "ls" },
+    { jamo: "ㄾ", roman: "lt" },
+    { jamo: "ㄿ", roman: "lp" },
+    { jamo: "ㅀ", roman: "lh" },
+    { jamo: "ㅁ", roman: "m" },
+    { jamo: "ㅂ", roman: "b" },
+    { jamo: "ㅄ", roman: "bs" },
+    { jamo: "ㅅ", roman: "s" },
+    { jamo: "ㅆ", roman: "ss" },
+    { jamo: "ㅇ", roman: "ng" },
+    { jamo: "ㅈ", roman: "j" },
+    { jamo: "ㅊ", roman: "ch" },
+    { jamo: "ㅋ", roman: "k" },
+    { jamo: "ㅌ", roman: "t" },
+    { jamo: "ㅍ", roman: "p" },
+    { jamo: "ㅎ", roman: "h" }
+  ]
 ];
-
-// jongseong
-const finalConsonants = [
-  null,
-  "ㄱ",
-  "ㄲ", // ㄱㄱ
-  "ㄳ", // ㄱㅅ
-  "ㄴ",
-  "ㄵ", // ㄴㅈ
-  "ㄶ", // ㄴㅎ
-  "ㄷ",
-  "ㄹ",
-  "ㄺ", // ㄹㄱ
-  "ㄻ", // ㄹㅁ
-  "ㄼ", // ㄹㅂ
-  "ㄽ", // ㄹㅅ
-  "ㄾ", // ㄹㅌ
-  "ㄿ", // ㄹㅍ
-  "ㅀ", // ㄹㅎ
-  "ㅁ",
-  "ㅂ",
-  "ㅄ", // ㅂㅅ
-  "ㅅ",
-  "ㅆ", // ㅅㅅ
-  "ㅇ",
-  "ㅈ",
-  "ㅊ",
-  "ㅋ",
-  "ㅌ",
-  "ㅍ",
-  "ㅎ"
-];
-
-module.exports = {
-  initialConsonants,
-  medialVowels,
-  finalConsonants
-};
