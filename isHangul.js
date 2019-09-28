@@ -1,4 +1,4 @@
-const { HANGUL } = require("./unicode-blocks");
+const { HANGUL } = require("./hangul/unicode/blocks");
 
 const isHangul = char => {
   if (typeof char !== "string") {

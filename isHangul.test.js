@@ -1,6 +1,9 @@
 const isHangul = require("./isHangul");
 const jamoLib = require("./jamo");
-const { BASIC_LATIN, CJK_UNIFIED_IDEOGRAPHS } = require("./unicode-blocks");
+const {
+  BASIC_LATIN,
+  CJK_UNIFIED_IDEOGRAPHS
+} = require("./hangul/unicode/blocks");
 
 describe("isHangul", () => {
   describe("should return null", () => {

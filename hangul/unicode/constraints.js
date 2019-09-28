@@ -19,9 +19,9 @@ module.exports = {
   // one less than the beginning of the range of trailing consonants, which starts at 0x11a8
   TBase: 0x11a7,
 
-  LCount,
-  VCount,
-  TCount,
+  LCount, // 19
+  VCount, // 21
+  TCount, // 28
   NCount, // 588
 
   // Total number of precomposed Hangul syllables (11172)

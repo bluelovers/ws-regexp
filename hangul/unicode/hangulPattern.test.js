@@ -1,5 +1,5 @@
 const hangulPattern = require("./hangulPattern");
-const { HANGUL } = require("./unicode-blocks");
+const { HANGUL } = require("./blocks");
 
 const hangulBlockBoundaryRegex = () =>
   new RegExp(
