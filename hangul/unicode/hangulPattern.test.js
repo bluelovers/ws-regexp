@@ -1,15 +1,15 @@
 const hangulPattern = require("./hangulPattern");
-const { HANGUL } = require("./blocks");
+const HANGUL_BLOCKS = Object.entries(require("./blocks")).filter(
+  ([blockName]) => blockName.startsWith("HANGUL")
+);
 
 const hangulBlockBoundaryRegex = () =>
   new RegExp(
     "[" +
-      Object.entries(HANGUL)
-        .map(
-          ([, [start, stop]]) =>
-            `\\u${start.toString(16)}-\\u${stop.toString(16)}`
-        )
-        .join("") +
+      HANGUL_BLOCKS.map(
+        ([, [start, stop]]) =>
+          `\\u${start.toString(16)}-\\u${stop.toString(16)}`
+      ).join("") +
       "]+",
     "g"
   );
