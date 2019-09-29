@@ -1,8 +1,15 @@
-const unicodeBlocks = require("./hangul/unicode/blocks");
+const unicodeBlocks = require("./unicode/blocks");
 const hangulBlocks = Object.entries(unicodeBlocks).filter(([blockName]) =>
   blockName.startsWith("HANGUL")
 );
 
+/**
+ * Check whether a provided character belongs to a Hangul Unicode block
+ *
+ * Returns null if input is not a string.
+ *
+ * @param {*} char
+ */
 const isHangul = char => {
   if (typeof char !== "string") {
     return null;
