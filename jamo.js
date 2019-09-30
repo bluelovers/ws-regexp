@@ -32,16 +32,17 @@ const jamoMapper = jamoSet => ({ jamo, roman }, idx) => {
   return Object.assign(jamoSet[idx], { roman, compatJamo, compatJamoHex });
 };
 
+// initial consonants
 const choseong = [
   { jamo: "ㄱ", roman: "g" },
-  { jamo: "ㄲ", roman: "gg" },
+  { jamo: "ㄲ", roman: "kk" },
   { jamo: "ㄴ", roman: "n" },
   { jamo: "ㄷ", roman: "d" },
   { jamo: "ㄸ", roman: "dd" },
-  { jamo: "ㄹ", roman: "r" },
+  { jamo: "ㄹ", roman: { default: "r", RRT: "l" } },
   { jamo: "ㅁ", roman: "m" },
   { jamo: "ㅂ", roman: "b" },
-  { jamo: "ㅃ", roman: "bb" },
+  { jamo: "ㅃ", roman: "pp" },
   { jamo: "ㅅ", roman: "s" },
   { jamo: "ㅆ", roman: "ss" },
   { jamo: "ㅇ", roman: "" },
@@ -54,6 +55,7 @@ const choseong = [
   { jamo: "ㅎ", roman: "h" }
 ].map(jamoMapper(initialConsonants));
 
+// medial vowels
 const jungseong = [
   { jamo: "ㅏ", roman: "a" },
   { jamo: "ㅐ", roman: "ae" },
@@ -78,15 +80,16 @@ const jungseong = [
   { jamo: "ㅣ", roman: "i" }
 ].map(jamoMapper(medialVowels));
 
+// final consonants
 const jongseong = [
   { jamo: null, roman: "" },
-  { jamo: "ㄱ", roman: "k" },
-  { jamo: "ㄲ", roman: "k" },
+  { jamo: "ㄱ", roman: { default: "k", vowelNext: "g", RRT: "g" } },
+  { jamo: "ㄲ", roman: "kk" },
   { jamo: "ㄳ", roman: "k" },
   { jamo: "ㄴ", roman: "n" },
   { jamo: "ㄵ", roman: "n" },
   { jamo: "ㄶ", roman: "n" },
-  { jamo: "ㄷ", roman: "d" },
+  { jamo: "ㄷ", roman: { default: "t", vowelNext: "d", RRT: "d" } },
   { jamo: "ㄹ", roman: "l" },
   { jamo: "ㄺ", roman: "r" },
   { jamo: "ㄻ", roman: "lm" },
@@ -96,17 +99,17 @@ const jongseong = [
   { jamo: "ㄿ", roman: "lp" },
   { jamo: "ㅀ", roman: "lh" },
   { jamo: "ㅁ", roman: "m" },
-  { jamo: "ㅂ", roman: "b" },
+  { jamo: "ㅂ", roman: { default: "p", vowelNext: "b", RRT: "b" } },
   { jamo: "ㅄ", roman: "bs" },
   { jamo: "ㅅ", roman: "s" },
   { jamo: "ㅆ", roman: "ss" },
   { jamo: "ㅇ", roman: "ng" },
-  { jamo: "ㅈ", roman: "j" },
-  { jamo: "ㅊ", roman: "ch" },
+  { jamo: "ㅈ", roman: { default: "t", vowelNext: "j" } },
+  { jamo: "ㅊ", roman: { default: "t", vowelNext: "ch", RRT: "ch" } },
   { jamo: "ㅋ", roman: "k" },
   { jamo: "ㅌ", roman: "t" },
   { jamo: "ㅍ", roman: "p" },
-  { jamo: "ㅎ", roman: "h" }
+  { jamo: "ㅎ", roman: { default: "t", RRT: "h" } }
 ].map(jamoMapper(finalConsonants));
 
 module.exports = [choseong, jungseong, jongseong];
