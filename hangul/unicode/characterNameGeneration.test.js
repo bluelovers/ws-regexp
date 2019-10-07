@@ -1,5 +1,4 @@
 const { getHangulCharName } = require("./characterNameGeneration");
-const lo = require("unicode/category/Lo");
 
 const hangulCharNames = {
   가: "ga",
@@ -15,5 +14,13 @@ describe("getHangulCharName function", () => {
     test(`should fetch '${expectedName}' for ${hangulChar}`, () => {
       expect(name).toBe(expectedName);
     });
+  });
+});
+
+describe("getHangulCharName function", () => {
+  test(`should generate 'PWILH' for ${String.fromCodePoint(0xd4db)}`, () => {
+    expect(getHangulCharName(String.fromCodePoint(0xd4db))).toBe(
+      "HANGUL SYLLABLE PWILH"
+    );
   });
 });

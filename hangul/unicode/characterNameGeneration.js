@@ -9,7 +9,7 @@ const {
   JAMO_L_TABLE,
   JAMO_V_TABLE,
   JAMO_T_TABLE
-} = require("./shortNames");
+} = require("./jamoShortNames");
 
 /**
  * Generates a letter/jamo-derived short name for a given precomposed Hangul syllable
