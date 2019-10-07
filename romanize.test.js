@@ -7,9 +7,10 @@ const simpleWords = {
   다: "da",
   로마자: "romaja",
   표기법: "pyogibeop",
-  // 국어의: "gugeoui",
+  국어의: "gugeoui",
   만남: "mannam",
-  동무: "dongmu"
+  동무: "dongmu",
+  친구: "chingu"
 };
 
 const plosiveCases = {
@@ -26,11 +27,11 @@ const plosiveCases = {
 
 const wordsWithAdjacentConsonantAssimilation = {
   백마: "Baengma", // [뱅마]
-  신문로: "Sinmunno", // [신문노]
+  // 신문로: "Sinmunno", // [신문노]
   종로: "Jongno", // [종노]
   왕십리: "Wangsimni", // [왕심니]
-  별내: "Byeollae", // [별래]
-  신라: "Silla" // [실라]
+  별내: "Byeollae" // [별래]
+  // 신라: "Silla" // [실라]
 };
 
 const transliterationCases = {
@@ -41,7 +42,7 @@ const transliterationCases = {
   붓꽃: "buskkoch",
   먹는: "meogneun",
   독립: "doglib",
-  문리: "munli",
+  // 문리: "munli",
   // 물엿: "mul-yeos",
   // 굳이: "gud-i",
   좋다: "johda",
@@ -67,6 +68,16 @@ describe("romanizeWord function", () => {
     });
   });
 
+  describe("should words with adjacent consonant assimilation", () => {
+    Object.entries(wordsWithAdjacentConsonantAssimilation).forEach(
+      ([hangulWord, expectedRomaja]) => {
+        test(`${hangulWord} to ${expectedRomaja}`, () => {
+          expect(romanizeWord(hangulWord)).toBe(expectedRomaja.toLowerCase());
+        });
+      }
+    );
+  });
+
   describe("should transliterate", () => {
     Object.entries(transliterationCases).forEach(
       ([hangulWord, expectedRomaja]) => {
@@ -89,13 +100,23 @@ describe("romanizeWord function", () => {
 });
 
 describe("romanize function", () => {
-  // test("should romanize Hangul string with spaces", () => {
-  //   expect(romanize("국어의 로마자 표기법")).toBe("gugeoui romaja pyogibeop");
-  // });
+  test("should romanize Hangul string with spaces", () => {
+    expect(romanize("국어의 로마자 표기법")).toBe("gugeoui romaja pyogibeop");
+  });
 
   test("should romanize 로마자 as romaja", () => {
     expect(romanize("The Korean word for Latin letters is 로마자.")).toBe(
       "The Korean word for Latin letters is romaja."
+    );
+  });
+
+  test("should romanize only Hangul parts of a given string", () => {
+    expect(
+      romanize(
+        'The Revised Romanization of Korean (국어의 로마자 표기법; 國語의 로마字 表記法; gugeoui romaja pyogibeop. op; lit. "Roman-letter notation of the national language") is the official Korean language romanization system in South Korea.'
+      )
+    ).toBe(
+      'The Revised Romanization of Korean (gugeoui romaja pyogibeop; 國語ui roma字 表記法; gugeoui romaja pyogibeop. op; lit. "Roman-letter notation of the national language") is the official Korean language romanization system in South Korea.'
     );
   });
 });

@@ -7,7 +7,10 @@ const getJamoDictionary = (jamo, idx) =>
   _.find(jamos[idx], { jamo }) || _.find(jamos[idx], { compatJamo: jamo });
 
 function searchJamo(node, params, prevNode) {
-  const { method, vowelNext } = params || {};
+  const { method, vowelNext, consonantNext, consonantPrev } = params || {
+    method: "RR"
+  };
+
   if (typeof node === "string") {
     return node;
   }
@@ -31,6 +34,15 @@ function searchJamo(node, params, prevNode) {
     return next(node.vowelNext);
   }
 
+  if (consonantNext || consonantPrev) {
+    const assimilation = String.fromCodePoint(consonantNext || consonantPrev);
+    if (typeof node[assimilation] === "string") {
+      return node[assimilation];
+    } else if (node[assimilation]) {
+      return node[assimilation];
+    }
+  }
+
   if (node.default || typeof node.default === "string") {
     return next(node.default);
   }
@@ -49,8 +61,11 @@ const syllableParser = (method = "RR") =>
     const next = idx + 1 < word.length ? word[idx + 1][0] : undefined;
     const vowelNext = next === 0x110b || next === "ᄋ";
 
+    // only exists this isn't first syllable in word
+    const prev = idx > 0 ? word[idx - 1] : null;
+
     // previous adjacent trailing consonant (jongseong)
-    // const prev = idx > 0 ? word[idx - 1][2] : undefined;
+    const consonantPrev = prev && prev[2] ? prev[2] : undefined;
 
     return syllable.map((jamo, jamoIdx) => {
       const dict =
@@ -61,13 +76,20 @@ const syllableParser = (method = "RR") =>
         throw new Error("missing dict " + jamo);
       }
 
-      return searchJamo(dict, { method, vowelNext });
+      return searchJamo(dict, {
+        method,
+        vowelNext: jamoIdx === 2 ? vowelNext : undefined,
+        consonantPrev: jamoIdx === 0 ? consonantPrev : undefined,
+        consonantNext: jamoIdx === 2 ? next : undefined
+      });
     });
   };
 
+const mapJamoToRoman = (word, method = "RR") =>
+  decomposeHangul(word).map(syllableParser(method));
+
 const romanizeWord = (word, method = "RR") =>
-  decomposeHangul(word)
-    .map(syllableParser(method))
+  mapJamoToRoman(word, method)
     .reduce((acc, val) => acc.concat(val), [])
     .join("");
 
