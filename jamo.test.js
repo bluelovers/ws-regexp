@@ -30,13 +30,5 @@ describe("Jamo dictionary", () => {
     test("should contain a Roman lookup object for final consonant ㄱ", () => {
       expect(finalConsonants[1].roman).toBeInstanceOf(Object);
     });
-
-    test("should find ㅁ (hex) assimilation for ㄱ final consonant to be 'ng'", () => {
-      expect(finalConsonants[1].roman[String.fromCodePoint(0x11b7)]).toBe("ng");
-    });
-
-    test("should find ㅁ (decimal) assimilation for ㄱ final consonant to be 'ng'", () => {
-      expect(finalConsonants[1].roman[String.fromCodePoint(4535)]).toBe("ng");
-    });
   });
 });
