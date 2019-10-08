@@ -29,7 +29,6 @@ function searchJamo(node, params, prevNode) {
     return next(node[method]);
   }
 
-  // console.log(params, vowelNext, node.vowelNext, node);
   if (vowelNext && (node.vowelNext || typeof node.vowelNext === "string")) {
     return next(node.vowelNext);
   }
@@ -47,7 +46,6 @@ function searchJamo(node, params, prevNode) {
     return next(node.default);
   }
 
-  console.warn(prevNode);
   throw new Error("Unimplemented: " + JSON.stringify(node, null, 2));
 
   function next(nextNode) {
