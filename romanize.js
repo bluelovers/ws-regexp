@@ -17,7 +17,7 @@ function searchJamo(node, params, prevNode) {
 
   if (!node) {
     console.warn(prevNode);
-    throw new Error("No node found:" + node);
+    throw new Error("No node found after" + JSON.stringify(prevNode));
   }
 
   // treat empty string (initial silent ieung/ㅇ as truthy)
@@ -93,4 +93,4 @@ const romanizeWord = (word, method = "RR") =>
 
 const romanize = (text, options) => replaceHangul(text, romanizeWord);
 
-module.exports = { syllableParser, romanizeWord, romanize };
+module.exports = { searchJamo, syllableParser, romanizeWord, romanize };

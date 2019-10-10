@@ -12,11 +12,7 @@ const [
 
 const jamoMapper = jamoSet => ({ jamo, roman }, idx) => {
   const unicodeJamo = jamoSet[idx].jamo;
-  // if (jamo && jamo !== unicodeJamo) {
-  //   throw new Error(
-  //     `${explain(jamo)}) does not match unicode ${explain(unicodeJamo)})`
-  //   );
-  // }
+
   const compatJamo =
     jamo &&
     jamo !== unicodeJamo &&
@@ -35,7 +31,11 @@ const choseong = [
   { jamo: "ㄲ", roman: "kk" },
   {
     jamo: "ㄴ",
-    roman: { default: "n", ㄹ: "l", [String.fromCodePoint(4527)]: "l" }
+    roman: {
+      default: "n",
+      ㄹ: "l",
+      [String.fromCodePoint(4527)]: "l"
+    }
   },
   {
     jamo: "ㄷ",
@@ -52,8 +52,8 @@ const choseong = [
     roman: {
       default: "r",
       // ㄱ
-      [String.fromCodePoint(0x11ab)]: "n",
       ㄴ: "l",
+      [String.fromCodePoint(0x11ab)]: "l",
       [String.fromCodePoint(4527)]: "l",
       ㄷ: "n",
       ㄹ: "l",

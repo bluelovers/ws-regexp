@@ -17,6 +17,10 @@ describe("Integer division function", () => {
 
 describe("computeSIndex function", () => {
   test.todo("should be tested");
+
+  test("should throw an error for a non-Korean character", () => {
+    expect(() => computeSIndex("A")).toThrow();
+  });
 });
 
 describe("computeVIndex function", () => {
