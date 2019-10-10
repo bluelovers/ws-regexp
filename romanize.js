@@ -1,5 +1,5 @@
 const replaceHangul = require("./hangul/hangulReplace");
-const { decomposeHangul } = require("./hangul/decompose");
+const { decomposeHangul } = require("./hangul/unicode/decompose");
 const jamos = require("./jamo");
 const _ = require("lodash");
 

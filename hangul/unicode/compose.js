@@ -1,4 +1,4 @@
-const { SBase, LBase, VBase, TBase, NCount, TCount } = require("./unicode/constraints");
+const { SBase, LBase, VBase, TBase, NCount, TCount } = require("./constraints");
 
 /**
  * Computes TIndex for a given TPart

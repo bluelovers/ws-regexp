@@ -1,4 +1,4 @@
-const { SBase, LBase, VBase, TBase } = require("./unicode/constraints");
+const { SBase, LBase, VBase, TBase } = require("./constraints");
 
 const {
   computeSIndex,
@@ -6,7 +6,7 @@ const {
   computeVIndex,
   computeLVIndex,
   computeTIndex
-} = require("./unicode/computations");
+} = require("./computations");
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
