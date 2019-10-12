@@ -16,7 +16,9 @@ function searchJamo(node, params, prevNode) {
   }
 
   if (!node) {
-    console.warn(prevNode);
+    if (prevNode) {
+      console.warn(prevNode);
+    }
     throw new Error("No node found after" + JSON.stringify(prevNode));
   }
 
@@ -53,7 +55,7 @@ function searchJamo(node, params, prevNode) {
   }
 }
 
-const syllableParser = (method = "RR") =>
+const syllableParser = method =>
   function(syllable, idx, word) {
     // next subsequent initial consonant (choseong)
     const next = idx + 1 < word.length ? word[idx + 1][0] : undefined;
@@ -74,23 +76,39 @@ const syllableParser = (method = "RR") =>
         throw new Error("missing dict " + jamo);
       }
 
-      return searchJamo(dict, {
+      const roman = searchJamo(dict, {
         method,
         vowelNext: jamoIdx === 2 ? vowelNext : undefined,
         consonantPrev: jamoIdx === 0 ? consonantPrev : undefined,
         consonantNext: jamoIdx === 2 ? next : undefined
       });
+
+      return roman;
     });
   };
 
-const mapJamoToRoman = (word, method = "RR") =>
-  decomposeHangul(word).map(syllableParser(method));
+const romanizeWord = (word, options) => {
+  const { method = "RR", hyphenate = method === "RRT" || undefined } =
+    typeof options === "object" ? options : {};
 
-const romanizeWord = (word, method = "RR") =>
-  mapJamoToRoman(word, method)
-    .reduce((acc, val) => acc.concat(val), [])
-    .join("");
+  const mappedToRoman = decomposeHangul(word)
+    .map(syllableParser(method))
+    .reduce(
+      (prevSyllables, currentSyllable) =>
+        prevSyllables.concat(
+          hyphenate ? [...currentSyllable, "-"] : currentSyllable
+        ),
+      []
+    )
+    .join("")
+    .replace("--", "-");
 
-const romanize = (text, options) => replaceHangul(text, romanizeWord);
+  return hyphenate === false
+    ? mappedToRoman.replace("-", "")
+    : mappedToRoman.replace(/-$/, "");
+};
+
+const romanize = (text, options) =>
+  replaceHangul(text, word => romanizeWord(word, options));
 
 module.exports = { searchJamo, syllableParser, romanizeWord, romanize };

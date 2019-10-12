@@ -11,7 +11,7 @@ describe("romanizeWord function", () => {
       .filter(([, { RR, tags }]) => RR && tags && tags.includes("simple"))
       .forEach(([hangulWord, { RR }]) => {
         test(`${hangulWord} to ${RR}`, () => {
-          expect(romanizeWord(hangulWord, "RR")).toBe(RR);
+          expect(romanizeWord(hangulWord)).toBe(RR);
         });
       });
   });
@@ -21,7 +21,7 @@ describe("romanizeWord function", () => {
       .filter(([, { RR, tags }]) => RR && tags && tags.includes("plosives"))
       .forEach(([hangulWord, { RR }]) => {
         test(`${hangulWord} to ${RR}`, () => {
-          expect(romanizeWord(hangulWord, "RR")).toBe(RR.toLowerCase());
+          expect(romanizeWord(hangulWord)).toBe(RR.toLowerCase());
         });
       });
   });
@@ -41,7 +41,9 @@ describe("romanizeWord function", () => {
       .filter(([, { RRT }]) => RRT)
       .forEach(([hangulWord, { RRT }]) => {
         test(`${hangulWord} to ${RRT}`, () => {
-          expect(romanizeWord(hangulWord, "RRT")).toBe(RRT);
+          expect(romanizeWord(hangulWord, { method: "RRT" })).toBe(
+            RRT.toLowerCase()
+          );
         });
       });
   });
