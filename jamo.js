@@ -1,7 +1,11 @@
 // "...what have the Romans ever done for us?"
 
 const isHangul = require("./hangul/isHangul");
-const _ = require("lodash");
+const fromPairs = pairs =>
+  pairs.reduce((cache, pair) => {
+    cache[pair[0]] = pair[1];
+    return cache;
+  }, {});
 
 const [
   initialConsonants,
@@ -119,7 +123,7 @@ const jungseong = [
 ].map(jamoMapper(medialVowels));
 
 const assimilate = (jamos, sound) =>
-  _.fromPairs(jamos.map(jamo => [jamo, sound]));
+  fromPairs(jamos.map(jamo => [jamo, sound]));
 
 const nasalAssimilators = [
   "ㄴ",

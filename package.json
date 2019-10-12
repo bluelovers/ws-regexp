@@ -38,7 +38,6 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "jest": "^24.9.0",
-    "lodash": "^4.17.15",
     "unicode": "^12.1.0"
   },
   "dependencies": {},

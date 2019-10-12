@@ -1,5 +1,4 @@
 const [initialConsonants, medialVowels, finalConsonants] = require("./jamo");
-const _ = require("lodash");
 
 describe("Jamo dictionary", () => {
   test("should contain array of initial consonants (choseong)", () => {

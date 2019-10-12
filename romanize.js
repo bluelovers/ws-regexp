@@ -1,10 +1,10 @@
 const replaceHangul = require("./hangul/hangulReplace");
 const { decomposeHangul } = require("./hangul/unicode/decompose");
 const jamos = require("./jamo");
-const _ = require("lodash");
 
 const getJamoDictionary = (jamo, idx) =>
-  _.find(jamos[idx], { jamo }) || _.find(jamos[idx], { compatJamo: jamo });
+  jamos[idx].find(o => o.jamo === jamo) ||
+  jamos[idx].find(o => o.compatJamo === jamo);
 
 function searchJamo(node, params, prevNode) {
   const { method, vowelNext, consonantNext, consonantPrev } = params || {
