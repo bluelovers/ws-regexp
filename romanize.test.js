@@ -1,10 +1,9 @@
 const {
   searchJamo,
-  syllableParser,
   romanize,
   romanizeWord
 } = require("./romanize");
-const words = Object.entries(require("./test-words").words);
+const words = Object.entries(require("./test").words);
 
 describe("romanizeWord function", () => {
   describe("should romanize simple words", () => {

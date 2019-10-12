@@ -1,0 +1,33 @@
+{
+  "한국은 네 계절이 뚜렷하다": {
+    "meaningEng": "Korea has four distinct seasons",
+    "IPA": "han.ɡu.ɡɯn ne̞ cje̞.dʑʌ.ɾi t͈u.ɾjʌ.tʰa.da",
+    "RR": "Hangugeun ne gyejeori tturyeotada",
+    "RRT": "Hangug-eun ne gyejeol-i ttulyeoshada",
+    "mr": "Hangugŭn ne kyejŏri tturyŏthada",
+    "yale": "Hānkuk un nēy kyēycel i ttwulyes hata",
+    "SKATS": "jef lhl kdf ftu lsu ptv ku bbh vsg je be"
+  },
+  "사계절이 뚜렷하다": {
+    "meaningEng": "Four seasons are distinct",
+    "RR": "Sagyejeori tturyeotada",
+    "RRT": "Sa-gye-jeol-i ttu-lyeos-ha-da",
+    "ck": "Сагеджори ттурётхада",
+    "ckr": "Sagedzhori tturyothada"
+  },
+  "원하시는 선 색깔과 굵기에 체크하시면 됩니다": {
+    "meaningEng": "Just check the line color and width you want",
+    "IPA": "wʌn.ɦa.ɕi.nɯn sʌn sɛ̝k̚.k͈al.ɡwa kul.c͈i.e̞ tɕʰe̞.kʰɯ.ɦa.ɕi.mjʌn twe̞m.ɲi.da",
+    "RR": "Wonhasineun seon saekkkalgwa gulkkie chekeuhasimyeon doemnida",
+    "RRT": "Wonhasineun seon saegkkalgwa gulggie chekeuhasimyeon doebnida",
+    "mr": "Wŏnhasinŭn sŏn saekkalgwa kulkie ch'ek'ŭhasimyŏn toemnida",
+    "yale": "Wēn hasinun sen sayk.kkal kwa kwulk.ki ey cheykhu hasimyen toypnita",
+    "SKATS": "khtf je gu fdf gtf geul llev lae lhvl lu ktu ctu xd je gu msf bauw fu be",
+    "ck": "Вонхасинын сон сэкккальгва куккие чхекхыхасимён твемнида",
+    "ckr": "Vonhasinyn son sèkkal'gva kukkie chhekhyhasimyon tvemnida"
+  },
+  "김치가 맛있다": {
+    "RR": "Kimchiga masitta",
+    "SKATS": "LUM CU LE  MEG KUGG BE"
+  }
+}
