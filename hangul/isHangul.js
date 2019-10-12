@@ -9,15 +9,16 @@ const hangulBlocks = Object.entries(unicodeBlocks).filter(([blockName]) =>
  * Returns null if input is not a string.
  *
  * @param {*} char
+ * @param {blocks}
  */
-const isHangul = char => {
+const isHangul = (char, blocks = hangulBlocks) => {
   if (typeof char !== "string") {
     return null;
   }
 
   const codePoint = char.codePointAt(0);
 
-  for (const [block, [start, end]] of hangulBlocks) {
+  for (const [block, [start, end]] of blocks) {
     if (codePoint >= start && codePoint <= end) {
       return block;
     }
