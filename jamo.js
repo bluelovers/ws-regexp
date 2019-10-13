@@ -13,7 +13,6 @@ const [
   finalConsonants
 ] = require("./hangul/unicode/hangul-jamo");
 
-
 const jamoMapper = jamoSet => ({ jamo, roman }, idx) => {
   const unicodeJamo = jamoSet[idx].jamo;
 
@@ -23,9 +22,11 @@ const jamoMapper = jamoSet => ({ jamo, roman }, idx) => {
     isHangul(jamo) === "HANGUL_COMPATIBILITY_JAMO"
       ? jamo
       : undefined;
+
   const compatJamoHex = compatJamo
     ? compatJamo.codePointAt(0).toString(16)
     : undefined;
+
   return Object.assign(jamoSet[idx], { roman, compatJamo, compatJamoHex });
 };
 
@@ -160,11 +161,20 @@ const jongseong = [
       RRT: "g"
     }
   },
-  { jamo: "ㄲ", roman: { default: "kk", ...nasalAssimilation.trailingGNg } },
+  {
+    jamo: "ㄲ",
+    roman: { default: "kk", RRT: "kk", ...nasalAssimilation.trailingGNg }
+  },
   { jamo: "ㄳ", roman: { default: "k", ...nasalAssimilation.trailingGNg } },
   {
     jamo: "ㄴ", // final
-    roman: { default: "n", ㄹ: "l", [String.fromCodePoint(4357)]: "l" }
+    roman: {
+      default: "n",
+      ㄱ: "n",
+      [String.fromCodePoint(0x1100)]: "n",
+      ㄹ: "l",
+      [String.fromCodePoint(4357)]: "l"
+    }
   },
   { jamo: "ㄵ", roman: "n" },
   { jamo: "ㄶ", roman: "n" },
@@ -180,7 +190,7 @@ const jongseong = [
   },
   {
     jamo: "ㄹ",
-    roman: { default: "l", vowelNext: "r", ㄴ: "l", ㄹ: "l" }
+    roman: { default: "l", RRT: "l", vowelNext: "r", ㄴ: "l", ㄹ: "l" }
   },
   {
     jamo: "ㄺ",
@@ -204,7 +214,10 @@ const jongseong = [
       RRT: "b"
     }
   },
-  { jamo: "ㅄ", roman: { default: "bs", ...nasalAssimilation.trailingBM } },
+  {
+    jamo: "ㅄ",
+    roman: { default: "bs", RRT: "bs", ...nasalAssimilation.trailingBM }
+  },
   {
     jamo: "ㅅ",
     roman: {
@@ -222,7 +235,13 @@ const jongseong = [
       ...nasalAssimilation.trailingDN
     }
   },
-  { jamo: "ㅇ", roman: { default: "ng", vowelNext: "ng-" } },
+  {
+    jamo: "ㅇ",
+    roman: {
+      default: "ng",
+      vowelNext: "ng-"
+    }
+  },
   {
     jamo: "ㅈ",
     roman: {
@@ -243,7 +262,14 @@ const jongseong = [
       RRT: "ch"
     }
   },
-  { jamo: "ㅋ", roman: { default: "k", ...nasalAssimilation.trailingGNg } },
+  {
+    jamo: "ㅋ",
+    roman: {
+      default: "k",
+      RRT: "k",
+      ...nasalAssimilation.trailingGNg
+    }
+  },
   {
     jamo: "ㅌ",
     roman: {
