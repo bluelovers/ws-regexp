@@ -62,29 +62,29 @@ describe("isHangul", () => {
 
   describeTestBlock("basic Latin", BASIC_LATIN, false);
 
-  describeTestBlock(
-    "Chinese/Japanese/Korean unified ideographs",
-    CJK_UNIFIED_IDEOGRAPHS,
-    false
-  );
+  // describeTestBlock(
+  //   "Chinese/Japanese/Korean unified ideographs",
+  //   CJK_UNIFIED_IDEOGRAPHS,
+  //   false
+  // );
 
-  describeTestBlock(
-    "Chinese/Japanese/Korean symbols and punctuation",
-    CJK_SYMBOLS_AND_PUNCTUATION,
-    false
-  );
+  // describeTestBlock(
+  //   "Chinese/Japanese/Korean symbols and punctuation",
+  //   CJK_SYMBOLS_AND_PUNCTUATION,
+  //   false
+  // );
 
-  describeTestBlock("Hangul syllables", HANGUL_SYLLABLES, true);
+  // describeTestBlock("Hangul syllables", HANGUL_SYLLABLES, true);
 
-  describeTestBlock("Hangul jamo", HANGUL_JAMO, true);
+  // describeTestBlock("Hangul jamo", HANGUL_JAMO, true);
 
-  describeTestBlock(
-    "Hangul compatibility jamo",
-    HANGUL_COMPATIBILITY_JAMO,
-    true
-  );
+  // describeTestBlock(
+  //   "Hangul compatibility jamo",
+  //   HANGUL_COMPATIBILITY_JAMO,
+  //   true
+  // );
 
-  describeTestBlock("Hangul jamo extended-A", HANGUL_JAMO_EXTENDED_A, true);
+  // describeTestBlock("Hangul jamo extended-A", HANGUL_JAMO_EXTENDED_A, true);
 
-  describeTestBlock("Hangul jamo extended-B", HANGUL_JAMO_EXTENDED_B, true);
+  // describeTestBlock("Hangul jamo extended-B", HANGUL_JAMO_EXTENDED_B, true);
 });

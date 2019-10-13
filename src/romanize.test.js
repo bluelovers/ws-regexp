@@ -3,7 +3,7 @@ const {
   romanize,
   romanizeWord
 } = require("./romanize");
-const words = Object.entries(require("./test").words);
+const words = Object.entries(require("../test").words);
 
 describe("romanizeWord function", () => {
   describe("should romanize simple words", () => {
