@@ -51,7 +51,7 @@ const choseong = [
       ㄼ: "dd"
     }
   },
-  { jamo: "ㄸ", roman: "dd" },
+  { jamo: "ㄸ", roman: "tt" },
   {
     jamo: "ㄹ", // initial
     roman: {
@@ -92,7 +92,13 @@ const choseong = [
   { jamo: "ㅈ", roman: "j" },
   { jamo: "ㅉ", roman: "jj" },
   { jamo: "ㅊ", roman: "ch" },
-  { jamo: "ㅋ", roman: "k" },
+  {
+    jamo: "ㅋ",
+    roman: {
+      default: "k",
+      MR: "k'"
+    }
+  },
   { jamo: "ㅌ", roman: "t" },
   { jamo: "ㅍ", roman: "p" },
   { jamo: "ㅎ", roman: "h" }
@@ -102,7 +108,7 @@ const choseong = [
 const jungseong = [
   { jamo: "ㅏ", roman: "a", bright: true },
   { jamo: "ㅐ", roman: "ae", bright: true },
-  { jamo: "ㅑ", roman: "yeo", dark: true },
+  { jamo: "ㅑ", roman: "ya", dark: true },
   { jamo: "ㅒ", roman: "yae", bright: true },
   { jamo: "ㅓ", roman: "eo", dark: true },
   { jamo: "ㅔ", roman: "e", dark: true },
