@@ -4,7 +4,8 @@
   "description": "String conversion utility to romanize Korean characters",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest --watchAll",
+    "test": "npx jest",
+    "test:watch": "npx jest --watchAll",
     "test:coverage": "npx jest --coverage"
   },
   "keywords": [
