@@ -41,6 +41,9 @@
     "unicode": "^12.1.0"
   },
   "dependencies": {},
+  "bin": {
+    "romaja": "./cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mooniker/romaja.git"

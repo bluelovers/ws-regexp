@@ -7,3 +7,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/94bd9c4fcbfd293e2edf/maintainability)](https://codeclimate.com/github/mooniker/romaja/maintainability)
 
 > "What have the Romans ever done for us?"
+
+```bash
+npm install --global romaja
+romaja 안녕하십니까?
+# "annyeonghasimnikka?"
+```
