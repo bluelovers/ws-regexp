@@ -9,3 +9,5 @@
 !*.test.ts
 !*.spec.ts
 !/test/_local-dev.ts
+/package.d.ts
+*.tsbuildinfo

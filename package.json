@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "3.3.8",
+  "version": "3.3.9",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -74,18 +74,18 @@
     "test": "test"
   },
   "scripts": {
-    "coverage": "npx nyc npm run test",
-    "local-link": "npm link cjk-conv",
-    "ncu": "npx npm-check-updates -u",
-    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run test",
+    "coverage": "npx nyc yarn run test",
+    "local-link": "yarn link cjk-conv",
+    "ncu": "npx yarn-tool ncu -u",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish": "echo postpublish && node ./script/publish-after",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test:local": "npx mocha --require ts-node/register \"!(node_modules)\\**\\*.+(test|spec).ts\"",
-    "test": "npm run test:local"
+    "sort-package-json": "npx yarn-tool sort",
+    "test:local": "ypx mocha -- --require ts-node/register \"!(node_modules)/**/*.+(test|spec).ts\"",
+    "test": "yarn run test:local"
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
-    "cjk-conv": "^1.2.0",
+    "cjk-conv": "^1.2.34",
     "lodash": "^4.17.15",
     "regexp-helper": "^1.0.8",
     "regexp-parser-event": "^1.1.5",
@@ -94,10 +94,10 @@
     "regexp-support": "^1.0.25"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.12",
-    "@types/lodash": "^4.14.136",
-    "@types/node": "^12",
-    "cross-spawn-extra": "^1.0.6",
+    "@bluelovers/tsconfig": "^1.0.17",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13",
+    "cross-spawn-extra": "^2.0.0",
     "git-root2": "^1.0.7"
   }
 }
