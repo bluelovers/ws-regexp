@@ -4,7 +4,7 @@
 
 import { listRawToRange } from '../util';
 
-export let list_range_raw = [
+export const list_range_raw = [
 	[
 		// 带圆圈数字
 		// 0
@@ -49,6 +49,6 @@ export let list_range_raw = [
 	],
 ];
 
-export let list_range = listRawToRange(list_range_raw);
+export const list_range = listRawToRange(list_range_raw);
 
 export default list_range;

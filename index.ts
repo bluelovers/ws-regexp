@@ -2,27 +2,25 @@
  * Created by user on 2018/5/7/007.
  */
 
-import { matchRange, IOptions, getOptions, TABLE_RANGE, toRegExpString } from './src/core';
+import { matchRange as _matchRange, IOptions, getOptions, TABLE_RANGE, toRegExpString, fillRange } from './src/core';
 
-/*
-let _self1 = matchRange as typeof matchRange & {
-	matchRange: typeof matchRange,
-	getOptions: typeof getOptions,
-	toRegExpString: typeof toRegExpString,
-	TABLE_RANGE: typeof TABLE_RANGE,
-};
+function matchRange(from, to, options: IOptions & {
+	createRegExpString: true,
+}): string
+function matchRange(from, to, options?: IOptions): string[]
+function matchRange(...argv): string[] | string
+{
+	// @ts-ignore
+	return _matchRange(...argv)
+}
 
-let _self2 = _self1 as typeof _self1 & {
-	default: typeof _self1,
-};
+matchRange.matchRange = matchRange;
+matchRange.getOptions = getOptions;
+matchRange.toRegExpString = toRegExpString;
+matchRange.TABLE_RANGE = TABLE_RANGE;
+matchRange.fillRange = fillRange;
 
-_self2.matchRange = matchRange;
-_self2.getOptions = getOptions;
-_self2.toRegExpString = toRegExpString;
-_self2.TABLE_RANGE = TABLE_RANGE;
-
-_self2.default = _self2;
-*/
+matchRange.default = matchRange;
 
 // @ts-ignore
 export = matchRange;

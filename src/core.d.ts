@@ -28,31 +28,8 @@ export declare type IOptions = {
 export declare function matchRange(from: any, to: any, options: IOptions & {
     createRegExpString: true;
 }): string;
-export declare namespace matchRange {
-    var matchRange: typeof matchRange;
-    var getOptions: typeof getOptions;
-    var toRegExpString: typeof toRegExpString;
-    var TABLE_RANGE: {
-        chinese: string[][];
-        circle: string[][];
-    };
-    var fillRange: typeof fillRange;
-    var default: typeof matchRange;
-}
 export declare function matchRange(from: any, to: any, options?: IOptions): string[];
-export declare namespace matchRange {
-    var matchRange: typeof matchRange;
-    var getOptions: typeof getOptions;
-    var toRegExpString: typeof toRegExpString;
-    var TABLE_RANGE: {
-        chinese: string[][];
-        circle: string[][];
-    };
-    var fillRange: typeof fillRange;
-    var default: typeof matchRange;
-}
 export declare function toRegExpString(arr: string[], warpClass?: boolean): string;
 export declare function fillRange(from: any, to: any, options?: IOptions): string[];
 export declare function getOptions(options: IOptions): IOptions;
-declare const _default: typeof import("./core");
-export default _default;
+export default matchRange;

@@ -2,9 +2,12 @@
 /**
  * Created by user on 2018/5/7/007.
  */
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const _fillRange = require("fill-range");
-const table_1 = require("./table");
+const fill_range_1 = __importDefault(require("fill-range"));
+const table_1 = __importDefault(require("./table"));
 exports.TABLE_RANGE = table_1.default;
 const array_hyper_unique_1 = require("array-hyper-unique");
 function matchRange(from, to, options = {}) {
@@ -15,6 +18,7 @@ function matchRange(from, to, options = {}) {
     let findFirstOne = !!options.findFirstOne;
     Object
         .keys(options.dataTables)
+        // @ts-ignore
         .some(function (key) {
         let bool;
         options.dataTables[key].some(function (arr) {
@@ -65,7 +69,7 @@ function fillRange(from, to, options = {}) {
             _ok = true;
         }
         if (_ok) {
-            ret = _fillRange(s, e);
+            ret = fill_range_1.default(s, e);
         }
         if (!ret || !ret.length) {
             ret = null;
@@ -83,10 +87,5 @@ function getOptions(options) {
     return opts;
 }
 exports.getOptions = getOptions;
-matchRange.matchRange = matchRange;
-matchRange.getOptions = getOptions;
-matchRange.toRegExpString = toRegExpString;
-matchRange.TABLE_RANGE = table_1.default;
-matchRange.fillRange = fillRange;
-matchRange.default = matchRange;
-exports.default = exports;
+exports.default = matchRange;
+//# sourceMappingURL=core.js.map

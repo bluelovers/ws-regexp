@@ -2,7 +2,7 @@
  * Created by user on 2018/5/7/007.
  */
 
-export function listRawToRange(list_range_raw): string[][]
+export function listRawToRange(list_range_raw: (string | number | number[])[][]): string[][]
 {
 	return list_range_raw.reduce(function (a, data)
 	{
@@ -57,5 +57,3 @@ export function listRawToRange(list_range_raw): string[][]
 		return a;
 	}, [] as string[][])
 }
-
-export default exports as typeof import('./util');

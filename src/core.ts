@@ -2,7 +2,7 @@
  * Created by user on 2018/5/7/007.
  */
 
-import _fillRange = require('fill-range');
+import _fillRange from 'fill-range';
 import TABLE_RANGE from './table';
 import { array_unique_overwrite } from 'array-hyper-unique';
 
@@ -52,6 +52,7 @@ export function matchRange(from, to, options: IOptions = {}): string[] | string
 
 	Object
 		.keys(options.dataTables)
+		// @ts-ignore
 		.some(function (key: keyof typeof options.dataTables): boolean
 		{
 			let bool: boolean;
@@ -159,12 +160,4 @@ export function getOptions(options: IOptions): IOptions
 	return opts;
 }
 
-matchRange.matchRange = matchRange;
-matchRange.getOptions = getOptions;
-matchRange.toRegExpString = toRegExpString;
-matchRange.TABLE_RANGE = TABLE_RANGE;
-matchRange.fillRange = fillRange;
-
-matchRange.default = matchRange;
-
-export default exports as typeof import('./core');
+export default matchRange;

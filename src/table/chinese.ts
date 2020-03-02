@@ -2,9 +2,9 @@
  * Created by user on 2018/5/7/007.
  */
 
-import japanese = require('japanese');
+import japanese from 'japanese';
 
-export let list_range = [
+export const list_range = [
 	'〇一二三四五六七八九十'.split(''),
 	'零一二三四五六七八九十'.split(''),
 ];
@@ -36,7 +36,7 @@ export let list_range = [
 	}
 });
 
-export let list_range2: string[][] = [];
+export const list_range2: string[][] = [];
 
 [
 	/**
