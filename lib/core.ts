@@ -255,6 +255,7 @@ export function setupParserEventEmitter(ev: ParserEventEmitter, options: IOption
 			{
 				Object
 					.keys(conf)
+					// @ts-ignore
 					.forEach(function (event: ParserEventEmitterEvent)
 					{
 						ev.on(event, conf[event] as any)

@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "3.3.10",
+  "version": "3.3.11",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -80,21 +80,21 @@
     "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "sort-package-json": "npx yarn-tool sort",
-    "test:local": "ypx mocha -- --require ts-node/register \"!(node_modules)/**/*.+(test|spec).ts\"",
-    "test": "yarn run test:local"
+    "test": "yarn run test:local",
+    "test:local": "ypx mocha -- --require ts-node/register \"!(node_modules)/**/*.+(test|spec).ts\""
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
-    "cjk-conv": "^1.2.34",
+    "cjk-conv": "^1.2.41",
     "lodash": "^4.17.15",
     "regexp-helper": "^1.0.8",
     "regexp-parser-event": "^1.1.5",
     "regexp-parser-literal": "^1.1.0",
-    "regexp-range": "^1.0.7",
+    "regexp-range": "^1.0.8",
     "regexp-support": "^1.0.25"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.17",
+    "@bluelovers/tsconfig": "^1.0.18",
     "@types/lodash": "^4.14.149",
     "@types/node": "^13",
     "cross-spawn-extra": "^2.0.0",
