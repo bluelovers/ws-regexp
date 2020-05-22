@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import yargs = require('yargs');
+import yargs from 'yargs';
 import { handldTarget } from '../index';
-
 
 const cli = yargs
 	.usage(`npx cjk-conv-cli xxxx.txt */file*.txt **/doc*.txt`)

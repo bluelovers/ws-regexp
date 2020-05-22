@@ -3,8 +3,8 @@
  */
 import { cn2tw_min, tw2cn_min } from 'cjk-conv/lib/zh/convert/min';
 import { cn2tw, tw2cn } from 'cjk-conv/lib/zh/convert';
-import FastGlob = require('fast-glob');
-import Bluebird = require('bluebird');
+import { Options as IFastGlobOptions } from '@bluelovers/fast-glob';
+import Bluebird from 'bluebird';
 export declare const FnList: {
     cn2tw_min: typeof cn2tw_min;
     tw2cn_min: typeof tw2cn_min;
@@ -19,7 +19,7 @@ export declare type IOptionsConv = {
     createBackup?: boolean;
     createPatch?: boolean;
 };
-export declare type IOptions = FastGlob.Options<string> & IOptionsConv & {
+export declare type IOptions = IFastGlobOptions & IOptionsConv & {
     deep?: boolean | number;
 };
 export declare function handldTarget(search: string | string[], options?: IOptions): Bluebird<string[]>;

@@ -31,42 +31,49 @@
     "zhs",
     "zht"
   ],
-  "homepage": "https://github.com/bluelovers/cjk-conv-cli#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/cjk-conv-cli#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/cjk-conv-cli/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/cjk-conv-cli.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "bin": {
     "cjk-conv-cli": "bin/cjk-conv-cli.js"
   },
   "scripts": {
     "coverage": "npx nyc npm run test",
-    "ncu": "npx npm-check-updates -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.0.7",
-    "bluebird": "^3.5.4",
-    "cjk-conv": "^1.1.46",
+    "@bluelovers/fast-glob": "^3.0.4",
+    "array-hyper-unique": "^1.1.0",
+    "bluebird": "^3.7.2",
+    "cjk-conv": "^1.2.44",
     "crlf-normalize": "^1.0.3",
-    "debug-color2": "^1.0.7",
-    "diff": "^4.0.1",
-    "fast-glob": "^2.2.6",
-    "fs-extra": "^7.0.1",
-    "fs-iconv": "^2.0.6",
-    "yargs": "^13.2.2"
+    "debug-color2": "^1.1.7",
+    "diff": "^4.0.2",
+    "fast-glob": "^3.2.2",
+    "fs-extra": "^9.0.0",
+    "fs-iconv": "^3.0.4",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.3",
-    "@types/yargs": "^13.0.0"
+    "@types/bluebird": "^3.5.32",
+    "@types/diff": "^4.0.2",
+    "@types/fs-extra": "^9.0.1",
+    "@types/yargs": "^15.0.5"
   },
   "preferGlobal": true
 }

@@ -4,10 +4,10 @@
 import { cn2tw_min, tw2cn_min } from 'cjk-conv/lib/zh/convert/min';
 import { cn2tw, tw2cn, IOptions as IOptionsCore } from 'cjk-conv/lib/zh/convert';
 
-import FastGlob = require('fast-glob');
-import fs = require('fs-iconv');
-import Bluebird = require('bluebird');
-import JsDiff = require('diff');
+import FastGlob, { Options as IFastGlobOptions } from '@bluelovers/fast-glob';
+import fs from 'fs-iconv';
+import Bluebird from 'bluebird';
+import JsDiff from 'diff';
 import { console } from 'debug-color2';
 import { crlf } from 'crlf-normalize';
 
@@ -27,7 +27,7 @@ export type IOptionsConv = {
 	createPatch?: boolean,
 }
 
-export type IOptions = FastGlob.Options<string> & IOptionsConv & {
+export type IOptions = IFastGlobOptions & IOptionsConv & {
 	deep?: boolean | number,
 }
 
@@ -76,7 +76,7 @@ export function handldTarget(search: string | string[], options?: IOptions)
 
 					if (options.createPatch)
 					{
-						let data = JsDiff.createPatch(crlf(txt_old), crlf(txt_new), {
+						let data = JsDiff.createPatch(file + '.patch', crlf(txt_old), crlf(txt_new), void 0, void 0, {
 							newlineIsToken: true,
 						});
 
