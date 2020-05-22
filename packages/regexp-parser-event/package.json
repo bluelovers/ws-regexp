@@ -1,0 +1,46 @@
+{
+  "name": "regexp-parser-event",
+  "version": "1.1.5",
+  "description": "",
+  "keywords": [
+    "build",
+    "emitter",
+    "emoji",
+    "event",
+    "literal",
+    "parser",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression"
+  ],
+  "homepage": "https://github.com/bluelovers/regexp-parser-event#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-parser-event/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-parser-event.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test:regexp": "yt ws run --scope regexp-cjk test:local",
+    "test:local": "npx mocha --require ts-node/register \"!(node_modules)\\**\\*.+(test|spec).ts\"",
+    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run test",
+    "postpublish": "git commit -a -m \"postpublish new version\"",
+    "test": "npm run test:local && npm run test:regexp"
+  },
+  "dependencies": {
+    "array-hyper-unique": "^1.0.7",
+    "regexp-parser-literal": "^1.1.0",
+    "regexpp2": "^1.3.0",
+    "ts-type": "^1.2.9"
+  },
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.11",
+    "ts-enum-util": "^4.0.1"
+  }
+}
