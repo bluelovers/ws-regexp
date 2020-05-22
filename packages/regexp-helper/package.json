@@ -21,28 +21,34 @@
     "util",
     "valid"
   ],
-  "homepage": "https://github.com/bluelovers/regexp-helper#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexp-helper#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/regexp-helper/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/regexp-helper.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index",
   "directories": {
-    "lib": "lib",
-    "test": "test"
+    "lib": "lib"
   },
   "scripts": {
-    "local-link": "npm link regexp-support",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "local-link": "yarn link regexp-support",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "regexp-helper-core": "^1.0.6",
-    "regexp-support": "^1.0.24"
+    "regexp-helper-core": "^1.0.7",
+    "regexp-support": "^1.0.25"
   },
   "devDependencies": {}
 }

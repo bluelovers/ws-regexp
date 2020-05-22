@@ -21,21 +21,28 @@
     "util",
     "valid"
   ],
-  "homepage": "https://github.com/bluelovers/regexp-helper-core#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexp-helper-core#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/regexp-helper-core/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/regexp-helper-core.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "MIT",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "npx mocha \"!(node_modules)/**/*.+(test|spec).js\""
+    "test": "jest --coverage",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
   }
 }

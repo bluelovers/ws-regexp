@@ -13,5 +13,6 @@ matchRange.toRegExpString = core_1.toRegExpString;
 matchRange.TABLE_RANGE = core_1.TABLE_RANGE;
 matchRange.fillRange = core_1.fillRange;
 matchRange.default = matchRange;
+Object.defineProperty(matchRange, "__esModule", { value: true });
 module.exports = matchRange;
 //# sourceMappingURL=index.js.map

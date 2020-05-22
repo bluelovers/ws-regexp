@@ -1,12 +1,11 @@
-import regexpp = require('regexpp2');
-import { AST } from 'regexpp2';
+import { AST, RegExpParser } from 'regexpp2';
 export declare const EMOJI_REGEX: RegExp;
-export declare const defaultRegExpParser: regexpp.RegExpParser;
-export declare function createRegExpParser(options?: regexpp.RegExpParser.Options): regexpp.RegExpParser;
-export declare function parseRegExp(input: string, objRegExpParser?: regexpp.RegExpParser): regexpp.AST.RegExpLiteral;
-export declare function parseFlags(input: string, objRegExpParser?: regexpp.RegExpParser): regexpp.AST.Flags;
-export declare function parsePattern(input: string, uFlag?: boolean | string, objRegExpParser?: regexpp.RegExpParser): regexpp.AST.Pattern;
-export declare function fakePatternToRegExpLiteral(pattern: AST.Pattern | string, flags?: string | AST.Flags, objRegExpParser?: regexpp.RegExpParser): AST.RegExpLiteral;
+export declare const defaultRegExpParser: RegExpParser;
+export declare function createRegExpParser(options?: RegExpParser.Options): RegExpParser;
+export declare function parseRegExp(input: string, objRegExpParser?: RegExpParser): AST.RegExpLiteral;
+export declare function parseFlags(input: string, objRegExpParser?: RegExpParser): AST.Flags;
+export declare function parsePattern(input: string, uFlag?: boolean | string, objRegExpParser?: RegExpParser): AST.Pattern;
+export declare function fakePatternToRegExpLiteral(pattern: AST.Pattern | string, flags?: string | AST.Flags, objRegExpParser?: RegExpParser): AST.RegExpLiteral;
 export declare type IAstToStringOptions = {
     debugChanged?: boolean | number;
     noUniqueClass?: boolean;

@@ -50,16 +50,16 @@
     "zhs",
     "zht"
   ],
-  "homepage": "https://github.com/bluelovers/regexp-cjk-plugin-extra#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexp-cjk-plugin-extra#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/regexp-cjk-plugin-extra/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/regexp-cjk-plugin-extra.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -67,11 +67,14 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
+    "test": "jest --coverage",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
+    "postpublish_": "git commit -a -m \"postpublish new version\"",
     "ncu": "npx yarn-tool ncu -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run test",
-    "postpublish": "git commit -a -m \"postpublish new version\"",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx mocha \"!(node_modules)/**/*.+(test|spec).js\""
+    "sort-package-json": "npx sort-package-json ./package.json"
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
@@ -80,11 +83,11 @@
     "uni-string": "^1.1.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.12",
-    "regexp-cjk": "^3.3.8",
+    "@types/lodash.deburr": "^4.1.6",
+    "regexp-cjk": "^3.3.11",
     "regexp-parser-event": "^1.1.5"
   },
   "peerDependencies": {
-    "cjk-conv": "^1.2.1"
+    "cjk-conv": "^1.2.44"
   }
 }

@@ -3,6 +3,7 @@
  * Created by user on 2018/5/7/007.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.listRawToRange = void 0;
 function listRawToRange(list_range_raw) {
     return list_range_raw.reduce(function (a, data) {
         let c = data.reduce(function (a2, v) {

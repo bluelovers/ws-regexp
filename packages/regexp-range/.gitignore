@@ -85,5 +85,13 @@ jest.config.d.ts
 jest.config.js.map
 /report.*.json
 *.js.map
-/.nowignore
-!jest.config.js
+/now.json
+.nyc_output
+.coverage-cache
+.reify-cache
+*.spec.d.ts
+*.spec.js
+.nowignore
+*/**/.github
+!/.github
+!npm-shrinkwrap.json

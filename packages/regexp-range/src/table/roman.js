@@ -3,6 +3,7 @@
  * Created by user on 2018/5/7/007.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.list_range = exports.list_range_raw = void 0;
 const util_1 = require("../util");
 exports.list_range_raw = [
     [

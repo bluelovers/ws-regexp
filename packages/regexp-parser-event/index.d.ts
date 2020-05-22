@@ -1,7 +1,6 @@
 /// <reference types="node" />
 import { AST } from "regexpp2";
-import * as regexpp from 'regexpp2';
-import EventEmitter from 'events';
+import { EventEmitter } from 'events';
 import { ITSPartialRecord, ITSOverwrite } from 'ts-type';
 import { INodePlus, IAstToStringOptions } from 'regexp-parser-literal';
 import { AppendableNode } from 'regexpp2/src/parser';
@@ -20,8 +19,8 @@ export declare const ParserEventEmitterEventList: ParserEventEmitterEvent[];
 export declare type INodeInput = AST.Element | AST.CharacterClassElement | AppendableNode | AST.CharacterSet;
 export declare class ParserEventEmitter extends EventEmitter {
     astRegExpLiteral: AST.RegExpLiteral & INodePlus;
-    constructor(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags);
-    static create(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags?: string | AST.Flags): ParserEventEmitter;
+    constructor(inputAst: AST.Pattern | AST.RegExpLiteral | string, flags?: string | AST.Flags);
+    static create(inputAst: AST.Pattern | AST.RegExpLiteral | string, flags?: string | AST.Flags): ParserEventEmitter;
     resume(): this;
     /**
      * same as this.emit(ParserEventEmitterEvent.change, ast)
@@ -39,19 +38,22 @@ export declare class ParserEventEmitter extends EventEmitter {
     protected _lookup_sub<T extends INodeInput>(inputAst: T & INodePlus, myEmitter: ParserEventEmitter, parent?: any, eventPrefix?: string): void;
     getSource(overwrite?: boolean, options?: IAstToStringOptions): string;
     getFlags(overwrite?: boolean, options?: IAstToStringOptions): string;
-    source: string;
-    flags: string;
-    changed: boolean;
+    get source(): string;
+    set source(pattern: AST.Pattern | string);
+    get flags(): string;
+    set flags(flags: string | AST.Flags);
+    get changed(): boolean;
+    set changed(bool: boolean);
     toString(overwrite?: boolean, options?: IAstToStringOptions): string;
     toRegExp<T extends RegExp>(RegExpClass?: typeof RegExp): RegExp;
     /**
      * this will not update changes
      */
-    readonly astSource: AST.Pattern;
+    get astSource(): AST.Pattern;
     /**
      * this will not update changes
      */
-    readonly astFlags: AST.Flags;
+    get astFlags(): AST.Flags;
 }
 export interface IParserEventEmitterListenerMap<T extends INodeInput = INodeInput> extends ITSOverwrite<ITSPartialRecord<ParserEventEmitterEvent, IParserEventEmitterListener<any, ParserEventEmitterEvent>>, {
     /**

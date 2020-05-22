@@ -1,6 +1,6 @@
 import { AST } from "regexpp2";
-import * as regexpp from 'regexpp2';
-import EventEmitter from 'events';
+//import * as regexpp from 'regexpp2';
+import { EventEmitter } from 'events';
 import { array_unique } from 'array-hyper-unique';
 import { ITSPartialRecord, ITSOverwrite } from 'ts-type';
 
@@ -42,7 +42,7 @@ export class ParserEventEmitter extends EventEmitter
 {
 	astRegExpLiteral: AST.RegExpLiteral & INodePlus = null;
 
-	constructor(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags: string | AST.Flags = '')
+	constructor(inputAst: AST.Pattern | AST.RegExpLiteral | string, flags: string | AST.Flags = '')
 	{
 		super();
 
@@ -67,7 +67,7 @@ export class ParserEventEmitter extends EventEmitter
 //		});
 	}
 
-	static create(inputAst: regexpp.AST.Pattern | regexpp.AST.RegExpLiteral | string, flags: string | AST.Flags = '')
+	static create(inputAst: AST.Pattern | AST.RegExpLiteral | string, flags: string | AST.Flags = '')
 	{
 		return new this(inputAst, flags);
 	}
@@ -310,7 +310,7 @@ export class ParserEventEmitter extends EventEmitter
 	}
 
 	// @ts-ignore
-	set source(pattern: regexpp.AST.Pattern | string)
+	set source(pattern: AST.Pattern | string)
 	{
 		pattern = typeof pattern == 'string' ? parsePattern(pattern, this.astRegExpLiteral.flags.unicode) : pattern;
 

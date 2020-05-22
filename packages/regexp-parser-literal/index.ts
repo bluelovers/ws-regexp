@@ -1,8 +1,7 @@
 
 import { array_unique } from 'array-hyper-unique';
-import regexpp = require('regexpp2');
-import { AST } from 'regexpp2';
-import EmojiRegex = require('emoji-regex');
+import { AST, RegExpParser } from 'regexpp2';
+import EmojiRegex from 'emoji-regex';
 import UString from 'uni-string';
 
 // @ts-ignore
@@ -12,9 +11,9 @@ export const defaultRegExpParser = createRegExpParser({
 	disableChkCharacterClassRange: true,
 });
 
-export function createRegExpParser(options?: regexpp.RegExpParser.Options)
+export function createRegExpParser(options?: RegExpParser.Options)
 {
-	return new regexpp.RegExpParser(options);
+	return new RegExpParser(options);
 }
 
 export function parseRegExp(input: string, objRegExpParser = defaultRegExpParser)

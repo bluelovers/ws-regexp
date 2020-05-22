@@ -22,5 +22,7 @@ matchRange.fillRange = fillRange;
 
 matchRange.default = matchRange;
 
+Object.defineProperty(matchRange, "__esModule", { value: true });
+
 // @ts-ignore
 export = matchRange;

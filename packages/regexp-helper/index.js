@@ -2,20 +2,31 @@
 /**
  * Created by user on 2018/4/28/028.
  */
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("regexp-helper-core"));
-const regexp_support_1 = require("regexp-support");
+exports.parseRegularExpressionString = exports.prototypeToFlagsArray = exports.prototypeToFlags = exports.isNativeFlags = exports.stripNonNativeFlags = exports.getNativeFlags = exports.nativeFlags = void 0;
+__exportStar(require("regexp-helper-core"), exports);
+const regexp_support_1 = __importDefault(require("regexp-support"));
 const lib_1 = require("./lib");
-exports.getNativeFlags = lib_1.getNativeFlags;
-exports.stripNonNativeFlags = lib_1.stripNonNativeFlags;
-exports.isNativeFlags = lib_1.isNativeFlags;
-exports.prototypeToFlags = lib_1.prototypeToFlags;
-exports.prototypeToFlagsArray = lib_1.prototypeToFlagsArray;
+Object.defineProperty(exports, "getNativeFlags", { enumerable: true, get: function () { return lib_1.getNativeFlags; } });
+Object.defineProperty(exports, "stripNonNativeFlags", { enumerable: true, get: function () { return lib_1.stripNonNativeFlags; } });
+Object.defineProperty(exports, "isNativeFlags", { enumerable: true, get: function () { return lib_1.isNativeFlags; } });
+Object.defineProperty(exports, "prototypeToFlags", { enumerable: true, get: function () { return lib_1.prototypeToFlags; } });
+Object.defineProperty(exports, "prototypeToFlagsArray", { enumerable: true, get: function () { return lib_1.prototypeToFlagsArray; } });
 const parse_1 = require("./lib/parse");
-exports.parseRegularExpressionString = parse_1.parseRegularExpressionString;
+Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return parse_1.parseRegularExpressionString; } });
 exports.nativeFlags = regexp_support_1.default.nativeFlags;
 exports.default = exports;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7O0dBRUc7Ozs7O0FBRUgsd0NBQW1DO0FBQ25DLG1EQUFxQztBQUNyQywrQkFBeUg7QUFLaEgseUJBTEssb0JBQWMsQ0FLTDtBQUFFLDhCQUxLLHlCQUFtQixDQUtMO0FBQUUsd0JBTEssbUJBQWEsQ0FLTDtBQUVsRCwyQkFQeUQsc0JBQWdCLENBT3pEO0FBQUUsZ0NBUHlELDJCQUFxQixDQU96RDtBQU5oRCx1Q0FBMkQ7QUFRbEQsdUNBUkEsb0NBQTRCLENBUUE7QUFOeEIsUUFBQSxXQUFXLEdBQUcsd0JBQU8sQ0FBQyxXQUFXLENBQUM7QUFRL0Msa0JBQWUsT0FBbUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ3JlYXRlZCBieSB1c2VyIG9uIDIwMTgvNC8yOC8wMjguXG4gKi9cblxuZXhwb3J0ICogZnJvbSAncmVnZXhwLWhlbHBlci1jb3JlJztcbmltcG9ydCBzdXBwb3J0IGZyb20gJ3JlZ2V4cC1zdXBwb3J0JztcbmltcG9ydCBMSUIsIHsgZ2V0TmF0aXZlRmxhZ3MsIHN0cmlwTm9uTmF0aXZlRmxhZ3MsIGlzTmF0aXZlRmxhZ3MsIHByb3RvdHlwZVRvRmxhZ3MsIHByb3RvdHlwZVRvRmxhZ3NBcnJheSB9IGZyb20gJy4vbGliJztcbmltcG9ydCB7IHBhcnNlUmVndWxhckV4cHJlc3Npb25TdHJpbmcgfSBmcm9tICcuL2xpYi9wYXJzZSc7XG5cbmV4cG9ydCBjb25zdCBuYXRpdmVGbGFncyA9IHN1cHBvcnQubmF0aXZlRmxhZ3M7XG5cbmV4cG9ydCB7IGdldE5hdGl2ZUZsYWdzLCBzdHJpcE5vbk5hdGl2ZUZsYWdzLCBpc05hdGl2ZUZsYWdzIH07XG5cbmV4cG9ydCB7IHByb3RvdHlwZVRvRmxhZ3MsIHByb3RvdHlwZVRvRmxhZ3NBcnJheSB9XG5cbmV4cG9ydCB7IHBhcnNlUmVndWxhckV4cHJlc3Npb25TdHJpbmcgfVxuXG5leHBvcnQgZGVmYXVsdCBleHBvcnRzIGFzIHR5cGVvZiBpbXBvcnQoJy4vaW5kZXgnKTtcbiJdfQ==
+//# sourceMappingURL=index.js.map

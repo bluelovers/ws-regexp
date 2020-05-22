@@ -6,6 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.list_range2 = exports.list_range = void 0;
 const japanese_1 = __importDefault(require("japanese"));
 exports.list_range = [
     '〇一二三四五六七八九十'.split(''),

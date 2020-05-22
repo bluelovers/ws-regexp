@@ -6,6 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getOptions = exports.fillRange = exports.toRegExpString = exports.matchRange = exports.TABLE_RANGE = void 0;
 const fill_range_1 = __importDefault(require("fill-range"));
 const table_1 = __importDefault(require("./table"));
 exports.TABLE_RANGE = table_1.default;

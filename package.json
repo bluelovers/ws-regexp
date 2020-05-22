@@ -6,19 +6,22 @@
     "packages/*"
   ],
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lerna:publish": "npx lerna publish",
     "lerna:publish:yes": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ncu": "npx yarn-tool ncu -u && npx yarn-tool ws exec yarn-tool ncu -- -u",
+    "sort-package-json": "npx yarn-tool sort && npx yarn-tool ws exec yarn-tool sort"
   },
+  "resolutions": {},
   "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.19",
+    "@types/jest": "^25.2.3",
     "@types/node": "*",
-    "@bluelovers/tsconfig": "^1.0.19"
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0"
   },
   "peerDependencies": {
     "lerna": "^3"
-  },
-  "resolutions": {}
+  }
 }
