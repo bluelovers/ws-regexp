@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(^|[^\\w'’])(\\d+(?:,\\d+)*)(?![\\w'’]) 1`] = `"(^|[^\\\\w'’])(\\\\d+(?:,\\\\d+)*)(?![\\\\w'’])"`;
+
+exports[`ParserEventEmitterEventList 1`] = `
+Array [
+  "default",
+  "class",
+  "other",
+  "uniset",
+  "class_default",
+  "class_range",
+  "class_other",
+  "class_uniset",
+  "change",
+]
+`;
+
+exports[`麻#_@_#痹 1`] = `"麻#_@_#痹"`;

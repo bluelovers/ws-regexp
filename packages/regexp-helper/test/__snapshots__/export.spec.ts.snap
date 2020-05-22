@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`import check 1`] = `
+Array [
+  "nativeFlags",
+  "getNativeFlags",
+  "stripNonNativeFlags",
+  "isNativeFlags",
+  "prototypeToFlags",
+  "prototypeToFlagsArray",
+  "parseRegularExpressionString",
+  "REGEXP_TO_STRING_TAG",
+  "toHex",
+  "toUnicode",
+  "toUnicode2",
+  "_toUnicode",
+  "isDoubleUnicode",
+  "isRegExp",
+  "surrogatePair",
+  "unicodeUnEscape",
+  "unicodeUnEscape2",
+  "unicodeEscape",
+  "unicodeEscape2",
+  "escapeRegExp",
+  "default",
+]
+`;

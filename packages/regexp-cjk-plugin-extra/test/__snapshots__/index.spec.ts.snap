@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`base autoDeburr déjà vu / deja vu 1`] = `/d\\[eé\\]j\\[aà\\] vu/iu`;
+
+exports[`base autoFullHaif <haif width space> / <full width space>> 1`] = `/\\[ 　\\]/iu`;
+
+exports[`base autoFullHaif a / Ａ 1`] = `/\\[aａ\\]/iu`;
+
+exports[`base autoFullHaif Ａ / a 1`] = `/\\[AＡ\\]/iu`;
+
+exports[`base autoVoice か / が 1`] = `/\\[かが\\]/iu`;
+
+exports[`base autoVoice ヘ / ペ 1`] = `/\\[ヘベペ\\]/iu`;
+
+exports[`escape / /i 1`] = `/\\[ 　\\]/i`;
+
+exports[`escape / /iu 1`] = `/\\[ 　\\]/iu`;
+
+exports[`escape / déjà =<>\\(\\)\\[\\] \\\\ \\/\\?\\.-\\+\\*vu[\\-]/iu 1`] = `/\\[ 　\\]\\[dｄ\\]\\[eé\\]\\[jｊ\\]\\[aà\\]\\[ 　\\]\\[=＝\\]\\[<＜\\]\\[>＞\\]\\[\\(（\\]\\[\\)）\\]\\[\\\\\\[［\\]\\[\\\\\\]］\\]\\[ 　\\]\\[\\\\\\\\＼\\]\\[ 　\\]\\[\\\\/／\\]\\[\\?？\\]\\[\\.．\\]\\[\\\\-－\\]\\[\\+＋\\]\\[\\*＊\\]\\[vｖ\\]\\[uｕ\\]\\[\\\\-\\]/iu`;
+
+exports[`escape /\\(/i 1`] = `/\\[\\(（\\]/i`;
+
+exports[`escape /\\(/iu 1`] = `/\\[\\(（\\]/iu`;
+
+exports[`escape /\\)/i 1`] = `/\\[\\)）\\]/i`;
+
+exports[`escape /\\)/iu 1`] = `/\\[\\)）\\]/iu`;
+
+exports[`escape /\\*/i 1`] = `/\\[\\*＊\\]/i`;
+
+exports[`escape /\\*/iu 1`] = `/\\[\\*＊\\]/iu`;
+
+exports[`escape /\\+/i 1`] = `/\\[\\+＋\\]/i`;
+
+exports[`escape /\\+/iu 1`] = `/\\[\\+＋\\]/iu`;
+
+exports[`escape /\\./i 1`] = `/\\[\\.．\\]/i`;
+
+exports[`escape /\\./iu 1`] = `/\\[\\.．\\]/iu`;
+
+exports[`escape /\\//i 1`] = `/\\[\\\\/／\\]/i`;
+
+exports[`escape /\\//i 2`] = `/\\[\\\\/／\\]/i`;
+
+exports[`escape /\\//iu 1`] = `/\\[\\\\/／\\]/iu`;
+
+exports[`escape /\\//iu 2`] = `/\\[\\\\/／\\]/iu`;
+
+exports[`escape /\\?/i 1`] = `/\\[\\?？\\]/i`;
+
+exports[`escape /\\?/iu 1`] = `/\\[\\?？\\]/iu`;
+
+exports[`escape /\\[/i 1`] = `/\\[\\\\\\[［\\]/i`;
+
+exports[`escape /\\[/iu 1`] = `/\\[\\\\\\[［\\]/iu`;
+
+exports[`escape /\\\\/i 1`] = `/\\[\\\\\\\\＼\\]/i`;
+
+exports[`escape /\\\\/iu 1`] = `/\\[\\\\\\\\＼\\]/iu`;
+
+exports[`escape /\\]/i 1`] = `/\\[\\\\\\]］\\]/i`;
+
+exports[`escape /\\]/iu 1`] = `/\\[\\\\\\]］\\]/iu`;
+
+exports[`escape /\\-/i 1`] = `/\\[\\\\-－\\]/i`;
+
+exports[`escape /\\-/i 2`] = `/\\[\\\\-－\\]/i`;
+
+exports[`escape /-/i 1`] = `/\\[\\\\-－\\]/i`;
+
+exports[`escape /-/iu 1`] = `/\\[\\\\-－\\]/iu`;
+
+exports[`escape /　/i 1`] = `/\\[ 　\\]/i`;
+
+exports[`escape /　/iu 1`] = `/\\[ 　\\]/iu`;
+
+exports[`escape /（/i 1`] = `/\\[\\(（\\]/i`;
+
+exports[`escape /（/iu 1`] = `/\\[\\(（\\]/iu`;
+
+exports[`escape /）/i 1`] = `/\\[\\)）\\]/i`;
+
+exports[`escape /）/iu 1`] = `/\\[\\)）\\]/iu`;
+
+exports[`escape /＊/i 1`] = `/\\[\\*＊\\]/i`;
+
+exports[`escape /＊/iu 1`] = `/\\[\\*＊\\]/iu`;
+
+exports[`escape /＋/i 1`] = `/\\[\\+＋\\]/i`;
+
+exports[`escape /＋/iu 1`] = `/\\[\\+＋\\]/iu`;
+
+exports[`escape /－/i 1`] = `/\\[\\\\-－\\]/i`;
+
+exports[`escape /－/i 2`] = `/\\[\\\\-－\\]/i`;
+
+exports[`escape /－/iu 1`] = `/\\[\\\\-－\\]/iu`;
+
+exports[`escape /．/i 1`] = `/\\[\\.．\\]/i`;
+
+exports[`escape /．/iu 1`] = `/\\[\\.．\\]/iu`;
+
+exports[`escape /／/i 1`] = `/\\[\\\\/／\\]/i`;
+
+exports[`escape /／/i 2`] = `/\\[\\\\/／\\]/i`;
+
+exports[`escape /／/iu 1`] = `/\\[\\\\/／\\]/iu`;
+
+exports[`escape /／/iu 2`] = `/\\[\\\\/／\\]/iu`;
+
+exports[`escape /？/i 1`] = `/\\[\\?？\\]/i`;
+
+exports[`escape /？/iu 1`] = `/\\[\\?？\\]/iu`;
+
+exports[`escape /［/i 1`] = `/\\[\\\\\\[［\\]/i`;
+
+exports[`escape /［/iu 1`] = `/\\[\\\\\\[［\\]/iu`;
+
+exports[`escape /＼/i 1`] = `/\\[\\\\\\\\＼\\]/i`;
+
+exports[`escape /＼/iu 1`] = `/\\[\\\\\\\\＼\\]/iu`;
+
+exports[`escape /］/i 1`] = `/\\[\\\\\\]］\\]/i`;
+
+exports[`escape /］/iu 1`] = `/\\[\\\\\\]］\\]/iu`;

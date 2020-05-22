@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseFlags 1`] = `
+Object {
+  "dotAll": true,
+  "end": 6,
+  "global": true,
+  "ignoreCase": true,
+  "multiline": true,
+  "parent": null,
+  "raw": "ygmisu",
+  "start": 0,
+  "sticky": true,
+  "type": "Flags",
+  "unicode": true,
+}
+`;
+
+exports[`parsePattern 1`] = `
+Object {
+  "elements": Array [
+    Object {
+      "end": 1,
+      "parent": [Circular],
+      "raw": "麻",
+      "start": 0,
+      "type": "Character",
+      "value": 40635,
+    },
+    Object {
+      "end": 2,
+      "parent": [Circular],
+      "raw": "#",
+      "start": 1,
+      "type": "Character",
+      "value": 35,
+    },
+    Object {
+      "end": 3,
+      "parent": [Circular],
+      "raw": "_",
+      "start": 2,
+      "type": "Character",
+      "value": 95,
+    },
+    Object {
+      "end": 4,
+      "parent": [Circular],
+      "raw": "@",
+      "start": 3,
+      "type": "Character",
+      "value": 64,
+    },
+    Object {
+      "end": 5,
+      "parent": [Circular],
+      "raw": "_",
+      "start": 4,
+      "type": "Character",
+      "value": 95,
+    },
+    Object {
+      "end": 6,
+      "parent": [Circular],
+      "raw": "#",
+      "start": 5,
+      "type": "Character",
+      "value": 35,
+    },
+    Object {
+      "end": 7,
+      "parent": [Circular],
+      "raw": "痹",
+      "start": 6,
+      "type": "Character",
+      "value": 30201,
+    },
+  ],
+  "end": 7,
+  "parent": null,
+  "raw": "麻#_@_#痹",
+  "start": 0,
+  "type": "Pattern",
+}
+`;
+
+exports[`parseRegExp 1`] = `
+Object {
+  "end": 10,
+  "flags": Object {
+    "dotAll": false,
+    "end": 10,
+    "global": false,
+    "ignoreCase": false,
+    "multiline": false,
+    "parent": [Circular],
+    "raw": "u",
+    "start": 9,
+    "sticky": false,
+    "type": "Flags",
+    "unicode": true,
+  },
+  "parent": null,
+  "pattern": Object {
+    "elements": Array [
+      Object {
+        "end": 2,
+        "parent": [Circular],
+        "raw": "麻",
+        "start": 1,
+        "type": "Character",
+        "value": 40635,
+      },
+      Object {
+        "end": 3,
+        "parent": [Circular],
+        "raw": "#",
+        "start": 2,
+        "type": "Character",
+        "value": 35,
+      },
+      Object {
+        "end": 4,
+        "parent": [Circular],
+        "raw": "_",
+        "start": 3,
+        "type": "Character",
+        "value": 95,
+      },
+      Object {
+        "end": 5,
+        "parent": [Circular],
+        "raw": "@",
+        "start": 4,
+        "type": "Character",
+        "value": 64,
+      },
+      Object {
+        "end": 6,
+        "parent": [Circular],
+        "raw": "_",
+        "start": 5,
+        "type": "Character",
+        "value": 95,
+      },
+      Object {
+        "end": 7,
+        "parent": [Circular],
+        "raw": "#",
+        "start": 6,
+        "type": "Character",
+        "value": 35,
+      },
+      Object {
+        "end": 8,
+        "parent": [Circular],
+        "raw": "痹",
+        "start": 7,
+        "type": "Character",
+        "value": 30201,
+      },
+    ],
+    "end": 8,
+    "parent": [Circular],
+    "raw": "麻#_@_#痹",
+    "start": 1,
+    "type": "Pattern",
+  },
+  "raw": "/麻#_@_#痹/u",
+  "start": 0,
+  "type": "RegExpLiteral",
+}
+`;
