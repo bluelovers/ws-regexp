@@ -1,0 +1,72 @@
+{
+  "name": "cjk-conv-cli",
+  "version": "1.0.3",
+  "description": "cli version for cjk-conv ( cn2tw_min, tw2cn_min, cn2tw, tw2cn )",
+  "keywords": [
+    "char",
+    "character",
+    "characters",
+    "chinese",
+    "cjk",
+    "cjk-conv",
+    "cli",
+    "cn",
+    "cn2tw",
+    "conv",
+    "conversion",
+    "convert",
+    "glob",
+    "hanja",
+    "hanzi",
+    "node-novel",
+    "simplified",
+    "traditional",
+    "transform",
+    "tw",
+    "tw2cn",
+    "unicode",
+    "util",
+    "words",
+    "zh",
+    "zhs",
+    "zht"
+  ],
+  "homepage": "https://github.com/bluelovers/cjk-conv-cli#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/cjk-conv-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/cjk-conv-cli.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "bin": {
+    "cjk-conv-cli": "bin/cjk-conv-cli.js"
+  },
+  "scripts": {
+    "coverage": "npx nyc npm run test",
+    "ncu": "npx npm-check-updates -u",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "array-hyper-unique": "^1.0.7",
+    "bluebird": "^3.5.4",
+    "cjk-conv": "^1.1.46",
+    "crlf-normalize": "^1.0.3",
+    "debug-color2": "^1.0.7",
+    "diff": "^4.0.1",
+    "fast-glob": "^2.2.6",
+    "fs-extra": "^7.0.1",
+    "fs-iconv": "^2.0.6",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.3",
+    "@types/yargs": "^13.0.0"
+  },
+  "preferGlobal": true
+}
