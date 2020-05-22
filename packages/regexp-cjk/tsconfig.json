@@ -1,7 +1,0 @@
-{
-  "extends": "@bluelovers/tsconfig",
-  "compilerOptions": {
-    "strictBindCallApply": true,
-    "esModuleInterop": true
-  }
-}

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defaultFlags 1`] = `"u"`;
+
+exports[`defaultFlags 2`] = `/k/u`;
+
+exports[`當 flags != '' 時 使用 flags 1`] = `"g"`;
+
+exports[`當 flags != '' 時 使用 flags 2`] = `/k/g`;
+
+exports[`當 flags = '' 時 使用 defaultFlags 1`] = `"u"`;
+
+exports[`當 flags = '' 時 使用 defaultFlags 2`] = `/k/u`;
+
+exports[`當使用於 zhRegExp.use 內時 自動將 flags 轉換為 defaultFlags 1`] = `
+Object {
+  "defaultFlags": "u",
+}
+`;
+

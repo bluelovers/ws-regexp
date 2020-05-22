@@ -58,16 +58,16 @@
     "zhs",
     "zht"
   ],
-  "homepage": "https://github.com/bluelovers/regexp-cjk#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexp-cjk#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/regexp-cjk/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/regexp-cjk.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -75,17 +75,21 @@
   },
   "scripts": {
     "coverage": "npx nyc yarn run test",
+    "test": "yarn run test:local",
+    "test:local": "jest --coverage",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "echo postpublish && node ./script/publish-after",
     "local-link": "yarn link cjk-conv",
     "ncu": "npx yarn-tool ncu -u",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
-    "postpublish": "echo postpublish && node ./script/publish-after",
-    "sort-package-json": "npx yarn-tool sort",
-    "test": "yarn run test:local",
-    "test:local": "ypx mocha -- --require ts-node/register \"!(node_modules)/**/*.+(test|spec).ts\""
+    "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
-    "cjk-conv": "^1.2.41",
+    "cjk-conv": "^1.2.44",
     "lodash": "^4.17.15",
     "regexp-helper": "^1.0.8",
     "regexp-parser-event": "^1.1.5",
@@ -94,9 +98,7 @@
     "regexp-support": "^1.0.25"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.18",
-    "@types/lodash": "^4.14.149",
-    "@types/node": "^13",
+    "@types/lodash": "^4.14.152",
     "cross-spawn-extra": "^2.0.0",
     "git-root2": "^1.0.7"
   }

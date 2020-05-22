@@ -84,6 +84,7 @@ export declare class zhRegExp extends RegExp {
     static get support(): Readonly<{
         nativeFlags: string;
         flags: {
+            [x: number]: boolean;
             readonly multiline: boolean;
             readonly m: boolean;
             readonly global: boolean;
@@ -129,6 +130,11 @@ export declare class zhRegExp extends RegExp {
             readonly source?: boolean;
             readonly global?: boolean;
             readonly ignoreCase?: boolean;
+            /**
+             * The non-standard lastParen property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. RegExp.$+ is an alias for this property.
+             *
+             * @alias $+
+             */
             readonly multiline?: boolean;
             lastIndex?: boolean;
             compile?: boolean;
@@ -194,11 +200,7 @@ export declare class zhRegExp extends RegExp {
                 LC: boolean;
                 Close_Punctuation: boolean;
                 Pe: boolean;
-                Connector_Punctuation: boolean; /**
-                 * The non-standard lastMatch property is a static and read-only property of regular expressions that contains the last matched characters. RegExp.$& is an alias for this property.
-                 *
-                 * @alias $&
-                 */
+                Connector_Punctuation: boolean;
                 Pc: boolean;
                 Control: boolean;
                 Cc: boolean;
@@ -315,9 +317,7 @@ export declare class zhRegExp extends RegExp {
                 Grapheme_Base: boolean;
                 Gr_Base: boolean;
                 Grapheme_Extend: boolean;
-                Gr_Ext: boolean; /**
-                 * @deprecated
-                 */
+                Gr_Ext: boolean;
                 Hex_Digit: boolean;
                 Hex: boolean;
                 IDS_Binary_Operator: boolean;
@@ -415,9 +415,7 @@ export declare class zhRegExp extends RegExp {
                 Cher: boolean;
                 Common: boolean;
                 Zyyy: boolean;
-                Coptic: boolean; /**
-                 * @todo
-                 */
+                Coptic: boolean;
                 Copt: boolean;
                 Qaac: boolean;
                 Cuneiform: boolean;
@@ -696,11 +694,6 @@ export declare class zhRegExp extends RegExp {
                 InCJK_Symbols_And_Punctuation: boolean;
                 InCJK_Unified_Ideographs: boolean;
                 InCJK_Unified_Ideographs_Extension_A: boolean;
-                /**
-                 * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
-                 *
-                 * @alias $`
-                 */
                 InCJK_Unified_Ideographs_Extension_B: boolean;
                 InCJK_Unified_Ideographs_Extension_C: boolean;
                 InCJK_Unified_Ideographs_Extension_D: boolean;

@@ -32,7 +32,7 @@
   "scripts": {
     "test": "yarn run test:local && yarn run test:regexp",
     "test:local": "jest --coverage",
-    "test:regexp": "yt ws run --scope regexp-cjk test:local & echo test:regexp",
+    "test:regexp": "yt ws run --scope regexp-cjk test:local",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",

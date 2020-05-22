@@ -1,0 +1,688 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`^(?:戰記)$ base 1`] = `/\\^\\(\\?:\\[战戦戰\\]\\[記记\\]\\)\\$/`;
+
+exports[`^(?:戰記)$ event.on 1`] = `
+Object {
+  "ast": Object {
+    "changed": true,
+    "end": 6,
+    "old_raw": "戰",
+    "parent": Object {
+      "changed": true,
+      "elements": Array [
+        [Circular],
+        Object {
+          "end": 7,
+          "parent": [Circular],
+          "raw": "記",
+          "start": 6,
+          "type": "Character",
+          "value": 35352,
+        },
+      ],
+      "end": 8,
+      "parent": Object {
+        "changed": true,
+        "elements": Array [
+          Object {
+            "end": 2,
+            "kind": "start",
+            "parent": [Circular],
+            "raw": "^",
+            "start": 1,
+            "type": "Assertion",
+          },
+          [Circular],
+          Object {
+            "end": 9,
+            "kind": "end",
+            "parent": [Circular],
+            "raw": "$",
+            "start": 8,
+            "type": "Assertion",
+          },
+        ],
+        "end": 9,
+        "parent": Object {
+          "changed": true,
+          "end": 10,
+          "flags": Object {
+            "dotAll": false,
+            "end": 10,
+            "global": false,
+            "ignoreCase": false,
+            "multiline": false,
+            "parent": [Circular],
+            "raw": "",
+            "start": 10,
+            "sticky": false,
+            "type": "Flags",
+            "unicode": false,
+          },
+          "parent": null,
+          "pattern": [Circular],
+          "raw": "/^(?:戰記)$/",
+          "start": 0,
+          "type": "RegExpLiteral",
+        },
+        "raw": "^(?:戰記)$",
+        "start": 1,
+        "type": "Pattern",
+      },
+      "raw": "(?:戰記)",
+      "start": 2,
+      "type": "Group",
+    },
+    "raw": "[战戦戰]",
+    "start": 5,
+    "type": "Character",
+    "value": 25136,
+  },
+  "event": "change",
+}
+`;
+
+exports[`^(?:戰記)$ event.on 2`] = `
+Object {
+  "ast": Object {
+    "changed": true,
+    "end": 7,
+    "old_raw": "記",
+    "parent": Object {
+      "changed": true,
+      "elements": Array [
+        Object {
+          "changed": true,
+          "end": 6,
+          "old_raw": "戰",
+          "parent": [Circular],
+          "raw": "[战戦戰]",
+          "start": 5,
+          "type": "Character",
+          "value": 25136,
+        },
+        [Circular],
+      ],
+      "end": 8,
+      "parent": Object {
+        "changed": true,
+        "elements": Array [
+          Object {
+            "end": 2,
+            "kind": "start",
+            "parent": [Circular],
+            "raw": "^",
+            "start": 1,
+            "type": "Assertion",
+          },
+          [Circular],
+          Object {
+            "end": 9,
+            "kind": "end",
+            "parent": [Circular],
+            "raw": "$",
+            "start": 8,
+            "type": "Assertion",
+          },
+        ],
+        "end": 9,
+        "parent": Object {
+          "changed": true,
+          "end": 10,
+          "flags": Object {
+            "dotAll": false,
+            "end": 10,
+            "global": false,
+            "ignoreCase": false,
+            "multiline": false,
+            "parent": [Circular],
+            "raw": "",
+            "start": 10,
+            "sticky": false,
+            "type": "Flags",
+            "unicode": false,
+          },
+          "parent": null,
+          "pattern": [Circular],
+          "raw": "/^(?:戰記)$/",
+          "start": 0,
+          "type": "RegExpLiteral",
+        },
+        "raw": "^(?:戰記)$",
+        "start": 1,
+        "type": "Pattern",
+      },
+      "raw": "(?:戰記)",
+      "start": 2,
+      "type": "Group",
+    },
+    "raw": "[記记]",
+    "start": 6,
+    "type": "Character",
+    "value": 35352,
+  },
+  "event": "change",
+}
+`;
+
+exports[`^(?:戰記)$ event.on 3`] = `/\\^\\(\\?:\\[战戦戰\\]\\[記记\\]\\)\\$/`;
+
+exports[`check Punctuation base 1`] = `/\\(\\[\\\\p\\{Punctuation\\}\\]\\)/u`;
+
+exports[`check Punctuation ， 1`] = `true`;
+
+exports[`not change 1`] = `/111/`;
+
+exports[`simple test regex is not break (^|[^\\w'’])(\\d+(?:,\\d+)*)(?![\\w'’]) 1`] = `"(^|[^\\\\w'’])(\\\\d+(?:,\\\\d+)*)(?![\\\\w'’])"`;
+
+exports[`simple test regex is not break (^|[^\\w'’])(\\d+(?:,\\d+)*)(?![\\w'’]) 2`] = `
+ParserEventEmitter {
+  "_events": Object {
+    "change": [Function],
+  },
+  "_eventsCount": 1,
+  "_maxListeners": undefined,
+  "astRegExpLiteral": Object {
+    "end": 38,
+    "flags": Object {
+      "dotAll": false,
+      "end": 38,
+      "global": false,
+      "ignoreCase": false,
+      "multiline": false,
+      "parent": [Circular],
+      "raw": "u",
+      "start": 37,
+      "sticky": false,
+      "type": "Flags",
+      "unicode": true,
+    },
+    "parent": null,
+    "pattern": Object {
+      "changed": false,
+      "elements": Array [
+        Object {
+          "changed": false,
+          "elements": Array [
+            Object {
+              "alternatives": Array [
+                Array [
+                  Object {
+                    "changed": true,
+                    "end": 3,
+                    "kind": "start",
+                    "parent": [Circular],
+                    "raw": "^",
+                    "start": 2,
+                    "type": "Assertion",
+                  },
+                ],
+                Array [
+                  Object {
+                    "changed": false,
+                    "elements": Array [
+                      Object {
+                        "changed": true,
+                        "end": 8,
+                        "kind": "word",
+                        "negate": false,
+                        "parent": [Circular],
+                        "raw": "\\\\w",
+                        "start": 6,
+                        "type": "CharacterSet",
+                      },
+                      Object {
+                        "changed": true,
+                        "end": 9,
+                        "parent": [Circular],
+                        "raw": "'",
+                        "start": 8,
+                        "type": "Character",
+                        "value": 39,
+                      },
+                      Object {
+                        "changed": true,
+                        "end": 10,
+                        "parent": [Circular],
+                        "raw": "’",
+                        "start": 9,
+                        "type": "Character",
+                        "value": 8217,
+                      },
+                    ],
+                    "end": 11,
+                    "negate": true,
+                    "old_raw": "[^\\\\w'’]",
+                    "parent": [Circular],
+                    "raw": "[^\\\\w'’]",
+                    "start": 4,
+                    "type": "CharacterClass",
+                  },
+                ],
+              ],
+              "changed": false,
+              "end": 11,
+              "old_raw": "^|[^\\\\w'’]",
+              "parent": [Circular],
+              "raw": "^|[^\\\\w'’]",
+              "start": 2,
+              "type": "Disjunction",
+            },
+          ],
+          "end": 12,
+          "name": null,
+          "old_raw": "(^|[^\\\\w'’])",
+          "parent": [Circular],
+          "raw": "(^|[^\\\\w'’])",
+          "references": Array [],
+          "start": 1,
+          "type": "CapturingGroup",
+        },
+        Object {
+          "changed": false,
+          "elements": Array [
+            Object {
+              "changed": false,
+              "element": Object {
+                "changed": true,
+                "end": 15,
+                "kind": "digit",
+                "negate": false,
+                "parent": [Circular],
+                "raw": "\\\\d",
+                "start": 13,
+                "type": "CharacterSet",
+              },
+              "end": 16,
+              "greedy": true,
+              "max": Infinity,
+              "min": 1,
+              "old_raw": "+",
+              "parent": [Circular],
+              "raw": "\\\\d+",
+              "start": 15,
+              "type": "Quantifier",
+            },
+            Object {
+              "changed": false,
+              "element": Object {
+                "changed": false,
+                "elements": Array [
+                  Object {
+                    "changed": true,
+                    "end": 20,
+                    "parent": [Circular],
+                    "raw": ",",
+                    "start": 19,
+                    "type": "Character",
+                    "value": 44,
+                  },
+                  Object {
+                    "changed": false,
+                    "element": Object {
+                      "changed": true,
+                      "end": 22,
+                      "kind": "digit",
+                      "negate": false,
+                      "parent": [Circular],
+                      "raw": "\\\\d",
+                      "start": 20,
+                      "type": "CharacterSet",
+                    },
+                    "end": 23,
+                    "greedy": true,
+                    "max": Infinity,
+                    "min": 1,
+                    "old_raw": "+",
+                    "parent": [Circular],
+                    "raw": "\\\\d+",
+                    "start": 22,
+                    "type": "Quantifier",
+                  },
+                ],
+                "end": 24,
+                "old_raw": "(?:,\\\\d+)",
+                "parent": [Circular],
+                "raw": "(?:,\\\\d+)",
+                "start": 16,
+                "type": "Group",
+              },
+              "end": 25,
+              "greedy": true,
+              "max": Infinity,
+              "min": 0,
+              "old_raw": "*",
+              "parent": [Circular],
+              "raw": "(?:,\\\\d+)*",
+              "start": 24,
+              "type": "Quantifier",
+            },
+          ],
+          "end": 26,
+          "name": null,
+          "old_raw": "(\\\\d+(?:,\\\\d+)*)",
+          "parent": [Circular],
+          "raw": "(\\\\d+(?:,\\\\d+)*)",
+          "references": Array [],
+          "start": 12,
+          "type": "CapturingGroup",
+        },
+        Object {
+          "changed": false,
+          "elements": Array [
+            Object {
+              "changed": false,
+              "elements": Array [
+                Object {
+                  "changed": true,
+                  "end": 32,
+                  "kind": "word",
+                  "negate": false,
+                  "parent": [Circular],
+                  "raw": "\\\\w",
+                  "start": 30,
+                  "type": "CharacterSet",
+                },
+                Object {
+                  "changed": true,
+                  "end": 33,
+                  "parent": [Circular],
+                  "raw": "'",
+                  "start": 32,
+                  "type": "Character",
+                  "value": 39,
+                },
+                Object {
+                  "changed": true,
+                  "end": 34,
+                  "parent": [Circular],
+                  "raw": "’",
+                  "start": 33,
+                  "type": "Character",
+                  "value": 8217,
+                },
+              ],
+              "end": 35,
+              "negate": false,
+              "old_raw": "[\\\\w'’]",
+              "parent": [Circular],
+              "raw": "[\\\\w'’]",
+              "start": 29,
+              "type": "CharacterClass",
+            },
+          ],
+          "end": 36,
+          "kind": "lookahead",
+          "negate": true,
+          "old_raw": "(?![\\\\w'’])",
+          "parent": [Circular],
+          "raw": "(?![\\\\w'’])",
+          "start": 26,
+          "type": "Assertion",
+        },
+      ],
+      "end": 36,
+      "old_raw": "(^|[^\\\\w'’])(\\\\d+(?:,\\\\d+)*)(?![\\\\w'’])",
+      "parent": [Circular],
+      "raw": "(^|[^\\\\w'’])(\\\\d+(?:,\\\\d+)*)(?![\\\\w'’])",
+      "start": 1,
+      "type": "Pattern",
+    },
+    "raw": "/(^|[^\\\\w'’])(\\\\d+(?:,\\\\d+)*)(?![\\\\w'’])/u",
+    "start": 0,
+    "type": "RegExpLiteral",
+  },
+  Symbol(kCapture): false,
+}
+`;
+
+exports[`simple test regex is not break 国|國 1`] = `"国|國"`;
+
+exports[`simple test regex is not break 国|國 2`] = `
+ParserEventEmitter {
+  "_events": Object {
+    "change": [Function],
+  },
+  "_eventsCount": 1,
+  "_maxListeners": undefined,
+  "astRegExpLiteral": Object {
+    "end": 6,
+    "flags": Object {
+      "dotAll": false,
+      "end": 6,
+      "global": false,
+      "ignoreCase": false,
+      "multiline": false,
+      "parent": [Circular],
+      "raw": "u",
+      "start": 5,
+      "sticky": false,
+      "type": "Flags",
+      "unicode": true,
+    },
+    "parent": null,
+    "pattern": Object {
+      "changed": false,
+      "elements": Array [
+        Object {
+          "alternatives": Array [
+            Array [
+              Object {
+                "changed": true,
+                "end": 2,
+                "parent": [Circular],
+                "raw": "国",
+                "start": 1,
+                "type": "Character",
+                "value": 22269,
+              },
+            ],
+            Array [
+              Object {
+                "changed": true,
+                "end": 4,
+                "parent": [Circular],
+                "raw": "國",
+                "start": 3,
+                "type": "Character",
+                "value": 22283,
+              },
+            ],
+          ],
+          "changed": false,
+          "end": 4,
+          "old_raw": "国|國",
+          "parent": [Circular],
+          "raw": "国|國",
+          "start": 1,
+          "type": "Disjunction",
+        },
+      ],
+      "end": 4,
+      "old_raw": "国|國",
+      "parent": [Circular],
+      "raw": "国|國",
+      "start": 1,
+      "type": "Pattern",
+    },
+    "raw": "/国|國/u",
+    "start": 0,
+    "type": "RegExpLiteral",
+  },
+  Symbol(kCapture): false,
+}
+`;
+
+exports[`simple test regex is not break 国國 1`] = `"国國"`;
+
+exports[`simple test regex is not break 国國 2`] = `
+ParserEventEmitter {
+  "_events": Object {
+    "change": [Function],
+  },
+  "_eventsCount": 1,
+  "_maxListeners": undefined,
+  "astRegExpLiteral": Object {
+    "end": 5,
+    "flags": Object {
+      "dotAll": false,
+      "end": 5,
+      "global": false,
+      "ignoreCase": false,
+      "multiline": false,
+      "parent": [Circular],
+      "raw": "u",
+      "start": 4,
+      "sticky": false,
+      "type": "Flags",
+      "unicode": true,
+    },
+    "parent": null,
+    "pattern": Object {
+      "changed": false,
+      "elements": Array [
+        Object {
+          "changed": true,
+          "end": 2,
+          "parent": [Circular],
+          "raw": "国",
+          "start": 1,
+          "type": "Character",
+          "value": 22269,
+        },
+        Object {
+          "changed": true,
+          "end": 3,
+          "parent": [Circular],
+          "raw": "國",
+          "start": 2,
+          "type": "Character",
+          "value": 22283,
+        },
+      ],
+      "end": 3,
+      "old_raw": "国國",
+      "parent": [Circular],
+      "raw": "国國",
+      "start": 1,
+      "type": "Pattern",
+    },
+    "raw": "/国國/u",
+    "start": 0,
+    "type": "RegExpLiteral",
+  },
+  Symbol(kCapture): false,
+}
+`;
+
+exports[`simple test regex is not break 国國 3`] = `"国國"`;
+
+exports[`simple test regex is not break 麻#_@_#痹 1`] = `"麻#_@_#痹"`;
+
+exports[`simple test regex is not break 麻#_@_#痹 2`] = `
+ParserEventEmitter {
+  "_events": Object {
+    "change": [Function],
+  },
+  "_eventsCount": 1,
+  "_maxListeners": undefined,
+  "astRegExpLiteral": Object {
+    "end": 10,
+    "flags": Object {
+      "dotAll": false,
+      "end": 10,
+      "global": false,
+      "ignoreCase": false,
+      "multiline": false,
+      "parent": [Circular],
+      "raw": "u",
+      "start": 9,
+      "sticky": false,
+      "type": "Flags",
+      "unicode": true,
+    },
+    "parent": null,
+    "pattern": Object {
+      "changed": false,
+      "elements": Array [
+        Object {
+          "changed": true,
+          "end": 2,
+          "parent": [Circular],
+          "raw": "麻",
+          "start": 1,
+          "type": "Character",
+          "value": 40635,
+        },
+        Object {
+          "changed": true,
+          "end": 3,
+          "parent": [Circular],
+          "raw": "#",
+          "start": 2,
+          "type": "Character",
+          "value": 35,
+        },
+        Object {
+          "changed": true,
+          "end": 4,
+          "parent": [Circular],
+          "raw": "_",
+          "start": 3,
+          "type": "Character",
+          "value": 95,
+        },
+        Object {
+          "changed": true,
+          "end": 5,
+          "parent": [Circular],
+          "raw": "@",
+          "start": 4,
+          "type": "Character",
+          "value": 64,
+        },
+        Object {
+          "changed": true,
+          "end": 6,
+          "parent": [Circular],
+          "raw": "_",
+          "start": 5,
+          "type": "Character",
+          "value": 95,
+        },
+        Object {
+          "changed": true,
+          "end": 7,
+          "parent": [Circular],
+          "raw": "#",
+          "start": 6,
+          "type": "Character",
+          "value": 35,
+        },
+        Object {
+          "changed": true,
+          "end": 8,
+          "parent": [Circular],
+          "raw": "痹",
+          "start": 7,
+          "type": "Character",
+          "value": 30201,
+        },
+      ],
+      "end": 8,
+      "old_raw": "麻#_@_#痹",
+      "parent": [Circular],
+      "raw": "麻#_@_#痹",
+      "start": 1,
+      "type": "Pattern",
+    },
+    "raw": "/麻#_@_#痹/u",
+    "start": 0,
+    "type": "RegExpLiteral",
+  },
+  Symbol(kCapture): false,
+}
+`;
+
+exports[`simple test regex is not break 麻#_@_#痹 3`] = `"麻#_@_#痹"`;
