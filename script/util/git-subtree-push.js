@@ -16,10 +16,12 @@ async function gitSubtreePush(module_name) {
     let remote;
     let prefix;
     switch (module_name) {
+        /*
         case 'regexp-cjk':
             remote = 'regexp-cjk';
-            prefix = `packages/${module_name}`;
+            prefix = `packages/${module_name}`
             break;
+         */
         case 'cjk-conv':
             remote = module_name;
             prefix = `packages/${module_name}`;

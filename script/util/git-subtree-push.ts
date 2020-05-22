@@ -15,10 +15,12 @@ export async function gitSubtreePush(module_name: 'regexp-cjk' | 'cjk-conv' | st
 
 	switch (module_name)
 	{
+		/*
 		case 'regexp-cjk':
 			remote = 'regexp-cjk';
 			prefix = `packages/${module_name}`
 			break;
+		 */
 		case 'cjk-conv':
 			remote = module_name;
 			prefix = `packages/${module_name}`
