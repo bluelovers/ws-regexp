@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+/package-lock.json
+/test/*.d.ts
+/test/*.js
+/.eslintrc.json.tpl
+/.browserslistrc
+/.nvmrc
+/test/**/*.ts
+!*.test.ts
+!*.spec.ts
+!/test/_local-dev.ts
+/package.d.ts
+*.tsbuildinfo
