@@ -1,0 +1,74 @@
+{
+  "name": "regexp-cjk-plugin-escape-unicode-property",
+  "version": "1.0.1",
+  "description": "use regexpu for escape unicode property in regexp-cjk",
+  "keywords": [
+    "char",
+    "character",
+    "characters",
+    "codegen",
+    "conv",
+    "conversion",
+    "convert",
+    "desugaring",
+    "ecmascript",
+    "es5",
+    "es6",
+    "escape unicode",
+    "escape unicode property",
+    "harmony",
+    "javascript",
+    "node-novel",
+    "plugin",
+    "property",
+    "refactoring",
+    "regex",
+    "regexp",
+    "regexp-cjk",
+    "regexp-cjk-plugin",
+    "regexpu",
+    "regular",
+    "regular expression",
+    "regular expressions",
+    "rewriting",
+    "syntax",
+    "transform",
+    "transformation",
+    "transpile",
+    "transpiler",
+    "unicode",
+    "unicode property"
+  ],
+  "homepage": "https://github.com/bluelovers/regexp-cjk-plugin-escape-unicode-property#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/regexp-cjk-plugin-escape-unicode-property/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/regexp-cjk-plugin-escape-unicode-property.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc npm run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run test",
+    "postpublish": "git commit -m \"publish new version\" .",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "npm run test:local",
+    "test:local": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\""
+  },
+  "dependencies": {
+    "regexpu-core": "^4.5.4"
+  },
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.11",
+    "regexp-cjk": "^3.3.4",
+    "regexp-parser-event": "^1.1.5"
+  }
+}
