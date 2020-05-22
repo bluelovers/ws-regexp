@@ -7,10 +7,16 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lerna:publish": "npx lerna publish",
-    "lerna:publish:yes": "npx lerna publish --yes --cd-version patch",
+    "lerna:publish": "yarn run prepublishOnly && npx lerna publish",
+    "lerna:publish:yes": "yarn run prepublishOnly && npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn-tool ws run --scope cjk-conv prepublishOnly",
+    "postpublish": "yarn run postpublish:subtree",
+    "postpublish:subtree": "ts-node ./script/run/postpublish-subtree.ts",
+    "postpublish:subtree:cjk-conv": "git subtree push cjk-conv master --prefix packages/cjk-conv",
+    "postpublish:subtree:regexp-cjk": "git subtree push regexp-cjk master --prefix packages/regexp-cjk",
     "ncu": "npx yarn-tool ncu -u && npx yarn-tool ws exec yarn-tool ncu -- -u",
+    "postpublishOnly:add": "ts-node ./script/run/postpublish-add.ts",
     "sort-package-json": "npx yarn-tool sort && npx yarn-tool ws exec yarn-tool sort"
   },
   "resolutions": {},

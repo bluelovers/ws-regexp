@@ -10,9 +10,11 @@
         "**/__fixtures__/**",
         "**/test/**",
         "**/__tests__/**",
+        "**/__tests__/**",
         "*.map",
         "*.spec.*",
         "*.test.*",
+        "packages/*/script/**",
         ".gitrepo"
       ],
       "message": "chore(release): publish",

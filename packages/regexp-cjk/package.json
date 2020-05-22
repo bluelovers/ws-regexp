@@ -82,9 +82,11 @@
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run test",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "echo postpublish && node ./script/publish-after",
     "local-link": "yarn link cjk-conv",
     "ncu": "npx yarn-tool ncu -u",
+    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexp-cjk",
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
