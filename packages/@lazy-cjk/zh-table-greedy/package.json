@@ -1,0 +1,44 @@
+{
+  "name": "@lazy-cjk/zh-table-greedy",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/zh-table-greedy#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "pretest": "yarn run build",
+    "test": "jest --coverage",
+    "test:jest": "jest --coverage",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "build": "ts-node ./test/script/build-cache.ts",
+    "build:commit": "git commit -m \"build: zh-table-greedy\" ./lib & echo build:commit",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
+    "prepublishOnly": "yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "array-hyper-unique": "^1.1.0",
+    "uni-string": "^1.1.2"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}

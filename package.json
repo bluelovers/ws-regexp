@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
+    "packages/@lazy-cjk/*",
+    "packages/@regexp-cjk/*",
     "packages/*"
   ],
   "scripts": {
@@ -10,7 +12,7 @@
     "lerna:publish": "yarn run prepublishOnly && npx lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "yarn run prepublishOnly && npx lerna publish --yes --cd-version patch && yarn run postpublishOnly",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn-tool ws run --scope cjk-conv prepublishOnly",
+    "prepublishOnly": "yarn-tool ws run --scope cjk-conv prepublishOnly && yarn-tool ws run prepublishOnly:lerna",
     "postpublishOnly": "yarn run postpublish:subtree",
     "postpublish:subtree": "ts-node ./script/run/postpublish-subtree.ts",
     "postpublish:subtree:cjk-conv": "git subtree push cjk-conv master --prefix packages/cjk-conv",

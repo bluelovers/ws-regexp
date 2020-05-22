@@ -1,5 +1,7 @@
 {
   "packages": [
+    "packages/@lazy-cjk/*",
+    "packages/@regexp-cjk/*",
     "packages/*"
   ],
   "command": {
