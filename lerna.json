@@ -17,6 +17,7 @@
         "*.spec.*",
         "*.test.*",
         "packages/*/script/**",
+        "!**/test/raw/**",
         ".gitrepo"
       ],
       "message": "chore(release): publish",

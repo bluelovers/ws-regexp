@@ -6,7 +6,7 @@ import { _greedyTableCacheTest, _greedyTableCacheMap, _greedyTableCacheRegexp } 
 export { _greedyTableCacheTest, _greedyTableCacheMap, _greedyTableCacheRegexp };
 export { _greedyTableBuild };
 export declare function greedyTableTest(input: string): boolean;
-export declare function greedyTableCharArray(char: string): string[];
+export declare function greedyTableCharArray(char: string): readonly string[];
 export declare function greedyTableReplace(input: string): string;
 declare const _default: typeof import(".");
 export default _default;
