@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "cli version for cjk-conv ( cn2tw_min, tw2cn_min, cn2tw, tw2cn )",
   "keywords": [
     "char",
@@ -60,7 +60,7 @@
     "@bluelovers/fast-glob": "^3.0.4",
     "array-hyper-unique": "^1.1.0",
     "bluebird": "^3.7.2",
-    "cjk-conv": "^1.2.44",
+    "cjk-conv": "^1.2.45",
     "crlf-normalize": "^1.0.3",
     "debug-color2": "^1.1.7",
     "diff": "^4.0.2",
