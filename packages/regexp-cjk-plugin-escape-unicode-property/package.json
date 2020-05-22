@@ -64,12 +64,12 @@
     "prepublishOnly": "yarn run test",
     "postpublish_": "git commit -m \"publish new version\" .",
     "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx sort-package-json ./package.json"
+    "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
     "regexpu-core": "^4.7.0"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "regexp-cjk": "^3.3.14",
     "regexp-parser-event": "^1.1.6"
   }
