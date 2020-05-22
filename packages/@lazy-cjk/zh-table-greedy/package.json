@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-table-greedy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/zh-table-greedy#readme",
   "bugs": {
@@ -37,7 +37,6 @@
     "array-hyper-unique": "^1.1.0",
     "uni-string": "^1.1.2"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }
