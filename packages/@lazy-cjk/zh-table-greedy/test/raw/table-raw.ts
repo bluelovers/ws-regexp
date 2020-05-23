@@ -237,5 +237,6 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[鉑铂]/ug, '白'],
 	[/[弔]/ug, '吊'],
 	[/[誡诫𢌵]/ug, '戒'],
+	[/[候𠊱𠋫]/ug, '侯'],
 
 ]);

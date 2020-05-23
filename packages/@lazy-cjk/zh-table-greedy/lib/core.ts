@@ -18,14 +18,14 @@ export function _greedyTableBuild(data: [RegExp, string][]): {
 
 	_greedyTableCacheMap = new Map<string, string[]>();
 
-	let arr = _greedyTableCacheRegexp
+	const arr = _greedyTableCacheRegexp
 		.reduce(function (arr, r)
 		{
-			let s = r[0].source
+			const s = r[0].source
 				.replace(/^.*\[|\].*$/ug, '')
 			;
 
-			let a = UString.split(s, '').concat(r[1]);
+			const a = UString.split(s, '').concat(r[1]).sort();
 
 			a.forEach(c =>
 			{

@@ -14,11 +14,11 @@ function _greedyTableBuild(data) {
     let _greedyTableCacheMap;
     let _greedyTableCacheTest;
     _greedyTableCacheMap = new Map();
-    let arr = _greedyTableCacheRegexp
+    const arr = _greedyTableCacheRegexp
         .reduce(function (arr, r) {
-        let s = r[0].source
+        const s = r[0].source
             .replace(/^.*\[|\].*$/ug, '');
-        let a = uni_string_1.default.split(s, '').concat(r[1]);
+        const a = uni_string_1.default.split(s, '').concat(r[1]).sort();
         a.forEach(c => {
             _greedyTableCacheMap.set(c, a);
         });
