@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnumTableVoice 1`] = `
+Object {
+  "0": "01",
+  "01": 0,
+  "02": 1,
+  "03": 2,
+  "1": "02",
+  "2": "03",
+}
+`;
+
+exports[`import check 1`] = `
+Array [
+  "table_voice",
+  "EnumTableVoice",
+  "_buildTablePlus",
+  "_get",
+  "getVoiceAll",
+  "toVoice01",
+  "toVoice02",
+  "toVoice03",
+  "default",
+]
+`;
