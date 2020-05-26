@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports._greedyTableCacheMap = exports._greedyTableCacheTest = exports._greedyTableCacheRegexp = void 0;
-var re_1 = require("./table/re");
-exports._greedyTableCacheRegexp = re_1._greedyTableCacheRegexp;
+const re_1 = require("./table/re");
+Object.defineProperty(exports, "_greedyTableCacheRegexp", { enumerable: true, get: function () { return re_1._greedyTableCacheRegexp; } });
 exports._greedyTableCacheTest = /[噁恶悪惡係系繋繫楜煳糊胡葫衚鬍儅噹当當复復複覆囌甦苏蘇䌽埰彩採睬綵踩采㑩儸啰囉罗羅刘劉浏瀏券劵卷巻捲蜷划劃画畫斗闘鬥鬪鬭乹乾亁干幹図图圖历暦曆歴歷面麪麵麺讃讚賛贊赞发發髪髮侭儘尽盡優忧憂俱倶具の之得的と与與他佗她它牠祂只支枝隻泡炮炰砲㊥中仲元原回廻迴辟避闢卤滷魯鲁鹵儓台檯臺颱宻密祕秘謎谜迷沙砂紗纱莎篇編编冶治炼煉練练錬鍊𫔀亚亜亞娅婭桠椏塞賽赛籐籘腾藤騰你妳祢禰⻞喰蚀蝕食飠飧玛瑪馬马餚餸果裸凯凱鎧铠帖貼贴什甚联聯连連像象借藉蕾雷定訂订釘钉向嚮丝糸糹絲桶筒兹滋玆茲吶呐訥讷穀糓谷両两俩倆兩帐帳賬账板版闆呆待溶熔融螎鎔镕匯彙汇仏佛彿啊阿傢家暴爆䋄䋞冈刚剛堈岗岡崗綱網纲缸网鋼钢注註潅灌貫贯倒到儭平秤称稱衬襯勋勛勲勳丽利莉麗己已巳呵嗬呦哊哟唷唹喲傑婕杰洁潔絜嘻嬉嘛痲痳麻犬狗拂亘亙恆恒付副附伽加枷珈迦福褔挨捱拚拼漂飃飄飘佔占沾气気氣汽滊炁撩辽遼作做捜搜蒐傁叟榭謝谢型形僱雇頋顧顾庐廬芦蘆眈耽躭傹竞竟競竸誩𥪰𧡟𧫘𧫙𧮣𨐼植殖佬姥老倖幸㠪巨炬矩鉅钜䃛鏈链𧹯㓥刴剁剐剮劏南枏楠璐路𡽘𨱴侂托拓拕拖杔託讬希悕睎稀囯国國帼幗反返佯扬揚旸暘杨楊炀烊煬阳陽來来莱萊保堡緥葆褓度渡剳扎札箚紮堤媞提湜禔緹缇隄腊臘蜡蠟郁鬱𨚼𨟝扞擀杆桿脼郎郞𥇑巴芭捏涅湼択择擇沢泽澤幵开開佩珮吁喩喻籲龥値值脏臓臟贓赃髒㊤上㊦下呼唿祥詳详妮尼泥克剋尅拨撥播挿插揷丁汀娜那拉菈林淋玲琳鈴铃名銘铭出齣唉欸誒诶呣哞㖿吔耶媚魅匪扉斐緋绯翡菲蜚誹诽霏非叉衩釵钗其淇琪祺坛壇談譚谈谭才材柴唸念指趾仕士娘嬢孃哑唖啞痖瘂仂働动動察查査鉃鉄銕鐡鐵铁𨫓帰归歸皈创創疮瘡拷烤考入込仑伦侖倫仔子弯彎湾灣熒荧萤蛍螢争挣掙爭涨漲胀脹冇无沒没無吨噸訰勾鈎鉤钩沈沉叠畳疊迭僵殭疆繮缰韁揹背团団團糰榚糕需須须鬚抒紆紓纡纾州洲厂厰场場廠筱筿篠根跟曝㬅嫚曼漫熳蔓升昇陞獃烟煙腌菸醃录錄録陆陸掳擄虏虜翘翹跷蹺脚腳角直詞词辞辭义意義哏梗呎咫尺伶怜憐委荽萎岭岺嶺阾領领决決絕絶绝訣诀岳嶽𡶦受授綫線线缐腺一壱壹慌荒庭廷喧宣暄諠掠略畧䇳牋笺签箋簽籖籤么幺庅麼麽杧芒茫趯跃躍㳽弥彌瀰抹袜襪䆫囪囱窓窗窻函凾涵悚耸聳洛落标標鏢鑣镖镳怪恠並併倂并幷竝𠀤鶇鶫鸫𪂝鐳镭靁白鉑铂吊弔戒誡诫𢌵堀窟]/u;
 exports._greedyTableCacheMap = new Map([
     ["噁", ["噁", "恶", "悪", "惡"]],
@@ -898,3 +898,4 @@ exports._greedyTableCacheMap = new Map([
     ["堀", ["堀", "窟"]],
     ["窟", ["堀", "窟"]],
 ]);
+//# sourceMappingURL=table.js.map
