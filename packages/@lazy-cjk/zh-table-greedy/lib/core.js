@@ -10,6 +10,7 @@ exports._greedyTableBuild = void 0;
 const uni_string_1 = __importDefault(require("uni-string"));
 const array_hyper_unique_1 = require("array-hyper-unique");
 function _greedyTableBuild(data) {
+    // @ts-ignore
     const _greedyTableCacheRegexp = data;
     let _greedyTableCacheMap;
     let _greedyTableCacheTest;

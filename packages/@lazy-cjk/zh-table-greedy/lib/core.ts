@@ -5,12 +5,14 @@
 import UString from 'uni-string';
 import { array_unique } from 'array-hyper-unique';
 
-export function _greedyTableBuild(data: [RegExp, string][]): {
+export function _greedyTableBuild(data: [RegExp, string][] | readonly (readonly [RegExp, string])[]): {
+
 	_greedyTableCacheRegexp: readonly (readonly [RegExp, string])[];
 	_greedyTableCacheMap: Map<string, readonly string[]>;
 	_greedyTableCacheTest: RegExp;
 }
 {
+	// @ts-ignore
 	const _greedyTableCacheRegexp: [RegExp, string][] = data;
 
 	let _greedyTableCacheMap: Map<string, string[]>;
