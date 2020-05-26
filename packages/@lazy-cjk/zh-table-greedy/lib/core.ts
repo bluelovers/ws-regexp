@@ -3,7 +3,7 @@
  */
 
 import UString from 'uni-string';
-import { array_unique } from 'array-hyper-unique';
+import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
 
 export function _greedyTableBuild(data: [RegExp, string][] | readonly (readonly [RegExp, string])[]): {
 
@@ -28,6 +28,8 @@ export function _greedyTableBuild(data: [RegExp, string][] | readonly (readonly 
 			;
 
 			const a = UString.split(s, '').concat(r[1]).sort();
+
+			array_unique_overwrite(a);
 
 			a.forEach(c =>
 			{

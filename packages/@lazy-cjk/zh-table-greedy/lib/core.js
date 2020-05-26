@@ -20,6 +20,7 @@ function _greedyTableBuild(data) {
         const s = r[0].source
             .replace(/^.*\[|\].*$/ug, '');
         const a = uni_string_1.default.split(s, '').concat(r[1]).sort();
+        array_hyper_unique_1.array_unique_overwrite(a);
         a.forEach(c => {
             _greedyTableCacheMap.set(c, a);
         });
