@@ -2,13 +2,10 @@
 /**
  * Created by user on 2020/5/22.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._greedyTableBuild = void 0;
-const uni_string_1 = __importDefault(require("uni-string"));
 const array_hyper_unique_1 = require("array-hyper-unique");
+const util_1 = require("./util");
 function _greedyTableBuild(data) {
     // @ts-ignore
     const _greedyTableCacheRegexp = data;
@@ -17,10 +14,7 @@ function _greedyTableBuild(data) {
     _greedyTableCacheMap = new Map();
     const arr = _greedyTableCacheRegexp
         .reduce(function (arr, r) {
-        const s = r[0].source
-            .replace(/^.*\[|\].*$/ug, '');
-        const a = uni_string_1.default.split(s, '').concat(r[1]).sort();
-        array_hyper_unique_1.array_unique_overwrite(a);
+        const a = util_1.reToStringList(r[0], r[1]);
         a.forEach(c => {
             _greedyTableCacheMap.set(c, a);
         });

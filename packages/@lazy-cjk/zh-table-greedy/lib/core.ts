@@ -4,6 +4,7 @@
 
 import UString from 'uni-string';
 import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
+import { reToStringList } from './util';
 
 export function _greedyTableBuild(data: [RegExp, string][] | readonly (readonly [RegExp, string])[]): {
 
@@ -23,13 +24,7 @@ export function _greedyTableBuild(data: [RegExp, string][] | readonly (readonly 
 	const arr = _greedyTableCacheRegexp
 		.reduce(function (arr, r)
 		{
-			const s = r[0].source
-				.replace(/^.*\[|\].*$/ug, '')
-			;
-
-			const a = UString.split(s, '').concat(r[1]).sort();
-
-			array_unique_overwrite(a);
+			const a = reToStringList(r[0], r[1])
 
 			a.forEach(c =>
 			{
