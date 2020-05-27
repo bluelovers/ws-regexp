@@ -1,0 +1,2055 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validate char of map ⻞|喰|蚀|蝕|食|飠|飧 1`] = `
+Array [
+  "⻞",
+  "喰",
+  "蚀",
+  "蝕",
+  "食",
+  "飠",
+  "飧",
+]
+`;
+
+exports[`validate char of map と|与|與 1`] = `
+Array [
+  "と",
+  "与",
+  "與",
+]
+`;
+
+exports[`validate char of map の|之|得|的 1`] = `
+Array [
+  "の",
+  "之",
+  "得",
+  "的",
+]
+`;
+
+exports[`validate char of map ㊤|上 1`] = `
+Array [
+  "㊤",
+  "上",
+]
+`;
+
+exports[`validate char of map ㊥|中|仲 1`] = `
+Array [
+  "㊥",
+  "中",
+  "仲",
+]
+`;
+
+exports[`validate char of map ㊦|下 1`] = `
+Array [
+  "㊦",
+  "下",
+]
+`;
+
+exports[`validate char of map 㑩|儸|啰|囉|罗|羅 1`] = `
+Array [
+  "㑩",
+  "儸",
+  "啰",
+  "囉",
+  "罗",
+  "羅",
+]
+`;
+
+exports[`validate char of map 㓥|刴|剁|剐|剮|劏 1`] = `
+Array [
+  "㓥",
+  "刴",
+  "剁",
+  "剐",
+  "剮",
+  "劏",
+]
+`;
+
+exports[`validate char of map 㖿|吔|耶 1`] = `
+Array [
+  "㖿",
+  "吔",
+  "耶",
+]
+`;
+
+exports[`validate char of map 㠪|巨|炬|矩|鉅|钜 1`] = `
+Array [
+  "㠪",
+  "巨",
+  "炬",
+  "矩",
+  "鉅",
+  "钜",
+]
+`;
+
+exports[`validate char of map 㬅|嫚|曼|漫|熳|蔓 1`] = `
+Array [
+  "㬅",
+  "嫚",
+  "曼",
+  "漫",
+  "熳",
+  "蔓",
+]
+`;
+
+exports[`validate char of map 㳽|弥|彌|瀰 1`] = `
+Array [
+  "㳽",
+  "弥",
+  "彌",
+  "瀰",
+]
+`;
+
+exports[`validate char of map 䃛|炼|煉|練|练|錬|鍊|鏈|链|𧹯|𫔀 1`] = `
+Array [
+  "䃛",
+  "炼",
+  "煉",
+  "練",
+  "练",
+  "錬",
+  "鍊",
+  "鏈",
+  "链",
+  "𧹯",
+  "𫔀",
+]
+`;
+
+exports[`validate char of map 䆫|囪|囱|窓|窗|窻 1`] = `
+Array [
+  "䆫",
+  "囪",
+  "囱",
+  "窓",
+  "窗",
+  "窻",
+]
+`;
+
+exports[`validate char of map 䇳|牋|笺|签|箋|簽|籖|籤 1`] = `
+Array [
+  "䇳",
+  "牋",
+  "笺",
+  "签",
+  "箋",
+  "簽",
+  "籖",
+  "籤",
+]
+`;
+
+exports[`validate char of map 䋄|䋞|冈|刚|剛|堈|岗|岡|崗|綱|網|纲|缸|网|鋼|钢 1`] = `
+Array [
+  "䋄",
+  "䋞",
+  "冈",
+  "刚",
+  "剛",
+  "堈",
+  "岗",
+  "岡",
+  "崗",
+  "綱",
+  "網",
+  "纲",
+  "缸",
+  "网",
+  "鋼",
+  "钢",
+]
+`;
+
+exports[`validate char of map 䌽|埰|彩|採|睬|綵|踩|采 1`] = `
+Array [
+  "䌽",
+  "埰",
+  "彩",
+  "採",
+  "睬",
+  "綵",
+  "踩",
+  "采",
+]
+`;
+
+exports[`validate char of map 一|壱|壹 1`] = `
+Array [
+  "一",
+  "壱",
+  "壹",
+]
+`;
+
+exports[`validate char of map 丁|汀 1`] = `
+Array [
+  "丁",
+  "汀",
+]
+`;
+
+exports[`validate char of map 丝|糸|糹|絲 1`] = `
+Array [
+  "丝",
+  "糸",
+  "糹",
+  "絲",
+]
+`;
+
+exports[`validate char of map 両|两|俩|倆|兩 1`] = `
+Array [
+  "両",
+  "两",
+  "俩",
+  "倆",
+  "兩",
+]
+`;
+
+exports[`validate char of map 並|併|倂|并|幷|竝|𠀤 1`] = `
+Array [
+  "並",
+  "併",
+  "倂",
+  "并",
+  "幷",
+  "竝",
+  "𠀤",
+]
+`;
+
+exports[`validate char of map 丽|利|莉|麗 1`] = `
+Array [
+  "丽",
+  "利",
+  "莉",
+  "麗",
+]
+`;
+
+exports[`validate char of map 么|幺|庅|麼|麽 1`] = `
+Array [
+  "么",
+  "幺",
+  "庅",
+  "麼",
+  "麽",
+]
+`;
+
+exports[`validate char of map 义|意|義 1`] = `
+Array [
+  "义",
+  "意",
+  "義",
+]
+`;
+
+exports[`validate char of map 乹|乾|亁|干|幹 1`] = `
+Array [
+  "乹",
+  "乾",
+  "亁",
+  "干",
+  "幹",
+]
+`;
+
+exports[`validate char of map 争|挣|掙|爭 1`] = `
+Array [
+  "争",
+  "挣",
+  "掙",
+  "爭",
+]
+`;
+
+exports[`validate char of map 亘|亙|恆|恒 1`] = `
+Array [
+  "亘",
+  "亙",
+  "恆",
+  "恒",
+]
+`;
+
+exports[`validate char of map 亚|亜|亞|娅|婭|桠|椏 1`] = `
+Array [
+  "亚",
+  "亜",
+  "亞",
+  "娅",
+  "婭",
+  "桠",
+  "椏",
+]
+`;
+
+exports[`validate char of map 什|甚 1`] = `
+Array [
+  "什",
+  "甚",
+]
+`;
+
+exports[`validate char of map 仂|働|动|動 1`] = `
+Array [
+  "仂",
+  "働",
+  "动",
+  "動",
+]
+`;
+
+exports[`validate char of map 仏|佛|彿|拂 1`] = `
+Array [
+  "仏",
+  "佛",
+  "彿",
+  "拂",
+]
+`;
+
+exports[`validate char of map 仑|伦|侖|倫 1`] = `
+Array [
+  "仑",
+  "伦",
+  "侖",
+  "倫",
+]
+`;
+
+exports[`validate char of map 仔|子 1`] = `
+Array [
+  "仔",
+  "子",
+]
+`;
+
+exports[`validate char of map 仕|士 1`] = `
+Array [
+  "仕",
+  "士",
+]
+`;
+
+exports[`validate char of map 他|佗|她|它|牠|祂 1`] = `
+Array [
+  "他",
+  "佗",
+  "她",
+  "它",
+  "牠",
+  "祂",
+]
+`;
+
+exports[`validate char of map 付|副|附 1`] = `
+Array [
+  "付",
+  "副",
+  "附",
+]
+`;
+
+exports[`validate char of map 伶|怜|憐 1`] = `
+Array [
+  "伶",
+  "怜",
+  "憐",
+]
+`;
+
+exports[`validate char of map 伽|加|枷|珈|迦 1`] = `
+Array [
+  "伽",
+  "加",
+  "枷",
+  "珈",
+  "迦",
+]
+`;
+
+exports[`validate char of map 佔|占|沾 1`] = `
+Array [
+  "佔",
+  "占",
+  "沾",
+]
+`;
+
+exports[`validate char of map 作|做 1`] = `
+Array [
+  "作",
+  "做",
+]
+`;
+
+exports[`validate char of map 你|妳|祢|禰 1`] = `
+Array [
+  "你",
+  "妳",
+  "祢",
+  "禰",
+]
+`;
+
+exports[`validate char of map 佩|珮 1`] = `
+Array [
+  "佩",
+  "珮",
+]
+`;
+
+exports[`validate char of map 佬|姥|老 1`] = `
+Array [
+  "佬",
+  "姥",
+  "老",
+]
+`;
+
+exports[`validate char of map 佯|扬|揚|旸|暘|杨|楊|炀|烊|煬|阳|陽 1`] = `
+Array [
+  "佯",
+  "扬",
+  "揚",
+  "旸",
+  "暘",
+  "杨",
+  "楊",
+  "炀",
+  "烊",
+  "煬",
+  "阳",
+  "陽",
+]
+`;
+
+exports[`validate char of map 侂|托|拓|拕|拖|杔|託|讬 1`] = `
+Array [
+  "侂",
+  "托",
+  "拓",
+  "拕",
+  "拖",
+  "杔",
+  "託",
+  "讬",
+]
+`;
+
+exports[`validate char of map 來|来|莱|萊 1`] = `
+Array [
+  "來",
+  "来",
+  "莱",
+  "萊",
+]
+`;
+
+exports[`validate char of map 侭|儘|尽|盡 1`] = `
+Array [
+  "侭",
+  "儘",
+  "尽",
+  "盡",
+]
+`;
+
+exports[`validate char of map 係|系|繋|繫 1`] = `
+Array [
+  "係",
+  "系",
+  "繋",
+  "繫",
+]
+`;
+
+exports[`validate char of map 保|堡|緥|葆|褓 1`] = `
+Array [
+  "保",
+  "堡",
+  "緥",
+  "葆",
+  "褓",
+]
+`;
+
+exports[`validate char of map 俱|倶|具 1`] = `
+Array [
+  "俱",
+  "倶",
+  "具",
+]
+`;
+
+exports[`validate char of map 倒|到 1`] = `
+Array [
+  "倒",
+  "到",
+]
+`;
+
+exports[`validate char of map 倖|幸 1`] = `
+Array [
+  "倖",
+  "幸",
+]
+`;
+
+exports[`validate char of map 借|藉 1`] = `
+Array [
+  "借",
+  "藉",
+]
+`;
+
+exports[`validate char of map 値|值|直 1`] = `
+Array [
+  "値",
+  "值",
+  "直",
+]
+`;
+
+exports[`validate char of map 傁|叟 1`] = `
+Array [
+  "傁",
+  "叟",
+]
+`;
+
+exports[`validate char of map 傑|婕|杰|洁|潔|絜 1`] = `
+Array [
+  "傑",
+  "婕",
+  "杰",
+  "洁",
+  "潔",
+  "絜",
+]
+`;
+
+exports[`validate char of map 傢|家 1`] = `
+Array [
+  "傢",
+  "家",
+]
+`;
+
+exports[`validate char of map 傹|竞|竟|競|竸|誩|𥪰|𧡟|𧫘|𧫙|𧮣|𨐼 1`] = `
+Array [
+  "傹",
+  "竞",
+  "竟",
+  "競",
+  "竸",
+  "誩",
+  "𥪰",
+  "𧡟",
+  "𧫘",
+  "𧫙",
+  "𧮣",
+  "𨐼",
+]
+`;
+
+exports[`validate char of map 像|象 1`] = `
+Array [
+  "像",
+  "象",
+]
+`;
+
+exports[`validate char of map 僱|雇|頋|顧|顾 1`] = `
+Array [
+  "僱",
+  "雇",
+  "頋",
+  "顧",
+  "顾",
+]
+`;
+
+exports[`validate char of map 僵|殭|疆|繮|缰|韁 1`] = `
+Array [
+  "僵",
+  "殭",
+  "疆",
+  "繮",
+  "缰",
+  "韁",
+]
+`;
+
+exports[`validate char of map 儅|噹|当|當 1`] = `
+Array [
+  "儅",
+  "噹",
+  "当",
+  "當",
+]
+`;
+
+exports[`validate char of map 儓|台|檯|臺|颱 1`] = `
+Array [
+  "儓",
+  "台",
+  "檯",
+  "臺",
+  "颱",
+]
+`;
+
+exports[`validate char of map 優|忧|憂 1`] = `
+Array [
+  "優",
+  "忧",
+  "憂",
+]
+`;
+
+exports[`validate char of map 儭|平|秤|称|稱|衬|襯 1`] = `
+Array [
+  "儭",
+  "平",
+  "秤",
+  "称",
+  "稱",
+  "衬",
+  "襯",
+]
+`;
+
+exports[`validate char of map 元|原 1`] = `
+Array [
+  "元",
+  "原",
+]
+`;
+
+exports[`validate char of map 克|剋|尅 1`] = `
+Array [
+  "克",
+  "剋",
+  "尅",
+]
+`;
+
+exports[`validate char of map 入|込 1`] = `
+Array [
+  "入",
+  "込",
+]
+`;
+
+exports[`validate char of map 其|淇|琪|祺 1`] = `
+Array [
+  "其",
+  "淇",
+  "琪",
+  "祺",
+]
+`;
+
+exports[`validate char of map 兹|滋|玆|茲 1`] = `
+Array [
+  "兹",
+  "滋",
+  "玆",
+  "茲",
+]
+`;
+
+exports[`validate char of map 冇|无|沒|没|無 1`] = `
+Array [
+  "冇",
+  "无",
+  "沒",
+  "没",
+  "無",
+]
+`;
+
+exports[`validate char of map 决|決|絕|絶|绝|訣|诀 1`] = `
+Array [
+  "决",
+  "決",
+  "絕",
+  "絶",
+  "绝",
+  "訣",
+  "诀",
+]
+`;
+
+exports[`validate char of map 冶|治 1`] = `
+Array [
+  "冶",
+  "治",
+]
+`;
+
+exports[`validate char of map 凯|凱|鎧|铠 1`] = `
+Array [
+  "凯",
+  "凱",
+  "鎧",
+  "铠",
+]
+`;
+
+exports[`validate char of map 出|齣 1`] = `
+Array [
+  "出",
+  "齣",
+]
+`;
+
+exports[`validate char of map 函|凾|涵 1`] = `
+Array [
+  "函",
+  "凾",
+  "涵",
+]
+`;
+
+exports[`validate char of map 划|劃|画|畫 1`] = `
+Array [
+  "划",
+  "劃",
+  "画",
+  "畫",
+]
+`;
+
+exports[`validate char of map 刘|劉|浏|瀏 1`] = `
+Array [
+  "刘",
+  "劉",
+  "浏",
+  "瀏",
+]
+`;
+
+exports[`validate char of map 创|創|疮|瘡 1`] = `
+Array [
+  "创",
+  "創",
+  "疮",
+  "瘡",
+]
+`;
+
+exports[`validate char of map 券|劵|卷|巻|捲|蜷 1`] = `
+Array [
+  "券",
+  "劵",
+  "卷",
+  "巻",
+  "捲",
+  "蜷",
+]
+`;
+
+exports[`validate char of map 剳|扎|札|箚|紮 1`] = `
+Array [
+  "剳",
+  "扎",
+  "札",
+  "箚",
+  "紮",
+]
+`;
+
+exports[`validate char of map 勋|勛|勲|勳 1`] = `
+Array [
+  "勋",
+  "勛",
+  "勲",
+  "勳",
+]
+`;
+
+exports[`validate char of map 勾|鈎|鉤|钩 1`] = `
+Array [
+  "勾",
+  "鈎",
+  "鉤",
+  "钩",
+]
+`;
+
+exports[`validate char of map 匪|扉|斐|緋|绯|翡|菲|蜚|誹|诽|霏|非 1`] = `
+Array [
+  "匪",
+  "扉",
+  "斐",
+  "緋",
+  "绯",
+  "翡",
+  "菲",
+  "蜚",
+  "誹",
+  "诽",
+  "霏",
+  "非",
+]
+`;
+
+exports[`validate char of map 匯|彙|汇 1`] = `
+Array [
+  "匯",
+  "彙",
+  "汇",
+]
+`;
+
+exports[`validate char of map 升|昇|陞 1`] = `
+Array [
+  "升",
+  "昇",
+  "陞",
+]
+`;
+
+exports[`validate char of map 南|枏|楠 1`] = `
+Array [
+  "南",
+  "枏",
+  "楠",
+]
+`;
+
+exports[`validate char of map 卤|滷|魯|鲁|鹵 1`] = `
+Array [
+  "卤",
+  "滷",
+  "魯",
+  "鲁",
+  "鹵",
+]
+`;
+
+exports[`validate char of map 厂|厰|场|場|廠 1`] = `
+Array [
+  "厂",
+  "厰",
+  "场",
+  "場",
+  "廠",
+]
+`;
+
+exports[`validate char of map 历|暦|曆|歴|歷 1`] = `
+Array [
+  "历",
+  "暦",
+  "曆",
+  "歴",
+  "歷",
+]
+`;
+
+exports[`validate char of map 厉|厲|砺|礪 1`] = `
+Array [
+  "厉",
+  "厲",
+  "砺",
+  "礪",
+]
+`;
+
+exports[`validate char of map 叉|衩|釵|钗 1`] = `
+Array [
+  "叉",
+  "衩",
+  "釵",
+  "钗",
+]
+`;
+
+exports[`validate char of map 反|返 1`] = `
+Array [
+  "反",
+  "返",
+]
+`;
+
+exports[`validate char of map 发|發|髪|髮 1`] = `
+Array [
+  "发",
+  "發",
+  "髪",
+  "髮",
+]
+`;
+
+exports[`validate char of map 受|授 1`] = `
+Array [
+  "受",
+  "授",
+]
+`;
+
+exports[`validate char of map 叠|畳|疊|迭 1`] = `
+Array [
+  "叠",
+  "畳",
+  "疊",
+  "迭",
+]
+`;
+
+exports[`validate char of map 只|支|枝|隻 1`] = `
+Array [
+  "只",
+  "支",
+  "枝",
+  "隻",
+]
+`;
+
+exports[`validate char of map 吁|喩|喻|籲|龥 1`] = `
+Array [
+  "吁",
+  "喩",
+  "喻",
+  "籲",
+  "龥",
+]
+`;
+
+exports[`validate char of map 吊|弔 1`] = `
+Array [
+  "吊",
+  "弔",
+]
+`;
+
+exports[`validate char of map 名|銘|铭 1`] = `
+Array [
+  "名",
+  "銘",
+  "铭",
+]
+`;
+
+exports[`validate char of map 向|嚮 1`] = `
+Array [
+  "向",
+  "嚮",
+]
+`;
+
+exports[`validate char of map 吨|噸|訰 1`] = `
+Array [
+  "吨",
+  "噸",
+  "訰",
+]
+`;
+
+exports[`validate char of map 吶|呐|訥|讷 1`] = `
+Array [
+  "吶",
+  "呐",
+  "訥",
+  "讷",
+]
+`;
+
+exports[`validate char of map 呆|待|獃 1`] = `
+Array [
+  "呆",
+  "待",
+  "獃",
+]
+`;
+
+exports[`validate char of map 呎|咫|尺 1`] = `
+Array [
+  "呎",
+  "咫",
+  "尺",
+]
+`;
+
+exports[`validate char of map 呣|哞 1`] = `
+Array [
+  "呣",
+  "哞",
+]
+`;
+
+exports[`validate char of map 呦|哊|哟|唷|唹|喲 1`] = `
+Array [
+  "呦",
+  "哊",
+  "哟",
+  "唷",
+  "唹",
+  "喲",
+]
+`;
+
+exports[`validate char of map 呵|嗬 1`] = `
+Array [
+  "呵",
+  "嗬",
+]
+`;
+
+exports[`validate char of map 呼|唿 1`] = `
+Array [
+  "呼",
+  "唿",
+]
+`;
+
+exports[`validate char of map 哏|梗 1`] = `
+Array [
+  "哏",
+  "梗",
+]
+`;
+
+exports[`validate char of map 哑|唖|啞|痖|瘂 1`] = `
+Array [
+  "哑",
+  "唖",
+  "啞",
+  "痖",
+  "瘂",
+]
+`;
+
+exports[`validate char of map 唉|欸|誒|诶 1`] = `
+Array [
+  "唉",
+  "欸",
+  "誒",
+  "诶",
+]
+`;
+
+exports[`validate char of map 唸|念 1`] = `
+Array [
+  "唸",
+  "念",
+]
+`;
+
+exports[`validate char of map 啊|阿 1`] = `
+Array [
+  "啊",
+  "阿",
+]
+`;
+
+exports[`validate char of map 喧|宣|暄|諠 1`] = `
+Array [
+  "喧",
+  "宣",
+  "暄",
+  "諠",
+]
+`;
+
+exports[`validate char of map 嘛|痲|痳|麻 1`] = `
+Array [
+  "嘛",
+  "痲",
+  "痳",
+  "麻",
+]
+`;
+
+exports[`validate char of map 嘻|嬉 1`] = `
+Array [
+  "嘻",
+  "嬉",
+]
+`;
+
+exports[`validate char of map 噁|恶|悪|惡 1`] = `
+Array [
+  "噁",
+  "恶",
+  "悪",
+  "惡",
+]
+`;
+
+exports[`validate char of map 囌|甦|苏|蘇 1`] = `
+Array [
+  "囌",
+  "甦",
+  "苏",
+  "蘇",
+]
+`;
+
+exports[`validate char of map 回|廻|迴 1`] = `
+Array [
+  "回",
+  "廻",
+  "迴",
+]
+`;
+
+exports[`validate char of map 团|団|團|糰 1`] = `
+Array [
+  "团",
+  "団",
+  "團",
+  "糰",
+]
+`;
+
+exports[`validate char of map 囯|国|國|帼|幗 1`] = `
+Array [
+  "囯",
+  "国",
+  "國",
+  "帼",
+  "幗",
+]
+`;
+
+exports[`validate char of map 図|图|圖 1`] = `
+Array [
+  "図",
+  "图",
+  "圖",
+]
+`;
+
+exports[`validate char of map 坛|壇|談|譚|谈|谭 1`] = `
+Array [
+  "坛",
+  "壇",
+  "談",
+  "譚",
+  "谈",
+  "谭",
+]
+`;
+
+exports[`validate char of map 型|形 1`] = `
+Array [
+  "型",
+  "形",
+]
+`;
+
+exports[`validate char of map 堀|窟 1`] = `
+Array [
+  "堀",
+  "窟",
+]
+`;
+
+exports[`validate char of map 堤|媞|提|湜|禔|緹|缇|隄 1`] = `
+Array [
+  "堤",
+  "媞",
+  "提",
+  "湜",
+  "禔",
+  "緹",
+  "缇",
+  "隄",
+]
+`;
+
+exports[`validate char of map 塞|賽|赛 1`] = `
+Array [
+  "塞",
+  "賽",
+  "赛",
+]
+`;
+
+exports[`validate char of map 复|復|複|覆 1`] = `
+Array [
+  "复",
+  "復",
+  "複",
+  "覆",
+]
+`;
+
+exports[`validate char of map 妮|尼|泥 1`] = `
+Array [
+  "妮",
+  "尼",
+  "泥",
+]
+`;
+
+exports[`validate char of map 委|荽|萎 1`] = `
+Array [
+  "委",
+  "荽",
+  "萎",
+]
+`;
+
+exports[`validate char of map 娘|嬢|孃 1`] = `
+Array [
+  "娘",
+  "嬢",
+  "孃",
+]
+`;
+
+exports[`validate char of map 娜|那 1`] = `
+Array [
+  "娜",
+  "那",
+]
+`;
+
+exports[`validate char of map 媚|魅 1`] = `
+Array [
+  "媚",
+  "魅",
+]
+`;
+
+exports[`validate char of map 定|訂|订|釘|钉 1`] = `
+Array [
+  "定",
+  "訂",
+  "订",
+  "釘",
+  "钉",
+]
+`;
+
+exports[`validate char of map 宻|密|祕|秘 1`] = `
+Array [
+  "宻",
+  "密",
+  "祕",
+  "秘",
+]
+`;
+
+exports[`validate char of map 察|查|査 1`] = `
+Array [
+  "察",
+  "查",
+  "査",
+]
+`;
+
+exports[`validate char of map 岛|島|嶋 1`] = `
+Array [
+  "岛",
+  "島",
+  "嶋",
+]
+`;
+
+exports[`validate char of map 岭|岺|嶺|阾|領|领 1`] = `
+Array [
+  "岭",
+  "岺",
+  "嶺",
+  "阾",
+  "領",
+  "领",
+]
+`;
+
+exports[`validate char of map 岳|嶽|𡶦 1`] = `
+Array [
+  "岳",
+  "嶽",
+  "𡶦",
+]
+`;
+
+exports[`validate char of map 州|洲 1`] = `
+Array [
+  "州",
+  "洲",
+]
+`;
+
+exports[`validate char of map 己|已|巳 1`] = `
+Array [
+  "己",
+  "已",
+  "巳",
+]
+`;
+
+exports[`validate char of map 巴|芭 1`] = `
+Array [
+  "巴",
+  "芭",
+]
+`;
+
+exports[`validate char of map 希|悕|睎|稀 1`] = `
+Array [
+  "希",
+  "悕",
+  "睎",
+  "稀",
+]
+`;
+
+exports[`validate char of map 帐|帳|賬|账 1`] = `
+Array [
+  "帐",
+  "帳",
+  "賬",
+  "账",
+]
+`;
+
+exports[`validate char of map 帖|貼|贴 1`] = `
+Array [
+  "帖",
+  "貼",
+  "贴",
+]
+`;
+
+exports[`validate char of map 帰|归|歸|皈 1`] = `
+Array [
+  "帰",
+  "归",
+  "歸",
+  "皈",
+]
+`;
+
+exports[`validate char of map 幵|开|開 1`] = `
+Array [
+  "幵",
+  "开",
+  "開",
+]
+`;
+
+exports[`validate char of map 庐|廬|芦|蘆 1`] = `
+Array [
+  "庐",
+  "廬",
+  "芦",
+  "蘆",
+]
+`;
+
+exports[`validate char of map 度|渡 1`] = `
+Array [
+  "度",
+  "渡",
+]
+`;
+
+exports[`validate char of map 庭|廷 1`] = `
+Array [
+  "庭",
+  "廷",
+]
+`;
+
+exports[`validate char of map 弯|彎|湾|灣 1`] = `
+Array [
+  "弯",
+  "彎",
+  "湾",
+  "灣",
+]
+`;
+
+exports[`validate char of map 录|錄|録|陆|陸 1`] = `
+Array [
+  "录",
+  "錄",
+  "録",
+  "陆",
+  "陸",
+]
+`;
+
+exports[`validate char of map 怪|恠 1`] = `
+Array [
+  "怪",
+  "恠",
+]
+`;
+
+exports[`validate char of map 悚|耸|聳 1`] = `
+Array [
+  "悚",
+  "耸",
+  "聳",
+]
+`;
+
+exports[`validate char of map 慌|荒 1`] = `
+Array [
+  "慌",
+  "荒",
+]
+`;
+
+exports[`validate char of map 戒|誡|诫|𢌵 1`] = `
+Array [
+  "戒",
+  "誡",
+  "诫",
+  "𢌵",
+]
+`;
+
+exports[`validate char of map 才|材|柴 1`] = `
+Array [
+  "才",
+  "材",
+  "柴",
+]
+`;
+
+exports[`validate char of map 扞|擀|杆|桿 1`] = `
+Array [
+  "扞",
+  "擀",
+  "杆",
+  "桿",
+]
+`;
+
+exports[`validate char of map 抒|紆|紓|纡|纾 1`] = `
+Array [
+  "抒",
+  "紆",
+  "紓",
+  "纡",
+  "纾",
+]
+`;
+
+exports[`validate char of map 択|择|擇|沢|泽|澤 1`] = `
+Array [
+  "択",
+  "择",
+  "擇",
+  "沢",
+  "泽",
+  "澤",
+]
+`;
+
+exports[`validate char of map 抹|袜|襪 1`] = `
+Array [
+  "抹",
+  "袜",
+  "襪",
+]
+`;
+
+exports[`validate char of map 拉|菈 1`] = `
+Array [
+  "拉",
+  "菈",
+]
+`;
+
+exports[`validate char of map 拚|拼 1`] = `
+Array [
+  "拚",
+  "拼",
+]
+`;
+
+exports[`validate char of map 拨|撥|播 1`] = `
+Array [
+  "拨",
+  "撥",
+  "播",
+]
+`;
+
+exports[`validate char of map 拷|烤|考 1`] = `
+Array [
+  "拷",
+  "烤",
+  "考",
+]
+`;
+
+exports[`validate char of map 指|趾 1`] = `
+Array [
+  "指",
+  "趾",
+]
+`;
+
+exports[`validate char of map 挨|捱 1`] = `
+Array [
+  "挨",
+  "捱",
+]
+`;
+
+exports[`validate char of map 挿|插|揷 1`] = `
+Array [
+  "挿",
+  "插",
+  "揷",
+]
+`;
+
+exports[`validate char of map 捏|涅|湼 1`] = `
+Array [
+  "捏",
+  "涅",
+  "湼",
+]
+`;
+
+exports[`validate char of map 捜|搜|蒐 1`] = `
+Array [
+  "捜",
+  "搜",
+  "蒐",
+]
+`;
+
+exports[`validate char of map 掠|略|畧 1`] = `
+Array [
+  "掠",
+  "略",
+  "畧",
+]
+`;
+
+exports[`validate char of map 掳|擄|虏|虜 1`] = `
+Array [
+  "掳",
+  "擄",
+  "虏",
+  "虜",
+]
+`;
+
+exports[`validate char of map 揹|背 1`] = `
+Array [
+  "揹",
+  "背",
+]
+`;
+
+exports[`validate char of map 撩|辽|遼 1`] = `
+Array [
+  "撩",
+  "辽",
+  "遼",
+]
+`;
+
+exports[`validate char of map 斗|闘|鬥|鬪|鬭 1`] = `
+Array [
+  "斗",
+  "闘",
+  "鬥",
+  "鬪",
+  "鬭",
+]
+`;
+
+exports[`validate char of map 暴|曝|爆 1`] = `
+Array [
+  "暴",
+  "曝",
+  "爆",
+]
+`;
+
+exports[`validate char of map 杧|芒|茫 1`] = `
+Array [
+  "杧",
+  "芒",
+  "茫",
+]
+`;
+
+exports[`validate char of map 板|版|闆 1`] = `
+Array [
+  "板",
+  "版",
+  "闆",
+]
+`;
+
+exports[`validate char of map 林|淋|玲|琳|鈴|铃 1`] = `
+Array [
+  "林",
+  "淋",
+  "玲",
+  "琳",
+  "鈴",
+  "铃",
+]
+`;
+
+exports[`validate char of map 果|裸 1`] = `
+Array [
+  "果",
+  "裸",
+]
+`;
+
+exports[`validate char of map 标|標|鏢|鑣|镖|镳 1`] = `
+Array [
+  "标",
+  "標",
+  "鏢",
+  "鑣",
+  "镖",
+  "镳",
+]
+`;
+
+exports[`validate char of map 根|跟 1`] = `
+Array [
+  "根",
+  "跟",
+]
+`;
+
+exports[`validate char of map 桶|筒 1`] = `
+Array [
+  "桶",
+  "筒",
+]
+`;
+
+exports[`validate char of map 植|殖 1`] = `
+Array [
+  "植",
+  "殖",
+]
+`;
+
+exports[`validate char of map 楜|煳|糊|胡|葫|衚|鬍 1`] = `
+Array [
+  "楜",
+  "煳",
+  "糊",
+  "胡",
+  "葫",
+  "衚",
+  "鬍",
+]
+`;
+
+exports[`validate char of map 榚|糕 1`] = `
+Array [
+  "榚",
+  "糕",
+]
+`;
+
+exports[`validate char of map 榭|謝|谢 1`] = `
+Array [
+  "榭",
+  "謝",
+  "谢",
+]
+`;
+
+exports[`validate char of map 气|気|氣|汽|滊|炁 1`] = `
+Array [
+  "气",
+  "気",
+  "氣",
+  "汽",
+  "滊",
+  "炁",
+]
+`;
+
+exports[`validate char of map 沈|沉 1`] = `
+Array [
+  "沈",
+  "沉",
+]
+`;
+
+exports[`validate char of map 沙|砂|紗|纱|莎 1`] = `
+Array [
+  "沙",
+  "砂",
+  "紗",
+  "纱",
+  "莎",
+]
+`;
+
+exports[`validate char of map 泡|炮|炰|砲 1`] = `
+Array [
+  "泡",
+  "炮",
+  "炰",
+  "砲",
+]
+`;
+
+exports[`validate char of map 注|註 1`] = `
+Array [
+  "注",
+  "註",
+]
+`;
+
+exports[`validate char of map 洛|落 1`] = `
+Array [
+  "洛",
+  "落",
+]
+`;
+
+exports[`validate char of map 涨|漲|胀|脹 1`] = `
+Array [
+  "涨",
+  "漲",
+  "胀",
+  "脹",
+]
+`;
+
+exports[`validate char of map 溶|熔|融|螎|鎔|镕 1`] = `
+Array [
+  "溶",
+  "熔",
+  "融",
+  "螎",
+  "鎔",
+  "镕",
+]
+`;
+
+exports[`validate char of map 漂|飃|飄|飘 1`] = `
+Array [
+  "漂",
+  "飃",
+  "飄",
+  "飘",
+]
+`;
+
+exports[`validate char of map 潅|灌|貫|贯 1`] = `
+Array [
+  "潅",
+  "灌",
+  "貫",
+  "贯",
+]
+`;
+
+exports[`validate char of map 烟|煙|腌|菸|醃 1`] = `
+Array [
+  "烟",
+  "煙",
+  "腌",
+  "菸",
+  "醃",
+]
+`;
+
+exports[`validate char of map 熒|荧|萤|蛍|螢 1`] = `
+Array [
+  "熒",
+  "荧",
+  "萤",
+  "蛍",
+  "螢",
+]
+`;
+
+exports[`validate char of map 犬|狗 1`] = `
+Array [
+  "犬",
+  "狗",
+]
+`;
+
+exports[`validate char of map 玛|瑪|馬|马 1`] = `
+Array [
+  "玛",
+  "瑪",
+  "馬",
+  "马",
+]
+`;
+
+exports[`validate char of map 璐|路|𡽘|𨱴 1`] = `
+Array [
+  "璐",
+  "路",
+  "𡽘",
+  "𨱴",
+]
+`;
+
+exports[`validate char of map 白|鉑|铂 1`] = `
+Array [
+  "白",
+  "鉑",
+  "铂",
+]
+`;
+
+exports[`validate char of map 眈|耽|躭 1`] = `
+Array [
+  "眈",
+  "耽",
+  "躭",
+]
+`;
+
+exports[`validate char of map 祥|詳|详 1`] = `
+Array [
+  "祥",
+  "詳",
+  "详",
+]
+`;
+
+exports[`validate char of map 福|褔 1`] = `
+Array [
+  "福",
+  "褔",
+]
+`;
+
+exports[`validate char of map 穀|糓|谷 1`] = `
+Array [
+  "穀",
+  "糓",
+  "谷",
+]
+`;
+
+exports[`validate char of map 筱|筿|篠 1`] = `
+Array [
+  "筱",
+  "筿",
+  "篠",
+]
+`;
+
+exports[`validate char of map 篇|編|编 1`] = `
+Array [
+  "篇",
+  "編",
+  "编",
+]
+`;
+
+exports[`validate char of map 籐|籘|腾|藤|騰 1`] = `
+Array [
+  "籐",
+  "籘",
+  "腾",
+  "藤",
+  "騰",
+]
+`;
+
+exports[`validate char of map 綫|線|线|缐|腺 1`] = `
+Array [
+  "綫",
+  "線",
+  "线",
+  "缐",
+  "腺",
+]
+`;
+
+exports[`validate char of map 翘|翹|跷|蹺 1`] = `
+Array [
+  "翘",
+  "翹",
+  "跷",
+  "蹺",
+]
+`;
+
+exports[`validate char of map 联|聯|连|連 1`] = `
+Array [
+  "联",
+  "聯",
+  "连",
+  "連",
+]
+`;
+
+exports[`validate char of map 脏|臓|臟|贓|赃|髒 1`] = `
+Array [
+  "脏",
+  "臓",
+  "臟",
+  "贓",
+  "赃",
+  "髒",
+]
+`;
+
+exports[`validate char of map 脚|腳|角 1`] = `
+Array [
+  "脚",
+  "腳",
+  "角",
+]
+`;
+
+exports[`validate char of map 脼|郎|郞|𥇑 1`] = `
+Array [
+  "脼",
+  "郎",
+  "郞",
+  "𥇑",
+]
+`;
+
+exports[`validate char of map 腊|臘|蜡|蠟 1`] = `
+Array [
+  "腊",
+  "臘",
+  "蜡",
+  "蠟",
+]
+`;
+
+exports[`validate char of map 蕾|鐳|镭|雷|靁 1`] = `
+Array [
+  "蕾",
+  "鐳",
+  "镭",
+  "雷",
+  "靁",
+]
+`;
+
+exports[`validate char of map 詞|词|辞|辭 1`] = `
+Array [
+  "詞",
+  "词",
+  "辞",
+  "辭",
+]
+`;
+
+exports[`validate char of map 謎|谜|迷 1`] = `
+Array [
+  "謎",
+  "谜",
+  "迷",
+]
+`;
+
+exports[`validate char of map 讃|讚|賛|贊|赞 1`] = `
+Array [
+  "讃",
+  "讚",
+  "賛",
+  "贊",
+  "赞",
+]
+`;
+
+exports[`validate char of map 趯|跃|躍 1`] = `
+Array [
+  "趯",
+  "跃",
+  "躍",
+]
+`;
+
+exports[`validate char of map 辟|避|闢 1`] = `
+Array [
+  "辟",
+  "避",
+  "闢",
+]
+`;
+
+exports[`validate char of map 郁|鬱|𨚼|𨟝 1`] = `
+Array [
+  "郁",
+  "鬱",
+  "𨚼",
+  "𨟝",
+]
+`;
+
+exports[`validate char of map 鉃|鉄|銕|鐡|鐵|铁|𨫓 1`] = `
+Array [
+  "鉃",
+  "鉄",
+  "銕",
+  "鐡",
+  "鐵",
+  "铁",
+  "𨫓",
+]
+`;
+
+exports[`validate char of map 需|須|须|鬚 1`] = `
+Array [
+  "需",
+  "須",
+  "须",
+  "鬚",
+]
+`;
+
+exports[`validate char of map 面|麪|麵|麺 1`] = `
+Array [
+  "面",
+  "麪",
+  "麵",
+  "麺",
+]
+`;
+
+exports[`validate char of map 餚|餸 1`] = `
+Array [
+  "餚",
+  "餸",
+]
+`;
+
+exports[`validate char of map 鶇|鶫|鸫|𪂝 1`] = `
+Array [
+  "鶇",
+  "鶫",
+  "鸫",
+  "𪂝",
+]
+`;
