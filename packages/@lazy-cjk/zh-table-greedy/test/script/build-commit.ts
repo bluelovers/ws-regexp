@@ -4,10 +4,11 @@
 
 import { crossSpawnGitAsync } from '@git-lazy/spawn';
 import { join } from 'path';
-import { _greedyTableCacheMap } from '../../lib/table';
 import { outputJSON } from 'fs-extra';
 import CrossSpawn from 'cross-spawn-extra';
 import Bluebird from 'bluebird';
+import { findTsconfig } from '@yarn-tool/find-tsconfig';
+import { tryBuild } from './util';
 
 const __root = join(__dirname, '../..');
 
@@ -15,14 +16,8 @@ const __root = join(__dirname, '../..');
 {
 	const _cache_file = join(__root, 'test', 'cache', 'keys.json');
 
-	await CrossSpawn.async('ts-node', [
-			join(__root, 'lib', 'table.ts'),
-		], {
-			cwd: __root,
-			stdio: 'inherit',
-		})
-		.then(e => Bluebird.delay(300))
-	;
+	await tryBuild();
+	await tryBuild();
 
 	// @ts-ignore
 	let old: string[] = await import(_cache_file)
@@ -32,6 +27,8 @@ const __root = join(__dirname, '../..');
 
 	let new_keys = [] as string[];
 	let exists_keys = [] as string[];
+
+	const { _greedyTableCacheMap } = await import('../../lib/table');
 
 	_greedyTableCacheMap
 		.forEach((value, key) =>
@@ -56,21 +53,27 @@ const __root = join(__dirname, '../..');
 		stdio: 'inherit',
 	});
 
-	await outputJSON(_cache_file, exists_keys, {
-		spaces: 2,
-	})
+	let msg = new_keys.join('|');
 
-	await crossSpawnGitAsync('git', [
-		`commit`,
-		`-m`,
-		`feat: zh-table-greedy ${exists_keys.join('|')}`,
-		`--`,
-		`./lib`,
-		`./test/cache`,
-	], {
-		cwd: __root,
-		stdio: 'inherit',
-	});
+	console.dir(msg);
+
+	if (1)
+	{
+		await outputJSON(_cache_file, exists_keys, {
+			spaces: 2,
+		})
+
+		await crossSpawnGitAsync('git', [
+			`commit`,
+			`-m`,
+			`feat: zh-table-greedy ${msg}`,
+			`--`,
+			`./lib`,
+			`./test/cache`,
+		], {
+			cwd: __root,
+			stdio: 'inherit',
+		});
+	}
 
 })();
-

@@ -22,7 +22,7 @@
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "build": "ts-node ./test/script/build-cache.ts && yarn run build:tsc",
     "build:commit": "git commit -m \"build: zh-table-greedy\" ./lib & echo build:commit",
-    "build:tsc": "ts-node ./lib/table.ts & echo build:tsc",
+    "build:tsc": "ts-node ./test/script/build-ts.ts",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "prepublish:lockfile": "npx sync-lockfile .",

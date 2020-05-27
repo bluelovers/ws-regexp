@@ -6,6 +6,7 @@ import { _greedyTableCacheTest, _greedyTableCacheMap, _greedyTableCacheRegexp } 
 
 import { outputFile } from 'fs-extra';
 import { join } from 'path';
+import { tryBuild } from './util';
 
 (async () => {
 
@@ -30,5 +31,7 @@ import { join } from 'path';
 	lines.push(``);
 
 	await outputFile(join(__dirname, '../../lib/', 'table.ts'), lines.join('\n\n'))
+
+	await tryBuild();
 
 })();
