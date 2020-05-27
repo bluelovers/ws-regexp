@@ -2,7 +2,7 @@
 /**
  * Created by user on 2020/5/22.
  */
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports._greedyTableCacheRegexp = void 0;
 exports._greedyTableCacheRegexp = [
     [/[噁悪惡]/g, '恶'],
@@ -244,3 +244,4 @@ exports._greedyTableCacheRegexp = [
     [/[厲砺礪]/ug, '厉'],
     [/[島嶋]/ug, '岛'],
 ];
+//# sourceMappingURL=re.js.map

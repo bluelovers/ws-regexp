@@ -1,12 +1,21 @@
 import Bluebird from 'bluebird';
-import { join } from "path";
+import { join, dirname, resolve } from "path";
 import CrossSpawn from 'cross-spawn-extra';
+import { findTsconfig } from '@yarn-tool/find-tsconfig';
+// @ts-ignore
+import * as ts from "typescript";
+import { readJSON, readFile } from 'fs-extra';
+import emitTsFiles from 'build-ts-file';
 
 const __root = join(__dirname, '../..');
 
 export async function tryBuild(includeSource?: boolean)
 {
 	console.log(`build start`);
+
+	let cwd_ts = dirname(findTsconfig(__root));
+
+	console.dir(cwd_ts)
 
 	if (includeSource)
 	{
@@ -22,20 +31,25 @@ export async function tryBuild(includeSource?: boolean)
 		//await Bluebird.delay(1000);
 	}
 
+	/*
 	await CrossSpawn.async('tsc', [
 		join(__root, 'lib', 'table.ts'),
 	], {
-		cwd: __root,
+		cwd: cwd_ts,
 		stdio: 'inherit',
 	})
 	;
+
+	 */
+
+	emitTsFiles(join(__root, 'lib', 'table.ts'));
 
 	//await Bluebird.delay(1000);
 
 	await CrossSpawn.async('ts-node', [
 		join(__root, 'lib', 'table.ts'),
 	], {
-		cwd: __root,
+		cwd: cwd_ts,
 		stdio: 'inherit',
 	})
 	;
