@@ -16,8 +16,8 @@ const __root = join(__dirname, '../..');
 {
 	const _cache_file = join(__root, 'test', 'cache', 'keys.json');
 
-	await tryBuild();
-	await tryBuild();
+	await tryBuild(true);
+	await tryBuild(true);
 
 	// @ts-ignore
 	let old: string[] = await import(_cache_file)

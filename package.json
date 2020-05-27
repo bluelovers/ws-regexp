@@ -24,8 +24,10 @@
   "resolutions": {},
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.19",
+    "@git-lazy/spawn": "^1.0.2",
     "@types/jest": "^25.2.3",
     "@types/node": "*",
+    "@yarn-tool/find-tsconfig": "^1.0.9",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0"
   },
