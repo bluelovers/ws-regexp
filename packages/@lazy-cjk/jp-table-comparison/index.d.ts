@@ -8,5 +8,8 @@
  * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
  */
 import { TABLE, TABLE_SAFE } from './lib/table';
+import { TABLE as ZHJP_TABLE, TABLE_SAFE as ZHJP_TABLE_SAFE } from './lib/table';
+export * from './lib/table';
 export { TABLE, TABLE_SAFE };
+export { ZHJP_TABLE, ZHJP_TABLE_SAFE };
 export default TABLE;
