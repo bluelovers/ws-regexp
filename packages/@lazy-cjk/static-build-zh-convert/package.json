@@ -59,20 +59,29 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "yarn run build",
+    "test": "echo \"Error: no test specified\"",
     "test:jest": "jest --coverage",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "build": "ts-node ./test/script/build-str-table",
+    "build:commit": "git commit -m \"build: update str table\" ./data & echo build:commit",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "prepublishOnly": "yarn run test",
+    "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@lazy-cjk/util": "^1.0.0",
+    "@lazy-cjk/zh-convert": "^1.0.0",
+    "@lazy-cjk/zh-convert-table": "^1.0.0",
+    "fs-extra": "^9.0.0"
+  },
   "publishConfig": {
     "access": "public"
   }
