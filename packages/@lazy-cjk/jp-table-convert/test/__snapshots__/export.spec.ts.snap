@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`import check 1`] = `
+Array [
+  "ZHJP_TABLE",
+  "ZHJP_TABLE_SAFE",
+  "TABLE",
+  "TABLE_SAFE",
+  "defaultOptions",
+  "KEY_JP",
+  "KEY_ZHT",
+  "KEY_ZHS",
+  "jp2zht",
+  "jp2zhs",
+  "zhs2jp",
+  "zht2jp",
+  "zht2zhs",
+  "zhs2zht",
+  "zh2jp",
+  "cjk2jp",
+  "cjk2zht",
+  "cjk2zhs",
+  "default",
+]
+`;

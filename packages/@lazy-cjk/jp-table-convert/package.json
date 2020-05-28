@@ -1,0 +1,45 @@
+{
+  "name": "@lazy-cjk/jp-table-convert",
+  "version": "1.0.0",
+  "description": "轉換 簡繁日 當中共通的 漢字",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/jp-table-convert#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "pretest": "yarn run build",
+    "test": "yarn run test:jest",
+    "test:jest": "jest --coverage",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "build": "ts-node ./test/script/build-cache.ts",
+    "build:commit": "git commit -m \"build: update table\" .",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
+    "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "@lazy-cjk/jp-table-comparison": "^1.0.0",
+    "regexp-helper": "^1.0.9",
+    "uni-string": "^1.1.2"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
