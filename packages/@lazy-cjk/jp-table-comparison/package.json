@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-comparison",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "簡繁日 共通字/轉換表",
   "keywords": [
     "char",
@@ -79,7 +79,6 @@
   "dependencies": {
     "array-hyper-unique": "^1.1.0"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }

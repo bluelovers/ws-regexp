@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-convert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "轉換 簡繁日 當中共通的 漢字",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/jp-table-convert#readme",
   "bugs": {
@@ -34,11 +34,10 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-comparison": "^1.0.0",
+    "@lazy-cjk/jp-table-comparison": "^1.0.1",
     "regexp-helper": "^1.0.9",
     "uni-string": "^1.1.2"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }
