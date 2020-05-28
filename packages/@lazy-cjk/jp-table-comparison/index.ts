@@ -1,3 +1,4 @@
+
 /**
  * Created by user on 2017/12/24/024.
  *
@@ -7,6 +8,8 @@
  * @see https://hanzi.unihan.com.cn/CJKCompare
  * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
  */
-export * from '@lazy-cjk/jp-table-comparison';
-import TABLE from '@lazy-cjk/jp-table-comparison';
+import { TABLE, TABLE_SAFE } from './lib/table';
+
+export { TABLE, TABLE_SAFE }
+
 export default TABLE;
