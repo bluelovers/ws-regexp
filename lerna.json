@@ -15,6 +15,7 @@
         "*.map",
         "*.spec.*",
         "*.test.*",
+        "packages/cjk-conv/test/list.ts",
         ".gitrepo"
       ],
       "message": "chore(release): publish",
