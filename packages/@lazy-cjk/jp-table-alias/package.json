@@ -1,0 +1,83 @@
+{
+  "name": "@lazy-cjk/jp-table-alias",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "char",
+    "character",
+    "characters",
+    "chinese",
+    "cjk",
+    "cjk-conv",
+    "regexp-cjk",
+    "cn",
+    "cn2tw",
+    "conv",
+    "conversion",
+    "convert",
+    "greedy",
+    "hanja",
+    "hanzi",
+    "japanese",
+    "jp2zhs",
+    "jp2zht",
+    "kanji",
+    "node-novel",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression",
+    "simplified",
+    "slugify",
+    "str-util",
+    "table",
+    "traditional",
+    "transform",
+    "tw",
+    "tw2cn",
+    "unicode",
+    "util",
+    "words",
+    "zh",
+    "zh-cn",
+    "zh-tw",
+    "zh2jp",
+    "zhs",
+    "zht"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/jp-table-alias#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:jest": "jest --coverage",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@lazy-cjk/jp-table-convert": "^1.0.2",
+    "array-hyper-unique": "^1.1.0"
+  }
+}
