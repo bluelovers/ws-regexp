@@ -1,4 +1,5 @@
+import { ITABLE_MAIN } from '../types';
 export declare function init(overwrite?: boolean): {
-    TABLE: import("../types").ITABLE_MAIN;
-    TABLE_SAFE: import("../types").ITABLE_MAIN;
+    TABLE: ITABLE_MAIN;
+    TABLE_SAFE: ITABLE_MAIN;
 };

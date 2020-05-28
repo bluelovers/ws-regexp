@@ -686,6 +686,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 再|在 1`] = `
+Array [
+  "再",
+  "在",
+]
+`;
+
 exports[`validate char of map 决|決|絕|絶|绝|訣|诀 1`] = `
 Array [
   "决",
@@ -1707,6 +1714,15 @@ Array [
   "紗",
   "纱",
   "莎",
+]
+`;
+
+exports[`validate char of map 沦|淪|輪|轮 1`] = `
+Array [
+  "沦",
+  "淪",
+  "輪",
+  "轮",
 ]
 `;
 
