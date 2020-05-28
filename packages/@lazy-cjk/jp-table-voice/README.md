@@ -1,6 +1,6 @@
 # README.md
 
-    
+    日文五十音轉換表
 
 ## install
 

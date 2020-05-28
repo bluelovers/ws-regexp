@@ -1,6 +1,6 @@
 # README.md
 
-    
+    搜尋字串用的漢字貪婪轉換表
 
 ## install
 
