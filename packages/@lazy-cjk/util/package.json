@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "char",
@@ -75,7 +75,6 @@
   "dependencies": {
     "uni-string": "^1.1.2"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }
