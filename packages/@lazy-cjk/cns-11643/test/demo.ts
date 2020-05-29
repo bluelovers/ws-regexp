@@ -2,7 +2,7 @@
  * Created by user on 2020/5/30.
  */
 
-import { char2hex, char2zhuyin, char2pinyin_01 } from '..';
+import { char2hex, char2zhuyin, char2pinyin_01, char2pinyin_02, ICNSPinyinTableRow } from '..';
 
 [
 	`𠮷`,
@@ -18,7 +18,11 @@ import { char2hex, char2zhuyin, char2pinyin_01 } from '..';
 		console.log(char, char2hex(char));
 		console.log(`注音`, char2zhuyin(char));
 
-		let p = char2pinyin_01(char)
+		console.log(`-`.repeat(15));
+
+		let p: ICNSPinyinTableRow;
+
+		p = char2pinyin_01(char)
 
 		console.log(`漢語(han)`, p[0])
 		console.log(`注音第二式(zuin2)`, p[1])
@@ -30,7 +34,21 @@ import { char2hex, char2zhuyin, char2pinyin_01 } from '..';
 			console.log(...p.slice(3))
 		}
 
-		console.log(`================================`);
+		console.log(`-`.repeat(15));
+
+		p = char2pinyin_02(char)
+
+		console.log(`漢語(han)`, p[0])
+		console.log(`注音第二式(zuin2)`, p[1])
+		console.log(`耶魯(yale)`, p[2])
+		console.log(`韋式(wei)`, p[3])
+
+		if (p.length > 4)
+		{
+			console.log(...p.slice(3))
+		}
+
+		console.log(`=`.repeat(15));
 
 	})
 ;
