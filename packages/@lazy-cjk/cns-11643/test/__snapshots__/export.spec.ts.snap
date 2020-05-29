@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`import check 1`] = `
+Array [
+  "uni2pinyin_01",
+  "char2pinyin_01",
+  "uni2pinyin_02",
+  "char2pinyin_02",
+  "char2uni",
+  "uni2char",
+  "char2hex",
+  "hex2char",
+  "uni2zhuyin",
+  "char2zhuyin",
+  "default",
+]
+`;

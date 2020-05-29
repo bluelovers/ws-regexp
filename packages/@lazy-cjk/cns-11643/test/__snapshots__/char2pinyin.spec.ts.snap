@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`char2pinyin_01 𠬠 1`] = `
+Array [
+  "mou3",
+  "mou3",
+  "mou3",
+  "mou3",
+]
+`;
+
+exports[`char2pinyin_01 𠮷 1`] = `
+Array [
+  "ji2",
+  "ji2",
+  "ji2",
+  "chi2",
+]
+`;
+
+exports[`char2pinyin_01 𡬶 1`] = `
+Array [
+  "xun2",
+  "shiun2",
+  "syun2",
+  "hsun2",
+]
+`;
+
+exports[`char2pinyin_01 𢎐 1`] = `
+Array [
+  "er4",
+  "er4",
+  "er4",
+  "erh4",
+]
+`;
+
+exports[`char2pinyin_01 𣛙 1`] = `
+Array [
+  "yao4",
+  "yau4",
+  "yau4",
+  "yao4",
+]
+`;
+
+exports[`char2pinyin_01 𫗭 1`] = `
+Array [
+  "wei4",
+  "wei4",
+  "wei4",
+  "wei4",
+]
+`;
+
+exports[`char2pinyin_02 𠬠 1`] = `
+Array [
+  "mǒu",
+  "mǒu",
+  "mǒu",
+  "mou3",
+]
+`;
+
+exports[`char2pinyin_02 𠮷 1`] = `
+Array [
+  "jí",
+  "jí",
+  "jí",
+  "chi2",
+]
+`;
+
+exports[`char2pinyin_02 𡬶 1`] = `
+Array [
+  "xún",
+  "shiún",
+  "syún",
+  "hsün2",
+]
+`;
+
+exports[`char2pinyin_02 𢎐 1`] = `
+Array [
+  "èr",
+  "èr",
+  "èr",
+  "êrh4",
+]
+`;
+
+exports[`char2pinyin_02 𣛙 1`] = `
+Array [
+  "yào",
+  "yàu",
+  "yàu",
+  "yao4",
+]
+`;
+
+exports[`char2pinyin_02 𫗭 1`] = `
+Array [
+  "wèi",
+  "wèi",
+  "wèi",
+  "wei4",
+]
+`;

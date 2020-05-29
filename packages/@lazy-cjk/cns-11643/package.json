@@ -1,0 +1,70 @@
+{
+  "name": "@lazy-cjk/cns-11643",
+  "version": "1.0.1",
+  "description": "CNS11643中文標準交換碼全字庫(簡稱全字庫)",
+  "keywords": [
+    "cns-11643",
+    "cns",
+    "11643",
+    "chinese",
+    "unicode",
+    "CNS11643",
+    "CNS11643中文標準交換碼全字庫",
+    "全字庫",
+    "中文標準交換碼",
+    "中文",
+    "標準交換碼",
+    "交換碼",
+    "zh",
+    "big5",
+    "uni",
+    "hex"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/cns-11643#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "test": "yarn run test:jest",
+    "test:jest": "jest --coverage",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "build:cache": "ts-node ./test/script/build-cache.ts",
+    "build:data": "yarn run build:cache && yarn run build:zhuyin",
+    "build:unzip": "ts-node ./test/script/unzip.ts",
+    "build:zhuyin": "ts-node ./test/script/build-zhuyin.ts",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "devDependencies": {
+    "@jcbuisson/streamline": "^1.0.0",
+    "@lazy-node/readlines": "^2.0.1",
+    "@types/bluebird": "^3.5.32",
+    "@types/fs-extra": "^9.0.1",
+    "@types/n-readlines": "^1.0.1",
+    "bluebird": "^3.7.2",
+    "cross-fetch": "^3.0.4",
+    "fs-extra": "^9.0.0",
+    "jszip": "^3.4.0",
+    "n-readlines": "^1.0.0",
+    "sort-object-keys2": "^2.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
