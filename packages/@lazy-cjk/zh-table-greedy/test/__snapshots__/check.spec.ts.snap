@@ -1570,6 +1570,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 摩|磨 1`] = `
+Array [
+  "摩",
+  "磨",
+]
+`;
+
 exports[`validate char of map 撩|辽|遼 1`] = `
 Array [
   "撩",

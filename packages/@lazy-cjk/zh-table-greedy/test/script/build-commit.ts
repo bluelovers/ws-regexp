@@ -16,8 +16,8 @@ const __root = join(__dirname, '../..');
 {
 	const _cache_file = join(__root, 'test', 'cache', 'keys.json');
 
-	await tryBuild(true);
-	await tryBuild(true);
+	await tryBuild();
+	//await tryBuild(true);
 
 	// @ts-ignore
 	let old: string[] = await import(_cache_file)
@@ -44,15 +44,6 @@ const __root = join(__dirname, '../..');
 		})
 	;
 
-	await crossSpawnGitAsync('git', [
-		`add`,
-		`./lib/table.ts`,
-		`./lib/table.js`,
-	], {
-		cwd: __root,
-		stdio: 'inherit',
-	});
-
 	let msg = new_keys.join('|');
 
 	console.dir(msg);
@@ -62,14 +53,27 @@ const __root = join(__dirname, '../..');
 		await outputJSON(_cache_file, exists_keys, {
 			spaces: 2,
 		})
+	}
 
+	await crossSpawnGitAsync('git', [
+		`add`,
+		`./lib/table.ts`,
+		`./lib/table.js`,
+		`./test`,
+	], {
+		cwd: __root,
+		stdio: 'inherit',
+	});
+
+	if (1)
+	{
 		await crossSpawnGitAsync('git', [
 			`commit`,
 			`-m`,
 			`feat: zh-table-greedy ${msg}`,
 			`--`,
 			`./lib`,
-			`./test/cache`,
+			`./test`,
 		], {
 			cwd: __root,
 			stdio: 'inherit',
