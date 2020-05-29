@@ -28,7 +28,7 @@
     "@types/jest": "^25.2.3",
     "@types/node": "*",
     "@yarn-tool/find-tsconfig": "^1.0.9",
-    "build-ts-file": "^1.0.4",
+    "build-ts-file": "^1.0.5",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0"
   },
