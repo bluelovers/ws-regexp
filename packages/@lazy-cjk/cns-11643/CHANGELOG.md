@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.2 (2020-05-29)
+
+
+### Features
+
+* CNS11643中文標準交換碼全字庫(簡稱全字庫) ([b1ec567](https://github.com/bluelovers/ws-regexp/commit/b1ec567a24528c4b8f8c0ed5f4d977582938d00b))
+* CNS11643中文標準交換碼全字庫(簡稱全字庫) ([214fcb0](https://github.com/bluelovers/ws-regexp/commit/214fcb094aa9c4beef98873e6468df890ea328b1))
+
+
+
+
+
 ## 1.0.1 (2020-05-29)
 
 

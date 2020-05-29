@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/slugify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "keywords": [
     "char",
@@ -73,7 +73,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/zh-slugify": "^1.0.2",
+    "@lazy-cjk/zh-slugify": "^1.0.3",
     "transliteration": "^2.1.11"
   },
   "publishConfig": {
