@@ -6,12 +6,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.slugify = exports.arrCjk = exports.textList = exports.charTableList = void 0;
+exports.arrCjk = exports.textList = exports.charTableList = void 0;
 const index_1 = __importDefault(require("./index"));
 const uni_string_1 = __importDefault(require("uni-string"));
 const jp_table_convert_1 = require("@lazy-cjk/jp-table-convert");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
-const zh_table_greedy_1 = require("@lazy-cjk/zh-table-greedy");
 /**
  *
  * @example
@@ -100,28 +99,5 @@ function arrCjk(arr, options = {}) {
     }
 }
 exports.arrCjk = arrCjk;
-function slugify(input, options = {}, unsafe2) {
-    if (typeof options === 'boolean') {
-        [unsafe2, options] = [options, {}];
-    }
-    options = (options || {});
-    options = {
-        ...options,
-        optionsZhTable: {
-            safe: false,
-            greedyTable: true,
-            ...options.optionsZhTable,
-        },
-    };
-    let k = unsafe2 ? zh_table_greedy_1.greedyTableReplace(input) : input;
-    let arr = charTableList(k, options);
-    return arr
-        .reduce(function (s, a) {
-        s.push(a[0]);
-        return s;
-    }, [])
-        .join('');
-}
-exports.slugify = slugify;
 exports.default = exports;
 //# sourceMappingURL=list.js.map
