@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/slugify",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Unicode to Latin transliteration + slugify module",
   "keywords": [
     "char",
@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "@lazy-cjk/cns-11643": "^1.0.5",
-    "@lazy-cjk/zh-slugify": "^1.0.4",
+    "@lazy-cjk/zh-slugify": "^1.0.5",
     "@sindresorhus/transliterate": "^0.1.0",
     "emoji.json": "^12.1.1",
     "escape-string-regexp": "^4.0.0",
