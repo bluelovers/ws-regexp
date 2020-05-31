@@ -15,5 +15,5 @@ export declare function isHangul(char?: any, blocks?: [string, number[] | {
     RIEUL: number[];
     JAEUM: number[];
     MOEUM: number[];
-}][]): string | false;
+} | typeof import("./unicode/blocks")][]): string | false;
 export default isHangul;
