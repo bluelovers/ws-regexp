@@ -8,15 +8,16 @@ import { outputFileSync, outputFile, outputJSON } from 'fs-extra';
 import uni2cns from '../../lib/uni2cns';
 import cns2uni from '../../lib/cns2uni';
 import sortObjectKeys from 'sort-object-keys2';
-import { IKeyToZhuyinTable, IZhuyin2uni, IZhuyin2cns } from '../..';
+import { IKeyToZhuyinTable, IZhuyin2uni, IZhuyin2cns, uni2char } from '../..';
+import char2zhuyin_init from '../raw/uni2zhuyin';
 
 const __root = join(__dirname, '../..');
 const __unzip = join(__root, 'test', 'cache', 'unzip');
 
-let cns2zhuyin = {} as IKeyToZhuyinTable;
-let uni2zhuyin = {} as IKeyToZhuyinTable;
-let zhuyin2cns = {} as IZhuyin2cns;
-let zhuyin2uni = {} as IZhuyin2uni;
+const cns2zhuyin = {} as IKeyToZhuyinTable;
+const uni2zhuyin = {} as IKeyToZhuyinTable;
+const zhuyin2cns = {} as IZhuyin2cns;
+const zhuyin2uni = {} as IZhuyin2uni;
 
 for (let line of LineByLine.generator(join(__unzip, `Open_Data/Properties/CNS_phonetic.txt`)))
 {
@@ -24,8 +25,14 @@ for (let line of LineByLine.generator(join(__unzip, `Open_Data/Properties/CNS_ph
 
 	let uni = cns2uni(cns);
 
-	_push(_init(cns2zhuyin, cns), zhuyin);
-	_push(_init(uni2zhuyin, uni), zhuyin);
+	const _cb = function (arr: IKeyToZhuyinTable): string[]
+	{
+		let char = uni2char(uni)
+		return char2zhuyin_init[char]
+	}
+
+	_push(_init(cns2zhuyin, cns, _cb), zhuyin);
+	_push(_init(uni2zhuyin, uni, _cb), zhuyin);
 
 	_push(_init(zhuyin2cns, zhuyin), cns);
 	_push(_init(zhuyin2uni, zhuyin), uni);
