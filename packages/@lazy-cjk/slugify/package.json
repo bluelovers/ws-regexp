@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/slugify",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Unicode to Latin transliteration + slugify module",
   "keywords": [
     "char",
