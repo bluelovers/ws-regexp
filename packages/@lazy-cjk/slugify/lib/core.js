@@ -6,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._core = exports._coreCase = exports.handleOptions = void 0;
+exports._slice = exports._trim = exports._core = exports._coreCase = exports.handleOptions = void 0;
 const deburr_1 = __importDefault(require("lodash/deburr"));
 const upperFirst_1 = __importDefault(require("lodash/upperFirst"));
 const upperCase_1 = __importDefault(require("lodash/upperCase"));
@@ -50,16 +50,29 @@ function _core(word, options) {
     if (options.deburr) {
         word = deburr_1.default(word);
     }
-    word = word
-        .trim()
-        .replace(options.trimRegexp, '');
+    word = _trim(word, options);
     word = _coreCase(word, options);
     word = word
         .replace(options.separatorRegexp, options.separator);
+    word = _slice(word, options);
     if (word === '' && !options.allowEmptyResult) {
         throw new RangeError(`result is empty`);
     }
     return word;
 }
 exports._core = _core;
+function _trim(word, options) {
+    return word
+        .trim()
+        .replace(options.trimRegexp, '');
+}
+exports._trim = _trim;
+function _slice(word, options) {
+    if (word.length && options.maxLength) {
+        word = word.slice(0, options.maxLength);
+    }
+    word = _trim(word, options);
+    return word;
+}
+exports._slice = _slice;
 //# sourceMappingURL=core.js.map

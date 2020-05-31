@@ -2,7 +2,7 @@
  * Created by user on 2020/5/30.
  */
 import { IOptionsSlugify } from './lib/types';
-import { _core, handleOptions, _coreCase } from './lib/core';
+import { _core, handleOptions, _coreCase, _slice } from './lib/core';
 import { _replaceEmoji } from './lib/emoji';
 import { _replaceCjk } from './lib/chinese';
 import _transliterate from '@sindresorhus/transliterate';
@@ -38,6 +38,8 @@ export function transliterate(word: string, options?: IOptionsSlugify)
 	word = _text(word, options);
 
 	word = _coreCase(word, options);
+
+	word = _slice(word, options);
 
 	return word
 		.replace(/\s+/g, ' ')

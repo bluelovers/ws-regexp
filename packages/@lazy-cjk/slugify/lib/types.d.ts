@@ -24,4 +24,5 @@ export interface IOptionsSlugify {
      * @default true
      */
     cjk?: boolean;
+    maxLength?: number;
 }

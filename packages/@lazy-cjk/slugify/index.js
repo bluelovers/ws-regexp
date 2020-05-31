@@ -29,6 +29,7 @@ function transliterate(word, options) {
     options.separator = ' ';
     word = _text(word, options);
     word = core_1._coreCase(word, options);
+    word = core_1._slice(word, options);
     return word
         .replace(/\s+/g, ' ');
 }

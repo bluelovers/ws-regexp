@@ -67,10 +67,7 @@ export function _core(word: string, options?: IOptionsSlugify)
 		word = deburr(word)
 	}
 
-	word = word
-		.trim()
-		.replace(options.trimRegexp, '')
-	;
+	word = _trim(word, options);
 
 	word = _coreCase(word, options);
 
@@ -78,10 +75,32 @@ export function _core(word: string, options?: IOptionsSlugify)
 		.replace(options.separatorRegexp, options.separator)
 	;
 
+	word = _slice(word, options);
+
 	if (word === '' && !options.allowEmptyResult)
 	{
 		throw new RangeError(`result is empty`)
 	}
+
+	return word
+}
+
+export function _trim(word: string, options: IOptionsSlugify)
+{
+	return word
+		.trim()
+		.replace(options.trimRegexp, '')
+	;
+}
+
+export function _slice(word: string, options: IOptionsSlugify)
+{
+	if (word.length && options.maxLength)
+	{
+		word = word.slice(0, options.maxLength);
+	}
+
+	word = _trim(word, options);
 
 	return word
 }
