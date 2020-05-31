@@ -1,13 +1,7 @@
 {
-  "name": "romaja",
+  "name": "@lazy-cjk/korean-romanize",
   "version": "0.2.0",
   "description": "String conversion utility to romanize Korean characters",
-  "main": "index.js",
-  "scripts": {
-    "test": "npx jest",
-    "test:watch": "npx jest --watchAll",
-    "test:coverage": "npx jest --coverage"
-  },
   "keywords": [
     "alphabet",
     "choson'gul",
@@ -35,22 +29,40 @@
     "unicode",
     "유니코드"
   ],
-  "author": "James Moon <mooniker@gmail.com>",
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "jest": "^24.9.0",
-    "unicode": "^12.1.0"
-  },
-  "dependencies": {},
-  "bin": {
-    "romaja": "./cli.js"
+  "homepage": "https://github.com/mooniker/romaja#readme",
+  "bugs": {
+    "url": "https://github.com/mooniker/romaja/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mooniker/romaja.git"
   },
-  "bugs": {
-    "url": "https://github.com/mooniker/romaja/issues"
+  "license": "UNLICENSED",
+  "author": "James Moon <mooniker@gmail.com>",
+  "main": "index.js",
+  "bin": {
+    "romaja": "cli.js"
   },
-  "homepage": "https://github.com/mooniker/romaja#readme"
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:jest": "jest --coverage",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly_": "yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "unicode": "^12.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

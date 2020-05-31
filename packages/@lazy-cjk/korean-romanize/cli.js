@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { romanize } = require("./src/romanize");
+const { romanize } = require("./lib/romanize");
 
 const { argv } = process;
 
