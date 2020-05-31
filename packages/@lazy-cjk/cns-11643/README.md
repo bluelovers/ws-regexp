@@ -143,3 +143,9 @@ import { char2hex, char2zhuyin, char2pinyin_01, char2pinyin_02, ICNSPinyinTableR
 韋式(wei) êrh4
 ===============
 ```
+
+## links
+
+- https://data.gov.tw/dataset/5961
+- https://www.cns11643.gov.tw/index.jsp
+- 
