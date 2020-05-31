@@ -1,6 +1,4 @@
-/**
- * Created by user on 2020/5/30.
- */
+import { char2uni } from './char2uni';
 
 export function uni2cns(uni: string | number): string
 {
@@ -16,6 +14,11 @@ export function uni2cns(uni: string | number): string
 	}
 
 	return require('./cns/unicode/uni2cns.bmp.json')[uni]
+}
+
+export function char2cns(char: string): string
+{
+	return uni2cns(char2uni(char))
 }
 
 export default uni2cns

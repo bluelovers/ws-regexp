@@ -7,6 +7,7 @@ export * from './lib/uni2pinyin_02';
 
 export * from './lib/char2uni';
 export * from './lib/uni2zhuyin';
+export * from './lib/util';
 
 export * from './lib/types';
 

@@ -17,6 +17,7 @@ __exportStar(require("./lib/uni2pinyin_01"), exports);
 __exportStar(require("./lib/uni2pinyin_02"), exports);
 __exportStar(require("./lib/char2uni"), exports);
 __exportStar(require("./lib/uni2zhuyin"), exports);
+__exportStar(require("./lib/util"), exports);
 __exportStar(require("./lib/types"), exports);
 exports.default = exports;
 //# sourceMappingURL=index.js.map

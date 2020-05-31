@@ -21,3 +21,10 @@ export function hex2char(hex: string)
 {
 	return uni2char(parseInt(hex, 16))
 }
+
+export function uni2hex(uni: string | number)
+{
+	uni = parseInt(uni.toString())
+	return uni.toString(16)
+}
+

@@ -1,9 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.char2zhuyin = exports.uni2zhuyin = void 0;
+exports.char2zhuyin = exports.uni2zhuyin = exports.uni2zhuyin_table = void 0;
 const char2uni_1 = require("./char2uni");
+function uni2zhuyin_table() {
+    return require('./cns/zhuyin/uni2zhuyin.json');
+}
+exports.uni2zhuyin_table = uni2zhuyin_table;
 function uni2zhuyin(uni) {
-    return require('./cns/zhuyin/uni2zhuyin.json')[uni];
+    return uni2zhuyin_table()[uni];
 }
 exports.uni2zhuyin = uni2zhuyin;
 function char2zhuyin(char) {

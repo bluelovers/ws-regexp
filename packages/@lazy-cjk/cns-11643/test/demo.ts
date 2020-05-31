@@ -2,7 +2,7 @@
  * Created by user on 2020/5/30.
  */
 
-import { char2hex, char2zhuyin, char2pinyin_01, char2pinyin_02, ICNSPinyinTableRow } from '..';
+import { char2hex, char2zhuyin, char2pinyin_01, char2pinyin_02, IZhuyin2PinyinTableRow } from '..';
 
 [
 	`𠮷`,
@@ -20,7 +20,7 @@ import { char2hex, char2zhuyin, char2pinyin_01, char2pinyin_02, ICNSPinyinTableR
 
 		console.log(`-`.repeat(15));
 
-		let p: ICNSPinyinTableRow;
+		let p: IZhuyin2PinyinTableRow;
 
 		p = char2pinyin_01(char)
 
