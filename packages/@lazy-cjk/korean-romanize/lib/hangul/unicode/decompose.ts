@@ -1,12 +1,6 @@
-const { SBase, LBase, VBase, TBase } = require("./constraints");
+import { SBase, LBase, VBase, TBase } from './constraints';
 
-const {
-  computeSIndex,
-  computeLIndex,
-  computeVIndex,
-  computeLVIndex,
-  computeTIndex
-} = require("./computations");
+import { computeSIndex, computeLIndex, computeVIndex, computeLVIndex, computeTIndex } from './computations';
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
@@ -14,15 +8,16 @@ const {
  * @param {(string|integer)} s
  * @returns {array}
  */
-function arithmeticDecompositionMappingLV(s) {
-  const SIndex = computeSIndex(s);
-  const LIndex = computeLIndex(SIndex);
-  const VIndex = computeVIndex(SIndex);
+export function arithmeticDecompositionMappingLV(s)
+{
+	const SIndex = computeSIndex(s);
+	const LIndex = computeLIndex(SIndex);
+	const VIndex = computeVIndex(SIndex);
 
-  const LPart = LBase + LIndex;
-  const VPart = VBase + VIndex;
+	const LPart = LBase + LIndex;
+	const VPart = VBase + VIndex;
 
-  return [LPart, VPart];
+	return [LPart, VPart];
 }
 
 /**
@@ -31,15 +26,16 @@ function arithmeticDecompositionMappingLV(s) {
  * @param {(string|integer)} s
  * @returns {array}
  */
-function arithmeticDecompositionMappingLVT(s) {
-  const SIndex = computeSIndex(s);
-  const LVIndex = computeLVIndex(SIndex);
-  const TIndex = computeTIndex(SIndex);
+export function arithmeticDecompositionMappingLVT(s)
+{
+	const SIndex = computeSIndex(s);
+	const LVIndex = computeLVIndex(SIndex);
+	const TIndex = computeTIndex(SIndex);
 
-  const LVPart = SBase + LVIndex;
-  const TPart = TBase + TIndex;
+	const LVPart = SBase + LVIndex;
+	const TPart = TBase + TIndex;
 
-  return [LVPart, TPart];
+	return [LVPart, TPart];
 }
 
 /**
@@ -59,18 +55,20 @@ function arithmeticDecompositionMappingLVT(s) {
  * @param {(string|integer)} s
  * @returns {array}
  */
-function decomposeHangulChar(s) {
-  const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
+export function decomposeHangulChar(s)
+{
+	const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
 
-  const LVPart = arithmeticDecompositionMappingLV(s);
-  const TIndex = computeTIndex(SIndex);
+	const LVPart = arithmeticDecompositionMappingLV(s);
+	const TIndex = computeTIndex(SIndex);
 
-  if (TIndex > 0) {
-    const TPart = TBase + TIndex;
-    return LVPart.concat([TPart]);
-  }
+	if (TIndex > 0)
+	{
+		const TPart = TBase + TIndex;
+		return LVPart.concat([TPart]);
+	}
 
-  return LVPart;
+	return LVPart;
 }
 
 /**
@@ -79,11 +77,8 @@ function decomposeHangulChar(s) {
  * @param {string} word
  * @returns {array}
  */
-const decomposeHangul = word => [...word].map(decomposeHangulChar);
+export function decomposeHangul(word)
+{
+	return [...word].map(decomposeHangulChar);
+}
 
-module.exports = {
-  arithmeticDecompositionMappingLV,
-  arithmeticDecompositionMappingLVT,
-  decomposeHangulChar,
-  decomposeHangul
-};

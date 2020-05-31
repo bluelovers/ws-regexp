@@ -1,15 +1,6 @@
-const {
-  computeSIndex,
-  computeLIndex,
-  computeVIndex,
-  computeTIndex
-} = require("./computations");
+import { computeSIndex, computeLIndex, computeVIndex, computeTIndex } from './computations';
 
-const {
-  JAMO_L_TABLE,
-  JAMO_V_TABLE,
-  JAMO_T_TABLE
-} = require("./jamoShortNames");
+import { JAMO_L_TABLE, JAMO_V_TABLE, JAMO_T_TABLE } from './jamoShortNames';
 
 /**
  * Generates a letter/jamo-derived short name for a given precomposed Hangul syllable
@@ -17,13 +8,14 @@ const {
  * @param {(string|integer)} s
  * @returns {string} Unicode Hangul syllable short name
  */
-function getHangulCharShortName(s) {
-  const SIndex = computeSIndex(s);
-  const LIndex = computeLIndex(SIndex);
-  const VIndex = computeVIndex(SIndex);
-  const TIndex = computeTIndex(SIndex);
+export function getHangulCharShortName(s)
+{
+	const SIndex = computeSIndex(s);
+	const LIndex = computeLIndex(SIndex);
+	const VIndex = computeVIndex(SIndex);
+	const TIndex = computeTIndex(SIndex);
 
-  return JAMO_L_TABLE[LIndex] + JAMO_V_TABLE[VIndex] + JAMO_T_TABLE[TIndex];
+	return JAMO_L_TABLE[LIndex] + JAMO_V_TABLE[VIndex] + JAMO_T_TABLE[TIndex];
 }
 
 /**
@@ -36,6 +28,8 @@ function getHangulCharShortName(s) {
  * @param {(string|integer)} s
  * @returns {string} Unicode Hangul syllable name
  */
-const getHangulCharName = s => "HANGUL SYLLABLE " + getHangulCharShortName(s);
+export function getHangulCharName(s)
+{
+	return "HANGUL SYLLABLE " + getHangulCharShortName(s);
+}
 
-module.exports = { getHangulCharShortName, getHangulCharName };

@@ -1,26 +1,33 @@
 // Unicode data for category "Letter (other)"
-const lo = require("unicode/category/Lo");
 
-const snakeToCamel = str =>
-  str.replace(/([-_][a-z])/g, group =>
-    group
-      .toUpperCase()
-      .replace("-", "")
-      .replace("_", "")
-  );
+// @ts-ignore
+import lo from 'unicode/category/Lo';
 
-const clean = data =>
-  Object.entries(data)
-    .map(([key, value]) => ({
-      [snakeToCamel(key)]:
-        typeof value === "string" && value.trim() === "" ? undefined : value
-    }))
-    .reduce((acc, item) => Object.assign(acc, item), {});
+function snakeToCamel(str)
+{
+	return str.replace(/([-_][a-z])/g, group =>
+		group
+			.toUpperCase()
+			.replace("-", "")
+			.replace("_", ""),
+	);
+}
 
-const getDataFor = codePoint => {
-  const data = lo[codePoint];
+function clean(data)
+{
+	return Object.entries(data)
+		.map(([key, value]) => ({
+			[snakeToCamel(key)]:
+				typeof value === "string" && value.trim() === "" ? undefined : value,
+		}))
+		.reduce((acc, item) => Object.assign(acc, item), {});
+}
 
-  return clean(data);
-};
+export function getDataFor(codePoint)
+{
+	const data = lo[codePoint];
 
-module.exports = getDataFor;
+	return clean(data);
+}
+
+export default getDataFor

@@ -1,5 +1,5 @@
-let words = require("./words.json");
-let sentences = require("./sentences.json");
+import words from './words.json';
+import sentences from './sentences.json';
 
 try {
   const { addExtra } = require("./extra");
@@ -9,7 +9,7 @@ try {
   // don't use extra
 }
 
-module.exports = {
+export {
   words,
   sentences
-};
+}

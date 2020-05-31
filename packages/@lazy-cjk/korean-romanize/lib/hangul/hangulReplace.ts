@@ -1,5 +1,5 @@
-const hangulPattern = require("./unicode/hangulPattern");
+import hangulPattern from './unicode/hangulPattern';
 
-const hangulReplace = (text, callback) => text.replace(hangulPattern, callback);
+export function hangulReplace(text, callback) { return text.replace(hangulPattern, callback); }
 
-module.exports = hangulReplace;
+export default hangulReplace;

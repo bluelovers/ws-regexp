@@ -41,7 +41,7 @@
   "author": "James Moon <mooniker@gmail.com>",
   "main": "index.js",
   "bin": {
-    "romaja": "cli.js"
+    "romaja": "bin/cli.js"
   },
   "directories": {
     "lib": "lib",
@@ -53,7 +53,7 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly_": "yarn run test",
+    "prepublishOnly": "yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort"

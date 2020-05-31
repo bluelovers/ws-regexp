@@ -1,14 +1,6 @@
-const getUnicodeDataFor = require("./getData");
+import { LBase, LCount, VBase, VCount, TBase, TCount } from './constraints';
 
-const {
-  LBase,
-  LCount,
-  VBase,
-  VCount,
-  TBase,
-  TCount
-} = require("./constraints");
-
+import getUnicodeDataFor from './getData';
 // totals including archaic jamo
 const LTotal = 90; // initial consonants
 const VTotal = 4 * 16 + 2; // medial vowels
@@ -22,24 +14,25 @@ const TTotal = 8 * 10 + 3; // final consonants
  * @param {integer} numTotal
  */
 const indexJamo = (offset, numCurrent, numTotal) =>
-  Array(numTotal || numCurrent)
-    .fill({})
-    .map((p, idx) => {
-      const codePoint = offset + idx;
-      const unicodeData = getUnicodeDataFor(codePoint);
+	Array(numTotal || numCurrent)
+		.fill({})
+		.map((p, idx) =>
+		{
+			const codePoint = offset + idx;
+			const unicodeData = getUnicodeDataFor(codePoint);
 
-      return {
-        jamo: String.fromCodePoint(codePoint),
-        archaic: idx + 1 > numCurrent,
-        unicodeData
-      };
-    });
+			return {
+				jamo: String.fromCodePoint(codePoint),
+				archaic: idx + 1 > numCurrent,
+				unicodeData,
+			};
+		});
 
-module.exports = [
-  // initial consonants
-  indexJamo(LBase, LCount, LTotal),
-  // medial vowels
-  indexJamo(VBase, VCount, VTotal),
-  // final consonants
-  indexJamo(TBase, TCount, TTotal)
+export = [
+	// initial consonants
+	indexJamo(LBase, LCount, LTotal),
+	// medial vowels
+	indexJamo(VBase, VCount, VTotal),
+	// final consonants
+	indexJamo(TBase, TCount, TTotal),
 ];
