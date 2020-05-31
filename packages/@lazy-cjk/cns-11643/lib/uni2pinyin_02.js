@@ -6,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.char2pinyin_02 = exports.uni2pinyin_02 = exports.zhuyin2pinyin_02_table = void 0;
+exports.char2pinyin_02 = exports.uni2pinyin_02 = exports.zhuyin2pinyin_02 = exports.zhuyin2pinyin_02_table = void 0;
 const uni2zhuyin_1 = __importDefault(require("./uni2zhuyin"));
 const char2uni_1 = require("./char2uni");
 /**
@@ -24,6 +24,10 @@ function zhuyin2pinyin_02_table() {
     return require('./cns/pinyin/pinyin_02.json');
 }
 exports.zhuyin2pinyin_02_table = zhuyin2pinyin_02_table;
+function zhuyin2pinyin_02(zhuyin) {
+    return zhuyin2pinyin_02_table()[zhuyin];
+}
+exports.zhuyin2pinyin_02 = zhuyin2pinyin_02;
 /**
  * 全字庫的拼音資料表格
  *

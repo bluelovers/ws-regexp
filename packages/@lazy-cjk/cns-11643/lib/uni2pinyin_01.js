@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.char2pinyin_01 = exports.uni2pinyin_01 = exports.zhuyin2pinyin_01_table = void 0;
+exports.char2pinyin_01 = exports.uni2pinyin_01 = exports.zhuyin2pinyin_01 = exports.zhuyin2pinyin_01_table = void 0;
 /**
  * Created by user on 2020/5/30.
  */
@@ -24,6 +24,10 @@ function zhuyin2pinyin_01_table() {
     return require('./cns/pinyin/pinyin_01.json');
 }
 exports.zhuyin2pinyin_01_table = zhuyin2pinyin_01_table;
+function zhuyin2pinyin_01(zhuyin) {
+    return zhuyin2pinyin_01_table()[zhuyin];
+}
+exports.zhuyin2pinyin_01 = zhuyin2pinyin_01;
 /**
  * 全字庫的拼音資料表格
  *

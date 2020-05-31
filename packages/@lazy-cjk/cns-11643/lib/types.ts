@@ -46,3 +46,8 @@ export interface IZhuyin2uni extends Record<string, string[]>
 {
 
 }
+
+export interface IKeyToZhuyinTable extends Record<string, string[]>
+{
+
+}

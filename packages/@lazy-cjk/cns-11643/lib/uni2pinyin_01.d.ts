@@ -11,6 +11,7 @@ import { IZhuyin2PinyinTable, IZhuyin2PinyinTableRow } from './types';
  * 第五個欄位：韋式(wei)
  */
 export declare function zhuyin2pinyin_01_table(): IZhuyin2PinyinTable;
+export declare function zhuyin2pinyin_01(zhuyin: string): IZhuyin2PinyinTableRow;
 /**
  * 全字庫的拼音資料表格
  *

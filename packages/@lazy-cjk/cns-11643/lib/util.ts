@@ -26,3 +26,8 @@ export function replaceChar(input: string, fn: (...args: string[]) => string)
 {
 	return input.replace(re_replace, fn)
 }
+
+export function splitChar(input: string)
+{
+	return input.split(re_replace)
+}

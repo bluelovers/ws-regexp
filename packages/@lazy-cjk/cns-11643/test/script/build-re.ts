@@ -58,11 +58,11 @@ let s = ls.map(a => {
 
 	if (a.length === 1)
 	{
-		return `\\u${uni2hex(a[0])}`
+		return `\\u{${uni2hex(a[0])}}`
 	}
 	else
 	{
-		return `\\u${uni2hex(a[0])}-\\u${uni2hex(a[1])}`
+		return `\\u{${uni2hex(a[0])}}-\\u{${uni2hex(a[1])}}`
 	}
 
 }).join('');

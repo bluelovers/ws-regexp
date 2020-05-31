@@ -23,8 +23,11 @@ for (let line of LineByLine.generator(join(__unzip, `Open_Data/Properties/CNS_ph
 
 	let uni = cns2uni(cns);
 
-	cns2zhuyin[cns] = zhuyin;
-	uni2zhuyin[uni] = zhuyin;
+	cns2zhuyin[cns] = cns2zhuyin[cns] || [];
+	uni2zhuyin[uni] = uni2zhuyin[uni] || [];
+
+	cns2zhuyin[cns].push(zhuyin);
+	uni2zhuyin[uni].push(zhuyin);
 
 	zhuyin2cns[zhuyin] = zhuyin2cns[zhuyin] || [];
 	zhuyin2uni[zhuyin] = zhuyin2uni[zhuyin] || [];

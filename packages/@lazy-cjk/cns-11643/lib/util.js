@@ -6,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.replaceChar = exports.isExistsChar = exports.newCharMatchRegExp = void 0;
+exports.splitChar = exports.replaceChar = exports.isExistsChar = exports.newCharMatchRegExp = void 0;
 const uniCharMatchSource_1 = __importDefault(require("./const/uniCharMatchSource"));
 const re_full_match = newCharMatchRegExp('u', (uniCharMatchSource) => `^${uniCharMatchSource}$`);
 const re_replace = newCharMatchRegExp('ug', (uniCharMatchSource) => `(${uniCharMatchSource})`);
@@ -26,4 +26,8 @@ function replaceChar(input, fn) {
     return input.replace(re_replace, fn);
 }
 exports.replaceChar = replaceChar;
+function splitChar(input) {
+    return input.split(re_replace);
+}
+exports.splitChar = splitChar;
 //# sourceMappingURL=util.js.map

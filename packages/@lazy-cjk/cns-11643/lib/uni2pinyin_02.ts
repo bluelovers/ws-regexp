@@ -22,6 +22,11 @@ export function zhuyin2pinyin_02_table(): IZhuyin2PinyinTable
 	return require('./cns/pinyin/pinyin_02.json') as any
 }
 
+export function zhuyin2pinyin_02(zhuyin: string): IZhuyin2PinyinTableRow
+{
+	return zhuyin2pinyin_02_table()[zhuyin]
+}
+
 /**
  * 全字庫的拼音資料表格
  *
