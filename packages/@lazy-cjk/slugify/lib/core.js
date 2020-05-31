@@ -14,7 +14,7 @@ function handleOptions(options) {
     var _a, _b, _c, _d;
     options = options || {};
     options.separatorRegexp = (_a = options.separatorRegexp) !== null && _a !== void 0 ? _a : /[^\w\d]+/g;
-    options.trimRegexp = (_b = options.trimRegexp) !== null && _b !== void 0 ? _b : new RegExp(`^${options.separatorRegexp.source}|${options.separatorRegexp.source}$`, 'ugi');
+    options.trimRegexp = (_b = options.trimRegexp) !== null && _b !== void 0 ? _b : new RegExp(`^(?:${options.separatorRegexp.source})|(?:${options.separatorRegexp.source})$`, 'ugi');
     options.separator = (_c = options.separator) !== null && _c !== void 0 ? _c : '-';
     options.transliterate = (_d = options.transliterate) !== null && _d !== void 0 ? _d : true;
     return options;

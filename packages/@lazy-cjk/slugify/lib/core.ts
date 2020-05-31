@@ -12,7 +12,7 @@ export function handleOptions(options?: IOptionsSlugify)
 	options = options || {};
 
 	options.separatorRegexp = options.separatorRegexp ?? /[^\w\d]+/g;
-	options.trimRegexp = options.trimRegexp ?? new RegExp(`^${options.separatorRegexp.source}|${options.separatorRegexp.source}$`, 'ugi');
+	options.trimRegexp = options.trimRegexp ?? new RegExp(`^(?:${options.separatorRegexp.source})|(?:${options.separatorRegexp.source})$`, 'ugi');
 	options.separator = options.separator ?? '-';
 	options.transliterate = options.transliterate ?? true;
 
