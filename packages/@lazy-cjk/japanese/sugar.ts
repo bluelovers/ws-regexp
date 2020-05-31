@@ -1,14 +1,19 @@
-var japanese = require('./');
+/**
+ * @deprecated
+ */
+export * from './index';
+import japanese from './index';
 
-var methods = [
+const methods = [
 	'hiraganize',
 	'katakanize',
 	'romanize',
-];
+] as const;
 
 methods.forEach(function (method) {
 	Object.defineProperty(String.prototype, method, {
 		value: function () {
+			// @ts-ignore
 			return japanese[method].apply(this, [this].concat(arguments));
 		},
 		enumerable: false,
@@ -17,4 +22,4 @@ methods.forEach(function (method) {
 	});
 });
 
-module.exports = japanese;
+export default japanese;

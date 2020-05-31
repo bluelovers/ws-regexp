@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 var meow = require('meow');
-var japanese = require('./');
+var japanese = require('../index');
 
 var cli = meow({
 	help: [
