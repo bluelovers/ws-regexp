@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/slugify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Unicode to Latin transliteration + slugify module",
   "keywords": [
     "char",
@@ -73,7 +73,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/cns-11643": "^1.0.0",
+    "@lazy-cjk/cns-11643": "^1.0.4",
     "@lazy-cjk/zh-slugify": "^1.0.3",
     "@sindresorhus/transliterate": "^0.1.0",
     "emoji.json": "^12.1.1",
