@@ -9,11 +9,14 @@ const emoji_1 = require("./lib/emoji");
 const chinese_1 = require("./lib/chinese");
 const transliterate_1 = __importDefault(require("@sindresorhus/transliterate"));
 function _text(word, options) {
+    var _a, _b;
     if (options.emoji) {
         word = emoji_1._replaceEmoji(word, options);
     }
-    word = chinese_1._replaceChinese(word, options);
-    if (options.transliterate) {
+    if ((_a = options.cjk) !== null && _a !== void 0 ? _a : true) {
+        word = chinese_1._replaceCjk(word, options);
+    }
+    if ((_b = options.transliterate) !== null && _b !== void 0 ? _b : true) {
         word = transliterate_1.default(word);
     }
     return word;

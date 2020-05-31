@@ -17,7 +17,6 @@ describe(`emoji`, () =>
 				});
 
 				expect(actual).not.toStrictEqual(char);
-				expect(actual).toMatchSnapshot();
 
 			});
 

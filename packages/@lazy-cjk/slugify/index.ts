@@ -4,7 +4,7 @@
 import { IOptionsSlugify } from './lib/types';
 import { _core, handleOptions, _coreCase } from './lib/core';
 import { _replaceEmoji } from './lib/emoji';
-import { _replaceChinese } from './lib/chinese';
+import { _replaceCjk } from './lib/chinese';
 import _transliterate from '@sindresorhus/transliterate';
 
 function _text(word: string, options: IOptionsSlugify)
@@ -14,9 +14,12 @@ function _text(word: string, options: IOptionsSlugify)
 		word = _replaceEmoji(word, options);
 	}
 
-	word = _replaceChinese(word, options);
+	if (options.cjk ?? true)
+	{
+		word = _replaceCjk(word, options);
+	}
 
-	if (options.transliterate)
+	if (options.transliterate ?? true)
 	{
 		word = _transliterate(word);
 	}

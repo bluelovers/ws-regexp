@@ -33,14 +33,21 @@ export function _coreCase(word: string, options?: IOptionsSlugify)
 		word = upperCaseExtra(word)
 	}
 
-	if (options.lowerCase)
+	if (options.upperCase)
 	{
-		word = word.toLowerCase()
+		word = word.toUpperCase()
 	}
-
-	if (options.upperFirst)
+	else
 	{
-		word = upperFirst(word)
+		if (options.lowerCase)
+		{
+			word = word.toLowerCase()
+		}
+
+		if (options.upperFirst)
+		{
+			word = upperFirst(word)
+		}
 	}
 
 	return word

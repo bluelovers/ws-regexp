@@ -28,11 +28,16 @@ function _coreCase(word, options) {
     if (options.lowerCaseExtra) {
         word = upperCase_1.default(word);
     }
-    if (options.lowerCase) {
-        word = word.toLowerCase();
+    if (options.upperCase) {
+        word = word.toUpperCase();
     }
-    if (options.upperFirst) {
-        word = upperFirst_1.default(word);
+    else {
+        if (options.lowerCase) {
+            word = word.toLowerCase();
+        }
+        if (options.upperFirst) {
+            word = upperFirst_1.default(word);
+        }
     }
     return word;
 }
