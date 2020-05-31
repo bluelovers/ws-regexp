@@ -68,5 +68,6 @@
       "chrome/latest",
       "firefox/latest"
     ]
-  }
+  },
+  "gitHead": "f0c4be7cd154334ba636434e3bf509d795eba3e2"
 }
