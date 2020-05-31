@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.4...@lazy-cjk/slugify@1.0.5) (2020-05-31)
+
+
+### Features
+
+* options.upperCase ([388b6e7](https://github.com/bluelovers/ws-regexp/commit/388b6e7aab8e7e2770c2ebebfeacb6927e3ef4f6))
+
+
+
+
+
 ## [1.0.4](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.3...@lazy-cjk/slugify@1.0.4) (2020-05-31)
 
 
