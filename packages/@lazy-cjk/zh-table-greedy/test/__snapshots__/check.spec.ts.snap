@@ -534,6 +534,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 傍|彷|徬|旁 1`] = `
+Array [
+  "傍",
+  "彷",
+  "徬",
+  "旁",
+]
+`;
+
 exports[`validate char of map 傑|婕|杰|洁|潔|絜 1`] = `
 Array [
   "傑",
