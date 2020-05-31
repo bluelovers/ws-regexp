@@ -8,14 +8,15 @@ import { outputFileSync, outputFile, outputJSON } from 'fs-extra';
 import uni2cns from '../../lib/uni2cns';
 import cns2uni from '../../lib/cns2uni';
 import sortObjectKeys from 'sort-object-keys2';
+import { IKeyToZhuyinTable, IZhuyin2uni, IZhuyin2cns } from '../..';
 
 const __root = join(__dirname, '../..');
 const __unzip = join(__root, 'test', 'cache', 'unzip');
 
-let cns2zhuyin = {};
-let uni2zhuyin = {};
-let zhuyin2cns = {};
-let zhuyin2uni = {};
+let cns2zhuyin = {} as IKeyToZhuyinTable;
+let uni2zhuyin = {} as IKeyToZhuyinTable;
+let zhuyin2cns = {} as IZhuyin2cns;
+let zhuyin2uni = {} as IZhuyin2uni;
 
 for (let line of LineByLine.generator(join(__unzip, `Open_Data/Properties/CNS_phonetic.txt`)))
 {
@@ -23,19 +24,16 @@ for (let line of LineByLine.generator(join(__unzip, `Open_Data/Properties/CNS_ph
 
 	let uni = cns2uni(cns);
 
-	cns2zhuyin[cns] = cns2zhuyin[cns] || [];
-	uni2zhuyin[uni] = uni2zhuyin[uni] || [];
+	_push(_init(cns2zhuyin, cns), zhuyin);
+	_push(_init(uni2zhuyin, uni), zhuyin);
 
-	cns2zhuyin[cns].push(zhuyin);
-	uni2zhuyin[uni].push(zhuyin);
-
-	zhuyin2cns[zhuyin] = zhuyin2cns[zhuyin] || [];
-	zhuyin2uni[zhuyin] = zhuyin2uni[zhuyin] || [];
-
-	zhuyin2cns[zhuyin].push(cns);
-	zhuyin2uni[zhuyin].push(uni);
+	_push(_init(zhuyin2cns, zhuyin), cns);
+	_push(_init(zhuyin2uni, zhuyin), uni);
 
 }
+
+Object.values(zhuyin2cns).forEach(v => v.sort());
+Object.values(zhuyin2uni).forEach(v => v.sort());
 
 Promise.all([
 	saveJSON(join(__root, 'lib', 'cns', 'zhuyin', `cns2zhuyin.json`), cns2zhuyin),
@@ -49,4 +47,19 @@ function saveJSON(file: string, data)
 	return outputJSON(file, data, {
 		spaces: 2,
 	}).then(v => console.log(`save`, file))
+}
+
+function _push<T>(arr: T[], value: T)
+{
+	if (!arr.includes(value))
+	{
+		arr.push(value);
+	}
+}
+
+function _init<T extends Record<any, any[]>, K extends keyof T>(arr: T, key: K, cb?: (arr: T, key: K) => T[K])
+{
+	arr[key] = arr[key] ?? cb?.(arr, key) ?? [] as T[K]
+
+	return arr[key]
 }

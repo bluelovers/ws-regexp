@@ -37,7 +37,9 @@ export interface IZhuyin2PinyinTableRow extends Array<string> {
      */
     3: string;
 }
-export interface IZhuyin2uni extends Record<string, string[]> {
+export interface IZhuyin2cns extends Record<string, string[]> {
+}
+export interface IZhuyin2uni extends Record<string, number[]> {
 }
 export interface IKeyToZhuyinTable extends Record<string, string[]> {
 }
