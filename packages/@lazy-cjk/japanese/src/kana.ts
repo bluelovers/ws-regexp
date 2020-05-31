@@ -1,65 +1,6 @@
+import { specialKatakanizationTable, specialHiraganizationTable, hiraganaRegex, katakanaRegex } from './data/kana';
 
-export const katakanaRegex = new RegExp(
-	'(' +
-	'[' +
-	'\\u30a1-\\u30f4' + // ァ～ヴ
-	'\\u30f7-\\u30fa' + // ヷ～ヺ
-	'\\u30fd-\\u30ff' + // ヽ～ヿ
-	'\\u31f0-\\u31ff' + // ㇰ～ㇿ
-	']' +
-	'|' +
-	'\\ud869\\udf08\\u3099' + // 𪜈゙
-	'|' +
-	'\\ud869\\udf08' + // 𪜈
-	'|' +
-	'\\ud82c\\udc00' + // 𛀀
-	')',
-	'g',
-);
-
-export const hiraganaRegex = new RegExp(
-	'(' +
-	'[' +
-	'\\u3041-\\u3094' + // ぁ～ゔ
-	'\\u309d-\\u309f' + // ゝ～ゟ
-	']' +
-	'|' +
-	'\\ud82c\\udc01' + // 𛀁
-	')',
-	'g',
-);
-
-export const specialHiraganizationTable = {
-	'ヿ': 'こと',
-	'𪜈': 'とも',
-	'𪜈゙': 'ども',
-	'ヷ': 'わ゙',
-	'ヸ': 'ゐ゙',
-	'ヹ': 'ゑ゙',
-	'ヺ': 'を゙',
-	'𛀀': 'え',
-	'ㇰ': 'く',
-	'ㇱ': 'し',
-	'ㇲ': 'す',
-	'ㇳ': 'と',
-	'ㇴ': 'ぬ',
-	'ㇵ': 'は',
-	'ㇶ': 'ひ',
-	'ㇷ': 'ふ',
-	'ㇸ': 'へ',
-	'ㇹ': 'ほ',
-	'ㇺ': 'む',
-	'ㇻ': 'ら',
-	'ㇼ': 'り',
-	'ㇽ': 'る',
-	'ㇾ': 'れ',
-	'ㇿ': 'ろ',
-};
-
-export const specialKatakanizationTable = {
-	'ゟ': 'ヨリ',
-	'𛀁': 'エ',
-};
+export * from './data/kana';
 
 const chr = String.fromCharCode;
 const ord = function (char)
@@ -67,6 +8,9 @@ const ord = function (char)
 	return char.charCodeAt(0);
 };
 
+/**
+ * Convert input katakana into hiragana.
+ */
 export function hiraganize(string: string)
 {
 	return string.replace(katakanaRegex, function (katakana)
@@ -82,6 +26,9 @@ export function hiraganize(string: string)
 	});
 }
 
+/**
+ * Convert input hiragana into katakana.
+ */
 export function katakanize(string: string)
 {
 	return string.replace(hiraganaRegex, function (hiragana)

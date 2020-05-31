@@ -1,15 +1,23 @@
 import japanese from '../'
 
-describe('japanese.romanize()', () => {
-	test('should throw error when suspicious config was delivered', () => {
+describe('japanese.romanize()', () =>
+{
+	test('should throw error when suspicious config was delivered', () =>
+	{
+		// @ts-ignore
 		expect(japanese.romanize.bind(japanese, 'えらー', 'undefined config')).toThrowError(ReferenceError);
+		// @ts-ignore
 		expect(japanese.romanize.bind(japanese, 'えらー', false)).toThrowError(Error);
+		// @ts-ignore
 		expect(japanese.romanize.bind(japanese, 'えらー', 114514)).toThrowError(Error);
-		expect(japanese.romanize.bind(japanese, 'えらー', ()=>{})).toThrowError(Error);
+		// @ts-ignore
+		expect(japanese.romanize.bind(japanese, 'えらー', () => {})).toThrowError(Error);
 	});
 
-	describe('Wikipedia-style mode', () => {
-		test('must perfectly convert existing Wikipedia articles', () => {
+	describe('Wikipedia-style mode', () =>
+	{
+		test('must perfectly convert existing Wikipedia articles', () =>
+		{
 			expect(japanese.romanize('れんあい')).toStrictEqual('ren\'ai');
 
 			expect(japanese.romanize('ほっかいどう')).toStrictEqual('hokkaidō');
@@ -61,7 +69,8 @@ describe('japanese.romanize()', () => {
 		});
 
 		// http://en.wikipedia.org/wiki/List_of_Strawberry_Panic!_characters
-		test('must kind-hearted for fans of Strawberry Panic!', () => {
+		test('must kind-hearted for fans of Strawberry Panic!', () =>
+		{
 			expect(japanese.romanize('あおい なぎさ')).toStrictEqual('aoi nagisa');
 			expect(japanese.romanize('はなぞの しずま')).toStrictEqual('hanazono shizuma');
 			expect(japanese.romanize('すずみ たまお')).toStrictEqual('suzumi tamao');
@@ -83,7 +92,8 @@ describe('japanese.romanize()', () => {
 			expect(japanese.romanize('びゃくだん かごめ')).toStrictEqual('byakudan kagome');
 		});
 
-		test('should be able to convert some strange japanese strings neatly', () => {
+		test('should be able to convert some strange japanese strings neatly', () =>
+		{
 			expect(japanese.romanize('アッーウッウッイネイネ')).toStrictEqual('a\'-u\'u\'ineine');
 			expect(japanese.romanize('ウッウッーウマウマ')).toStrictEqual('u\'u\'-umauma');
 			expect(japanese.romanize('ムッムッホァイ')).toStrictEqual('mummuhhoai');
@@ -100,9 +110,11 @@ describe('japanese.romanize()', () => {
 		});
 	});
 
-	describe('Traditional Hepburn mode', () => {
+	describe('Traditional Hepburn mode', () =>
+	{
 		// http://en.wikipedia.org/wiki/Hepburn_romanization
-		test('must perfectly convert Wikipedia\'s conversion examples', () => {
+		test('must perfectly convert Wikipedia\'s conversion examples', () =>
+		{
 			expect(japanese.romanize('おばあさん', 'traditional hepburn')).toStrictEqual('obaasan');
 			expect(japanese.romanize('おにいさん', 'traditional hepburn')).toStrictEqual('oniisan');
 			expect(japanese.romanize('おじいさん', 'traditional hepburn')).toStrictEqual('ojiisan');
@@ -153,9 +165,11 @@ describe('japanese.romanize()', () => {
 		});
 	});
 
-	describe('Modified Hepburn mode', () => {
+	describe('Modified Hepburn mode', () =>
+	{
 		// http://en.wikipedia.org/wiki/Hepburn_romanization
-		test('must perfectly convert Wikipedia\'s conversion examples', () => {
+		test('must perfectly convert Wikipedia\'s conversion examples', () =>
+		{
 			expect(japanese.romanize('おばあさん', 'modified hepburn')).toStrictEqual('obāsan');
 			expect(japanese.romanize('おにいさん', 'modified hepburn')).toStrictEqual('oniisan');
 			expect(japanese.romanize('おじいさん', 'modified hepburn')).toStrictEqual('ojiisan');
@@ -206,8 +220,10 @@ describe('japanese.romanize()', () => {
 		});
 	});
 
-	describe('Kunrei-shiki mode', () => {
-		test('must perfectly convert ISO 3602 provided examples', () => {
+	describe('Kunrei-shiki mode', () =>
+	{
+		test('must perfectly convert ISO 3602 provided examples', () =>
+		{
 			expect(japanese.romanize('かのう', 'kunrei')).toStrictEqual('kanô');
 			expect(japanese.romanize('かんおう', 'kunrei')).toStrictEqual('kan\'ô');
 			expect(japanese.romanize('きにゅう', 'kunrei')).toStrictEqual('kinyû');
@@ -235,24 +251,27 @@ describe('japanese.romanize()', () => {
 		});
 
 		test(
-            'must convert sensitive... ISO 3602 Strict related strings correctly',
-            () => {
-                expect(japanese.romanize('はなぢ', 'kunrei')).toStrictEqual('hanazi');
-                expect(japanese.romanize('ちぢみ', 'kunrei')).toStrictEqual('tizimi');
-                expect(japanese.romanize('あいづ', 'kunrei')).toStrictEqual('aizu');
-                expect(japanese.romanize('つづきもの', 'kunrei')).toStrictEqual('tuzukimono');
+			'must convert sensitive... ISO 3602 Strict related strings correctly',
+			() =>
+			{
+				expect(japanese.romanize('はなぢ', 'kunrei')).toStrictEqual('hanazi');
+				expect(japanese.romanize('ちぢみ', 'kunrei')).toStrictEqual('tizimi');
+				expect(japanese.romanize('あいづ', 'kunrei')).toStrictEqual('aizu');
+				expect(japanese.romanize('つづきもの', 'kunrei')).toStrictEqual('tuzukimono');
 
-                expect(japanese.romanize('でんぢゃらす', 'kunrei')).toStrictEqual('denzyarasu');
-                expect(japanese.romanize('まんぢゅう', 'kunrei')).toStrictEqual('manzyû');
-                expect(japanese.romanize('はなぢょうちん', 'kunrei')).toStrictEqual('hanazyôtin');
+				expect(japanese.romanize('でんぢゃらす', 'kunrei')).toStrictEqual('denzyarasu');
+				expect(japanese.romanize('まんぢゅう', 'kunrei')).toStrictEqual('manzyû');
+				expect(japanese.romanize('はなぢょうちん', 'kunrei')).toStrictEqual('hanazyôtin');
 
-                expect(japanese.romanize('くうぼをきゅう', 'kunrei')).toStrictEqual('kûbookyû');
-            }
-        );
+				expect(japanese.romanize('くうぼをきゅう', 'kunrei')).toStrictEqual('kûbookyû');
+			},
+		);
 	});
 
-	describe('Nihon-shiki mode', () => {
-		test('must perfectly convert ISO 3602 provided examples', () => {
+	describe('Nihon-shiki mode', () =>
+	{
+		test('must perfectly convert ISO 3602 provided examples', () =>
+		{
 			expect(japanese.romanize('かのう', 'nihon')).toStrictEqual('kanō');
 			expect(japanese.romanize('かんおう', 'nihon')).toStrictEqual('kan\'ō');
 			expect(japanese.romanize('きにゅう', 'nihon')).toStrictEqual('kinyū');
@@ -280,24 +299,27 @@ describe('japanese.romanize()', () => {
 		});
 
 		test(
-            'must convert sensitive... ISO 3602 Strict related strings correctly',
-            () => {
-                expect(japanese.romanize('はなぢ', 'nihon')).toStrictEqual('hanadi');
-                expect(japanese.romanize('ちぢみ', 'nihon')).toStrictEqual('tidimi');
-                expect(japanese.romanize('あいづ', 'nihon')).toStrictEqual('aidu');
-                expect(japanese.romanize('つづきもの', 'nihon')).toStrictEqual('tudukimono');
+			'must convert sensitive... ISO 3602 Strict related strings correctly',
+			() =>
+			{
+				expect(japanese.romanize('はなぢ', 'nihon')).toStrictEqual('hanadi');
+				expect(japanese.romanize('ちぢみ', 'nihon')).toStrictEqual('tidimi');
+				expect(japanese.romanize('あいづ', 'nihon')).toStrictEqual('aidu');
+				expect(japanese.romanize('つづきもの', 'nihon')).toStrictEqual('tudukimono');
 
-                expect(japanese.romanize('でんぢゃらす', 'nihon')).toStrictEqual('dendyarasu');
-                expect(japanese.romanize('まんぢゅう', 'nihon')).toStrictEqual('mandyū');
-                expect(japanese.romanize('はなぢょうちん', 'nihon')).toStrictEqual('hanadyōtin');
+				expect(japanese.romanize('でんぢゃらす', 'nihon')).toStrictEqual('dendyarasu');
+				expect(japanese.romanize('まんぢゅう', 'nihon')).toStrictEqual('mandyū');
+				expect(japanese.romanize('はなぢょうちん', 'nihon')).toStrictEqual('hanadyōtin');
 
-                expect(japanese.romanize('くうぼをきゅう', 'nihon')).toStrictEqual('kūbowokyū');
-            }
-        );
+				expect(japanese.romanize('くうぼをきゅう', 'nihon')).toStrictEqual('kūbowokyū');
+			},
+		);
 	});
 
-	describe('Custom mode', () => {
-		test('must perfectly convert with some strange configs', () => {
+	describe('Custom mode', () =>
+	{
+		test('must perfectly convert with some strange configs', () =>
+		{
 			var config = {
 				'ああ': 'ah',
 				'いい': 'ii',
@@ -325,7 +347,8 @@ describe('japanese.romanize()', () => {
 			expect(japanese.romanize('べにすにしす', config)).toStrictEqual('benisunishisu');
 		});
 
-		test('must perfectly convert with some altered configs', () => {
+		test('must perfectly convert with some altered configs', () =>
+		{
 			var config = {
 				'ああ': 'aa',
 				'いい': 'ii',
@@ -353,260 +376,280 @@ describe('japanese.romanize()', () => {
 			expect(japanese.romanize('べにすにしす', config)).toStrictEqual('benisunishisu');
 		});
 
-		test('must be properly customizable with し parameter', () => {
-			expect(japanese.romanize('しゅうごうしゃしん', {'し': 'si'})).toStrictEqual('syūgōsyasin');
-			expect(japanese.romanize('シェークスピアのしょうせつ', {'し': 'si'})).toStrictEqual('syēkusupianosyōsetsu');
+		test('must be properly customizable with し parameter', () =>
+		{
+			expect(japanese.romanize('しゅうごうしゃしん', { 'し': 'si' })).toStrictEqual('syūgōsyasin');
+			expect(japanese.romanize('シェークスピアのしょうせつ', { 'し': 'si' })).toStrictEqual('syēkusupianosyōsetsu');
 
-			expect(japanese.romanize('しゅうごうしゃしん', {'し': 'shi'})).toStrictEqual('shūgōshashin');
-			expect(japanese.romanize('シェークスピアのしょうせつ', {'し': 'shi'})).toStrictEqual('shēkusupianoshōsetsu');
+			expect(japanese.romanize('しゅうごうしゃしん', { 'し': 'shi' })).toStrictEqual('shūgōshashin');
+			expect(japanese.romanize('シェークスピアのしょうせつ', { 'し': 'shi' })).toStrictEqual('shēkusupianoshōsetsu');
 		});
 
-		test('must be properly customizable with ち parameter', () => {
-			expect(japanese.romanize('ちっちゃいそんちょう', {'ち': 'ti'})).toStrictEqual('titchaisontyō');
-			expect(japanese.romanize('ちゃいろいチェーン', {'ち': 'ti'})).toStrictEqual('tyairoityēn');
-			expect(japanese.romanize('テュールのティータイム', {'ち': 'ti'})).toStrictEqual('teūrunoteītaimu');
+		test('must be properly customizable with ち parameter', () =>
+		{
+			expect(japanese.romanize('ちっちゃいそんちょう', { 'ち': 'ti' })).toStrictEqual('titchaisontyō');
+			expect(japanese.romanize('ちゃいろいチェーン', { 'ち': 'ti' })).toStrictEqual('tyairoityēn');
+			expect(japanese.romanize('テュールのティータイム', { 'ち': 'ti' })).toStrictEqual('teūrunoteītaimu');
 
-			expect(japanese.romanize('ちっちゃいそんちょう', {'ち': 'chi'})).toStrictEqual('chitchaisonchō');
-			expect(japanese.romanize('ちゃいろいチェーン', {'ち': 'chi'})).toStrictEqual('chairoichēn');
-			expect(japanese.romanize('テュールのティータイム', {'ち': 'chi'})).toStrictEqual('tyūrunotītaimu');
+			expect(japanese.romanize('ちっちゃいそんちょう', { 'ち': 'chi' })).toStrictEqual('chitchaisonchō');
+			expect(japanese.romanize('ちゃいろいチェーン', { 'ち': 'chi' })).toStrictEqual('chairoichēn');
+			expect(japanese.romanize('テュールのティータイム', { 'ち': 'chi' })).toStrictEqual('tyūrunotītaimu');
 		});
 
-		test('must be properly customizable with つ parameter', () => {
-			expect(japanese.romanize('バイツァダスト', {'つ': 'tu'})).toStrictEqual('baituadasuto');
-			expect(japanese.romanize('カンツォーネ', {'つ': 'tu'})).toStrictEqual('kantuōne');
-			expect(japanese.romanize('トゥーツ・シールマンス', {'つ': 'tu'})).toStrictEqual('toūtu-shīrumansu');
-			expect(japanese.romanize('ツィゴイネルワイゼン', {'つ': 'tu'})).toStrictEqual('tuigoineruwaizen');
-			expect(japanese.romanize('ツェッペリン', {'つ': 'tu'})).toStrictEqual('tuepperin');
-			expect(japanese.romanize('ツュループィンシク', {'つ': 'tu'})).toStrictEqual('tuyurūpuinshiku');
+		test('must be properly customizable with つ parameter', () =>
+		{
+			expect(japanese.romanize('バイツァダスト', { 'つ': 'tu' })).toStrictEqual('baituadasuto');
+			expect(japanese.romanize('カンツォーネ', { 'つ': 'tu' })).toStrictEqual('kantuōne');
+			expect(japanese.romanize('トゥーツ・シールマンス', { 'つ': 'tu' })).toStrictEqual('toūtu-shīrumansu');
+			expect(japanese.romanize('ツィゴイネルワイゼン', { 'つ': 'tu' })).toStrictEqual('tuigoineruwaizen');
+			expect(japanese.romanize('ツェッペリン', { 'つ': 'tu' })).toStrictEqual('tuepperin');
+			expect(japanese.romanize('ツュループィンシク', { 'つ': 'tu' })).toStrictEqual('tuyurūpuinshiku');
 
-			expect(japanese.romanize('バイツァダスト', {'つ': 'tsu'})).toStrictEqual('baitsadasuto');
-			expect(japanese.romanize('カンツォーネ', {'つ': 'tsu'})).toStrictEqual('kantsōne');
-			expect(japanese.romanize('トゥーツ・シールマンス', {'つ': 'tsu'})).toStrictEqual('tūtsu-shīrumansu');
-			expect(japanese.romanize('ツィゴイネルワイゼン', {'つ': 'tsu'})).toStrictEqual('tsigoineruwaizen');
-			expect(japanese.romanize('ツェッペリン', {'つ': 'tsu'})).toStrictEqual('tsepperin');
-			expect(japanese.romanize('ツュループィンシク', {'つ': 'tsu'})).toStrictEqual('tsyurūpuinshiku');
+			expect(japanese.romanize('バイツァダスト', { 'つ': 'tsu' })).toStrictEqual('baitsadasuto');
+			expect(japanese.romanize('カンツォーネ', { 'つ': 'tsu' })).toStrictEqual('kantsōne');
+			expect(japanese.romanize('トゥーツ・シールマンス', { 'つ': 'tsu' })).toStrictEqual('tūtsu-shīrumansu');
+			expect(japanese.romanize('ツィゴイネルワイゼン', { 'つ': 'tsu' })).toStrictEqual('tsigoineruwaizen');
+			expect(japanese.romanize('ツェッペリン', { 'つ': 'tsu' })).toStrictEqual('tsepperin');
+			expect(japanese.romanize('ツュループィンシク', { 'つ': 'tsu' })).toStrictEqual('tsyurūpuinshiku');
 		});
 
-		test('must be properly customizable with ふ parameter', () => {
+		test('must be properly customizable with ふ parameter', () =>
+		{
 			expect(japanese.romanize('フィファ（フェデレーション・インターナショナル・ド・フットボール・アソシエーション）のフォーメーション', {
-				'ふ': 'hu'
+				'ふ': 'hu',
 			})).toStrictEqual('huihua(huederēshon-intānashonaru-do-huttobōru-asoshiēshon)nohuōmēshon');
 
 			expect(japanese.romanize('フィファ（フェデレーション・インターナショナル・ド・フットボール・アソシエーション）のフォーメーション', {
-				'ふ': 'fu'
+				'ふ': 'fu',
 			})).toStrictEqual('fifa(federēshon-intānashonaru-do-futtobōru-asoshiēshon)nofōmēshon');
 		});
 
-		test('must be properly customizable with じ parameter', () => {
+		test('must be properly customizable with じ parameter', () =>
+		{
 			expect(japanese.romanize('アルジャジーラのひじょうようジェットのそうじゅう', {
-				'じ': 'zi'
+				'じ': 'zi',
 			})).toStrictEqual('aruzyazīranohizyōyōzyettonosōzyū');
 
 			expect(japanese.romanize('アルジャジーラのひじょうようジェットのそうじゅう', {
-				'じ': 'ji'
+				'じ': 'ji',
 			})).toStrictEqual('arujajīranohijōyōjettonosōjū');
 		});
 
-		test('must be properly customizable with ぢ parameter', () => {
+		test('must be properly customizable with ぢ parameter', () =>
+		{
 			expect(japanese.romanize('アルヂャヂーラのひぢょうようヂェットのそうぢゅう', {
-				'ぢ': 'di'
+				'ぢ': 'di',
 			})).toStrictEqual('arudyadīranohidyōyōdyettonosōdyū');
-			expect(japanese.romanize('デュラララのエンディング', {'ぢ': 'di'})).toStrictEqual('deurararanoendeingu');
+			expect(japanese.romanize('デュラララのエンディング', { 'ぢ': 'di' })).toStrictEqual('deurararanoendeingu');
 
 			expect(japanese.romanize('アルヂャヂーラのひぢょうようヂェットのそうぢゅう', {
-				'ぢ': 'zi'
+				'ぢ': 'zi',
 			})).toStrictEqual('aruzyazīranohizyōyōzyettonosōzyū');
-			expect(japanese.romanize('デュラララのエンディング', {'ぢ': 'zi'})).toStrictEqual('dyurararanoendingu');
+			expect(japanese.romanize('デュラララのエンディング', { 'ぢ': 'zi' })).toStrictEqual('dyurararanoendingu');
 
 			expect(japanese.romanize('アルヂャヂーラのひぢょうようヂェットのそうぢゅう', {
-				'ぢ': 'ji'
+				'ぢ': 'ji',
 			})).toStrictEqual('arujajīranohijōyōjettonosōjū');
-			expect(japanese.romanize('デュラララのエンディング', {'ぢ': 'ji'})).toStrictEqual('dyurararanoendingu');
+			expect(japanese.romanize('デュラララのエンディング', { 'ぢ': 'ji' })).toStrictEqual('dyurararanoendingu');
 
 			expect(japanese.romanize('アルヂャヂーラのひぢょうようヂェットのそうぢゅう', {
-				'ぢ': 'dji'
+				'ぢ': 'dji',
 			})).toStrictEqual('arudjadjīranohidjōyōdjettonosōdjū');
-			expect(japanese.romanize('デュラララのエンディング', {'ぢ': 'dji'})).toStrictEqual('dyurararanoendingu');
+			expect(japanese.romanize('デュラララのエンディング', { 'ぢ': 'dji' })).toStrictEqual('dyurararanoendingu');
 
 			expect(japanese.romanize('アルヂャヂーラのひぢょうようヂェットのそうぢゅう', {
-				'ぢ': 'dzi'
+				'ぢ': 'dzi',
 			})).toStrictEqual('arudzyadzīranohidzyōyōdzyettonosōdzyū');
-			expect(japanese.romanize('デュラララのエンディング', {'ぢ': 'dzi'})).toStrictEqual('dyurararanoendingu');
+			expect(japanese.romanize('デュラララのエンディング', { 'ぢ': 'dzi' })).toStrictEqual('dyurararanoendingu');
 		});
 
-		test('must be properly customizable with づ parameter', () => {
-			expect(japanese.romanize('いなづま', {'づ': 'du'})).toStrictEqual('inaduma');
-			expect(japanese.romanize('デラ・モチマッヅィ', {'づ': 'du'})).toStrictEqual('dera-mochimaddui');
-			expect(japanese.romanize('しきえいきヤマザナドゥ', {'づ': 'du'})).toStrictEqual('shikieikiyamazanadou');
+		test('must be properly customizable with づ parameter', () =>
+		{
+			expect(japanese.romanize('いなづま', { 'づ': 'du' })).toStrictEqual('inaduma');
+			expect(japanese.romanize('デラ・モチマッヅィ', { 'づ': 'du' })).toStrictEqual('dera-mochimaddui');
+			expect(japanese.romanize('しきえいきヤマザナドゥ', { 'づ': 'du' })).toStrictEqual('shikieikiyamazanadou');
 
-			expect(japanese.romanize('いなづま', {'づ': 'zu'})).toStrictEqual('inazuma');
-			expect(japanese.romanize('デラ・モチマッヅィ', {'づ': 'zu'})).toStrictEqual('dera-mochimazzui');
-			expect(japanese.romanize('しきえいきヤマザナドゥ', {'づ': 'zu'})).toStrictEqual('shikieikiyamazanadu');
+			expect(japanese.romanize('いなづま', { 'づ': 'zu' })).toStrictEqual('inazuma');
+			expect(japanese.romanize('デラ・モチマッヅィ', { 'づ': 'zu' })).toStrictEqual('dera-mochimazzui');
+			expect(japanese.romanize('しきえいきヤマザナドゥ', { 'づ': 'zu' })).toStrictEqual('shikieikiyamazanadu');
 
-			expect(japanese.romanize('いなづま', {'づ': 'dsu'})).toStrictEqual('inadsuma');
-			expect(japanese.romanize('デラ・モチマッヅィ', {'づ': 'dsu'})).toStrictEqual('dera-mochimaddsui');
-			expect(japanese.romanize('しきえいきヤマザナドゥ', {'づ': 'dsu'})).toStrictEqual('shikieikiyamazanadu');
+			expect(japanese.romanize('いなづま', { 'づ': 'dsu' })).toStrictEqual('inadsuma');
+			expect(japanese.romanize('デラ・モチマッヅィ', { 'づ': 'dsu' })).toStrictEqual('dera-mochimaddsui');
+			expect(japanese.romanize('しきえいきヤマザナドゥ', { 'づ': 'dsu' })).toStrictEqual('shikieikiyamazanadu');
 
-			expect(japanese.romanize('いなづま', {'づ': 'dzu'})).toStrictEqual('inadzuma');
-			expect(japanese.romanize('デラ・モチマッヅィ', {'づ': 'dzu'})).toStrictEqual('dera-mochimaddzui');
-			expect(japanese.romanize('しきえいきヤマザナドゥ', {'づ': 'dzu'})).toStrictEqual('shikieikiyamazanadu');
+			expect(japanese.romanize('いなづま', { 'づ': 'dzu' })).toStrictEqual('inadzuma');
+			expect(japanese.romanize('デラ・モチマッヅィ', { 'づ': 'dzu' })).toStrictEqual('dera-mochimaddzui');
+			expect(japanese.romanize('しきえいきヤマザナドゥ', { 'づ': 'dzu' })).toStrictEqual('shikieikiyamazanadu');
 		});
 
-		test('must be properly customizable with ああ parameter', () => {
-			expect(japanese.romanize('まあ、そうなるな', {'ああ': 'aa'})).toStrictEqual('maa,sōnaruna');
-			expect(japanese.romanize('おかあさんといっしょ', {'ああ': 'aa'})).toStrictEqual('okaasantoissho');
+		test('must be properly customizable with ああ parameter', () =>
+		{
+			expect(japanese.romanize('まあ、そうなるな', { 'ああ': 'aa' })).toStrictEqual('maa,sōnaruna');
+			expect(japanese.romanize('おかあさんといっしょ', { 'ああ': 'aa' })).toStrictEqual('okaasantoissho');
 
-			expect(japanese.romanize('まあ、そうなるな', {'ああ': 'ah'})).toStrictEqual('mah,sōnaruna');
-			expect(japanese.romanize('おかあさんといっしょ', {'ああ': 'ah'})).toStrictEqual('okahsantoissho');
+			expect(japanese.romanize('まあ、そうなるな', { 'ああ': 'ah' })).toStrictEqual('mah,sōnaruna');
+			expect(japanese.romanize('おかあさんといっしょ', { 'ああ': 'ah' })).toStrictEqual('okahsantoissho');
 
-			expect(japanese.romanize('まあ、そうなるな', {'ああ': 'â'})).toStrictEqual('mâ,sōnaruna');
-			expect(japanese.romanize('おかあさんといっしょ', {'ああ': 'â'})).toStrictEqual('okâsantoissho');
+			expect(japanese.romanize('まあ、そうなるな', { 'ああ': 'â' })).toStrictEqual('mâ,sōnaruna');
+			expect(japanese.romanize('おかあさんといっしょ', { 'ああ': 'â' })).toStrictEqual('okâsantoissho');
 
-			expect(japanese.romanize('まあ、そうなるな', {'ああ': 'ā'})).toStrictEqual('mā,sōnaruna');
-			expect(japanese.romanize('おかあさんといっしょ', {'ああ': 'ā'})).toStrictEqual('okāsantoissho');
+			expect(japanese.romanize('まあ、そうなるな', { 'ああ': 'ā' })).toStrictEqual('mā,sōnaruna');
+			expect(japanese.romanize('おかあさんといっしょ', { 'ああ': 'ā' })).toStrictEqual('okāsantoissho');
 
-			expect(japanese.romanize('まあ、そうなるな', {'ああ': 'a'})).toStrictEqual('ma,sōnaruna');
-			expect(japanese.romanize('おかあさんといっしょ', {'ああ': 'a'})).toStrictEqual('okasantoissho');
+			expect(japanese.romanize('まあ、そうなるな', { 'ああ': 'a' })).toStrictEqual('ma,sōnaruna');
+			expect(japanese.romanize('おかあさんといっしょ', { 'ああ': 'a' })).toStrictEqual('okasantoissho');
 		});
 
-		test('must be properly customizable with いい parameter', () => {
-			expect(japanese.romanize('くもいいちりん', {'いい': 'ii'})).toStrictEqual('kumoiichirin');
-			expect(japanese.romanize('ほしいみき', {'いい': 'ii'})).toStrictEqual('hoshiimiki');
+		test('must be properly customizable with いい parameter', () =>
+		{
+			expect(japanese.romanize('くもいいちりん', { 'いい': 'ii' })).toStrictEqual('kumoiichirin');
+			expect(japanese.romanize('ほしいみき', { 'いい': 'ii' })).toStrictEqual('hoshiimiki');
 
-			expect(japanese.romanize('くもいいちりん', {'いい': 'ih'})).toStrictEqual('kumoihchirin');
-			expect(japanese.romanize('ほしいみき', {'いい': 'ih'})).toStrictEqual('hoshihmiki');
+			expect(japanese.romanize('くもいいちりん', { 'いい': 'ih' })).toStrictEqual('kumoihchirin');
+			expect(japanese.romanize('ほしいみき', { 'いい': 'ih' })).toStrictEqual('hoshihmiki');
 
-			expect(japanese.romanize('くもいいちりん', {'いい': 'î'})).toStrictEqual('kumoîchirin');
-			expect(japanese.romanize('ほしいみき', {'いい': 'î'})).toStrictEqual('hoshîmiki');
+			expect(japanese.romanize('くもいいちりん', { 'いい': 'î' })).toStrictEqual('kumoîchirin');
+			expect(japanese.romanize('ほしいみき', { 'いい': 'î' })).toStrictEqual('hoshîmiki');
 
-			expect(japanese.romanize('くもいいちりん', {'いい': 'ī'})).toStrictEqual('kumoīchirin');
-			expect(japanese.romanize('ほしいみき', {'いい': 'ī'})).toStrictEqual('hoshīmiki');
+			expect(japanese.romanize('くもいいちりん', { 'いい': 'ī' })).toStrictEqual('kumoīchirin');
+			expect(japanese.romanize('ほしいみき', { 'いい': 'ī' })).toStrictEqual('hoshīmiki');
 
-			expect(japanese.romanize('くもいいちりん', {'いい': 'i'})).toStrictEqual('kumoichirin');
-			expect(japanese.romanize('ほしいみき', {'いい': 'i'})).toStrictEqual('hoshimiki');
+			expect(japanese.romanize('くもいいちりん', { 'いい': 'i' })).toStrictEqual('kumoichirin');
+			expect(japanese.romanize('ほしいみき', { 'いい': 'i' })).toStrictEqual('hoshimiki');
 		});
 
-		test('must be properly customizable with うう parameter', () => {
-			expect(japanese.romanize('すずみやハルヒのゆううつ', {'うう': 'uu'})).toStrictEqual('suzumiyaharuhinoyuuutsu');
-			expect(japanese.romanize('やじゅうせんぱい', {'うう': 'uu'})).toStrictEqual('yajuusenpai');
+		test('must be properly customizable with うう parameter', () =>
+		{
+			expect(japanese.romanize('すずみやハルヒのゆううつ', { 'うう': 'uu' })).toStrictEqual('suzumiyaharuhinoyuuutsu');
+			expect(japanese.romanize('やじゅうせんぱい', { 'うう': 'uu' })).toStrictEqual('yajuusenpai');
 
-			expect(japanese.romanize('すずみやハルヒのゆううつ', {'うう': 'uh'})).toStrictEqual('suzumiyaharuhinoyuhutsu');
-			expect(japanese.romanize('やじゅうせんぱい', {'うう': 'uh'})).toStrictEqual('yajuhsenpai');
+			expect(japanese.romanize('すずみやハルヒのゆううつ', { 'うう': 'uh' })).toStrictEqual('suzumiyaharuhinoyuhutsu');
+			expect(japanese.romanize('やじゅうせんぱい', { 'うう': 'uh' })).toStrictEqual('yajuhsenpai');
 
-			expect(japanese.romanize('すずみやハルヒのゆううつ', {'うう': 'û'})).toStrictEqual('suzumiyaharuhinoyûutsu');
-			expect(japanese.romanize('やじゅうせんぱい', {'うう': 'û'})).toStrictEqual('yajûsenpai');
+			expect(japanese.romanize('すずみやハルヒのゆううつ', { 'うう': 'û' })).toStrictEqual('suzumiyaharuhinoyûutsu');
+			expect(japanese.romanize('やじゅうせんぱい', { 'うう': 'û' })).toStrictEqual('yajûsenpai');
 
-			expect(japanese.romanize('すずみやハルヒのゆううつ', {'うう': 'ū'})).toStrictEqual('suzumiyaharuhinoyūutsu');
-			expect(japanese.romanize('やじゅうせんぱい', {'うう': 'ū'})).toStrictEqual('yajūsenpai');
+			expect(japanese.romanize('すずみやハルヒのゆううつ', { 'うう': 'ū' })).toStrictEqual('suzumiyaharuhinoyūutsu');
+			expect(japanese.romanize('やじゅうせんぱい', { 'うう': 'ū' })).toStrictEqual('yajūsenpai');
 
 			// TODO: should be 'suzumiyaharuhinoyuutsu'
-			expect(japanese.romanize('すずみやハルヒのゆううつ', {'うう': 'u'})).toStrictEqual('suzumiyaharuhinoyutsu');
-			expect(japanese.romanize('やじゅうせんぱい', {'うう': 'u'})).toStrictEqual('yajusenpai');
+			expect(japanese.romanize('すずみやハルヒのゆううつ', { 'うう': 'u' })).toStrictEqual('suzumiyaharuhinoyutsu');
+			expect(japanese.romanize('やじゅうせんぱい', { 'うう': 'u' })).toStrictEqual('yajusenpai');
 		});
 
-		test('must be properly customizable with ええ parameter', () => {
-			expect(japanese.romanize('はるうええりい', {'ええ': 'ee'})).toStrictEqual('harūeerii');
-			expect(japanese.romanize('ナナシノゲエム', {'ええ': 'ee'})).toStrictEqual('nanashinogeemu');
+		test('must be properly customizable with ええ parameter', () =>
+		{
+			expect(japanese.romanize('はるうええりい', { 'ええ': 'ee' })).toStrictEqual('harūeerii');
+			expect(japanese.romanize('ナナシノゲエム', { 'ええ': 'ee' })).toStrictEqual('nanashinogeemu');
 
-			expect(japanese.romanize('はるうええりい', {'ええ': 'eh'})).toStrictEqual('harūehrii');
-			expect(japanese.romanize('ナナシノゲエム', {'ええ': 'eh'})).toStrictEqual('nanashinogehmu');
+			expect(japanese.romanize('はるうええりい', { 'ええ': 'eh' })).toStrictEqual('harūehrii');
+			expect(japanese.romanize('ナナシノゲエム', { 'ええ': 'eh' })).toStrictEqual('nanashinogehmu');
 
-			expect(japanese.romanize('はるうええりい', {'ええ': 'ê'})).toStrictEqual('harūêrii');
-			expect(japanese.romanize('ナナシノゲエム', {'ええ': 'ê'})).toStrictEqual('nanashinogêmu');
+			expect(japanese.romanize('はるうええりい', { 'ええ': 'ê' })).toStrictEqual('harūêrii');
+			expect(japanese.romanize('ナナシノゲエム', { 'ええ': 'ê' })).toStrictEqual('nanashinogêmu');
 
-			expect(japanese.romanize('はるうええりい', {'ええ': 'ē'})).toStrictEqual('harūērii');
-			expect(japanese.romanize('ナナシノゲエム', {'ええ': 'ē'})).toStrictEqual('nanashinogēmu');
+			expect(japanese.romanize('はるうええりい', { 'ええ': 'ē' })).toStrictEqual('harūērii');
+			expect(japanese.romanize('ナナシノゲエム', { 'ええ': 'ē' })).toStrictEqual('nanashinogēmu');
 
-			expect(japanese.romanize('はるうええりい', {'ええ': 'e'})).toStrictEqual('harūerii');
-			expect(japanese.romanize('ナナシノゲエム', {'ええ': 'e'})).toStrictEqual('nanashinogemu');
+			expect(japanese.romanize('はるうええりい', { 'ええ': 'e' })).toStrictEqual('harūerii');
+			expect(japanese.romanize('ナナシノゲエム', { 'ええ': 'e' })).toStrictEqual('nanashinogemu');
 		});
 
-		test('must be properly customizable with おお parameter', () => {
-			expect(japanese.romanize('おおつぼゆか', {'おお': 'oo'})).toStrictEqual('ootsuboyuka');
-			expect(japanese.romanize('ソードアートオンライン', {'おお': 'oo'})).toStrictEqual('sōdoātoonrain');
+		test('must be properly customizable with おお parameter', () =>
+		{
+			expect(japanese.romanize('おおつぼゆか', { 'おお': 'oo' })).toStrictEqual('ootsuboyuka');
+			expect(japanese.romanize('ソードアートオンライン', { 'おお': 'oo' })).toStrictEqual('sōdoātoonrain');
 
-			expect(japanese.romanize('おおつぼゆか', {'おお': 'oh'})).toStrictEqual('ohtsuboyuka');
-			expect(japanese.romanize('ソードアートオンライン', {'おお': 'oh'})).toStrictEqual('sōdoātohnrain');
+			expect(japanese.romanize('おおつぼゆか', { 'おお': 'oh' })).toStrictEqual('ohtsuboyuka');
+			expect(japanese.romanize('ソードアートオンライン', { 'おお': 'oh' })).toStrictEqual('sōdoātohnrain');
 
-			expect(japanese.romanize('おおつぼゆか', {'おお': 'ô'})).toStrictEqual('ôtsuboyuka');
-			expect(japanese.romanize('ソードアートオンライン', {'おお': 'ô'})).toStrictEqual('sōdoātônrain');
+			expect(japanese.romanize('おおつぼゆか', { 'おお': 'ô' })).toStrictEqual('ôtsuboyuka');
+			expect(japanese.romanize('ソードアートオンライン', { 'おお': 'ô' })).toStrictEqual('sōdoātônrain');
 
-			expect(japanese.romanize('おおつぼゆか', {'おお': 'ō'})).toStrictEqual('ōtsuboyuka');
-			expect(japanese.romanize('ソードアートオンライン', {'おお': 'ō'})).toStrictEqual('sōdoātōnrain');
+			expect(japanese.romanize('おおつぼゆか', { 'おお': 'ō' })).toStrictEqual('ōtsuboyuka');
+			expect(japanese.romanize('ソードアートオンライン', { 'おお': 'ō' })).toStrictEqual('sōdoātōnrain');
 
-			expect(japanese.romanize('おおつぼゆか', {'おお': 'o'})).toStrictEqual('otsuboyuka');
-			expect(japanese.romanize('ソードアートオンライン', {'おお': 'o'})).toStrictEqual('sōdoātonrain');
+			expect(japanese.romanize('おおつぼゆか', { 'おお': 'o' })).toStrictEqual('otsuboyuka');
+			expect(japanese.romanize('ソードアートオンライン', { 'おお': 'o' })).toStrictEqual('sōdoātonrain');
 		});
 
-		test('must be properly customizable with あー parameter', () => {
-			expect(japanese.romanize('トレーディングカードゲーム', {'あー': 'a-'})).toStrictEqual('tore-dinguka-doge-mu');
-			expect(japanese.romanize('トレーディングカードゲーム', {'あー': 'aa'})).toStrictEqual('toreedingukaadogeemu');
-			expect(japanese.romanize('トレーディングカードゲーム', {'あー': 'ah'})).toStrictEqual('torehdingukahdogehmu');
-			expect(japanese.romanize('トレーディングカードゲーム', {'あー': 'â'})).toStrictEqual('torêdingukâdogêmu');
-			expect(japanese.romanize('トレーディングカードゲーム', {'あー': 'ā'})).toStrictEqual('torēdingukādogēmu');
-			expect(japanese.romanize('トレーディングカードゲーム', {'あー': 'a'})).toStrictEqual('toredingukadogemu');
+		test('must be properly customizable with あー parameter', () =>
+		{
+			expect(japanese.romanize('トレーディングカードゲーム', { 'あー': 'a-' })).toStrictEqual('tore-dinguka-doge-mu');
+			expect(japanese.romanize('トレーディングカードゲーム', { 'あー': 'aa' })).toStrictEqual('toreedingukaadogeemu');
+			expect(japanese.romanize('トレーディングカードゲーム', { 'あー': 'ah' })).toStrictEqual('torehdingukahdogehmu');
+			expect(japanese.romanize('トレーディングカードゲーム', { 'あー': 'â' })).toStrictEqual('torêdingukâdogêmu');
+			expect(japanese.romanize('トレーディングカードゲーム', { 'あー': 'ā' })).toStrictEqual('torēdingukādogēmu');
+			expect(japanese.romanize('トレーディングカードゲーム', { 'あー': 'a' })).toStrictEqual('toredingukadogemu');
 		});
 
-		test('must be properly customizable with あー parameter', () => {
-			expect(japanese.romanize('えいせいへい', {'えい': 'ei'})).toStrictEqual('eiseihei');
-			expect(japanese.romanize('えいせいへい', {'えい': 'ee'})).toStrictEqual('eeseehee');
-			expect(japanese.romanize('えいせいへい', {'えい': 'eh'})).toStrictEqual('ehsehheh');
-			expect(japanese.romanize('えいせいへい', {'えい': 'ê'})).toStrictEqual('êsêhê');
-			expect(japanese.romanize('えいせいへい', {'えい': 'ē'})).toStrictEqual('ēsēhē');
-			expect(japanese.romanize('えいせいへい', {'えい': 'e'})).toStrictEqual('esehe');
+		test('must be properly customizable with あー parameter', () =>
+		{
+			expect(japanese.romanize('えいせいへい', { 'えい': 'ei' })).toStrictEqual('eiseihei');
+			expect(japanese.romanize('えいせいへい', { 'えい': 'ee' })).toStrictEqual('eeseehee');
+			expect(japanese.romanize('えいせいへい', { 'えい': 'eh' })).toStrictEqual('ehsehheh');
+			expect(japanese.romanize('えいせいへい', { 'えい': 'ê' })).toStrictEqual('êsêhê');
+			expect(japanese.romanize('えいせいへい', { 'えい': 'ē' })).toStrictEqual('ēsēhē');
+			expect(japanese.romanize('えいせいへい', { 'えい': 'e' })).toStrictEqual('esehe');
 		});
 
-		test('must be properly customizable with おう parameter', () => {
-			expect(japanese.romanize('とうほうえいやしょう', {'おう': 'ou'})).toStrictEqual('touhoueiyashou');
-			expect(japanese.romanize('とうほうえいやしょう', {'おう': 'oo'})).toStrictEqual('toohooeiyashoo');
-			expect(japanese.romanize('とうほうえいやしょう', {'おう': 'oh'})).toStrictEqual('tohhoheiyashoh');
-			expect(japanese.romanize('とうほうえいやしょう', {'おう': 'ô'})).toStrictEqual('tôhôeiyashô');
-			expect(japanese.romanize('とうほうえいやしょう', {'おう': 'ō'})).toStrictEqual('tōhōeiyashō');
-			expect(japanese.romanize('とうほうえいやしょう', {'おう': 'o'})).toStrictEqual('tohoeiyasho');
+		test('must be properly customizable with おう parameter', () =>
+		{
+			expect(japanese.romanize('とうほうえいやしょう', { 'おう': 'ou' })).toStrictEqual('touhoueiyashou');
+			expect(japanese.romanize('とうほうえいやしょう', { 'おう': 'oo' })).toStrictEqual('toohooeiyashoo');
+			expect(japanese.romanize('とうほうえいやしょう', { 'おう': 'oh' })).toStrictEqual('tohhoheiyashoh');
+			expect(japanese.romanize('とうほうえいやしょう', { 'おう': 'ô' })).toStrictEqual('tôhôeiyashô');
+			expect(japanese.romanize('とうほうえいやしょう', { 'おう': 'ō' })).toStrictEqual('tōhōeiyashō');
+			expect(japanese.romanize('とうほうえいやしょう', { 'おう': 'o' })).toStrictEqual('tohoeiyasho');
 		});
 
-		test('must be properly customizable with んあ parameter', () => {
-			expect(japanese.romanize('きんいろモザイク', {'んあ': 'na'})).toStrictEqual('kiniromozaiku');
-			expect(japanese.romanize('うちゅうせんかんヤマト', {'んあ': 'na'})).toStrictEqual('uchūsenkanyamato');
-			expect(japanese.romanize('きんいろモザイク', {'んあ': 'n\'a'})).toStrictEqual('kin\'iromozaiku');
-			expect(japanese.romanize('うちゅうせんかんヤマト', {'んあ': 'n\'a'})).toStrictEqual('uchūsenkan\'yamato');
-			expect(japanese.romanize('きんいろモザイク', {'んあ': 'n-a'})).toStrictEqual('kin-iromozaiku');
-			expect(japanese.romanize('うちゅうせんかんヤマト', {'んあ': 'n-a'})).toStrictEqual('uchūsenkan-yamato');
+		test('must be properly customizable with んあ parameter', () =>
+		{
+			expect(japanese.romanize('きんいろモザイク', { 'んあ': 'na' })).toStrictEqual('kiniromozaiku');
+			expect(japanese.romanize('うちゅうせんかんヤマト', { 'んあ': 'na' })).toStrictEqual('uchūsenkanyamato');
+			expect(japanese.romanize('きんいろモザイク', { 'んあ': 'n\'a' })).toStrictEqual('kin\'iromozaiku');
+			expect(japanese.romanize('うちゅうせんかんヤマト', { 'んあ': 'n\'a' })).toStrictEqual('uchūsenkan\'yamato');
+			expect(japanese.romanize('きんいろモザイク', { 'んあ': 'n-a' })).toStrictEqual('kin-iromozaiku');
+			expect(japanese.romanize('うちゅうせんかんヤマト', { 'んあ': 'n-a' })).toStrictEqual('uchūsenkan-yamato');
 		});
 
-		test('must be properly customizable with んば parameter', () => {
-			expect(japanese.romanize('のんのんびよりなんみん', {'んば': 'nba'})).toStrictEqual('nonnonbiyorinanmin');
-			expect(japanese.romanize('こころぴょんぴょん', {'んば': 'nba'})).toStrictEqual('kokoropyonpyon');
+		test('must be properly customizable with んば parameter', () =>
+		{
+			expect(japanese.romanize('のんのんびよりなんみん', { 'んば': 'nba' })).toStrictEqual('nonnonbiyorinanmin');
+			expect(japanese.romanize('こころぴょんぴょん', { 'んば': 'nba' })).toStrictEqual('kokoropyonpyon');
 
-			expect(japanese.romanize('のんのんびよりなんみん', {'んば': 'mba'})).toStrictEqual('nonnombiyorinammin');
-			expect(japanese.romanize('こころぴょんぴょん', {'んば': 'mba'})).toStrictEqual('kokoropyompyon');
+			expect(japanese.romanize('のんのんびよりなんみん', { 'んば': 'mba' })).toStrictEqual('nonnombiyorinammin');
+			expect(japanese.romanize('こころぴょんぴょん', { 'んば': 'mba' })).toStrictEqual('kokoropyompyon');
 		});
 
-		test('must be properly customizable with っち parameter', () => {
-			expect(japanese.romanize('ひだまりスケッチ', {'っち': 'tti'})).toStrictEqual('hidamarisuketti');
-			expect(japanese.romanize('まっちょしぃ', {'っち': 'tti'})).toStrictEqual('mattyoshii');
+		test('must be properly customizable with っち parameter', () =>
+		{
+			expect(japanese.romanize('ひだまりスケッチ', { 'っち': 'tti' })).toStrictEqual('hidamarisuketti');
+			expect(japanese.romanize('まっちょしぃ', { 'っち': 'tti' })).toStrictEqual('mattyoshii');
 
-			expect(japanese.romanize('ひだまりスケッチ', {'っち': 'tchi'})).toStrictEqual('hidamarisuketchi');
-			expect(japanese.romanize('まっちょしぃ', {'っち': 'tchi'})).toStrictEqual('matchoshii');
+			expect(japanese.romanize('ひだまりスケッチ', { 'っち': 'tchi' })).toStrictEqual('hidamarisuketchi');
+			expect(japanese.romanize('まっちょしぃ', { 'っち': 'tchi' })).toStrictEqual('matchoshii');
 
-			expect(japanese.romanize('ひだまりスケッチ', {'っち': 'cchi'})).toStrictEqual('hidamarisukecchi');
-			expect(japanese.romanize('まっちょしぃ', {'っち': 'cchi'})).toStrictEqual('macchoshii');
+			expect(japanese.romanize('ひだまりスケッチ', { 'っち': 'cchi' })).toStrictEqual('hidamarisukecchi');
+			expect(japanese.romanize('まっちょしぃ', { 'っち': 'cchi' })).toStrictEqual('macchoshii');
 		});
 
-		test('must be properly customizable with ゐ parameter', () => {
-			expect(japanese.romanize('いなばてゐ', {'ゐ': 'i'})).toStrictEqual('inabatei');
-			expect(japanese.romanize('ヱヴァンゲリヲン', {'ゐ': 'i'})).toStrictEqual('evangerion');
+		test('must be properly customizable with ゐ parameter', () =>
+		{
+			expect(japanese.romanize('いなばてゐ', { 'ゐ': 'i' })).toStrictEqual('inabatei');
+			expect(japanese.romanize('ヱヴァンゲリヲン', { 'ゐ': 'i' })).toStrictEqual('evangerion');
 
-			expect(japanese.romanize('いなばてゐ', {'ゐ': 'wi'})).toStrictEqual('inabatewi');
-			expect(japanese.romanize('ヱヴァンゲリヲン', {'ゐ': 'wi'})).toStrictEqual('wevangerion');
+			expect(japanese.romanize('いなばてゐ', { 'ゐ': 'wi' })).toStrictEqual('inabatewi');
+			expect(japanese.romanize('ヱヴァンゲリヲン', { 'ゐ': 'wi' })).toStrictEqual('wevangerion');
 		});
 
-		test('must be properly customizable with を parameter', () => {
-			expect(japanese.romanize('パパのいうことをききなさい!', {'を': 'o'})).toStrictEqual('papanoiukotookikinasai');
-			expect(japanese.romanize('をきゅうくうぼ', {'を': 'o'})).toStrictEqual('okyūkūbo');
+		test('must be properly customizable with を parameter', () =>
+		{
+			expect(japanese.romanize('パパのいうことをききなさい!', { 'を': 'o' })).toStrictEqual('papanoiukotookikinasai');
+			expect(japanese.romanize('をきゅうくうぼ', { 'を': 'o' })).toStrictEqual('okyūkūbo');
 
-			expect(japanese.romanize('パパのいうことをききなさい!', {'を': 'wo'})).toStrictEqual('papanoiukotowokikinasai');
-			expect(japanese.romanize('をきゅうくうぼ', {'を': 'wo'})).toStrictEqual('wokyūkūbo');
+			expect(japanese.romanize('パパのいうことをききなさい!', { 'を': 'wo' })).toStrictEqual('papanoiukotowokikinasai');
+			expect(japanese.romanize('をきゅうくうぼ', { 'を': 'wo' })).toStrictEqual('wokyūkūbo');
 		});
 	});
 });

@@ -15,20 +15,17 @@
     "hanji",
     "CJK"
   ],
-  "homepage": "https://github.com/hakatashi/japanese.js",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/japanese#readme",
   "bugs": {
-    "url": "https://github.com/hakatashi/japanese.js/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hakatashi/japanese.js.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "MIT",
   "author": "hakatashi <hakatasiloving@gmail.com> (http://hakatashi.com/)",
   "main": "index.js",
-  "bin": {
-    "japanese": "bin/cli.js"
-  },
   "directories": {
     "test": "test"
   },
@@ -50,6 +47,9 @@
   "devDependencies": {
     "@types/big.js": "^4.0.5",
     "@types/lodash": "^4.14.154"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "coffeelintConfig": {
     "no_tabs": {
