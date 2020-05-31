@@ -1,0 +1,505 @@
+{
+  "가": {
+    "RR": "ga",
+    "tags": [
+      "simple"
+    ]
+  },
+  "가곡": {
+    "RRT": "ga-gog"
+  },
+  "값": {
+    "RRT": "gabs"
+  },
+  "같이": {
+    "p": "가치",
+    "RR": "gachi",
+    "tags": [
+      "palatalization"
+    ]
+  },
+  "곧이": {
+    "p": "고지",
+    "tags": [
+      "palatalization"
+    ]
+  },
+  "구미": {
+    "RR": "Gumi",
+    "tags": [
+      "plosive",
+      "place-name"
+    ]
+  },
+  "구리": {
+    "RR": "Guri",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "김치": {
+    "RR": "gimchi",
+    "MR": "kimch'i",
+    "Yale": "kimchi",
+    "SKATS": "LUM CU LE"
+  },
+  "국어의": {
+    "RR": "gugeoui",
+    "tags": [
+      "simple"
+    ]
+  },
+  "글자": {
+    "IPA": "kɯl.t͈ɕa",
+    "RR": "geulja",
+    "RRT": "geul-ja",
+    "MR": "kŭlcha",
+    "yale": "kulqca",
+    "SKATS": "ldv pe",
+    "ck": "кыльчча",
+    "ckr": "kyl'chcha"
+  },
+  "굳히다": {
+    "p": "구치다",
+    "RR": "guchida",
+    "tags": [
+      "palatalization"
+    ]
+  },
+  "굳이": {
+    "RRT": "gud-i"
+  },
+  "꽃망울": {
+    "p": "꼰망울"
+  },
+  "나": {
+    "RR": "na",
+    "tags": [
+      "simple"
+    ]
+  },
+  "다": {
+    "RR": "da",
+    "tags": [
+      "simple"
+    ]
+  },
+  "닦는다": {
+    "p": "당는다"
+  },
+  "단련": {
+    "p": "달련"
+  },
+  "닫히다": {
+    "p": "다치다",
+    "tags": [
+      "palatalization"
+    ]
+  },
+  "대관령": {
+    "p": "대괄령",
+    "RR": "Daegwallyeong",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "독립": {
+    "RR": "dongnip",
+    "MR": "tongnip",
+    "RRT": "dog-lib",
+    "tags": [
+      "nasalization"
+    ]
+  },
+  "동무": {
+    "RR": "dongmu",
+    "tags": [
+      "simple"
+    ]
+  },
+  "로마자": {
+    "RR": "romaja",
+    "tags": [
+      "simple"
+    ]
+  },
+  "만남": {
+    "RR": "mannam",
+    "tags": [
+      "simple"
+    ]
+  },
+  "먹는": {
+    "RRT": "meog-neun"
+  },
+  "맏누이": {
+    "p": "만누이"
+  },
+  "문리": {
+    "default": "mulli",
+    "tags": [
+      "assimilation"
+    ]
+  },
+  "물엿": {
+    "RR": "mullyeot",
+    "MR": "mullyŏt",
+    "RRT": "mul-yeos",
+    "YALE": "mwulyes"
+  },
+  "밖": {
+    "meaningEng": "outside (uninflected)",
+    "IPA": "pak̚",
+    "RR": "bak",
+    "RRT": "bakk",
+    "MR": "pak",
+    "yale": "pakk",
+    "SKATS": "well",
+    "ck": "пак",
+    "ckr": "pak"
+  },
+  "밖에": {
+    "meaningEng": "outside",
+    "IPA": "pa.k͈e̞",
+    "RR": "bakke",
+    "RRT": "bakk-e",
+    "MR": "pakke",
+    "yale": "pakk ey",
+    "SKATS": "well ktu",
+    "ck": "пёге",
+    "ckr": "pyoge"
+  },
+  "밭머리": {
+    "p": "반머리"
+  },
+  "백마": {
+    "RR": "Baengma",
+    "p": "뱅마",
+    "tags": [
+      "place-name",
+      "assimilation"
+    ]
+  },
+  "백암": {
+    "RR": "Baegam",
+    "tags": [
+      "plosive",
+      "place-name"
+    ]
+  },
+  "법령": {
+    "p": "범령"
+  },
+  "법무": {
+    "p": "범무",
+    "tags": [
+      "nasalization"
+    ]
+  },
+  "별내": {
+    "RR": "Byeollae",
+    "p": "별래",
+    "tags": [
+      "place-name",
+      "assimilation"
+    ]
+  },
+  "벚꽃": {
+    "RR": "beotkkot",
+    "p": "벋꼳",
+    "tags": [
+      "plosive"
+    ]
+  },
+  "벽": {
+    "meaningEng": "wall",
+    "IPA": "pjʌk̚",
+    "RR": "byeok",
+    "RRT": "byeog",
+    "MR": "pyŏk",
+    "yale": "pyek",
+    "SKATS": "wsl",
+    "ck": "пёк",
+    "ckr": "pyok"
+  },
+  "벽에": {
+    "meaningEng": "on the wall",
+    "IPA": "pjʌ.ɡe̞",
+    "RR": "byeoge",
+    "RRT": "byeog-e",
+    "MR": "pyŏge",
+    "yale": "pyek ey",
+    "SKATS": "wsl ktu",
+    "ck": "пёге",
+    "ckr": "pyoge"
+  },
+  "봄바람": {
+    "p": "봄빠람"
+  },
+  "부엌": {
+    "meaningEng": "kitchen",
+    "IPA": "pu.ʌk̚",
+    "RR": "bueok",
+    "RRT": "bu-eok",
+    "MR": "puŏk",
+    "yale": "puekh",
+    "SKATS": "wh ktx",
+    "ck": "пуок",
+    "ckr": "puok"
+  },
+  "부엌문": {
+    "p": "부엉문"
+  },
+  "부엌에": {
+    "meaningEng": "to the kitchen/in the kitchen",
+    "IPA": "pu.ʌ.kʰe̞",
+    "RR": "bueoke",
+    "RRT": "bu-eok-e",
+    "MR": "puŏk'e",
+    "yale": "puekh ey",
+    "YALE": "pwuekhey",
+    "SKATS": "wh ktx ktu",
+    "ck": "пуокхе",
+    "ckr": "puokhe"
+  },
+  "북한": {
+    "p": "부칸",
+    "tags": [
+      "aspiration"
+    ]
+  },
+  "붓꽃": {
+    "RRT": "bus-kkoch"
+  },
+  "설악": {
+    "RR": "Seorak",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "신문로": {
+    "p": "신문노",
+    "tags": [
+      "place-name",
+      "assimilation",
+      "ㄹ"
+    ]
+  },
+  "신라": {
+    "RR": "Silla",
+    "p": "실라",
+    "tags": [
+      "place-name",
+      "assimilation",
+      "ㄹ"
+    ]
+  },
+  "실내": {
+    "p": "실래",
+    "tags": [
+      "ㄹ",
+      "assimilation"
+    ]
+  },
+  "설날": {
+    "p": "설랄"
+  },
+  "쉬운": {
+    "meaningEng": "(an) easy (+ noun)",
+    "IPA": "ɕɥi.un",
+    "RR": "swiun",
+    "RRT": "swi-un",
+    "MR": "shwiun",
+    "yale": "swīwun",
+    "SKATS": "ghu khf",
+    "ck": "свиун",
+    "ckr": "sviun"
+  },
+  "없었습니다": {
+    "RRT": "eobs-eoss-seub-ni-da"
+  },
+  "왕십리": {
+    "RR": "Wangsimni",
+    "p": "왕심니",
+    "tags": [
+      "place-name",
+      "assimilation"
+    ]
+  },
+  "월곶": {
+    "RR": "Wolgot",
+    "p": "월곧",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "영동": {
+    "RR": "Yeongdong",
+    "tags": [
+      "plosive",
+      "place-name"
+    ]
+  },
+  "옥천": {
+    "RR": "Okcheon",
+    "tags": [
+      "plosive",
+      "place-name"
+    ]
+  },
+  "임실": {
+    "RR": "Imsil",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "울릉": {
+    "RR": "Ulleung",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "있느냐": {
+    "p": "인느냐"
+  },
+  "앞문": {
+    "p": "암문"
+  },
+  "알약": {
+    "p": "알락",
+    "RR": "allyak"
+  },
+  "위키백과": {
+    "IPA": "ɥi.cʰi.bɛ̝k̚.k͈wa",
+    "RR": "wikibaekgwa",
+    "RRT": "wi-ki-baeg-gwa",
+    "MR": "wik'ibaekkwa",
+    "yale": "wikhi payk.kwa",
+    "SKATS": "khu xu weul lae",
+    "ck": "викхибэкква",
+    "ckr": "vikhibèkkva"
+  },
+  "잣나무": {
+    "p": "잔나무"
+  },
+  "젖먹이": {
+    "p": "전먹이"
+  },
+  "조랑말": {
+    "RRT": "jo-lang-mal"
+  },
+  "조선민주주의인민공화국": {
+    "RR": "Joseon Minjujuui Inmin Gonghwaguk",
+    "RRT": "Jo-seon-Min-ju-ju-ui-In-min-Gong-hwa-gug",
+    "ck": "Чосон Минчучуыи Инмин Конъхвакук",
+    "ckr": "Choson Minchuchu'i Inmin Kon'hvakuk"
+  },
+  "종로": {
+    "RR": "Jongno",
+    "p": "종노",
+    "tags": [
+      "assimilation"
+    ]
+  },
+  "좋다": {
+    "p": "조타",
+    "RRT": "joh-da",
+    "tags": [
+      "aspiration"
+    ]
+  },
+  "집": {
+    "RRT": "jib",
+    "tags": [
+      "simple"
+    ]
+  },
+  "짚": {
+    "RRT": "jip"
+  },
+  "친구": {
+    "RR": "chingu",
+    "tags": [
+      "simple"
+    ]
+  },
+  "칠곡": {
+    "RR": "Chilgok",
+    "tags": [
+      "place-name"
+    ]
+  },
+  "표기법": {
+    "RR": "pyogibeop",
+    "tags": [
+      "simple"
+    ]
+  },
+  "하": {
+    "RR": "ha"
+  },
+  "학여울": {
+    "p": "항녀울",
+    "RR": "Hangnyeoul"
+  },
+  "한결같이": {
+    "p": "한결가치"
+  },
+  "한국말": {
+    "p": "한궁말",
+    "RR": "han-gungmal",
+    "tags": [
+      "nasalization"
+    ]
+  },
+  "한글": {
+    "IPA": "han.ɡɯl",
+    "RR": [
+      "hangeul",
+      "han-geul"
+    ],
+    "RRT": "han-geul",
+    "MR": "han'gŭl",
+    "yale": "hānkul",
+    "SKATS": "jef ldv",
+    "ck": "хангыль",
+    "ckr": "hangyl'"
+  },
+  "한밭": {
+    "RR": "Hanbat",
+    "p": "한받",
+    "tags": [
+      "plosive"
+    ]
+  },
+  "한자": {
+    "RR": "hanja",
+    "RRT": "han-ja",
+    "ck": "ханчча",
+    "ckr": "hanchcha"
+  },
+  "합덕": {
+    "RR": "Hapdeok",
+    "tags": [
+      "plosive",
+      "place-name"
+    ]
+  },
+  "해돋이": {
+    "p": "해돚이",
+    "RR": "haedoji",
+    "tags": [
+      "palatalization"
+    ]
+  },
+  "호법": {
+    "RR": "Hobeop",
+    "tags": [
+      "plosive"
+    ]
+  },
+  "훈민정음": {
+    "RR": "Hunminjeong'eum",
+    "RRT": "Hun-min-jeong-eum"
+  }
+}
