@@ -1752,6 +1752,7 @@ export const table_plus_core = {
 		'悪',
 		'亜',
 		'氷',
+		'县',
 	] as const),
 
 	'侮': [

@@ -4,6 +4,9 @@ export declare const _table_tw: {
     readonly 苏: "蘇";
     readonly 馆: "館";
 };
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
 export declare const table_jp_core: {
     readonly の: readonly ["の", "之", "的"];
     readonly と: readonly ["と", "與", "与"];
@@ -93,6 +96,9 @@ export declare const table_jp_core: {
     readonly 幷: readonly ["并"];
     readonly 并: readonly ["幷"];
 };
+/**
+ * 此表內符合以下任意值時會觸發
+ */
 export declare const table_plus_core: {
     readonly 劍: readonly ["劍", "剑", "剣", "劎", "劒", "剱", "劔"];
     readonly 砲: readonly ["砲", "炮"];
@@ -333,6 +339,7 @@ export declare const table_plus_core: {
     readonly 悪: readonly ["惡", "悪", "恶"];
     readonly 亜: readonly ["亞", "亜", "亚"];
     readonly 氷: readonly ["冰", "氷"];
+    readonly 县: readonly ["県", "縣", "县"];
     readonly 侮: readonly ["侮", "侮"];
     readonly 沉: readonly ["沉", "沈"];
     readonly 嚐: readonly ["嚐", "嘗", "尝"];

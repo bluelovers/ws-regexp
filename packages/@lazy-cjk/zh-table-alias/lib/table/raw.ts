@@ -7,6 +7,9 @@ export const _table_tw = {
 	"馆": "館"
 } as const;
 
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
 export const table_jp_core = {
 	"の": [
 		"の",
@@ -380,6 +383,9 @@ export const table_jp_core = {
 	]
 } as const;
 
+/**
+ * 此表內符合以下任意值時會觸發
+ */
 export const table_plus_core = {
 	"劍": [
 		"劍",
@@ -1526,6 +1532,11 @@ export const table_plus_core = {
 	"氷": [
 		"冰",
 		"氷"
+	],
+	"县": [
+		"県",
+		"縣",
+		"县"
 	],
 	"侮": [
 		"侮",

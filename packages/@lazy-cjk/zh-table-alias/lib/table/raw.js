@@ -7,6 +7,9 @@ exports._table_tw = {
     "苏": "蘇",
     "馆": "館"
 };
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
 exports.table_jp_core = {
     "の": [
         "の",
@@ -379,6 +382,9 @@ exports.table_jp_core = {
         "幷"
     ]
 };
+/**
+ * 此表內符合以下任意值時會觸發
+ */
 exports.table_plus_core = {
     "劍": [
         "劍",
@@ -1525,6 +1531,11 @@ exports.table_plus_core = {
     "氷": [
         "冰",
         "氷"
+    ],
+    "县": [
+        "県",
+        "縣",
+        "县"
     ],
     "侮": [
         "侮",

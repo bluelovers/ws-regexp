@@ -21,9 +21,14 @@ import { _update } from '../../lib/util/core';
 
 	lines.push(`export const _table_tw = ${printStringify(_table_tw)} as const;`);
 
-	lines.push(`export const table_jp_core = ${printStringify(table_jp_core)} as const;`);
 
-	lines.push(`export const table_plus_core = ${printStringify(table_plus_core)} as const;`);
+	lines.push(`/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */\nexport const table_jp_core = ${printStringify(table_jp_core)} as const;`);
+
+	lines.push(`/**
+ * 此表內符合以下任意值時會觸發
+ */\nexport const table_plus_core = ${printStringify(table_plus_core)} as const;`);
 
 	lines.push(``);
 
@@ -45,13 +50,25 @@ import { _update } from '../../lib/util/core';
 
 	const table_plus = _buildTablePlus(table_plus_core);
 
-	lines.push(`export const table_plus: Record<${printKeyType(Object.keys(table_plus))}, string[]> = ${printStringify(table_plus)};`);
+	let table_plus_keys = `${printKeyType(Object.keys(table_plus))}`;
+
+	lines.push(`export type ITableJpPlusKeys = ${table_plus_keys}`);
+
+	lines.push(`/**
+ * 此表內符合以下任意值時會觸發
+ */\nexport const table_plus: Record<ITableJpPlusKeys, string[]> = ${printStringify(table_plus)};`);
 
 	const table_jp = _mergeTable(table_jp_core, table_plus);
 
 	_uniqueTable(table_jp);
 
-	lines.push(`export const table_jp: Record<${printKeyType(Object.keys(table_jp))}, string[]> = ${printStringify(table_jp)};`);
+	let table_jp_keys = `${printKeyType(Object.keys(table_jp))}`;
+
+	lines.push(`export type ITableJpKeys = ${table_jp_keys}`);
+
+	lines.push(`/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */\nexport const table_jp: Record<ITableJpKeys, string[]> = ${printStringify(table_jp)};`);
 
 	let _table_cn: ISimpleTable = _update({}, _table_tw);
 

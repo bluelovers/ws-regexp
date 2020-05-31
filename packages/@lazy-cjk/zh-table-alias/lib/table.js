@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._table_cn = exports.table_jp = exports.table_plus = void 0;
+/**
+ * 此表內符合以下任意值時會觸發
+ */
 exports.table_plus = {
     "劍": [
         "劍",
@@ -1146,6 +1149,11 @@ exports.table_plus = {
     "氷": [
         "冰",
         "氷"
+    ],
+    "县": [
+        "県",
+        "縣",
+        "县"
     ],
     "侮": [
         "侮",
@@ -3433,6 +3441,16 @@ exports.table_plus = {
         "冰",
         "氷"
     ],
+    "県": [
+        "県",
+        "縣",
+        "县"
+    ],
+    "縣": [
+        "県",
+        "縣",
+        "县"
+    ],
     "侮": [
         "侮",
         "侮"
@@ -3525,6 +3543,9 @@ exports.table_plus = {
         "𠀤"
     ]
 };
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
 exports.table_jp = {
     "の": [
         "の",
@@ -5054,6 +5075,11 @@ exports.table_jp = {
         "冰",
         "氷"
     ],
+    "县": [
+        "県",
+        "縣",
+        "县"
+    ],
     "侮": [
         "侮",
         "侮"
@@ -7236,6 +7262,16 @@ exports.table_jp = {
     "冰": [
         "冰",
         "氷"
+    ],
+    "県": [
+        "県",
+        "縣",
+        "县"
+    ],
+    "縣": [
+        "県",
+        "縣",
+        "县"
     ],
     "侮": [
         "侮",
