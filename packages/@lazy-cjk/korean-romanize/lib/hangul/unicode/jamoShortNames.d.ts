@@ -1,6 +1,3 @@
-declare const _default: {
-    JAMO_L_TABLE: string[];
-    JAMO_V_TABLE: string[];
-    JAMO_T_TABLE: string[];
-};
-export = _default;
+export declare const JAMO_L_TABLE: string[];
+export declare const JAMO_V_TABLE: string[];
+export declare const JAMO_T_TABLE: string[];

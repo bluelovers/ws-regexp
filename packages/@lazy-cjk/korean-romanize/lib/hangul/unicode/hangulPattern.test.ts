@@ -2,7 +2,7 @@ import hangulPattern from './hangulPattern';
 
 const HANGUL_BLOCKS = Object.entries(require("./blocks")).filter(
 	([blockName]) => blockName.startsWith("HANGUL"),
-);
+) as any;
 
 const hangulBlockBoundaryRegex = () =>
 	new RegExp(
