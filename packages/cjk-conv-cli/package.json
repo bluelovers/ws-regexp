@@ -75,5 +75,6 @@
     "@types/fs-extra": "^9.0.1",
     "@types/yargs": "^15.0.5"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "gitHead": "84da12815921fe73cbb5cccb4c9e5dd9cfdcea00"
 }

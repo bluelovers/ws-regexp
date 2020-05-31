@@ -48,7 +48,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "yarn run test",
+    "test": "yarn run test:jest",
     "test:jest": "jest --coverage",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
@@ -64,5 +64,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "f0c4be7cd154334ba636434e3bf509d795eba3e2"
+  "gitHead": "84da12815921fe73cbb5cccb4c9e5dd9cfdcea00"
 }
