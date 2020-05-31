@@ -1,6 +1,6 @@
-export * from './src/kana';
-export * from './src/romanize';
-export * from './src/numbers';
-export * from './src/types';
+export * from './lib/kana';
+export * from './lib/romanize';
+export * from './lib/numbers';
+export * from './lib/types';
 declare const _default: typeof import(".");
 export default _default;

@@ -10,9 +10,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./src/kana"), exports);
-__exportStar(require("./src/romanize"), exports);
-__exportStar(require("./src/numbers"), exports);
-__exportStar(require("./src/types"), exports);
+__exportStar(require("./lib/kana"), exports);
+__exportStar(require("./lib/romanize"), exports);
+__exportStar(require("./lib/numbers"), exports);
+__exportStar(require("./lib/types"), exports);
 exports.default = exports;
 //# sourceMappingURL=index.js.map
