@@ -1594,6 +1594,10 @@ exports.table_plus_core = {
     "彷": [
         "彷",
         "徬"
+    ],
+    "贑": [
+        "贑",
+        "𫎬"
     ]
 };
 //# sourceMappingURL=raw.js.map
