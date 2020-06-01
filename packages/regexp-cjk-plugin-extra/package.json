@@ -86,8 +86,8 @@
     "@types/lodash.deburr": "^4.1.6"
   },
   "peerDependencies": {
-    "cjk-conv": "^1.2.66",
-    "regexp-cjk": "^3.3.32",
+    "cjk-conv": "^1.2.67",
+    "regexp-cjk": "^3.3.33",
     "regexp-parser-event": "^1.1.6"
   }
 }

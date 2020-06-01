@@ -82,7 +82,7 @@
     "@lazy-cjk/zh-convert": "^1.0.4",
     "array-hyper-unique": "^1.1.0",
     "deepmerge-plus": "^2.1.3",
-    "ts-type": "^1.2.16"
+    "ts-type": "^1.2.17"
   },
   "publishConfig": {
     "access": "public"
