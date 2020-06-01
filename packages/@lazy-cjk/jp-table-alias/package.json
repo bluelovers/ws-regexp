@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-alias",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "keywords": [
     "char",
@@ -76,7 +76,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.4",
+    "@lazy-cjk/jp-table-convert": "^1.0.5",
     "array-hyper-unique": "^1.1.0"
   },
   "gitHead": "3bd5e2d251d59c760e47ac09487c70a409332763"
