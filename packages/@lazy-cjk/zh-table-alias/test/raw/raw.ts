@@ -1821,4 +1821,9 @@ export const table_plus_core = {
 		'𠀤',
 	],
 
+	'彷': [
+		'彷',
+		'徬',
+	],
+
 } as const;

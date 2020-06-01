@@ -2745,6 +2745,8 @@ export const table_cn2tw: ITable = {
 	"牋": "牋",
 	"竝": "竝",
 	"弔": "弔",
+	"徬": "徬",
+	"彷": "彷",
 };
 
 export const table_tw2cn: ITable = {
@@ -3320,7 +3322,7 @@ export const table_tw2cn: ITable = {
 	"徠": "徕",
 	"禦": "御",
 	"復": "复",
-	"徬": "彷",
+	"徬": "徬",
 	"徴": "征",
 	"徵": "征",
 	"憶": "忆",
@@ -5992,6 +5994,7 @@ export const table_tw2cn: ITable = {
 	"沉": "沉",
 	"榨": "榨",
 	"筱": "筱",
+	"彷": "彷",
 };
 
 export default exports as typeof import('./table');

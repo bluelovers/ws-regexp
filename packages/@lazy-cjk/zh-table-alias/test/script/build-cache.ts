@@ -36,7 +36,9 @@ import { _update } from '../../lib/util/core';
 
 	await outputFile(file, lines.join('\n\n'))
 
-	await emitTsFiles(file)
+	await emitTsFiles(file, {
+		verbose: true,
+	})
 
 })();
 
@@ -80,7 +82,9 @@ import { _update } from '../../lib/util/core';
 
 	await outputFile(file, lines.join('\n\n'))
 
-	await emitTsFiles(file)
+	await emitTsFiles(file, {
+		verbose: true,
+	})
 
 })();
 

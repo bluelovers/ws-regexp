@@ -154,6 +154,9 @@ export const table_same = [
 
 	'弔',
 
+	'徬',
+	'彷',
+
 ];
 
 export default table_same
