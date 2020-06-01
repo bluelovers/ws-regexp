@@ -100,7 +100,7 @@
     "regexp-support": "^1.0.25"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.152",
+    "@types/lodash": "^4.14.154",
     "cross-spawn-extra": "^2.0.0",
     "git-root2": "^1.0.7"
   },
