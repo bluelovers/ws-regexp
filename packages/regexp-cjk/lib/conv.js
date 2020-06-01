@@ -4,7 +4,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._word_zh_core2 = exports._word_zh_core = exports.zhTableAutoGreedyTable = void 0;
-const index_1 = require("cjk-conv/lib/zh/table/index");
+const zh_table_list_1 = require("@lazy-cjk/zh-table-list");
 const util_1 = require("./util");
 //console.log(cjkConv.zhTable.auto('魯'));
 function zhTableAutoGreedyTable(s, options = {}) {
@@ -12,10 +12,10 @@ function zhTableAutoGreedyTable(s, options = {}) {
         options.safe = false;
     }
     options.greedyTable = options.greedyTable || true;
-    return index_1.auto(s, options);
+    return zh_table_list_1.auto(s, options);
 }
 exports.zhTableAutoGreedyTable = zhTableAutoGreedyTable;
-function _word_zh_core(search, skip, zhTableFn = index_1.auto, options = {}) {
+function _word_zh_core(search, skip, zhTableFn = zh_table_list_1.auto, options = {}) {
     let opts;
     if (options.unsafe || true) {
         opts = {
@@ -33,7 +33,7 @@ function _word_zh_core(search, skip, zhTableFn = index_1.auto, options = {}) {
     });
 }
 exports._word_zh_core = _word_zh_core;
-function _word_zh_core2(search, skip, zhTableFn = index_1.auto, options = {}) {
+function _word_zh_core2(search, skip, zhTableFn = zh_table_list_1.auto, options = {}) {
     let opts;
     if (options.unsafe || true) {
         opts = {

@@ -1174,6 +1174,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 型|形|行 1`] = `
+Array [
+  "型",
+  "形",
+  "行",
+]
+`;
+
 exports[`validate char of map 堀|窟 1`] = `
 Array [
   "堀",

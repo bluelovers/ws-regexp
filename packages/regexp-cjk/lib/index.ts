@@ -4,8 +4,6 @@
  * 已廢棄 僅用於舊版相容
  */
 
-import cjkConv from 'cjk-conv';
-import zhTable, { IOptions } from 'cjk-conv/lib/zh/table/index';
 import { zhRegExp } from '..';
 import { _word_zh_core } from './conv';
 //export * from './v1';

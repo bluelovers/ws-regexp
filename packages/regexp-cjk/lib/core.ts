@@ -8,11 +8,10 @@ import {
 	ParserEventEmitterEvent,
 } from 'regexp-parser-event';
 import regexpRange from 'regexp-range';
-import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
+import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
 import { fixOptions, getSettingOptions, IGetSettingOptions } from './mergeOptions';
 import getRegExpSourcePattern from './getSource';
-import * as zhTable from 'cjk-conv/lib/zh/table/index';
-import { auto as zhTableAuto } from 'cjk-conv/lib/zh/table/index';
+import { auto as zhTableAuto } from '@lazy-cjk/zh-table-list';
 import { astNotChanged, astOldRaw } from './plugin';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }

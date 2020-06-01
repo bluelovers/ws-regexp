@@ -1,5 +1,9 @@
 import { _greedyTableCacheRegexp } from '../lib/table/re';
 import { reToStringList } from '../lib/util';
+import { _re_cjk_conv } from 'regexp-cjk/lib/util';
+import { _greedyTableCacheTest } from '../lib/table';
+
+const reTest = _re_cjk_conv('u');
 
 describe(`validate char of map`, () =>
 {
@@ -26,6 +30,14 @@ describe(`validate char of map`, () =>
 
 					expect(bool)
 						.toBeFalsy()
+					;
+
+					expect(c)
+						.toMatch(reTest)
+					;
+
+					expect(c)
+						.toMatch(_greedyTableCacheTest)
 					;
 
 					_greedyTableCacheMap.set(c, a)

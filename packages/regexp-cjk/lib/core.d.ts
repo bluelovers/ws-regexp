@@ -1,6 +1,6 @@
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import { INodeInput, IParserEventEmitterListener, IParserEventEmitterListenerMap, ParserEventEmitter, ParserEventEmitterEvent } from 'regexp-parser-event';
-import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
+import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
 import { IGetSettingOptions } from './mergeOptions';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptionsZhTable };

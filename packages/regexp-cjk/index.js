@@ -21,17 +21,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.version = exports.parseRegularExpressionString = exports.isRegExp = exports.create = exports.zhRegExp = exports.defaultOptions = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
+exports.parseRegularExpressionString = exports.isRegExp = exports.create = exports.zhRegExp = exports.defaultOptions = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
 const core_1 = require("./lib/core");
-const regexp_helper_1 = require("regexp-helper");
-Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_1.isRegExp; } });
-const RegexpHelper = __importStar(require("regexp-helper"));
+const regexp_helper_core_1 = require("regexp-helper-core");
+Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_core_1.isRegExp; } });
+const RegexpHelper = __importStar(require("regexp-helper-core"));
 const mergeOptions_1 = __importStar(require("./lib/mergeOptions"));
 const getSource_1 = require("./lib/getSource");
 Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return getSource_1.parseRegularExpressionString; } });
+__exportStar(require("./version"), exports);
 /**
  * @deprecated
  */
@@ -92,10 +96,5 @@ exports.zhRegExp = zhRegExp;
     zhRegExp.isRegExp = RegexpHelper.isRegExp;
 })(zhRegExp = exports.zhRegExp || (exports.zhRegExp = {}));
 exports.create = zhRegExp.create.bind(zhRegExp);
-Object.defineProperty(exports, "version", {
-    get() {
-        return require('./package.json').version;
-    }
-});
 exports.default = zhRegExp;
 //# sourceMappingURL=index.js.map

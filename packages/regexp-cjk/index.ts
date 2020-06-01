@@ -20,11 +20,12 @@ import {
 	IOptionsRuntime, IRegExpUserInput,
 	SymDefaults,
 } from './lib/core';
-import { isRegExp } from 'regexp-helper';
-import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
-import * as RegexpHelper from 'regexp-helper';
+import { isRegExp } from 'regexp-helper-core';
+import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
+import * as RegexpHelper from 'regexp-helper-core';
 import mergeOptions, { getSettingOptions, mergeOptions2 } from './lib/mergeOptions';
 import { parseRegularExpressionString } from './lib/getSource';
+export * from './version';
 
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions }
 
@@ -185,15 +186,5 @@ export interface IApi<T = zhRegExp>
 	(str: string | RegExp, flags?: string, options?: IOptions | string): T,
 	(str: string | RegExp, options?: IOptions): T,
 }
-
-// @ts-ignore
-export const version: string;
-
-Object.defineProperty(exports, "version", {
-	get()
-	{
-		return require('./package.json').version
-	}
-});
 
 export default zhRegExp;

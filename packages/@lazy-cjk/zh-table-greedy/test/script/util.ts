@@ -42,10 +42,12 @@ export async function tryBuild(includeSource?: boolean)
 
 	 */
 
+	emitTsFiles(join(__root, 'lib', 'table/re.ts'));
 	emitTsFiles(join(__root, 'lib', 'table.ts'));
 
 	//await Bluebird.delay(1000);
 
+	/*
 	await CrossSpawn.async('ts-node', [
 		join(__root, 'lib', 'table.ts'),
 	], {
@@ -53,6 +55,7 @@ export async function tryBuild(includeSource?: boolean)
 		stdio: 'inherit',
 	})
 	;
+	 */
 
 	//await Bluebird.delay(1000);
 

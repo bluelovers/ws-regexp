@@ -2,11 +2,10 @@
  * Created by user on 2018/5/5/005.
  */
 
-import { IOptions } from 'cjk-conv/lib/zh/table/index';
-import { auto as zhTableAuto } from 'cjk-conv/lib/zh/table/index';
+import { auto as zhTableAuto } from '@lazy-cjk/zh-table-list';
 import { _re_cjk_conv } from './util';
 import { IOptions as IOptionsRegExp } from './core';
-import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
+import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
 
 //console.log(cjkConv.zhTable.auto('魯'));
 

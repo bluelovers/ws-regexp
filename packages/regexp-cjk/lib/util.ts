@@ -9,5 +9,5 @@ import { _re_cjk_conv as _re_cjk_conv2 } from 'regexp-helper/lib/cjk-conv';
  */
 export function _re_cjk_conv(flags?: string)
 {
-	return _re_cjk_conv2(flags, 'のと');
+	return _re_cjk_conv2(flags, 'のと㊥㊦㊤');
 }

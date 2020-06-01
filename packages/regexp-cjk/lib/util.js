@@ -9,7 +9,7 @@ const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
  * for regexp-cjk only
  */
 function _re_cjk_conv(flags) {
-    return cjk_conv_1._re_cjk_conv(flags, 'のと');
+    return cjk_conv_1._re_cjk_conv(flags, 'のと㊥㊦㊤');
 }
 exports._re_cjk_conv = _re_cjk_conv;
 //# sourceMappingURL=util.js.map

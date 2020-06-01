@@ -4,10 +4,11 @@
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import { INodeInput, IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent } from 'regexp-parser-event';
 import { ICoreHandlerReturn, IOptions, IOptionsCore, IOptionsInput, IOptionsOn, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './lib/core';
-import { isRegExp } from 'regexp-helper';
-import { IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
-import * as RegexpHelper from 'regexp-helper';
+import { isRegExp } from 'regexp-helper-core';
+import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
+import * as RegexpHelper from 'regexp-helper-core';
 import { parseRegularExpressionString } from './lib/getSource';
+export * from './version';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptions, IOptionsRuntime, IOptionsInput, ICoreHandlerReturn, IOptionsOn, IOptionsCore };
 export { IOptionsZhTable };
@@ -113,7 +114,11 @@ export declare class zhRegExp extends RegExp {
         pattern: {
             namedCapturingGroups: boolean;
             namedCapturingGroupsUnicode: boolean;
-            namedCapturingGroupsEmoji: boolean;
+            namedCapturingGroupsEmoji: boolean; /**
+             * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
+             *
+             * @alias $`
+             */
             namedCapturingGroupsBackreference: boolean;
             namedCapturingGroupsDuplicate: boolean;
             lookAheadPositive: boolean;
@@ -130,11 +135,6 @@ export declare class zhRegExp extends RegExp {
             readonly source?: boolean;
             readonly global?: boolean;
             readonly ignoreCase?: boolean;
-            /**
-             * The non-standard lastParen property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. RegExp.$+ is an alias for this property.
-             *
-             * @alias $+
-             */
             readonly multiline?: boolean;
             lastIndex?: boolean;
             compile?: boolean;
@@ -955,5 +955,4 @@ export interface IApi<T = zhRegExp> {
     (str: string | RegExp, flags?: string, options?: IOptions | string): T;
     (str: string | RegExp, options?: IOptions): T;
 }
-export declare const version: string;
 export default zhRegExp;

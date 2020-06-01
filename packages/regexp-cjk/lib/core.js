@@ -10,7 +10,7 @@ Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: fu
 const regexp_range_1 = __importDefault(require("regexp-range"));
 const mergeOptions_1 = require("./mergeOptions");
 const getSource_1 = __importDefault(require("./getSource"));
-const index_1 = require("cjk-conv/lib/zh/table/index");
+const zh_table_list_1 = require("@lazy-cjk/zh-table-list");
 const plugin_1 = require("./plugin");
 exports.SymDefaults = Symbol.for('zhRegExp.defaults');
 function coreHandler(str, flags = null, options = {}, ...argv) {
@@ -38,7 +38,7 @@ function coreHandler(str, flags = null, options = {}, ...argv) {
     }
     if ((!options.disableZh || !options.disableLocalRange || options.on)) {
         let ev = regexp_parser_event_1.ParserEventEmitter.create(str, flags || '');
-        const zhTableFn = options.zhTable || (options.greedyTable ? conv_1.zhTableAutoGreedyTable : index_1.auto);
+        const zhTableFn = options.zhTable || (options.greedyTable ? conv_1.zhTableAutoGreedyTable : zh_table_list_1.auto);
         if (!options.disableZh) {
             ev.on("default" /* default */, function (ast) {
                 plugin_1.astOldRaw(ast);
