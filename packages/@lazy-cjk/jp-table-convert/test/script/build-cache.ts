@@ -8,8 +8,6 @@ import assert from 'assert';
 import emitTsFiles from 'build-ts-file';
 import { _build_table } from '../../lib/core';
 import { ZHJP_TABLE, ZHJP_TABLE_SAFE } from '@lazy-cjk/jp-table-comparison';
-import { ITABLE_MAIN } from '../../lib/types';
-import { TABLE } from 'cjk-conv/lib/jp/core';
 
 const data = _build_table(ZHJP_TABLE, ZHJP_TABLE_SAFE);
 

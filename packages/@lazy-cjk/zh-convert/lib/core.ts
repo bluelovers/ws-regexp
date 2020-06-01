@@ -1,4 +1,4 @@
-import { table_cn2tw, table_tw2cn } from 'cjk-conv/lib/zh/convert';
+import { table_cn2tw, table_tw2cn } from '@lazy-cjk/zh-convert/lib/table';
 import { textMap } from './core/map';
 
 export function _cn2tw(text: string): string

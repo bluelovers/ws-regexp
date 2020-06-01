@@ -1,4 +1,3 @@
-import TABLE, { TABLE_SAFE } from 'cjk-conv/lib/jp/table';
 import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from './types';
 import { array_unique } from 'array-hyper-unique';
 
