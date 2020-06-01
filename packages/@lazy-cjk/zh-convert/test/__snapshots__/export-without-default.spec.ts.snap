@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`import check without default 1`] = `
+Array [
+  "cn2tw",
+  "tw2cn",
+]
+`;

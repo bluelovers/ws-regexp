@@ -7,7 +7,7 @@ import _table_tw2cn from 'chinese_convert/tw2cn';
 
 import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';
 import { ITable } from '../../lib/types';
-import table_same from './table_same';
+import table_same from '../../lib/table/table_same';
 
 export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2);
 
