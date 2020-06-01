@@ -26,7 +26,9 @@ import { table_cn2tw, table_tw2cn } from '../raw/table';
 
 	await outputFile(file, lines.join('\n\n'))
 
-	await emitTsFiles(file)
+	await emitTsFiles(file, {
+		verbose: true,
+	})
 
 })();
 

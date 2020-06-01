@@ -6,6 +6,7 @@ import { outputFile, outputJSON } from 'fs-extra';
 import { join } from 'path';
 import { wiki_s2t, wiki_t2s, wiki_s2t_v2, wiki_t2s_v2 } from '../raw/wikipedia';
 import { table_cn2tw, table_tw2cn } from '../raw/table';
+import emitTsFiles from 'build-ts-file';
 
 ;(async () => {
 
@@ -25,7 +26,13 @@ import { table_cn2tw, table_tw2cn } from '../raw/table';
 
 	lines.push(``);
 
-	await outputFile(join(__dirname, '../../', 'wikipedia.ts'), lines.join('\n\n'))
+	let file = join(__dirname, '../../', 'wikipedia.ts');
+
+	await outputFile(file, lines.join('\n\n'))
+
+	await emitTsFiles(file, {
+		verbose: true,
+	})
 
 })();
 
@@ -43,7 +50,14 @@ import { table_cn2tw, table_tw2cn } from '../raw/table';
 
 	lines.push(``);
 
-	await outputFile(join(__dirname, '../../', 'table.ts'), lines.join('\n\n'))
+	let file: string;
+	file = join(__dirname, '../../', 'table.ts');
+
+	await outputFile(file, lines.join('\n\n'))
+
+	await emitTsFiles(file, {
+		verbose: true,
+	})
 
 	await outputJSON(join(__dirname, '../../', 'table_cn2tw.json'), table_cn2tw, {
 		spaces: 2,
