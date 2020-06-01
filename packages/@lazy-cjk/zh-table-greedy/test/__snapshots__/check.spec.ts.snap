@@ -1167,13 +1167,6 @@ Array [
 ]
 `;
 
-exports[`validate char of map 型|形 1`] = `
-Array [
-  "型",
-  "形",
-]
-`;
-
 exports[`validate char of map 型|形|行 1`] = `
 Array [
   "型",
