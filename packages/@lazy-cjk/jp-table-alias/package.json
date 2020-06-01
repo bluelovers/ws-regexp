@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-alias",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "keywords": [
     "char",
@@ -76,7 +76,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.3",
+    "@lazy-cjk/jp-table-convert": "^1.0.4",
     "array-hyper-unique": "^1.1.0"
   }
 }
