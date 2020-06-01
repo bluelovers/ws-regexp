@@ -63,6 +63,7 @@
     "test": "yarn run test:jest",
     "test:jest": "jest --coverage -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "prebuild": "ynpx build-ts-file -- ./lib/table/re.ts",
     "build": "ts-node ./test/script/build-cache.ts && yarn run build:tsc && yarn run build:check",
     "build:check": "jest ./test/check.spec.ts -u",
     "build:commit": "ts-node ./test/script/build-commit.ts",
