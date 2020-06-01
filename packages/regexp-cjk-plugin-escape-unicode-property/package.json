@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk-plugin-escape-unicode-property",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "use regexpu for escape unicode property in regexp-cjk",
   "keywords": [
     "char",
