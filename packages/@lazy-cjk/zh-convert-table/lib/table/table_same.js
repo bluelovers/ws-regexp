@@ -136,6 +136,9 @@ exports.table_same = [
     '弔',
     '徬',
     '彷',
+    '喦',
+    '巖',
+    '岩',
 ];
 exports.default = exports.table_same;
 //# sourceMappingURL=table_same.js.map

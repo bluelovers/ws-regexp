@@ -157,6 +157,10 @@ export const table_same = [
 	'徬',
 	'彷',
 
+	'喦',
+	'巖',
+	'岩',
+
 ];
 
 export default table_same
