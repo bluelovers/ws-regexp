@@ -65,7 +65,7 @@
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "prebuild": "ynpx build-ts-file -- ./test/raw/raw.ts",
     "build": "ts-node ./test/script/build-cache.ts",
-    "build:commit": "git commit -m \"build: update table\" ./lib & echo build:commit",
+    "build:commit": "git commit -m \"build: update table\" ./lib ./test & echo build:commit",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "prepublish:lockfile": "npx sync-lockfile .",
