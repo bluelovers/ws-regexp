@@ -1837,4 +1837,11 @@ export const table_plus_core = {
 		'厓',
 	],
 
+	'岩': [
+		'岩',
+		'巖',
+		'巗',
+		'巌',
+	],
+
 } as const;
