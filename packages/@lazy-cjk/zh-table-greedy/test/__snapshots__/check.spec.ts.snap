@@ -51,7 +51,7 @@ Array [
 ]
 `;
 
-exports[`validate char of map 㑩|儸|啰|囉|罗|羅 1`] = `
+exports[`validate char of map 㑩|儸|啰|囉|罗|羅|萝|蘿 1`] = `
 Array [
   "㑩",
   "儸",
@@ -59,6 +59,8 @@ Array [
   "囉",
   "罗",
   "羅",
+  "萝",
+  "蘿",
 ]
 `;
 
@@ -891,6 +893,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 厓|崕|崖|漄 1`] = `
+Array [
+  "厓",
+  "崕",
+  "崖",
+  "漄",
+]
+`;
+
 exports[`validate char of map 叉|衩|釵|钗 1`] = `
 Array [
   "叉",
@@ -1598,6 +1609,15 @@ exports[`validate char of map 摩|磨 1`] = `
 Array [
   "摩",
   "磨",
+]
+`;
+
+exports[`validate char of map 撒|萨|蕯|薩 1`] = `
+Array [
+  "撒",
+  "萨",
+  "蕯",
+  "薩",
 ]
 `;
 

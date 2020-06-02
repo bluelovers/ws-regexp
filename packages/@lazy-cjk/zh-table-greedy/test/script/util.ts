@@ -42,8 +42,15 @@ export async function tryBuild(includeSource?: boolean)
 
 	 */
 
-	emitTsFiles(join(__root, 'lib', 'table/re.ts'));
-	emitTsFiles(join(__root, 'lib', 'table.ts'));
+	emitTsFiles(join(__root, 'lib', 'table/re.ts'), {
+		verbose: true,
+	});
+
+	await Bluebird.delay(1000);
+
+	emitTsFiles(join(__root, 'lib', 'table.ts'), {
+		verbose: true,
+	});
 
 	//await Bluebird.delay(1000);
 

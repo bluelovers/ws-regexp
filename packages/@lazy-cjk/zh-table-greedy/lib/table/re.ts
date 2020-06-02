@@ -11,7 +11,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[復複覆]/g, '复'],
 	[/[囌蘇甦]/g, '苏'],
 	[/[採彩睬踩埰綵䌽]/g, '采'],
-	[/[囉啰羅㑩儸]/g, '罗'],
+	[/[囉啰羅㑩儸萝蘿]/g, '罗'],
 	[/[浏瀏劉]/g, '刘'],
 	[/[劵卷巻捲蜷]/g, '券'],
 	[/[划劃畫]/g, '画'],
@@ -47,7 +47,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[腾騰籐籘]/ug, '藤'],
 	[/[妳祢禰]/ug, '你'],
 	[/[喰飠⻞飧蝕蚀]/ug, '食'],
-	[/[瑪馬玛马]/ug, '马'],
+	[/[瑪馬玛]/ug, '马'],
 	[/[餸餚]/ug, '餚'],
 	[/[裸]/ug, '果'],
 	[/[凱凯鎧铠]/ug, '凱'],
@@ -249,5 +249,8 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 
 	[/[傍彷徬]/ug, '旁'],
 	[/[戇灨贑贛赣𥫔𧹄𧹉]/ug, '戆'],
+
+	[/[萨蕯薩]/ug, '撒'],
+	[/[崕漄厓]/ug, '崖'],
 
 ]
