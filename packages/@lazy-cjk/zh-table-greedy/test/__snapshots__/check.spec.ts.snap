@@ -1214,6 +1214,20 @@ Array [
 ]
 `;
 
+exports[`validate char of map 壧|岩|嵒|巌|巖|巗|碞|礹|𡾏 1`] = `
+Array [
+  "壧",
+  "岩",
+  "嵒",
+  "巌",
+  "巖",
+  "巗",
+  "碞",
+  "礹",
+  "𡾏",
+]
+`;
+
 exports[`validate char of map 复|復|複|覆 1`] = `
 Array [
   "复",
