@@ -1831,4 +1831,10 @@ export const table_plus_core = {
 		'𫎬',
 	],
 
+	'崖': [
+		'崖',
+		'崕',
+		'厓',
+	],
+
 } as const;

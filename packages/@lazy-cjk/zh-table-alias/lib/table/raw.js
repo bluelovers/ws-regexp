@@ -1598,6 +1598,11 @@ exports.table_plus_core = {
     "贑": [
         "贑",
         "𫎬"
+    ],
+    "崖": [
+        "崖",
+        "崕",
+        "厓"
     ]
 };
 //# sourceMappingURL=raw.js.map

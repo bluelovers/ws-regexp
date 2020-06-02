@@ -354,4 +354,5 @@ export declare const table_plus_core: {
     readonly 竝: readonly ["竝", "𠀤"];
     readonly 彷: readonly ["彷", "徬"];
     readonly 贑: readonly ["贑", "𫎬"];
+    readonly 崖: readonly ["崖", "崕", "厓"];
 };
