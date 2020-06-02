@@ -1603,6 +1603,12 @@ exports.table_plus_core = {
         "崖",
         "崕",
         "厓"
+    ],
+    "岩": [
+        "岩",
+        "巖",
+        "巗",
+        "巌"
     ]
 };
 //# sourceMappingURL=raw.js.map
