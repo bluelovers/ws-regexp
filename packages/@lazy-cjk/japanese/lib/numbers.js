@@ -152,4 +152,5 @@ function transcribeNumber(number, config) {
     return transcription;
 }
 exports.transcribeNumber = transcribeNumber;
+exports.default = transcribeNumber;
 //# sourceMappingURL=numbers.js.map

@@ -468,3 +468,4 @@ export function romanize(string: string, config?: IRomanizationConfigsKeys | IOp
 	return dest;
 }
 
+export default romanize

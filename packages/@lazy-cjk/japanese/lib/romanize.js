@@ -372,4 +372,5 @@ function romanize(string, config) {
     return dest;
 }
 exports.romanize = romanize;
+exports.default = romanize;
 //# sourceMappingURL=romanize.js.map

@@ -211,3 +211,4 @@ export function transcribeNumber(number: number | string, config?): string
 	return transcription;
 }
 
+export default transcribeNumber

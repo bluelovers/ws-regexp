@@ -3,14 +3,19 @@ import { IOptionsSlugify } from './types';
 import { _core } from './core';
 import { slugify as _slugify } from 'transliteration';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
+import romanize_jp from '@lazy-cjk/japanese/lib/romanize';
+import { katakanaRegex, hiraganaRegex } from '@lazy-cjk/japanese/lib/data/kana';
+import romanize_kr from '@lazy-cjk/korean-romanize';
 
 const REGEXP_TEST = new RegExp(_re_cjk_conv('u').source, 'ug');
+
+const REGEXP_TEST_JP = new RegExp('(?:(?:' + katakanaRegex.source + ')|(?:' + hiraganaRegex.source + '))+', 'ug');
 
 export function _replaceCjk(text: string, options?: IOptionsSlugify)
 {
 	let append = options?.separator ?? ' ';
 
-	return text.replace(REGEXP_TEST, (s) =>
+	text = text.replace(REGEXP_TEST, (s) =>
 	{
 		let n = _slugify(s);
 
@@ -25,21 +30,23 @@ export function _replaceCjk(text: string, options?: IOptionsSlugify)
 		}
 
 		return s
-	})
+	});
 
-	/*
-	return replaceChar(text, (s, c) =>
+	text = text.replace(REGEXP_TEST_JP, (s) =>
 	{
-		let n = _slugify(c);
+		let n = romanize_jp(s);
 
-		if (n === '')
+		if (n !== '')
 		{
-			n = char2pinyin_01(c)[0]
+			return n
 		}
 
-		return n + append
-	})
-	 */
+		return s
+	});
+
+	text = romanize_kr(text);
+
+	return text
 }
 
 export function slugifyCjk(word: string, options?: IOptionsSlugify)

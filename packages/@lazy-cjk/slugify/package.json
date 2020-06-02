@@ -74,6 +74,8 @@
   },
   "dependencies": {
     "@lazy-cjk/cns-11643": "^1.0.5",
+    "@lazy-cjk/japanese": "^1.2.3",
+    "@lazy-cjk/korean-romanize": "^1.0.4",
     "@lazy-cjk/zh-slugify": "^1.0.12",
     "@sindresorhus/transliterate": "^0.1.0",
     "emoji.json": "^12.1.1",
