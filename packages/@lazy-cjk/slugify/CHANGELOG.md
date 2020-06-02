@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.16...@lazy-cjk/slugify@1.0.17) (2020-06-02)
+
+
+### Features
+
+* support slugify for korean japanese ([9b005fd](https://github.com/bluelovers/ws-regexp/commit/9b005fda87002ae09c86293d11cad30d22e69110))
+
+
+
+
+
 ## [1.0.16](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.15...@lazy-cjk/slugify@1.0.16) (2020-06-02)
 
 **Note:** Version bump only for package @lazy-cjk/slugify
