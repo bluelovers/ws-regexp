@@ -4,6 +4,9 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.table_same = void 0;
+/**
+ * 不轉換的共用字
+ */
 exports.table_same = [
     // 不轉換的共用字
     '札',
@@ -139,6 +142,7 @@ exports.table_same = [
     '喦',
     '巖',
     '岩',
+    '劄',
 ];
 exports.default = exports.table_same;
 //# sourceMappingURL=table_same.js.map

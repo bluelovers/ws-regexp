@@ -2,6 +2,9 @@
  * Created by user on 2020/5/23.
  */
 
+/**
+ * 不轉換的共用字
+ */
 export const table_same = [
 	// 不轉換的共用字
 	'札',
@@ -160,6 +163,8 @@ export const table_same = [
 	'喦',
 	'巖',
 	'岩',
+
+	'劄',
 
 ];
 
