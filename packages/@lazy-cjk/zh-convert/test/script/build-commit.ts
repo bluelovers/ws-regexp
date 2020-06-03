@@ -130,7 +130,7 @@ interface IOldKeysCache
 	new_changes.table_cn2tw
 		.forEach(([c, oc, nc]) =>
 		{
-			msg_body.push(`\t${c}: { ${oc} => ${nc} }`);
+			msg_body.push(`- ${c}: { ${oc} => ${nc} }`);
 		})
 	;
 
@@ -145,7 +145,7 @@ interface IOldKeysCache
 	new_changes.table_tw2cn
 		.forEach(([c, oc, nc]) =>
 		{
-			msg_body.push(`\t${c}: { ${oc} => ${nc} }`);
+			msg_body.push(`- ${c}: { ${oc} => ${nc} }`);
 		})
 	;
 
