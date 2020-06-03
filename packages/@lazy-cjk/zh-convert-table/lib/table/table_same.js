@@ -143,6 +143,22 @@ exports.table_same = [
     '巖',
     '岩',
     '劄',
+    '噪',
+    '譟',
+    '彫',
+    '雕',
+    '衊',
+    '蔑',
+    '蒙',
+    '濛',
+    '矇',
+    '懞',
+    '啣',
+    '碹',
+    '嫺',
+    '鞦',
+    '鬨',
+    '譁',
 ];
 exports.default = exports.table_same;
 //# sourceMappingURL=table_same.js.map

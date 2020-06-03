@@ -456,6 +456,8 @@ Object
 
 		'箋': '笺',
 
+		'嫻': '娴',
+
 	})
 	.forEach(function (v)
 	{
