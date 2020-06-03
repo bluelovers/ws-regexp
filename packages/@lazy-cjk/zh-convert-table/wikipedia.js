@@ -1,6 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.wiki_t2s_v2 = exports.wiki_s2t_v2 = exports.wiki_t2s = exports.wiki_s2t = void 0;
+/**
+ * Wikipedia:繁简处理/简繁单字
+ * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%AE%80%E7%B9%81%E5%8D%95%E5%AD%97
+ */
 exports.wiki_s2t = {
     "䌶": "䊷",
     "䜥": "𧩙",
@@ -2401,6 +2405,10 @@ exports.wiki_s2t = {
     "龛": "龕",
     "龟": "龜",
 };
+/**
+ * Wikipedia:繁简处理/繁简单字
+ * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%B9%81%E7%AE%80%E5%8D%95%E5%AD%97
+ */
 exports.wiki_t2s = {
     "䊷": "䌶",
     "𧩙": "䜥",
@@ -5124,6 +5132,10 @@ exports.wiki_t2s = {
     "龕": "龛",
     "龜": "龟",
 };
+/**
+ * Wikipedia:繁简处理/简繁单字
+ * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%AE%80%E7%B9%81%E5%8D%95%E5%AD%97
+ */
 exports.wiki_s2t_v2 = {
     "䌶": "䊷",
     "䜥": "𧩙",
@@ -7524,6 +7536,10 @@ exports.wiki_s2t_v2 = {
     "龛": "龕",
     "龟": "龜",
 };
+/**
+ * Wikipedia:繁简处理/繁简单字
+ * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%B9%81%E7%AE%80%E5%8D%95%E5%AD%97
+ */
 exports.wiki_t2s_v2 = {
     "䊷": "䌶",
     "𧩙": "䜥",

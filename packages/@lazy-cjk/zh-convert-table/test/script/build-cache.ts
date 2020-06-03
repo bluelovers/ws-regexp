@@ -14,13 +14,22 @@ import emitTsFiles from 'build-ts-file';
 
 	lines.push(`import { ITable } from './lib/types';`);
 
-	lines.push(`export const wiki_s2t: ITable = {\n${printTable(wiki_s2t).join('\n')}\n};`);
+	let tsdoc_s2t = `/**
+ * Wikipedia:繁简处理/简繁单字
+ * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%AE%80%E7%B9%81%E5%8D%95%E5%AD%97
+ */`;
+	let tsdoc_t2s = `/**
+ * Wikipedia:繁简处理/繁简单字
+ * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%B9%81%E7%AE%80%E5%8D%95%E5%AD%97
+ */`;
 
-	lines.push(`export const wiki_t2s: ITable = {\n${printTable(wiki_t2s).join('\n')}\n};`);
+	lines.push(`${tsdoc_s2t}\nexport const wiki_s2t: ITable = {\n${printTable(wiki_s2t).join('\n')}\n};`);
 
-	lines.push(`export const wiki_s2t_v2: ITable = {\n${printTable(wiki_s2t_v2).join('\n')}\n};`);
+	lines.push(`${tsdoc_t2s}\nexport const wiki_t2s: ITable = {\n${printTable(wiki_t2s).join('\n')}\n};`);
 
-	lines.push(`export const wiki_t2s_v2: ITable = {\n${printTable(wiki_t2s_v2).join('\n')}\n};`);
+	lines.push(`${tsdoc_s2t}\nexport const wiki_s2t_v2: ITable = {\n${printTable(wiki_s2t_v2).join('\n')}\n};`);
+
+	lines.push(`${tsdoc_t2s}\nexport const wiki_t2s_v2: ITable = {\n${printTable(wiki_t2s_v2).join('\n')}\n};`);
 
 	lines.push(`export default exports as typeof import('./wikipedia');`);
 
