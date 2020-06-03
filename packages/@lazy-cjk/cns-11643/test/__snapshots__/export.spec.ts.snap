@@ -2,16 +2,28 @@
 
 exports[`import check 1`] = `
 Array [
+  "zhuyin2pinyin_01_table",
+  "zhuyin2pinyin_01",
   "uni2pinyin_01",
   "char2pinyin_01",
+  "zhuyin2pinyin_02_table",
+  "zhuyin2pinyin_02",
   "uni2pinyin_02",
   "char2pinyin_02",
   "char2uni",
   "uni2char",
   "char2hex",
   "hex2char",
+  "uni2hex",
+  "uni2zhuyin_table",
   "uni2zhuyin",
+  "uni2zhuyin_all",
   "char2zhuyin",
+  "char2zhuyin_all",
+  "newCharMatchRegExp",
+  "isExistsChar",
+  "replaceChar",
+  "splitChar",
   "default",
 ]
 `;

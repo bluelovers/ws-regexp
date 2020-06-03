@@ -20,28 +20,28 @@ Array [
 
 exports[`char2pinyin_01 𡬶 1`] = `
 Array [
-  "xun2",
-  "shiun2",
-  "syun2",
-  "hsun2",
+  "xin2",
+  "shin2",
+  "syin2",
+  "hsin2",
 ]
 `;
 
 exports[`char2pinyin_01 𢎐 1`] = `
 Array [
-  "er4",
-  "er4",
-  "er4",
-  "erh4",
+  "shang4",
+  "shang4",
+  "shang4",
+  "shang4",
 ]
 `;
 
 exports[`char2pinyin_01 𣛙 1`] = `
 Array [
-  "yao4",
-  "yau4",
-  "yau4",
-  "yao4",
+  "shuo4",
+  "shuo4",
+  "shwo4",
+  "shuo4",
 ]
 `;
 
@@ -74,28 +74,28 @@ Array [
 
 exports[`char2pinyin_02 𡬶 1`] = `
 Array [
-  "xún",
-  "shiún",
-  "syún",
-  "hsün2",
+  "xín",
+  "shīn",
+  "syīn",
+  "hsin2",
 ]
 `;
 
 exports[`char2pinyin_02 𢎐 1`] = `
 Array [
-  "èr",
-  "èr",
-  "èr",
-  "êrh4",
+  "shàng",
+  "shàng",
+  "shàng",
+  "shang4",
 ]
 `;
 
 exports[`char2pinyin_02 𣛙 1`] = `
 Array [
-  "yào",
-  "yàu",
-  "yàu",
-  "yao4",
+  "shuò",
+  "shuò",
+  "shwò",
+  "shuo4",
 ]
 `;
 

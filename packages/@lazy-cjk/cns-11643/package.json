@@ -35,7 +35,7 @@
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:jest",
-    "test:jest": "jest --coverage",
+    "test:jest": "jest",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "build:cache": "ts-node ./test/script/build-cache.ts",
     "build:data": "yarn run build:cache && yarn run build:zhuyin",
@@ -66,5 +66,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "c9c354cd9057ce56c65d8f0c0cd42ff4eb4dff85"
 }
