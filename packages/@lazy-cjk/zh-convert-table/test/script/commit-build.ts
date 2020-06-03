@@ -19,9 +19,8 @@ CrossSpawn.async('git', [
 	'wikipedia.d.ts',
 	'wikipedia.js',
 
-	'lib/table/table_same.ts',
-	'lib/table/table_same.d.ts',
-	'lib/table/table_same.js',
+	'lib/',
+	'test/',
 
 	'table_cn2tw.json',
 	'table_tw2cn.json',
