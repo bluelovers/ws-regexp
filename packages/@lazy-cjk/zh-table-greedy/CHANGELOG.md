@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-greedy@1.0.19...@lazy-cjk/zh-table-greedy@1.0.20) (2020-06-03)
+
+
+### Bug Fixes
+
+* make sure build is work ([3dddc3f](https://github.com/bluelovers/ws-regexp/commit/3dddc3f6bf9f7be2d3f482452fb78dc2a256b713))
+
+
+### Features
+
+* zh-table-greedy 劄 ([0908f54](https://github.com/bluelovers/ws-regexp/commit/0908f5435af3d523946e87fec2d2c8b7cc6269d9))
+* zh-table-greedy 噪|譟|凋|彫|琱|雕|鵰|蔑|衊|汙|汚|污|誣|诬|暗|闇|黯|幪|懞|懵|曚|朦|濛|矇|蒙|摆|擺|襬|掺|搀|摻|攙|啣|衔|銜|偷|媮|旋|漩|碹|鏇|镟|淡|澹|徨|惶|皇|秋|鞦|哄|閧|鬨 ([7c43f97](https://github.com/bluelovers/ws-regexp/commit/7c43f97acdeea218195ea7db80ee37287b52b69f))
+
+
+
+
+
 ## [1.0.19](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-greedy@1.0.18...@lazy-cjk/zh-table-greedy@1.0.19) (2020-06-02)
 
 

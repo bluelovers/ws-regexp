@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/cns-11643@1.0.5...@lazy-cjk/cns-11643@1.0.6) (2020-06-03)
+
+
+### Bug Fixes
+
+* test script ([5757088](https://github.com/bluelovers/ws-regexp/commit/5757088c39c2fac8e63562b1e63ca93f5a925565))
+
+
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/cns-11643@1.0.4...@lazy-cjk/cns-11643@1.0.5) (2020-05-31)
 
 

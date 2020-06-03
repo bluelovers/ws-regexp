@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert-table@1.0.7...@lazy-cjk/zh-convert-table@1.0.8) (2020-06-03)
+
+
+### Bug Fixes
+
+* test script ([5757088](https://github.com/bluelovers/ws-regexp/commit/5757088c39c2fac8e63562b1e63ca93f5a925565))
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert-table@1.0.6...@lazy-cjk/zh-convert-table@1.0.7) (2020-06-02)
 
 **Note:** Version bump only for package @lazy-cjk/zh-convert-table

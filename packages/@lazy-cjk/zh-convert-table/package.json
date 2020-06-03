@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-convert-table",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "簡繁轉換表",
   "keywords": [
     "char",
