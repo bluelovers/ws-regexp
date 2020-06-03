@@ -529,6 +529,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 偷|媮 1`] = `
+Array [
+  "偷",
+  "媮",
+]
+`;
+
 exports[`validate char of map 傁|叟 1`] = `
 Array [
   "傁",
@@ -720,6 +727,16 @@ exports[`validate char of map 冶|治 1`] = `
 Array [
   "冶",
   "治",
+]
+`;
+
+exports[`validate char of map 凋|彫|琱|雕|鵰 1`] = `
+Array [
+  "凋",
+  "彫",
+  "琱",
+  "雕",
+  "鵰",
 ]
 `;
 
@@ -1050,6 +1067,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 哄|閧|鬨 1`] = `
+Array [
+  "哄",
+  "閧",
+  "鬨",
+]
+`;
+
 exports[`validate char of map 哏|梗 1`] = `
 Array [
   "哏",
@@ -1090,6 +1115,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 啣|衔|銜 1`] = `
+Array [
+  "啣",
+  "衔",
+  "銜",
+]
+`;
+
 exports[`validate char of map 喧|宣|暄|諠 1`] = `
 Array [
   "喧",
@@ -1121,6 +1154,13 @@ Array [
   "恶",
   "悪",
   "惡",
+]
+`;
+
+exports[`validate char of map 噪|譟 1`] = `
+Array [
+  "噪",
+  "譟",
 ]
 `;
 
@@ -1387,6 +1427,19 @@ Array [
 ]
 `;
 
+exports[`validate char of map 幪|懞|懵|曚|朦|濛|矇|蒙 1`] = `
+Array [
+  "幪",
+  "懞",
+  "懵",
+  "曚",
+  "朦",
+  "濛",
+  "矇",
+  "蒙",
+]
+`;
+
 exports[`validate char of map 幵|开|開 1`] = `
 Array [
   "幵",
@@ -1434,6 +1487,14 @@ Array [
   "録",
   "陆",
   "陸",
+]
+`;
+
+exports[`validate char of map 徨|惶|皇 1`] = `
+Array [
+  "徨",
+  "惶",
+  "皇",
 ]
 `;
 
@@ -1613,10 +1674,27 @@ Array [
 ]
 `;
 
+exports[`validate char of map 掺|搀|摻|攙 1`] = `
+Array [
+  "掺",
+  "搀",
+  "摻",
+  "攙",
+]
+`;
+
 exports[`validate char of map 揹|背 1`] = `
 Array [
   "揹",
   "背",
+]
+`;
+
+exports[`validate char of map 摆|擺|襬 1`] = `
+Array [
+  "摆",
+  "擺",
+  "襬",
 ]
 `;
 
@@ -1651,6 +1729,24 @@ Array [
   "鬥",
   "鬪",
   "鬭",
+]
+`;
+
+exports[`validate char of map 旋|漩|碹|鏇|镟 1`] = `
+Array [
+  "旋",
+  "漩",
+  "碹",
+  "鏇",
+  "镟",
+]
+`;
+
+exports[`validate char of map 暗|闇|黯 1`] = `
+Array [
+  "暗",
+  "闇",
+  "黯",
 ]
 `;
 
@@ -1766,6 +1862,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 汙|汚|污|誣|诬 1`] = `
+Array [
+  "汙",
+  "汚",
+  "污",
+  "誣",
+  "诬",
+]
+`;
+
 exports[`validate char of map 沈|沉 1`] = `
 Array [
   "沈",
@@ -1821,6 +1927,13 @@ Array [
   "漲",
   "胀",
   "脹",
+]
+`;
+
+exports[`validate char of map 淡|澹 1`] = `
+Array [
+  "淡",
+  "澹",
 ]
 `;
 
@@ -1929,6 +2042,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 秋|鞦 1`] = `
+Array [
+  "秋",
+  "鞦",
+]
+`;
+
 exports[`validate char of map 穀|糓|谷 1`] = `
 Array [
   "穀",
@@ -2025,6 +2145,13 @@ Array [
   "臘",
   "蜡",
   "蠟",
+]
+`;
+
+exports[`validate char of map 蔑|衊 1`] = `
+Array [
+  "蔑",
+  "衊",
 ]
 `;
 
