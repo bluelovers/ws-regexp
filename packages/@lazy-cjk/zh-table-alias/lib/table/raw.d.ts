@@ -95,6 +95,9 @@ export declare const table_jp_core: {
     readonly 併: readonly ["倂", "併"];
     readonly 幷: readonly ["并"];
     readonly 并: readonly ["幷"];
+    readonly 矇: readonly ["蒙"];
+    readonly 濛: readonly ["蒙"];
+    readonly 懞: readonly ["蒙"];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -356,4 +359,8 @@ export declare const table_plus_core: {
     readonly 贑: readonly ["贑", "𫎬"];
     readonly 崖: readonly ["崖", "崕", "厓"];
     readonly 岩: readonly ["岩", "巖", "巗", "巌"];
+    readonly 灕: readonly ["灕", "漓"];
+    readonly 粘: readonly ["粘", "黏"];
+    readonly 娴: readonly ["娴", "嫺", "嫻"];
+    readonly 哗: readonly ["哗", "嘩", "譁"];
 };
