@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._tw2cn = exports._cn2tw = void 0;
-const table_1 = require("@lazy-cjk/zh-convert/lib/table");
+const table_1 = require("./table");
 const map_1 = require("./core/map");
 function _cn2tw(text) {
     return map_1.textMap(text, table_1.table_cn2tw);

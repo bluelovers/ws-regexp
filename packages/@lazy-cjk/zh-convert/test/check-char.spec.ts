@@ -11,14 +11,14 @@ describe(`check char`, () =>
 
 			test(`${c} cn2tw ${t}`, () =>
 			{
-				expect(c).toStrictEqual(t);
+				expect(c).not.toStrictEqual(t);
 				expect(cn2tw(c)).toStrictEqual(t);
 
 			});
 
 			test(` ${t} tw2cn ${c}`, () =>
 			{
-				expect(t).toStrictEqual(c);
+				expect(t).not.toStrictEqual(c);
 				expect(tw2cn(t)).toStrictEqual(c);
 			});
 

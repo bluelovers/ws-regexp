@@ -2751,7 +2751,8 @@ export const table_cn2tw: ITable = {
 	"彷": "彷",
 	"喦": "喦",
 	"巖": "巖",
-	"岩": "岩"
+	"岩": "岩",
+	"劄": "劄"
 };
 
 export const table_tw2cn: ITable = {
@@ -2932,7 +2933,7 @@ export const table_tw2cn: ITable = {
 	"劍": "剑",
 	"剝": "剥",
 	"劇": "剧",
-	"劄": "札",
+	"劄": "劄",
 	"劒": "剑",
 	"勸": "劝",
 	"辦": "办",

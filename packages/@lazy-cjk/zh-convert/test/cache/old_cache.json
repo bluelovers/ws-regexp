@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.table_tw2cn = exports.table_cn2tw = void 0;
-exports.table_cn2tw = {
+{
+  "table_cn2tw": {
     "万": "萬",
     "与": "與",
     "丑": "醜",
@@ -2752,8 +2750,8 @@ exports.table_cn2tw = {
     "巖": "巖",
     "岩": "岩",
     "劄": "劄"
-};
-exports.table_tw2cn = {
+  },
+  "table_tw2cn": {
     "萬": "万",
     "與": "与",
     "醜": "丑",
@@ -6000,5 +5998,5 @@ exports.table_tw2cn = {
     "筱": "筱",
     "彷": "彷",
     "岩": "岩"
-};
-//# sourceMappingURL=table.js.map
+  }
+}
