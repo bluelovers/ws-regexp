@@ -1,7 +1,8 @@
-import { _greedyTableCacheRegexp } from '../lib/table/re';
+// @ts-ignore
+import { _greedyTableCacheRegexp } from '../lib/table/re.ts';
 import { reToStringList } from '../lib/util';
 import { _re_cjk_conv } from 'regexp-cjk/lib/util';
-import { _greedyTableCacheTest } from '../lib/table';
+import { _greedyTableCacheTest } from '../lib/table.js';
 
 const reTest = _re_cjk_conv('u');
 

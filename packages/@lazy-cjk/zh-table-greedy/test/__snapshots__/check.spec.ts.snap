@@ -785,9 +785,10 @@ Array [
 ]
 `;
 
-exports[`validate char of map 剳|扎|札|箚|紮 1`] = `
+exports[`validate char of map 剳|劄|扎|札|箚|紮 1`] = `
 Array [
   "剳",
+  "劄",
   "扎",
   "札",
   "箚",
