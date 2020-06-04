@@ -12,7 +12,8 @@
     "lerna:publish": "yarn run prepublishOnly && npx lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "yarn run prepublishOnly && npx lerna publish --yes --cd-version patch && yarn run postpublishOnly",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn-tool ws run --scope cjk-conv prepublishOnly && yarn-tool ws run prepublishOnly:lerna",
+    "prepublish:fix-links": "npx @yarn-tool/fix-ws-links",
+    "prepublishOnly": "yarn run prepublish:fix-links && yarn-tool ws run --scope cjk-conv prepublishOnly && yarn-tool ws run prepublishOnly:lerna",
     "postpublishOnly": "yarn run postpublish:subtree",
     "postpublish:subtree": "ts-node ./script/run/postpublish-subtree.ts",
     "postpublish:subtree:cjk-conv": "git subtree push cjk-conv master --prefix packages/cjk-conv",
@@ -28,6 +29,7 @@
     "@types/jest": "^25.2.3",
     "@types/node": "*",
     "@yarn-tool/find-tsconfig": "^1.0.9",
+    "@yarn-tool/fix-ws-links": "^1.0.5",
     "build-ts-file": "^1.0.8",
     "jest": "^26.0.1",
     "ts-jest": "^26.1.0"
