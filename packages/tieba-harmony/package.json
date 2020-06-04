@@ -1,6 +1,6 @@
 {
   "name": "tieba-harmony",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "百度貼吧 關鍵字 和諧/反和諧 unescape / escape tieba harmony keywords",
   "keywords": [
     "big5",
@@ -36,13 +36,13 @@
     "unicode",
     "word"
   ],
-  "homepage": "https://github.com/bluelovers/node-tieba-harmony#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/tieba-harmony#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/node-tieba-harmony/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/node-tieba-harmony.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -57,6 +57,7 @@
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run test",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort"
