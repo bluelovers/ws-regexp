@@ -2,6 +2,8 @@
  * Created by user on 2018/1/31/031.
  */
 
+import { array_unique } from 'array-hyper-unique';
+
 /**
  * 和諧/河蟹
  *
@@ -205,14 +207,4 @@ export const table3 = array_unique([
 	['娼妓', '女昌妓', '女昌女支'],
 ]);
 
-export function array_unique<T>(array: Partial<T>[]): Partial<T>[]
-{
-	return array.filter(function (el, index, arr)
-	{
-		return index == arr.indexOf(el);
-	});
-}
-
-import * as self from './table';
-export default self;
-//export default exports;
+export default exports as typeof import('./table');

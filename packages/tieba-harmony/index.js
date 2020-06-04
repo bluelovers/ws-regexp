@@ -2,12 +2,20 @@
 /**
  * Created by user on 2018/1/31/031.
  */
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.splitChar = exports.loopTable = exports.getTable = exports.unescape = exports.escape = exports.SP_REGEXP_STRICT = exports.SP_ESCAPE = exports.SP_REGEXP_UNSAFE = exports.SP_REGEXP = exports.SP_KEY = void 0;
 const regexp_cjk_1 = require("regexp-cjk");
-__export(require("./table"));
+__exportStar(require("./table"), exports);
 const table_1 = require("./table");
 exports.SP_KEY = '#_@_#';
 exports.SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・·]|\\*|□|圌|[=＝]|\\\\\\\\|\\\/\\\/|｜)';
@@ -116,5 +124,5 @@ function splitChar(s) {
     return s.split('');
 }
 exports.splitChar = splitChar;
-const self = require("./index");
-exports.default = self;
+exports.default = exports;
+//# sourceMappingURL=index.js.map

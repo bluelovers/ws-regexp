@@ -28,5 +28,5 @@ export interface ICache {
 }
 export declare function loopTable(cb: (value: string, index: number, array: string[], options: IOptions, cache?: ICache) => any, options: IOptions): any;
 export declare function splitChar(s: string): string[];
-import * as self from './index';
-export default self;
+declare const _default: typeof import(".");
+export default _default;

@@ -3,7 +3,7 @@
  */
 
 import { array_unique } from 'array-hyper-unique';
-import { arrCjk } from '../lib/util';
+import { arrCjk } from '@lazy-cjk/zh-table-list/list';
 
 /**
  * 會變成 **
@@ -75,6 +75,4 @@ export const sep = [
 	'（河蟹）',
 ];
 
-
-import * as self from './tieba';
-export default self;
+export default exports as typeof import('./tieba');

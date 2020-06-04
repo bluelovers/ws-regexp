@@ -1,11 +1,15 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayToRegExp = exports.arraySep = exports.splitZh = exports.arrCjk = exports.array_unique = void 0;
 const array_hyper_unique_1 = require("array-hyper-unique");
-exports.array_unique = array_hyper_unique_1.array_unique;
-const list_1 = require("cjk-conv/lib/zh/table/list");
-exports.arrCjk = list_1.arrCjk;
-const regexp_cjk_1 = require("regexp-cjk");
-const uni_string_1 = require("uni-string");
+Object.defineProperty(exports, "array_unique", { enumerable: true, get: function () { return array_hyper_unique_1.array_unique; } });
+const list_1 = require("@lazy-cjk/zh-table-list/list");
+Object.defineProperty(exports, "arrCjk", { enumerable: true, get: function () { return list_1.arrCjk; } });
+const regexp_cjk_1 = __importDefault(require("regexp-cjk"));
+const uni_string_1 = __importDefault(require("uni-string"));
 function splitZh(s) {
     return s
         .split(/([\u4E00-\u9FFF\u{20000}-\u{2FA1F}])/u)
@@ -50,3 +54,4 @@ function arrayToRegExp(arr, unique = true) {
     return ret;
 }
 exports.arrayToRegExp = arrayToRegExp;
+//# sourceMappingURL=util.js.map

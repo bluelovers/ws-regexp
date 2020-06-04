@@ -3,12 +3,14 @@
  * Created by user on 2018/1/31/031.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.table3 = exports.table2 = exports.table = void 0;
+const array_hyper_unique_1 = require("array-hyper-unique");
 /**
  * 和諧/河蟹
  *
  * @type {string[][]}
  */
-exports.table = array_unique([
+exports.table = array_hyper_unique_1.array_unique([
     '噁心',
     '触手',
     '白痴',
@@ -183,22 +185,15 @@ exports.table = array_unique([
  *
  * @type {string[][]}
  */
-exports.table2 = array_unique([
+exports.table2 = array_hyper_unique_1.array_unique([
     ['裸体', '果体', new String('裸$2')],
     ['奴隷', '奴隶',],
 ]);
-exports.table3 = array_unique([
+exports.table3 = array_hyper_unique_1.array_unique([
     ['強姦', '弓虽姦'],
     ['強奸', '弓虽女干', '弓虽奸'],
     ['娼婦', '女昌妇'],
     ['娼妓', '女昌妓', '女昌女支'],
 ]);
-function array_unique(array) {
-    return array.filter(function (el, index, arr) {
-        return index == arr.indexOf(el);
-    });
-}
-exports.array_unique = array_unique;
-const self = require("./table");
-exports.default = self;
-//export default exports;
+exports.default = exports;
+//# sourceMappingURL=table.js.map

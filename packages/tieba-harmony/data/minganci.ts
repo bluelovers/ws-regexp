@@ -9388,5 +9388,4 @@ export const data = {
 	]
 };
 
-import * as self from './minganci';
-export default self;
+export default exports as typeof import('./minganci');

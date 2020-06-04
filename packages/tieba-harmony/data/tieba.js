@@ -3,13 +3,14 @@
  * Created by user on 2018/5/30/030.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.sep = exports.data = exports.block = exports.star = void 0;
 const array_hyper_unique_1 = require("array-hyper-unique");
-const util_1 = require("../lib/util");
+const list_1 = require("@lazy-cjk/zh-table-list/list");
 /**
  * 會變成 **
  * @type {string[]}
  */
-exports.star = util_1.arrCjk([
+exports.star = list_1.arrCjk([
     '下流',
     '下賤',
     '你媽',
@@ -52,7 +53,7 @@ exports.star.sort();
  * 被吞
  * @type {string[]}
  */
-exports.block = util_1.arrCjk([
+exports.block = list_1.arrCjk([
     '尼玛',
 ]);
 exports.block.sort();
@@ -68,5 +69,5 @@ exports.sep = [
     '（和谐）',
     '（河蟹）',
 ];
-const self = require("./tieba");
-exports.default = self;
+exports.default = exports;
+//# sourceMappingURL=tieba.js.map

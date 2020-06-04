@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.data = void 0;
 /**
  * https://github.com/FangHeXie/download
  */
@@ -9388,5 +9389,5 @@ exports.data = {
         ["花", "huā"]
     ]
 };
-const self = require("./minganci");
-exports.default = self;
+exports.default = exports;
+//# sourceMappingURL=minganci.js.map

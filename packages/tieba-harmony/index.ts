@@ -3,9 +3,10 @@
  */
 
 import { create, IApi } from 'regexp-cjk';
+import { array_unique } from 'array-hyper-unique';
 
 export * from './table';
-import { table, table2, table3, array_unique } from './table';
+import { table, table2, table3 } from './table';
 
 export const SP_KEY = '#_@_#';
 
@@ -193,6 +194,4 @@ export function splitChar(s: string): string[]
 	return s.split('');
 }
 
-import * as self from './index';
-
-export default self;
+export default exports as typeof import('./index');

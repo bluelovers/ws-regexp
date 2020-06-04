@@ -6,5 +6,5 @@ export declare const data: {
     medium: string[][];
     high: string[][];
 };
-import * as self from './minganci';
-export default self;
+declare const _default: typeof import("./minganci");
+export default _default;
