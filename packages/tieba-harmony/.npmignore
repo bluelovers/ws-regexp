@@ -1,0 +1,72 @@
+# Created by .ignore support plugin (hsz.mobi)
+/test/
+/.idea/
+/docs/
+/package-lock.json
+
+### temp template
+/~*
+~ci.list.txt
+~ci.log.txt
+~ci.errors.txt
+
+*.stackdump
+*.bak
+*.old
+
+/*.log
+/*.lock
+
+*.tmp
+
+### npm2 template
+.idea
+
+
+
+tsconfig.json
+package-lock.json
+
+test
+
+.github
+.gitkeep
+
+/.*
+
+tests
+
+
+
+
+__test__
+__tests__
+
+/node_modules/
+**/node_modules/
+### jsonly template
+*.ts
+!*.d.ts
+### tsonly_test template
+test/*.js
+test/*.d.ts
+### jsonly_bin template
+bin/*.ts
+bin/*.d.ts
+### test template
+*.spec.ts
+*.spec.js
+*.spec.js.map
+*.test.ts
+*.test.js
+*.test.js.map
+
+
+tests/*.js
+tests/*.d.ts
+
+__test__/*.js
+__test__/*.d.ts
+
+__tests__/*.js
+__tests__/*.d.ts

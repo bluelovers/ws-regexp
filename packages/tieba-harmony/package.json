@@ -1,0 +1,69 @@
+{
+  "name": "tieba-harmony",
+  "version": "2.0.0",
+  "description": "百度貼吧 關鍵字 和諧/反和諧 unescape / escape tieba harmony keywords",
+  "keywords": [
+    "big5",
+    "block",
+    "charset",
+    "check",
+    "chinese",
+    "escape",
+    "euc-jp",
+    "expression",
+    "gb2312",
+    "gbk",
+    "generator",
+    "harmony",
+    "is",
+    "javascript",
+    "keywords",
+    "match",
+    "node-novel",
+    "novel",
+    "novel-text",
+    "parse",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression",
+    "test",
+    "tieba",
+    "tool",
+    "type",
+    "unescape",
+    "unicode",
+    "word"
+  ],
+  "homepage": "https://github.com/bluelovers/node-tieba-harmony#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/node-tieba-harmony/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/node-tieba-harmony.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "array-hyper-unique": "^1.0.7",
+    "bluebird": "^3.5.3",
+    "cjk-conv": "^1.0.109",
+    "crlf-normalize": "^1.0.2",
+    "debug-color2": "^1.0.6",
+    "diff": "^3.5.0",
+    "regexp-cjk": "^2.0.13",
+    "uni-string": "^1.1.0"
+  },
+  "devDependencies": {
+    "random-extra": "^2.8.0"
+  }
+}
