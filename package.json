@@ -5,6 +5,7 @@
   "workspaces": [
     "packages/@lazy-cjk/*",
     "packages/@regexp-cjk/*",
+    "packages/@node-novel/*",
     "packages/*"
   ],
   "scripts": {
