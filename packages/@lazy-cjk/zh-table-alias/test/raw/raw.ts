@@ -1765,6 +1765,7 @@ export const table_plus_core = {
 		'亜',
 		'氷',
 		'县',
+		'肅',
 	] as const),
 
 	'侮': [
@@ -1876,6 +1877,11 @@ export const table_plus_core = {
 		'哗',
 		'嘩',
 		'譁',
+	],
+
+	'拔': [
+		'拔',
+		'抜',
 	],
 
 } as const;

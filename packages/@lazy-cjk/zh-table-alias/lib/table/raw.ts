@@ -1547,6 +1547,11 @@ export const table_plus_core = {
 		"縣",
 		"县"
 	],
+	"肅": [
+		"粛",
+		"肅",
+		"肃"
+	],
 	"侮": [
 		"侮",
 		"侮"
@@ -1637,6 +1642,10 @@ export const table_plus_core = {
 		"哗",
 		"嘩",
 		"譁"
+	],
+	"拔": [
+		"拔",
+		"抜"
 	]
 } as const;
 

@@ -343,6 +343,7 @@ export declare const table_plus_core: {
     readonly 亜: readonly ["亞", "亜", "亚"];
     readonly 氷: readonly ["冰", "氷"];
     readonly 县: readonly ["県", "縣", "县"];
+    readonly 肅: readonly ["粛", "肅", "肃"];
     readonly 侮: readonly ["侮", "侮"];
     readonly 沉: readonly ["沉", "沈"];
     readonly 嚐: readonly ["嚐", "嘗", "尝"];
@@ -363,4 +364,5 @@ export declare const table_plus_core: {
     readonly 粘: readonly ["粘", "黏"];
     readonly 娴: readonly ["娴", "嫺", "嫻"];
     readonly 哗: readonly ["哗", "嘩", "譁"];
+    readonly 拔: readonly ["拔", "抜"];
 };
