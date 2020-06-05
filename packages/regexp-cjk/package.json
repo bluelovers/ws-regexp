@@ -90,8 +90,8 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.0",
-    "cjk-conv": "^1.2.75",
+    "@lazy-cjk/zh-table-list": "^1.0.15",
+    "array-hyper-unique": "^1.1.2",
     "lodash": "^4.17.15",
     "regexp-helper": "^1.0.10",
     "regexp-parser-event": "^1.1.7",

@@ -78,7 +78,7 @@
   },
   "dependencies": {
     "@lazy-cjk/static-build-zh-convert": "^1.0.9",
-    "array-hyper-unique": "^1.1.0",
+    "array-hyper-unique": "^1.1.2",
     "regexp-helper": "^1.0.10",
     "uni-string": "^1.1.2"
   },

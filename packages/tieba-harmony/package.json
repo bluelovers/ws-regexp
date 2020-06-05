@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@lazy-cjk/zh-table-list": "^1.0.15",
-    "array-hyper-unique": "^1.1.0",
+    "array-hyper-unique": "^1.1.2",
     "regexp-cjk": "^3.3.41",
     "uni-string": "^1.1.2"
   }

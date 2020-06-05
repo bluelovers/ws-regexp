@@ -46,7 +46,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.0",
+    "array-hyper-unique": "^1.1.2",
     "fill-range": "^7.0.1",
     "japanese": "^1.2.0"
   }

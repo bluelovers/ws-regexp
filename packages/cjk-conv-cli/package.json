@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
-    "array-hyper-unique": "^1.1.0",
+    "array-hyper-unique": "^1.1.2",
     "bluebird": "^3.7.2",
     "cjk-conv": "^1.2.75",
     "crlf-normalize": "^1.0.3",
