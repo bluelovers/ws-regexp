@@ -10,7 +10,7 @@ exports._coreFn = exports.createZhRegExpPlugin = void 0;
 const array_hyper_unique_1 = require("array-hyper-unique");
 const fullhalf_1 = require("str-util/lib/fullhalf");
 const core_1 = __importDefault(require("uni-string/src/core"));
-const table_voice_1 = __importDefault(require("cjk-conv/lib/jp/table_voice"));
+const jp_table_voice_1 = __importDefault(require("@lazy-cjk/jp-table-voice"));
 const deburr_1 = __importDefault(require("lodash/deburr"));
 const plugin_1 = require("regexp-cjk/lib/plugin");
 /**
@@ -128,7 +128,7 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
     }
     else {
         if (autoVoice) {
-            let ret = table_voice_1.default(raw);
+            let ret = jp_table_voice_1.default(raw);
             ret && arr.push(...ret);
         }
         if (autoFullHaif) {

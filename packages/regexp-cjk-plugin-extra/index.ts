@@ -3,7 +3,6 @@
  */
 
 import { array_unique_overwrite } from 'array-hyper-unique'
-import StrUtil from 'str-util';
 import {
 	FullHalfCore,
 	toFullNumber,
@@ -13,10 +12,9 @@ import {
 	toFullWidth,
 	toHalfWidth,
 } from 'str-util/lib/fullhalf';
-import { _get as _getArrayTable } from 'cjk-conv/lib/zh/table/table';
 import { IOptionsOn } from 'regexp-cjk/lib/core';
 import UString from 'uni-string/src/core';
-import getVoiceAll from 'cjk-conv/lib/jp/table_voice';
+import getVoiceAll from '@lazy-cjk/jp-table-voice';
 import { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
 import deburr from 'lodash/deburr';
 import { astNotChanged } from 'regexp-cjk/lib/plugin';

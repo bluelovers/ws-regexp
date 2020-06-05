@@ -77,15 +77,16 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.0",
+    "array-hyper-unique": "^1.1.2",
     "lodash": "^4.17.15",
     "str-util": "^2.3.21",
     "uni-string": "^1.1.2"
   },
   "devDependencies": {},
   "peerDependencies": {
-    "cjk-conv": "^1.2.74",
-    "regexp-cjk": "^3.3.40",
+    "@lazy-cjk/jp-table-voice": "^1.0.6",
+    "cjk-conv": "^1.2.75",
+    "regexp-cjk": "^3.3.41",
     "regexp-parser-event": "^1.1.7"
   }
 }
