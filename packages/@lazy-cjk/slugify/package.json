@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/slugify",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "Unicode to Latin transliteration + slugify module",
   "keywords": [
     "char",
@@ -73,10 +73,10 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/cns-11643": "^1.0.7",
-    "@lazy-cjk/japanese": "^1.2.5",
+    "@lazy-cjk/cns-11643": "^1.0.8",
+    "@lazy-cjk/japanese": "^1.2.6",
     "@lazy-cjk/korean-romanize": "^1.0.5",
-    "@lazy-cjk/zh-slugify": "^1.0.17",
+    "@lazy-cjk/zh-slugify": "^1.0.18",
     "@sindresorhus/transliterate": "^0.1.0",
     "emoji.json": "^12.1.1",
     "escape-string-regexp": "^4.0.0",

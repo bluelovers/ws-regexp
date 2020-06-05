@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/novel-filename",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "keywords": [
     "char",
@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "@lazy-cjk/jp-table-convert": "^1.0.7",
-    "@lazy-cjk/zh-convert": "^1.0.8"
+    "@lazy-cjk/zh-convert": "^1.0.9"
   },
   "publishConfig": {
     "access": "public"
