@@ -78,13 +78,11 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
-    "lodash.deburr": "^4.1.0",
+    "lodash": "^4.17.15",
     "str-util": "^2.3.21",
     "uni-string": "^1.1.2"
   },
-  "devDependencies": {
-    "@types/lodash.deburr": "^4.1.6"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "cjk-conv": "^1.2.74",
     "regexp-cjk": "^3.3.40",

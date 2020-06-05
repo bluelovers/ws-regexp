@@ -18,7 +18,7 @@ import { IOptionsOn } from 'regexp-cjk/lib/core';
 import UString from 'uni-string/src/core';
 import getVoiceAll from 'cjk-conv/lib/jp/table_voice';
 import { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
-import deburr = require('lodash.deburr');
+import deburr from 'lodash/deburr';
 import { astNotChanged } from 'regexp-cjk/lib/plugin';
 
 export type ICacheMap = Map<string, string[]>

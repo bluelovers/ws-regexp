@@ -69,12 +69,7 @@
     "fs-iconv": "^3.0.5",
     "yargs": "^15.3.1"
   },
-  "devDependencies": {
-    "@types/bluebird": "^3.5.32",
-    "@types/diff": "^4.0.2",
-    "@types/fs-extra": "^9.0.1",
-    "@types/yargs": "^15.0.5"
-  },
+  "devDependencies": {},
   "preferGlobal": true,
   "gitHead": "3bd5e2d251d59c760e47ac09487c70a409332763"
 }

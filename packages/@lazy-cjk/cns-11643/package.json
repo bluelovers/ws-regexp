@@ -54,12 +54,8 @@
   "devDependencies": {
     "@jcbuisson/streamline": "^1.0.0",
     "@lazy-node/readlines": "^2.0.1",
-    "@types/bluebird": "^3.5.32",
-    "@types/fs-extra": "^9.0.1",
     "@types/n-readlines": "^1.0.1",
-    "bluebird": "^3.7.2",
     "cross-fetch": "^3.0.4",
-    "fs-extra": "^9.0.1",
     "jszip": "^3.4.0",
     "n-readlines": "^1.0.0",
     "sort-object-keys2": "^2.0.3"

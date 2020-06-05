@@ -86,8 +86,7 @@
   },
   "devDependencies": {
     "@sindresorhus/slugify": "^1.0.0",
-    "slugify-extra": "^1.0.0",
-    "uni-string": "^1.1.2"
+    "slugify-extra": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"

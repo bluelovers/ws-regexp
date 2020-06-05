@@ -11,7 +11,7 @@ const array_hyper_unique_1 = require("array-hyper-unique");
 const fullhalf_1 = require("str-util/lib/fullhalf");
 const core_1 = __importDefault(require("uni-string/src/core"));
 const table_voice_1 = __importDefault(require("cjk-conv/lib/jp/table_voice"));
-const deburr = require("lodash.deburr");
+const deburr_1 = __importDefault(require("lodash/deburr"));
 const plugin_1 = require("regexp-cjk/lib/plugin");
 /**
  * 建立 擴充事件函數物件
@@ -139,7 +139,7 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
                 arr.push(cf.toLocaleLowerCase(), ch.toLocaleLowerCase(), raw.toLocaleLowerCase());
             }
             if (autoDeburr) {
-                arr.push(deburr(cf), deburr(ch), deburr(raw));
+                arr.push(deburr_1.default(cf), deburr_1.default(ch), deburr_1.default(raw));
             }
         }
         else {
@@ -147,7 +147,7 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
                 arr.push(raw.toLocaleLowerCase());
             }
             if (autoDeburr) {
-                arr.push(deburr(raw));
+                arr.push(deburr_1.default(raw));
             }
         }
         if (callback) {

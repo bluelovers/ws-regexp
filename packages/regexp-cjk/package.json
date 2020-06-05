@@ -99,9 +99,6 @@
     "regexp-range": "^1.0.10",
     "regexp-support": "^1.0.25"
   },
-  "devDependencies": {
-    "cross-spawn-extra": "^2.0.0",
-    "git-root2": "^1.0.9"
-  },
+  "devDependencies": {},
   "gitHead": "3bd5e2d251d59c760e47ac09487c70a409332763"
 }
