@@ -105,12 +105,14 @@ Array [
 ]
 `;
 
-exports[`validate char of map 㳽|弥|彌|瀰 1`] = `
+exports[`validate char of map 㳽|弥|弭|彌|瀰|米 1`] = `
 Array [
   "㳽",
   "弥",
+  "弭",
   "彌",
   "瀰",
+  "米",
 ]
 `;
 
@@ -526,6 +528,14 @@ Array [
   "値",
   "值",
   "直",
+]
+`;
+
+exports[`validate char of map 偰|契|楔 1`] = `
+Array [
+  "偰",
+  "契",
+  "楔",
 ]
 `;
 
@@ -1035,10 +1045,11 @@ Array [
 ]
 `;
 
-exports[`validate char of map 呣|哞 1`] = `
+exports[`validate char of map 呣|哞|姆 1`] = `
 Array [
   "呣",
   "哞",
+  "姆",
 ]
 `;
 
@@ -1129,6 +1140,14 @@ Array [
   "宣",
   "暄",
   "諠",
+]
+`;
+
+exports[`validate char of map 嗯|恩|摁 1`] = `
+Array [
+  "嗯",
+  "恩",
+  "摁",
 ]
 `;
 
