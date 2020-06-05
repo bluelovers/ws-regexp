@@ -67,14 +67,14 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
+    "test": "jest --coverage",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
-    "postpublish_": "git commit -a -m \"postpublish new version\"",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run test",
-    "sort-package-json": "npx yarn-tool sort",
-    "test": "jest --coverage"
+    "postpublish_": "git commit -a -m \"postpublish new version\"",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
@@ -86,8 +86,8 @@
     "@types/lodash.deburr": "^4.1.6"
   },
   "peerDependencies": {
-    "cjk-conv": "^1.2.67",
-    "regexp-cjk": "^3.3.33",
-    "regexp-parser-event": "^1.1.6"
+    "cjk-conv": "^1.2.74",
+    "regexp-cjk": "^3.3.40",
+    "regexp-parser-event": "^1.1.7"
   }
 }

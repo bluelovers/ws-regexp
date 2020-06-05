@@ -100,9 +100,8 @@
     "regexp-support": "^1.0.25"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.154",
     "cross-spawn-extra": "^2.0.0",
-    "git-root2": "^1.0.7"
+    "git-root2": "^1.0.9"
   },
   "gitHead": "3bd5e2d251d59c760e47ac09487c70a409332763"
 }

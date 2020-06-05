@@ -80,7 +80,7 @@
     "@lazy-cjk/util": "^1.0.2",
     "@lazy-cjk/zh-convert": "^1.0.8",
     "@lazy-cjk/zh-convert-table": "^1.0.8",
-    "fs-extra": "^9.0.0"
+    "fs-extra": "^9.0.1"
   },
   "publishConfig": {
     "access": "public"

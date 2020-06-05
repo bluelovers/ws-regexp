@@ -72,12 +72,12 @@
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@lazy-cjk/jp-table-convert": "^1.0.7",
     "array-hyper-unique": "^1.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "3bd5e2d251d59c760e47ac09487c70a409332763"
 }
