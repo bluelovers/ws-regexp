@@ -30,29 +30,36 @@
   "license": "MIT",
   "author": "Toru Nagashima (https://github.com/mysticatea)",
   "main": "./index.js",
-  "_types": [
-    "./index.d.ts"
-  ],
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "coverage": "npx nyc npm test",
-    "ncu": "npx npm-check-updates -u",
-    "npm-publish": "npm publish",
-    "prepublishOnly": "npm run sort-package-json && npm run test",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx mocha --require ts-node/register --reporter dot --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
+    "test": "ynpx mocha -- --require ts-node/register --reporter dot --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
+    "build": "yarn run update:ids && build-ts-file ./src/unicode/ids.ts",
+    "build:commit": "git commit -m \"build: update unicode ids\" ./src/unicode & echo build:commit",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly:lerna": "yarn run build && yarn run build:commit",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish": "yarn run postpublishOnly:add",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexpp2",
+    "sort-package-json": "npx yarn-tool sort",
     "update:ids": "ts-node scripts/update-unicode-ids.ts",
     "update:test": "ts-node scripts/update-fixtures.ts"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/mocha": "*",
-    "@types/node": "*"
+    "@types/eslint": "^6.8.1",
+    "eslint": "^7.1.0"
   },
   "peerDependencies": {},
   "engines": {
     "node": ">=4.0.0"
-  }
+  },
+  "_types": [
+    "./index.d.ts"
+  ]
 }

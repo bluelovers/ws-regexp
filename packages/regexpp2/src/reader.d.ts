@@ -10,12 +10,12 @@ export declare class Reader {
     private _cp3;
     private _w3;
     private _cp4;
-    readonly source: string;
-    readonly index: number;
-    readonly currentCodePoint: number;
-    readonly nextCodePoint: number;
-    readonly nextCodePoint2: number;
-    readonly nextCodePoint3: number;
+    get source(): string;
+    get index(): number;
+    get currentCodePoint(): number;
+    get nextCodePoint(): number;
+    get nextCodePoint2(): number;
+    get nextCodePoint3(): number;
     reset(source: string, start: number, end: number, uFlag: boolean): void;
     rewind(index: number): void;
     advance(): void;

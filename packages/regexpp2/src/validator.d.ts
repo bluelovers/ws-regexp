@@ -243,8 +243,8 @@ export declare class RegExpValidator {
      * @param uFlag The flag to set unicode mode.
      */
     validatePattern(source: string, start?: number, end?: number, uFlag?: boolean): void;
-    private readonly strict;
-    private readonly ecmaVersion;
+    private get strict();
+    private get ecmaVersion();
     private onLiteralEnter;
     private onLiteralLeave;
     private onFlags;
@@ -271,12 +271,12 @@ export declare class RegExpValidator {
     private onCharacterClassEnter;
     private onCharacterClassLeave;
     private onCharacterClassRange;
-    private readonly source;
-    private readonly index;
-    private readonly currentCodePoint;
-    private readonly nextCodePoint;
-    private readonly nextCodePoint2;
-    private readonly nextCodePoint3;
+    private get source();
+    private get index();
+    private get currentCodePoint();
+    private get nextCodePoint();
+    private get nextCodePoint2();
+    private get nextCodePoint3();
     private reset;
     private rewind;
     private advance;

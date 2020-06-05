@@ -3,6 +3,7 @@ import {
     AST,
     RegExpParser,
     parseRegExpLiteral,
+    // @ts-ignore
     visitRegExpAST,
 } from "../src/index"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"

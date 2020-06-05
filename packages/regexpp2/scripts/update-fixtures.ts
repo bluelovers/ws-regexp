@@ -1,3 +1,4 @@
+// @ts-ignore
 import { AST, parseRegExpLiteral, visitRegExpAST } from "../src/index"
 import Parser = require("../test/fixtures/parser/literal")
 import Visitor = require("../test/fixtures/visitor")

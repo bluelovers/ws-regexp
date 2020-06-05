@@ -3,5 +3,6 @@
  */
 
 export * from "./src"
+export * from "./src/const"
 
 export default exports as typeof import('./index');

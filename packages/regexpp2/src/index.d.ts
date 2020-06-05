@@ -1,4 +1,4 @@
-import AST = require("./ast");
+import * as AST from "./ast";
 import { RegExpParser } from "./parser";
 import { RegExpValidator } from "./validator";
 export * from "./const";

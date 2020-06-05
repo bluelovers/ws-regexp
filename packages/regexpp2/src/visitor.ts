@@ -36,6 +36,7 @@ export class RegExpVisitor {
      */
     public visit(node: Node): void {
         switch (node.type) {
+            // @ts-ignore
             case "Alternative":
                 this.visitAlternative(node)
                 break
@@ -80,6 +81,7 @@ export class RegExpVisitor {
         }
     }
 
+    // @ts-ignore
     private visitAlternative(node: Alternative): void {
         if (this._handlers.onAlternativeEnter) {
             this._handlers.onAlternativeEnter(node)
@@ -94,6 +96,7 @@ export class RegExpVisitor {
             this._handlers.onAssertionEnter(node)
         }
         if (node.kind === "lookahead" || node.kind === "lookbehind") {
+            // @ts-ignore
             node.alternatives.forEach(this.visit, this)
         }
         if (this._handlers.onAssertionLeave) {
@@ -112,6 +115,7 @@ export class RegExpVisitor {
         if (this._handlers.onCapturingGroupEnter) {
             this._handlers.onCapturingGroupEnter(node)
         }
+        // @ts-ignore
         node.alternatives.forEach(this.visit, this)
         if (this._handlers.onCapturingGroupLeave) {
             this._handlers.onCapturingGroupLeave(node)
@@ -164,6 +168,7 @@ export class RegExpVisitor {
         if (this._handlers.onGroupEnter) {
             this._handlers.onGroupEnter(node)
         }
+        // @ts-ignore
         node.alternatives.forEach(this.visit, this)
         if (this._handlers.onGroupLeave) {
             this._handlers.onGroupLeave(node)
@@ -173,6 +178,7 @@ export class RegExpVisitor {
         if (this._handlers.onPatternEnter) {
             this._handlers.onPatternEnter(node)
         }
+        // @ts-ignore
         node.alternatives.forEach(this.visit, this)
         if (this._handlers.onPatternLeave) {
             this._handlers.onPatternLeave(node)
@@ -201,7 +207,9 @@ export class RegExpVisitor {
 
 export namespace RegExpVisitor {
     export interface Handlers {
+        // @ts-ignore
         onAlternativeEnter?(node: Alternative): void
+        // @ts-ignore
         onAlternativeLeave?(node: Alternative): void
         onAssertionEnter?(node: Assertion): void
         onAssertionLeave?(node: Assertion): void
