@@ -265,6 +265,11 @@ export const TABLE: ITABLE_MAIN = {
 			"zht": "窗",
 			"zhs": "窗"
 		},
+		"抜": {
+			"jp": "抜",
+			"zht": "拔",
+			"zhs": null
+		},
 		"万": {
 			"jp": "万",
 			"zht": "萬",
@@ -3961,6 +3966,11 @@ export const TABLE: ITABLE_MAIN = {
 			"jp": "窓",
 			"zht": "窗",
 			"zhs": "窗"
+		},
+		"拔": {
+			"jp": "抜",
+			"zht": "拔",
+			"zhs": null
 		},
 		"萬": {
 			"jp": "万",
