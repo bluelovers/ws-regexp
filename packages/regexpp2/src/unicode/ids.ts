@@ -1,4 +1,4 @@
-/* Generated from DerivedCoreProperties-12.1.0.txt */
+/* Generated from DerivedCoreProperties-13.0.0.txt */
 // @formatter:off
 export function isIdStart(cp: number): boolean {
 if (cp < 0x41) return false
@@ -18,10 +18,10 @@ if (cp < 0x7b) return true
 return isLargeIdStart(cp) || isLargeIdContinue(cp)
 }
 function isLargeIdStart(cp: number): boolean {
-if (cp < 0xa015) {
-if (cp < 0x1050) {
-if (cp < 0xa59) {
-if (cp < 0x6ee) {
+if (cp < 0xa62a) {
+if (cp < 0x1065) {
+if (cp < 0xa5e) {
+if (cp < 0x6fa) {
 if (cp < 0x37b) {
 if (cp < 0x294) {
 if (cp < 0xf8) {
@@ -66,7 +66,7 @@ if (cp < 0x378) return true
 if (cp === 0x37a) return true
 return false
 }
-if (cp < 0x559) {
+if (cp < 0x560) {
 if (cp < 0x38e) {
 if (cp < 0x37b) return false
 if (cp < 0x37e) return true
@@ -86,10 +86,10 @@ if (cp < 0x48a) return false
 if (cp < 0x530) return true
 if (cp < 0x531) return false
 if (cp < 0x557) return true
+if (cp === 0x559) return true
 return false
 }
-if (cp < 0x640) {
-if (cp === 0x559) return true
+if (cp < 0x641) {
 if (cp < 0x560) return false
 if (cp < 0x589) return true
 if (cp < 0x5d0) return false
@@ -98,10 +98,9 @@ if (cp < 0x5ef) return false
 if (cp < 0x5f3) return true
 if (cp < 0x620) return false
 if (cp < 0x640) return true
+if (cp === 0x640) return true
 return false
 }
-if (cp === 0x640) return true
-if (cp < 0x641) return false
 if (cp < 0x64b) return true
 if (cp < 0x66e) return false
 if (cp < 0x670) return true
@@ -110,55 +109,56 @@ if (cp < 0x6d4) return true
 if (cp === 0x6d5) return true
 if (cp < 0x6e5) return false
 if (cp < 0x6e7) return true
-return false
-}
-if (cp < 0x958) {
-if (cp < 0x800) {
-if (cp < 0x74d) {
 if (cp < 0x6ee) return false
 if (cp < 0x6f0) return true
+return false
+}
+if (cp < 0x971) {
+if (cp < 0x81a) {
+if (cp < 0x7b1) {
 if (cp < 0x6fa) return false
 if (cp < 0x6fd) return true
 if (cp === 0x6ff) return true
 if (cp === 0x710) return true
 if (cp < 0x712) return false
 if (cp < 0x730) return true
+if (cp < 0x74d) return false
+if (cp < 0x7a6) return true
 return false
 }
-if (cp < 0x7a6) return true
 if (cp === 0x7b1) return true
 if (cp < 0x7ca) return false
 if (cp < 0x7eb) return true
 if (cp < 0x7f4) return false
 if (cp < 0x7f6) return true
 if (cp === 0x7fa) return true
-return false
-}
-if (cp < 0x860) {
 if (cp < 0x800) return false
 if (cp < 0x816) return true
+return false
+}
+if (cp < 0x8a0) {
 if (cp === 0x81a) return true
 if (cp === 0x824) return true
 if (cp === 0x828) return true
 if (cp < 0x840) return false
 if (cp < 0x859) return true
+if (cp < 0x860) return false
+if (cp < 0x86b) return true
 return false
 }
-if (cp < 0x86b) return true
-if (cp < 0x8a0) return false
 if (cp < 0x8b5) return true
 if (cp < 0x8b6) return false
-if (cp < 0x8be) return true
+if (cp < 0x8c8) return true
 if (cp < 0x904) return false
 if (cp < 0x93a) return true
 if (cp === 0x93d) return true
 if (cp === 0x950) return true
-return false
-}
-if (cp < 0x9dc) {
-if (cp < 0x993) {
 if (cp < 0x958) return false
 if (cp < 0x962) return true
+return false
+}
+if (cp < 0x9df) {
+if (cp < 0x9aa) {
 if (cp === 0x971) return true
 if (cp < 0x972) return false
 if (cp < 0x981) return true
@@ -166,21 +166,21 @@ if (cp < 0x985) return false
 if (cp < 0x98d) return true
 if (cp < 0x98f) return false
 if (cp < 0x991) return true
+if (cp < 0x993) return false
+if (cp < 0x9a9) return true
 return false
 }
-if (cp < 0x9a9) return true
-if (cp < 0x9aa) return false
 if (cp < 0x9b1) return true
 if (cp === 0x9b2) return true
 if (cp < 0x9b6) return false
 if (cp < 0x9ba) return true
 if (cp === 0x9bd) return true
 if (cp === 0x9ce) return true
-return false
-}
-if (cp < 0xa0f) {
 if (cp < 0x9dc) return false
 if (cp < 0x9de) return true
+return false
+}
+if (cp < 0xa13) {
 if (cp < 0x9df) return false
 if (cp < 0x9e2) return true
 if (cp < 0x9f0) return false
@@ -188,10 +188,10 @@ if (cp < 0x9f2) return true
 if (cp === 0x9fc) return true
 if (cp < 0xa05) return false
 if (cp < 0xa0b) return true
+if (cp < 0xa0f) return false
+if (cp < 0xa11) return true
 return false
 }
-if (cp < 0xa11) return true
-if (cp < 0xa13) return false
 if (cp < 0xa29) return true
 if (cp < 0xa2a) return false
 if (cp < 0xa31) return true
@@ -201,14 +201,14 @@ if (cp < 0xa35) return false
 if (cp < 0xa37) return true
 if (cp < 0xa38) return false
 if (cp < 0xa3a) return true
-return false
-}
-if (cp < 0xc85) {
-if (cp < 0xb5f) {
-if (cp < 0xad0) {
-if (cp < 0xa93) {
 if (cp < 0xa59) return false
 if (cp < 0xa5d) return true
+return false
+}
+if (cp < 0xc92) {
+if (cp < 0xb71) {
+if (cp < 0xae0) {
+if (cp < 0xaaa) {
 if (cp === 0xa5e) return true
 if (cp < 0xa72) return false
 if (cp < 0xa75) return true
@@ -216,20 +216,20 @@ if (cp < 0xa85) return false
 if (cp < 0xa8e) return true
 if (cp < 0xa8f) return false
 if (cp < 0xa92) return true
+if (cp < 0xa93) return false
+if (cp < 0xaa9) return true
 return false
 }
-if (cp < 0xaa9) return true
-if (cp < 0xaaa) return false
 if (cp < 0xab1) return true
 if (cp < 0xab2) return false
 if (cp < 0xab4) return true
 if (cp < 0xab5) return false
 if (cp < 0xaba) return true
 if (cp === 0xabd) return true
+if (cp === 0xad0) return true
 return false
 }
-if (cp < 0xb13) {
-if (cp === 0xad0) return true
+if (cp < 0xb2a) {
 if (cp < 0xae0) return false
 if (cp < 0xae2) return true
 if (cp === 0xaf9) return true
@@ -237,10 +237,10 @@ if (cp < 0xb05) return false
 if (cp < 0xb0d) return true
 if (cp < 0xb0f) return false
 if (cp < 0xb11) return true
+if (cp < 0xb13) return false
+if (cp < 0xb29) return true
 return false
 }
-if (cp < 0xb29) return true
-if (cp < 0xb2a) return false
 if (cp < 0xb31) return true
 if (cp < 0xb32) return false
 if (cp < 0xb34) return true
@@ -249,221 +249,218 @@ if (cp < 0xb3a) return true
 if (cp === 0xb3d) return true
 if (cp < 0xb5c) return false
 if (cp < 0xb5e) return true
-return false
-}
-if (cp < 0xba8) {
-if (cp < 0xb92) {
 if (cp < 0xb5f) return false
 if (cp < 0xb62) return true
+return false
+}
+if (cp < 0xbd0) {
+if (cp < 0xb99) {
 if (cp === 0xb71) return true
 if (cp === 0xb83) return true
 if (cp < 0xb85) return false
 if (cp < 0xb8b) return true
 if (cp < 0xb8e) return false
 if (cp < 0xb91) return true
+if (cp < 0xb92) return false
+if (cp < 0xb96) return true
 return false
 }
-if (cp < 0xb96) return true
-if (cp < 0xb99) return false
 if (cp < 0xb9b) return true
 if (cp === 0xb9c) return true
 if (cp < 0xb9e) return false
 if (cp < 0xba0) return true
 if (cp < 0xba3) return false
 if (cp < 0xba5) return true
-return false
-}
-if (cp < 0xc12) {
 if (cp < 0xba8) return false
 if (cp < 0xbab) return true
 if (cp < 0xbae) return false
 if (cp < 0xbba) return true
+return false
+}
+if (cp < 0xc3d) {
 if (cp === 0xbd0) return true
 if (cp < 0xc05) return false
 if (cp < 0xc0d) return true
 if (cp < 0xc0e) return false
 if (cp < 0xc11) return true
-return false
-}
+if (cp < 0xc12) return false
 if (cp < 0xc29) return true
 if (cp < 0xc2a) return false
 if (cp < 0xc3a) return true
+return false
+}
 if (cp === 0xc3d) return true
 if (cp < 0xc58) return false
 if (cp < 0xc5b) return true
 if (cp < 0xc60) return false
 if (cp < 0xc62) return true
 if (cp === 0xc80) return true
-return false
-}
-if (cp < 0xdc0) {
-if (cp < 0xd0e) {
-if (cp < 0xcbd) {
 if (cp < 0xc85) return false
 if (cp < 0xc8d) return true
 if (cp < 0xc8e) return false
 if (cp < 0xc91) return true
+return false
+}
+if (cp < 0xe40) {
+if (cp < 0xd4e) {
+if (cp < 0xce0) {
 if (cp < 0xc92) return false
 if (cp < 0xca9) return true
 if (cp < 0xcaa) return false
 if (cp < 0xcb4) return true
 if (cp < 0xcb5) return false
 if (cp < 0xcba) return true
-return false
-}
 if (cp === 0xcbd) return true
 if (cp === 0xcde) return true
-if (cp < 0xce0) return false
+return false
+}
 if (cp < 0xce2) return true
 if (cp < 0xcf1) return false
 if (cp < 0xcf3) return true
-if (cp < 0xd05) return false
+if (cp < 0xd04) return false
 if (cp < 0xd0d) return true
-return false
-}
-if (cp < 0xd5f) {
 if (cp < 0xd0e) return false
 if (cp < 0xd11) return true
 if (cp < 0xd12) return false
 if (cp < 0xd3b) return true
 if (cp === 0xd3d) return true
+return false
+}
+if (cp < 0xd9a) {
 if (cp === 0xd4e) return true
 if (cp < 0xd54) return false
 if (cp < 0xd57) return true
-return false
-}
+if (cp < 0xd5f) return false
 if (cp < 0xd62) return true
 if (cp < 0xd7a) return false
 if (cp < 0xd80) return true
 if (cp < 0xd85) return false
 if (cp < 0xd97) return true
-if (cp < 0xd9a) return false
+return false
+}
 if (cp < 0xdb2) return true
 if (cp < 0xdb3) return false
 if (cp < 0xdbc) return true
 if (cp === 0xdbd) return true
-return false
-}
-if (cp < 0xeb2) {
-if (cp < 0xe81) {
 if (cp < 0xdc0) return false
 if (cp < 0xdc7) return true
 if (cp < 0xe01) return false
 if (cp < 0xe31) return true
 if (cp < 0xe32) return false
 if (cp < 0xe34) return true
+return false
+}
+if (cp < 0xec6) {
+if (cp < 0xe8c) {
 if (cp < 0xe40) return false
 if (cp < 0xe46) return true
 if (cp === 0xe46) return true
-return false
-}
+if (cp < 0xe81) return false
 if (cp < 0xe83) return true
 if (cp === 0xe84) return true
 if (cp < 0xe86) return false
 if (cp < 0xe8b) return true
-if (cp < 0xe8c) return false
+return false
+}
 if (cp < 0xea4) return true
 if (cp === 0xea5) return true
 if (cp < 0xea7) return false
 if (cp < 0xeb1) return true
-return false
-}
-if (cp < 0xf00) {
 if (cp < 0xeb2) return false
 if (cp < 0xeb4) return true
 if (cp === 0xebd) return true
 if (cp < 0xec0) return false
 if (cp < 0xec5) return true
+return false
+}
+if (cp < 0xf88) {
 if (cp === 0xec6) return true
 if (cp < 0xedc) return false
 if (cp < 0xee0) return true
-return false
-}
 if (cp === 0xf00) return true
 if (cp < 0xf40) return false
 if (cp < 0xf48) return true
 if (cp < 0xf49) return false
 if (cp < 0xf6d) return true
-if (cp < 0xf88) return false
+return false
+}
 if (cp < 0xf8d) return true
 if (cp < 0x1000) return false
 if (cp < 0x102b) return true
 if (cp === 0x103f) return true
-return false
-}
-if (cp < 0x1e00) {
-if (cp < 0x1760) {
-if (cp < 0x12b2) {
-if (cp < 0x10d0) {
-if (cp < 0x1075) {
 if (cp < 0x1050) return false
 if (cp < 0x1056) return true
 if (cp < 0x105a) return false
 if (cp < 0x105e) return true
 if (cp === 0x1061) return true
+return false
+}
+if (cp < 0x1f59) {
+if (cp < 0x17dc) {
+if (cp < 0x12c2) {
+if (cp < 0x1100) {
+if (cp < 0x10c7) {
 if (cp < 0x1065) return false
 if (cp < 0x1067) return true
 if (cp < 0x106e) return false
 if (cp < 0x1071) return true
-return false
-}
+if (cp < 0x1075) return false
 if (cp < 0x1082) return true
 if (cp === 0x108e) return true
 if (cp < 0x10a0) return false
 if (cp < 0x10c6) return true
-if (cp === 0x10c7) return true
-if (cp === 0x10cd) return true
 return false
 }
-if (cp < 0x1250) {
+if (cp === 0x10c7) return true
+if (cp === 0x10cd) return true
 if (cp < 0x10d0) return false
 if (cp < 0x10fb) return true
 if (cp === 0x10fc) return true
 if (cp < 0x10fd) return false
 if (cp < 0x1100) return true
+return false
+}
+if (cp < 0x1260) {
 if (cp < 0x1100) return false
 if (cp < 0x1249) return true
 if (cp < 0x124a) return false
 if (cp < 0x124e) return true
-return false
-}
+if (cp < 0x1250) return false
 if (cp < 0x1257) return true
 if (cp === 0x1258) return true
 if (cp < 0x125a) return false
 if (cp < 0x125e) return true
-if (cp < 0x1260) return false
+return false
+}
 if (cp < 0x1289) return true
 if (cp < 0x128a) return false
 if (cp < 0x128e) return true
 if (cp < 0x1290) return false
 if (cp < 0x12b1) return true
-return false
-}
-if (cp < 0x13f8) {
-if (cp < 0x12d8) {
 if (cp < 0x12b2) return false
 if (cp < 0x12b6) return true
 if (cp < 0x12b8) return false
 if (cp < 0x12bf) return true
 if (cp === 0x12c0) return true
+return false
+}
+if (cp < 0x16a0) {
+if (cp < 0x1380) {
 if (cp < 0x12c2) return false
 if (cp < 0x12c6) return true
 if (cp < 0x12c8) return false
 if (cp < 0x12d7) return true
-return false
-}
+if (cp < 0x12d8) return false
 if (cp < 0x1311) return true
 if (cp < 0x1312) return false
 if (cp < 0x1316) return true
 if (cp < 0x1318) return false
 if (cp < 0x135b) return true
-if (cp < 0x1380) return false
+return false
+}
 if (cp < 0x1390) return true
 if (cp < 0x13a0) return false
 if (cp < 0x13f6) return true
-return false
-}
-if (cp < 0x16ee) {
 if (cp < 0x13f8) return false
 if (cp < 0x13fe) return true
 if (cp < 0x1401) return false
@@ -472,10 +469,12 @@ if (cp < 0x166f) return false
 if (cp < 0x1680) return true
 if (cp < 0x1681) return false
 if (cp < 0x169b) return true
-if (cp < 0x16a0) return false
-if (cp < 0x16eb) return true
 return false
 }
+if (cp < 0x1720) {
+if (cp < 0x16a0) return false
+if (cp < 0x16eb) return true
+if (cp < 0x16ee) return false
 if (cp < 0x16f1) return true
 if (cp < 0x16f1) return false
 if (cp < 0x16f9) return true
@@ -483,15 +482,11 @@ if (cp < 0x1700) return false
 if (cp < 0x170d) return true
 if (cp < 0x170e) return false
 if (cp < 0x1712) return true
-if (cp < 0x1720) return false
+return false
+}
 if (cp < 0x1732) return true
 if (cp < 0x1740) return false
 if (cp < 0x1752) return true
-return false
-}
-if (cp < 0x1b05) {
-if (cp < 0x1887) {
-if (cp < 0x1820) {
 if (cp < 0x1760) return false
 if (cp < 0x176d) return true
 if (cp < 0x176e) return false
@@ -499,20 +494,22 @@ if (cp < 0x1771) return true
 if (cp < 0x1780) return false
 if (cp < 0x17b4) return true
 if (cp === 0x17d7) return true
-if (cp === 0x17dc) return true
 return false
 }
+if (cp < 0x1c00) {
+if (cp < 0x1970) {
+if (cp < 0x1885) {
+if (cp === 0x17dc) return true
+if (cp < 0x1820) return false
 if (cp < 0x1843) return true
 if (cp === 0x1843) return true
 if (cp < 0x1844) return false
 if (cp < 0x1879) return true
 if (cp < 0x1880) return false
 if (cp < 0x1885) return true
-if (cp < 0x1885) return false
-if (cp < 0x1887) return true
 return false
 }
-if (cp < 0x1970) {
+if (cp < 0x1887) return true
 if (cp < 0x1887) return false
 if (cp < 0x18a9) return true
 if (cp === 0x18aa) return true
@@ -524,6 +521,8 @@ if (cp < 0x1950) return false
 if (cp < 0x196e) return true
 return false
 }
+if (cp < 0x1aa7) {
+if (cp < 0x1970) return false
 if (cp < 0x1975) return true
 if (cp < 0x1980) return false
 if (cp < 0x19ac) return true
@@ -533,11 +532,9 @@ if (cp < 0x1a00) return false
 if (cp < 0x1a17) return true
 if (cp < 0x1a20) return false
 if (cp < 0x1a55) return true
-if (cp === 0x1aa7) return true
 return false
 }
-if (cp < 0x1cbd) {
-if (cp < 0x1c00) {
+if (cp === 0x1aa7) return true
 if (cp < 0x1b05) return false
 if (cp < 0x1b34) return true
 if (cp < 0x1b45) return false
@@ -550,6 +547,9 @@ if (cp < 0x1bba) return false
 if (cp < 0x1be6) return true
 return false
 }
+if (cp < 0x1d00) {
+if (cp < 0x1c90) {
+if (cp < 0x1c00) return false
 if (cp < 0x1c24) return true
 if (cp < 0x1c4d) return false
 if (cp < 0x1c50) return true
@@ -559,11 +559,9 @@ if (cp < 0x1c78) return false
 if (cp < 0x1c7e) return true
 if (cp < 0x1c80) return false
 if (cp < 0x1c89) return true
-if (cp < 0x1c90) return false
-if (cp < 0x1cbb) return true
 return false
 }
-if (cp < 0x1d00) {
+if (cp < 0x1cbb) return true
 if (cp < 0x1cbd) return false
 if (cp < 0x1cc0) return true
 if (cp < 0x1ce9) return false
@@ -575,6 +573,8 @@ if (cp < 0x1cf7) return true
 if (cp === 0x1cfa) return true
 return false
 }
+if (cp < 0x1d9b) {
+if (cp < 0x1d00) return false
 if (cp < 0x1d2c) return true
 if (cp < 0x1d2c) return false
 if (cp < 0x1d6b) return true
@@ -583,14 +583,9 @@ if (cp < 0x1d78) return true
 if (cp === 0x1d78) return true
 if (cp < 0x1d79) return false
 if (cp < 0x1d9b) return true
-if (cp < 0x1d9b) return false
-if (cp < 0x1dc0) return true
 return false
 }
-if (cp < 0x2c00) {
-if (cp < 0x2090) {
-if (cp < 0x1fb6) {
-if (cp < 0x1f59) {
+if (cp < 0x1dc0) return true
 if (cp < 0x1e00) return false
 if (cp < 0x1f16) return true
 if (cp < 0x1f18) return false
@@ -603,6 +598,10 @@ if (cp < 0x1f50) return false
 if (cp < 0x1f58) return true
 return false
 }
+if (cp < 0x2cf2) {
+if (cp < 0x2118) {
+if (cp < 0x1fd6) {
+if (cp < 0x1fb6) {
 if (cp === 0x1f59) return true
 if (cp === 0x1f5b) return true
 if (cp === 0x1f5d) return true
@@ -612,8 +611,6 @@ if (cp < 0x1f80) return false
 if (cp < 0x1fb5) return true
 return false
 }
-if (cp < 0x1fd6) {
-if (cp < 0x1fb6) return false
 if (cp < 0x1fbd) return true
 if (cp === 0x1fbe) return true
 if (cp < 0x1fc2) return false
@@ -624,6 +621,8 @@ if (cp < 0x1fd0) return false
 if (cp < 0x1fd4) return true
 return false
 }
+if (cp < 0x207f) {
+if (cp < 0x1fd6) return false
 if (cp < 0x1fdc) return true
 if (cp < 0x1fe0) return false
 if (cp < 0x1fed) return true
@@ -632,11 +631,9 @@ if (cp < 0x1ff5) return true
 if (cp < 0x1ff6) return false
 if (cp < 0x1ffd) return true
 if (cp === 0x2071) return true
-if (cp === 0x207f) return true
 return false
 }
-if (cp < 0x212a) {
-if (cp < 0x2118) {
+if (cp === 0x207f) return true
 if (cp < 0x2090) return false
 if (cp < 0x209d) return true
 if (cp === 0x2102) return true
@@ -646,6 +643,8 @@ if (cp < 0x2114) return true
 if (cp === 0x2115) return true
 return false
 }
+if (cp < 0x2145) {
+if (cp < 0x212a) {
 if (cp === 0x2118) return true
 if (cp < 0x2119) return false
 if (cp < 0x211e) return true
@@ -654,8 +653,6 @@ if (cp === 0x2126) return true
 if (cp === 0x2128) return true
 return false
 }
-if (cp < 0x213c) {
-if (cp < 0x212a) return false
 if (cp < 0x212e) return true
 if (cp === 0x212e) return true
 if (cp < 0x212f) return false
@@ -663,9 +660,11 @@ if (cp < 0x2135) return true
 if (cp < 0x2135) return false
 if (cp < 0x2139) return true
 if (cp === 0x2139) return true
+if (cp < 0x213c) return false
+if (cp < 0x2140) return true
 return false
 }
-if (cp < 0x2140) return true
+if (cp < 0x2c00) {
 if (cp < 0x2145) return false
 if (cp < 0x214a) return true
 if (cp === 0x214e) return true
@@ -677,10 +676,6 @@ if (cp < 0x2185) return false
 if (cp < 0x2189) return true
 return false
 }
-if (cp < 0x3005) {
-if (cp < 0x2d30) {
-if (cp < 0x2ceb) {
-if (cp < 0x2c00) return false
 if (cp < 0x2c2f) return true
 if (cp < 0x2c30) return false
 if (cp < 0x2c5f) return true
@@ -690,20 +685,23 @@ if (cp < 0x2c7c) return false
 if (cp < 0x2c7e) return true
 if (cp < 0x2c7e) return false
 if (cp < 0x2ce5) return true
+if (cp < 0x2ceb) return false
+if (cp < 0x2cef) return true
 return false
 }
-if (cp < 0x2cef) return true
+if (cp < 0x303c) {
+if (cp < 0x2dc0) {
+if (cp < 0x2d6f) {
 if (cp < 0x2cf2) return false
 if (cp < 0x2cf4) return true
 if (cp < 0x2d00) return false
 if (cp < 0x2d26) return true
 if (cp === 0x2d27) return true
 if (cp === 0x2d2d) return true
-return false
-}
-if (cp < 0x2db0) {
 if (cp < 0x2d30) return false
 if (cp < 0x2d68) return true
+return false
+}
 if (cp === 0x2d6f) return true
 if (cp < 0x2d80) return false
 if (cp < 0x2d97) return true
@@ -711,11 +709,13 @@ if (cp < 0x2da0) return false
 if (cp < 0x2da7) return true
 if (cp < 0x2da8) return false
 if (cp < 0x2daf) return true
-return false
-}
+if (cp < 0x2db0) return false
 if (cp < 0x2db7) return true
 if (cp < 0x2db8) return false
 if (cp < 0x2dbf) return true
+return false
+}
+if (cp < 0x3006) {
 if (cp < 0x2dc0) return false
 if (cp < 0x2dc7) return true
 if (cp < 0x2dc8) return false
@@ -724,21 +724,22 @@ if (cp < 0x2dd0) return false
 if (cp < 0x2dd7) return true
 if (cp < 0x2dd8) return false
 if (cp < 0x2ddf) return true
+if (cp === 0x3005) return true
 return false
 }
-if (cp < 0x309f) {
-if (cp < 0x3038) {
-if (cp === 0x3005) return true
 if (cp === 0x3006) return true
 if (cp === 0x3007) return true
 if (cp < 0x3021) return false
 if (cp < 0x302a) return true
 if (cp < 0x3031) return false
 if (cp < 0x3036) return true
-return false
-}
+if (cp < 0x3038) return false
 if (cp < 0x303b) return true
 if (cp === 0x303b) return true
+return false
+}
+if (cp < 0x31f0) {
+if (cp < 0x30a1) {
 if (cp === 0x303c) return true
 if (cp < 0x3041) return false
 if (cp < 0x3097) return true
@@ -746,40 +747,33 @@ if (cp < 0x309b) return false
 if (cp < 0x309d) return true
 if (cp < 0x309d) return false
 if (cp < 0x309f) return true
+if (cp === 0x309f) return true
 return false
 }
-if (cp < 0x3131) {
-if (cp === 0x309f) return true
-if (cp < 0x30a1) return false
 if (cp < 0x30fb) return true
 if (cp < 0x30fc) return false
 if (cp < 0x30ff) return true
 if (cp === 0x30ff) return true
 if (cp < 0x3105) return false
 if (cp < 0x3130) return true
-return false
-}
+if (cp < 0x3131) return false
 if (cp < 0x318f) return true
 if (cp < 0x31a0) return false
-if (cp < 0x31bb) return true
+if (cp < 0x31c0) return true
+return false
+}
+if (cp < 0xa016) {
 if (cp < 0x31f0) return false
 if (cp < 0x3200) return true
 if (cp < 0x3400) return false
-if (cp < 0x4db6) return true
+if (cp < 0x4dc0) return true
 if (cp < 0x4e00) return false
-if (cp < 0x9ff0) return true
+if (cp < 0x9ffd) return true
 if (cp < 0xa000) return false
 if (cp < 0xa015) return true
+if (cp === 0xa015) return true
 return false
 }
-if (cp < 0x110d0) {
-if (cp < 0xfb40) {
-if (cp < 0xa9e6) {
-if (cp < 0xa78f) {
-if (cp < 0xa67f) {
-if (cp < 0xa60c) {
-if (cp === 0xa015) return true
-if (cp < 0xa016) return false
 if (cp < 0xa48d) return true
 if (cp < 0xa4d0) return false
 if (cp < 0xa4f8) return true
@@ -787,54 +781,61 @@ if (cp < 0xa4f8) return false
 if (cp < 0xa4fe) return true
 if (cp < 0xa500) return false
 if (cp < 0xa60c) return true
-return false
-}
 if (cp === 0xa60c) return true
 if (cp < 0xa610) return false
 if (cp < 0xa620) return true
+return false
+}
+if (cp < 0x11183) {
+if (cp < 0xfe70) {
+if (cp < 0xaa70) {
+if (cp < 0xa7fb) {
+if (cp < 0xa770) {
+if (cp < 0xa69c) {
 if (cp < 0xa62a) return false
 if (cp < 0xa62c) return true
 if (cp < 0xa640) return false
 if (cp < 0xa66e) return true
 if (cp === 0xa66e) return true
-return false
-}
-if (cp < 0xa717) {
 if (cp === 0xa67f) return true
 if (cp < 0xa680) return false
 if (cp < 0xa69c) return true
-if (cp < 0xa69c) return false
+return false
+}
 if (cp < 0xa69e) return true
 if (cp < 0xa6a0) return false
 if (cp < 0xa6e6) return true
 if (cp < 0xa6e6) return false
 if (cp < 0xa6f0) return true
-return false
-}
+if (cp < 0xa717) return false
 if (cp < 0xa720) return true
 if (cp < 0xa722) return false
 if (cp < 0xa770) return true
+return false
+}
+if (cp < 0xa790) {
 if (cp === 0xa770) return true
 if (cp < 0xa771) return false
 if (cp < 0xa788) return true
 if (cp === 0xa788) return true
 if (cp < 0xa78b) return false
 if (cp < 0xa78f) return true
+if (cp === 0xa78f) return true
 return false
 }
-if (cp < 0xa840) {
-if (cp < 0xa7fa) {
-if (cp === 0xa78f) return true
-if (cp < 0xa790) return false
 if (cp < 0xa7c0) return true
 if (cp < 0xa7c2) return false
-if (cp < 0xa7c7) return true
+if (cp < 0xa7cb) return true
+if (cp < 0xa7f5) return false
+if (cp < 0xa7f7) return true
 if (cp === 0xa7f7) return true
 if (cp < 0xa7f8) return false
 if (cp < 0xa7fa) return true
+if (cp === 0xa7fa) return true
 return false
 }
-if (cp === 0xa7fa) return true
+if (cp < 0xa960) {
+if (cp < 0xa882) {
 if (cp < 0xa7fb) return false
 if (cp < 0xa802) return true
 if (cp < 0xa803) return false
@@ -843,23 +844,23 @@ if (cp < 0xa807) return false
 if (cp < 0xa80b) return true
 if (cp < 0xa80c) return false
 if (cp < 0xa823) return true
-return false
-}
-if (cp < 0xa90a) {
 if (cp < 0xa840) return false
 if (cp < 0xa874) return true
-if (cp < 0xa882) return false
+return false
+}
 if (cp < 0xa8b4) return true
 if (cp < 0xa8f2) return false
 if (cp < 0xa8f8) return true
 if (cp === 0xa8fb) return true
 if (cp < 0xa8fd) return false
 if (cp < 0xa8ff) return true
-return false
-}
+if (cp < 0xa90a) return false
 if (cp < 0xa926) return true
 if (cp < 0xa930) return false
 if (cp < 0xa947) return true
+return false
+}
+if (cp < 0xa9e7) {
 if (cp < 0xa960) return false
 if (cp < 0xa97d) return true
 if (cp < 0xa984) return false
@@ -867,13 +868,9 @@ if (cp < 0xa9b3) return true
 if (cp === 0xa9cf) return true
 if (cp < 0xa9e0) return false
 if (cp < 0xa9e5) return true
+if (cp === 0xa9e6) return true
 return false
 }
-if (cp < 0xab01) {
-if (cp < 0xaa7e) {
-if (cp < 0xaa44) {
-if (cp === 0xa9e6) return true
-if (cp < 0xa9e7) return false
 if (cp < 0xa9f0) return true
 if (cp < 0xa9fa) return false
 if (cp < 0xa9ff) return true
@@ -881,70 +878,72 @@ if (cp < 0xaa00) return false
 if (cp < 0xaa29) return true
 if (cp < 0xaa40) return false
 if (cp < 0xaa43) return true
-return false
-}
+if (cp < 0xaa44) return false
 if (cp < 0xaa4c) return true
 if (cp < 0xaa60) return false
 if (cp < 0xaa70) return true
+return false
+}
+if (cp < 0xab69) {
+if (cp < 0xaae0) {
+if (cp < 0xaab5) {
 if (cp === 0xaa70) return true
 if (cp < 0xaa71) return false
 if (cp < 0xaa77) return true
 if (cp === 0xaa7a) return true
-return false
-}
-if (cp < 0xaac2) {
 if (cp < 0xaa7e) return false
 if (cp < 0xaab0) return true
 if (cp === 0xaab1) return true
-if (cp < 0xaab5) return false
+return false
+}
 if (cp < 0xaab7) return true
 if (cp < 0xaab9) return false
 if (cp < 0xaabe) return true
 if (cp === 0xaac0) return true
-return false
-}
 if (cp === 0xaac2) return true
 if (cp < 0xaadb) return false
 if (cp < 0xaadd) return true
 if (cp === 0xaadd) return true
+return false
+}
+if (cp < 0xab11) {
 if (cp < 0xaae0) return false
 if (cp < 0xaaeb) return true
 if (cp === 0xaaf2) return true
 if (cp < 0xaaf3) return false
 if (cp < 0xaaf5) return true
-return false
-}
-if (cp < 0xd7b0) {
-if (cp < 0xab30) {
 if (cp < 0xab01) return false
 if (cp < 0xab07) return true
 if (cp < 0xab09) return false
 if (cp < 0xab0f) return true
-if (cp < 0xab11) return false
+return false
+}
 if (cp < 0xab17) return true
 if (cp < 0xab20) return false
 if (cp < 0xab27) return true
 if (cp < 0xab28) return false
 if (cp < 0xab2f) return true
-return false
-}
+if (cp < 0xab30) return false
 if (cp < 0xab5b) return true
 if (cp < 0xab5c) return false
 if (cp < 0xab60) return true
 if (cp < 0xab60) return false
-if (cp < 0xab68) return true
+if (cp < 0xab69) return true
+return false
+}
+if (cp < 0xfb1f) {
+if (cp < 0xd7cb) {
+if (cp === 0xab69) return true
 if (cp < 0xab70) return false
 if (cp < 0xabc0) return true
 if (cp < 0xabc0) return false
 if (cp < 0xabe3) return true
 if (cp < 0xac00) return false
 if (cp < 0xd7a4) return true
-return false
-}
-if (cp < 0xfb13) {
 if (cp < 0xd7b0) return false
 if (cp < 0xd7c7) return true
-if (cp < 0xd7cb) return false
+return false
+}
 if (cp < 0xd7fc) return true
 if (cp < 0xf900) return false
 if (cp < 0xfa6e) return true
@@ -952,10 +951,12 @@ if (cp < 0xfa70) return false
 if (cp < 0xfada) return true
 if (cp < 0xfb00) return false
 if (cp < 0xfb07) return true
-return false
-}
+if (cp < 0xfb13) return false
 if (cp < 0xfb18) return true
 if (cp === 0xfb1d) return true
+return false
+}
+if (cp < 0xfb43) {
 if (cp < 0xfb1f) return false
 if (cp < 0xfb29) return true
 if (cp < 0xfb2a) return false
@@ -963,15 +964,10 @@ if (cp < 0xfb37) return true
 if (cp < 0xfb38) return false
 if (cp < 0xfb3d) return true
 if (cp === 0xfb3e) return true
-return false
-}
-if (cp < 0x104b0) {
-if (cp < 0x1000d) {
-if (cp < 0xff41) {
-if (cp < 0xfd92) {
 if (cp < 0xfb40) return false
 if (cp < 0xfb42) return true
-if (cp < 0xfb43) return false
+return false
+}
 if (cp < 0xfb45) return true
 if (cp < 0xfb46) return false
 if (cp < 0xfbb2) return true
@@ -979,34 +975,40 @@ if (cp < 0xfbd3) return false
 if (cp < 0xfd3e) return true
 if (cp < 0xfd50) return false
 if (cp < 0xfd90) return true
-return false
-}
+if (cp < 0xfd92) return false
 if (cp < 0xfdc8) return true
 if (cp < 0xfdf0) return false
 if (cp < 0xfdfc) return true
+return false
+}
+if (cp < 0x10808) {
+if (cp < 0x10280) {
+if (cp < 0xffca) {
+if (cp < 0xff70) {
 if (cp < 0xfe70) return false
 if (cp < 0xfe75) return true
 if (cp < 0xfe76) return false
 if (cp < 0xfefd) return true
 if (cp < 0xff21) return false
 if (cp < 0xff3b) return true
-return false
-}
-if (cp < 0xffa0) {
 if (cp < 0xff41) return false
 if (cp < 0xff5b) return true
 if (cp < 0xff66) return false
 if (cp < 0xff70) return true
+return false
+}
 if (cp === 0xff70) return true
 if (cp < 0xff71) return false
 if (cp < 0xff9e) return true
 if (cp < 0xff9e) return false
 if (cp < 0xffa0) return true
-return false
-}
+if (cp < 0xffa0) return false
 if (cp < 0xffbf) return true
 if (cp < 0xffc2) return false
 if (cp < 0xffc8) return true
+return false
+}
+if (cp < 0x10028) {
 if (cp < 0xffca) return false
 if (cp < 0xffd0) return true
 if (cp < 0xffd2) return false
@@ -1015,13 +1017,10 @@ if (cp < 0xffda) return false
 if (cp < 0xffdd) return true
 if (cp < 0x10000) return false
 if (cp < 0x1000c) return true
-return false
-}
-if (cp < 0x1032d) {
-if (cp < 0x10080) {
 if (cp < 0x1000d) return false
 if (cp < 0x10027) return true
-if (cp < 0x10028) return false
+return false
+}
 if (cp < 0x1003b) return true
 if (cp < 0x1003c) return false
 if (cp < 0x1003e) return true
@@ -1029,80 +1028,80 @@ if (cp < 0x1003f) return false
 if (cp < 0x1004e) return true
 if (cp < 0x10050) return false
 if (cp < 0x1005e) return true
-return false
-}
+if (cp < 0x10080) return false
 if (cp < 0x100fb) return true
 if (cp < 0x10140) return false
 if (cp < 0x10175) return true
+return false
+}
+if (cp < 0x103d1) {
+if (cp < 0x10342) {
 if (cp < 0x10280) return false
 if (cp < 0x1029d) return true
 if (cp < 0x102a0) return false
 if (cp < 0x102d1) return true
 if (cp < 0x10300) return false
 if (cp < 0x10320) return true
-return false
-}
-if (cp < 0x10380) {
 if (cp < 0x1032d) return false
 if (cp < 0x10341) return true
 if (cp === 0x10341) return true
-if (cp < 0x10342) return false
+return false
+}
 if (cp < 0x1034a) return true
 if (cp === 0x1034a) return true
 if (cp < 0x10350) return false
 if (cp < 0x10376) return true
-return false
-}
+if (cp < 0x10380) return false
 if (cp < 0x1039e) return true
 if (cp < 0x103a0) return false
 if (cp < 0x103c4) return true
 if (cp < 0x103c8) return false
 if (cp < 0x103d0) return true
+return false
+}
+if (cp < 0x10500) {
 if (cp < 0x103d1) return false
 if (cp < 0x103d6) return true
 if (cp < 0x10400) return false
 if (cp < 0x10450) return true
 if (cp < 0x10450) return false
 if (cp < 0x1049e) return true
-return false
-}
-if (cp < 0x10a00) {
-if (cp < 0x10837) {
-if (cp < 0x10740) {
 if (cp < 0x104b0) return false
 if (cp < 0x104d4) return true
 if (cp < 0x104d8) return false
 if (cp < 0x104fc) return true
-if (cp < 0x10500) return false
+return false
+}
 if (cp < 0x10528) return true
 if (cp < 0x10530) return false
 if (cp < 0x10564) return true
 if (cp < 0x10600) return false
 if (cp < 0x10737) return true
-return false
-}
+if (cp < 0x10740) return false
 if (cp < 0x10756) return true
 if (cp < 0x10760) return false
 if (cp < 0x10768) return true
 if (cp < 0x10800) return false
 if (cp < 0x10806) return true
+return false
+}
+if (cp < 0x10b40) {
+if (cp < 0x10980) {
+if (cp < 0x10860) {
 if (cp === 0x10808) return true
 if (cp < 0x1080a) return false
 if (cp < 0x10836) return true
-return false
-}
-if (cp < 0x108e0) {
 if (cp < 0x10837) return false
 if (cp < 0x10839) return true
 if (cp === 0x1083c) return true
 if (cp < 0x1083f) return false
 if (cp < 0x10856) return true
-if (cp < 0x10860) return false
+return false
+}
 if (cp < 0x10877) return true
 if (cp < 0x10880) return false
 if (cp < 0x1089f) return true
-return false
-}
+if (cp < 0x108e0) return false
 if (cp < 0x108f3) return true
 if (cp < 0x108f4) return false
 if (cp < 0x108f6) return true
@@ -1110,25 +1109,24 @@ if (cp < 0x10900) return false
 if (cp < 0x10916) return true
 if (cp < 0x10920) return false
 if (cp < 0x1093a) return true
+return false
+}
+if (cp < 0x10a19) {
 if (cp < 0x10980) return false
 if (cp < 0x109b8) return true
 if (cp < 0x109be) return false
 if (cp < 0x109c0) return true
-return false
-}
-if (cp < 0x10b80) {
-if (cp < 0x10a80) {
 if (cp === 0x10a00) return true
 if (cp < 0x10a10) return false
 if (cp < 0x10a14) return true
 if (cp < 0x10a15) return false
 if (cp < 0x10a18) return true
-if (cp < 0x10a19) return false
+return false
+}
 if (cp < 0x10a36) return true
 if (cp < 0x10a60) return false
 if (cp < 0x10a7d) return true
-return false
-}
+if (cp < 0x10a80) return false
 if (cp < 0x10a9d) return true
 if (cp < 0x10ac0) return false
 if (cp < 0x10ac8) return true
@@ -1136,29 +1134,39 @@ if (cp < 0x10ac9) return false
 if (cp < 0x10ae5) return true
 if (cp < 0x10b00) return false
 if (cp < 0x10b36) return true
+return false
+}
+if (cp < 0x10f30) {
+if (cp < 0x10cc0) {
 if (cp < 0x10b40) return false
 if (cp < 0x10b56) return true
 if (cp < 0x10b60) return false
 if (cp < 0x10b73) return true
-return false
-}
-if (cp < 0x10f00) {
 if (cp < 0x10b80) return false
 if (cp < 0x10b92) return true
 if (cp < 0x10c00) return false
 if (cp < 0x10c49) return true
 if (cp < 0x10c80) return false
 if (cp < 0x10cb3) return true
-if (cp < 0x10cc0) return false
+return false
+}
 if (cp < 0x10cf3) return true
 if (cp < 0x10d00) return false
 if (cp < 0x10d24) return true
-return false
-}
+if (cp < 0x10e80) return false
+if (cp < 0x10eaa) return true
+if (cp < 0x10eb0) return false
+if (cp < 0x10eb2) return true
+if (cp < 0x10f00) return false
 if (cp < 0x10f1d) return true
 if (cp === 0x10f27) return true
+return false
+}
+if (cp < 0x110d0) {
 if (cp < 0x10f30) return false
 if (cp < 0x10f46) return true
+if (cp < 0x10fb0) return false
+if (cp < 0x10fc5) return true
 if (cp < 0x10fe0) return false
 if (cp < 0x10ff7) return true
 if (cp < 0x11003) return false
@@ -1167,21 +1175,22 @@ if (cp < 0x11083) return false
 if (cp < 0x110b0) return true
 return false
 }
-if (cp < 0x18800) {
-if (cp < 0x119a0) {
-if (cp < 0x11332) {
-if (cp < 0x11213) {
-if (cp < 0x11183) {
-if (cp < 0x110d0) return false
 if (cp < 0x110e9) return true
 if (cp < 0x11103) return false
 if (cp < 0x11127) return true
 if (cp === 0x11144) return true
+if (cp === 0x11147) return true
 if (cp < 0x11150) return false
 if (cp < 0x11173) return true
 if (cp === 0x11176) return true
 return false
 }
+if (cp < 0x18800) {
+if (cp < 0x119a0) {
+if (cp < 0x11400) {
+if (cp < 0x1129f) {
+if (cp < 0x11213) {
+if (cp < 0x11183) return false
 if (cp < 0x111b3) return true
 if (cp < 0x111c1) return false
 if (cp < 0x111c5) return true
@@ -1191,8 +1200,6 @@ if (cp < 0x11200) return false
 if (cp < 0x11212) return true
 return false
 }
-if (cp < 0x1129f) {
-if (cp < 0x11213) return false
 if (cp < 0x1122c) return true
 if (cp < 0x11280) return false
 if (cp < 0x11287) return true
@@ -1203,6 +1210,8 @@ if (cp < 0x1128f) return false
 if (cp < 0x1129e) return true
 return false
 }
+if (cp < 0x1132a) {
+if (cp < 0x1129f) return false
 if (cp < 0x112a9) return true
 if (cp < 0x112b0) return false
 if (cp < 0x112df) return true
@@ -1212,12 +1221,9 @@ if (cp < 0x1130f) return false
 if (cp < 0x11311) return true
 if (cp < 0x11313) return false
 if (cp < 0x11329) return true
-if (cp < 0x1132a) return false
-if (cp < 0x11331) return true
 return false
 }
-if (cp < 0x114c7) {
-if (cp < 0x11400) {
+if (cp < 0x11331) return true
 if (cp < 0x11332) return false
 if (cp < 0x11334) return true
 if (cp < 0x11335) return false
@@ -1228,17 +1234,20 @@ if (cp < 0x1135d) return false
 if (cp < 0x11362) return true
 return false
 }
+if (cp < 0x116b8) {
+if (cp < 0x114c7) {
+if (cp < 0x11400) return false
 if (cp < 0x11435) return true
 if (cp < 0x11447) return false
 if (cp < 0x1144b) return true
-if (cp === 0x1145f) return true
+if (cp < 0x1145f) return false
+if (cp < 0x11462) return true
 if (cp < 0x11480) return false
 if (cp < 0x114b0) return true
 if (cp < 0x114c4) return false
 if (cp < 0x114c6) return true
 return false
 }
-if (cp < 0x11680) {
 if (cp === 0x114c7) return true
 if (cp < 0x11580) return false
 if (cp < 0x115af) return true
@@ -1247,9 +1256,11 @@ if (cp < 0x115dc) return true
 if (cp < 0x11600) return false
 if (cp < 0x11630) return true
 if (cp === 0x11644) return true
+if (cp < 0x11680) return false
+if (cp < 0x116ab) return true
 return false
 }
-if (cp < 0x116ab) return true
+if (cp < 0x11909) {
 if (cp === 0x116b8) return true
 if (cp < 0x11700) return false
 if (cp < 0x1171b) return true
@@ -1257,11 +1268,23 @@ if (cp < 0x11800) return false
 if (cp < 0x1182c) return true
 if (cp < 0x118a0) return false
 if (cp < 0x118e0) return true
-if (cp === 0x118ff) return true
+if (cp < 0x118ff) return false
+if (cp < 0x11907) return true
 return false
 }
-if (cp < 0x11d6a) {
-if (cp < 0x11ac0) {
+if (cp === 0x11909) return true
+if (cp < 0x1190c) return false
+if (cp < 0x11914) return true
+if (cp < 0x11915) return false
+if (cp < 0x11917) return true
+if (cp < 0x11918) return false
+if (cp < 0x11930) return true
+if (cp === 0x1193f) return true
+if (cp === 0x11941) return true
+return false
+}
+if (cp < 0x11d98) {
+if (cp < 0x11c00) {
 if (cp < 0x11a0b) {
 if (cp < 0x119a0) return false
 if (cp < 0x119a8) return true
@@ -1278,11 +1301,11 @@ if (cp === 0x11a50) return true
 if (cp < 0x11a5c) return false
 if (cp < 0x11a8a) return true
 if (cp === 0x11a9d) return true
-return false
-}
-if (cp < 0x11d00) {
 if (cp < 0x11ac0) return false
 if (cp < 0x11af9) return true
+return false
+}
+if (cp < 0x11d08) {
 if (cp < 0x11c00) return false
 if (cp < 0x11c09) return true
 if (cp < 0x11c0a) return false
@@ -1290,10 +1313,10 @@ if (cp < 0x11c2f) return true
 if (cp === 0x11c40) return true
 if (cp < 0x11c72) return false
 if (cp < 0x11c90) return true
+if (cp < 0x11d00) return false
+if (cp < 0x11d07) return true
 return false
 }
-if (cp < 0x11d07) return true
-if (cp < 0x11d08) return false
 if (cp < 0x11d0a) return true
 if (cp < 0x11d0b) return false
 if (cp < 0x11d31) return true
@@ -1302,15 +1325,16 @@ if (cp < 0x11d60) return false
 if (cp < 0x11d66) return true
 if (cp < 0x11d67) return false
 if (cp < 0x11d69) return true
+if (cp < 0x11d6a) return false
+if (cp < 0x11d8a) return true
 return false
 }
 if (cp < 0x16b00) {
 if (cp < 0x12480) {
-if (cp < 0x11d6a) return false
-if (cp < 0x11d8a) return true
 if (cp === 0x11d98) return true
 if (cp < 0x11ee0) return false
 if (cp < 0x11ef3) return true
+if (cp === 0x11fb0) return true
 if (cp < 0x12000) return false
 if (cp < 0x1239a) return true
 if (cp < 0x12400) return false
@@ -1355,21 +1379,23 @@ if (cp < 0x187f8) return true
 return false
 }
 if (cp < 0x1e2c0) {
-if (cp < 0x1d516) {
-if (cp < 0x1d456) {
-if (cp < 0x1bc00) {
+if (cp < 0x1d50d) {
+if (cp < 0x1d400) {
+if (cp < 0x1b170) {
 if (cp < 0x18800) return false
-if (cp < 0x18af3) return true
+if (cp < 0x18cd6) return true
+if (cp < 0x18d00) return false
+if (cp < 0x18d09) return true
 if (cp < 0x1b000) return false
 if (cp < 0x1b11f) return true
 if (cp < 0x1b150) return false
 if (cp < 0x1b153) return true
 if (cp < 0x1b164) return false
 if (cp < 0x1b168) return true
-if (cp < 0x1b170) return false
-if (cp < 0x1b2fc) return true
 return false
 }
+if (cp < 0x1b2fc) return true
+if (cp < 0x1bc00) return false
 if (cp < 0x1bc6b) return true
 if (cp < 0x1bc70) return false
 if (cp < 0x1bc7d) return true
@@ -1377,11 +1403,11 @@ if (cp < 0x1bc80) return false
 if (cp < 0x1bc89) return true
 if (cp < 0x1bc90) return false
 if (cp < 0x1bc9a) return true
-if (cp < 0x1d400) return false
-if (cp < 0x1d455) return true
 return false
 }
-if (cp < 0x1d4ae) {
+if (cp < 0x1d4a9) {
+if (cp < 0x1d400) return false
+if (cp < 0x1d455) return true
 if (cp < 0x1d456) return false
 if (cp < 0x1d49d) return true
 if (cp < 0x1d49e) return false
@@ -1389,10 +1415,10 @@ if (cp < 0x1d4a0) return true
 if (cp === 0x1d4a2) return true
 if (cp < 0x1d4a5) return false
 if (cp < 0x1d4a7) return true
-if (cp < 0x1d4a9) return false
-if (cp < 0x1d4ad) return true
 return false
 }
+if (cp < 0x1d4ad) return true
+if (cp < 0x1d4ae) return false
 if (cp < 0x1d4ba) return true
 if (cp === 0x1d4bb) return true
 if (cp < 0x1d4bd) return false
@@ -1401,12 +1427,12 @@ if (cp < 0x1d4c5) return false
 if (cp < 0x1d506) return true
 if (cp < 0x1d507) return false
 if (cp < 0x1d50b) return true
-if (cp < 0x1d50d) return false
-if (cp < 0x1d515) return true
 return false
 }
 if (cp < 0x1d6fc) {
-if (cp < 0x1d54a) {
+if (cp < 0x1d546) {
+if (cp < 0x1d50d) return false
+if (cp < 0x1d515) return true
 if (cp < 0x1d516) return false
 if (cp < 0x1d51d) return true
 if (cp < 0x1d51e) return false
@@ -1415,9 +1441,10 @@ if (cp < 0x1d53b) return false
 if (cp < 0x1d53f) return true
 if (cp < 0x1d540) return false
 if (cp < 0x1d545) return true
-if (cp === 0x1d546) return true
 return false
 }
+if (cp === 0x1d546) return true
+if (cp < 0x1d54a) return false
 if (cp < 0x1d551) return true
 if (cp < 0x1d552) return false
 if (cp < 0x1d6a6) return true
@@ -1454,8 +1481,8 @@ if (cp < 0x1e13e) return true
 if (cp === 0x1e14e) return true
 return false
 }
-if (cp < 0x1ee59) {
-if (cp < 0x1ee34) {
+if (cp < 0x1ee5b) {
+if (cp < 0x1ee39) {
 if (cp < 0x1ee05) {
 if (cp < 0x1e2c0) return false
 if (cp < 0x1e2ec) return true
@@ -1475,18 +1502,18 @@ if (cp === 0x1ee24) return true
 if (cp === 0x1ee27) return true
 if (cp < 0x1ee29) return false
 if (cp < 0x1ee33) return true
-return false
-}
-if (cp < 0x1ee49) {
 if (cp < 0x1ee34) return false
 if (cp < 0x1ee38) return true
+return false
+}
+if (cp < 0x1ee4b) {
 if (cp === 0x1ee39) return true
 if (cp === 0x1ee3b) return true
 if (cp === 0x1ee42) return true
 if (cp === 0x1ee47) return true
+if (cp === 0x1ee49) return true
 return false
 }
-if (cp === 0x1ee49) return true
 if (cp === 0x1ee4b) return true
 if (cp < 0x1ee4d) return false
 if (cp < 0x1ee50) return true
@@ -1494,20 +1521,19 @@ if (cp < 0x1ee51) return false
 if (cp < 0x1ee53) return true
 if (cp === 0x1ee54) return true
 if (cp === 0x1ee57) return true
+if (cp === 0x1ee59) return true
 return false
 }
-if (cp < 0x1ee80) {
-if (cp < 0x1ee64) {
-if (cp === 0x1ee59) return true
+if (cp < 0x1ee8b) {
+if (cp < 0x1ee67) {
 if (cp === 0x1ee5b) return true
 if (cp === 0x1ee5d) return true
 if (cp === 0x1ee5f) return true
 if (cp < 0x1ee61) return false
 if (cp < 0x1ee63) return true
+if (cp === 0x1ee64) return true
 return false
 }
-if (cp === 0x1ee64) return true
-if (cp < 0x1ee67) return false
 if (cp < 0x1ee6b) return true
 if (cp < 0x1ee6c) return false
 if (cp < 0x1ee73) return true
@@ -1516,11 +1542,11 @@ if (cp < 0x1ee78) return true
 if (cp < 0x1ee79) return false
 if (cp < 0x1ee7d) return true
 if (cp === 0x1ee7e) return true
-return false
-}
-if (cp < 0x20000) {
 if (cp < 0x1ee80) return false
 if (cp < 0x1ee8a) return true
+return false
+}
+if (cp < 0x2a700) {
 if (cp < 0x1ee8b) return false
 if (cp < 0x1ee9c) return true
 if (cp < 0x1eea1) return false
@@ -1529,10 +1555,10 @@ if (cp < 0x1eea5) return false
 if (cp < 0x1eeaa) return true
 if (cp < 0x1eeab) return false
 if (cp < 0x1eebc) return true
+if (cp < 0x20000) return false
+if (cp < 0x2a6de) return true
 return false
 }
-if (cp < 0x2a6d7) return true
-if (cp < 0x2a700) return false
 if (cp < 0x2b735) return true
 if (cp < 0x2b740) return false
 if (cp < 0x2b81e) return true
@@ -1542,13 +1568,15 @@ if (cp < 0x2ceb0) return false
 if (cp < 0x2ebe1) return true
 if (cp < 0x2f800) return false
 if (cp < 0x2fa1e) return true
+if (cp < 0x30000) return false
+if (cp < 0x3134b) return true
 return false
 }
 function isLargeIdContinue(cp: number): boolean {
-if (cp < 0x1cf7) {
-if (cp < 0xdd2) {
-if (cp < 0xabe) {
-if (cp < 0x93c) {
+if (cp < 0x20e1) {
+if (cp < 0xde6) {
+if (cp < 0xac7) {
+if (cp < 0x93e) {
 if (cp < 0x6f0) {
 if (cp < 0x5c7) {
 if (cp === 0xb7) return true
@@ -1584,7 +1612,7 @@ if (cp < 0x6ea) return false
 if (cp < 0x6ee) return true
 return false
 }
-if (cp < 0x81b) {
+if (cp < 0x825) {
 if (cp < 0x6f0) return false
 if (cp < 0x6fa) return true
 if (cp === 0x711) return true
@@ -1599,10 +1627,10 @@ if (cp < 0x7f4) return true
 if (cp === 0x7fd) return true
 if (cp < 0x816) return false
 if (cp < 0x81a) return true
+if (cp < 0x81b) return false
+if (cp < 0x824) return true
 return false
 }
-if (cp < 0x824) return true
-if (cp < 0x825) return false
 if (cp < 0x828) return true
 if (cp < 0x829) return false
 if (cp < 0x82e) return true
@@ -1615,11 +1643,11 @@ if (cp < 0x903) return true
 if (cp === 0x903) return true
 if (cp === 0x93a) return true
 if (cp === 0x93b) return true
+if (cp === 0x93c) return true
 return false
 }
-if (cp < 0x9d7) {
-if (cp < 0x966) {
-if (cp === 0x93c) return true
+if (cp < 0x9e6) {
+if (cp < 0x982) {
 if (cp < 0x93e) return false
 if (cp < 0x941) return true
 if (cp < 0x941) return false
@@ -1633,11 +1661,11 @@ if (cp < 0x951) return false
 if (cp < 0x958) return true
 if (cp < 0x962) return false
 if (cp < 0x964) return true
-return false
-}
+if (cp < 0x966) return false
 if (cp < 0x970) return true
 if (cp === 0x981) return true
-if (cp < 0x982) return false
+return false
+}
 if (cp < 0x984) return true
 if (cp === 0x9bc) return true
 if (cp < 0x9be) return false
@@ -1649,12 +1677,12 @@ if (cp < 0x9c9) return true
 if (cp < 0x9cb) return false
 if (cp < 0x9cd) return true
 if (cp === 0x9cd) return true
-return false
-}
-if (cp < 0xa47) {
 if (cp === 0x9d7) return true
 if (cp < 0x9e2) return false
 if (cp < 0x9e4) return true
+return false
+}
+if (cp < 0xa51) {
 if (cp < 0x9e6) return false
 if (cp < 0x9f0) return true
 if (cp === 0x9fe) return true
@@ -1666,11 +1694,12 @@ if (cp < 0xa3e) return false
 if (cp < 0xa41) return true
 if (cp < 0xa41) return false
 if (cp < 0xa43) return true
-return false
-}
+if (cp < 0xa47) return false
 if (cp < 0xa49) return true
 if (cp < 0xa4b) return false
 if (cp < 0xa4e) return true
+return false
+}
 if (cp === 0xa51) return true
 if (cp < 0xa66) return false
 if (cp < 0xa70) return true
@@ -1681,15 +1710,15 @@ if (cp < 0xa81) return false
 if (cp < 0xa83) return true
 if (cp === 0xa83) return true
 if (cp === 0xabc) return true
-return false
-}
-if (cp < 0xc04) {
-if (cp < 0xb4b) {
-if (cp < 0xafa) {
 if (cp < 0xabe) return false
 if (cp < 0xac1) return true
 if (cp < 0xac1) return false
 if (cp < 0xac6) return true
+return false
+}
+if (cp < 0xc46) {
+if (cp < 0xb55) {
+if (cp < 0xb02) {
 if (cp < 0xac7) return false
 if (cp < 0xac9) return true
 if (cp === 0xac9) return true
@@ -1700,11 +1729,11 @@ if (cp < 0xae2) return false
 if (cp < 0xae4) return true
 if (cp < 0xae6) return false
 if (cp < 0xaf0) return true
-return false
-}
+if (cp < 0xafa) return false
 if (cp < 0xb00) return true
 if (cp === 0xb01) return true
-if (cp < 0xb02) return false
+return false
+}
 if (cp < 0xb04) return true
 if (cp === 0xb3c) return true
 if (cp === 0xb3e) return true
@@ -1714,13 +1743,14 @@ if (cp < 0xb41) return false
 if (cp < 0xb45) return true
 if (cp < 0xb47) return false
 if (cp < 0xb49) return true
-return false
-}
-if (cp < 0xbc0) {
 if (cp < 0xb4b) return false
 if (cp < 0xb4d) return true
 if (cp === 0xb4d) return true
-if (cp === 0xb56) return true
+return false
+}
+if (cp < 0xbca) {
+if (cp < 0xb55) return false
+if (cp < 0xb57) return true
 if (cp === 0xb57) return true
 if (cp < 0xb62) return false
 if (cp < 0xb64) return true
@@ -1729,14 +1759,13 @@ if (cp < 0xb70) return true
 if (cp === 0xb82) return true
 if (cp < 0xbbe) return false
 if (cp < 0xbc0) return true
-return false
-}
 if (cp === 0xbc0) return true
 if (cp < 0xbc1) return false
 if (cp < 0xbc3) return true
 if (cp < 0xbc6) return false
 if (cp < 0xbc9) return true
-if (cp < 0xbca) return false
+return false
+}
 if (cp < 0xbcd) return true
 if (cp === 0xbcd) return true
 if (cp === 0xbd7) return true
@@ -1745,15 +1774,15 @@ if (cp < 0xbf0) return true
 if (cp === 0xc00) return true
 if (cp < 0xc01) return false
 if (cp < 0xc04) return true
-return false
-}
-if (cp < 0xccc) {
-if (cp < 0xc81) {
 if (cp === 0xc04) return true
 if (cp < 0xc3e) return false
 if (cp < 0xc41) return true
 if (cp < 0xc41) return false
 if (cp < 0xc45) return true
+return false
+}
+if (cp < 0xd00) {
+if (cp < 0xcbf) {
 if (cp < 0xc46) return false
 if (cp < 0xc49) return true
 if (cp < 0xc4a) return false
@@ -1764,13 +1793,13 @@ if (cp < 0xc62) return false
 if (cp < 0xc64) return true
 if (cp < 0xc66) return false
 if (cp < 0xc70) return true
-return false
-}
 if (cp === 0xc81) return true
 if (cp < 0xc82) return false
 if (cp < 0xc84) return true
 if (cp === 0xcbc) return true
 if (cp === 0xcbe) return true
+return false
+}
 if (cp === 0xcbf) return true
 if (cp < 0xcc0) return false
 if (cp < 0xcc5) return true
@@ -1779,9 +1808,6 @@ if (cp < 0xcc7) return false
 if (cp < 0xcc9) return true
 if (cp < 0xcca) return false
 if (cp < 0xccc) return true
-return false
-}
-if (cp < 0xd46) {
 if (cp < 0xccc) return false
 if (cp < 0xcce) return true
 if (cp < 0xcd5) return false
@@ -1790,6 +1816,9 @@ if (cp < 0xce2) return false
 if (cp < 0xce4) return true
 if (cp < 0xce6) return false
 if (cp < 0xcf0) return true
+return false
+}
+if (cp < 0xd62) {
 if (cp < 0xd00) return false
 if (cp < 0xd02) return true
 if (cp < 0xd02) return false
@@ -1800,33 +1829,34 @@ if (cp < 0xd3e) return false
 if (cp < 0xd41) return true
 if (cp < 0xd41) return false
 if (cp < 0xd45) return true
-return false
-}
+if (cp < 0xd46) return false
 if (cp < 0xd49) return true
 if (cp < 0xd4a) return false
 if (cp < 0xd4d) return true
 if (cp === 0xd4d) return true
 if (cp === 0xd57) return true
-if (cp < 0xd62) return false
+return false
+}
 if (cp < 0xd64) return true
 if (cp < 0xd66) return false
 if (cp < 0xd70) return true
+if (cp === 0xd81) return true
 if (cp < 0xd82) return false
 if (cp < 0xd84) return true
 if (cp === 0xdca) return true
 if (cp < 0xdcf) return false
 if (cp < 0xdd2) return true
-return false
-}
-if (cp < 0x1923) {
-if (cp < 0x1040) {
-if (cp < 0xf39) {
-if (cp < 0xe50) {
 if (cp < 0xdd2) return false
 if (cp < 0xdd5) return true
 if (cp === 0xdd6) return true
 if (cp < 0xdd8) return false
 if (cp < 0xde0) return true
+return false
+}
+if (cp < 0x1933) {
+if (cp < 0x1062) {
+if (cp < 0xf7f) {
+if (cp < 0xec8) {
 if (cp < 0xde6) return false
 if (cp < 0xdf0) return true
 if (cp < 0xdf2) return false
@@ -1836,13 +1866,13 @@ if (cp < 0xe34) return false
 if (cp < 0xe3b) return true
 if (cp < 0xe47) return false
 if (cp < 0xe4f) return true
-return false
-}
+if (cp < 0xe50) return false
 if (cp < 0xe5a) return true
 if (cp === 0xeb1) return true
 if (cp < 0xeb4) return false
 if (cp < 0xebd) return true
-if (cp < 0xec8) return false
+return false
+}
 if (cp < 0xece) return true
 if (cp < 0xed0) return false
 if (cp < 0xeda) return true
@@ -1852,14 +1882,14 @@ if (cp < 0xf20) return false
 if (cp < 0xf2a) return true
 if (cp === 0xf35) return true
 if (cp === 0xf37) return true
-return false
-}
-if (cp < 0xfc6) {
 if (cp === 0xf39) return true
 if (cp < 0xf3e) return false
 if (cp < 0xf40) return true
 if (cp < 0xf71) return false
 if (cp < 0xf7f) return true
+return false
+}
+if (cp < 0x1032) {
 if (cp === 0xf7f) return true
 if (cp < 0xf80) return false
 if (cp < 0xf85) return true
@@ -1869,15 +1899,14 @@ if (cp < 0xf8d) return false
 if (cp < 0xf98) return true
 if (cp < 0xf99) return false
 if (cp < 0xfbd) return true
-return false
-}
 if (cp === 0xfc6) return true
 if (cp < 0x102b) return false
 if (cp < 0x102d) return true
 if (cp < 0x102d) return false
 if (cp < 0x1031) return true
 if (cp === 0x1031) return true
-if (cp < 0x1032) return false
+return false
+}
 if (cp < 0x1038) return true
 if (cp === 0x1038) return true
 if (cp < 0x1039) return false
@@ -1886,10 +1915,6 @@ if (cp < 0x103b) return false
 if (cp < 0x103d) return true
 if (cp < 0x103d) return false
 if (cp < 0x103f) return true
-return false
-}
-if (cp < 0x1369) {
-if (cp < 0x1083) {
 if (cp < 0x1040) return false
 if (cp < 0x104a) return true
 if (cp < 0x1056) return false
@@ -1898,6 +1923,10 @@ if (cp < 0x1058) return false
 if (cp < 0x105a) return true
 if (cp < 0x105e) return false
 if (cp < 0x1061) return true
+return false
+}
+if (cp < 0x17b4) {
+if (cp < 0x1090) {
 if (cp < 0x1062) return false
 if (cp < 0x1065) return true
 if (cp < 0x1067) return false
@@ -1905,8 +1934,7 @@ if (cp < 0x106e) return true
 if (cp < 0x1071) return false
 if (cp < 0x1075) return true
 if (cp === 0x1082) return true
-return false
-}
+if (cp < 0x1083) return false
 if (cp < 0x1085) return true
 if (cp < 0x1085) return false
 if (cp < 0x1087) return true
@@ -1914,16 +1942,14 @@ if (cp < 0x1087) return false
 if (cp < 0x108d) return true
 if (cp === 0x108d) return true
 if (cp === 0x108f) return true
-if (cp < 0x1090) return false
+return false
+}
 if (cp < 0x109a) return true
 if (cp < 0x109a) return false
 if (cp < 0x109d) return true
 if (cp === 0x109d) return true
 if (cp < 0x135d) return false
 if (cp < 0x1360) return true
-return false
-}
-if (cp < 0x17c6) {
 if (cp < 0x1369) return false
 if (cp < 0x1372) return true
 if (cp < 0x1712) return false
@@ -1934,6 +1960,9 @@ if (cp < 0x1752) return false
 if (cp < 0x1754) return true
 if (cp < 0x1772) return false
 if (cp < 0x1774) return true
+return false
+}
+if (cp < 0x180b) {
 if (cp < 0x17b4) return false
 if (cp < 0x17b6) return true
 if (cp === 0x17b6) return true
@@ -1941,8 +1970,6 @@ if (cp < 0x17b7) return false
 if (cp < 0x17be) return true
 if (cp < 0x17be) return false
 if (cp < 0x17c6) return true
-return false
-}
 if (cp === 0x17c6) return true
 if (cp < 0x17c7) return false
 if (cp < 0x17c9) return true
@@ -1951,18 +1978,14 @@ if (cp < 0x17d4) return true
 if (cp === 0x17dd) return true
 if (cp < 0x17e0) return false
 if (cp < 0x17ea) return true
-if (cp < 0x180b) return false
+return false
+}
 if (cp < 0x180e) return true
 if (cp < 0x1810) return false
 if (cp < 0x181a) return true
 if (cp === 0x18a9) return true
 if (cp < 0x1920) return false
 if (cp < 0x1923) return true
-return false
-}
-if (cp < 0x1b3c) {
-if (cp < 0x1a60) {
-if (cp < 0x19d0) {
 if (cp < 0x1923) return false
 if (cp < 0x1927) return true
 if (cp < 0x1927) return false
@@ -1972,14 +1995,18 @@ if (cp < 0x192c) return true
 if (cp < 0x1930) return false
 if (cp < 0x1932) return true
 if (cp === 0x1932) return true
+return false
+}
+if (cp < 0x1b80) {
+if (cp < 0x1a73) {
+if (cp < 0x1a56) {
 if (cp < 0x1933) return false
 if (cp < 0x1939) return true
 if (cp < 0x1939) return false
 if (cp < 0x193c) return true
 if (cp < 0x1946) return false
 if (cp < 0x1950) return true
-return false
-}
+if (cp < 0x19d0) return false
 if (cp < 0x19da) return true
 if (cp === 0x19da) return true
 if (cp < 0x1a17) return false
@@ -1988,13 +2015,12 @@ if (cp < 0x1a19) return false
 if (cp < 0x1a1b) return true
 if (cp === 0x1a1b) return true
 if (cp === 0x1a55) return true
+return false
+}
 if (cp === 0x1a56) return true
 if (cp === 0x1a57) return true
 if (cp < 0x1a58) return false
 if (cp < 0x1a5f) return true
-return false
-}
-if (cp < 0x1a80) {
 if (cp === 0x1a60) return true
 if (cp === 0x1a61) return true
 if (cp === 0x1a62) return true
@@ -2004,28 +2030,30 @@ if (cp < 0x1a65) return false
 if (cp < 0x1a6d) return true
 if (cp < 0x1a6d) return false
 if (cp < 0x1a73) return true
+return false
+}
+if (cp < 0x1b35) {
 if (cp < 0x1a73) return false
 if (cp < 0x1a7d) return true
 if (cp === 0x1a7f) return true
-return false
-}
+if (cp < 0x1a80) return false
 if (cp < 0x1a8a) return true
 if (cp < 0x1a90) return false
 if (cp < 0x1a9a) return true
 if (cp < 0x1ab0) return false
 if (cp < 0x1abe) return true
+if (cp < 0x1abf) return false
+if (cp < 0x1ac1) return true
 if (cp < 0x1b00) return false
 if (cp < 0x1b04) return true
 if (cp === 0x1b04) return true
 if (cp === 0x1b34) return true
+return false
+}
 if (cp === 0x1b35) return true
 if (cp < 0x1b36) return false
 if (cp < 0x1b3b) return true
 if (cp === 0x1b3b) return true
-return false
-}
-if (cp < 0x1be8) {
-if (cp < 0x1ba1) {
 if (cp === 0x1b3c) return true
 if (cp < 0x1b3d) return false
 if (cp < 0x1b42) return true
@@ -2036,11 +2064,13 @@ if (cp < 0x1b50) return false
 if (cp < 0x1b5a) return true
 if (cp < 0x1b6b) return false
 if (cp < 0x1b74) return true
+return false
+}
+if (cp < 0x1c2c) {
+if (cp < 0x1be6) {
 if (cp < 0x1b80) return false
 if (cp < 0x1b82) return true
 if (cp === 0x1b82) return true
-return false
-}
 if (cp === 0x1ba1) return true
 if (cp < 0x1ba2) return false
 if (cp < 0x1ba6) return true
@@ -2053,11 +2083,10 @@ if (cp < 0x1bab) return false
 if (cp < 0x1bae) return true
 if (cp < 0x1bb0) return false
 if (cp < 0x1bba) return true
-if (cp === 0x1be6) return true
-if (cp === 0x1be7) return true
 return false
 }
-if (cp < 0x1c36) {
+if (cp === 0x1be6) return true
+if (cp === 0x1be7) return true
 if (cp < 0x1be8) return false
 if (cp < 0x1bea) return true
 if (cp < 0x1bea) return false
@@ -2070,12 +2099,14 @@ if (cp < 0x1bf2) return false
 if (cp < 0x1bf4) return true
 if (cp < 0x1c24) return false
 if (cp < 0x1c2c) return true
+return false
+}
+if (cp < 0x1ced) {
 if (cp < 0x1c2c) return false
 if (cp < 0x1c34) return true
 if (cp < 0x1c34) return false
 if (cp < 0x1c36) return true
-return false
-}
+if (cp < 0x1c36) return false
 if (cp < 0x1c38) return true
 if (cp < 0x1c40) return false
 if (cp < 0x1c4a) return true
@@ -2088,15 +2119,10 @@ if (cp < 0x1ce1) return true
 if (cp === 0x1ce1) return true
 if (cp < 0x1ce2) return false
 if (cp < 0x1ce9) return true
-if (cp === 0x1ced) return true
-if (cp === 0x1cf4) return true
 return false
 }
-if (cp < 0x11340) {
-if (cp < 0xabe3) {
-if (cp < 0xa947) {
-if (cp < 0xa674) {
-if (cp < 0x20e5) {
+if (cp === 0x1ced) return true
+if (cp === 0x1cf4) return true
 if (cp === 0x1cf7) return true
 if (cp < 0x1cf8) return false
 if (cp < 0x1cfa) return true
@@ -2109,9 +2135,15 @@ if (cp < 0x2041) return true
 if (cp === 0x2054) return true
 if (cp < 0x20d0) return false
 if (cp < 0x20dd) return true
-if (cp === 0x20e1) return true
 return false
 }
+if (cp < 0x11370) {
+if (cp < 0xfb1e) {
+if (cp < 0xa9ba) {
+if (cp < 0xa825) {
+if (cp < 0xa620) {
+if (cp === 0x20e1) return true
+if (cp < 0x20e5) return false
 if (cp < 0x20f1) return true
 if (cp < 0x2cef) return false
 if (cp < 0x2cf2) return true
@@ -2124,12 +2156,10 @@ if (cp < 0x302e) return false
 if (cp < 0x3030) return true
 if (cp < 0x3099) return false
 if (cp < 0x309b) return true
-if (cp < 0xa620) return false
-if (cp < 0xa62a) return true
-if (cp === 0xa66f) return true
 return false
 }
-if (cp < 0xa827) {
+if (cp < 0xa62a) return true
+if (cp === 0xa66f) return true
 if (cp < 0xa674) return false
 if (cp < 0xa67e) return true
 if (cp < 0xa69e) return false
@@ -2141,11 +2171,13 @@ if (cp === 0xa806) return true
 if (cp === 0xa80b) return true
 if (cp < 0xa823) return false
 if (cp < 0xa825) return true
-if (cp < 0xa825) return false
-if (cp < 0xa827) return true
 return false
 }
+if (cp < 0xa900) {
+if (cp < 0xa825) return false
+if (cp < 0xa827) return true
 if (cp === 0xa827) return true
+if (cp === 0xa82c) return true
 if (cp < 0xa880) return false
 if (cp < 0xa882) return true
 if (cp < 0xa8b4) return false
@@ -2157,14 +2189,11 @@ if (cp < 0xa8da) return true
 if (cp < 0xa8e0) return false
 if (cp < 0xa8f2) return true
 if (cp === 0xa8ff) return true
-if (cp < 0xa900) return false
+return false
+}
 if (cp < 0xa90a) return true
 if (cp < 0xa926) return false
 if (cp < 0xa92e) return true
-return false
-}
-if (cp < 0xaa35) {
-if (cp < 0xa9bc) {
 if (cp < 0xa947) return false
 if (cp < 0xa952) return true
 if (cp < 0xa952) return false
@@ -2177,10 +2206,13 @@ if (cp < 0xa9b4) return false
 if (cp < 0xa9b6) return true
 if (cp < 0xa9b6) return false
 if (cp < 0xa9ba) return true
-if (cp < 0xa9ba) return false
-if (cp < 0xa9bc) return true
 return false
 }
+if (cp < 0xaab0) {
+if (cp < 0xaa33) {
+if (cp < 0xa9ba) return false
+if (cp < 0xa9bc) return true
+if (cp < 0xa9bc) return false
 if (cp < 0xa9be) return true
 if (cp < 0xa9be) return false
 if (cp < 0xa9c1) return true
@@ -2195,11 +2227,9 @@ if (cp < 0xaa2f) return false
 if (cp < 0xaa31) return true
 if (cp < 0xaa31) return false
 if (cp < 0xaa33) return true
-if (cp < 0xaa33) return false
-if (cp < 0xaa35) return true
 return false
 }
-if (cp < 0xaab2) {
+if (cp < 0xaa35) return true
 if (cp < 0xaa35) return false
 if (cp < 0xaa37) return true
 if (cp === 0xaa43) return true
@@ -2210,9 +2240,11 @@ if (cp < 0xaa5a) return true
 if (cp === 0xaa7b) return true
 if (cp === 0xaa7c) return true
 if (cp === 0xaa7d) return true
-if (cp === 0xaab0) return true
 return false
 }
+if (cp < 0xaaf6) {
+if (cp === 0xaab0) return true
+if (cp < 0xaab2) return false
 if (cp < 0xaab5) return true
 if (cp < 0xaab7) return false
 if (cp < 0xaab9) return true
@@ -2225,12 +2257,9 @@ if (cp < 0xaaee) return true
 if (cp < 0xaaee) return false
 if (cp < 0xaaf0) return true
 if (cp === 0xaaf5) return true
-if (cp === 0xaaf6) return true
 return false
 }
-if (cp < 0x11082) {
-if (cp < 0x10376) {
-if (cp < 0xfb1e) {
+if (cp === 0xaaf6) return true
 if (cp < 0xabe3) return false
 if (cp < 0xabe5) return true
 if (cp === 0xabe5) return true
@@ -2245,6 +2274,9 @@ if (cp < 0xabf0) return false
 if (cp < 0xabfa) return true
 return false
 }
+if (cp < 0x1112c) {
+if (cp < 0x10d24) {
+if (cp < 0x102e0) {
 if (cp === 0xfb1e) return true
 if (cp < 0xfe00) return false
 if (cp < 0xfe10) return true
@@ -2258,10 +2290,9 @@ if (cp < 0xff10) return false
 if (cp < 0xff1a) return true
 if (cp === 0xff3f) return true
 if (cp === 0x101fd) return true
-if (cp === 0x102e0) return true
 return false
 }
-if (cp < 0x10d24) {
+if (cp === 0x102e0) return true
 if (cp < 0x10376) return false
 if (cp < 0x1037b) return true
 if (cp < 0x104a0) return false
@@ -2279,9 +2310,13 @@ if (cp < 0x10ae5) return false
 if (cp < 0x10ae7) return true
 return false
 }
+if (cp < 0x1107f) {
+if (cp < 0x10d24) return false
 if (cp < 0x10d28) return true
 if (cp < 0x10d30) return false
 if (cp < 0x10d3a) return true
+if (cp < 0x10eab) return false
+if (cp < 0x10ead) return true
 if (cp < 0x10f46) return false
 if (cp < 0x10f51) return true
 if (cp === 0x11000) return true
@@ -2291,12 +2326,9 @@ if (cp < 0x11038) return false
 if (cp < 0x11047) return true
 if (cp < 0x11066) return false
 if (cp < 0x11070) return true
-if (cp < 0x1107f) return false
-if (cp < 0x11082) return true
 return false
 }
-if (cp < 0x111bf) {
-if (cp < 0x1112c) {
+if (cp < 0x11082) return true
 if (cp === 0x11082) return true
 if (cp < 0x110b0) return false
 if (cp < 0x110b3) return true
@@ -2314,6 +2346,8 @@ if (cp < 0x11127) return false
 if (cp < 0x1112c) return true
 return false
 }
+if (cp < 0x11235) {
+if (cp < 0x111bf) {
 if (cp === 0x1112c) return true
 if (cp < 0x1112d) return false
 if (cp < 0x11135) return true
@@ -2331,11 +2365,11 @@ if (cp < 0x111b6) return false
 if (cp < 0x111bf) return true
 return false
 }
-if (cp < 0x1123e) {
-if (cp < 0x111bf) return false
 if (cp < 0x111c1) return true
 if (cp < 0x111c9) return false
 if (cp < 0x111cd) return true
+if (cp === 0x111ce) return true
+if (cp === 0x111cf) return true
 if (cp < 0x111d0) return false
 if (cp < 0x111da) return true
 if (cp < 0x1122c) return false
@@ -2345,11 +2379,12 @@ if (cp < 0x11232) return true
 if (cp < 0x11232) return false
 if (cp < 0x11234) return true
 if (cp === 0x11234) return true
+return false
+}
+if (cp < 0x1133b) {
 if (cp === 0x11235) return true
 if (cp < 0x11236) return false
 if (cp < 0x11238) return true
-return false
-}
 if (cp === 0x1123e) return true
 if (cp === 0x112df) return true
 if (cp < 0x112e0) return false
@@ -2362,16 +2397,11 @@ if (cp < 0x11300) return false
 if (cp < 0x11302) return true
 if (cp < 0x11302) return false
 if (cp < 0x11304) return true
-if (cp < 0x1133b) return false
+return false
+}
 if (cp < 0x1133d) return true
 if (cp < 0x1133e) return false
 if (cp < 0x11340) return true
-return false
-}
-if (cp < 0x11a51) {
-if (cp < 0x1163b) {
-if (cp < 0x114b3) {
-if (cp < 0x11435) {
 if (cp === 0x11340) return true
 if (cp < 0x11341) return false
 if (cp < 0x11345) return true
@@ -2384,10 +2414,15 @@ if (cp < 0x11362) return false
 if (cp < 0x11364) return true
 if (cp < 0x11366) return false
 if (cp < 0x1136d) return true
-if (cp < 0x11370) return false
-if (cp < 0x11375) return true
 return false
 }
+if (cp < 0x11a51) {
+if (cp < 0x116ae) {
+if (cp < 0x114d0) {
+if (cp < 0x1145e) {
+if (cp < 0x11370) return false
+if (cp < 0x11375) return true
+if (cp < 0x11435) return false
 if (cp < 0x11438) return true
 if (cp < 0x11438) return false
 if (cp < 0x11440) return true
@@ -2399,12 +2434,11 @@ if (cp === 0x11445) return true
 if (cp === 0x11446) return true
 if (cp < 0x11450) return false
 if (cp < 0x1145a) return true
+return false
+}
 if (cp === 0x1145e) return true
 if (cp < 0x114b0) return false
 if (cp < 0x114b3) return true
-return false
-}
-if (cp < 0x115af) {
 if (cp < 0x114b3) return false
 if (cp < 0x114b9) return true
 if (cp === 0x114b9) return true
@@ -2416,10 +2450,12 @@ if (cp < 0x114c1) return true
 if (cp === 0x114c1) return true
 if (cp < 0x114c2) return false
 if (cp < 0x114c4) return true
-if (cp < 0x114d0) return false
-if (cp < 0x114da) return true
 return false
 }
+if (cp < 0x11633) {
+if (cp < 0x114d0) return false
+if (cp < 0x114da) return true
+if (cp < 0x115af) return false
 if (cp < 0x115b2) return true
 if (cp < 0x115b2) return false
 if (cp < 0x115b6) return true
@@ -2434,12 +2470,9 @@ if (cp < 0x115dc) return false
 if (cp < 0x115de) return true
 if (cp < 0x11630) return false
 if (cp < 0x11633) return true
-if (cp < 0x11633) return false
-if (cp < 0x1163b) return true
 return false
 }
-if (cp < 0x11727) {
-if (cp < 0x116ae) {
+if (cp < 0x1163b) return true
 if (cp < 0x1163b) return false
 if (cp < 0x1163d) return true
 if (cp === 0x1163d) return true
@@ -2453,6 +2486,9 @@ if (cp === 0x116ac) return true
 if (cp === 0x116ad) return true
 return false
 }
+if (cp < 0x1193b) {
+if (cp < 0x11727) {
+if (cp < 0x116ae) return false
 if (cp < 0x116b0) return true
 if (cp < 0x116b0) return false
 if (cp < 0x116b6) return true
@@ -2469,8 +2505,6 @@ if (cp < 0x11726) return true
 if (cp === 0x11726) return true
 return false
 }
-if (cp < 0x119da) {
-if (cp < 0x11727) return false
 if (cp < 0x1172c) return true
 if (cp < 0x11730) return false
 if (cp < 0x1173a) return true
@@ -2483,6 +2517,22 @@ if (cp < 0x11839) return false
 if (cp < 0x1183b) return true
 if (cp < 0x118e0) return false
 if (cp < 0x118ea) return true
+if (cp < 0x11930) return false
+if (cp < 0x11936) return true
+if (cp < 0x11937) return false
+if (cp < 0x11939) return true
+return false
+}
+if (cp < 0x119da) {
+if (cp < 0x1193b) return false
+if (cp < 0x1193d) return true
+if (cp === 0x1193d) return true
+if (cp === 0x1193e) return true
+if (cp === 0x11940) return true
+if (cp === 0x11942) return true
+if (cp === 0x11943) return true
+if (cp < 0x11950) return false
+if (cp < 0x1195a) return true
 if (cp < 0x119d1) return false
 if (cp < 0x119d4) return true
 if (cp < 0x119d4) return false
@@ -2504,9 +2554,9 @@ if (cp < 0x11a3f) return true
 if (cp === 0x11a47) return true
 return false
 }
-if (cp < 0x16a60) {
-if (cp < 0x11cb4) {
-if (cp < 0x11c38) {
+if (cp < 0x16b30) {
+if (cp < 0x11cb5) {
+if (cp < 0x11c3e) {
 if (cp < 0x11a51) return false
 if (cp < 0x11a57) return true
 if (cp < 0x11a57) return false
@@ -2521,9 +2571,10 @@ if (cp < 0x11a9a) return true
 if (cp === 0x11c2f) return true
 if (cp < 0x11c30) return false
 if (cp < 0x11c37) return true
+if (cp < 0x11c38) return false
+if (cp < 0x11c3e) return true
 return false
 }
-if (cp < 0x11c3e) return true
 if (cp === 0x11c3e) return true
 if (cp === 0x11c3f) return true
 if (cp < 0x11c50) return false
@@ -2536,10 +2587,10 @@ if (cp < 0x11cb1) return true
 if (cp === 0x11cb1) return true
 if (cp < 0x11cb2) return false
 if (cp < 0x11cb4) return true
+if (cp === 0x11cb4) return true
 return false
 }
-if (cp < 0x11d8a) {
-if (cp === 0x11cb4) return true
+if (cp < 0x11d93) {
 if (cp < 0x11cb5) return false
 if (cp < 0x11cb7) return true
 if (cp < 0x11d31) return false
@@ -2552,12 +2603,12 @@ if (cp < 0x11d46) return true
 if (cp === 0x11d47) return true
 if (cp < 0x11d50) return false
 if (cp < 0x11d5a) return true
-return false
-}
+if (cp < 0x11d8a) return false
 if (cp < 0x11d8f) return true
 if (cp < 0x11d90) return false
 if (cp < 0x11d92) return true
-if (cp < 0x11d93) return false
+return false
+}
 if (cp < 0x11d95) return true
 if (cp === 0x11d95) return true
 if (cp === 0x11d96) return true
@@ -2568,14 +2619,14 @@ if (cp < 0x11ef3) return false
 if (cp < 0x11ef5) return true
 if (cp < 0x11ef5) return false
 if (cp < 0x11ef7) return true
-return false
-}
-if (cp < 0x1da3b) {
-if (cp < 0x1d165) {
 if (cp < 0x16a60) return false
 if (cp < 0x16a6a) return true
 if (cp < 0x16af0) return false
 if (cp < 0x16af5) return true
+return false
+}
+if (cp < 0x1da75) {
+if (cp < 0x1d167) {
 if (cp < 0x16b30) return false
 if (cp < 0x16b37) return true
 if (cp < 0x16b50) return false
@@ -2585,12 +2636,15 @@ if (cp < 0x16f51) return false
 if (cp < 0x16f88) return true
 if (cp < 0x16f8f) return false
 if (cp < 0x16f93) return true
+if (cp === 0x16fe4) return true
+if (cp < 0x16ff0) return false
+if (cp < 0x16ff2) return true
 if (cp < 0x1bc9d) return false
 if (cp < 0x1bc9f) return true
+if (cp < 0x1d165) return false
+if (cp < 0x1d167) return true
 return false
 }
-if (cp < 0x1d167) return true
-if (cp < 0x1d167) return false
 if (cp < 0x1d16a) return true
 if (cp < 0x1d16d) return false
 if (cp < 0x1d173) return true
@@ -2606,11 +2660,11 @@ if (cp < 0x1d7ce) return false
 if (cp < 0x1d800) return true
 if (cp < 0x1da00) return false
 if (cp < 0x1da37) return true
-return false
-}
-if (cp < 0x1e026) {
 if (cp < 0x1da3b) return false
 if (cp < 0x1da6d) return true
+return false
+}
+if (cp < 0x1e130) {
 if (cp === 0x1da75) return true
 if (cp === 0x1da84) return true
 if (cp < 0x1da9b) return false
@@ -2625,10 +2679,10 @@ if (cp < 0x1e01b) return false
 if (cp < 0x1e022) return true
 if (cp < 0x1e023) return false
 if (cp < 0x1e025) return true
+if (cp < 0x1e026) return false
+if (cp < 0x1e02b) return true
 return false
 }
-if (cp < 0x1e02b) return true
-if (cp < 0x1e130) return false
 if (cp < 0x1e137) return true
 if (cp < 0x1e140) return false
 if (cp < 0x1e14a) return true
@@ -2642,6 +2696,8 @@ if (cp < 0x1e944) return false
 if (cp < 0x1e94b) return true
 if (cp < 0x1e950) return false
 if (cp < 0x1e95a) return true
+if (cp < 0x1fbf0) return false
+if (cp < 0x1fbfa) return true
 if (cp < 0xe0100) return false
 if (cp < 0xe01f0) return true
 return false
