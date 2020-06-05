@@ -1,0 +1,42 @@
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+const AST = require("./ast");
+exports.AST = AST;
+const parser_1 = require("./parser");
+exports.RegExpParser = parser_1.RegExpParser;
+const validator_1 = require("./validator");
+exports.RegExpValidator = validator_1.RegExpValidator;
+//import { RegExpVisitor } from "./visitor"
+__export(require("./const"));
+/**
+ * Parse a given regular expression literal then make AST object.
+ * @param source The source code to parse.
+ * @param options The options to parse.
+ * @returns The AST of the regular expression.
+ */
+function parseRegExpLiteral(source, options) {
+    return new parser_1.RegExpParser(options).parseLiteral((source instanceof RegExp) ? source.toString() : source);
+}
+exports.parseRegExpLiteral = parseRegExpLiteral;
+/**
+ * Validate a given regular expression literal.
+ * @param source The source code to validate.
+ * @param options The options to validate.
+ */
+function validateRegExpLiteral(source, options) {
+    return new validator_1.RegExpValidator(options).validateLiteral(source);
+}
+exports.validateRegExpLiteral = validateRegExpLiteral;
+/*
+export function visitRegExpAST(
+    node: AST.Node,
+    handlers: RegExpVisitor.Handlers,
+): void {
+    new RegExpVisitor(handlers).visit(node)
+}
+ */
+exports.default = exports;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLDZCQUE2QjtBQU9wQixrQkFBRztBQU5aLHFDQUF1QztBQU16Qix1QkFOTCxxQkFBWSxDQU1LO0FBTDFCLDJDQUE2QztBQUtqQiwwQkFMbkIsMkJBQWUsQ0FLbUI7QUFKM0MsMkNBQTJDO0FBRTNDLDZCQUF1QjtBQUl2Qjs7Ozs7R0FLRztBQUNILFNBQWdCLGtCQUFrQixDQUM5QixNQUF1QixFQUN2QixPQUE4QjtJQUU5QixPQUFPLElBQUkscUJBQVksQ0FBQyxPQUFPLENBQUMsQ0FBQyxZQUFZLENBQUMsQ0FBQyxNQUFNLFlBQVksTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDLENBQUMsTUFBTSxDQUFDLENBQUE7QUFDMUcsQ0FBQztBQUxELGdEQUtDO0FBRUQ7Ozs7R0FJRztBQUNILFNBQWdCLHFCQUFxQixDQUNqQyxNQUFjLEVBQ2QsT0FBaUM7SUFFakMsT0FBTyxJQUFJLDJCQUFlLENBQUMsT0FBTyxDQUFDLENBQUMsZUFBZSxDQUFDLE1BQU0sQ0FBQyxDQUFBO0FBQy9ELENBQUM7QUFMRCxzREFLQztBQUVEOzs7Ozs7O0dBT0c7QUFFSCxrQkFBZSxPQUFtQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFTVCA9IHJlcXVpcmUoXCIuL2FzdFwiKVxuaW1wb3J0IHsgUmVnRXhwUGFyc2VyIH0gZnJvbSBcIi4vcGFyc2VyXCJcbmltcG9ydCB7IFJlZ0V4cFZhbGlkYXRvciB9IGZyb20gXCIuL3ZhbGlkYXRvclwiXG4vL2ltcG9ydCB7IFJlZ0V4cFZpc2l0b3IgfSBmcm9tIFwiLi92aXNpdG9yXCJcblxuZXhwb3J0ICogZnJvbSBcIi4vY29uc3RcIlxuXG5leHBvcnQgeyBBU1QsIFJlZ0V4cFBhcnNlciwgUmVnRXhwVmFsaWRhdG9yIH1cblxuLyoqXG4gKiBQYXJzZSBhIGdpdmVuIHJlZ3VsYXIgZXhwcmVzc2lvbiBsaXRlcmFsIHRoZW4gbWFrZSBBU1Qgb2JqZWN0LlxuICogQHBhcmFtIHNvdXJjZSBUaGUgc291cmNlIGNvZGUgdG8gcGFyc2UuXG4gKiBAcGFyYW0gb3B0aW9ucyBUaGUgb3B0aW9ucyB0byBwYXJzZS5cbiAqIEByZXR1cm5zIFRoZSBBU1Qgb2YgdGhlIHJlZ3VsYXIgZXhwcmVzc2lvbi5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHBhcnNlUmVnRXhwTGl0ZXJhbChcbiAgICBzb3VyY2U6IHN0cmluZyB8IFJlZ0V4cCxcbiAgICBvcHRpb25zPzogUmVnRXhwUGFyc2VyLk9wdGlvbnMsXG4pOiBBU1QuUmVnRXhwTGl0ZXJhbCB7XG4gICAgcmV0dXJuIG5ldyBSZWdFeHBQYXJzZXIob3B0aW9ucykucGFyc2VMaXRlcmFsKChzb3VyY2UgaW5zdGFuY2VvZiBSZWdFeHApID8gc291cmNlLnRvU3RyaW5nKCkgOiBzb3VyY2UpXG59XG5cbi8qKlxuICogVmFsaWRhdGUgYSBnaXZlbiByZWd1bGFyIGV4cHJlc3Npb24gbGl0ZXJhbC5cbiAqIEBwYXJhbSBzb3VyY2UgVGhlIHNvdXJjZSBjb2RlIHRvIHZhbGlkYXRlLlxuICogQHBhcmFtIG9wdGlvbnMgVGhlIG9wdGlvbnMgdG8gdmFsaWRhdGUuXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiB2YWxpZGF0ZVJlZ0V4cExpdGVyYWwoXG4gICAgc291cmNlOiBzdHJpbmcsXG4gICAgb3B0aW9ucz86IFJlZ0V4cFZhbGlkYXRvci5PcHRpb25zLFxuKTogdm9pZCB7XG4gICAgcmV0dXJuIG5ldyBSZWdFeHBWYWxpZGF0b3Iob3B0aW9ucykudmFsaWRhdGVMaXRlcmFsKHNvdXJjZSlcbn1cblxuLypcbmV4cG9ydCBmdW5jdGlvbiB2aXNpdFJlZ0V4cEFTVChcbiAgICBub2RlOiBBU1QuTm9kZSxcbiAgICBoYW5kbGVyczogUmVnRXhwVmlzaXRvci5IYW5kbGVycyxcbik6IHZvaWQge1xuICAgIG5ldyBSZWdFeHBWaXNpdG9yKGhhbmRsZXJzKS52aXNpdChub2RlKVxufVxuICovXG5cbmV4cG9ydCBkZWZhdWx0IGV4cG9ydHMgYXMgdHlwZW9mIGltcG9ydCgnLi9pbmRleCcpO1xuIl19

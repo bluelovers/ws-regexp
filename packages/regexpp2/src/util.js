@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "AssertionError" /* AssertionError */);
+    }
+}
+exports.assert = assert;
+function last(xs) {
+    return xs.length === 0 ? undefined : xs[xs.length - 1];
+}
+exports.last = last;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInV0aWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQSxTQUFnQixNQUFNLENBQUMsU0FBa0IsRUFBRSxPQUFnQjtJQUN2RCxJQUFJLENBQUMsU0FBUyxFQUFFO1FBQ1osTUFBTSxJQUFJLEtBQUssQ0FBQyxPQUFPLHlDQUE0QixDQUFDLENBQUE7S0FDdkQ7QUFDTCxDQUFDO0FBSkQsd0JBSUM7QUFFRCxTQUFnQixJQUFJLENBQUksRUFBTztJQUMzQixPQUFPLEVBQUUsQ0FBQyxNQUFNLEtBQUssQ0FBQyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQyxDQUFBO0FBQzFELENBQUM7QUFGRCxvQkFFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEVudW1FcnJvciB9IGZyb20gJy4vY29uc3QnO1xuXG5leHBvcnQgZnVuY3Rpb24gYXNzZXJ0KGNvbmRpdGlvbjogYm9vbGVhbiwgbWVzc2FnZT86IHN0cmluZyk6IHZvaWQge1xuICAgIGlmICghY29uZGl0aW9uKSB7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihtZXNzYWdlIHx8IEVudW1FcnJvci5Bc3NlcnRpb25FcnJvcilcbiAgICB9XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBsYXN0PFQ+KHhzOiBUW10pOiBUIHwgdW5kZWZpbmVkIHtcbiAgICByZXR1cm4geHMubGVuZ3RoID09PSAwID8gdW5kZWZpbmVkIDogeHNbeHMubGVuZ3RoIC0gMV1cbn1cbiJdfQ==
