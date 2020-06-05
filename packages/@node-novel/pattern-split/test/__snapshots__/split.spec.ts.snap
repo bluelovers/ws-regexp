@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`breakingMode: true (?:女佣|女僕) 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`breakingMode: true (女佣|女僕) 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`breakingMode: true /(?:女佣|女僕)/ 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`breakingMode: true /(?<![ァ-ヴーｱ-ﾝﾞｰ])(ソフィア|索菲亞)(?![ァ-ヴーｱ-ﾝﾞｰ])/ 1`] = `
+Array [
+  "ソフィア",
+  "索菲亞",
+]
+`;
+
+exports[`breakingMode: true /(?<![ァ-ヴーｱ-ﾝﾞｰ])(震夜)(?![ァ-ヴーｱ-ﾝﾞｰ])/ 1`] = `
+Array [
+  "震夜",
+]
+`;
+
+exports[`breakingMode: true /(女佣|女僕)/ 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`breakingMode: true /女佣|女僕/ 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`breakingMode: true 女佣|女僕 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`novelPatternSplit (?:女佣|女僕) 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`novelPatternSplit (女佣|女僕) 1`] = `
+Array [
+  "(女佣|女僕)",
+]
+`;
+
+exports[`novelPatternSplit /(?:女佣|女僕)/ 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`novelPatternSplit /(女佣|女僕)/ 1`] = `
+Array [
+  "(女佣|女僕)",
+]
+`;
+
+exports[`novelPatternSplit /女佣|女僕/ 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
+
+exports[`novelPatternSplit 女佣|女僕 1`] = `
+Array [
+  "女佣",
+  "女僕",
+]
+`;
