@@ -1,4 +1,3 @@
-/// <reference path="regenerate.d.ts" />
 import regenerate from 'regenerate';
 import { NodeBase, Pattern } from 'regexpp2/src/ast';
 export { regenerate };

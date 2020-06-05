@@ -1,5 +1,3 @@
-///<reference path="./regenerate.d.ts"/>
-
 import {
 	ParserEventEmitter,
 	ParserEventEmitterEvent,

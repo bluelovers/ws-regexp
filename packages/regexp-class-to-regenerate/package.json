@@ -12,33 +12,38 @@
     "tool",
     "unicode"
   ],
-  "homepage": "https://github.com/bluelovers/ws-string#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexp-class-to-regenerate#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/ws-string/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-string.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
+    "test": "jest",
     "npm:publish": "npm publish",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
     "postpublish": "echo postpublish",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "regenerate": "^1.4.0",
-    "regexp-parser-event": "^1.1.5",
-    "regexpu-core": "^4.5.5"
-  },
-  "gitHead": "cde848c71badceb359aa2ce5ab95a9baa256262d"
+    "regenerate": "^1.4.1",
+    "regexp-parser-event": "^1.1.7",
+    "regexpu-core": "^4.7.0"
+  }
 }

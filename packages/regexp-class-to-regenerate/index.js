@@ -1,9 +1,9 @@
 "use strict";
-///<reference path="./regenerate.d.ts"/>
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isPattern = exports.hackRegenerate = exports.regexpClassToObject = exports.regenerate = void 0;
 const regexp_parser_event_1 = require("regexp-parser-event");
 const regexpu_core_1 = __importDefault(require("regexpu-core"));
 const regenerate_1 = __importDefault(require("regenerate"));
