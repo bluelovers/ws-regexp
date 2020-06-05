@@ -14,7 +14,7 @@
     "lerna:publish:yes": "yarn run prepublishOnly && npx lerna publish --yes --cd-version patch && yarn run postpublishOnly",
     "prepublish:fix-links": "npx @yarn-tool/fix-ws-links",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run prepublish:fix-links && yarn-tool ws run --scope cjk-conv prepublishOnly && yarn-tool ws run prepublishOnly:lerna",
+    "prepublishOnly": "yarn-tool ws run --scope cjk-conv prepublishOnly && yarn-tool ws run prepublishOnly:lerna",
     "postpublish:subtree": "ts-node ./script/run/postpublish-subtree.ts",
     "postpublish:subtree:cjk-conv": "git subtree push cjk-conv master --prefix packages/cjk-conv",
     "postpublish:subtree:regexp-cjk": "git subtree push regexp-cjk master --prefix packages/regexp-cjk",
