@@ -8,7 +8,7 @@ import { unlinkSync, pathExistsSync } from 'fs-extra';
 import { name } from './add-to-postpublish-task';
 import createCacheName from './create-cache-name';
 
-export async function gitSubtreePush(module_name: 'regexp-cjk' | 'cjk-conv' | string)
+export async function gitSubtreePush(module_name: 'regexp-cjk' | 'cjk-conv' | 'regexpp2' | string)
 {
 	let remote: string;
 	let prefix: string;
@@ -23,6 +23,10 @@ export async function gitSubtreePush(module_name: 'regexp-cjk' | 'cjk-conv' | st
 		 */
 		case 'cjk-conv':
 			remote = module_name;
+			prefix = `packages/${module_name}`
+			break;
+		case 'regexpp2':
+			remote = `https://github.com/bluelovers/regexpp.git`;
 			prefix = `packages/${module_name}`
 			break;
 	}

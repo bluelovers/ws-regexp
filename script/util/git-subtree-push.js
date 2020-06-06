@@ -26,6 +26,10 @@ async function gitSubtreePush(module_name) {
             remote = module_name;
             prefix = `packages/${module_name}`;
             break;
+        case 'regexpp2':
+            remote = `https://github.com/bluelovers/regexpp.git`;
+            prefix = `packages/${module_name}`;
+            break;
     }
     if (remote && prefix) {
         await cross_spawn_extra_1.default.async('git', [
