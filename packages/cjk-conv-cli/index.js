@@ -1,23 +1,23 @@
 "use strict";
+/**
+ * Created by user on 2019/3/2.
+ */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleContext = exports.handleOptions = exports.handldTarget = exports.FnList = void 0;
-/**
- * Created by user on 2019/3/2.
- */
-const min_1 = require("cjk-conv/lib/zh/convert/min");
-const convert_1 = require("cjk-conv/lib/zh/convert");
+const zh_convert_1 = require("@lazy-cjk/zh-convert");
 const fast_glob_1 = __importDefault(require("@bluelovers/fast-glob"));
 const fs_iconv_1 = __importDefault(require("fs-iconv"));
 const bluebird_1 = __importDefault(require("bluebird"));
 const diff_1 = __importDefault(require("diff"));
 const debug_color2_1 = require("debug-color2");
 const crlf_normalize_1 = require("crlf-normalize");
+const min_1 = require("@lazy-cjk/zh-convert/min");
 exports.FnList = {
     cn2tw_min: min_1.cn2tw_min, tw2cn_min: min_1.tw2cn_min,
-    cn2tw: convert_1.cn2tw, tw2cn: convert_1.tw2cn,
+    cn2tw: zh_convert_1.cn2tw, tw2cn: zh_convert_1.tw2cn,
 };
 function handldTarget(search, options) {
     return bluebird_1.default.resolve().then(() => {

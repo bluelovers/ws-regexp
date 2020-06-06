@@ -1,8 +1,8 @@
 /**
  * Created by user on 2019/3/2.
  */
-import { cn2tw_min, tw2cn_min } from 'cjk-conv/lib/zh/convert/min';
-import { cn2tw, tw2cn, IOptions as IOptionsCore } from 'cjk-conv/lib/zh/convert';
+
+import { tw2cn, cn2tw, IOptions as IOptionsCore } from '@lazy-cjk/zh-convert';
 
 import FastGlob, { Options as IFastGlobOptions } from '@bluelovers/fast-glob';
 import fs from 'fs-iconv';
@@ -10,6 +10,7 @@ import Bluebird from 'bluebird';
 import JsDiff from 'diff';
 import { console } from 'debug-color2';
 import { crlf } from 'crlf-normalize';
+import { tw2cn_min, cn2tw_min } from '@lazy-cjk/zh-convert/min';
 
 export const FnList = {
 	cn2tw_min, tw2cn_min,

@@ -2,6 +2,7 @@
  * Created by user on 2020/5/29.
  */
 import { IOptions } from './lib/types';
+export * from './lib/types';
 /**
  * 以不造成歧異的字典表來取代
  */

@@ -1,10 +1,10 @@
 /**
  * Created by user on 2019/3/2.
  */
-import { cn2tw_min, tw2cn_min } from 'cjk-conv/lib/zh/convert/min';
-import { cn2tw, tw2cn } from 'cjk-conv/lib/zh/convert';
+import { tw2cn, cn2tw } from '@lazy-cjk/zh-convert';
 import { Options as IFastGlobOptions } from '@bluelovers/fast-glob';
 import Bluebird from 'bluebird';
+import { tw2cn_min, cn2tw_min } from '@lazy-cjk/zh-convert/min';
 export declare const FnList: {
     cn2tw_min: typeof cn2tw_min;
     tw2cn_min: typeof tw2cn_min;

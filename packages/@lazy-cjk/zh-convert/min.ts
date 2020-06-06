@@ -8,6 +8,8 @@ import tableTw2CnDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_tw
 import { tw2cn, cn2tw } from './index';
 import tableCn2TwDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug.safe';
 
+export * from './lib/types';
+
 /**
  * 以不造成歧異的字典表來取代
  */

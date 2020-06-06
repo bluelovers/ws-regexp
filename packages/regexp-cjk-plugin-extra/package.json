@@ -84,7 +84,7 @@
   },
   "peerDependencies": {
     "@lazy-cjk/jp-table-voice": "^1.0.6",
-    "cjk-conv": "^1.2.75",
+    "cjk-conv": "*",
     "regexp-cjk": "^3.3.41",
     "regexp-parser-event": "^1.1.7"
   }

@@ -1,4 +1,5 @@
 import { IOptions } from './lib/types';
+export * from './lib/types';
 export declare function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
 export declare function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
 declare const _default: {
