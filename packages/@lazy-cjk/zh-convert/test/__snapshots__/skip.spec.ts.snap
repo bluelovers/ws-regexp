@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`skip cn2tw 1`] = `"簡繁转换功能測試簡繁轉換功能測試"`;
+
+exports[`skip tw2cn 1`] = `"简繁转换功能测试简繁轉換功能测试"`;

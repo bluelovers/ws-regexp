@@ -2,7 +2,7 @@
  * Created by user on 2018/5/7/007.
  */
 
-import japanese from 'japanese';
+import { predefineedTranscriptionConfigs } from '@lazy-cjk/japanese/lib/data/numbers';
 
 export const list_range = [
 	'〇一二三四五六七八九十'.split(''),
@@ -23,7 +23,7 @@ export const list_range = [
 
 ].forEach(function (key)
 {
-	let ls = japanese.predefineedTranscriptionConfigs.digits[key[0]];
+	let ls = predefineedTranscriptionConfigs.digits[key[0]];
 	if (ls)
 	{
 		ls = Object.values(ls);
@@ -47,7 +47,7 @@ export const list_range2: string[][] = [];
 
 ].forEach(function (key)
 {
-	let ls = japanese.predefineedTranscriptionConfigs.digits[key[0]];
+	let ls = predefineedTranscriptionConfigs.digits[key[0]];
 	if (ls)
 	{
 		ls = Object.values(ls);

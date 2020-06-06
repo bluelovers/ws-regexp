@@ -1,12 +1,4 @@
-import {
-	getVoiceAll,
-	EnumTableVoice,
-	toVoice01,
-	toVoice02,
-	toVoice03,
-	table_voice,
-	ITableVoiceKeys,
-} from '../../lib/jp/table_voice';
+import { table_voice, ITableVoiceKeys, getVoiceAll, EnumTableVoice, toVoice01, toVoice02, toVoice03 } from '..';
 import { array_unique } from 'array-hyper-unique';
 
 describe(`table_voice_keys`, () =>
