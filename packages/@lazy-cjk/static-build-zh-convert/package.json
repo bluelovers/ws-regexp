@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/static-build-zh-convert",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "",
   "keywords": [
     "char",
@@ -77,8 +77,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "devDependencies": {
-    "@lazy-cjk/util": "^1.0.2",
-    "@lazy-cjk/zh-convert": "^1.0.11",
+    "@lazy-cjk/util": "^1.0.3",
+    "@lazy-cjk/zh-convert": "^1.0.12",
     "@lazy-cjk/zh-convert-table": "^1.0.8"
   },
   "publishConfig": {
