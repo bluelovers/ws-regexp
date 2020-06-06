@@ -4,16 +4,16 @@
 
 import { IOptions } from './lib/types';
 import { fixOptions } from './lib/min/util';
-import tableTw2CnDebug from '@lazy-cjk/static-build-zh-convert/data/table_tw2cn.debug';
+import tableTw2CnDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_tw2cn.debug.safe';
 import { tw2cn, cn2tw } from './index';
-import tableCn2TwDebug from '@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug';
+import tableCn2TwDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug.safe';
 
 /**
  * 以不造成歧異的字典表來取代
  */
 export function tw2cn_min(text: string, options: IOptions = {}, ...argv)
 {
-	options = fixOptions(options, tableTw2CnDebug.safe);
+	options = fixOptions(options, tableTw2CnDebugSafe);
 
 	return tw2cn(text, options, ...argv);
 }
@@ -23,7 +23,7 @@ export function tw2cn_min(text: string, options: IOptions = {}, ...argv)
  */
 export function cn2tw_min(text: string, options: IOptions = {}, ...argv)
 {
-	options = fixOptions(options, tableCn2TwDebug.safe);
+	options = fixOptions(options, tableCn2TwDebugSafe);
 
 	return cn2tw(text, options, ...argv);
 }

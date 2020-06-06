@@ -98,7 +98,15 @@ async function buildDebug(name: string, table1: {
 
 		fs.outputJSON(path.join(path_out, `${name}.debug.json`), out, {
 			spaces: "\t",
-		})
+		}),
+
+		fs.outputJSON(path.join(path_out, `${name}.debug.safe.json`), out.safe, {
+			spaces: "\t",
+		}),
+		fs.outputJSON(path.join(path_out, `${name}.debug.unsafe.json`), out.unsafe, {
+			spaces: "\t",
+		}),
+
 	]);
 }
 
