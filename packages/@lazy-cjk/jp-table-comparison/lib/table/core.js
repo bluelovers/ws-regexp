@@ -76,6 +76,7 @@ exports.PLUS_TABLE = array_hyper_unique_1.array_unique([
     ["箋", "箋", "笺"],
     ["窓", "窗", "窗"],
     ["抜", "拔", null],
+    ["専", "專", "专"],
 ]);
 exports.PLUS_TABLE_SAFE = array_hyper_unique_1.array_unique([
     ["絶", "絕", "绝"],

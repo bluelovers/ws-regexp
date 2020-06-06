@@ -57,6 +57,7 @@ export const PLUS_TABLE: IPLUS_TABLE = [
 	["箋","箋","笺"],
 	["窓","窗","窗"],
 	["抜","拔",null],
+	["専","專","专"],
 ];
 
 export const PLUS_TABLE_SAFE: IPLUS_TABLE = [
