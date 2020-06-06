@@ -28,7 +28,7 @@ var _;
                     return str;
                 }
                 options = Object.assign({}, defaultOptions, options);
-                return core_1.default.split(str)
+                return core_1.default.split(str, '')
                     .map(function (char) {
                     if (options.skip && options.skip.indexOf(char) != -1) {
                         return char;
@@ -90,7 +90,7 @@ function zh2jp(str, options) {
         return str;
     }
     options = Object.assign({}, defaultOptions, options);
-    return core_1.default.split(str)
+    return core_1.default.split(str, '')
         .map(function (char) {
         if (options.skip && options.skip.indexOf(char) != -1) {
             return char;
@@ -130,7 +130,7 @@ function cjk2zht(str, options) {
         return str;
     }
     options = Object.assign({}, defaultOptions, options);
-    return core_1.default.split(str)
+    return core_1.default.split(str, '')
         .map(function (char) {
         if (options.skip && options.skip.indexOf(char) != -1) {
             return char;
@@ -160,7 +160,7 @@ function cjk2zhs(str, options) {
         return str;
     }
     options = Object.assign({}, defaultOptions, options);
-    return core_1.default.split(str)
+    return core_1.default.split(str, '')
         .map(function (char) {
         if (options.skip && options.skip.indexOf(char) != -1) {
             return char;
@@ -177,4 +177,5 @@ function cjk2zhs(str, options) {
         .join('');
 }
 exports.cjk2zhs = cjk2zhs;
+exports.default = exports;
 //# sourceMappingURL=index.js.map

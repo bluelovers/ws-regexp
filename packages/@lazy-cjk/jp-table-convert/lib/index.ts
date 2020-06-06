@@ -39,7 +39,7 @@ namespace _
 
 				options = Object.assign({}, defaultOptions, options);
 
-				return UString.split(str)
+				return UString.split(str, '')
 					.map(function (char: string)
 					{
 						if (options.skip && options.skip.indexOf(char) != -1)
@@ -117,7 +117,7 @@ export function zh2jp(str, options?: IOptions): string
 
 	options = Object.assign({}, defaultOptions, options);
 
-	return UString.split(str)
+	return UString.split(str, '')
 		.map(function (char: string)
 		{
 			if (options.skip && options.skip.indexOf(char) != -1)
@@ -169,7 +169,7 @@ export function cjk2zht(str, options?: IOptions): string
 
 	options = Object.assign({}, defaultOptions, options);
 
-	return UString.split(str)
+	return UString.split(str, '')
 		.map(function (char: string)
 		{
 			if (options.skip && options.skip.indexOf(char) != -1)
@@ -210,7 +210,7 @@ export function cjk2zhs(str, options?: IOptions): string
 
 	options = Object.assign({}, defaultOptions, options);
 
-	return UString.split(str)
+	return UString.split(str, '')
 		.map(function (char: string)
 		{
 			if (options.skip && options.skip.indexOf(char) != -1)
@@ -233,3 +233,5 @@ export function cjk2zhs(str, options?: IOptions): string
 		.join('')
 		;
 }
+
+export default exports as typeof import('./index');
