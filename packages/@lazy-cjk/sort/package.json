@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/sort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/sort#readme",
   "bugs": {
@@ -31,9 +31,8 @@
   },
   "dependencies": {
     "@bluelovers/string-natural-compare": "^1.0.2",
-    "@lazy-cjk/zh-slugify": "^1.0.21"
+    "@lazy-cjk/zh-slugify": "^1.0.22"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }
