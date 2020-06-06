@@ -81,7 +81,7 @@
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run test",
-    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "prepublishOnly_": "yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "echo postpublish && node ./script/publish-after",
     "local-link": "yarn link cjk-conv",
