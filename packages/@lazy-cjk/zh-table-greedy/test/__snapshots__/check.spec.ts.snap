@@ -1227,6 +1227,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 坐|座 1`] = `
+Array [
+  "坐",
+  "座",
+]
+`;
+
 exports[`validate char of map 坛|壇|談|譚|谈|谭 1`] = `
 Array [
   "坛",

@@ -87,7 +87,7 @@ exports._greedyTableCacheRegexp = [
     [/[哊哟唷唹喲]/ug, '呦'],
     [/[婕杰洁潔絜]/ug, '傑'],
     [/[嘻]/ug, '嬉'],
-    [/[痲痳麻]/ug, '嘛'],
+    [/[痲痳嘛]/ug, '麻'],
     [/[狗]/ug, '犬'],
     [/[亙恆恒]/ug, '亘'],
     [/[附副]/ug, '付'],
@@ -102,7 +102,7 @@ exports._greedyTableCacheRegexp = [
     [/[做]/ug, '作'],
     [/[搜捜]/ug, '蒐'],
     [/[叟傁]/ug, '叟'],
-    [/[謝谢]/ug, '榭'],
+    [/[谢榭]/ug, '謝'],
     [/[形行]/ug, '型'],
     [/[雇頋顧顾]/ug, '僱'],
     [/[廬芦蘆]/ug, '庐'],
@@ -261,5 +261,6 @@ exports._greedyTableCacheRegexp = [
     [/[閧鬨]/ug, '哄'],
     [/[嗯摁]/ug, '恩'],
     [/[楔偰]/ug, '契'],
+    [/[座]/ug, '坐'],
 ];
 //# sourceMappingURL=re.js.map
