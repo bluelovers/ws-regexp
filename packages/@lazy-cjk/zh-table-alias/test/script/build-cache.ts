@@ -6,12 +6,13 @@ import { outputFile } from 'fs-extra';
 import { join } from 'path';
 import assert from 'assert';
 import emitTsFiles from 'build-ts-file';
-import { array_unique_overwrite, array_unique } from 'array-hyper-unique';
+import { array_unique_overwrite, array_unique } from 'array-hyper-unique/core';
 import { _table_tw, table_jp_core, table_plus_core } from '../raw/raw';
 import { _buildTablePlus, _uniqueTable } from '../../lib/util/unique';
 import { _mergeTable } from '../../lib/util/table';
 import { ISimpleTable } from '../../lib/types';
 import { _update } from '../../lib/util/core';
+import { sortBySlugify } from '@lazy-cjk/sort';
 
 (async () => {
 
@@ -99,7 +100,7 @@ function printKeyType(keys: string[])
 
 	array_unique_overwrite(keys);
 
-	return keys.sort().join(" | ")
+	return keys.sort(comp).join(" | ")
 }
 
 function printTable(arrayTable: any[])
@@ -114,4 +115,15 @@ function printTable(arrayTable: any[])
 	}
 
 	return ls;
+}
+
+function comp(s1, s2)
+{
+	if (!s1 || !s2)
+	{
+		return 0
+	}
+
+	//return compareCaseInsensitive(s1, s2)
+	return sortBySlugify(s1, s2)
 }
