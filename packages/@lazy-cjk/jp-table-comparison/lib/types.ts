@@ -1,5 +1,5 @@
 
-export type IKanjiComparisonTable = string[][][];
+export type IKanjiComparisonTable = [string[], string[], string[]][];
 export type IPLUS_TABLE = [string, string, string][];
 
 /**

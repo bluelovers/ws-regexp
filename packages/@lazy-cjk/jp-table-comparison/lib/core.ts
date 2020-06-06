@@ -1,5 +1,5 @@
 import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from './types';
-import { array_unique } from 'array-hyper-unique';
+import { array_unique, array_unique_overwrite } from 'array-hyper-unique/core';
 
 export function _jpTableCmparisonBuildPre(table: {
 	TABLE?: IKanjiComparisonTable,
@@ -124,6 +124,11 @@ export function _jpTableCmparisonBuild(table: {
 			TABLE_SAFE.push(TABLE[i]);
 		}
 	}
+
+	array_unique_overwrite(TABLE);
+	array_unique_overwrite(TABLE_SAFE);
+	array_unique_overwrite(PLUS_TABLE);
+	array_unique_overwrite(PLUS_TABLE_SAFE);
 
 	return {
 		TABLE,

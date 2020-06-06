@@ -1,4 +1,4 @@
-export declare type IKanjiComparisonTable = string[][][];
+export declare type IKanjiComparisonTable = [string[], string[], string[]][];
 export declare type IPLUS_TABLE = [string, string, string][];
 /**
  * teachKanjiComparison.json

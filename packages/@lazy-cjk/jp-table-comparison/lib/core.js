@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addNew = exports._jpTableCmparisonBuild = exports._jpTableCmparisonBuildPre = void 0;
-const array_hyper_unique_1 = require("array-hyper-unique");
+const core_1 = require("array-hyper-unique/core");
 function _jpTableCmparisonBuildPre(table, options) {
     var _a, _b;
     const skip = (_a = options === null || options === void 0 ? void 0 : options.skip) !== null && _a !== void 0 ? _a : [];
@@ -10,7 +10,7 @@ function _jpTableCmparisonBuildPre(table, options) {
     PLUS_TABLE.forEach(function ([jp, zht, zhs]) {
         addNew(TABLE, jp, zht, zhs);
     });
-    TABLE = array_hyper_unique_1.array_unique(TABLE.concat(table.teachKanjiComparison.filter(function (row) {
+    TABLE = core_1.array_unique(TABLE.concat(table.teachKanjiComparison.filter(function (row) {
         if (skip_00.includes(row[0][0])) {
             return false;
         }
@@ -69,6 +69,10 @@ function _jpTableCmparisonBuild(table, options) {
             TABLE_SAFE.push(TABLE[i]);
         }
     }
+    core_1.array_unique_overwrite(TABLE);
+    core_1.array_unique_overwrite(TABLE_SAFE);
+    core_1.array_unique_overwrite(PLUS_TABLE);
+    core_1.array_unique_overwrite(PLUS_TABLE_SAFE);
     return {
         TABLE,
         TABLE_SAFE,

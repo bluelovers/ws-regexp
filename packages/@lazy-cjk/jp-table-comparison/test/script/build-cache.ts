@@ -9,8 +9,10 @@ import { PLUS_TABLE, PLUS_TABLE_SAFE, skip, skip_00 } from '../../lib/table/core
 import teachKanjiComparison from '../../lib/table/teachKanjiComparison';
 import assert from 'assert';
 import emitTsFiles from 'build-ts-file';
-import { IPLUS_TABLE } from '../../lib/types';
+import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from '../../lib/types';
 import { array_unique_overwrite, array_unique } from 'array-hyper-unique';
+import { sortBySlugify } from '@lazy-cjk/sort';
+import { compareCaseInsensitive } from '@bluelovers/string-natural-compare/core';
 
 const data = _jpTableCmparisonBuild({
 	PLUS_TABLE,
@@ -28,6 +30,9 @@ const data = _jpTableCmparisonBuild({
 	lines.push(``);
 
 	lines.push(`import { IKanjiComparisonTable } from './types';`);
+
+	sortTable(data.TABLE);
+	sortTable(data.TABLE_SAFE);
 
 	lines.push(`export const TABLE: IKanjiComparisonTable = [\n${printTable(data.TABLE).join('\n')}\n];`);
 	lines.push(`export const TABLE_SAFE: IKanjiComparisonTable = [\n${printTable(data.TABLE_SAFE).join('\n')}\n];`);
@@ -50,6 +55,9 @@ const data = _jpTableCmparisonBuild({
 
 	lines.push(`import { IPLUS_TABLE } from './types';`);
 
+	sortTablePlus(data.PLUS_TABLE);
+	sortTablePlus(data.PLUS_TABLE_SAFE);
+
 	lines.push(`export const PLUS_TABLE: IPLUS_TABLE = [\n${printTable(data.PLUS_TABLE).join('\n')}\n];`);
 	lines.push(`export const PLUS_TABLE_SAFE: IPLUS_TABLE = [\n${printTable(data.PLUS_TABLE_SAFE).join('\n')}\n];`);
 
@@ -71,7 +79,7 @@ const data = _jpTableCmparisonBuild({
 		.concat(table2array(data.TABLE_SAFE as any))
 	;
 
-	keys = array_unique(keys).sort();
+	keys = array_unique(keys).sort(comp);
 
 	await (async () => {
 
@@ -160,4 +168,29 @@ function table2array(table: IPLUS_TABLE)
 		})
 
 	return ls
+}
+
+function comp(s1, s2)
+{
+	if (!s1 || !s2)
+	{
+		return 0
+	}
+
+	//return compareCaseInsensitive(s1, s2)
+	return sortBySlugify(s1, s2)
+}
+
+function sortTable(table: IKanjiComparisonTable)
+{
+	return table.sort((s1, s2) => {
+		return comp(s1[0]?.[0], s2[0]?.[0])
+	})
+}
+
+function sortTablePlus(table: IPLUS_TABLE)
+{
+	return table.sort((s1, s2) => {
+		return comp(s1[0], s2[0])
+	})
 }
