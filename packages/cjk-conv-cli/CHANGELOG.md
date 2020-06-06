@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.35](https://github.com/bluelovers/ws-regexp/compare/cjk-conv-cli@1.0.34...cjk-conv-cli@1.0.35) (2020-06-06)
+
+
+### Features
+
+* use @lazy-cjk/zh-convert ([5a0effc](https://github.com/bluelovers/ws-regexp/commit/5a0effc34a7f2a84d0f2c49e40b75cf391ebebf9))
+
+
+
+
+
 ## [1.0.34](https://github.com/bluelovers/ws-regexp/compare/cjk-conv-cli@1.0.33...cjk-conv-cli@1.0.34) (2020-06-06)
 
 **Note:** Version bump only for package cjk-conv-cli

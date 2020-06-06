@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-convert@1.0.8...@lazy-cjk/jp-table-convert@1.0.9) (2020-06-06)
+
+
+### Bug Fixes
+
+* bug of split character ([2c6fd00](https://github.com/bluelovers/ws-regexp/commit/2c6fd0053cd8e914ef667f7b66df3c5163d4c56b))
+
+
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-convert@1.0.7...@lazy-cjk/jp-table-convert@1.0.8) (2020-06-06)
 
 **Note:** Version bump only for package @lazy-cjk/jp-table-convert
