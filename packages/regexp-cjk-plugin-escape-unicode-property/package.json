@@ -70,7 +70,7 @@
     "regexpu-core": "^4.7.0"
   },
   "peerDependencies": {
-    "regexp-cjk": "^3.3.41",
-    "regexp-parser-event": "^1.1.7"
+    "regexp-cjk": "^3.3.43",
+    "regexp-parser-event": "^1.1.8"
   }
 }

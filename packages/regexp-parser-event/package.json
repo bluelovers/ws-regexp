@@ -49,6 +49,6 @@
     "ts-type": "^1.2.17"
   },
   "devDependencies": {
-    "ts-enum-util": "^4.0.1"
+    "ts-enum-util": "^4.0.2"
   }
 }

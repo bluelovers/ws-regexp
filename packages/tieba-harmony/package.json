@@ -66,6 +66,6 @@
     "@lazy-cjk/zh-table-list": "^1.0.17",
     "array-hyper-unique": "^1.1.2",
     "regexp-cjk": "^3.3.43",
-    "uni-string": "^1.1.2"
+    "uni-string": "^1.1.7"
   }
 }
