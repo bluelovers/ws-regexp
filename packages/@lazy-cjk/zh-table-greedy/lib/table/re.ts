@@ -28,7 +28,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[之的得]/g, 'の'],
 	[/[與与]/g, 'と'],
 	[/[她他牠祂佗]/g, '它'],
-	[/[支隻枝]/g, '只'],
+	[/[支隻枝祇]/g, '只'],
 	[/[炮砲炰]/g, '泡'],
 	[/[仲㊥]/g, '中'],
 	[/[原]/g, '元'],
