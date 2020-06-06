@@ -1,6 +1,6 @@
 {
   "name": "regexpp2",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Regular expression parser for ECMAScript 2018.",
   "keywords": [
     "abstract",
@@ -50,12 +50,10 @@
     "update:ids": "ts-node scripts/update-unicode-ids.ts",
     "update:test": "ts-node scripts/update-fixtures.ts"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/eslint": "^6.8.1",
     "eslint": "^7.1.0"
   },
-  "peerDependencies": {},
   "engines": {
     "node": ">=4.0.0"
   },

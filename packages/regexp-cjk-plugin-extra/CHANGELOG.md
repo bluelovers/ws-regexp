@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.12...regexp-cjk-plugin-extra@1.0.13) (2020-06-06)
+
+
+### Features
+
+* use @lazy-cjk/jp-table-voice ([175a5fc](https://github.com/bluelovers/ws-regexp/commit/175a5fc6487da23b83f5b50719289b4d7c513f0c))
+
+
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.11...regexp-cjk-plugin-extra@1.0.12) (2020-06-05)
 
 **Note:** Version bump only for package regexp-cjk-plugin-extra
