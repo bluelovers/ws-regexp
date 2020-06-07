@@ -1,9 +1,6 @@
 import { crossSpawnGitAsync } from '@git-lazy/spawn';
 import { join } from 'path';
 import { outputJSON, outputFile } from 'fs-extra';
-import CrossSpawn from 'cross-spawn-extra';
-import Bluebird from 'bluebird';
-import { findTsconfig } from '@yarn-tool/find-tsconfig';
 import emitTsFiles from 'build-ts-file';
 import { ITable } from '../../lib/types';
 
