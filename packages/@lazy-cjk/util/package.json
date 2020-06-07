@@ -73,7 +73,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "uni-string": "^1.1.7"
+    "uni-string": "^1.1.8"
   },
   "publishConfig": {
     "access": "public"
