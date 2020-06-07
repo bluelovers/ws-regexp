@@ -1526,6 +1526,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 征|徴|徵|怔|愣 1`] = `
+Array [
+  "征",
+  "徴",
+  "徵",
+  "怔",
+  "愣",
+]
+`;
+
 exports[`validate char of map 徨|惶|皇 1`] = `
 Array [
   "徨",

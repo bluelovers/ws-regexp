@@ -263,5 +263,6 @@ exports._greedyTableCacheRegexp = [
     [/[楔偰]/ug, '契'],
     [/[座]/ug, '坐'],
     [/[崎嵜碕]/ug, '埼'],
+    [/[徴徵怔愣]/ug, '征'],
 ];
 //# sourceMappingURL=re.js.map

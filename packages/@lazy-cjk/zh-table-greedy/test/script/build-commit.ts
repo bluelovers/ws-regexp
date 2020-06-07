@@ -5,9 +5,6 @@
 import { crossSpawnGitAsync } from '@git-lazy/spawn';
 import { join } from 'path';
 import { outputJSON } from 'fs-extra';
-import CrossSpawn from 'cross-spawn-extra';
-import Bluebird from 'bluebird';
-import { findTsconfig } from '@yarn-tool/find-tsconfig';
 import { tryBuild } from './util';
 
 const __root = join(__dirname, '../..');
