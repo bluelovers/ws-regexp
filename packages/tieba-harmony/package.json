@@ -1,6 +1,6 @@
 {
   "name": "tieba-harmony",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "百度貼吧 關鍵字 和諧/反和諧 unescape / escape tieba harmony keywords",
   "keywords": [
     "big5",
@@ -63,9 +63,9 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "@lazy-cjk/zh-table-list": "^1.0.19",
+    "@lazy-cjk/zh-table-list": "^1.0.20",
     "array-hyper-unique": "^1.1.2",
-    "regexp-cjk": "^3.3.45",
+    "regexp-cjk": "^3.3.46",
     "uni-string": "^1.1.7"
   }
 }

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.19...@lazy-cjk/zh-table-list@1.0.20) (2020-06-07)
+
+**Note:** Version bump only for package @lazy-cjk/zh-table-list
+
+
+
+
+
 ## [1.0.19](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.18...@lazy-cjk/zh-table-list@1.0.19) (2020-06-06)
 
 **Note:** Version bump only for package @lazy-cjk/zh-table-list
