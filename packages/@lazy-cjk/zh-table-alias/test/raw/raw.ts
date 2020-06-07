@@ -1768,6 +1768,7 @@ export const table_plus_core = {
 		'肅',
 		'専',
 		'様',
+		'関',
 	] as const),
 
 	'侮': [
