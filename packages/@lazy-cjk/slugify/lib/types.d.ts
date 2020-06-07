@@ -1,6 +1,4 @@
-/**
- * Created by user on 2020/5/31.
- */
+import { EnumPinyinMode, EnumPinyinType } from '@lazy-cjk/cns-11643/lib/types';
 export interface IOptionsSlugify {
     separatorRegexp?: RegExp;
     /**
@@ -25,4 +23,9 @@ export interface IOptionsSlugify {
      */
     cjk?: boolean;
     maxLength?: number;
+    chineseOptions?: {
+        useTransliteration?: boolean;
+        pinyinMode?: EnumPinyinMode;
+        pinyinType?: EnumPinyinType;
+    };
 }

@@ -43,3 +43,32 @@ export interface IZhuyin2uni extends Record<string, number[]> {
 }
 export interface IKeyToZhuyinTable extends Record<string, string[]> {
 }
+export declare enum EnumPinyinMode {
+    /**
+     * 「CNS_pinyin_1」以調值(數字)呈現
+     */
+    num = 0,
+    /**
+     * 「CNS_pinyin_2」以聲調符號呈現
+     * @type {EnumPinyinMode.tone}
+     */
+    tone = 1
+}
+export declare enum EnumPinyinType {
+    /**
+     * 漢語(han)
+     */
+    han = 0,
+    /**
+     * 注音第二式(zuin2)
+     */
+    zuin2 = 1,
+    /**
+     * 耶魯(yale)
+     */
+    yale = 2,
+    /**
+     * 韋式(wei)
+     */
+    wei = 3
+}

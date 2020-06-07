@@ -1,11 +1,10 @@
-import { replaceChar, char2pinyin_01 } from '@lazy-cjk/cns-11643';
 import { IOptionsSlugify } from './types';
 import { _core } from './core';
-import { slugify as _slugify } from 'transliteration';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
 import romanize_jp from '@lazy-cjk/japanese/lib/romanize';
 import { katakanaRegex, hiraganaRegex } from '@lazy-cjk/japanese/lib/data/kana';
 import romanize_kr from '@lazy-cjk/korean-romanize';
+import { newZhPinyinFn } from './cjk/chinese';
 
 const REGEXP_TEST = new RegExp(_re_cjk_conv('u').source, 'ug');
 
@@ -15,16 +14,13 @@ export function _replaceCjk(text: string, options?: IOptionsSlugify)
 {
 	let append = options?.separator ?? ' ';
 
+	const char2pinyin = newZhPinyinFn(options);
+
 	text = text.replace(REGEXP_TEST, (s) =>
 	{
-		let n = _slugify(s);
+		let n = char2pinyin(s);
 
-		if (n === '')
-		{
-			n = char2pinyin_01(s)[0]
-		}
-
-		if (n)
+		if (n?.length)
 		{
 			return n + append
 		}

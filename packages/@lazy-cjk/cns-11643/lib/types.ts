@@ -56,3 +56,36 @@ export interface IKeyToZhuyinTable extends Record<string, string[]>
 {
 
 }
+
+export enum EnumPinyinMode
+{
+	/**
+	 * 「CNS_pinyin_1」以調值(數字)呈現
+	 */
+	num,
+	/**
+	 * 「CNS_pinyin_2」以聲調符號呈現
+	 * @type {EnumPinyinMode.tone}
+	 */
+	tone,
+}
+
+export enum EnumPinyinType
+{
+	/**
+	 * 漢語(han)
+	 */
+	han = 0,
+	/**
+	 * 注音第二式(zuin2)
+	 */
+	zuin2,
+	/**
+	 * 耶魯(yale)
+	 */
+	yale,
+	/**
+	 * 韋式(wei)
+	 */
+	wei,
+}
