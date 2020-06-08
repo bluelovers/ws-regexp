@@ -31,7 +31,7 @@
   },
   "scripts": {
     "test": "yarn run test:local && yarn run test:regexp",
-    "test:local": "jest --coverage",
+    "test:local": "jest",
     "test:regexp": "yt ws run --scope regexp-cjk test:local",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",

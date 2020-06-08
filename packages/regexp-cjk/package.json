@@ -76,7 +76,7 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "test": "yarn run test:local",
-    "test:local": "jest --coverage",
+    "test:local": "jest",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
