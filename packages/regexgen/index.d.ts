@@ -1,20 +1,13 @@
 import Trie from './src/trie';
-
 /**
  * Generates a regular expression that matches the given input strings.
  * @param {Array<string>} inputs
  * @param {string} flags
  * @return {RegExp}
  */
-export function regexgen(inputs: string[], flags?: string)
-{
-	let trie = new Trie;
-	trie.addAll(inputs);
-	return trie.toRegExp(flags);
+export declare function regexgen(inputs: string[], flags?: string): RegExp;
+export declare namespace regexgen {
+    var Trie: typeof import("./src/trie").Trie;
 }
-
-export { Trie }
-
-regexgen.Trie = Trie;
-
+export { Trie };
 export default regexgen;
