@@ -23,6 +23,7 @@ function handleOptions(options, flags) {
         flags = flags_1.rewriteFlags(flags, options.rewriteFlags);
     }
     options = rewritePatternOptions(options, flags);
+    delete options.flags;
     return {
         options,
         flags,

@@ -27,6 +27,8 @@ export function handleOptions(options: IOptionsRewritePattern, flags?: string)
 
 	options = rewritePatternOptions(options, flags)
 
+	delete options.flags;
+
 	return {
 		options,
 		flags,

@@ -144,6 +144,41 @@ describe(`handleOptions`, () =>
 				}
 			},
 		},
+		{
+			flags: "us",
+			options: {
+				rewriteFlags: {}
+			},
+		},
+		{
+			flags: "us",
+			options: {
+				rewriteFlags: {
+					unicode: false,
+				}
+			},
+		},
+		{
+			flags: "us",
+			options: {
+				rewriteFlags: {
+					unicode: true,
+				}
+			},
+		},
+		{
+			flags: "us",
+			options: {
+				flags: "usgi",
+				rewriteFlags: {
+					unicode: true,
+				}
+			},
+			expected: {
+				options: expect.anything(),
+				flags: "usgi",
+			}
+		},
 	] as {
 		options?: IOptionsRewritePattern,
 		flags?: string,
@@ -161,8 +196,10 @@ describe(`handleOptions`, () =>
 
 				if (expected)
 				{
-					expect(actual).toStrictEqual(expected);
+					expect(actual).toMatchObject(expected);
 				}
+
+				expect(actual.options).not.toHaveProperty('flags');
 
 				expect(actual.flags).toContain(EnumFlagMap.unicode);
 				expect(actual.options).toHaveProperty('unicodePropertyEscape', true);

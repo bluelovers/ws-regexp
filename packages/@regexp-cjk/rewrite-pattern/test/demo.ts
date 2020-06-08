@@ -6,6 +6,7 @@ import { rewritePattern, rewritePatternCore } from '../index';
 import { rewriteFlags } from '../flags';
 import _rewritePattern from 'regexpu-core';
 import regjsparser from 'regjsparser';
+import { handleOptions } from '../lib/util';
 
 console.dir(rewritePattern('(?<=.)a', '', {
 	'lookbehind': true
@@ -38,9 +39,9 @@ let source: string;
 
 console.log(/((?<name>.)\k<name>)/.exec('22'))
 
-console.log(rewritePattern(/((?<name>.)\k<name>\1)/.source, '', {
-	namedGroup: false,
-}))
+//console.log(rewritePattern(/((?<name>.)\k<name>\1)/.source, '', {
+//	namedGroup: false,
+//}))
 
 //source = regjsparser.parse(`(?<name>.)`, '', {
 //	namedGroups: true,
@@ -49,3 +50,6 @@ console.log(rewritePattern(/((?<name>.)\k<name>\1)/.source, '', {
 //console.dir(source)
 
 console.dir(/((?<name>.)\k<name>)/.source)
+
+
+

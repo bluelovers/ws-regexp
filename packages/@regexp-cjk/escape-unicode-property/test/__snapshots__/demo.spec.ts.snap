@@ -41,6 +41,25 @@ Array [
 `;
 
 exports[`handleOptions {
+  options: { flags: 'usgi', rewriteFlags: { unicode: true } },
+  flags: 'us'
+} 1`] = `
+Object {
+  "flags": "usgi",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions {
   options: { unicodePropertyEscape: false, rewriteFlags: { unicode: false } },
   flags: undefined
 } 1`] = `
@@ -75,9 +94,57 @@ Object {
 }
 `;
 
+exports[`handleOptions { options: { rewriteFlags: { unicode: false } }, flags: 'us' } 1`] = `
+Object {
+  "flags": "us",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
 exports[`handleOptions { options: { rewriteFlags: { unicode: false } }, flags: undefined } 1`] = `
 Object {
   "flags": "u",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions { options: { rewriteFlags: { unicode: true } }, flags: 'us' } 1`] = `
+Object {
+  "flags": "us",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions { options: { rewriteFlags: {} }, flags: 'us' } 1`] = `
+Object {
+  "flags": "us",
   "options": Object {
     "dotAllFlag": true,
     "lookbehind": true,
