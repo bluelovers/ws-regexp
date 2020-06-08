@@ -2,19 +2,16 @@
  * Created by user on 2019/6/15.
  */
 
-import { array_unique_overwrite } from 'array-hyper-unique'
-import StrUtil from 'str-util';
-import { FullHalfCore, toFullNumber, toHalfNumber, toFullEnglish, toHalfEnglish, toFullWidth, toHalfWidth } from 'str-util/lib/fullhalf';
-import { _get as _getArrayTable } from 'cjk-conv/lib/zh/table/table';
 import { IOptionsOn, IOptionsOnCore, IRegExpUserInput } from 'regexp-cjk/lib/core';
-import UString from 'uni-string/src/core';
-import getVoiceAll from 'cjk-conv/lib/jp/table_voice';
 import ParserEventEmitter, { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
 import { rewritePatternCore } from '@regexp-cjk/rewrite-pattern';
 import { AST, EnumKindCharacterSet } from "regexpp2";
-import { NodeBase } from 'regexpp2/src/ast';
-import { IGetSettingOptions } from 'regexp-cjk/lib/mergeOptions';
 import { astNotChanged } from 'regexp-cjk/lib/plugin';
+import {
+	escapeUnicodePropertyPatternCore,
+	hasUnicodePropertyPattern,
+} from '@regexp-cjk/escape-unicode-property';
+import { handleOptions } from '@regexp-cjk/escape-unicode-property/lib/util';
 
 export interface IZhRegExpCorePluginOptions
 {
@@ -51,13 +48,17 @@ export function createZhRegExpCorePlugin(options: IZhRegExpCorePluginOptions = {
 
 				let _do = escapeAll || escapeAuto && /\\p\{[^{}]+\}/i.test(str);
 
+				const _escapeOpts = handleOptions({
+					useUnicodeFlag,
+				}, _flags)
+
 				if (_do)
 				{
 					ev.on(ParserEventEmitterEvent.uniset, function (ast, eventName, ev)
 					{
 						if (astNotChanged(ast) && astUnicodePropertyCharacterSet(ast))
 						{
-							let raw = unicodePropertyEscape(ast.raw, _flags, useUnicodeFlag);
+							let raw = escapeUnicodePropertyPatternCore(ast.raw, _escapeOpts.flags, _escapeOpts.options);
 
 							if (raw !== ast.raw)
 							{
@@ -70,9 +71,9 @@ export function createZhRegExpCorePlugin(options: IZhRegExpCorePluginOptions = {
 
 					ev.on(ParserEventEmitterEvent.class, function (ast, eventName, ev)
 					{
-						if (astNotChanged(ast) && /\\p{/.test(ast.raw))
+						if (astNotChanged(ast) && hasUnicodePropertyPattern(ast.raw))
 						{
-							let raw = unicodePropertyEscape(ast.raw, _flags, useUnicodeFlag);
+							let raw = escapeUnicodePropertyPatternCore(ast.raw, _escapeOpts.flags, _escapeOpts.options);
 
 							if (raw !== ast.raw)
 							{
@@ -111,6 +112,11 @@ export function checkUnicodePropertyEscape(ast: AST.UnicodePropertyCharacterSet)
 	}
 }
 
+/**
+ * use @regexp-cjk/escape-unicode-property
+ *
+ * @deprecated
+ */
 export function unicodePropertyEscape(raw: string, flags: string, useUnicodeFlag: boolean)
 {
 	return rewritePatternCore(raw, flags, {

@@ -28,6 +28,7 @@ test(`[中文\\p{Punctuation}]`, () =>
 	expect(',').toMatch(actual);
 	expect('，').toMatch(actual);
 	expect('p').not.toMatch(actual);
+	expect('P').not.toMatch(actual);
 
 	expect(actual).toMatchSnapshot();
 

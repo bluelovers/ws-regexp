@@ -57,7 +57,7 @@
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:local",
-    "test:local": "jest --coverage",
+    "test:local": "jest",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
@@ -67,7 +67,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "@regexp-cjk/rewrite-pattern": "^1.0.0"
+    "@regexp-cjk/escape-unicode-property": "^1.0.0"
   },
   "peerDependencies": {
     "regexp-cjk": "*",
