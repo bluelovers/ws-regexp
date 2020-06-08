@@ -42,5 +42,6 @@
   "engines": {
     "node": ">= 6"
   },
-  "runkitExample": "const regexgen = require('regexgen');\n\nregexgen(['foobar', 'foobaz', 'foozap', 'fooza']);"
+  "runkitExample": "const regexgen = require('regexgen');\n\nregexgen(['foobar', 'foobaz', 'foozap', 'fooza']);",
+  "gitHead": "3b499cd267e7779b554063342f98ef1e3148b36d"
 }

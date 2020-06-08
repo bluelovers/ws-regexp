@@ -72,5 +72,6 @@
   "peerDependencies": {
     "regexp-cjk": "*",
     "regexp-parser-event": "*"
-  }
+  },
+  "gitHead": "3b499cd267e7779b554063342f98ef1e3148b36d"
 }
