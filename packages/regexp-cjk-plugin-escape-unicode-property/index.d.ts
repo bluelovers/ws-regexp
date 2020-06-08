@@ -21,5 +21,5 @@ export interface IZhRegExpCorePluginOptions {
 export declare function createZhRegExpCorePlugin(options?: IZhRegExpCorePluginOptions): IOptionsOnCore;
 export declare function astUnicodePropertyCharacterSet(ast: AST.NodeBase): ast is AST.UnicodePropertyCharacterSet;
 export declare function checkUnicodePropertyEscape(ast: AST.UnicodePropertyCharacterSet): boolean;
-export declare function unicodePropertyEscape(raw: string, flags: string, useUnicodeFlag: boolean): any;
+export declare function unicodePropertyEscape(raw: string, flags: string, useUnicodeFlag: boolean): string;
 export default createZhRegExpCorePlugin;

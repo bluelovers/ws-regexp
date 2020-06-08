@@ -10,7 +10,7 @@ import { IOptionsOn, IOptionsOnCore, IRegExpUserInput } from 'regexp-cjk/lib/cor
 import UString from 'uni-string/src/core';
 import getVoiceAll from 'cjk-conv/lib/jp/table_voice';
 import ParserEventEmitter, { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
-import rewritePattern from 'regexpu-core';
+import { rewritePatternCore } from '@regexp-cjk/rewrite-pattern';
 import { AST, EnumKindCharacterSet } from "regexpp2";
 import { NodeBase } from 'regexpp2/src/ast';
 import { IGetSettingOptions } from 'regexp-cjk/lib/mergeOptions';
@@ -113,7 +113,7 @@ export function checkUnicodePropertyEscape(ast: AST.UnicodePropertyCharacterSet)
 
 export function unicodePropertyEscape(raw: string, flags: string, useUnicodeFlag: boolean)
 {
-	return rewritePattern(raw, flags, {
+	return rewritePatternCore(raw, flags, {
 		unicodePropertyEscape: true,
 		useUnicodeFlag,
 	})

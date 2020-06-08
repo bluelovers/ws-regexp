@@ -67,7 +67,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "regexpu-core": "^4.7.0"
+    "@regexp-cjk/rewrite-pattern": "^1.0.0"
   },
   "peerDependencies": {
     "regexp-cjk": "*",

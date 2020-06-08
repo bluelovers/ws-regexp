@@ -8,7 +8,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.unicodePropertyEscape = exports.checkUnicodePropertyEscape = exports.astUnicodePropertyCharacterSet = exports.createZhRegExpCorePlugin = void 0;
 const regexp_parser_event_1 = __importDefault(require("regexp-parser-event"));
-const regexpu_core_1 = __importDefault(require("regexpu-core"));
+const rewrite_pattern_1 = require("@regexp-cjk/rewrite-pattern");
 const plugin_1 = require("regexp-cjk/lib/plugin");
 /**
  * use regexpu for escape unicode property
@@ -64,7 +64,7 @@ function checkUnicodePropertyEscape(ast) {
 }
 exports.checkUnicodePropertyEscape = checkUnicodePropertyEscape;
 function unicodePropertyEscape(raw, flags, useUnicodeFlag) {
-    return regexpu_core_1.default(raw, flags, {
+    return rewrite_pattern_1.rewritePatternCore(raw, flags, {
         unicodePropertyEscape: true,
         useUnicodeFlag,
     });

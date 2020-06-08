@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add {
+  sticky: true,
+  unicode: true,
+  dotAll: true,
+  multiline: true,
+  ignoreCase: true,
+  global: true
+} 1`] = `"gimsuy"`;
+
+exports[`add {
+  unicode: true,
+  dotAll: true,
+  multiline: true,
+  ignoreCase: true,
+  global: true
+} 1`] = `"gimsu"`;
+
+exports[`add { dotAll: true, multiline: true, ignoreCase: true, global: true } 1`] = `"gims"`;
+
+exports[`add { global: true } 1`] = `"g"`;
+
+exports[`add { ignoreCase: true, global: true } 1`] = `"gi"`;
+
+exports[`add { multiline: true, ignoreCase: true, global: true } 1`] = `"gim"`;
+
+exports[`remove {
+  sticky: false,
+  unicode: false,
+  dotAll: false,
+  multiline: false,
+  ignoreCase: false,
+  global: false
+} 1`] = `""`;
+
+exports[`remove {
+  unicode: false,
+  dotAll: false,
+  multiline: false,
+  ignoreCase: false,
+  global: false
+} 1`] = `"y"`;
+
+exports[`remove { dotAll: false, multiline: false, ignoreCase: false, global: false } 1`] = `"uy"`;
+
+exports[`remove { global: false } 1`] = `"imsuy"`;
+
+exports[`remove { ignoreCase: false, global: false } 1`] = `"msuy"`;
+
+exports[`remove { multiline: false, ignoreCase: false, global: false } 1`] = `"suy"`;

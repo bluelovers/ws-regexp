@@ -1,0 +1,32 @@
+"use strict";
+/**
+ * Created by user on 2020/6/8.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.handleOptions = exports.rewritePatternOptions = void 0;
+const lodash_1 = require("lodash");
+const flags_1 = require("../flags");
+function rewritePatternOptions(options, flags) {
+    var _a;
+    return lodash_1.defaults({}, options, {
+        dotAllFlag: true,
+        lookbehind: true,
+        namedGroup: true,
+        useUnicodeFlag: (_a = flags === null || flags === void 0 ? void 0 : flags.includes) === null || _a === void 0 ? void 0 : _a.call(flags, 'u'),
+    });
+}
+exports.rewritePatternOptions = rewritePatternOptions;
+function handleOptions(options, flags) {
+    var _a;
+    flags = (_a = options === null || options === void 0 ? void 0 : options.flags) !== null && _a !== void 0 ? _a : flags;
+    if (typeof flags === 'string' && (options === null || options === void 0 ? void 0 : options.rewriteFlags)) {
+        flags = flags_1.rewriteFlags(flags, options.rewriteFlags);
+    }
+    options = rewritePatternOptions(options, flags);
+    return {
+        options,
+        flags,
+    };
+}
+exports.handleOptions = handleOptions;
+//# sourceMappingURL=util.js.map

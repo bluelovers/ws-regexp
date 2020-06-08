@@ -1,0 +1,72 @@
+{
+  "name": "@regexp-cjk/rewrite-pattern",
+  "version": "1.0.0",
+  "description": "capable of translating Unicode regular expressions",
+  "keywords": [
+    "expression",
+    "generator",
+    "parse",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression",
+    "transform",
+    "unicode",
+    "codegen",
+    "desugaring",
+    "ecmascript",
+    "es5",
+    "es6",
+    "harmony",
+    "javascript",
+    "refactoring",
+    "regular expressions",
+    "rewriting",
+    "syntax",
+    "transformation",
+    "transpile",
+    "transpiler",
+    "util"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/rewrite-pattern#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "test": "yarn run test:jest",
+    "test:jest": "jest",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "regexpu-core": "^4.7.0"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
