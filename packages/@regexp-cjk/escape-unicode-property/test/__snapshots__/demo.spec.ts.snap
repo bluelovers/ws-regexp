@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allow any property like '\\\\P{UnicodeBinaryPropertyName}' 1`] = `
+Array [
+  "\\\\P{UnicodeBinaryPropertyName}",
+  "P",
+  "UnicodeBinaryPropertyName",
+  undefined,
+]
+`;
+
+exports[`allow any property like '\\\\p{UnicodePropertyName=UnicodePropertyValue}' 1`] = `
+Array [
+  "\\\\p{UnicodePropertyName=UnicodePropertyValue}",
+  "p",
+  "UnicodePropertyName",
+  "UnicodePropertyValue",
+]
+`;
+
+exports[`escapeUnicodePropertyPattern allow known property '\\\\P{Script_Extensions=Latin}' 1`] = `"[\\\\0-@\\\\[-\`\\\\{-\\\\xA9\\\\xAB-\\\\xB9\\\\xBB-\\\\xBF\\\\xD7\\\\xF7\\\\u02B9-\\\\u02DF\\\\u02E5-\\\\u0362\\\\u0370-\\\\u0484\\\\u0487-\\\\u0950\\\\u0953-\\\\u10FA\\\\u10FC-\\\\u1CFF\\\\u1D26-\\\\u1D2B\\\\u1D5D-\\\\u1D61\\\\u1D66-\\\\u1D6A\\\\u1D78\\\\u1DBF-\\\\u1DFF\\\\u1F00-\\\\u202E\\\\u2030-\\\\u2070\\\\u2072-\\\\u207E\\\\u2080-\\\\u208F\\\\u209D-\\\\u20EF\\\\u20F1-\\\\u2129\\\\u212C-\\\\u2131\\\\u2133-\\\\u214D\\\\u214F-\\\\u215F\\\\u2189-\\\\u2C5F\\\\u2C80-\\\\uA6FF\\\\uA708-\\\\uA721\\\\uA788-\\\\uA78A\\\\uA7C0\\\\uA7C1\\\\uA7CB-\\\\uA7F4\\\\uA800-\\\\uA92D\\\\uA92F-\\\\uAB2F\\\\uAB5B\\\\uAB65\\\\uAB6A-\\\\uFAFF\\\\uFB07-\\\\uFF20\\\\uFF3B-\\\\uFF40\\\\uFF5B-\\\\u{10FFFF}]"`;
+
+exports[`escapeUnicodePropertyPattern allow known property '\\\\P{Script_Extensions=Latin}' 2`] = `
+Array [
+  "\\\\P{Script_Extensions=Latin}",
+  "P",
+  "Script_Extensions",
+  "Latin",
+]
+`;
+
+exports[`escapeUnicodePropertyPattern allow known property '\\\\p{Emoji_Presentation}' 1`] = `"[\\\\u231A\\\\u231B\\\\u23E9-\\\\u23EC\\\\u23F0\\\\u23F3\\\\u25FD\\\\u25FE\\\\u2614\\\\u2615\\\\u2648-\\\\u2653\\\\u267F\\\\u2693\\\\u26A1\\\\u26AA\\\\u26AB\\\\u26BD\\\\u26BE\\\\u26C4\\\\u26C5\\\\u26CE\\\\u26D4\\\\u26EA\\\\u26F2\\\\u26F3\\\\u26F5\\\\u26FA\\\\u26FD\\\\u2705\\\\u270A\\\\u270B\\\\u2728\\\\u274C\\\\u274E\\\\u2753-\\\\u2755\\\\u2757\\\\u2795-\\\\u2797\\\\u27B0\\\\u27BF\\\\u2B1B\\\\u2B1C\\\\u2B50\\\\u2B55\\\\u{1F004}\\\\u{1F0CF}\\\\u{1F18E}\\\\u{1F191}-\\\\u{1F19A}\\\\u{1F1E6}-\\\\u{1F1FF}\\\\u{1F201}\\\\u{1F21A}\\\\u{1F22F}\\\\u{1F232}-\\\\u{1F236}\\\\u{1F238}-\\\\u{1F23A}\\\\u{1F250}\\\\u{1F251}\\\\u{1F300}-\\\\u{1F320}\\\\u{1F32D}-\\\\u{1F335}\\\\u{1F337}-\\\\u{1F37C}\\\\u{1F37E}-\\\\u{1F393}\\\\u{1F3A0}-\\\\u{1F3CA}\\\\u{1F3CF}-\\\\u{1F3D3}\\\\u{1F3E0}-\\\\u{1F3F0}\\\\u{1F3F4}\\\\u{1F3F8}-\\\\u{1F43E}\\\\u{1F440}\\\\u{1F442}-\\\\u{1F4FC}\\\\u{1F4FF}-\\\\u{1F53D}\\\\u{1F54B}-\\\\u{1F54E}\\\\u{1F550}-\\\\u{1F567}\\\\u{1F57A}\\\\u{1F595}\\\\u{1F596}\\\\u{1F5A4}\\\\u{1F5FB}-\\\\u{1F64F}\\\\u{1F680}-\\\\u{1F6C5}\\\\u{1F6CC}\\\\u{1F6D0}-\\\\u{1F6D2}\\\\u{1F6D5}-\\\\u{1F6D7}\\\\u{1F6EB}\\\\u{1F6EC}\\\\u{1F6F4}-\\\\u{1F6FC}\\\\u{1F7E0}-\\\\u{1F7EB}\\\\u{1F90C}-\\\\u{1F93A}\\\\u{1F93C}-\\\\u{1F945}\\\\u{1F947}-\\\\u{1F978}\\\\u{1F97A}-\\\\u{1F9CB}\\\\u{1F9CD}-\\\\u{1F9FF}\\\\u{1FA70}-\\\\u{1FA74}\\\\u{1FA78}-\\\\u{1FA7A}\\\\u{1FA80}-\\\\u{1FA86}\\\\u{1FA90}-\\\\u{1FAA8}\\\\u{1FAB0}-\\\\u{1FAB6}\\\\u{1FAC0}-\\\\u{1FAC2}\\\\u{1FAD0}-\\\\u{1FAD6}]"`;
+
+exports[`escapeUnicodePropertyPattern allow known property '\\\\p{Emoji_Presentation}' 2`] = `
+Array [
+  "\\\\p{Emoji_Presentation}",
+  "p",
+  "Emoji_Presentation",
+  undefined,
+]
+`;
+
+exports[`handleOptions {
+  options: { unicodePropertyEscape: false, rewriteFlags: { unicode: false } },
+  flags: undefined
+} 1`] = `
+Object {
+  "flags": "u",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions { options: { rewriteFlags: { unicode: false } }, flags: 'u' } 1`] = `
+Object {
+  "flags": "u",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions { options: { rewriteFlags: { unicode: false } }, flags: undefined } 1`] = `
+Object {
+  "flags": "u",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions { options: undefined, flags: '' } 1`] = `
+Object {
+  "flags": "u",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions { options: undefined, flags: undefined } 1`] = `
+Object {
+  "flags": "u",
+  "options": Object {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": Object {
+      "unicode": true,
+    },
+    "unicodePropertyEscape": true,
+    "useUnicodeFlag": true,
+  },
+}
+`;

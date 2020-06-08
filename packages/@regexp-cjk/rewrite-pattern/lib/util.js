@@ -19,7 +19,7 @@ exports.rewritePatternOptions = rewritePatternOptions;
 function handleOptions(options, flags) {
     var _a;
     flags = (_a = options === null || options === void 0 ? void 0 : options.flags) !== null && _a !== void 0 ? _a : flags;
-    if (typeof flags === 'string' && (options === null || options === void 0 ? void 0 : options.rewriteFlags)) {
+    if (options === null || options === void 0 ? void 0 : options.rewriteFlags) {
         flags = flags_1.rewriteFlags(flags, options.rewriteFlags);
     }
     options = rewritePatternOptions(options, flags);

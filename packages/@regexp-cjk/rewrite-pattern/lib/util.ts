@@ -20,7 +20,7 @@ export function handleOptions(options: IOptionsRewritePattern, flags?: string)
 {
 	flags = options?.flags ?? flags;
 
-	if (typeof flags === 'string' && options?.rewriteFlags)
+	if (options?.rewriteFlags)
 	{
 		flags = rewriteFlags(flags, options.rewriteFlags);
 	}

@@ -194,9 +194,9 @@ exports[`simple [ '(?<=.)a', '', { lookbehind: true } ] test 1`] = `"(?<=.)a"`;
 
 exports[`simple [ '(?<=.)a', '', { lookbehind: true } ] test 2`] = `/\\(\\?<=\\.\\)a/`;
 
-exports[`simple [ '(?<name>.)\\\\k<name>' ] test 1`] = `"(?<name>.)\\\\k<name>"`;
+exports[`simple [ '(?<name>.)\\\\k<name>' ] test 1`] = `"(.)\\\\1"`;
 
-exports[`simple [ '(?<name>.)\\\\k<name>' ] test 2`] = `/\\(\\?<name>\\.\\)\\\\k<name>/`;
+exports[`simple [ '(?<name>.)\\\\k<name>' ] test 2`] = `/\\(\\.\\)\\\\1/`;
 
 exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] options 1`] = `
 Object {
@@ -210,9 +210,9 @@ Object {
 }
 `;
 
-exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 1`] = `"(?<name>.)\\\\k<name>"`;
+exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 1`] = `"(.)\\\\1"`;
 
-exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 2`] = `/\\(\\?<name>\\.\\)\\\\k<name>/`;
+exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 2`] = `/\\(\\.\\)\\\\1/`;
 
 exports[`simple [ '.', '', { dotAllFlag: true } ] options 1`] = `
 Object {
