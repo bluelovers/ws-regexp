@@ -1,4 +1,4 @@
-import Trie from './src/trie';
+import Trie from './lib/trie';
 /**
  * Generates a regular expression that matches the given input strings.
  * @param {Array<string>} inputs
@@ -7,7 +7,7 @@ import Trie from './src/trie';
  */
 export declare function regexgen(inputs: string[], flags?: string): RegExp;
 export declare namespace regexgen {
-    var Trie: typeof import("./src/trie").Trie;
+    var Trie: typeof import("./lib/trie").Trie;
 }
 export { Trie };
 export default regexgen;
