@@ -95,3 +95,5 @@ jest.config.js.map
 */**/.github
 !/.github
 !npm-shrinkwrap.json
+/scripts/*.d.ts
+/scripts/*.js

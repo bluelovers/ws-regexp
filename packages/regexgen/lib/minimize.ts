@@ -39,6 +39,7 @@ export function minimize(root: State): State
 		{
 			for (let [T, X] of transitions.get(s))
 			{
+				// @ts-ignore
 				t.get(T).addAll(X);
 			}
 		}

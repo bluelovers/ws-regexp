@@ -32,6 +32,7 @@ function minimize(root) {
         let t = new map_1.default(k => new set_1.default);
         for (let s of A) {
             for (let [T, X] of transitions.get(s)) {
+                // @ts-ignore
                 t.get(T).addAll(X);
             }
         }

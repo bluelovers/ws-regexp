@@ -24,6 +24,8 @@ Array [
   "isExistsChar",
   "replaceChar",
   "splitChar",
+  "EnumPinyinMode",
+  "EnumPinyinType",
   "default",
 ]
 `;

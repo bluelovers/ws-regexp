@@ -34,7 +34,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "ynpx mocha -- --require ts-node/register --reporter dot --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
+    "test:mocha": "ynpx mocha -- --require ts-node/register --reporter dot --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
     "build": "yarn run update:ids && build-ts-file ./src/unicode/ids.ts",
     "build:commit": "git commit -m \"build: update unicode ids\" ./src/unicode & echo build:commit",
     "npm:publish": "npm publish",
