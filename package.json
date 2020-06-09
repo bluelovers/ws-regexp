@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "lerna:publish": "yarn run prepublishOnly && npx lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "yarn run prepublishOnly && npx lerna publish --yes --cd-version patch && yarn run postpublishOnly",
     "prepublish:fix-links": "ynpx @yarn-tool/fix-ws-links",
