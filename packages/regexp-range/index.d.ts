@@ -6,28 +6,30 @@ declare function matchRange(from: any, to: any, options: IOptions & {
     createRegExpString: true;
 }): string;
 declare namespace matchRange {
-    var matchRange: typeof import(".");
-    var getOptions: typeof import("./src/core").getOptions;
-    var toRegExpString: typeof import("./src/core").toRegExpString;
-    var TABLE_RANGE: {
+    export var matchRange: typeof import(".");
+    export var getOptions: typeof import("./src/core").getOptions;
+    export var toRegExpString: typeof import("./src/core").toRegExpString;
+    export var TABLE_RANGE: {
         chinese: string[][];
         chinese2: string[][];
         circle: string[][];
     };
-    var fillRange: typeof import("./src/core").fillRange;
-    var default: typeof import(".");
+    export var fillRange: typeof import("./src/core").fillRange;
+    var _a: typeof import(".");
+    export { _a as default };
 }
 declare function matchRange(from: any, to: any, options?: IOptions): string[];
 declare namespace matchRange {
-    var matchRange: typeof import(".");
-    var getOptions: typeof import("./src/core").getOptions;
-    var toRegExpString: typeof import("./src/core").toRegExpString;
-    var TABLE_RANGE: {
+    export var matchRange: typeof import(".");
+    export var getOptions: typeof import("./src/core").getOptions;
+    export var toRegExpString: typeof import("./src/core").toRegExpString;
+    export var TABLE_RANGE: {
         chinese: string[][];
         chinese2: string[][];
         circle: string[][];
     };
-    var fillRange: typeof import("./src/core").fillRange;
-    var default: typeof import(".");
+    export var fillRange: typeof import("./src/core").fillRange;
+    var _a: typeof import(".");
+    export { _a as default };
 }
 export = matchRange;

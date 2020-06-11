@@ -62,10 +62,10 @@
     "array-hyper-unique": "^1.1.2",
     "bluebird": "^3.7.2",
     "crlf-normalize": "^1.0.3",
-    "debug-color2": "^1.1.7",
+    "debug-color2": "^1.2.2",
     "diff": "^4.0.2",
     "fs-extra": "^9.0.1",
-    "fs-iconv": "^3.0.5",
+    "fs-iconv": "^3.0.7",
     "yargs": "^15.3.1"
   },
   "preferGlobal": true,

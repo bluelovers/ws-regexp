@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@jcbuisson/streamline": "^1.0.0",
-    "@lazy-node/readlines": "^2.0.1",
+    "@lazy-node/readlines": "^2.0.5",
     "@types/n-readlines": "^1.0.1",
     "cross-fetch": "^3.0.4",
     "jszip": "^3.4.0",

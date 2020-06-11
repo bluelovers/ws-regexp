@@ -79,11 +79,11 @@
   "dependencies": {
     "array-hyper-unique": "^1.1.2",
     "lodash": "^4.17.15",
-    "str-util": "^2.3.22",
-    "uni-string": "^1.1.8"
+    "str-util": "^2.3.23",
+    "uni-string": "^1.1.9"
   },
   "peerDependencies": {
-    "@lazy-cjk/jp-table-voice": "^1.0.7",
+    "@lazy-cjk/jp-table-voice": "^1.0.8",
     "cjk-conv": "*",
     "regexp-cjk": "*",
     "regexp-parser-event": "*"
