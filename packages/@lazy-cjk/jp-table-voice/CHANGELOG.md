@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-voice@1.0.8...@lazy-cjk/jp-table-voice@1.0.9) (2020-06-11)
+
+**Note:** Version bump only for package @lazy-cjk/jp-table-voice
+
+
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-voice@1.0.7...@lazy-cjk/jp-table-voice@1.0.8) (2020-06-09)
 
 
