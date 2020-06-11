@@ -1360,6 +1360,17 @@ Array [
 ]
 `;
 
+exports[`validate char of map 嫒|嬡|愛|爱|瑷|璦 1`] = `
+Array [
+  "嫒",
+  "嬡",
+  "愛",
+  "爱",
+  "瑷",
+  "璦",
+]
+`;
+
 exports[`validate char of map 定|訂|订|釘|钉 1`] = `
 Array [
   "定",
