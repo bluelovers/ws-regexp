@@ -370,6 +370,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 份|分|芬 1`] = `
+Array [
+  "份",
+  "分",
+  "芬",
+]
+`;
+
 exports[`validate char of map 伶|怜|憐 1`] = `
 Array [
   "伶",
