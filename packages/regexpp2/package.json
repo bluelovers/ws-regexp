@@ -50,10 +50,7 @@
     "update:ids": "ts-node scripts/update-unicode-ids.ts",
     "update:test": "ts-node scripts/update-fixtures.ts"
   },
-  "devDependencies": {
-    "@types/eslint": "^6.8.1",
-    "eslint": "^7.2.0"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=4.0.0"
   },

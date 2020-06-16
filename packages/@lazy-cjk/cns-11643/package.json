@@ -37,8 +37,10 @@
     "test": "yarn run test:jest",
     "test:jest": "jest",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "build": "yarn run build:download && yarn run build:unzip && yarn run build:data",
     "build:cache": "ts-node ./test/script/build-cache.ts",
     "build:data": "yarn run build:cache && yarn run build:zhuyin",
+    "build:download": "ts-node ./test/script/download.ts",
     "build:unzip": "ts-node ./test/script/unzip.ts",
     "build:zhuyin": "ts-node ./test/script/build-zhuyin.ts",
     "npm:publish": "npm publish",
@@ -51,15 +53,7 @@
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "devDependencies": {
-    "@jcbuisson/streamline": "^1.0.0",
-    "@lazy-node/readlines": "^2.0.5",
-    "@types/n-readlines": "^1.0.1",
-    "cross-fetch": "^3.0.4",
-    "jszip": "^3.4.0",
-    "n-readlines": "^1.0.0",
-    "sort-object-keys2": "^2.0.3"
-  },
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },

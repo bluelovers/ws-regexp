@@ -83,7 +83,7 @@
     "uni-string": "^1.1.9"
   },
   "peerDependencies": {
-    "@lazy-cjk/jp-table-voice": "^1.0.8",
+    "@lazy-cjk/jp-table-voice": "*",
     "cjk-conv": "*",
     "regexp-cjk": "*",
     "regexp-parser-event": "*"

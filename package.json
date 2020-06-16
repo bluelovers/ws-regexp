@@ -24,26 +24,34 @@
     "sort-package-json": "npx yarn-tool sort && npx yarn-tool ws exec yarn-tool sort"
   },
   "resolutions": {},
+  "dependencies": {
+    "@git-lazy/spawn": "^1.0.20",
+    "@lazy-node/readlines": "^2.0.5",
+    "bluebird": "^3.7.2",
+    "build-ts-file": "^1.0.9",
+    "cross-fetch": "^3.0.5",
+    "cross-spawn-extra": "^2.1.0",
+    "debug-color2": "^1.2.3",
+    "diff": "^4.0.2",
+    "fs-extra": "^9.0.1",
+    "git-root2": "^1.0.18",
+    "jest": "^26.0.1",
+    "jszip": "^3.5.0",
+    "sort-object-keys2": "^2.0.3",
+    "ts-jest": "^26.1.0",
+    "uni-string": "^1.1.9"
+  },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.19",
-    "@git-lazy/spawn": "^1.0.13",
     "@types/bluebird": "^3.5.32",
     "@types/diff": "^4.0.2",
     "@types/fs-extra": "^9.0.1",
     "@types/jest": "^26.0.0",
     "@types/lodash": "^4.14.155",
     "@types/node": "*",
-    "@types/yargs": "^15.0.5",
-    "bluebird": "^3.7.2",
-    "build-ts-file": "^1.0.9",
-    "cross-spawn-extra": "^2.1.0",
-    "debug-color2": "^1.2.2",
-    "diff": "^4.0.2",
-    "fs-extra": "^9.0.1",
-    "git-root2": "^1.0.16",
-    "jest": "^26.0.1",
-    "ts-jest": "^26.1.0",
-    "uni-string": "^1.1.9"
+    "@types/eslint": "^7.2.0",
+    "eslint": "^7.2.0",
+    "@types/yargs": "^15.0.5"
   },
   "peerDependencies": {
     "lerna": "^3"
