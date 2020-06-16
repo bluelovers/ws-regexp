@@ -30,12 +30,12 @@ const PackageJson = __importStar(require("../package.json"));
 // @ts-ignore
 const cross_spawn_extra_1 = require("cross-spawn-extra");
 // @ts-ignore
-const git_root2_1 = __importDefault(require("git-root2"));
+const core_1 = __importDefault(require("git-root2/core"));
 (async () => {
     const project_root = path_1.default.join(__dirname, '..');
     let gitroot;
     // @ts-ignore
-    gitroot = git_root2_1.default(__dirname);
+    gitroot = core_1.default(__dirname);
     if (!gitroot || path_1.default.relative(gitroot, project_root)) {
         console.warn(`no git exists`);
         return;

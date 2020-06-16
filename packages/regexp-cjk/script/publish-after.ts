@@ -7,7 +7,7 @@ import * as PackageJson from '../package.json';
 // @ts-ignore
 import { async as crossSpawn } from 'cross-spawn-extra';
 // @ts-ignore
-import gitRoot from 'git-root2';
+import gitRoot from 'git-root2/core';
 
 (async () =>
 {
