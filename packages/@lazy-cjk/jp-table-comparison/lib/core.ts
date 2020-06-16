@@ -1,5 +1,22 @@
 import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from './types';
 import { array_unique, array_unique_overwrite } from 'array-hyper-unique/core';
+import { trimWithZeroWidth } from 'zero-width';
+
+export function fixPlusTable<T extends string[][]>(table: T): T
+{
+	return table
+		.map(row => {
+			return row
+				.map(s => {
+					if (typeof s === 'string')
+					{
+						return trimWithZeroWidth(s)
+					}
+					return s
+				})
+		}) as T
+	;
+}
 
 export function _jpTableCmparisonBuildPre(table: {
 	TABLE?: IKanjiComparisonTable,
@@ -15,6 +32,9 @@ export function _jpTableCmparisonBuildPre(table: {
 	const skip_00 = options?.skip_00 ?? [];
 
 	let { TABLE = [] as IKanjiComparisonTable, PLUS_TABLE, PLUS_TABLE_SAFE } = table;
+
+	PLUS_TABLE = fixPlusTable(PLUS_TABLE);
+	PLUS_TABLE_SAFE = fixPlusTable(PLUS_TABLE_SAFE);
 
 	PLUS_TABLE.forEach(function ([jp, zht, zhs])
 	{

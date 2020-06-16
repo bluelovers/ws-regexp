@@ -1,12 +1,28 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addNew = exports._jpTableCmparisonBuild = exports._jpTableCmparisonBuildPre = void 0;
+exports.addNew = exports._jpTableCmparisonBuild = exports._jpTableCmparisonBuildPre = exports.fixPlusTable = void 0;
 const core_1 = require("array-hyper-unique/core");
+const zero_width_1 = require("zero-width");
+function fixPlusTable(table) {
+    return table
+        .map(row => {
+        return row
+            .map(s => {
+            if (typeof s === 'string') {
+                return zero_width_1.trimWithZeroWidth(s);
+            }
+            return s;
+        });
+    });
+}
+exports.fixPlusTable = fixPlusTable;
 function _jpTableCmparisonBuildPre(table, options) {
     var _a, _b;
     const skip = (_a = options === null || options === void 0 ? void 0 : options.skip) !== null && _a !== void 0 ? _a : [];
     const skip_00 = (_b = options === null || options === void 0 ? void 0 : options.skip_00) !== null && _b !== void 0 ? _b : [];
     let { TABLE = [], PLUS_TABLE, PLUS_TABLE_SAFE } = table;
+    PLUS_TABLE = fixPlusTable(PLUS_TABLE);
+    PLUS_TABLE_SAFE = fixPlusTable(PLUS_TABLE_SAFE);
     PLUS_TABLE.forEach(function ([jp, zht, zhs]) {
         addNew(TABLE, jp, zht, zhs);
     });

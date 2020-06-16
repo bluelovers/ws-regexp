@@ -39,19 +39,20 @@
     "jszip": "^3.5.0",
     "sort-object-keys2": "^2.0.3",
     "ts-jest": "^26.1.0",
-    "uni-string": "^1.1.9"
+    "uni-string": "^1.1.9",
+    "zero-width": "^1.0.12"
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.19",
     "@types/bluebird": "^3.5.32",
     "@types/diff": "^4.0.2",
+    "@types/eslint": "^7.2.0",
     "@types/fs-extra": "^9.0.1",
     "@types/jest": "^26.0.0",
     "@types/lodash": "^4.14.155",
     "@types/node": "*",
-    "@types/eslint": "^7.2.0",
-    "eslint": "^7.2.0",
-    "@types/yargs": "^15.0.5"
+    "@types/yargs": "^15.0.5",
+    "eslint": "^7.2.0"
   },
   "peerDependencies": {
     "lerna": "^3"
