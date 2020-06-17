@@ -80,7 +80,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.2",
+    "array-hyper-unique": "^1.1.6",
     "uni-string": "^1.1.9"
   },
   "publishConfig": {

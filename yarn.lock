@@ -272,10 +272,10 @@
     bluebird "^3"
     fast-glob "^3"
 
-"@bluelovers/string-natural-compare@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/@bluelovers/string-natural-compare/-/string-natural-compare-1.0.3.tgz#0cbb94a597e8b76e4d3e39772adb73797ad94267"
-  integrity sha512-iW+AHCwsgC1xoQBjBmlUx/0p54HbG5l+vYT1SvojsE6adddF593gv6ewtY9j00yRjjjJUXU20Q97neJrWrGzbw==
+"@bluelovers/string-natural-compare@^1.0.3", "@bluelovers/string-natural-compare@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@bluelovers/string-natural-compare/-/string-natural-compare-1.0.7.tgz#876dce829e07fe5b47289bd2f689dd69b37a8c1b"
+  integrity sha512-d6O1ipP0AkKkOEwnFgyuJ6cFQjvGl8YACoIu607RQlcXqzvUGpLDO/VCTrIBnxKHUVlI380JJB65dDiT4eILVg==
   dependencies:
     string-natural-compare "^3.0.1"
 
@@ -909,10 +909,10 @@ arr-union@^3.1.0:
   resolved "https://registry.npmjs.org/arr-union/-/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
   integrity sha1-45sJrqne+Gao8gbiiK9jkZuuOcQ=
 
-array-hyper-unique@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/array-hyper-unique/-/array-hyper-unique-1.1.2.tgz#2bf8e5aa01c07ebe875c94962f04b7fa26a1ee56"
-  integrity sha512-fjJkP/Stte49ot5OvazHMIf3OgProDZSXSpIXm1ZMNiYU8fz0TPfAfGO1D1EVuJAxCF91WcQeQfvEBlbfdtSzA==
+array-hyper-unique@^1.1.2, array-hyper-unique@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npmjs.org/array-hyper-unique/-/array-hyper-unique-1.1.6.tgz#2232e5dd9ea9c63c3481c09b7437e3a3b4361d51"
+  integrity sha512-aWd1rmhPZyW9faMmNmuRonVFh9dUkcN0EWMDqWumXwwu9ENNDgP0SekuDjuFBMjJzfIMzgxmN+MLzB2GpNOfXg==
   dependencies:
     deep-eql "^4.0.0"
 
@@ -1990,17 +1990,17 @@ fs-extra@^9.0.1:
     jsonfile "^6.0.1"
     universalify "^1.0.0"
 
-fs-iconv@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.npmjs.org/fs-iconv/-/fs-iconv-3.0.7.tgz#f9d0ed6e13e53d3bc233a83a42fabb51ffc6bdea"
-  integrity sha512-eWZ+CxhzpXwr+QJI4V03/uGqvq1IJFZfJ/t4ZTkRLSlq62MdNxoJCjlDPHdQ4e+sHwHBV8aanI60wQRJ8VaftA==
+fs-iconv@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.npmjs.org/fs-iconv/-/fs-iconv-3.0.8.tgz#d30c5d71bdd57ebcc9a1bfa10ac1b32d6c72d0ac"
+  integrity sha512-oB5EaLbPdaLWB4f12RCdm+4hnK5yM1OScwhz9ZMNB1v7y6W/Vr9Do9MWJXoSH/fLb54NrIsldMBreiuq+X7Uhw==
   dependencies:
     bluebird "^3.7.2"
     fs-extra "^9.0.1"
     iconv-jschardet "^2.0.8"
     lodash "^4.17.15"
     sanitize-filename "^1.6.3"
-    ts-type "^1.2.17"
+    ts-type "^1.2.23"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -4502,7 +4502,7 @@ ts-toolbelt@^6.9.4:
   resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-6.9.4.tgz#cc3a070d99c557c552b4f69e36f13d430c47a760"
   integrity sha512-muRZZqfOTOVvLk5cdnp7YWm6xX+kD/WL2cS/L4zximBRcbQSuMoTbQQ2ZZBVMs1gB0EZw1qThP+HrIQB35OmEw==
 
-ts-type@^1.2.17, ts-type@^1.2.23:
+ts-type@^1.2.23:
   version "1.2.23"
   resolved "https://registry.npmjs.org/ts-type/-/ts-type-1.2.23.tgz#80acfd3b4fab56c7bb9bad2db99fb12aa8280b2c"
   integrity sha512-FfmY8nLMzQKzQ7rWsnmzWE4dvNtSfOKnXNqX4vFN8JkDRmK9VaP7pgcMDz9DsQh/cb9V9EKZ8s3defn4G6UBvQ==

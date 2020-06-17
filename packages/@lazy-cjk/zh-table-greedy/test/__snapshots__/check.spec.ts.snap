@@ -1236,6 +1236,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 坂|板|版|闆|阪 1`] = `
+Array [
+  "坂",
+  "板",
+  "版",
+  "闆",
+  "阪",
+]
+`;
+
 exports[`validate char of map 坐|座 1`] = `
 Array [
   "坐",
@@ -1828,14 +1838,6 @@ Array [
   "杧",
   "芒",
   "茫",
-]
-`;
-
-exports[`validate char of map 板|版|闆 1`] = `
-Array [
-  "板",
-  "版",
-  "闆",
 ]
 `;
 
