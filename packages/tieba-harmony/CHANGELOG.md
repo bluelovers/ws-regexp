@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.9...tieba-harmony@2.0.10) (2020-06-17)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([0b2ec57](https://github.com/bluelovers/ws-regexp/commit/0b2ec5783f4514928be8e090e2cad5a30f9ff50b))
+
+
+
+
+
 ## [2.0.9](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.8...tieba-harmony@2.0.9) (2020-06-11)
 
 **Note:** Version bump only for package tieba-harmony

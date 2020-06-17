@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/cns-11643",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "CNS11643中文標準交換碼全字庫(簡稱全字庫)",
   "keywords": [
     "cns-11643",
@@ -53,7 +53,6 @@
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },

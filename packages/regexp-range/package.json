@@ -1,6 +1,6 @@
 {
   "name": "regexp-range",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "create regex class range string `[一-十]` `[⓪-㊿]` ...",
   "keywords": [
     "chinese",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.29](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-slugify@1.0.28...@lazy-cjk/zh-slugify@1.0.29) (2020-06-17)
+
+
+### 🔖　Miscellaneous
+
+* . ([9fabaaf](https://github.com/bluelovers/ws-regexp/commit/9fabaafb0fe169844fc443c040966c28271a0f99))
+
+
+
+
+
 ## [1.0.28](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-slugify@1.0.27...@lazy-cjk/zh-slugify@1.0.28) (2020-06-11)
 
 **Note:** Version bump only for package @lazy-cjk/zh-slugify

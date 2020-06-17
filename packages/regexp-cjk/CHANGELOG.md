@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.52](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.51...regexp-cjk@3.3.52) (2020-06-17)
+
+
+### 🐛　Bug Fixes
+
+* avoid bug of https://youtrack.jetbrains.com/issue/WEB-46035 ([507c8cc](https://github.com/bluelovers/ws-regexp/commit/507c8cca29e791c4bd1577a452a421bdd00b48f2))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([0b2ec57](https://github.com/bluelovers/ws-regexp/commit/0b2ec5783f4514928be8e090e2cad5a30f9ff50b))
+
+
+### 🔖　Miscellaneous
+
+* . ([9fabaaf](https://github.com/bluelovers/ws-regexp/commit/9fabaafb0fe169844fc443c040966c28271a0f99))
+
+
+
+
+
 ## [3.3.51](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.50...regexp-cjk@3.3.51) (2020-06-11)
 
 **Note:** Version bump only for package regexp-cjk
