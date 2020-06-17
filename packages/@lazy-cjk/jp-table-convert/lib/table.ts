@@ -2075,8 +2075,8 @@ export const TABLE: ITABLE_MAIN = {
 			"zht": "穩",
 			"zhs": "稳"
 		},
-		"穀󠄁": {
-			"jp": "穀󠄁",
+		"穀": {
+			"jp": "穀",
 			"zht": "穀",
 			"zhs": "谷"
 		},
@@ -5753,7 +5753,7 @@ export const TABLE: ITABLE_MAIN = {
 			"zhs": "稳"
 		},
 		"穀": {
-			"jp": "穀󠄁",
+			"jp": "穀",
 			"zht": "穀",
 			"zhs": "谷"
 		},
@@ -9385,7 +9385,7 @@ export const TABLE: ITABLE_MAIN = {
 			"zhs": "稳"
 		},
 		"谷": {
-			"jp": "穀󠄁",
+			"jp": "穀",
 			"zht": "穀",
 			"zhs": "谷"
 		},
@@ -12899,8 +12899,8 @@ export const TABLE_SAFE: ITABLE_MAIN = {
 			"zht": "穩",
 			"zhs": "稳"
 		},
-		"穀󠄁": {
-			"jp": "穀󠄁",
+		"穀": {
+			"jp": "穀",
 			"zht": "穀",
 			"zhs": "谷"
 		},
@@ -16422,7 +16422,7 @@ export const TABLE_SAFE: ITABLE_MAIN = {
 			"zhs": "稳"
 		},
 		"穀": {
-			"jp": "穀󠄁",
+			"jp": "穀",
 			"zht": "穀",
 			"zhs": "谷"
 		},
@@ -19944,7 +19944,7 @@ export const TABLE_SAFE: ITABLE_MAIN = {
 			"zhs": "稳"
 		},
 		"谷": {
-			"jp": "穀󠄁",
+			"jp": "穀",
 			"zht": "穀",
 			"zhs": "谷"
 		},
