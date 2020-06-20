@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.21](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.20...regexp-cjk-plugin-extra@1.0.21) (2020-06-20)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([9dbaa74](https://github.com/bluelovers/ws-regexp/commit/9dbaa74bed5efd27fc705547b91efc893991b492))
+
+
+
+
+
 ## [1.0.20](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.19...regexp-cjk-plugin-extra@1.0.20) (2020-06-17)
 
 
