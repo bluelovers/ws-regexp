@@ -44,11 +44,11 @@
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
-    "ncu": "npx yarn-tool ncu -u",
     "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexpp2",
+    "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
-    "update:ids": "ts-node scripts/update-unicode-ids.ts",
-    "update:test": "ts-node scripts/update-fixtures.ts"
+    "update:test": "ts-node scripts/update-fixtures.ts",
+    "update:ids": "ts-node scripts/update-unicode-ids.ts"
   },
   "engines": {
     "node": ">=4.0.0"

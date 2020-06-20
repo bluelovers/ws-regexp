@@ -84,14 +84,14 @@
     "prepublishOnly_": "yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "echo postpublish && node ./script/publish-after",
+    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexp-cjk",
     "local-link": "yarn link cjk-conv",
     "ncu": "npx yarn-tool ncu -u",
-    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexp-cjk",
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
     "@lazy-cjk/zh-table-list": "^1.0.26",
-    "array-hyper-unique": "^1.1.6",
+    "array-hyper-unique": "^1.1.8",
     "lodash": "^4.17.15",
     "regexp-helper": "^1.0.12",
     "regexp-parser-event": "^1.1.14",

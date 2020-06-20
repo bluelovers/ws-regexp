@@ -77,7 +77,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.6"
+    "array-hyper-unique": "^1.1.8"
   },
   "publishConfig": {
     "access": "public"
