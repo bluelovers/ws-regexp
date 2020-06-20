@@ -266,5 +266,6 @@ exports._greedyTableCacheRegexp = [
     [/[徴徵怔愣]/ug, '征'],
     [/[份芬]/ug, '分'],
     [/[嫒嬡爱瑷璦]/ug, '愛'],
+    [/[性]/ug, '姓'],
 ];
 //# sourceMappingURL=re.js.map

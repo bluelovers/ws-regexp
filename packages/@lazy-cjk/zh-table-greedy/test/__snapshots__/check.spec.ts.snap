@@ -1340,6 +1340,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 姓|性 1`] = `
+Array [
+  "姓",
+  "性",
+]
+`;
+
 exports[`validate char of map 委|荽|萎 1`] = `
 Array [
   "委",
