@@ -13,12 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.execAll = void 0;
+exports.execAll = exports.execall = void 0;
 /// <reference lib="es2018.regexp" />
 const clone_regexp_1 = __importDefault(require("clone-regexp"));
 __exportStar(require("./lib/types"), exports);
 const types_1 = require("./lib/types");
-function execAll(inputRegExp, input, options) {
+function execall(inputRegExp, input, options) {
     let match;
     options = options || {};
     const { resetLastIndex = true, cloneRegexp = clone_regexp_1.default, removeHiddenData } = options;
@@ -72,6 +72,7 @@ function execAll(inputRegExp, input, options) {
     }
     return matches;
 }
-exports.execAll = execAll;
-exports.default = execAll;
+exports.execall = execall;
+exports.execAll = execall;
+exports.default = execall;
 //# sourceMappingURL=index.js.map

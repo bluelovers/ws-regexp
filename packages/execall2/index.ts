@@ -5,7 +5,7 @@ export * from './lib/types';
 
 import { IExecAllOptions, IMatches, IMatchesRow, ICloneRegexp, SYMBOL } from './lib/types';
 
-export function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
+export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	input: string,
 	options?: IExecAllOptions<T>,
 ): IMatches<T>
@@ -85,4 +85,6 @@ export function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	return matches;
 }
 
-export default execAll;
+export { execall as execAll }
+
+export default execall;
