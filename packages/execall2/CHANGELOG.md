@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.1...execall2@2.0.2) (2020-06-21)
+
+
+### 🐛　Bug Fixes
+
+* export `execall` ([ece1ab8](https://github.com/bluelovers/ws-regexp/commit/ece1ab8339c5e26b26f008478ed1fe2b4c51d0a5))
+
+
+
+
+
 ## 2.0.1 (2020-06-21)
 
 
