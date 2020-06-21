@@ -1,0 +1,65 @@
+{
+  "name": "execall2",
+  "version": "1.1.4",
+  "description": "Find multiple RegExp matches in a string",
+  "keywords": [
+    "all",
+    "capturing",
+    "es2018",
+    "exec",
+    "execall",
+    "expression",
+    "find",
+    "findall",
+    "global",
+    "groups",
+    "immutable",
+    "lastIndex",
+    "many",
+    "match",
+    "matches",
+    "multiple",
+    "named",
+    "named capturing",
+    "named capturing groups",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "regular expression",
+    "str",
+    "string"
+  ],
+  "homepage": "https://github.com/bluelovers/execall#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/execall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/execall.git"
+  },
+  "license": "MIT",
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+  "main": "index",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish": "git commit -m \"publish new version\" .",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "node ./test/test",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "clone-regexp": "^2.2.0"
+  },
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.12"
+  }
+}
