@@ -272,14 +272,7 @@
     bluebird "^3"
     fast-glob "^3"
 
-"@bluelovers/string-natural-compare@^1.0.3":
-  version "1.0.7"
-  resolved "https://registry.npmjs.org/@bluelovers/string-natural-compare/-/string-natural-compare-1.0.7.tgz#876dce829e07fe5b47289bd2f689dd69b37a8c1b"
-  integrity sha512-d6O1ipP0AkKkOEwnFgyuJ6cFQjvGl8YACoIu607RQlcXqzvUGpLDO/VCTrIBnxKHUVlI380JJB65dDiT4eILVg==
-  dependencies:
-    string-natural-compare "^3.0.1"
-
-"@bluelovers/string-natural-compare@^1.1.1":
+"@bluelovers/string-natural-compare@^1.0.3", "@bluelovers/string-natural-compare@^1.1.1":
   version "1.1.1"
   resolved "https://registry.npmjs.org/@bluelovers/string-natural-compare/-/string-natural-compare-1.1.1.tgz#1e8e70a5a457d77f34717c0339650dfaa78b3dda"
   integrity sha512-sauM0exUtpgYDnN9tR4JT0k7zc7maOf22WhamnseNU6BvHdt31xMFCm+vIEWV2Uq3TLUnj2Z4sMgbSr+D4YI0g==
@@ -921,14 +914,7 @@ arr-union@^3.1.0:
   resolved "https://registry.npmjs.org/arr-union/-/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
   integrity sha1-45sJrqne+Gao8gbiiK9jkZuuOcQ=
 
-array-hyper-unique@^1.1.2:
-  version "1.1.6"
-  resolved "https://registry.npmjs.org/array-hyper-unique/-/array-hyper-unique-1.1.6.tgz#2232e5dd9ea9c63c3481c09b7437e3a3b4361d51"
-  integrity sha512-aWd1rmhPZyW9faMmNmuRonVFh9dUkcN0EWMDqWumXwwu9ENNDgP0SekuDjuFBMjJzfIMzgxmN+MLzB2GpNOfXg==
-  dependencies:
-    deep-eql "^4.0.0"
-
-array-hyper-unique@^1.1.8:
+array-hyper-unique@^1.1.2, array-hyper-unique@^1.1.8:
   version "1.1.8"
   resolved "https://registry.npmjs.org/array-hyper-unique/-/array-hyper-unique-1.1.8.tgz#9881c3968bc01a8c778364d29cbfd963044acc57"
   integrity sha512-O7kYzXG8IQghhQfFOU8/7DC9wfXWGQLgBD9tEEhMI9gDJtKUKSGAwCnNMgfRpi5PVgi0mOgZbnYfrDoJSw54fg==
@@ -1270,6 +1256,13 @@ cliui@^6.0.0:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
+
+clone-regexp@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/clone-regexp/-/clone-regexp-2.2.0.tgz#7d65e00885cd8796405c35a737e7a86b7429e36f"
+  integrity sha512-beMpP7BOtTipFuW8hrJvREQ2DrRu3BE7by0ZpibtfBA+qfHYvMGTc2Yb1JMYPKg/JUw0CHYvpg796aNTSW9z7Q==
+  dependencies:
+    is-regexp "^2.0.0"
 
 co@^4.6.0:
   version "4.6.0"
@@ -2434,6 +2427,11 @@ is-potential-custom-element-name@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.0.tgz#0c52e54bcca391bb2c494b21e8626d7336c6e397"
   integrity sha1-DFLlS8yjkbssSUsh6GJtczbG45c=
+
+is-regexp@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/is-regexp/-/is-regexp-2.1.0.tgz#cd734a56864e23b956bf4e7c66c396a4c0b22c2d"
+  integrity sha512-OZ4IlER3zmRIoB9AqNhEggVxqIH4ofDns5nRrPS6yQxXE1TPCUpFznBfRQmQa8uC+pXqjMnukiJBxCisIxiLGA==
 
 is-stream@^1.1.0:
   version "1.1.0"

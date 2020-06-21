@@ -1,7 +1,11 @@
 /// <reference lib="es2018.regexp" />
-import _cloneRegexp = require('clone-regexp');
+import _cloneRegexp from 'clone-regexp';
 
-function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
+export * from './lib/types';
+
+import { IExecAllOptions, IMatches, IMatchesRow, ICloneRegexp, SYMBOL } from './lib/types';
+
+export function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	input: string,
 	options?: IExecAllOptions<T>,
 ): IMatches<T>
@@ -81,107 +85,4 @@ function execAll<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	return matches;
 }
 
-const _execAll = execAll;
-
-import IExecAllOptions = execAll.IExecAllOptions;
-import IMatches = execAll.IMatches;
-import IExecAllRegExpExecArray = execAll.IExecAllRegExpExecArray;
-import ICloneRegexp = execAll.ICloneRegexp;
-import IMatchesRow = execAll.IMatchesRow;
-
-namespace execAll
-{
-	export const SYMBOL = Symbol.for('execall');
-
-	export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
-		input: string,
-		options?: IExecAllOptions<T>,
-	): IMatches<T>
-	// @ts-ignore
-	export function execall(...argv)
-	{
-		// @ts-ignore
-		return _execAll(...argv)
-	}
-
-	export interface IExecAllOptions<T extends RegExp = RegExp>
-	{
-		resetLastIndex?: boolean,
-		/**
-		 * allow change cloneRegexp function
-		 */
-		cloneRegexp?: ICloneRegexp<T>,
-
-		/**
-		 * only use this when u know what u doing
-		 */
-		leftContext?: boolean,
-		rightContext?: boolean,
-
-		removeHiddenData?: boolean,
-	}
-
-	export interface ICloneRegexp<T extends RegExp = RegExp>
-	{
-		(inputRegExp: T | RegExp, ...argv): T
-	}
-
-	export interface IExecAllRegExpExecArray<T extends RegExp = RegExp> extends RegExpExecArray
-	{
-
-		/**
-		 * The 0-based index of the match in the string.
-		 */
-		index: number,
-		//input: string,
-
-		/**
-		 * es2018
-		 */
-		groups?: {
-			[k: string]: string,
-		},
-
-		[SYMBOL]: IMatches<T>
-	}
-
-	export interface IMatchesRow<T extends RegExp = RegExp> extends IExecAllRegExpExecArray<T>
-	{
-		match: string,
-		sub: string[],
-
-		leftContext?: string,
-		rightContext?: string,
-	}
-
-	export type IMatches<T extends RegExp = RegExp> = IMatchesRow<T>[] & {
-		/**
-		 * regular expressions
-		 *
-		 * @readonly
-		 */
-		readonly re: T,
-		/**
-		 * regular expressions that contains the string against which a regular expression is matched.
-		 *
-		 * @readonly
-		 */
-		readonly input: string,
-		/**
-		 * last matched index
-		 *
-		 * @readonly
-		 */
-		readonly lastIndex: number,
-	};
-}
-
-import SYMBOL = execAll.SYMBOL;
-
-execAll.default = execAll;
-// @ts-ignore
-execAll.execall = execAll;
-
-Object.defineProperty(execAll, "__esModule", { value: true });
-
-export = execAll;
+export default execAll;

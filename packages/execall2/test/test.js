@@ -1,5 +1,5 @@
 const assert = require('assert');
-const m = require('../index');
+const m = require('../index').execAll;
 
 try
 {
