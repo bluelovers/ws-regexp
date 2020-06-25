@@ -80,7 +80,7 @@
     "@lazy-cjk/static-build-zh-convert": "^1.0.18",
     "array-hyper-unique": "^1.1.8",
     "regexp-helper": "^1.0.12",
-    "uni-string": "^1.1.9"
+    "uni-string": "^1.1.10"
   },
   "publishConfig": {
     "access": "public"

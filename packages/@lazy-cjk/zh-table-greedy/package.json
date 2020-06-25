@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.8",
-    "uni-string": "^1.1.9"
+    "uni-string": "^1.1.10"
   },
   "publishConfig": {
     "access": "public"

@@ -79,7 +79,7 @@
   "dependencies": {
     "@lazy-cjk/jp-table-comparison": "^1.0.9",
     "regexp-helper": "^1.0.12",
-    "uni-string": "^1.1.9"
+    "uni-string": "^1.1.10"
   },
   "publishConfig": {
     "access": "public"
