@@ -67,7 +67,7 @@ const __root = join(__dirname, '../..');
 		await crossSpawnGitAsync('git', [
 			`commit`,
 			`-m`,
-			`feat: zh-table-greedy ${msg}`,
+			`feat(zh-table-greedy): zh-table-greedy ${msg}`,
 			`--`,
 			`./lib`,
 			`./test`,
