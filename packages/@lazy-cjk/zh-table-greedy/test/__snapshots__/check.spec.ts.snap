@@ -989,6 +989,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 召|招 1`] = `
+Array [
+  "召",
+  "招",
+]
+`;
+
 exports[`validate char of map 吁|喩|喻|籲|龥 1`] = `
 Array [
   "吁",
@@ -1352,6 +1359,15 @@ Array [
   "委",
   "荽",
   "萎",
+]
+`;
+
+exports[`validate char of map 娇|嬌|驕|骄 1`] = `
+Array [
+  "娇",
+  "嬌",
+  "驕",
+  "骄",
 ]
 `;
 
