@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk-plugin-extra",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "a regexp-cjk plugin demo for regexp-cjk ( 自動配對 五十音的清/濁音 , 半形/全形 , deburr )",
   "keywords": [
     "char",
