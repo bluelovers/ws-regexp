@@ -19,8 +19,8 @@ export function toStrTableArray(table: {
 		throw new TypeError(`table '${typeof table}' ${table}`);
 	}
 
-	let from = [];
-	let to = [];
+	let from: string[] = [];
+	let to: string[] = [];
 
 	const ks = Object.keys(table);
 	ks.sort();
@@ -75,12 +75,12 @@ export function toStrTable(table: {
 	}
 }
 
-export function jsSplit(s: string)
+export function jsSplit(s: string): string[]
 {
 	return s.split('');
 }
 
-export function utf8Split(s: string)
+export function utf8Split(s: string): string[]
 {
 	return UString.split(s, '');
 }

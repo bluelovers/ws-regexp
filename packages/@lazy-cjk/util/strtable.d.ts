@@ -8,8 +8,8 @@ export interface IOptions {
 export declare function toStrTableArray(table: {
     [k: string]: string;
 }, options?: IOptions): {
-    from: any[];
-    to: any[];
+    from: string[];
+    to: string[];
 };
 export declare function toStrTable(table: {
     [k: string]: string;

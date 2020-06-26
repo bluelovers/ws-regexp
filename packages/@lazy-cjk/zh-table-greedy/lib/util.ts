@@ -1,7 +1,7 @@
 import UString from 'uni-string';
 import { array_unique_overwrite } from 'array-hyper-unique';
 
-export function reToStringList(re: RegExp, char: string)
+export function reToStringList(re: RegExp, char: string): string[]
 {
 	const s = re.source
 		.replace(/^.*\[|\].*$/ug, '')
