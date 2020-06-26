@@ -1660,6 +1660,11 @@ exports.table_plus_core = {
     "拔": [
         "拔",
         "抜"
+    ],
+    "湿": [
+        "湿",
+        "溼",
+        "濕"
     ]
 };
 //# sourceMappingURL=raw.js.map

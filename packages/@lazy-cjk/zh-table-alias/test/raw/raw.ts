@@ -1887,4 +1887,10 @@ export const table_plus_core = {
 		'抜',
 	],
 
+	'湿': [
+		'湿',
+		'溼',
+		'濕',
+	],
+
 } as const;
