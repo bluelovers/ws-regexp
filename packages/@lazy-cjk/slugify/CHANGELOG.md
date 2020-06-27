@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.39](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.38...@lazy-cjk/slugify@1.0.39) (2020-06-27)
+
+
+### ✨　Features
+
+* add `noSepBetweenZhChar` ([b2f431a](https://github.com/bluelovers/ws-regexp/commit/b2f431a2ace915ad50c45a268d6459245a7ce7fd))
+
+
+
+
+
 ## [1.0.38](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.37...@lazy-cjk/slugify@1.0.38) (2020-06-26)
 
 **Note:** Version bump only for package @lazy-cjk/slugify

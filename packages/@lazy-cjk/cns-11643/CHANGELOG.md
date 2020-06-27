@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/cns-11643@1.0.14...@lazy-cjk/cns-11643@1.0.15) (2020-06-27)
+
+
+### ✨　Features
+
+* add lazy api ([722088f](https://github.com/bluelovers/ws-regexp/commit/722088f90b488091cbbe5fd1ce975e6f4246c904))
+
+
+### 🛠　Build System
+
+* speed up unzip ([c95cf26](https://github.com/bluelovers/ws-regexp/commit/c95cf260a2df8e325451a9cb1483ce1f2f415075))
+
+
+
+
+
 ## [1.0.14](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/cns-11643@1.0.13...@lazy-cjk/cns-11643@1.0.14) (2020-06-17)
 
 
