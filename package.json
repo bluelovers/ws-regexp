@@ -37,8 +37,10 @@
     "diff": "^4.0.2",
     "fs-extra": "^9.0.1",
     "git-root2": "^1.0.18",
+    "ignore": "^5.1.8",
     "jest": "^26.1.0",
     "jszip": "^3.5.0",
+    "micromatch": "^4.0.2",
     "sort-object-keys2": "^2.0.3",
     "ts-jest": "^26.1.1",
     "uni-string": "^1.1.10",
@@ -53,6 +55,7 @@
     "@types/fs-extra": "^9.0.1",
     "@types/jest": "^26.0.3",
     "@types/lodash": "^4.14.157",
+    "@types/micromatch": "^4.0.1",
     "@types/node": "*",
     "@types/yargs": "^15.0.5",
     "eslint": "^7.3.1"

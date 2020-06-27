@@ -20,7 +20,7 @@ exports.default = (async () => {
         a.push(b[0]);
         return a;
     }, []);
-    console.log(list3);
+    console.log(list2);
     if (list3.includes('cjk-conv')) {
         let cp = await cross_spawn_extra_1.default.async('lerna', [
             `run`,

@@ -3,3 +3,11 @@
 /unzip/Open_Data/Properties/CNS_component_word/
 *.zip
 /unzip/Open_Data/Fonts/
+
+*.png
+*.ttf
+
+/Open_Data/Voice/CNS_pinyin_voice/
+/Open_Data/Fonts/png_24x24/
+/Open_Data/Properties/CNS_component_word/
+/Open_Data/Fonts/

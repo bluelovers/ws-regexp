@@ -3,13 +3,22 @@
  */
 
 import JSZip from 'jszip';
-import { outputFile, readFile, ensureDir } from 'fs-extra';
+import { outputFile, readFile, ensureDir, existsSync, readFileSync } from 'fs-extra';
 import { join } from "path";
 import Bluebird from 'bluebird';
 import { parse, relative } from 'path';
+import ignore from 'ignore'
+import console from 'debug-color2'
 
 const src = join(__dirname, `../cache`, 'Open_Data.zip');
 const __root = join(__dirname, '..', 'cache', 'unzip');
+
+const ig = ignore()
+
+if (existsSync(join(__root, '..', '.gitignore')))
+{
+	ig.add(readFileSync(join(__root, '..', '.gitignore')).toString())
+}
 
 Bluebird.resolve(readFile(src))
 	.then(buf => unzip(buf, __root))
@@ -24,7 +33,17 @@ function unzip(buf: ArrayBuffer | Buffer, __dir: string)
 		{
 			let dp = join(__dir, fo.name);
 
-			console.log(relative(__root, dp));
+			let rdp = relative(__root, dp);
+
+			if (ig.ignores(rdp))
+			{
+				console.gray(`[skip]`, rdp)
+				return;
+			}
+			else
+			{
+				console.log(rdp);
+			}
 
 			if (fo.dir)
 			{
@@ -48,5 +67,5 @@ function unzip(buf: ArrayBuffer | Buffer, __dir: string)
 				return outputFile(dp, buf);
 			}
 		})
-	;
+		;
 }
