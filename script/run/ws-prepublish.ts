@@ -49,20 +49,23 @@ export default (async () => {
 		}
 	}
 
-	let cp = await crossSpawnExtra.async('lerna', [
-		`run`,
-		...list3.map(v => `--scope=${v}`),
-		`--concurrency`,
-		1,
-		`prepublishOnly:lerna`,
-	], {
-		cwd,
-		stdio: 'inherit',
-	})
-
-	if (cp.exitCode)
+	if (list3.length)
 	{
-		process.exit(cp.exitCode)
+		let cp = await crossSpawnExtra.async('lerna', [
+			`run`,
+			...list3.map(v => `--scope=${v}`),
+			`--concurrency`,
+			1,
+			`prepublishOnly:lerna`,
+		], {
+			cwd,
+			stdio: 'inherit',
+		})
+
+		if (cp.exitCode)
+		{
+			process.exit(cp.exitCode)
+		}
 	}
 
 })();

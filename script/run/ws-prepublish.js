@@ -37,18 +37,20 @@ exports.default = (async () => {
             process.exit(cp.exitCode);
         }
     }
-    let cp = await cross_spawn_extra_1.default.async('lerna', [
-        `run`,
-        ...list3.map(v => `--scope=${v}`),
-        `--concurrency`,
-        1,
-        `prepublishOnly:lerna`,
-    ], {
-        cwd,
-        stdio: 'inherit',
-    });
-    if (cp.exitCode) {
-        process.exit(cp.exitCode);
+    if (list3.length) {
+        let cp = await cross_spawn_extra_1.default.async('lerna', [
+            `run`,
+            ...list3.map(v => `--scope=${v}`),
+            `--concurrency`,
+            1,
+            `prepublishOnly:lerna`,
+        ], {
+            cwd,
+            stdio: 'inherit',
+        });
+        if (cp.exitCode) {
+            process.exit(cp.exitCode);
+        }
     }
 })();
 //# sourceMappingURL=ws-prepublish.js.map

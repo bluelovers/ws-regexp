@@ -172,6 +172,7 @@ interface IOldKeysCache
 		], {
 			cwd: __root,
 			stdio: 'inherit',
+			throwError: false,
 		});
 	}
 
