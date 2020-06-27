@@ -3,8 +3,9 @@
  */
 
 import uni2zhuyin from './uni2zhuyin';
-import { IZhuyin2PinyinTable, IZhuyin2PinyinTableRow } from './types';
+import { IZhuyin2PinyinTable, IZhuyin2PinyinTableRow, EnumPinyinMode, EnumPinyinType } from './types';
 import { char2uni } from './char2uni';
+import { handlePinyinType } from './util/uni2zhuyin';
 
 /**
  * 全字庫的拼音資料表格
@@ -39,6 +40,13 @@ export function uni2pinyin_02(uni: string | number): IZhuyin2PinyinTableRow
 	return zhuyin2pinyin_02_table()[zhuyin]
 }
 
+export function uni2pinyinTypeValue_02(uni: string | number, pinyinType?: EnumPinyinType)
+{
+	pinyinType = handlePinyinType(pinyinType)
+
+	return uni2pinyin_02(uni)[pinyinType]
+}
+
 /**
  * 全字庫的拼音資料表格
  *
@@ -47,6 +55,13 @@ export function uni2pinyin_02(uni: string | number): IZhuyin2PinyinTableRow
 export function char2pinyin_02(char: string)
 {
 	return uni2pinyin_02(char2uni(char))
+}
+
+export function char2pinyinTypeValue_02(char: string, pinyinType?: EnumPinyinType)
+{
+	pinyinType = handlePinyinType(pinyinType)
+
+	return char2pinyin_02(char)[pinyinType]
 }
 
 export default uni2pinyin_02

@@ -3,12 +3,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.char2pinyin_01 = exports.uni2pinyin_01 = exports.zhuyin2pinyin_01 = exports.zhuyin2pinyin_01_table = void 0;
+exports.char2pinyinTypeValue_01 = exports.char2pinyin_01 = exports.uni2pinyinTypeValue_01 = exports.uni2pinyin_01 = exports.zhuyin2pinyin_01 = exports.zhuyin2pinyin_01_table = void 0;
 /**
  * Created by user on 2020/5/30.
  */
 const uni2zhuyin_1 = __importDefault(require("./uni2zhuyin"));
 const char2uni_1 = require("./char2uni");
+const uni2zhuyin_2 = require("./util/uni2zhuyin");
 /**
  * 全字庫的拼音資料表格
  *
@@ -38,6 +39,11 @@ function uni2pinyin_01(uni) {
     return zhuyin2pinyin_01_table()[zhuyin];
 }
 exports.uni2pinyin_01 = uni2pinyin_01;
+function uni2pinyinTypeValue_01(uni, pinyinType) {
+    pinyinType = uni2zhuyin_2.handlePinyinType(pinyinType);
+    return uni2pinyin_01(uni)[pinyinType];
+}
+exports.uni2pinyinTypeValue_01 = uni2pinyinTypeValue_01;
 /**
  * 全字庫的拼音資料表格
  *
@@ -47,5 +53,10 @@ function char2pinyin_01(char) {
     return uni2pinyin_01(char2uni_1.char2uni(char));
 }
 exports.char2pinyin_01 = char2pinyin_01;
+function char2pinyinTypeValue_01(char, pinyinType) {
+    pinyinType = uni2zhuyin_2.handlePinyinType(pinyinType);
+    return char2pinyin_01(char)[pinyinType];
+}
+exports.char2pinyinTypeValue_01 = char2pinyinTypeValue_01;
 exports.default = uni2pinyin_01;
 //# sourceMappingURL=uni2pinyin_01.js.map

@@ -1,4 +1,4 @@
-import { IZhuyin2PinyinTable, IZhuyin2PinyinTableRow } from './types';
+import { IZhuyin2PinyinTable, IZhuyin2PinyinTableRow, EnumPinyinType } from './types';
 /**
  * 全字庫的拼音資料表格
  *
@@ -18,10 +18,12 @@ export declare function zhuyin2pinyin_01(zhuyin: string): IZhuyin2PinyinTableRow
  * 「CNS_pinyin_1」以調值(數字)呈現
  */
 export declare function uni2pinyin_01(uni: string | number): IZhuyin2PinyinTableRow;
+export declare function uni2pinyinTypeValue_01(uni: string | number, pinyinType?: EnumPinyinType): string;
 /**
  * 全字庫的拼音資料表格
  *
  * 「CNS_pinyin_1」以調值(數字)呈現
  */
 export declare function char2pinyin_01(char: string): IZhuyin2PinyinTableRow;
+export declare function char2pinyinTypeValue_01(char: string, pinyinType?: EnumPinyinType): string;
 export default uni2pinyin_01;
