@@ -1596,6 +1596,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 微|薇 1`] = `
+Array [
+  "微",
+  "薇",
+]
+`;
+
 exports[`validate char of map 怪|恠 1`] = `
 Array [
   "怪",
