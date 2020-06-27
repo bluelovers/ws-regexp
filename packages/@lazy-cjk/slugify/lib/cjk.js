@@ -14,7 +14,7 @@ const REGEXP_TEST = new RegExp(cjk_conv_1._re_cjk_conv('u').source, 'ug');
 const REGEXP_TEST_JP = new RegExp('(?:(?:' + kana_1.katakanaRegex.source + ')|(?:' + kana_1.hiraganaRegex.source + '))+', 'ug');
 function _replaceCjk(text, options) {
     var _a;
-    let append = (_a = options === null || options === void 0 ? void 0 : options.separator) !== null && _a !== void 0 ? _a : ' ';
+    let append = (options === null || options === void 0 ? void 0 : options.noSepBetweenZhChar) ? '' : ((_a = options === null || options === void 0 ? void 0 : options.separator) !== null && _a !== void 0 ? _a : ' ');
     const char2pinyin = chinese_1.newZhPinyinFn(options);
     text = text.replace(REGEXP_TEST, (s) => {
         let n = char2pinyin(s);

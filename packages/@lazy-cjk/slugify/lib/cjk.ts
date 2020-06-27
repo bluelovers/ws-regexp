@@ -12,7 +12,7 @@ const REGEXP_TEST_JP = new RegExp('(?:(?:' + katakanaRegex.source + ')|(?:' + hi
 
 export function _replaceCjk(text: string, options?: IOptionsSlugify)
 {
-	let append = options?.separator ?? ' ';
+	let append = options?.noSepBetweenZhChar ? '' : (options?.separator ?? ' ');
 
 	const char2pinyin = newZhPinyinFn(options);
 

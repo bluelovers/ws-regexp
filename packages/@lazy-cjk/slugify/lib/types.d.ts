@@ -5,6 +5,7 @@ export interface IOptionsSlugify {
      * @default `-`
      */
     separator?: string;
+    noSepBetweenZhChar?: boolean;
     deburr?: boolean;
     upperCaseExtra?: boolean;
     lowerCaseExtra?: boolean;

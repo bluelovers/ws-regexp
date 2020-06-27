@@ -8,6 +8,8 @@ export interface IOptionsSlugify
 	 */
 	separator?: string,
 
+	noSepBetweenZhChar?: boolean,
+
 	deburr?: boolean,
 
 	upperCaseExtra?: boolean,
