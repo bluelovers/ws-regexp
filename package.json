@@ -28,7 +28,7 @@
     "@git-lazy/spawn": "^1.0.20",
     "@lazy-node/readlines": "^2.0.5",
     "@yarn-tool/find-deps": "^1.0.9",
-    "@yarn-tool/ws-changed": "^1.0.14",
+    "@yarn-tool/ws-changed": "^1.0.15",
     "bluebird": "^3.7.2",
     "build-ts-file": "^1.0.9",
     "cross-fetch": "^3.0.5",

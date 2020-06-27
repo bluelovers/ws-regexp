@@ -850,10 +850,10 @@
     pkg-dir "^4.2.0"
     upath2 "^3.1.4"
 
-"@yarn-tool/ws-changed@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.npmjs.org/@yarn-tool/ws-changed/-/ws-changed-1.0.14.tgz#b34775c85829d1b4b42f5edbe6d45d2b9f4d3e55"
-  integrity sha512-239OFHlNUpNryIks04haMywqRwFEtuT6vb2tuuaLSSVnlX5Gsm7+023+ILqAeteBGE4jTpWI3pFL1mBee2H+nQ==
+"@yarn-tool/ws-changed@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.npmjs.org/@yarn-tool/ws-changed/-/ws-changed-1.0.15.tgz#c03f23d1afd429a17084035ec752ec62a0ec253f"
+  integrity sha512-JnUA5/tGTYieilreif37l0TX/BnHjCOYP32IfrfCJ19MfNKcwjNu56TfUPQOn26LfBUhuzvzLTHhfLAWkC7Cjg==
   dependencies:
     "@git-lazy/diff-staged" "^1.0.22"
     "@yarn-tool/find-root" "^1.0.26"
