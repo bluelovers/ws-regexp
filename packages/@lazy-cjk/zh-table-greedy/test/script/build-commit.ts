@@ -74,6 +74,7 @@ const __root = join(__dirname, '../..');
 		], {
 			cwd: __root,
 			stdio: 'inherit',
+			throwError: false,
 		});
 	}
 
