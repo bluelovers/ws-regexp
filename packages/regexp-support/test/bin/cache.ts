@@ -1,5 +1,5 @@
-import * as path from 'path';
-import * as globby from 'globby';
+import path from 'path';
+import globby from 'globby';
 import * as fs from 'fs-extra';
 
 export const REGEXPP_PATH = path.dirname(require.resolve('regexpp2/package.json')) as string;
@@ -69,6 +69,7 @@ globby([
 
 			let d = Object
 				.values(data)
+				// @ts-ignore
 				.reduce(function (a, b: {
 					name: string,
 					alias?: string,

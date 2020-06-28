@@ -2,10 +2,11 @@
  * Created by user on 2018/4/28/028.
  */
 import { ITypeCreateRegExp } from '../index';
-export declare type IRegExpPrototype = RegExp & {
-    dotAll?: boolean;
-};
+export interface IRegExpPrototype extends RegExp {
+    dotAll: boolean;
+}
 export declare const PROTOTYPE: {
+    dotAll?: boolean;
     exec?: boolean;
     test?: boolean;
     readonly source?: boolean;
@@ -17,9 +18,9 @@ export declare const PROTOTYPE: {
     readonly flags?: boolean;
     readonly sticky?: boolean;
     readonly unicode?: boolean;
-    readonly dotAll?: boolean;
 };
 export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
+    dotAll?: boolean;
     exec?: boolean;
     test?: boolean;
     readonly source?: boolean;
@@ -31,5 +32,4 @@ export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     readonly flags?: boolean;
     readonly sticky?: boolean;
     readonly unicode?: boolean;
-    readonly dotAll?: boolean;
 };

@@ -30,6 +30,10 @@ async function gitSubtreePush(module_name) {
             remote = `https://github.com/bluelovers/regexpp.git`;
             prefix = `packages/${module_name}`;
             break;
+        case 'regexp-support':
+            remote = `https://github.com/bluelovers/regexp-support`;
+            prefix = `packages/${module_name}`;
+            break;
     }
     if (remote && prefix) {
         await cross_spawn_extra_1.default.async('git', [

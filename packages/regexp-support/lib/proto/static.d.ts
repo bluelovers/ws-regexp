@@ -1,11 +1,10 @@
 /**
  * Created by user on 2018/4/28/028.
  */
-/**
- * Created by user on 2018/4/28/028.
- */
+/// <reference lib="es2015.core" />
+/// <reference lib="es2018.regexp" />
 import { ITypeCreateRegExp } from '../index';
-export declare type IRegExpStatic = typeof RegExp & {
+interface IRegExpStaticPlus {
     /**
      * RegExp.input ($_)
      *
@@ -74,12 +73,20 @@ export declare type IRegExpStatic = typeof RegExp & {
      */
     rightContext: string;
     '$\'': string;
-};
-export declare type IRegExpStatic2 = IRegExpStatic & {
+}
+declare global {
+    interface RegExpConstructor extends IRegExpStaticPlus {
+    }
+}
+export interface IRegExpStatic extends RegExpConstructor, IRegExpStaticPlus {
+}
+export interface IRegExpStatic2 extends IRegExpStatic {
     $10?: string;
     $100?: string;
-};
+}
 export declare const REGEXP_STATIC: {
+    $10?: boolean;
+    $100?: boolean;
     readonly prototype?: boolean;
     $1?: boolean;
     $2?: boolean;
@@ -100,10 +107,10 @@ export declare const REGEXP_STATIC: {
     '$`'?: boolean;
     rightContext?: boolean;
     '$\''?: boolean;
-    $10?: boolean;
-    $100?: boolean;
 };
 export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
+    $10?: boolean;
+    $100?: boolean;
     readonly prototype?: boolean;
     $1?: boolean;
     $2?: boolean;
@@ -124,6 +131,5 @@ export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     '$`'?: boolean;
     rightContext?: boolean;
     '$\''?: boolean;
-    $10?: boolean;
-    $100?: boolean;
 };
+export {};

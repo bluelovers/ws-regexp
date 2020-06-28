@@ -32,23 +32,22 @@
     "url": "git+https://github.com/bluelovers/regexp-support.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "coverage": "npx nyc npm run test",
-    "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run test",
-    "postpublish": "git commit -m \"publish new version\" .",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "node ./test/flags.js"
+    "test": "node ./test/flags.js",
+    "prepublishOnly_": "yarn run test",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "sort-object-keys2": "^1.1.0"
+    "sort-object-keys2": "^2.0.3"
   },
   "devDependencies": {
     "@types/fs-extra": "*",

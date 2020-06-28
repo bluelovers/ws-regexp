@@ -1,14 +1,13 @@
 /**
  * Created by user on 2018/4/28/028.
  */
-
-/**
- * Created by user on 2018/4/28/028.
- */
+/// <reference lib="es2015.core" />
+/// <reference lib="es2018.regexp" />
 
 import { createRegExp, ITypeCreateRegExp } from '../index';
 
-export type IRegExpStatic = typeof RegExp & {
+interface IRegExpStaticPlus
+{
 
 	/**
 	 * RegExp.input ($_)
@@ -85,7 +84,19 @@ export type IRegExpStatic = typeof RegExp & {
 
 }
 
-export type IRegExpStatic2 = IRegExpStatic & {
+declare global
+{
+	interface RegExpConstructor extends IRegExpStaticPlus
+	{
+	}
+}
+
+export interface IRegExpStatic extends RegExpConstructor, IRegExpStaticPlus
+{
+}
+
+export interface IRegExpStatic2 extends IRegExpStatic
+{
 
 	$10?: string,
 	$100?: string,

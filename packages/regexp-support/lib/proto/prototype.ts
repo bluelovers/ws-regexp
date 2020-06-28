@@ -4,10 +4,9 @@
 
 import { createRegExp, ITypeCreateRegExp } from '../index';
 
-export type IRegExpPrototype = RegExp & {
-
-	dotAll?: boolean,
-
+export interface IRegExpPrototype extends RegExp
+{
+	dotAll: boolean,
 }
 
 export const PROTOTYPE = {

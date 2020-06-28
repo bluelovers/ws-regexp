@@ -4,7 +4,7 @@
 
 import { ICreateRegExp, ITypeCreateRegExp } from '../index';
 import { testPattern } from '../pattern';
-import * as util from 'util';
+import { inspect } from 'util';
 
 //util.inspect.defaultOptions.colors = true;
 
@@ -12,7 +12,7 @@ export function log_dir(...argv)
 {
 	argv = argv.reduce(function (a, b)
 	{
-		let c = util.inspect(b, {
+		let c = inspect(b, {
 			colors: true,
 		});
 
