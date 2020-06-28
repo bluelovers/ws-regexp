@@ -6,7 +6,7 @@ import { createRegExp, ITypeCreateRegExp } from '../index';
 
 export interface IRegExpPrototype extends RegExp
 {
-	dotAll: boolean,
+	readonly dotAll: boolean,
 }
 
 export const PROTOTYPE = {

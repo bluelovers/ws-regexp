@@ -3,10 +3,10 @@
  */
 import { ITypeCreateRegExp } from '../index';
 export interface IRegExpPrototype extends RegExp {
-    dotAll: boolean;
+    readonly dotAll: boolean;
 }
 export declare const PROTOTYPE: {
-    dotAll?: boolean;
+    readonly dotAll?: boolean;
     exec?: boolean;
     test?: boolean;
     readonly source?: boolean;
@@ -20,7 +20,7 @@ export declare const PROTOTYPE: {
     readonly unicode?: boolean;
 };
 export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
-    dotAll?: boolean;
+    readonly dotAll?: boolean;
     exec?: boolean;
     test?: boolean;
     readonly source?: boolean;

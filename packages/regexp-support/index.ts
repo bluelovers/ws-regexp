@@ -2,11 +2,9 @@
  * Created by user on 2018/4/26/026.
  */
 
-import * as lib from './lib';
 import { hasSupportFlag, testFlag, ICreateRegExp, IFlagsAll, ITypeCreateRegExp } from './lib';
 import { FlagsName } from './lib/flags';
 import { testFlagsAll } from './lib/index';
-import * as libPattern from './lib/pattern';
 import { PatternSupport, testPattern, IPatternTestFn, IPatternTestRow } from './lib/pattern';
 import { testUnicodeAll, UNICODE_ALL } from './lib/pattern/charset/unicode';
 import { testUnicodeBlocksAll } from './lib/pattern/charset/unicode-blocks';

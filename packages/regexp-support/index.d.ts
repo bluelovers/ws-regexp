@@ -58,6 +58,7 @@ export declare const support: Readonly<{
         unicodeWrap: boolean;
     };
     prototype: {
+        readonly dotAll?: boolean;
         exec?: boolean;
         test?: boolean;
         readonly source?: boolean;
@@ -69,9 +70,10 @@ export declare const support: Readonly<{
         readonly flags?: boolean;
         readonly sticky?: boolean;
         readonly unicode?: boolean;
-        readonly dotAll?: boolean;
     };
     static: {
+        $10?: boolean;
+        $100?: boolean;
         readonly prototype?: boolean;
         $1?: boolean;
         $2?: boolean;
@@ -92,8 +94,6 @@ export declare const support: Readonly<{
         '$`'?: boolean;
         rightContext?: boolean;
         '$\''?: boolean;
-        $10?: boolean;
-        $100?: boolean;
     };
     symbol: {
         species: boolean;
@@ -269,6 +269,9 @@ export declare const support: Readonly<{
             Pat_Syn: boolean;
             Pattern_White_Space: boolean;
             Pat_WS: boolean;
+            /**
+             * pattern support
+             */
             Quotation_Mark: boolean;
             QMark: boolean;
             Radical: boolean;
@@ -623,7 +626,9 @@ export declare const support: Readonly<{
             InCJK_Unified_Ideographs: boolean;
             InCJK_Unified_Ideographs_Extension_A: boolean;
             InCJK_Unified_Ideographs_Extension_B: boolean;
-            InCJK_Unified_Ideographs_Extension_C: boolean;
+            InCJK_Unified_Ideographs_Extension_C: boolean; /**
+             * all flag support without name and pattern test
+             */
             InCJK_Unified_Ideographs_Extension_D: boolean;
             InCJK_Unified_Ideographs_Extension_E: boolean;
             InCJK_Unified_Ideographs_Extension_F: boolean;
