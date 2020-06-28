@@ -1,0 +1,4683 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UNICODE_ALL ! 1`] = `
+Object {
+  "char": "!",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL " 1`] = `
+Object {
+  "char": "\\"",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL # 1`] = `
+Object {
+  "char": "#",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Component",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL $ 1`] = `
+Object {
+  "char": "$",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Currency_Symbol",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sc",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL % 1`] = `
+Object {
+  "char": "%",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL & 1`] = `
+Object {
+  "char": "&",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ' 1`] = `
+Object {
+  "char": "'",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ( 1`] = `
+Object {
+  "char": "(",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ) 1`] = `
+Object {
+  "char": ")",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Close_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pe",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL * 1`] = `
+Object {
+  "char": "*",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Component",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL + 1`] = `
+Object {
+  "char": "+",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL , 1`] = `
+Object {
+  "char": ",",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL . 1`] = `
+Object {
+  "char": ".",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL / 1`] = `
+Object {
+  "char": "/",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL : 1`] = `
+Object {
+  "char": ":",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ; 1`] = `
+Object {
+  "char": ";",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL < 1`] = `
+Object {
+  "char": "<",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL = 1`] = `
+Object {
+  "char": "=",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL > 1`] = `
+Object {
+  "char": ">",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ? 1`] = `
+Object {
+  "char": "?",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL @ 1`] = `
+Object {
+  "char": "@",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL [ 1`] = `
+Object {
+  "char": "[",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\ 1`] = `
+Object {
+  "char": "\\\\",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\u0009 1`] = `
+Object {
+  "char": "	",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\u000a 1`] = `
+Object {
+  "char": "
+",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\u000c 1`] = `
+Object {
+  "char": "",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\u000d 1`] = `
+Object {
+  "char": "
+",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\u0020 1`] = `
+Object {
+  "char": " ",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "Separator",
+    "Space_Separator",
+    "White_Space",
+    "Z",
+    "Zs",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \\u1f3fd 1`] = `
+Object {
+  "char": "🏽",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Emoji",
+    "Emoji_Component",
+    "Emoji_Modifier",
+    "Emoji_Presentation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Modifier_Symbol",
+    "S",
+    "Sk",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ] 1`] = `
+Object {
+  "char": "]",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Close_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pe",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ^ 1`] = `
+Object {
+  "char": "^",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Dia",
+    "Diacritic",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Modifier_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sk",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL _ 1`] = `
+Object {
+  "char": "_",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Connector_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "ID_Continue",
+    "P",
+    "Pc",
+    "Punctuation",
+    "XIDC",
+    "XID_Continue",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL \` 1`] = `
+Object {
+  "char": "\`",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Dia",
+    "Diacritic",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Modifier_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sk",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL { 1`] = `
+Object {
+  "char": "{",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL | 1`] = `
+Object {
+  "char": "|",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL } 1`] = `
+Object {
+  "char": "}",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Close_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pe",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ~ 1`] = `
+Object {
+  "char": "~",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL - 1`] = `
+Object {
+  "char": "-",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Dash",
+    "Dash_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pd",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL cánh 1`] = `
+Object {
+  "char": "cánh",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL « 1`] = `
+Object {
+  "char": "«",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Initial_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pi",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL » 1`] = `
+Object {
+  "char": "»",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Final_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pf",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ā 1`] = `
+Object {
+  "char": "ā",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ň 1`] = `
+Object {
+  "char": "ň",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ̀ 1`] = `
+Object {
+  "char": "̀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Dia",
+    "Diacritic",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ͳ 1`] = `
+Object {
+  "char": "ͳ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Θ 1`] = `
+Object {
+  "char": "Θ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Σ 1`] = `
+Object {
+  "char": "Σ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Ϫ 1`] = `
+Object {
+  "char": "Ϫ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Ж 1`] = `
+Object {
+  "char": "Ж",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL летачко 1`] = `
+Object {
+  "char": "летачко",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ؤ 1`] = `
+Object {
+  "char": "ؤ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL لمو 1`] = `
+Object {
+  "char": "لمو",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ऄ 1`] = `
+Object {
+  "char": "ऄ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL আমার 1`] = `
+Object {
+  "char": "আমার",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "IDC",
+    "ID_Continue",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ் 1`] = `
+Object {
+  "char": "்",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Dia",
+    "Diacritic",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ༁ 1`] = `
+Object {
+  "char": "༁",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ༬ 1`] = `
+Object {
+  "char": "༬",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ༺ 1`] = `
+Object {
+  "char": "༺",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ༼ 1`] = `
+Object {
+  "char": "༼",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ང 1`] = `
+Object {
+  "char": "ང",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ხომალდი 1`] = `
+Object {
+  "char": "ხომალდი",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ማንዣበቢያ 1`] = `
+Object {
+  "char": "ማንዣበቢያ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Ḁ 1`] = `
+Object {
+  "char": "Ḁ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL … 1`] = `
+Object {
+  "char": "…",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ‹ 1`] = `
+Object {
+  "char": "‹",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Initial_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pi",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL › 1`] = `
+Object {
+  "char": "›",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Final_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pf",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ※ 1`] = `
+Object {
+  "char": "※",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⁉ 1`] = `
+Object {
+  "char": "⁉",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Emoji",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⁰ 1`] = `
+Object {
+  "char": "⁰",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⃓ 1`] = `
+Object {
+  "char": "⃓",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Math",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⃝ 1`] = `
+Object {
+  "char": "⃝",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Enclosing_Mark",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "M",
+    "Mark",
+    "Me",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Ⅶ 1`] = `
+Object {
+  "char": "Ⅶ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "Letter_Number",
+    "N",
+    "Nl",
+    "Number",
+    "Upper",
+    "Uppercase",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL → 1`] = `
+Object {
+  "char": "→",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ∑ 1`] = `
+Object {
+  "char": "∑",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ∢ 1`] = `
+Object {
+  "char": "∢",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⑪ 1`] = `
+Object {
+  "char": "⑪",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⒄ 1`] = `
+Object {
+  "char": "⒄",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⒰ 1`] = `
+Object {
+  "char": "⒰",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⓛ 1`] = `
+Object {
+  "char": "ⓛ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWKCF",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Changes_When_Casemapped",
+    "Changes_When_NFKC_Casefolded",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Lower",
+    "Lowercase",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⓶ 1`] = `
+Object {
+  "char": "⓶",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ─ 1`] = `
+Object {
+  "char": "─",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ▀ 1`] = `
+Object {
+  "char": "▀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ■ 1`] = `
+Object {
+  "char": "■",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ☀ 1`] = `
+Object {
+  "char": "☀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ✄ 1`] = `
+Object {
+  "char": "✄",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⟪ 1`] = `
+Object {
+  "char": "⟪",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⟵ 1`] = `
+Object {
+  "char": "⟵",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⧓ 1`] = `
+Object {
+  "char": "⧓",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ⧻ 1`] = `
+Object {
+  "char": "⧻",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL 「 1`] = `
+Object {
+  "char": "「",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL や 1`] = `
+Object {
+  "char": "や",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ゙ 1`] = `
+Object {
+  "char": "゙",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Dia",
+    "Diacritic",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL カタカナ 1`] = `
+Object {
+  "char": "カタカナ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL 中文字符 1`] = `
+Object {
+  "char": "中文字符",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "Ideo",
+    "Ideographic",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "UIdeo",
+    "Unified_Ideograph",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL 👧👧👧🏻 1`] = `
+Object {
+  "char": "👧👧👧🏻",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Presentation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "S",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL 😀 1`] = `
+Object {
+  "char": "😀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Presentation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ５ 1`] = `
+Object {
+  "char": "５",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Decimal_Number",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Hex",
+    "Hex_Digit",
+    "IDC",
+    "ID_Continue",
+    "N",
+    "Nd",
+    "Number",
+    "XIDC",
+    "XID_Continue",
+    "digit",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL ？ 1`] = `
+Object {
+  "char": "？",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_ALL Ｖ 1`] = `
+Object {
+  "char": "Ｖ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ! 1`] = `
+Object {
+  "char": "!",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL " 1`] = `
+Object {
+  "char": "\\"",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL # 1`] = `
+Object {
+  "char": "#",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Component",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL $ 1`] = `
+Object {
+  "char": "$",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Currency_Symbol",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sc",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL % 1`] = `
+Object {
+  "char": "%",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL & 1`] = `
+Object {
+  "char": "&",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ' 1`] = `
+Object {
+  "char": "'",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ( 1`] = `
+Object {
+  "char": "(",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ) 1`] = `
+Object {
+  "char": ")",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Close_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pe",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL * 1`] = `
+Object {
+  "char": "*",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Component",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL + 1`] = `
+Object {
+  "char": "+",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL , 1`] = `
+Object {
+  "char": ",",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL . 1`] = `
+Object {
+  "char": ".",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL / 1`] = `
+Object {
+  "char": "/",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL : 1`] = `
+Object {
+  "char": ":",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ; 1`] = `
+Object {
+  "char": ";",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL < 1`] = `
+Object {
+  "char": "<",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL = 1`] = `
+Object {
+  "char": "=",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL > 1`] = `
+Object {
+  "char": ">",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ? 1`] = `
+Object {
+  "char": "?",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL @ 1`] = `
+Object {
+  "char": "@",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL [ 1`] = `
+Object {
+  "char": "[",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\ 1`] = `
+Object {
+  "char": "\\\\",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\u0009 1`] = `
+Object {
+  "char": "	",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\u000a 1`] = `
+Object {
+  "char": "
+",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\u000c 1`] = `
+Object {
+  "char": "",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\u000d 1`] = `
+Object {
+  "char": "
+",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "C",
+    "Cc",
+    "Control",
+    "Other",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "White_Space",
+    "cntrl",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\u0020 1`] = `
+Object {
+  "char": " ",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Pat_WS",
+    "Pattern_White_Space",
+    "Separator",
+    "Space_Separator",
+    "White_Space",
+    "Z",
+    "Zs",
+    "space",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \\u1f3fd 1`] = `
+Object {
+  "char": "🏽",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Emoji",
+    "Emoji_Component",
+    "Emoji_Modifier",
+    "Emoji_Presentation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Modifier_Symbol",
+    "S",
+    "Sk",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ] 1`] = `
+Object {
+  "char": "]",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Close_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pe",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ^ 1`] = `
+Object {
+  "char": "^",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Dia",
+    "Diacritic",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Modifier_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sk",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL _ 1`] = `
+Object {
+  "char": "_",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Connector_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "ID_Continue",
+    "P",
+    "Pc",
+    "Punctuation",
+    "XIDC",
+    "XID_Continue",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL \` 1`] = `
+Object {
+  "char": "\`",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Dia",
+    "Diacritic",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Modifier_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sk",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL { 1`] = `
+Object {
+  "char": "{",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL | 1`] = `
+Object {
+  "char": "|",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL } 1`] = `
+Object {
+  "char": "}",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Close_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pe",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ~ 1`] = `
+Object {
+  "char": "~",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL - 1`] = `
+Object {
+  "char": "-",
+  "map": Array [
+    "ASCII",
+    "Any",
+    "Assigned",
+    "Dash",
+    "Dash_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pd",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL cánh 1`] = `
+Object {
+  "char": "cánh",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL « 1`] = `
+Object {
+  "char": "«",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Initial_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pi",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL » 1`] = `
+Object {
+  "char": "»",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Final_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pf",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ā 1`] = `
+Object {
+  "char": "ā",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ň 1`] = `
+Object {
+  "char": "ň",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ̀ 1`] = `
+Object {
+  "char": "̀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Dia",
+    "Diacritic",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ͳ 1`] = `
+Object {
+  "char": "ͳ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Θ 1`] = `
+Object {
+  "char": "Θ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Σ 1`] = `
+Object {
+  "char": "Σ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Ϫ 1`] = `
+Object {
+  "char": "Ϫ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Ж 1`] = `
+Object {
+  "char": "Ж",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL летачко 1`] = `
+Object {
+  "char": "летачко",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ؤ 1`] = `
+Object {
+  "char": "ؤ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL لمو 1`] = `
+Object {
+  "char": "لمو",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ऄ 1`] = `
+Object {
+  "char": "ऄ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL আমার 1`] = `
+Object {
+  "char": "আমার",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "IDC",
+    "ID_Continue",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ் 1`] = `
+Object {
+  "char": "்",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Dia",
+    "Diacritic",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ༁ 1`] = `
+Object {
+  "char": "༁",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ༬ 1`] = `
+Object {
+  "char": "༬",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ༺ 1`] = `
+Object {
+  "char": "༺",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ༼ 1`] = `
+Object {
+  "char": "༼",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ང 1`] = `
+Object {
+  "char": "ང",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ხომალდი 1`] = `
+Object {
+  "char": "ხომალდი",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWU",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casemapped",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Ll",
+    "Lower",
+    "Lowercase",
+    "Lowercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ማንዣበቢያ 1`] = `
+Object {
+  "char": "ማንዣበቢያ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Ḁ 1`] = `
+Object {
+  "char": "Ḁ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL … 1`] = `
+Object {
+  "char": "…",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ‹ 1`] = `
+Object {
+  "char": "‹",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Initial_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pi",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL › 1`] = `
+Object {
+  "char": "›",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Final_Punctuation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Pf",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ※ 1`] = `
+Object {
+  "char": "※",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⁉ 1`] = `
+Object {
+  "char": "⁉",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Emoji",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⁰ 1`] = `
+Object {
+  "char": "⁰",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⃓ 1`] = `
+Object {
+  "char": "⃓",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Math",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⃝ 1`] = `
+Object {
+  "char": "⃝",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Enclosing_Mark",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "M",
+    "Mark",
+    "Me",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Ⅶ 1`] = `
+Object {
+  "char": "Ⅶ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "Letter_Number",
+    "N",
+    "Nl",
+    "Number",
+    "Upper",
+    "Uppercase",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL → 1`] = `
+Object {
+  "char": "→",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ∑ 1`] = `
+Object {
+  "char": "∑",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ∢ 1`] = `
+Object {
+  "char": "∢",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⑪ 1`] = `
+Object {
+  "char": "⑪",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⒄ 1`] = `
+Object {
+  "char": "⒄",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⒰ 1`] = `
+Object {
+  "char": "⒰",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⓛ 1`] = `
+Object {
+  "char": "ⓛ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCM",
+    "CWKCF",
+    "CWT",
+    "CWU",
+    "Cased",
+    "Changes_When_Casemapped",
+    "Changes_When_NFKC_Casefolded",
+    "Changes_When_Titlecased",
+    "Changes_When_Uppercased",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Lower",
+    "Lowercase",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⓶ 1`] = `
+Object {
+  "char": "⓶",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "N",
+    "No",
+    "Number",
+    "Other_Number",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ─ 1`] = `
+Object {
+  "char": "─",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ▀ 1`] = `
+Object {
+  "char": "▀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ■ 1`] = `
+Object {
+  "char": "■",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ☀ 1`] = `
+Object {
+  "char": "☀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ✄ 1`] = `
+Object {
+  "char": "✄",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⟪ 1`] = `
+Object {
+  "char": "⟪",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⟵ 1`] = `
+Object {
+  "char": "⟵",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⧓ 1`] = `
+Object {
+  "char": "⧓",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ⧻ 1`] = `
+Object {
+  "char": "⧻",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Math",
+    "Math_Symbol",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "S",
+    "Sm",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL 「 1`] = `
+Object {
+  "char": "「",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Bidi_M",
+    "Bidi_Mirrored",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Open_Punctuation",
+    "P",
+    "Pat_Syn",
+    "Pattern_Syntax",
+    "Ps",
+    "Punctuation",
+    "QMark",
+    "Quotation_Mark",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL や 1`] = `
+Object {
+  "char": "や",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ゙ 1`] = `
+Object {
+  "char": "゙",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CI",
+    "Case_Ignorable",
+    "Combining_Mark",
+    "Dia",
+    "Diacritic",
+    "Gr_Ext",
+    "Grapheme_Extend",
+    "IDC",
+    "ID_Continue",
+    "M",
+    "Mark",
+    "Mn",
+    "Nonspacing_Mark",
+    "XIDC",
+    "XID_Continue",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL カタカナ 1`] = `
+Object {
+  "char": "カタカナ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL 中文字符 1`] = `
+Object {
+  "char": "中文字符",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "Ideo",
+    "Ideographic",
+    "L",
+    "Letter",
+    "Lo",
+    "Other_Letter",
+    "UIdeo",
+    "Unified_Ideograph",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL 👧👧👧🏻 1`] = `
+Object {
+  "char": "👧👧👧🏻",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Presentation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "S",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL 😀 1`] = `
+Object {
+  "char": "😀",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "Emoji",
+    "Emoji_Presentation",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Symbol",
+    "S",
+    "So",
+    "Symbol",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ５ 1`] = `
+Object {
+  "char": "５",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Decimal_Number",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Hex",
+    "Hex_Digit",
+    "IDC",
+    "ID_Continue",
+    "N",
+    "Nd",
+    "Number",
+    "XIDC",
+    "XID_Continue",
+    "digit",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL ？ 1`] = `
+Object {
+  "char": "？",
+  "map": Array [
+    "Any",
+    "Assigned",
+    "CWKCF",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "Other_Punctuation",
+    "P",
+    "Po",
+    "Punctuation",
+    "STerm",
+    "Sentence_Terminal",
+    "Term",
+    "Terminal_Punctuation",
+    "punct",
+  ],
+}
+`;
+
+exports[`UNICODE_SCRIPTS_ALL Ｖ 1`] = `
+Object {
+  "char": "Ｖ",
+  "map": Array [
+    "Alpha",
+    "Alphabetic",
+    "Any",
+    "Assigned",
+    "CWCF",
+    "CWCM",
+    "CWKCF",
+    "CWL",
+    "Cased",
+    "Cased_Letter",
+    "Changes_When_Casefolded",
+    "Changes_When_Casemapped",
+    "Changes_When_Lowercased",
+    "Changes_When_NFKC_Casefolded",
+    "Gr_Base",
+    "Grapheme_Base",
+    "IDC",
+    "IDS",
+    "ID_Continue",
+    "ID_Start",
+    "L",
+    "LC",
+    "Letter",
+    "Lu",
+    "Upper",
+    "Uppercase",
+    "Uppercase_Letter",
+    "XIDC",
+    "XIDS",
+    "XID_Continue",
+    "XID_Start",
+  ],
+}
+`;

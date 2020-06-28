@@ -39,8 +39,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node ./test/flags.js",
-    "prepublishOnly_": "yarn run test",
+    "test": "node ./test/flags.js && jest -u",
+    "prepublishOnly": "yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "ncu": "yarn-tool ncu -u",
@@ -50,11 +50,8 @@
     "sort-object-keys2": "^2.0.3"
   },
   "devDependencies": {
-    "@types/fs-extra": "*",
-    "fs-extra": "*",
     "globby": "*",
     "randexp": "*",
-    "regexpp2": "*",
     "xregexp": "*"
   }
 }
