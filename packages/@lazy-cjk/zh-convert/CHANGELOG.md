@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert@1.0.19...@lazy-cjk/zh-convert@1.0.20) (2020-06-28)
+
+
+### 🐛　Bug Fixes
+
+* not throw error when try commit ([75ad345](https://github.com/bluelovers/ws-regexp/commit/75ad34533b6b8aff1ba8186814d7446d991773ea))
+
+
+
+
+
 ## [1.0.19](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert@1.0.18...@lazy-cjk/zh-convert@1.0.19) (2020-06-26)
 
 
