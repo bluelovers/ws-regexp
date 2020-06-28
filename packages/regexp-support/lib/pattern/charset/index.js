@@ -1,0 +1,11 @@
+"use strict";
+/**
+ * Created by user on 2018/5/6/006.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+function _wrapToRegexName(name, prefix, suffix) {
+    return prefix + name + suffix;
+}
+exports._wrapToRegexName = _wrapToRegexName;
+exports.default = _wrapToRegexName;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7O0dBRUc7O0FBRUgsU0FBZ0IsZ0JBQWdCLENBQUMsSUFBWSxFQUFFLE1BQWMsRUFBRSxNQUFjO0lBRTVFLE9BQU8sTUFBTSxHQUFHLElBQUksR0FBRyxNQUFNLENBQUM7QUFDL0IsQ0FBQztBQUhELDRDQUdDO0FBRUQsa0JBQWUsZ0JBQWdCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIENyZWF0ZWQgYnkgdXNlciBvbiAyMDE4LzUvNi8wMDYuXG4gKi9cblxuZXhwb3J0IGZ1bmN0aW9uIF93cmFwVG9SZWdleE5hbWUobmFtZTogc3RyaW5nLCBwcmVmaXg6IHN0cmluZywgc3VmZml4OiBzdHJpbmcpXG57XG5cdHJldHVybiBwcmVmaXggKyBuYW1lICsgc3VmZml4O1xufVxuXG5leHBvcnQgZGVmYXVsdCBfd3JhcFRvUmVnZXhOYW1lO1xuIl19
