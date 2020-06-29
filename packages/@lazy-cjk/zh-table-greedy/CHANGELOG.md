@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.33](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-greedy@1.0.32...@lazy-cjk/zh-table-greedy@1.0.33) (2020-06-29)
+
+
+### ✨　Features
+
+* **zh-table-greedy:** zh-table-greedy 煊|傲|敖|熬|璈|遨 ([7194fad](https://github.com/bluelovers/ws-regexp/commit/7194fadf94e63e509a36b5f423799965d2eeb8c8))
+
+
+
+
+
 ## [1.0.32](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-greedy@1.0.31...@lazy-cjk/zh-table-greedy@1.0.32) (2020-06-28)
 
 
