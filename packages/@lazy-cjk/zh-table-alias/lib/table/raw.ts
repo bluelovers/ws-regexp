@@ -1666,6 +1666,10 @@ export const table_plus_core = {
 		"湿",
 		"溼",
 		"濕"
+	],
+	"稻": [
+		"稻",
+		"稲"
 	]
 } as const;
 

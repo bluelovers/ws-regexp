@@ -1893,4 +1893,9 @@ export const table_plus_core = {
 		'濕',
 	],
 
+	'稻': [
+		'稻',
+		'稲',
+	],
+
 } as const;

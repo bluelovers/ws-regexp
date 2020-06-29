@@ -369,4 +369,5 @@ export declare const table_plus_core: {
     readonly 哗: readonly ["哗", "嘩", "譁"];
     readonly 拔: readonly ["拔", "抜"];
     readonly 湿: readonly ["湿", "溼", "濕"];
+    readonly 稻: readonly ["稻", "稲"];
 };
