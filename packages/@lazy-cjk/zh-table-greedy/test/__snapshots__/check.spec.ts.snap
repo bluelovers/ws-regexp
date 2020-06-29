@@ -588,6 +588,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 傲|敖|熬|璈|遨 1`] = `
+Array [
+  "傲",
+  "敖",
+  "熬",
+  "璈",
+  "遨",
+]
+`;
+
 exports[`validate char of map 傹|竞|竟|競|竸|誩|𥪰|𧡟|𧫘|𧫙|𧮣|𨐼 1`] = `
 Array [
   "傹",
@@ -1150,11 +1160,12 @@ Array [
 ]
 `;
 
-exports[`validate char of map 喧|宣|暄|諠 1`] = `
+exports[`validate char of map 喧|宣|暄|煊|諠 1`] = `
 Array [
   "喧",
   "宣",
   "暄",
+  "煊",
   "諠",
 ]
 `;

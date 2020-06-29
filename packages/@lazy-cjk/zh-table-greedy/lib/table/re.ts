@@ -218,7 +218,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[壱壹]/ug, '一'],
 	[/[荒]/ug, '慌'],
 	[/[廷]/ug, '庭'],
-	[/[喧暄諠]/ug, '宣'],
+	[/[喧暄諠煊]/ug, '宣'],
 	[/[略畧]/ug, '掠'],
 	[/[牋笺签箋簽籖籤]/ug, '䇳'],
 	[/[幺庅麼麽]/ug, '么'],
@@ -299,5 +299,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[招]/ug, '召'],
 
 	[/[薇]/ug, '微'],
+
+	[/[熬璈遨傲]/ug, '敖'],
 
 ]
