@@ -85,7 +85,6 @@ export declare class zhRegExp extends RegExp {
     static get support(): Readonly<{
         nativeFlags: string;
         flags: {
-            [x: number]: boolean;
             readonly multiline: boolean;
             readonly m: boolean;
             readonly global: boolean;
@@ -114,11 +113,7 @@ export declare class zhRegExp extends RegExp {
         pattern: {
             namedCapturingGroups: boolean;
             namedCapturingGroupsUnicode: boolean;
-            namedCapturingGroupsEmoji: boolean; /**
-             * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
-             *
-             * @alias $`
-             */
+            namedCapturingGroupsEmoji: boolean;
             namedCapturingGroupsBackreference: boolean;
             namedCapturingGroupsDuplicate: boolean;
             lookAheadPositive: boolean;
@@ -130,6 +125,7 @@ export declare class zhRegExp extends RegExp {
             unicodeWrap: boolean;
         };
         prototype: {
+            readonly dotAll?: boolean;
             exec?: boolean;
             test?: boolean;
             readonly source?: boolean;
@@ -141,9 +137,10 @@ export declare class zhRegExp extends RegExp {
             readonly flags?: boolean;
             readonly sticky?: boolean;
             readonly unicode?: boolean;
-            readonly dotAll?: boolean;
         };
         static: {
+            $10?: boolean;
+            $100?: boolean;
             readonly prototype?: boolean;
             $1?: boolean;
             $2?: boolean;
@@ -164,8 +161,6 @@ export declare class zhRegExp extends RegExp {
             '$`'?: boolean;
             rightContext?: boolean;
             '$\''?: boolean;
-            $10?: boolean;
-            $100?: boolean;
         };
         symbol: {
             species: boolean;
@@ -202,7 +197,11 @@ export declare class zhRegExp extends RegExp {
                 Pe: boolean;
                 Connector_Punctuation: boolean;
                 Pc: boolean;
-                Control: boolean;
+                Control: boolean; /**
+                 * The non-standard lastMatch property is a static and read-only property of regular expressions that contains the last matched characters. RegExp.$& is an alias for this property.
+                 *
+                 * @alias $&
+                 */
                 Cc: boolean;
                 cntrl: boolean;
                 Currency_Symbol: boolean;
@@ -235,7 +234,10 @@ export declare class zhRegExp extends RegExp {
                 Modifier_Letter: boolean;
                 Lm: boolean;
                 Modifier_Symbol: boolean;
-                Sk: boolean;
+                Sk: boolean; /**
+                 * create a new zhRegExp class with default value
+                 * @example `zhRegExp.use(defaultOptions)`
+                 */
                 Nonspacing_Mark: boolean;
                 Mn: boolean;
                 Number: boolean;
@@ -334,6 +336,11 @@ export declare class zhRegExp extends RegExp {
                 Logical_Order_Exception: boolean;
                 LOE: boolean;
                 Lowercase: boolean;
+                /**
+                 * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
+                 *
+                 * @alias $`
+                 */
                 Math: boolean;
                 Noncharacter_Code_Point: boolean;
                 NChar: boolean;
