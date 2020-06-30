@@ -8,7 +8,7 @@ import { _replaceCjk } from '../cjk';
 import _transliterate from '@sindresorhus/transliterate';
 import { reNotPinyinChar } from '@regexp-cjk/regex-pinyin';
 
-const reStrip = new RegExp(`[${reNotPinyinChar.source.replace(/^\[|\]$/g, '')} ]+`, 'ug')
+const reStrip = new RegExp(`[${reNotPinyinChar.source.replace(/^\[|\]$/g, '')}\u0020]+`, 'ug')
 
 export function _text(word: string, options: IOptionsSlugify)
 {
