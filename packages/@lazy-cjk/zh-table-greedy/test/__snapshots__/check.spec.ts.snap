@@ -1624,6 +1624,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 忝|恬 1`] = `
+Array [
+  "忝",
+  "恬",
+]
+`;
+
 exports[`validate char of map 怪|恠 1`] = `
 Array [
   "怪",
@@ -1715,6 +1722,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 担|擔|檐|簷 1`] = `
+Array [
+  "担",
+  "擔",
+  "檐",
+  "簷",
+]
+`;
+
 exports[`validate char of map 拉|菈 1`] = `
 Array [
   "拉",
@@ -1756,6 +1772,13 @@ exports[`validate char of map 挨|捱 1`] = `
 Array [
   "挨",
   "捱",
+]
+`;
+
+exports[`validate char of map 振|震 1`] = `
+Array [
+  "振",
+  "震",
 ]
 `;
 
