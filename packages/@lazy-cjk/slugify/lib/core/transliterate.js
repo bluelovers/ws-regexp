@@ -28,7 +28,7 @@ function _text(word, options) {
             .replace(reStrip, ' ');
     }
     word = word
-        .replace(/\s+/g, ' ');
+        .replace(/[\s\u00a0]/g, ' ');
     return word;
 }
 exports._text = _text;

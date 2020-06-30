@@ -8,7 +8,10 @@ const transliteration_1 = require("transliteration");
 function newZhPinyinFn(options) {
     var _a;
     let chineseOptions = (_a = options === null || options === void 0 ? void 0 : options.chineseOptions) !== null && _a !== void 0 ? _a : {};
-    let { useTransliteration = true, pinyinMode, pinyinType } = chineseOptions;
+    let { useTransliteration, pinyinMode, pinyinType } = chineseOptions;
+    if (typeof useTransliteration === 'undefined' && typeof pinyinMode === 'undefined' && typeof pinyinType === 'undefined') {
+        useTransliteration = true;
+    }
     const char2pinyinMode = pinyinMode ? uni2pinyin_01_1.char2pinyin_01 : uni2pinyin_02_1.char2pinyin_02;
     if (typeof pinyinType !== 'number' || !(pinyinType in types_1.EnumPinyinType)) {
         pinyinType = types_1.EnumPinyinType.han;

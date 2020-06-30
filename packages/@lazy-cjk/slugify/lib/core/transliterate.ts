@@ -35,7 +35,7 @@ export function _text(word: string, options: IOptionsSlugify)
 	}
 
 	word = word
-		.replace(/\s+/g, ' ')
+		.replace(/[\s\u00a0]/g, ' ')
 	;
 
 	return word

@@ -8,7 +8,12 @@ export function newZhPinyinFn(options?: IOptionsSlugify): (s: string) => string
 {
 	let chineseOptions = options?.chineseOptions ?? {};
 
-	let { useTransliteration = true, pinyinMode, pinyinType } = chineseOptions;
+	let { useTransliteration, pinyinMode, pinyinType } = chineseOptions;
+
+	if (typeof useTransliteration === 'undefined' && typeof pinyinMode === 'undefined' && typeof pinyinType === 'undefined')
+	{
+		useTransliteration = true;
+	}
 
 	const char2pinyinMode = pinyinMode ? char2pinyin_01 : char2pinyin_02;
 
