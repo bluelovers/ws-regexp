@@ -1350,6 +1350,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 奥|奧|澳|袄|襖 1`] = `
+Array [
+  "奥",
+  "奧",
+  "澳",
+  "袄",
+  "襖",
+]
+`;
+
 exports[`validate char of map 妮|尼|泥 1`] = `
 Array [
   "妮",
