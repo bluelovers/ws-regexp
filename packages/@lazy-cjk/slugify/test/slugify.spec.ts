@@ -7,6 +7,8 @@ test(`slugify`, () =>
 
 	let actual = slugify(word);
 
+	console.log(actual)
+
 	expect(actual).not.toStrictEqual(word);
 
 });
@@ -15,6 +17,8 @@ test(`transliterate`, () =>
 {
 
 	let actual = transliterate(word);
+
+	console.log(actual)
 
 	expect(actual).not.toStrictEqual(word);
 

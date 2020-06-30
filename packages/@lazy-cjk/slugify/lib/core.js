@@ -6,14 +6,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._slice = exports._trim = exports._core = exports._coreCase = exports.handleOptions = void 0;
+exports._slice = exports._trim = exports._core = exports._coreTextAfter = exports._coreText = exports._coreCase = exports.handleOptions = void 0;
 const deburr_1 = __importDefault(require("lodash/deburr"));
 const upperFirst_1 = __importDefault(require("lodash/upperFirst"));
 const upperCase_1 = __importDefault(require("lodash/upperCase"));
+const regex_pinyin_1 = require("@regexp-cjk/regex-pinyin");
+const transliterate_1 = require("./core/transliterate");
+const reDefaultSeparator = new RegExp(`${regex_pinyin_1.reNotPinyinChar}+`, 'ug');
 function handleOptions(options) {
     var _a, _b, _c, _d;
     options = options || {};
-    options.separatorRegexp = (_a = options.separatorRegexp) !== null && _a !== void 0 ? _a : /[^\w\d]+/g;
+    options.separatorRegexp = (_a = options.separatorRegexp) !== null && _a !== void 0 ? _a : reDefaultSeparator;
     options.trimRegexp = (_b = options.trimRegexp) !== null && _b !== void 0 ? _b : new RegExp(`^(?:${options.separatorRegexp.source})|(?:${options.separatorRegexp.source})$`, 'ugi');
     options.separator = (_c = options.separator) !== null && _c !== void 0 ? _c : '-';
     options.transliterate = (_d = options.transliterate) !== null && _d !== void 0 ? _d : true;
@@ -42,19 +45,32 @@ function _coreCase(word, options) {
     return word;
 }
 exports._coreCase = _coreCase;
+function _coreText(word, options) {
+    word = transliterate_1._text(word, options);
+    word = _coreCase(word, options);
+    if (options.deburr) {
+        word = deburr_1.default(word);
+    }
+    return word;
+}
+exports._coreText = _coreText;
+function _coreTextAfter(word, options) {
+    word = _slice(word, options);
+    word = _trim(word, options);
+    return word;
+}
+exports._coreTextAfter = _coreTextAfter;
 function _core(word, options) {
     if (word === '') {
         return '';
     }
     options = handleOptions(options);
-    if (options.deburr) {
-        word = deburr_1.default(word);
+    word = _coreText(word, options);
+    if (!options.noStripOthers) {
+        word = word
+            .replace(options.separatorRegexp, options.separator);
     }
-    word = _trim(word, options);
-    word = _coreCase(word, options);
-    word = word
-        .replace(options.separatorRegexp, options.separator);
-    word = _slice(word, options);
+    word = _coreTextAfter(word, options);
     if (word === '' && !options.allowEmptyResult) {
         throw new RangeError(`result is empty`);
     }

@@ -6,12 +6,16 @@ import { IOptionsSlugify } from './types';
 import deburr from 'lodash/deburr';
 import upperFirst from 'lodash/upperFirst';
 import upperCaseExtra from 'lodash/upperCase';
+import { reNotPinyinChar } from '@regexp-cjk/regex-pinyin';
+import { _text } from './core/transliterate';
+
+const reDefaultSeparator = new RegExp(`${reNotPinyinChar}+`, 'ug')
 
 export function handleOptions(options?: IOptionsSlugify)
 {
 	options = options || {};
 
-	options.separatorRegexp = options.separatorRegexp ?? /[^\w\d]+/g;
+	options.separatorRegexp = options.separatorRegexp ?? reDefaultSeparator;
 	options.trimRegexp = options.trimRegexp ?? new RegExp(`^(?:${options.separatorRegexp.source})|(?:${options.separatorRegexp.source})$`, 'ugi');
 	options.separator = options.separator ?? '-';
 	options.transliterate = options.transliterate ?? true;
@@ -53,6 +57,29 @@ export function _coreCase(word: string, options?: IOptionsSlugify)
 	return word
 }
 
+export function _coreText(word: string, options?: IOptionsSlugify)
+{
+	word = _text(word, options);
+
+	word = _coreCase(word, options);
+
+	if (options.deburr)
+	{
+		word = deburr(word)
+	}
+
+	return word
+}
+
+export function _coreTextAfter(word: string, options?: IOptionsSlugify)
+{
+
+	word = _slice(word, options);
+	word = _trim(word, options);
+
+	return word
+}
+
 export function _core(word: string, options?: IOptionsSlugify)
 {
 	if (word === '')
@@ -62,20 +89,16 @@ export function _core(word: string, options?: IOptionsSlugify)
 
 	options = handleOptions(options);
 
-	if (options.deburr)
+	word = _coreText(word, options)
+
+	if (!options.noStripOthers)
 	{
-		word = deburr(word)
+		word = word
+			.replace(options.separatorRegexp, options.separator)
+		;
 	}
 
-	word = _trim(word, options);
-
-	word = _coreCase(word, options);
-
-	word = word
-		.replace(options.separatorRegexp, options.separator)
-	;
-
-	word = _slice(word, options);
+	word = _coreTextAfter(word, options)
 
 	if (word === '' && !options.allowEmptyResult)
 	{
