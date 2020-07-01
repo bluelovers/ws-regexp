@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "@lazy-cjk/jp-table-convert": "^1.0.19",
-    "array-hyper-unique": "^1.1.8"
+    "array-hyper-unique": "^1.1.9"
   },
   "publishConfig": {
     "access": "public"

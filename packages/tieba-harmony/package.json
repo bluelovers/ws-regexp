@@ -63,7 +63,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.8",
+    "array-hyper-unique": "^1.1.9",
     "uni-string": "^1.1.10"
   },
   "peerDependencies": {

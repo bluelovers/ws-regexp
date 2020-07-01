@@ -59,7 +59,7 @@
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
     "@lazy-cjk/zh-convert": "^1.0.22",
-    "array-hyper-unique": "^1.1.8",
+    "array-hyper-unique": "^1.1.9",
     "bluebird": "^3.7.2",
     "crlf-normalize": "^1.0.5",
     "debug-color2": "^1.2.3",
