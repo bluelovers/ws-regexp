@@ -739,6 +739,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 冥|瞑 1`] = `
+Array [
+  "冥",
+  "瞑",
+]
+`;
+
 exports[`validate char of map 决|決|絕|絶|绝|訣|诀 1`] = `
 Array [
   "决",
@@ -1357,6 +1364,14 @@ Array [
   "澳",
   "袄",
   "襖",
+]
+`;
+
+exports[`validate char of map 妇|婦|媍 1`] = `
+Array [
+  "妇",
+  "婦",
+  "媍",
 ]
 `;
 
