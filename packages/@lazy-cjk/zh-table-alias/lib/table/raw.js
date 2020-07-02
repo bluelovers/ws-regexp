@@ -1669,6 +1669,15 @@ exports.table_plus_core = {
     "稻": [
         "稻",
         "稲"
+    ],
+    "楕": [
+        "楕",
+        "椭",
+        "橢"
+    ],
+    "毎": [
+        "毎",
+        "每"
     ]
 };
 //# sourceMappingURL=raw.js.map
