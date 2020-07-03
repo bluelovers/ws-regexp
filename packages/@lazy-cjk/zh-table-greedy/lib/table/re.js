@@ -277,5 +277,6 @@ exports._greedyTableCacheRegexp = [
     [/[擔檐簷]/ug, '担'],
     [/[瞑]/ug, '冥'],
     [/[妇媍]/ug, '婦'],
+    [/[䰗阄鬮𨷺]/ug, '䦰'],
 ];
 //# sourceMappingURL=re.js.map

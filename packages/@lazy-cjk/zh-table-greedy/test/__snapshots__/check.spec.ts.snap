@@ -190,6 +190,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 䦰|䰗|阄|鬮|𨷺 1`] = `
+Array [
+  "䦰",
+  "䰗",
+  "阄",
+  "鬮",
+  "𨷺",
+]
+`;
+
 exports[`validate char of map 一|壱|壹 1`] = `
 Array [
   "一",
