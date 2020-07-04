@@ -347,6 +347,7 @@ export declare const table_plus_core: {
     readonly 専: readonly ["專", "専", "专"];
     readonly 様: readonly ["樣", "様", "样"];
     readonly 関: readonly ["關", "関", "关"];
+    readonly 檢: readonly ["検", "檢", "检"];
     readonly 侮: readonly ["侮", "侮"];
     readonly 沉: readonly ["沉", "沈"];
     readonly 嚐: readonly ["嚐", "嘗", "尝"];
