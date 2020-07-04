@@ -1552,6 +1552,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 帘|濂|簾 1`] = `
+Array [
+  "帘",
+  "濂",
+  "簾",
+]
+`;
+
 exports[`validate char of map 帚|扫|掃|箒|菷 1`] = `
 Array [
   "帚",
