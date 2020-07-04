@@ -1,20 +1,8 @@
 {
-  "name": "xregexp-plugin-hanzi-cjk",
+  "name": "@regexp-cjk/is-xregexp",
   "version": "1.0.0",
-  "description": "add regexp-cjk plugin for xregexp, make xregexp auto match chinese/japanese hanzi.",
-  "keywords": [
-    "chinese",
-    "cjk",
-    "hanzi",
-    "jp",
-    "regex",
-    "regexp",
-    "regexp-cjk",
-    "regular expression",
-    "xregexp",
-    "zh"
-  ],
-  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/xregexp-plugin-hanzi-cjk#readme",
+  "description": "",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/is-xregexp#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
@@ -25,11 +13,11 @@
   "license": "ISC",
   "author": "bluelovers",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
+    "lint": "ynpx --quiet eslint -- **/*.ts",
     "test": "jest",
+    "test:jest": "ynpx --quiet jest -- --coverage",
+    "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "preversion": "yarn run prepublishOnly",
     "prepublishOnly": "yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
@@ -37,13 +25,10 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {
-    "@lazy-cjk/zh-table-list": "^1.0.37",
-    "@regexp-cjk/is-xregexp": "^1.0.0",
-    "regexp-helper": "^1.0.13"
-  },
+  "dependencies": {},
   "devDependencies": {},
-  "peerDependencies": {
-    "xregexp": "*"
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
   }
 }

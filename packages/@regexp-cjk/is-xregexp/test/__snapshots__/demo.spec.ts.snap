@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`internalXRegExpData 1`] = `
+Object {
+  "captureNames": null,
+  "flags": "",
+  "source": "a.b",
+}
+`;
+
+exports[`isXRegExp 1`] = `/a\\.b/`;

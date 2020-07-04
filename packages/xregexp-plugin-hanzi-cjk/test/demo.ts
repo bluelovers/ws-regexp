@@ -2,12 +2,12 @@
  * Created by user on 2018/4/24/024.
  */
 
-import addSupportToXRegExp, { IOptions, createXRegExp } from '..';
-import * as XRegExp from 'xregexp';
+import addSupportToXRegExp, { IOptions} from '..';
+import XRegExp from 'xregexp';
+import { createXRegExp } from '@regexp-cjk/create-xregexp';
 
 let options: IOptions = {
 	// set a flag if u only wanna trigger for this plugin, default is auto enable
-	flags: '',
 };
 
 console.log(XRegExp.version);

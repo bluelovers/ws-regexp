@@ -45,9 +45,11 @@
     "ts-jest": "^26.1.1",
     "uni-string": "^1.1.10",
     "ws-pkg-list": "^1.0.32",
+    "xregexp": "^4.3.0",
     "zero-width": "^1.0.14"
   },
   "devDependencies": {
+    "@types/xregexp": "^4.3.0",
     "@bluelovers/tsconfig": "^1.0.19",
     "@types/bluebird": "^3.5.32",
     "@types/diff": "^4.0.2",

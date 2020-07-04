@@ -9,13 +9,13 @@ see [regexp-cjk](https://www.npmjs.com/package/regexp-cjk)
 
 ```ts
 import addSupportToXRegExp, { IOptions, createXRegExp } from 'xregexp-plugin-hanzi-cjk';
-import * as XRegExp from 'xregexp';
+import XRegExp from 'xregexp';
 ```
 
 ```ts
 let options: IOptions = {
 	// set a flag if u only wanna trigger for this plugin, default is auto enable
-	flags: '',
+	//flags: 'u',
 };
 
 console.log(XRegExp.version);
