@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/is-xregexp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/is-xregexp#readme",
   "bugs": {
@@ -25,9 +25,6 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {},
   "publishConfig": {
     "access": "public"
   }
