@@ -1,7 +1,7 @@
 import { IOptionsRewritePattern } from '../index';
 import { inspect } from "util";
 import { handleOptions } from '../lib/util';
-import { EnumFlagMap } from '../flags';
+import { EnumFlagMap } from '@regexp-cjk/rewrite-flags';
 
 describe(`handleOptions`, () =>
 {

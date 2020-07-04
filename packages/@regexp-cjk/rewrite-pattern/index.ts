@@ -3,7 +3,7 @@
  */
 
 import _rewritePattern from 'regexpu-core';
-import { rewriteFlags, IOptionsRewriteFlags } from './flags';
+import { rewriteFlags, IOptionsRewriteFlags } from '@regexp-cjk/rewrite-flags';
 import { rewritePatternOptions, handleOptions } from './lib/util';
 
 /**

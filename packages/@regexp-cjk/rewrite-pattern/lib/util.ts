@@ -4,7 +4,7 @@
 
 import { defaults } from 'lodash';
 import { IOptionsRewritePattern } from '../index';
-import { rewriteFlags } from '../flags';
+import { rewriteFlags } from '@regexp-cjk/rewrite-flags';
 
 export function rewritePatternOptions(options?: IOptionsRewritePattern, flags?: string): IOptionsRewritePattern
 {

@@ -25,7 +25,7 @@ function rewriteFlags(flags, options) {
     flags = (flags !== null && flags !== void 0 ? flags : '');
     Object.entries(options !== null && options !== void 0 ? options : {})
         .forEach(([key, bool]) => {
-        const _flag = EnumFlagMap[key];
+        const _flag = key.length === 1 ? key : EnumFlagMap[key];
         if (typeof _flag === 'string') {
             if (bool === false && flags !== '') {
                 flags = flags.replace(_flag, '');
@@ -39,4 +39,4 @@ function rewriteFlags(flags, options) {
 }
 exports.rewriteFlags = rewriteFlags;
 exports.default = rewriteFlags;
-//# sourceMappingURL=flags.js.map
+//# sourceMappingURL=index.js.map

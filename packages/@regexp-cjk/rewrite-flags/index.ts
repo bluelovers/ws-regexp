@@ -63,7 +63,7 @@ export function rewriteFlags(flags: string | IOptionsRewriteFlags, options?: IOp
 	Object.entries(options ?? {})
 		.forEach(([key, bool]) =>
 		{
-			const _flag = EnumFlagMap[key];
+			const _flag = key.length === 1 ? key : EnumFlagMap[key];
 
 			if (typeof _flag === 'string')
 			{

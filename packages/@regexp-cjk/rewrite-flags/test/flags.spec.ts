@@ -1,4 +1,4 @@
-import rewriteFlags, { flagsOrderReverse, IOptionsRewriteFlags } from '../flags';
+import rewriteFlags, { flagsOrderReverse, IOptionsRewriteFlags } from '..';
 import { inspect } from 'util';
 
 describe(`add`, () =>

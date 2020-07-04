@@ -1,7 +1,7 @@
 /**
  * Created by user on 2020/6/8.
  */
-import { IOptionsRewriteFlags } from './flags';
+import { IOptionsRewriteFlags } from '@regexp-cjk/rewrite-flags';
 /**
  * The optional options argument recognizes the following properties:
  */

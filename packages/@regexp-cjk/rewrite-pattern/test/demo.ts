@@ -3,7 +3,7 @@
  */
 
 import { rewritePattern, rewritePatternCore } from '../index';
-import { rewriteFlags } from '../flags';
+import { rewriteFlags } from '@regexp-cjk/rewrite-flags';
 import _rewritePattern from 'regexpu-core';
 import regjsparser from 'regjsparser';
 import { handleOptions } from '../lib/util';
