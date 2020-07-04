@@ -1,0 +1,36 @@
+{
+  "name": "xregexp-plugin-hanzi-cjk",
+  "version": "1.0.0",
+  "description": "add regexp-cjk plugin for xregexp, make xregexp auto match chinese/japanese hanzi.",
+  "keywords": [
+    "chinese",
+    "cjk",
+    "hanzi",
+    "jp",
+    "regex",
+    "regexp",
+    "regexp-cjk",
+    "regular expression",
+    "xregexp",
+    "zh"
+  ],
+  "homepage": "https://github.com/bluelovers/xregexp-plugin-hanzi-cjk#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/xregexp-plugin-hanzi-cjk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/xregexp-plugin-hanzi-cjk.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cjk-conv": "^1.0.31",
+    "xregexp": "^4.1.1"
+  },
+  "devDependencies": {}
+}
