@@ -18,7 +18,7 @@ Object.defineProperty(exports, "X_REGEX_DATA", { enumerable: true, get: function
 const _CACHE = new WeakSet();
 const REGEXP_TEST = cjk_conv_1._re_cjk_conv('u', 'のと㊥㊦㊤');
 function addSupportToXRegExp(xr, options = {}) {
-    var _a;
+    var _a, _b;
     // @ts-ignore
     xr = xr !== null && xr !== void 0 ? xr : xregexp_1.default;
     if (isInstalled(xr)) {
@@ -36,10 +36,10 @@ function addSupportToXRegExp(xr, options = {}) {
             throw new SyntaxError(`Invalid escape ${match[0]}`);
         }, {
             ...options,
-            scope: options.scope || 'default',
+            scope: (_a = options.scope) !== null && _a !== void 0 ? _a : 'default',
             //leadChar: '\\',
             //reparse: true,
-            flag: (_a = options.flags) !== null && _a !== void 0 ? _a : options.flag,
+            flag: (_b = options.flags) !== null && _b !== void 0 ? _b : options.flag,
         });
         _CACHE.add(xr);
     }

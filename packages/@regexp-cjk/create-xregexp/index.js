@@ -7,7 +7,7 @@ exports.createXRegExp = void 0;
 const is_xregexp_1 = require("@regexp-cjk/is-xregexp");
 const xregexp_1 = __importDefault(require("xregexp"));
 function createXRegExp(pattern, flags, xr = xregexp_1.default) {
-    if (typeof pattern == 'string') {
+    if (typeof pattern === 'string') {
         return xr(pattern, flags);
     }
     else if (is_xregexp_1.isXRegExp(pattern)) {

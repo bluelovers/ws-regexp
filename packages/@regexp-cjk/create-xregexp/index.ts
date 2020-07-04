@@ -3,7 +3,7 @@ import XRegExp from 'xregexp';
 
 export function createXRegExp<T = IXRegExpLike>(pattern: string | RegExp | IXRegExpLike, flags?: string, xr: typeof XRegExp = XRegExp): T
 {
-	if (typeof pattern == 'string')
+	if (typeof pattern === 'string')
 	{
 		return xr(pattern, flags) as any;
 	}

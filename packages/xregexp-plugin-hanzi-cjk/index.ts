@@ -48,7 +48,7 @@ export function addSupportToXRegExp<T extends typeof XRegExp>(xr?: T, options: I
 			},
 			{
 				...options,
-				scope: options.scope || 'default',
+				scope: options.scope ?? 'default',
 				//leadChar: '\\',
 				//reparse: true,
 				flag: options.flags ?? options.flag,
