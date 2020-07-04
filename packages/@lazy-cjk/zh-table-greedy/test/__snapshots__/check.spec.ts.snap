@@ -1552,6 +1552,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 帚|扫|掃|箒|菷 1`] = `
+Array [
+  "帚",
+  "扫",
+  "掃",
+  "箒",
+  "菷",
+]
+`;
+
 exports[`validate char of map 帰|归|歸|皈 1`] = `
 Array [
   "帰",
@@ -1828,6 +1838,16 @@ Array [
   "捜",
   "搜",
   "蒐",
+]
+`;
+
+exports[`validate char of map 捡|撿|检|検|檢 1`] = `
+Array [
+  "捡",
+  "撿",
+  "检",
+  "検",
+  "檢",
 ]
 `;
 
