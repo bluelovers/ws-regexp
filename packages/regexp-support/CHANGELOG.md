@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.27...regexp-support@1.0.28) (2020-07-05)
+
+
+### 🔖　Miscellaneous
+
+* . ([cdd46e9](https://github.com/bluelovers/regexp-support/commit/cdd46e9c06c49e19a6912962aef6be1716056cc0))
+
+
+
+
+
 ## [1.0.27](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.26...regexp-support@1.0.27) (2020-07-05)
 
 
