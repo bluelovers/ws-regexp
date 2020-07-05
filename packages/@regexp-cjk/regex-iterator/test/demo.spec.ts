@@ -2,6 +2,7 @@ import map from '../lib/api/map';
 import each from '../lib/api/each';
 import reduce from '../lib/api/reduce';
 import { replaceEach } from '../lib/api/replaceEach';
+import splitLimit from '../lib/api/splitLimit';
 
 const re = /\S/g;
 const input = 'ka kk'
@@ -135,3 +136,5 @@ test(`replaceEach`, () =>
 	expect(actual).toStrictEqual('xu777');
 
 });
+
+

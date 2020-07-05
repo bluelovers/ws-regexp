@@ -47,6 +47,7 @@
     "@regexp-cjk/clone-regexp": "^1.0.2",
     "ts-type": "^1.2.23"
   },
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },

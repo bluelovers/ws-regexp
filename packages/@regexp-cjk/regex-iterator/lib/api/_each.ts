@@ -1,8 +1,7 @@
 import { IReturnTypeEachCore } from '../types';
-import cloneRegexp from '@regexp-cjk/clone-regexp';
-import { ICloneRegexpOptionsCustom } from '@regexp-cjk/clone-regexp/lib/types';
+import cloneRegexp, { ICloneRegexpOptions } from '@regexp-cjk/clone-regexp';
 
-export function* _each<T extends RegExp>(input: string, re: T, options: ICloneRegexpOptionsCustom<T> = {})
+export function* _each<T extends RegExp>(input: string, re: T, options: ICloneRegexpOptions<T> = {})
 {
 	let match: RegExpMatchArray;
 

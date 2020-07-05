@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actual.join will same as source text 1`] = `
+Array [
+  "k",
+  "k",
+  "a",
+  "b",
+  "b",
+  "cccccccccccfff",
+]
+`;
+
+exports[`actual.join will same as source text 2`] = `
+Array [
+  "kk",
+  "ab",
+  "bc",
+  "cc",
+  "cc",
+  "ccccccfff",
+]
+`;
+
+exports[`actual.join will same as source text 3`] = `
+Array [
+  "kka",
+  "bbc",
+  "ccc",
+  "ccc",
+  "ccc",
+  "cfff",
+]
+`;
+
+exports[`actual.join will same as source text 4`] = `
+Array [
+  "kkab",
+  "bccc",
+  "cccc",
+  "ccccfff",
+]
+`;
+
+exports[`same as string.split 1`] = `
+Array [
+  "kk",
+  "ab",
+  "bc",
+  "cc",
+  "cc",
+  "cc",
+  "cc",
+  "cc",
+  "ff",
+  "f",
+]
+`;
