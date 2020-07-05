@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.27](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.26...regexp-support@1.0.27) (2020-07-05)
+
+
+### ✨　Features
+
+* @regexp-cjk/regex-iterator ([2655533](https://github.com/bluelovers/regexp-support/commit/2655533a6ec9a7217be683a0d065bade5ced0b74))
+
+
+
+
+
 ## 1.0.26 (2020-06-28)
 
 

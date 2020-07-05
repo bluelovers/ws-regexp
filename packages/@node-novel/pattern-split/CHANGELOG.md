@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.28](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.27...@node-novel/pattern-split@1.1.28) (2020-07-05)
+
+**Note:** Version bump only for package @node-novel/pattern-split
+
+
+
+
+
 ## [1.1.27](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.26...@node-novel/pattern-split@1.1.27) (2020-07-04)
 
 **Note:** Version bump only for package @node-novel/pattern-split

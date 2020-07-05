@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/escape-unicode-property",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/escape-unicode-property#readme",
   "bugs": {
@@ -30,7 +30,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@regexp-cjk/rewrite-pattern": "^1.0.3",
+    "@regexp-cjk/rewrite-pattern": "^1.0.4",
     "lodash": "^4.17.15"
   },
   "publishConfig": {

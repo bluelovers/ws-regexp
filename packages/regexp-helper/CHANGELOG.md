@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.14](https://github.com/bluelovers/ws-regexp/compare/regexp-helper@1.0.13...regexp-helper@1.0.14) (2020-07-05)
+
+**Note:** Version bump only for package regexp-helper
+
+
+
+
+
 ## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/regexp-helper@1.0.12...regexp-helper@1.0.13) (2020-06-28)
 
 **Note:** Version bump only for package regexp-helper
