@@ -1,9 +1,9 @@
 /// <reference lib="es2018.regexp" />
-import _cloneRegexp from 'clone-regexp';
+import _cloneRegexp, { ICloneRegexp } from '@regexp-cjk/clone-regexp';
 
 export * from './lib/types';
 
-import { IExecAllOptions, IMatches, IMatchesRow, ICloneRegexp, SYMBOL } from './lib/types';
+import { IExecAllOptions, IMatches, IMatchesRow, SYMBOL } from './lib/types';
 
 export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	input: string,
@@ -13,11 +13,14 @@ export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 	let match: IMatchesRow<T>;
 	options = options || {};
 
-	const { resetLastIndex = true, cloneRegexp = _cloneRegexp as ICloneRegexp<T>, removeHiddenData } = options;
+	const { resetLastIndex = true, cloneRegexp, removeHiddenData } = options;
 
 	const matches = [] as IMatches<T>;
 
-	const re = (cloneRegexp as ICloneRegexp<T>)(inputRegExp);
+	const re: T = _cloneRegexp<T>(inputRegExp as any, {
+		// @ts-ignore
+		cloneRegexp,
+	});
 	const isGlobal = re.global;
 
 	if (resetLastIndex)
@@ -25,7 +28,7 @@ export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 		re.lastIndex = 0;
 	}
 
-	let lastIndex = 0;
+	let lastIndex = re.lastIndex;
 
 	let { rightContext, leftContext } = options;
 
@@ -88,3 +91,4 @@ export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 export { execall as execAll }
 
 export default execall;
+

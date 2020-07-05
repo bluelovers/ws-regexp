@@ -15,20 +15,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.execAll = exports.execall = void 0;
 /// <reference lib="es2018.regexp" />
-const clone_regexp_1 = __importDefault(require("clone-regexp"));
+const clone_regexp_1 = __importDefault(require("@regexp-cjk/clone-regexp"));
 __exportStar(require("./lib/types"), exports);
 const types_1 = require("./lib/types");
 function execall(inputRegExp, input, options) {
     let match;
     options = options || {};
-    const { resetLastIndex = true, cloneRegexp = clone_regexp_1.default, removeHiddenData } = options;
+    const { resetLastIndex = true, cloneRegexp, removeHiddenData } = options;
     const matches = [];
-    const re = cloneRegexp(inputRegExp);
+    const re = clone_regexp_1.default(inputRegExp, {
+        // @ts-ignore
+        cloneRegexp,
+    });
     const isGlobal = re.global;
     if (resetLastIndex) {
         re.lastIndex = 0;
     }
-    let lastIndex = 0;
+    let lastIndex = re.lastIndex;
     let { rightContext, leftContext } = options;
     rightContext = !!rightContext;
     leftContext = !!leftContext;

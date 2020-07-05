@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom cloneRegexp 1`] = `/kkk/`;
+
+exports[`default 1`] = `/\\./g`;
+
+exports[`re.clone 1`] = `/kkk/m`;

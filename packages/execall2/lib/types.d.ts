@@ -1,3 +1,5 @@
+import { ICloneRegexp } from '@regexp-cjk/clone-regexp/lib/types';
+export type { ICloneRegexp };
 export declare const SYMBOL: unique symbol;
 export interface IExecAllOptions<T extends RegExp = RegExp> {
     resetLastIndex?: boolean;
@@ -11,9 +13,6 @@ export interface IExecAllOptions<T extends RegExp = RegExp> {
     leftContext?: boolean;
     rightContext?: boolean;
     removeHiddenData?: boolean;
-}
-export interface ICloneRegexp<T extends RegExp = RegExp> {
-    (inputRegExp: T | RegExp, ...argv: any[]): T;
 }
 export interface IExecAllRegExpExecArray<T extends RegExp = RegExp> extends RegExpExecArray {
     /**
