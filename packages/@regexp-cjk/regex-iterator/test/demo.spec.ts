@@ -1,6 +1,7 @@
 import map from '../lib/api/map';
 import each from '../lib/api/each';
 import reduce from '../lib/api/reduce';
+import { replaceEach } from '../lib/api/replaceEach';
 
 const re = /\S/g;
 const input = 'ka kk'
@@ -119,3 +120,18 @@ test(`reduce only once`, () =>
 
 });
 
+test(`replaceEach`, () =>
+{
+
+	let actual = replaceEach('ka', [
+		[/./g, 'u'],
+		[/./, 'x'],
+		{
+			regexp: /u/,
+			replaceValue: (s) => s + '777',
+		}
+	]);
+
+	expect(actual).toStrictEqual('xu777');
+
+});

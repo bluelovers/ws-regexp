@@ -7,28 +7,18 @@ const handleChainRowResult_1 = require("../util/handleChainRowResult");
 function* _reduceCore(input, chain, options = {}) {
     let { allowFallbackToSource } = options;
     chain = chain.slice();
-    const { regexp: re, backref } = handleChainInput_1.handleChainInput(chain.shift(), options);
+    const _root = handleChainInput_1.handleChainInput(chain.shift(), options);
     const options2 = {
         ...options,
         global: false,
     };
-    for (const m of _each_1._each(input, re, options)) {
-        let str = handleChainRowResult_1.handleChainRowResult({
-            regexp: re,
-            backref,
-            match: m.match,
-            allowFallbackToSource,
-        }, m.match[0]);
+    for (const m of _each_1._each(input, _root.regexp, options)) {
+        let str = handleChainRowResult_1.handleChainRowResult(_root, m.match[0], m.match, options);
         if (chain.length > 0) {
             for (const row of chain) {
-                let { regexp, backref } = handleChainInput_1.handleChainInput(row, options2);
-                const match = str.match(regexp);
-                str = handleChainRowResult_1.handleChainRowResult({
-                    regexp,
-                    backref,
-                    match,
-                    allowFallbackToSource,
-                }, str);
+                let _sub = handleChainInput_1.handleChainInput(row, options2);
+                const match = str.match(_sub.regexp);
+                str = handleChainRowResult_1.handleChainRowResult(_sub, str, match, options2);
             }
         }
         yield str;

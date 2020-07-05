@@ -2,7 +2,7 @@ import { IChainArray } from '../types';
 import { ICloneRegexpOptionsCustom, ICloneRegexpOptions } from '@regexp-cjk/clone-regexp/lib/types';
 import { handleChainInput } from '../util/handleChainInput';
 import { _each } from './_each';
-import { handleChainRowResult } from '../util/handleChainRowResult';
+import { handleChainRowResult, IHandleChainRowResultOptions } from '../util/handleChainRowResult';
 
 export interface IOptionsReduceChain<T extends RegExp = RegExp> extends ICloneRegexpOptionsCustom<T>
 {
@@ -15,41 +15,26 @@ export function* _reduceCore(input: string, chain: IChainArray, options: IOption
 
 	chain = chain.slice();
 
-	const { regexp: re, backref } = handleChainInput(chain.shift(), options);
+	const _root = handleChainInput(chain.shift(), options);
 
-	const options2: ICloneRegexpOptions = {
+	const options2: IOptionsReduceChain & ICloneRegexpOptions = {
 		...options,
 		global: false,
 	};
 
-	for (const m of _each(input, re, options))
+	for (const m of _each(input, _root.regexp, options))
 	{
-		let str = handleChainRowResult({
-
-			regexp: re,
-			backref,
-
-			match: m.match,
-
-			allowFallbackToSource,
-		}, m.match[0])
+		let str = handleChainRowResult(_root, m.match[0], m.match, options)
 
 		if (chain.length > 0)
 		{
 			for (const row of chain)
 			{
-				let { regexp, backref } = handleChainInput(row, options2)
+				let _sub = handleChainInput(row, options2)
 
-				const match = str.match(regexp);
+				const match = str.match(_sub.regexp);
 
-				str = handleChainRowResult({
-					regexp,
-					backref,
-
-					match,
-
-					allowFallbackToSource,
-				}, str)
+				str = handleChainRowResult(_sub, str, match, options2)
 			}
 		}
 

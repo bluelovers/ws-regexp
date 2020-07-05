@@ -12,7 +12,7 @@ export interface IReturnTypeEachCore<T extends RegExp = RegExp> {
     data: Pick<typeof RegExp, 'leftContext' | 'rightContext'>;
 }
 export declare type ICallback<R = void, T extends RegExp = RegExp> = (match: RegExpMatchArray, index: number, re: T, _: IReturnTypeEachCore<T>) => R;
-export interface IChainArrayElement {
+export interface IChainInputObject {
     /**
      * The `RegExp` to use.
      */
@@ -21,6 +21,8 @@ export interface IChainArrayElement {
      * The specific backreference.
      */
     backref?: number | string;
+    replaceValue?: string | ((substring: string, ...args: string[]) => string);
 }
-export declare type IChainInput = IChainArrayElement | RegExp;
+export declare type IChainInput = IChainInputObject | RegExp;
 export declare type IChainArray = IChainInput[];
+export declare type IChainInputArray = [RegExp, string | ((substring: string, ...args: string[]) => string)];

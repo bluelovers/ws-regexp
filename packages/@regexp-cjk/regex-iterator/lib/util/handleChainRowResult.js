@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleChainRowResult = void 0;
-function handleChainRowResult({ regexp, backref, match, allowFallbackToSource, }, str) {
-    let value;
+function handleChainRowResult({ regexp, backref, }, str, match, { allowFallbackToSource }) {
+    let ret;
     if (match !== null && typeof match !== 'undefined') {
         if (backref) {
             const isNamedBackref = isNaN(backref);
@@ -10,23 +10,23 @@ function handleChainRowResult({ regexp, backref, match, allowFallbackToSource, }
                 if (!(backref in match.groups)) {
                     throw new ReferenceError(`Invalid regular expression: ${regexp}: Invalid named capture referenced '${backref}'`);
                 }
-                value = match.groups[backref];
+                ret = match.groups[backref];
             }
             else if (!(backref in match)) {
                 throw new ReferenceError(`Invalid regular expression: ${regexp}: Invalid index referenced ${backref}`);
             }
             else {
-                value = match[backref];
+                ret = match[backref];
             }
         }
         else {
-            value = match[0];
+            ret = match[0];
         }
     }
-    if (typeof value === 'undefined' && allowFallbackToSource) {
-        value = str;
+    if (typeof ret === 'undefined' && allowFallbackToSource) {
+        ret = str;
     }
-    return value;
+    return ret;
 }
 exports.handleChainRowResult = handleChainRowResult;
 exports.default = handleChainRowResult;

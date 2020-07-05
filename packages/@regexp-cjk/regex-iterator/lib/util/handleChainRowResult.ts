@@ -1,17 +1,18 @@
+import { IChainInputObject } from '../types';
+
+export interface IHandleChainRowResultOptions
+{
+	allowFallbackToSource?: boolean,
+}
 
 export function handleChainRowResult({
 	regexp,
 	backref,
-	match,
-	allowFallbackToSource,
-}: {
-	regexp: RegExp,
-	backref: number | string;
-	match: RegExpMatchArray,
-	allowFallbackToSource: boolean,
-}, str: string)
+}: Required<IChainInputObject>, str: string, match: RegExpMatchArray, {
+	allowFallbackToSource
+} : IHandleChainRowResultOptions)
 {
-	let value: string;
+	let ret: string;
 
 	if (match !== null && typeof match !== 'undefined')
 	{
@@ -26,7 +27,7 @@ export function handleChainRowResult({
 					throw new ReferenceError(`Invalid regular expression: ${regexp}: Invalid named capture referenced '${backref}'`);
 				}
 
-				value = match.groups[backref];
+				ret = match.groups[backref];
 			}
 			else if (!(backref in match))
 			{
@@ -34,21 +35,21 @@ export function handleChainRowResult({
 			}
 			else
 			{
-				value = match[backref]
+				ret = match[backref]
 			}
 		}
 		else
 		{
-			value = match[0]
+			ret = match[0]
 		}
 	}
 
-	if (typeof value === 'undefined' && allowFallbackToSource)
+	if (typeof ret === 'undefined' && allowFallbackToSource)
 	{
-		value = str
+		ret = str
 	}
 
-	return value;
+	return ret;
 }
 
 export default handleChainRowResult

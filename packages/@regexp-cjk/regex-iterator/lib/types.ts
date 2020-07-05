@@ -19,7 +19,7 @@ export interface IReturnTypeEachCore<T extends RegExp = RegExp>
 
 export type ICallback<R = void, T extends RegExp = RegExp> = (match: RegExpMatchArray, index: number, re: T, _: IReturnTypeEachCore<T>) => R
 
-export interface IChainArrayElement
+export interface IChainInputObject
 {
 	/**
 	 * The `RegExp` to use.
@@ -29,8 +29,14 @@ export interface IChainArrayElement
 	 * The specific backreference.
 	 */
 	backref?: number | string;
+
+	replaceValue?: string | ((substring: string, ...args: string[]) => string),
+
 }
 
-export type IChainInput = IChainArrayElement | RegExp;
+export type IChainInput = IChainInputObject | RegExp;
 
 export type IChainArray = IChainInput[];
+
+export type IChainInputArray = [RegExp, string | ((substring: string, ...args: string[]) => string)]
+
