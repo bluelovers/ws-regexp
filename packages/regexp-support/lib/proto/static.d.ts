@@ -98,14 +98,14 @@ export declare const REGEXP_STATIC: {
     $8?: boolean;
     $9?: boolean;
     lastMatch?: boolean;
+    leftContext?: boolean;
+    rightContext?: boolean;
     input?: boolean;
     $_?: boolean;
     '$&'?: boolean;
     lastParen?: boolean;
     '$+'?: boolean;
-    leftContext?: boolean;
     '$`'?: boolean;
-    rightContext?: boolean;
     '$\''?: boolean;
 };
 export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
@@ -122,14 +122,14 @@ export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     $8?: boolean;
     $9?: boolean;
     lastMatch?: boolean;
+    leftContext?: boolean;
+    rightContext?: boolean;
     input?: boolean;
     $_?: boolean;
     '$&'?: boolean;
     lastParen?: boolean;
     '$+'?: boolean;
-    leftContext?: boolean;
     '$`'?: boolean;
-    rightContext?: boolean;
     '$\''?: boolean;
 };
 export {};

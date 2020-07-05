@@ -12,6 +12,7 @@ export interface ICloneRegexpOptionsCustom<T extends RegExp = RegExp> {
     cloneRegexp?: ICloneRegexp<T>;
     disableDetectRegexpClone?: boolean;
     resetLastIndex?: boolean;
+    lastIndex?: number;
 }
 export interface ICloneRegexpOptions<T extends RegExp = RegExp> extends ICloneRegexpOptionsCore, ICloneRegexpOptionsCustom<T> {
 }

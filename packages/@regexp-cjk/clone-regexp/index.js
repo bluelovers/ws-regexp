@@ -7,6 +7,7 @@ exports.cloneRegexp = void 0;
 /// <reference lib="es2018.regexp" />
 const clone_regexp_1 = __importDefault(require("clone-regexp"));
 function cloneRegexp(inputRegExp, options = {}) {
+    var _a;
     let { cloneRegexp: cloneRegexp2, disableDetectRegexpClone, ...opts } = options;
     let re;
     if (cloneRegexp2) {
@@ -22,7 +23,7 @@ function cloneRegexp(inputRegExp, options = {}) {
     if (typeof opts.lastIndex === 'number') {
         re.lastIndex = opts.lastIndex;
     }
-    else if (opts.resetLastIndex) {
+    else if (((_a = opts.resetLastIndex) !== null && _a !== void 0 ? _a : true) === true) {
         re.lastIndex = 0;
     }
     return re;

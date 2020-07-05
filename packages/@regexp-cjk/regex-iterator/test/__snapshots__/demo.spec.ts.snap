@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`map 1`] = `
+Array [
+  Array [
+    "k",
+  ],
+  Array [
+    "a",
+  ],
+  Array [
+    "k",
+  ],
+  Array [
+    "k",
+  ],
+]
+`;
+
+exports[`map only once 1`] = `
+Array [
+  Array [
+    "k",
+  ],
+]
+`;
+
+exports[`reduce:throw 1`] = `"Invalid regular expression: /^https?:\\\\/\\\\/(?<domain>[^/?#]+)/: Invalid named capture referenced 'do'"`;

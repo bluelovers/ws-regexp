@@ -32,7 +32,7 @@ export function cloneRegexp<T extends RegExp>(inputRegExp: IRegExpWithClone<T>, 
 	{
 		re.lastIndex = opts.lastIndex
 	}
-	else if (opts.resetLastIndex)
+	else if ((opts.resetLastIndex ?? true) === true)
 	{
 		re.lastIndex = 0
 	}
