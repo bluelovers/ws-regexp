@@ -1,12 +1,12 @@
-import { ICloneRegexp } from '@regexp-cjk/clone-regexp/lib/types';
+import { ICloneRegexp, ICloneRegexpOptionsCustom } from '@regexp-cjk/clone-regexp/lib/types';
 
 export type { ICloneRegexp }
 
 export const SYMBOL = Symbol.for('execall');
 
-export interface IExecAllOptions<T extends RegExp = RegExp>
+export interface IExecAllOptions<T extends RegExp = RegExp> extends ICloneRegexpOptionsCustom<T>
 {
-	resetLastIndex?: boolean,
+
 	/**
 	 * allow change cloneRegexp function
 	 */

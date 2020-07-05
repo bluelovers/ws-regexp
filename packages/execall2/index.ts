@@ -17,10 +17,7 @@ export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 
 	const matches = [] as IMatches<T>;
 
-	const re: T = _cloneRegexp<T>(inputRegExp as any, {
-		// @ts-ignore
-		cloneRegexp,
-	});
+	const re: T = _cloneRegexp<T>(inputRegExp as any, options);
 	const isGlobal = re.global;
 
 	if (resetLastIndex)

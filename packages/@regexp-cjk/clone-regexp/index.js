@@ -8,14 +8,24 @@ exports.cloneRegexp = void 0;
 const clone_regexp_1 = __importDefault(require("clone-regexp"));
 function cloneRegexp(inputRegExp, options = {}) {
     let { cloneRegexp: cloneRegexp2, disableDetectRegexpClone, ...opts } = options;
+    let re;
     if (cloneRegexp2) {
-        return cloneRegexp2(inputRegExp, opts);
+        re = cloneRegexp2(inputRegExp, opts);
     }
     else if (disableDetectRegexpClone !== true && typeof inputRegExp.clone === 'function') {
         // @ts-ignore
-        return inputRegExp.clone(opts);
+        re = inputRegExp.clone(opts);
     }
-    return clone_regexp_1.default(inputRegExp, opts);
+    else {
+        re = clone_regexp_1.default(inputRegExp, opts);
+    }
+    if (typeof opts.lastIndex === 'number') {
+        re.lastIndex = opts.lastIndex;
+    }
+    else if (opts.resetLastIndex) {
+        re.lastIndex = 0;
+    }
+    return re;
 }
 exports.cloneRegexp = cloneRegexp;
 exports.default = cloneRegexp;

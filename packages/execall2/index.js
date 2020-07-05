@@ -23,10 +23,7 @@ function execall(inputRegExp, input, options) {
     options = options || {};
     const { resetLastIndex = true, cloneRegexp, removeHiddenData } = options;
     const matches = [];
-    const re = clone_regexp_1.default(inputRegExp, {
-        // @ts-ignore
-        cloneRegexp,
-    });
+    const re = clone_regexp_1.default(inputRegExp, options);
     const isGlobal = re.global;
     if (resetLastIndex) {
         re.lastIndex = 0;

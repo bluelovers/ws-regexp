@@ -1,8 +1,7 @@
-import { ICloneRegexp } from '@regexp-cjk/clone-regexp/lib/types';
+import { ICloneRegexp, ICloneRegexpOptionsCustom } from '@regexp-cjk/clone-regexp/lib/types';
 export type { ICloneRegexp };
 export declare const SYMBOL: unique symbol;
-export interface IExecAllOptions<T extends RegExp = RegExp> {
-    resetLastIndex?: boolean;
+export interface IExecAllOptions<T extends RegExp = RegExp> extends ICloneRegexpOptionsCustom<T> {
     /**
      * allow change cloneRegexp function
      */

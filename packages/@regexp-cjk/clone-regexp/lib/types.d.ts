@@ -5,12 +5,15 @@ export interface ICloneRegexp<T extends RegExp = RegExp> {
 }
 export interface ICloneRegexpOptionsCore extends Options, IOptionsRewriteFlags {
 }
-export interface ICloneRegexpOptions<T extends RegExp = RegExp> extends ICloneRegexpOptionsCore {
+export interface ICloneRegexpOptionsCustom<T extends RegExp = RegExp> {
     /**
      * allow change cloneRegexp function
      */
     cloneRegexp?: ICloneRegexp<T>;
     disableDetectRegexpClone?: boolean;
+    resetLastIndex?: boolean;
+}
+export interface ICloneRegexpOptions<T extends RegExp = RegExp> extends ICloneRegexpOptionsCore, ICloneRegexpOptionsCustom<T> {
 }
 export declare type IRegExpWithClone<T extends RegExp = RegExp> = T extends {
     clone?(...argv: any[]): any;

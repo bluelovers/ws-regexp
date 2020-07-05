@@ -12,17 +12,32 @@ export function cloneRegexp<T extends RegExp>(inputRegExp: IRegExpWithClone<T>, 
 		...opts
 	} = options;
 
+	let re: T;
+
 	if (cloneRegexp2)
 	{
-		return cloneRegexp2(inputRegExp, opts)
+		re = cloneRegexp2(inputRegExp, opts)
 	}
 	else if (disableDetectRegexpClone !== true && typeof inputRegExp.clone === 'function')
 	{
 		// @ts-ignore
-		return inputRegExp.clone(opts)
+		re = inputRegExp.clone(opts)
+	}
+	else
+	{
+		re = _cloneRegexp(inputRegExp, opts) as T
 	}
 
-	return _cloneRegexp(inputRegExp, opts) as T
+	if (typeof opts.lastIndex === 'number')
+	{
+		re.lastIndex = opts.lastIndex
+	}
+	else if (opts.resetLastIndex)
+	{
+		re.lastIndex = 0
+	}
+
+	return re
 }
 
 export default cloneRegexp
