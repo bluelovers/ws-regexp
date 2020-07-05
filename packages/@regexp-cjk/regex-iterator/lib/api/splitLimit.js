@@ -44,10 +44,8 @@ function splitLimit(input, separator, limit, options = {}) {
     for (let row of _each_1.default(input, separator, options)) {
         let { match, re } = row;
         let s;
-        if (lastIndex !== match.index) {
-            s = input.slice(lastIndex, match.index);
-            _pushNonEmpty(ret, lastString = s, allowEmpty);
-        }
+        s = input.slice(lastIndex, match.index);
+        _pushNonEmpty(ret, lastString = s, allowEmpty);
         //console.log(lastIndex, re.lastIndex, match.index)
         lastIndex = re.lastIndex;
         if (match.length > 1) {

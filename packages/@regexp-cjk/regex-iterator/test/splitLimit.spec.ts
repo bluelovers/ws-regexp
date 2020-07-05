@@ -7,7 +7,7 @@ test(`splitLimit`, () =>
 
 	console.dir(actual)
 
-	expect(actual).not.toContain('')
+	expect(actual.includes('')).toBeFalsy()
 	expect(actual.length).toBeLessThanOrEqual(4);
 
 });
@@ -51,7 +51,15 @@ test(`same as string.split`, () =>
 	let actual = splitLimit(input, re);
 	let expected = input.split(re).filter(s => s !== '');
 
-	expect(actual).not.toContain('')
+	expect(actual.includes('')).toBeFalsy()
+	expect(actual).toStrictEqual(expected);
+	expect(actual).toMatchSnapshot();
+
+	actual = splitLimit(input, re, void 0, {
+		allowEmpty: true,
+	});
+	expected = input.split(re);
+
 	expect(actual).toStrictEqual(expected);
 	expect(actual).toMatchSnapshot();
 
@@ -59,7 +67,7 @@ test(`same as string.split`, () =>
 
 function checkLimit(actual: string[], limit: number)
 {
-	expect(actual).not.toContain('')
+	expect(actual.includes('')).toBeFalsy()
 	expect(actual.length).toBeLessThanOrEqual(limit);
 	expect(actual).toMatchSnapshot();
 }

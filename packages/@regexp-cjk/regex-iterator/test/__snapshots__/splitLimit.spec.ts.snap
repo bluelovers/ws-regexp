@@ -56,3 +56,27 @@ Array [
   "f",
 ]
 `;
+
+exports[`same as string.split 2`] = `
+Array [
+  "",
+  "kk",
+  "",
+  "ab",
+  "",
+  "bc",
+  "",
+  "cc",
+  "",
+  "cc",
+  "",
+  "cc",
+  "",
+  "cc",
+  "",
+  "cc",
+  "",
+  "ff",
+  "f",
+]
+`;

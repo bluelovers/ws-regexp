@@ -12,6 +12,8 @@
     "chain",
     "reduce",
     "match",
+    "split",
+    "limit",
     "part",
     "parts",
     "capture",

@@ -62,12 +62,9 @@ export function splitLimit(input: string, separator: string | RegExp, limit?: nu
 		let { match, re } = row;
 		let s: string;
 
-		if (lastIndex !== match.index)
-		{
-			s = input.slice(lastIndex, match.index)
+		s = input.slice(lastIndex, match.index)
 
-			_pushNonEmpty(ret, lastString = s, allowEmpty);
-		}
+		_pushNonEmpty(ret, lastString = s, allowEmpty);
 
 		//console.log(lastIndex, re.lastIndex, match.index)
 
