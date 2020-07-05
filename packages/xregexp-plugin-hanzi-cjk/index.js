@@ -25,15 +25,16 @@ function addSupportToXRegExp(xr, options = {}) {
         console.warn(`this plugin already installed.`);
     }
     else {
-        xr.addToken(REGEXP_TEST, (match, scope) => {
-            let a = zh_table_list_1.auto(match[0]);
-            if (a.length) {
+        xr.addToken(REGEXP_TEST, (match, scope, flags) => {
+            let s = match[0];
+            let a = zh_table_list_1.auto(s);
+            if (a.length > 1 || a[0] !== s) {
                 return scope === 'class' ? a.join('') : '[' + a.join('') + ']';
             }
             else if (1) {
-                return match[0];
+                return s;
             }
-            throw new SyntaxError(`Invalid escape ${match[0]}`);
+            throw new SyntaxError(`Invalid escape ${s}`);
         }, {
             ...options,
             scope: (_a = options.scope) !== null && _a !== void 0 ? _a : 'default',

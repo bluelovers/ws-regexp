@@ -2,7 +2,7 @@
  * Created by user on 2018/4/24/024.
  */
 
-import XRegExp, { TokenScopeOption, TokenFlag, TokenOptions } from 'xregexp';
+import XRegExp, { TokenScopeOption, TokenFlag, TokenOptions, TokenScope } from 'xregexp';
 import { auto } from '@lazy-cjk/zh-table-list';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
 import createXRegExp from '@regexp-cjk/create-xregexp';
@@ -31,20 +31,21 @@ export function addSupportToXRegExp<T extends typeof XRegExp>(xr?: T, options: I
 	}
 	else
 	{
-		xr.addToken(REGEXP_TEST, (match, scope) =>
+		xr.addToken(REGEXP_TEST, (match, scope, flags) =>
 			{
-				let a = auto(match[0]);
+				let s = match[0];
+				let a = auto(s);
 
-				if (a.length)
+				if (a.length > 1 || a[0] !== s)
 				{
 					return scope === 'class' ? a.join('') : '[' + a.join('') + ']';
 				}
 				else if (1)
 				{
-					return match[0];
+					return s;
 				}
 
-				throw new SyntaxError(`Invalid escape ${match[0]}`);
+				throw new SyntaxError(`Invalid escape ${s}`);
 			},
 			{
 				...options,
@@ -52,7 +53,7 @@ export function addSupportToXRegExp<T extends typeof XRegExp>(xr?: T, options: I
 				//leadChar: '\\',
 				//reparse: true,
 				flag: options.flags ?? options.flag,
-			}
+			},
 		);
 
 		_CACHE.add(xr);
