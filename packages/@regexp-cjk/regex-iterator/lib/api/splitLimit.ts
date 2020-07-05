@@ -36,16 +36,34 @@ function _pushNonEmpty(arr: string[], s: string, allowEmpty?: boolean)
 	}
 }
 
-export function splitLimit(input: string, separator: string | RegExp, limit?: number, options: ICloneRegexpOptionsCustom & {
+export interface ISplitLimitOptions extends ICloneRegexpOptionsCustom
+{
 	useFullMatched?: boolean,
 	excludeRest?: boolean,
+	excludeSubMatched?: boolean,
 	allowEmpty?: boolean,
-} = {}): string[]
+	limit?: number,
+}
+
+export function splitLimit(input: string, separator: string | RegExp, limit?: number | ISplitLimitOptions, options?: ISplitLimitOptions): string[]
 {
+	if (typeof limit === 'object' && limit !== null)
+	{
+		options = limit;
+		limit = options.limit
+	}
+
+	if (limit === 0 || limit < 0 || isNaN(limit as any))
+	{
+		limit = void 0;
+	}
+
 	if (typeof separator === 'string')
 	{
-		return greedySplit(input, separator, limit)
+		return greedySplit(input, separator, limit as number)
 	}
+
+	options = options ?? {};
 
 	let ret: string[] = []
 	let lastIndex = 0;
@@ -53,9 +71,10 @@ export function splitLimit(input: string, separator: string | RegExp, limit?: nu
 
 	(options as ICloneRegexpOptions).global = true;
 
-	let { useFullMatched, allowEmpty } = options;
+	let { useFullMatched, allowEmpty, excludeSubMatched } = options;
 	useFullMatched = !!useFullMatched;
 	allowEmpty = !!allowEmpty;
+	excludeSubMatched = !!excludeSubMatched;
 
 	for (let row of _each(input, separator, options))
 	{
@@ -68,12 +87,16 @@ export function splitLimit(input: string, separator: string | RegExp, limit?: nu
 
 		//console.log(lastIndex, re.lastIndex, match.index)
 
+		if (ret.length === limit)
+		{
+			lastIndex = match.index;
+			break;
+		}
+
 		lastIndex = re.lastIndex;
 
-		if (match.length > 1)
+		if (excludeSubMatched !== true && match.length > 1)
 		{
-			lastIndex = re.lastIndex;
-
 			if (useFullMatched === true)
 			{
 				s = match[0];
@@ -105,7 +128,16 @@ export function splitLimit(input: string, separator: string | RegExp, limit?: nu
 	{
 		if (!options.excludeRest)
 		{
-			ret[ret.length-1] += input.slice(lastIndex);
+			let s = input.slice(lastIndex);
+
+			if (ret.length < limit)
+			{
+				_pushNonEmpty(ret, s, allowEmpty)
+			}
+			else
+			{
+				ret[ret.length-1] += input.slice(lastIndex);
+			}
 		}
 	}
 	else

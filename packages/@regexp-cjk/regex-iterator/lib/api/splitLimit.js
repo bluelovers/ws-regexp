@@ -30,26 +30,38 @@ function _pushNonEmpty(arr, s, allowEmpty) {
         arr.push(s);
     }
 }
-function splitLimit(input, separator, limit, options = {}) {
+function splitLimit(input, separator, limit, options) {
+    if (typeof limit === 'object' && limit !== null) {
+        options = limit;
+        limit = options.limit;
+    }
+    if (limit === 0 || limit < 0 || isNaN(limit)) {
+        limit = void 0;
+    }
     if (typeof separator === 'string') {
         return greedySplit(input, separator, limit);
     }
+    options = options !== null && options !== void 0 ? options : {};
     let ret = [];
     let lastIndex = 0;
     let lastString = '';
     options.global = true;
-    let { useFullMatched, allowEmpty } = options;
+    let { useFullMatched, allowEmpty, excludeSubMatched } = options;
     useFullMatched = !!useFullMatched;
     allowEmpty = !!allowEmpty;
+    excludeSubMatched = !!excludeSubMatched;
     for (let row of _each_1.default(input, separator, options)) {
         let { match, re } = row;
         let s;
         s = input.slice(lastIndex, match.index);
         _pushNonEmpty(ret, lastString = s, allowEmpty);
         //console.log(lastIndex, re.lastIndex, match.index)
+        if (ret.length === limit) {
+            lastIndex = match.index;
+            break;
+        }
         lastIndex = re.lastIndex;
-        if (match.length > 1) {
-            lastIndex = re.lastIndex;
+        if (excludeSubMatched !== true && match.length > 1) {
             if (useFullMatched === true) {
                 s = match[0];
                 _pushNonEmpty(ret, lastString = s, allowEmpty);
@@ -69,7 +81,13 @@ function splitLimit(input, separator, limit, options = {}) {
     }
     if (limit > 0) {
         if (!options.excludeRest) {
-            ret[ret.length - 1] += input.slice(lastIndex);
+            let s = input.slice(lastIndex);
+            if (ret.length < limit) {
+                _pushNonEmpty(ret, s, allowEmpty);
+            }
+            else {
+                ret[ret.length - 1] += input.slice(lastIndex);
+            }
         }
     }
     else {
