@@ -7,12 +7,11 @@ exports.cloneRegexp = void 0;
 /// <reference lib="es2018.regexp" />
 const clone_regexp_1 = __importDefault(require("clone-regexp"));
 function cloneRegexp(inputRegExp, options = {}) {
-    let { cloneRegexp: cloneRegexp2, ...opts } = options;
+    let { cloneRegexp: cloneRegexp2, disableDetectRegexpClone, ...opts } = options;
     if (cloneRegexp2) {
         return cloneRegexp2(inputRegExp, opts);
     }
-    // @ts-ignore
-    else if (typeof inputRegExp.clone === 'function') {
+    else if (disableDetectRegexpClone !== true && typeof inputRegExp.clone === 'function') {
         // @ts-ignore
         return inputRegExp.clone(opts);
     }

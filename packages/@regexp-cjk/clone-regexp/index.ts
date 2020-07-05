@@ -8,6 +8,7 @@ export function cloneRegexp<T extends RegExp>(inputRegExp: IRegExpWithClone<T>, 
 {
 	let {
 		cloneRegexp: cloneRegexp2,
+		disableDetectRegexpClone,
 		...opts
 	} = options;
 
@@ -15,8 +16,7 @@ export function cloneRegexp<T extends RegExp>(inputRegExp: IRegExpWithClone<T>, 
 	{
 		return cloneRegexp2(inputRegExp, opts)
 	}
-	// @ts-ignore
-	else if (typeof inputRegExp.clone === 'function')
+	else if (disableDetectRegexpClone !== true && typeof inputRegExp.clone === 'function')
 	{
 		// @ts-ignore
 		return inputRegExp.clone(opts)

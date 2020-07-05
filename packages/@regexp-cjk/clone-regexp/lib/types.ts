@@ -17,6 +17,8 @@ export interface ICloneRegexpOptions<T extends RegExp = RegExp> extends ICloneRe
 	 * allow change cloneRegexp function
 	 */
 	cloneRegexp?: ICloneRegexp<T>,
+
+	disableDetectRegexpClone?: boolean,
 }
 
 export type IRegExpWithClone<T extends RegExp = RegExp> = T extends {
