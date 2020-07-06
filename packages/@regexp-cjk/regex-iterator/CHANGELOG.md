@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-iterator@1.0.3...@regexp-cjk/regex-iterator@1.0.4) (2020-07-06)
+
+
+### 🐛　Bug Fixes
+
+* check limit ([b098b78](https://github.com/bluelovers/ws-regexp/commit/b098b782ba4d72626ba4bee1d18dc4b6b2b0db4d))
+
+
+### ✨　Features
+
+* add options `excludeSubMatched` ([b4db92b](https://github.com/bluelovers/ws-regexp/commit/b4db92b3ca592c73496ae54628235cf0b7a5f646))
+
+
+### 🚨　Tests
+
+* add test from `https://github.com/jesseky/split-limit` ([3e5134a](https://github.com/bluelovers/ws-regexp/commit/3e5134a04a49054b4e099b31f6542ccc5c0e59a1))
+
+
+
+
+
 ## [1.0.3](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-iterator@1.0.2...@regexp-cjk/regex-iterator@1.0.3) (2020-07-05)
 
 
