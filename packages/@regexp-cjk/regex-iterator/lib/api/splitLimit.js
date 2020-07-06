@@ -76,7 +76,7 @@ function splitLimit(input, separator, limit, options) {
                 limit,
             })
              */
-            if (ret.length < limit) {
+            if (!checkLimit()) {
                 _pushNonEmpty(ret, s, allowEmpty);
             }
             else {
@@ -88,14 +88,16 @@ function splitLimit(input, separator, limit, options) {
         _pushNonEmpty(ret, input.slice(lastIndex), allowEmpty);
     }
     function checkLimit() {
+        let bool;
         if (limitMode === 1) {
-            console.log(limitMode, size === limit);
-            return (size === limit);
+            //console.log(limitMode, size === limit)
+            bool = (size === limit);
         }
         else {
-            console.log(limitMode, ret.length === limit);
-            return ret.length === limit;
+            //console.log(limitMode, ret.length === limit)
+            bool = ret.length === limit;
         }
+        return bool;
     }
     return ret;
 }

@@ -123,7 +123,7 @@ export function splitLimit(input: string, separator: string | RegExp, limit?: nu
 			})
 			 */
 
-			if (ret.length < limit)
+			if (!checkLimit())
 			{
 				_pushNonEmpty(ret, s, allowEmpty)
 			}
@@ -140,16 +140,20 @@ export function splitLimit(input: string, separator: string | RegExp, limit?: nu
 
 	function checkLimit()
 	{
+		let bool: boolean;
+
 		if (limitMode === 1)
 		{
 			//console.log(limitMode, size === limit)
-			return (size === limit);
+			bool = (size === limit);
 		}
 		else
 		{
 			//console.log(limitMode, ret.length === limit)
-			return ret.length === limit
+			bool = ret.length === limit
 		}
+
+		return bool;
 	}
 
 	return ret;
