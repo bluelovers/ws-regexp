@@ -5,6 +5,7 @@ export interface ISplitLimitOptions extends ICloneRegexpOptionsCustom {
     excludeSubMatched?: boolean;
     allowEmpty?: boolean;
     limit?: number;
+    limitMode?: 0 | 1;
 }
 export declare function splitLimit(input: string, separator: string | RegExp, limit?: number | ISplitLimitOptions, options?: ISplitLimitOptions): string[];
 export default splitLimit;

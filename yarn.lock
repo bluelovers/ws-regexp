@@ -4261,6 +4261,11 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz#3694b5804567a458d3c8045842a6358632f62654"
   integrity sha512-J+FWzZoynJEXGphVIS+XEh3kFSjZX/1i9gFBaWQcB+/tmpe2qUsSBABpcxqxnAxFdiUFEgAX1bjYGQvIZmoz9Q==
 
+split-limit@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/split-limit/-/split-limit-1.0.4.tgz#efdca7c042b3289f8304f339fc31e46915ad532d"
+  integrity sha1-79ynwEKzKJ+DBPM5/DHkaRWtUy0=
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.npmjs.org/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
