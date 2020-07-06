@@ -281,5 +281,7 @@ exports._greedyTableCacheRegexp = [
     [/[箒菷掃扫]/ug, '帚'],
     [/[撿检検檢]/ug, '捡'],
     [/[濂簾]/ug, '帘'],
+    [/[妓技]/ug, '伎'],
+    [/[珐琺]/ug, '法'],
 ];
 //# sourceMappingURL=re.js.map

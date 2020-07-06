@@ -388,6 +388,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 伎|妓|技 1`] = `
+Array [
+  "伎",
+  "妓",
+  "技",
+]
+`;
+
 exports[`validate char of map 伶|怜|憐 1`] = `
 Array [
   "伶",
@@ -2089,6 +2097,14 @@ Array [
   "淪",
   "輪",
   "轮",
+]
+`;
+
+exports[`validate char of map 法|珐|琺 1`] = `
+Array [
+  "法",
+  "珐",
+  "琺",
 ]
 `;
 
