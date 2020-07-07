@@ -111,7 +111,7 @@ exports._greedyTableCacheRegexp = [
     [/[殖]/ug, '植'],
     [/[佬姥]/ug, '老'],
     [/[倖]/ug, '幸'],
-    [/[㠪炬矩鉅钜]/ug, '巨'],
+    [/[㠪炬矩鉅钜榘]/ug, '巨'],
     [/[刴剁剐剮劏]/ug, '㓥'],
     [/[枏楠]/ug, '南'],
     [/[璐𡽘𨱴]/ug, '路'],
@@ -283,5 +283,8 @@ exports._greedyTableCacheRegexp = [
     [/[濂簾]/ug, '帘'],
     [/[妓技]/ug, '伎'],
     [/[珐琺]/ug, '法'],
+    [/[暉煇輝辉𪸩]/ug, '晖'],
+    [/[炫眩]/ug, '昡'],
+    [/[逾]/ug, '踰'],
 ];
 //# sourceMappingURL=re.js.map

@@ -83,10 +83,11 @@ Array [
 ]
 `;
 
-exports[`validate char of map 㠪|巨|炬|矩|鉅|钜 1`] = `
+exports[`validate char of map 㠪|巨|榘|炬|矩|鉅|钜 1`] = `
 Array [
   "㠪",
   "巨",
+  "榘",
   "炬",
   "矩",
   "鉅",
@@ -1952,6 +1953,25 @@ Array [
 ]
 `;
 
+exports[`validate char of map 昡|炫|眩 1`] = `
+Array [
+  "昡",
+  "炫",
+  "眩",
+]
+`;
+
+exports[`validate char of map 晖|暉|煇|輝|辉|𪸩 1`] = `
+Array [
+  "晖",
+  "暉",
+  "煇",
+  "輝",
+  "辉",
+  "𪸩",
+]
+`;
+
 exports[`validate char of map 暗|闇|黯 1`] = `
 Array [
   "暗",
@@ -2407,6 +2427,13 @@ Array [
   "趯",
   "跃",
   "躍",
+]
+`;
+
+exports[`validate char of map 踰|逾 1`] = `
+Array [
+  "踰",
+  "逾",
 ]
 `;
 
