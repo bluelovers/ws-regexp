@@ -98,6 +98,8 @@ export declare const table_jp_core: {
     readonly 矇: readonly ["蒙"];
     readonly 濛: readonly ["蒙"];
     readonly 懞: readonly ["蒙"];
+    readonly 煇: readonly ["煇", "辉", "𪸩"];
+    readonly 𪸩: readonly ["煇", "辉", "𪸩"];
 };
 /**
  * 此表內符合以下任意值時會觸發
