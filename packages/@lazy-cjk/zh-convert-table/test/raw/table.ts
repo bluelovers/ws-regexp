@@ -29,6 +29,7 @@ if (1)
 		'铲',
 		'刬',
 		'剗',
+
 	].forEach(function (v)
 	{
 		delete table_tw2cn[v];
@@ -44,6 +45,9 @@ if (1)
 
 	[
 		// 從繁體轉換表內刪除的字
+
+		'煇',
+
 	].forEach(function (v)
 	{
 		delete table_tw2cn[v];
@@ -173,6 +177,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 	'克': '剋',
 
 	'唇': '脣',
+
+	'𪸩': '煇',
 
 });
 
