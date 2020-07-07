@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.50](https://github.com/bluelovers/ws-regexp/compare/cjk-conv-cli@1.0.49...cjk-conv-cli@1.0.50) (2020-07-07)
+
+**Note:** Version bump only for package cjk-conv-cli
+
+
+
+
+
 ## [1.0.49](https://github.com/bluelovers/ws-regexp/compare/cjk-conv-cli@1.0.48...cjk-conv-cli@1.0.49) (2020-07-05)
 
 

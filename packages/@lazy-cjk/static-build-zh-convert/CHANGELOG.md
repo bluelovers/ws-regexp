@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.26](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/static-build-zh-convert@1.0.25...@lazy-cjk/static-build-zh-convert@1.0.26) (2020-07-07)
+
+
+### 🛠　Build System
+
+* update str table ([cb197c4](https://github.com/bluelovers/ws-regexp/commit/cb197c4ec82def70f3e8ea8741abe8ca54dee7c3))
+
+
+
+
+
 ## [1.0.25](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/static-build-zh-convert@1.0.24...@lazy-cjk/static-build-zh-convert@1.0.25) (2020-07-05)
 
 
