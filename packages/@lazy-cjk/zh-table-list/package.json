@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-table-list",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "description": "",
   "keywords": [
     "char",
@@ -76,7 +76,7 @@
     "@lazy-cjk/jp-table-convert": "^1.0.22",
     "@lazy-cjk/zh-convert": "^1.0.26",
     "@lazy-cjk/zh-table-alias": "^1.0.33",
-    "@lazy-cjk/zh-table-greedy": "^1.0.42",
+    "@lazy-cjk/zh-table-greedy": "^1.0.43",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {
