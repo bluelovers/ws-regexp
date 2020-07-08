@@ -2378,6 +2378,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 茜|西 1`] = `
+Array [
+  "茜",
+  "西",
+]
+`;
+
 exports[`validate char of map 蔑|衊 1`] = `
 Array [
   "蔑",
