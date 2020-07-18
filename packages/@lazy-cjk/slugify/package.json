@@ -80,14 +80,14 @@
     "@lazy-cjk/zh-slugify": "^1.0.45",
     "@regexp-cjk/regex-pinyin": "^1.0.1",
     "@sindresorhus/transliterate": "^0.1.1",
-    "emoji.json": "^12.1.1",
+    "emoji.json": "^13.0.0",
     "escape-string-regexp": "^4.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "regexp-helper": "^1.0.15",
     "transliteration": "^2.1.11"
   },
   "devDependencies": {
-    "@sindresorhus/slugify": "^1.0.0",
+    "@sindresorhus/slugify": "^1.1.0",
     "slugify-extra": "^1.0.0"
   },
   "publishConfig": {
