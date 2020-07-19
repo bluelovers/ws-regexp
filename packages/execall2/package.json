@@ -1,6 +1,6 @@
 {
   "name": "execall2",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Find multiple RegExp matches in a string",
   "keywords": [
     "all",
