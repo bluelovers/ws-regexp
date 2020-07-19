@@ -59,7 +59,7 @@
       "value": 1
     }
   },
-  "gitHead": "84da12815921fe73cbb5cccb4c9e5dd9cfdcea00",
+  "gitHead": "e79b293e6570ce6e908ffe9f58b7442f7673d30f",
   "testling": {
     "harness": "mocha-bdd",
     "files": "test/*.js",

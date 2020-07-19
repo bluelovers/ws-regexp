@@ -55,5 +55,6 @@
   },
   "_types": [
     "./index.d.ts"
-  ]
+  ],
+  "gitHead": "e79b293e6570ce6e908ffe9f58b7442f7673d30f"
 }
