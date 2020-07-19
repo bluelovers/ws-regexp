@@ -1693,6 +1693,15 @@ exports.table_plus_core = {
     "毎": [
         "毎",
         "每"
+    ],
+    "篦": [
+        "篦",
+        "箆"
+    ],
+    "騨": [
+        "騨",
+        "驒",
+        "驔"
     ]
 };
 //# sourceMappingURL=raw.js.map
