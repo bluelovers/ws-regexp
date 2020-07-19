@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/cns-11643@1.0.16...@lazy-cjk/cns-11643@1.0.17) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([0906138](https://github.com/bluelovers/ws-regexp/commit/09061382af8b98173cadd92adf736d744c74575d))
+
+
+
+
+
 ## [1.0.16](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/cns-11643@1.0.15...@lazy-cjk/cns-11643@1.0.16) (2020-06-27)
 
 

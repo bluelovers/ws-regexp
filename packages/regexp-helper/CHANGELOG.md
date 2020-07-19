@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://github.com/bluelovers/ws-regexp/compare/regexp-helper@1.0.15...regexp-helper@1.0.16) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([0906138](https://github.com/bluelovers/ws-regexp/commit/09061382af8b98173cadd92adf736d744c74575d))
+
+
+
+
+
 ## [1.0.15](https://github.com/bluelovers/ws-regexp/compare/regexp-helper@1.0.14...regexp-helper@1.0.15) (2020-07-05)
 
 

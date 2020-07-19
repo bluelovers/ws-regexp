@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.14](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.13...tieba-harmony@2.0.14) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([0906138](https://github.com/bluelovers/ws-regexp/commit/09061382af8b98173cadd92adf736d744c74575d))
+
+
+
+
+
 ## [2.0.13](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.12...tieba-harmony@2.0.13) (2020-07-02)
 
 

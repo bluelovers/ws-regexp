@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.7](https://github.com/bluelovers/regexpp/compare/regexpp2@1.3.6...regexpp2@1.3.7) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([0906138](https://github.com/bluelovers/regexpp/commit/09061382af8b98173cadd92adf736d744c74575d))
+
+
+
+
+
 ## [1.3.6](https://github.com/bluelovers/regexpp/compare/regexpp2@1.3.5...regexpp2@1.3.6) (2020-06-21)
 
 

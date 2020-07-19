@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert-table@1.0.11...@lazy-cjk/zh-convert-table@1.0.12) (2020-07-19)
+
+
+### 🛠　Build System
+
+* @lazy-cjk/zh-convert-table ([f7a55ae](https://github.com/bluelovers/ws-regexp/commit/f7a55ae0755c1aaeb2af6da7797b1ec3b8d1e4cd))
+
+
+
+
+
 ## [1.0.11](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert-table@1.0.10...@lazy-cjk/zh-convert-table@1.0.11) (2020-07-07)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.43](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.42...@lazy-cjk/zh-table-list@1.0.43) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([0906138](https://github.com/bluelovers/ws-regexp/commit/09061382af8b98173cadd92adf736d744c74575d))
+
+
+
+
+
 ## [1.0.42](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.41...@lazy-cjk/zh-table-list@1.0.42) (2020-07-08)
 
 **Note:** Version bump only for package @lazy-cjk/zh-table-list

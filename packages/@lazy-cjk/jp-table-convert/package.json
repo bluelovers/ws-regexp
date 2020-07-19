@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-convert",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "轉換 簡繁日 當中共通的 漢字",
   "keywords": [
     "char",
@@ -77,8 +77,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-comparison": "^1.0.10",
-    "regexp-helper": "^1.0.15",
+    "@lazy-cjk/jp-table-comparison": "^1.0.11",
+    "regexp-helper": "^1.0.16",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {
