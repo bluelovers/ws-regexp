@@ -330,10 +330,11 @@ Array [
 ]
 `;
 
-exports[`validate char of map 仏|佛|彿|拂 1`] = `
+exports[`validate char of map 仏|佛|弗|彿|拂 1`] = `
 Array [
   "仏",
   "佛",
+  "弗",
   "彿",
   "拂",
 ]
@@ -345,6 +346,21 @@ Array [
   "伦",
   "侖",
   "倫",
+]
+`;
+
+exports[`validate char of map 仓|倉|怆|愴|沧|滄|舱|艙|苍|蒼 1`] = `
+Array [
+  "仓",
+  "倉",
+  "怆",
+  "愴",
+  "沧",
+  "滄",
+  "舱",
+  "艙",
+  "苍",
+  "蒼",
 ]
 `;
 
@@ -873,6 +889,13 @@ Array [
   "勛",
   "勲",
   "勳",
+]
+`;
+
+exports[`validate char of map 勘|堪 1`] = `
+Array [
+  "勘",
+  "堪",
 ]
 `;
 
@@ -2284,6 +2307,22 @@ Array [
   "穀",
   "糓",
   "谷",
+]
+`;
+
+exports[`validate char of map 笓|箆|篦 1`] = `
+Array [
+  "笓",
+  "箆",
+  "篦",
+]
+`;
+
+exports[`validate char of map 筣|篱|籬 1`] = `
+Array [
+  "筣",
+  "篱",
+  "籬",
 ]
 `;
 
