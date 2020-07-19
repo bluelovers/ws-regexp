@@ -1,6 +1,6 @@
 {
   "name": "regexp-helper",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "regexp-helper",
   "keywords": [
     "check",
@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "regexp-helper-core": "^1.0.10",
-    "regexp-support": "^1.0.29"
+    "regexp-support": "^1.0.31"
   },
   "gitHead": "e79b293e6570ce6e908ffe9f58b7442f7673d30f"
 }

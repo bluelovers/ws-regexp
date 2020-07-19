@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-table-list",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "description": "",
   "keywords": [
     "char",
@@ -73,10 +73,10 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.23",
-    "@lazy-cjk/zh-convert": "^1.0.27",
-    "@lazy-cjk/zh-table-alias": "^1.0.34",
-    "@lazy-cjk/zh-table-greedy": "^1.0.44",
+    "@lazy-cjk/jp-table-convert": "^1.0.24",
+    "@lazy-cjk/zh-convert": "^1.0.28",
+    "@lazy-cjk/zh-table-alias": "^1.0.35",
+    "@lazy-cjk/zh-table-greedy": "^1.0.45",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {

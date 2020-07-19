@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/korean-romanize@1.0.6...@lazy-cjk/korean-romanize@1.0.7) (2020-07-19)
+
+
+### 🔖　Miscellaneous
+
+* . ([c3c7f7f](https://github.com/bluelovers/ws-regexp/commit/c3c7f7fc30adc9cd3fc116cc5cf11a0cc0911e16))
+
+
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/korean-romanize@1.0.5...@lazy-cjk/korean-romanize@1.0.6) (2020-07-19)
 
 
