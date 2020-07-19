@@ -466,6 +466,8 @@ Object
 
 		'嫻': '娴',
 
+		'鎞': '𫔇',
+
 	})
 	.forEach(function (v)
 	{
