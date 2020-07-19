@@ -91,6 +91,10 @@ exports.mapEmoji = new Map([
         "kissing face with smiling eyes"
     ],
     [
+        "🥲",
+        "smiling face with tear"
+    ],
+    [
         "😋",
         "face savoring food"
     ],
@@ -241,6 +245,10 @@ exports.mapEmoji = new Map([
     [
         "🥳",
         "partying face"
+    ],
+    [
+        "🥸",
+        "disguised face"
     ],
     [
         "😎",
@@ -789,6 +797,30 @@ exports.mapEmoji = new Map([
     [
         "👌🏿",
         "OK hand: dark skin tone"
+    ],
+    [
+        "🤌",
+        "pinched fingers"
+    ],
+    [
+        "🤌🏻",
+        "pinched fingers: light skin tone"
+    ],
+    [
+        "🤌🏼",
+        "pinched fingers: medium-light skin tone"
+    ],
+    [
+        "🤌🏽",
+        "pinched fingers: medium skin tone"
+    ],
+    [
+        "🤌🏾",
+        "pinched fingers: medium-dark skin tone"
+    ],
+    [
+        "🤌🏿",
+        "pinched fingers: dark skin tone"
     ],
     [
         "🤏",
@@ -1585,6 +1617,14 @@ exports.mapEmoji = new Map([
     [
         "🧠",
         "brain"
+    ],
+    [
+        "🫀",
+        "anatomical heart"
+    ],
+    [
+        "🫁",
+        "lungs"
     ],
     [
         "🦷",
@@ -5235,6 +5275,30 @@ exports.mapEmoji = new Map([
         "woman guard: dark skin tone"
     ],
     [
+        "🥷",
+        "ninja"
+    ],
+    [
+        "🥷🏻",
+        "ninja: light skin tone"
+    ],
+    [
+        "🥷🏼",
+        "ninja: medium-light skin tone"
+    ],
+    [
+        "🥷🏽",
+        "ninja: medium skin tone"
+    ],
+    [
+        "🥷🏾",
+        "ninja: medium-dark skin tone"
+    ],
+    [
+        "🥷🏿",
+        "ninja: dark skin tone"
+    ],
+    [
         "👷",
         "construction worker"
     ],
@@ -5524,27 +5588,27 @@ exports.mapEmoji = new Map([
     ],
     [
         "👲",
-        "man with skullcap"
+        "person with skullcap"
     ],
     [
         "👲🏻",
-        "man with skullcap: light skin tone"
+        "person with skullcap: light skin tone"
     ],
     [
         "👲🏼",
-        "man with skullcap: medium-light skin tone"
+        "person with skullcap: medium-light skin tone"
     ],
     [
         "👲🏽",
-        "man with skullcap: medium skin tone"
+        "person with skullcap: medium skin tone"
     ],
     [
         "👲🏾",
-        "man with skullcap: medium-dark skin tone"
+        "person with skullcap: medium-dark skin tone"
     ],
     [
         "👲🏿",
-        "man with skullcap: dark skin tone"
+        "person with skullcap: dark skin tone"
     ],
     [
         "🧕",
@@ -5572,51 +5636,243 @@ exports.mapEmoji = new Map([
     ],
     [
         "🤵",
-        "man in tuxedo"
+        "person in tuxedo"
     ],
     [
         "🤵🏻",
-        "man in tuxedo: light skin tone"
+        "person in tuxedo: light skin tone"
     ],
     [
         "🤵🏼",
-        "man in tuxedo: medium-light skin tone"
+        "person in tuxedo: medium-light skin tone"
     ],
     [
         "🤵🏽",
-        "man in tuxedo: medium skin tone"
+        "person in tuxedo: medium skin tone"
     ],
     [
         "🤵🏾",
-        "man in tuxedo: medium-dark skin tone"
+        "person in tuxedo: medium-dark skin tone"
     ],
     [
         "🤵🏿",
+        "person in tuxedo: dark skin tone"
+    ],
+    [
+        "🤵‍♂️",
+        "man in tuxedo"
+    ],
+    [
+        "🤵‍♂",
+        "man in tuxedo"
+    ],
+    [
+        "🤵🏻‍♂️",
+        "man in tuxedo: light skin tone"
+    ],
+    [
+        "🤵🏻‍♂",
+        "man in tuxedo: light skin tone"
+    ],
+    [
+        "🤵🏼‍♂️",
+        "man in tuxedo: medium-light skin tone"
+    ],
+    [
+        "🤵🏼‍♂",
+        "man in tuxedo: medium-light skin tone"
+    ],
+    [
+        "🤵🏽‍♂️",
+        "man in tuxedo: medium skin tone"
+    ],
+    [
+        "🤵🏽‍♂",
+        "man in tuxedo: medium skin tone"
+    ],
+    [
+        "🤵🏾‍♂️",
+        "man in tuxedo: medium-dark skin tone"
+    ],
+    [
+        "🤵🏾‍♂",
+        "man in tuxedo: medium-dark skin tone"
+    ],
+    [
+        "🤵🏿‍♂️",
         "man in tuxedo: dark skin tone"
     ],
     [
+        "🤵🏿‍♂",
+        "man in tuxedo: dark skin tone"
+    ],
+    [
+        "🤵‍♀️",
+        "woman in tuxedo"
+    ],
+    [
+        "🤵‍♀",
+        "woman in tuxedo"
+    ],
+    [
+        "🤵🏻‍♀️",
+        "woman in tuxedo: light skin tone"
+    ],
+    [
+        "🤵🏻‍♀",
+        "woman in tuxedo: light skin tone"
+    ],
+    [
+        "🤵🏼‍♀️",
+        "woman in tuxedo: medium-light skin tone"
+    ],
+    [
+        "🤵🏼‍♀",
+        "woman in tuxedo: medium-light skin tone"
+    ],
+    [
+        "🤵🏽‍♀️",
+        "woman in tuxedo: medium skin tone"
+    ],
+    [
+        "🤵🏽‍♀",
+        "woman in tuxedo: medium skin tone"
+    ],
+    [
+        "🤵🏾‍♀️",
+        "woman in tuxedo: medium-dark skin tone"
+    ],
+    [
+        "🤵🏾‍♀",
+        "woman in tuxedo: medium-dark skin tone"
+    ],
+    [
+        "🤵🏿‍♀️",
+        "woman in tuxedo: dark skin tone"
+    ],
+    [
+        "🤵🏿‍♀",
+        "woman in tuxedo: dark skin tone"
+    ],
+    [
         "👰",
-        "bride with veil"
+        "person with veil"
     ],
     [
         "👰🏻",
-        "bride with veil: light skin tone"
+        "person with veil: light skin tone"
     ],
     [
         "👰🏼",
-        "bride with veil: medium-light skin tone"
+        "person with veil: medium-light skin tone"
     ],
     [
         "👰🏽",
-        "bride with veil: medium skin tone"
+        "person with veil: medium skin tone"
     ],
     [
         "👰🏾",
-        "bride with veil: medium-dark skin tone"
+        "person with veil: medium-dark skin tone"
     ],
     [
         "👰🏿",
-        "bride with veil: dark skin tone"
+        "person with veil: dark skin tone"
+    ],
+    [
+        "👰‍♂️",
+        "man with veil"
+    ],
+    [
+        "👰‍♂",
+        "man with veil"
+    ],
+    [
+        "👰🏻‍♂️",
+        "man with veil: light skin tone"
+    ],
+    [
+        "👰🏻‍♂",
+        "man with veil: light skin tone"
+    ],
+    [
+        "👰🏼‍♂️",
+        "man with veil: medium-light skin tone"
+    ],
+    [
+        "👰🏼‍♂",
+        "man with veil: medium-light skin tone"
+    ],
+    [
+        "👰🏽‍♂️",
+        "man with veil: medium skin tone"
+    ],
+    [
+        "👰🏽‍♂",
+        "man with veil: medium skin tone"
+    ],
+    [
+        "👰🏾‍♂️",
+        "man with veil: medium-dark skin tone"
+    ],
+    [
+        "👰🏾‍♂",
+        "man with veil: medium-dark skin tone"
+    ],
+    [
+        "👰🏿‍♂️",
+        "man with veil: dark skin tone"
+    ],
+    [
+        "👰🏿‍♂",
+        "man with veil: dark skin tone"
+    ],
+    [
+        "👰‍♀️",
+        "woman with veil"
+    ],
+    [
+        "👰‍♀",
+        "woman with veil"
+    ],
+    [
+        "👰🏻‍♀️",
+        "woman with veil: light skin tone"
+    ],
+    [
+        "👰🏻‍♀",
+        "woman with veil: light skin tone"
+    ],
+    [
+        "👰🏼‍♀️",
+        "woman with veil: medium-light skin tone"
+    ],
+    [
+        "👰🏼‍♀",
+        "woman with veil: medium-light skin tone"
+    ],
+    [
+        "👰🏽‍♀️",
+        "woman with veil: medium skin tone"
+    ],
+    [
+        "👰🏽‍♀",
+        "woman with veil: medium skin tone"
+    ],
+    [
+        "👰🏾‍♀️",
+        "woman with veil: medium-dark skin tone"
+    ],
+    [
+        "👰🏾‍♀",
+        "woman with veil: medium-dark skin tone"
+    ],
+    [
+        "👰🏿‍♀️",
+        "woman with veil: dark skin tone"
+    ],
+    [
+        "👰🏿‍♀",
+        "woman with veil: dark skin tone"
     ],
     [
         "🤰",
@@ -5665,6 +5921,78 @@ exports.mapEmoji = new Map([
     [
         "🤱🏿",
         "breast-feeding: dark skin tone"
+    ],
+    [
+        "👩‍🍼",
+        "woman feeding baby"
+    ],
+    [
+        "👩🏻‍🍼",
+        "woman feeding baby: light skin tone"
+    ],
+    [
+        "👩🏼‍🍼",
+        "woman feeding baby: medium-light skin tone"
+    ],
+    [
+        "👩🏽‍🍼",
+        "woman feeding baby: medium skin tone"
+    ],
+    [
+        "👩🏾‍🍼",
+        "woman feeding baby: medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍🍼",
+        "woman feeding baby: dark skin tone"
+    ],
+    [
+        "👨‍🍼",
+        "man feeding baby"
+    ],
+    [
+        "👨🏻‍🍼",
+        "man feeding baby: light skin tone"
+    ],
+    [
+        "👨🏼‍🍼",
+        "man feeding baby: medium-light skin tone"
+    ],
+    [
+        "👨🏽‍🍼",
+        "man feeding baby: medium skin tone"
+    ],
+    [
+        "👨🏾‍🍼",
+        "man feeding baby: medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍🍼",
+        "man feeding baby: dark skin tone"
+    ],
+    [
+        "🧑‍🍼",
+        "person feeding baby"
+    ],
+    [
+        "🧑🏻‍🍼",
+        "person feeding baby: light skin tone"
+    ],
+    [
+        "🧑🏼‍🍼",
+        "person feeding baby: medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍🍼",
+        "person feeding baby: medium skin tone"
+    ],
+    [
+        "🧑🏾‍🍼",
+        "person feeding baby: medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍🍼",
+        "person feeding baby: dark skin tone"
     ],
     [
         "👼",
@@ -5737,6 +6065,30 @@ exports.mapEmoji = new Map([
     [
         "🤶🏿",
         "Mrs. Claus: dark skin tone"
+    ],
+    [
+        "🧑‍🎄",
+        "mx claus"
+    ],
+    [
+        "🧑🏻‍🎄",
+        "mx claus: light skin tone"
+    ],
+    [
+        "🧑🏼‍🎄",
+        "mx claus: medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍🎄",
+        "mx claus: medium skin tone"
+    ],
+    [
+        "🧑🏾‍🎄",
+        "mx claus: medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍🎄",
+        "mx claus: dark skin tone"
     ],
     [
         "🦸",
@@ -7220,75 +7572,75 @@ exports.mapEmoji = new Map([
     ],
     [
         "🧑‍🦯",
-        "person with probing cane"
+        "person with white cane"
     ],
     [
         "🧑🏻‍🦯",
-        "person with probing cane: light skin tone"
+        "person with white cane: light skin tone"
     ],
     [
         "🧑🏼‍🦯",
-        "person with probing cane: medium-light skin tone"
+        "person with white cane: medium-light skin tone"
     ],
     [
         "🧑🏽‍🦯",
-        "person with probing cane: medium skin tone"
+        "person with white cane: medium skin tone"
     ],
     [
         "🧑🏾‍🦯",
-        "person with probing cane: medium-dark skin tone"
+        "person with white cane: medium-dark skin tone"
     ],
     [
         "🧑🏿‍🦯",
-        "person with probing cane: dark skin tone"
+        "person with white cane: dark skin tone"
     ],
     [
         "👨‍🦯",
-        "man with probing cane"
+        "man with white cane"
     ],
     [
         "👨🏻‍🦯",
-        "man with probing cane: light skin tone"
+        "man with white cane: light skin tone"
     ],
     [
         "👨🏼‍🦯",
-        "man with probing cane: medium-light skin tone"
+        "man with white cane: medium-light skin tone"
     ],
     [
         "👨🏽‍🦯",
-        "man with probing cane: medium skin tone"
+        "man with white cane: medium skin tone"
     ],
     [
         "👨🏾‍🦯",
-        "man with probing cane: medium-dark skin tone"
+        "man with white cane: medium-dark skin tone"
     ],
     [
         "👨🏿‍🦯",
-        "man with probing cane: dark skin tone"
+        "man with white cane: dark skin tone"
     ],
     [
         "👩‍🦯",
-        "woman with probing cane"
+        "woman with white cane"
     ],
     [
         "👩🏻‍🦯",
-        "woman with probing cane: light skin tone"
+        "woman with white cane: light skin tone"
     ],
     [
         "👩🏼‍🦯",
-        "woman with probing cane: medium-light skin tone"
+        "woman with white cane: medium-light skin tone"
     ],
     [
         "👩🏽‍🦯",
-        "woman with probing cane: medium skin tone"
+        "woman with white cane: medium skin tone"
     ],
     [
         "👩🏾‍🦯",
-        "woman with probing cane: medium-dark skin tone"
+        "woman with white cane: medium-dark skin tone"
     ],
     [
         "👩🏿‍🦯",
-        "woman with probing cane: dark skin tone"
+        "woman with white cane: dark skin tone"
     ],
     [
         "🧑‍🦼",
@@ -7604,31 +7956,31 @@ exports.mapEmoji = new Map([
     ],
     [
         "🕴️",
-        "man in suit levitating"
+        "person in suit levitating"
     ],
     [
         "🕴",
-        "man in suit levitating"
+        "person in suit levitating"
     ],
     [
         "🕴🏻",
-        "man in suit levitating: light skin tone"
+        "person in suit levitating: light skin tone"
     ],
     [
         "🕴🏼",
-        "man in suit levitating: medium-light skin tone"
+        "person in suit levitating: medium-light skin tone"
     ],
     [
         "🕴🏽",
-        "man in suit levitating: medium skin tone"
+        "person in suit levitating: medium skin tone"
     ],
     [
         "🕴🏾",
-        "man in suit levitating: medium-dark skin tone"
+        "person in suit levitating: medium-dark skin tone"
     ],
     [
         "🕴🏿",
-        "man in suit levitating: dark skin tone"
+        "person in suit levitating: dark skin tone"
     ],
     [
         "👯",
@@ -10231,6 +10583,10 @@ exports.mapEmoji = new Map([
         "busts in silhouette"
     ],
     [
+        "🫂",
+        "people hugging"
+    ],
+    [
         "👣",
         "footprints"
     ],
@@ -10327,6 +10683,10 @@ exports.mapEmoji = new Map([
         "cat"
     ],
     [
+        "🐈‍⬛",
+        "black cat"
+    ],
+    [
         "🦁",
         "lion"
     ],
@@ -10361,6 +10721,10 @@ exports.mapEmoji = new Map([
     [
         "🦌",
         "deer"
+    ],
+    [
+        "🦬",
+        "bison"
     ],
     [
         "🐮",
@@ -10427,6 +10791,10 @@ exports.mapEmoji = new Map([
         "elephant"
     ],
     [
+        "🦣",
+        "mammoth"
+    ],
+    [
         "🦏",
         "rhinoceros"
     ],
@@ -10467,6 +10835,10 @@ exports.mapEmoji = new Map([
         "chipmunk"
     ],
     [
+        "🦫",
+        "beaver"
+    ],
+    [
         "🦔",
         "hedgehog"
     ],
@@ -10477,6 +10849,14 @@ exports.mapEmoji = new Map([
     [
         "🐻",
         "bear"
+    ],
+    [
+        "🐻‍❄️",
+        "polar bear"
+    ],
+    [
+        "🐻‍❄",
+        "polar bear"
     ],
     [
         "🐨",
@@ -10567,6 +10947,14 @@ exports.mapEmoji = new Map([
         "owl"
     ],
     [
+        "🦤",
+        "dodo"
+    ],
+    [
+        "🪶",
+        "feather"
+    ],
+    [
         "🦩",
         "flamingo"
     ],
@@ -10627,6 +11015,10 @@ exports.mapEmoji = new Map([
         "dolphin"
     ],
     [
+        "🦭",
+        "seal"
+    ],
+    [
         "🐟",
         "fish"
     ],
@@ -10671,12 +11063,20 @@ exports.mapEmoji = new Map([
         "honeybee"
     ],
     [
+        "🪲",
+        "beetle"
+    ],
+    [
         "🐞",
         "lady beetle"
     ],
     [
         "🦗",
         "cricket"
+    ],
+    [
+        "🪳",
+        "cockroach"
     ],
     [
         "🕷️",
@@ -10701,6 +11101,14 @@ exports.mapEmoji = new Map([
     [
         "🦟",
         "mosquito"
+    ],
+    [
+        "🪰",
+        "fly"
+    ],
+    [
+        "🪱",
+        "worm"
     ],
     [
         "🦠",
@@ -10753,6 +11161,10 @@ exports.mapEmoji = new Map([
     [
         "🌱",
         "seedling"
+    ],
+    [
+        "🪴",
+        "potted plant"
     ],
     [
         "🌲",
@@ -10859,12 +11271,20 @@ exports.mapEmoji = new Map([
         "strawberry"
     ],
     [
+        "🫐",
+        "blueberries"
+    ],
+    [
         "🥝",
         "kiwi fruit"
     ],
     [
         "🍅",
         "tomato"
+    ],
+    [
+        "🫒",
+        "olive"
     ],
     [
         "🥥",
@@ -10897,6 +11317,10 @@ exports.mapEmoji = new Map([
     [
         "🌶",
         "hot pepper"
+    ],
+    [
+        "🫑",
+        "bell pepper"
     ],
     [
         "🥒",
@@ -10941,6 +11365,10 @@ exports.mapEmoji = new Map([
     [
         "🥖",
         "baguette bread"
+    ],
+    [
+        "🫓",
+        "flatbread"
     ],
     [
         "🥨",
@@ -11007,6 +11435,10 @@ exports.mapEmoji = new Map([
         "burrito"
     ],
     [
+        "🫔",
+        "tamale"
+    ],
+    [
         "🥙",
         "stuffed flatbread"
     ],
@@ -11029,6 +11461,10 @@ exports.mapEmoji = new Map([
     [
         "🍲",
         "pot of food"
+    ],
+    [
+        "🫕",
+        "fondue"
     ],
     [
         "🥣",
@@ -11211,6 +11647,10 @@ exports.mapEmoji = new Map([
         "hot beverage"
     ],
     [
+        "🫖",
+        "teapot"
+    ],
+    [
         "🍵",
         "teacup without handle"
     ],
@@ -11253,6 +11693,10 @@ exports.mapEmoji = new Map([
     [
         "🥤",
         "cup with straw"
+    ],
+    [
+        "🧋",
+        "bubble tea"
     ],
     [
         "🧃",
@@ -11417,6 +11861,18 @@ exports.mapEmoji = new Map([
     [
         "🧱",
         "brick"
+    ],
+    [
+        "🪨",
+        "rock"
+    ],
+    [
+        "🪵",
+        "wood"
+    ],
+    [
+        "🛖",
+        "hut"
     ],
     [
         "🏘️",
@@ -11707,6 +12163,10 @@ exports.mapEmoji = new Map([
         "sport utility vehicle"
     ],
     [
+        "🛻",
+        "pickup truck"
+    ],
+    [
         "🚚",
         "delivery truck"
     ],
@@ -11761,6 +12221,10 @@ exports.mapEmoji = new Map([
     [
         "🛹",
         "skateboard"
+    ],
+    [
+        "🛼",
+        "roller skate"
     ],
     [
         "🚏",
@@ -12583,6 +13047,10 @@ exports.mapEmoji = new Map([
         "crystal ball"
     ],
     [
+        "🪄",
+        "magic wand"
+    ],
+    [
         "🧿",
         "nazar amulet"
     ],
@@ -12613,6 +13081,14 @@ exports.mapEmoji = new Map([
     [
         "🧸",
         "teddy bear"
+    ],
+    [
+        "🪅",
+        "piñata"
+    ],
+    [
+        "🪆",
+        "nesting dolls"
     ],
     [
         "♠️",
@@ -12687,8 +13163,16 @@ exports.mapEmoji = new Map([
         "thread"
     ],
     [
+        "🪡",
+        "sewing needle"
+    ],
+    [
         "🧶",
         "yarn"
+    ],
+    [
+        "🪢",
+        "knot"
     ],
     [
         "👓",
@@ -12799,6 +13283,10 @@ exports.mapEmoji = new Map([
         "backpack"
     ],
     [
+        "🩴",
+        "thong sandal"
+    ],
+    [
         "👞",
         "man’s shoe"
     ],
@@ -12849,6 +13337,10 @@ exports.mapEmoji = new Map([
     [
         "🧢",
         "billed cap"
+    ],
+    [
+        "🪖",
+        "military helmet"
     ],
     [
         "⛑️",
@@ -12963,6 +13455,10 @@ exports.mapEmoji = new Map([
         "saxophone"
     ],
     [
+        "🪗",
+        "accordion"
+    ],
+    [
         "🎸",
         "guitar"
     ],
@@ -12985,6 +13481,10 @@ exports.mapEmoji = new Map([
     [
         "🥁",
         "drum"
+    ],
+    [
+        "🪘",
+        "long drum"
     ],
     [
         "📱",
@@ -13243,6 +13743,10 @@ exports.mapEmoji = new Map([
         "money bag"
     ],
     [
+        "🪙",
+        "coin"
+    ],
+    [
         "💴",
         "yen banknote"
     ],
@@ -13273,14 +13777,6 @@ exports.mapEmoji = new Map([
     [
         "💹",
         "chart increasing with yen"
-    ],
-    [
-        "💱",
-        "currency exchange"
-    ],
-    [
-        "💲",
-        "heavy dollar sign"
     ],
     [
         "✉️",
@@ -13599,6 +14095,10 @@ exports.mapEmoji = new Map([
         "pistol"
     ],
     [
+        "🪃",
+        "boomerang"
+    ],
+    [
         "🏹",
         "bow and arrow"
     ],
@@ -13611,8 +14111,16 @@ exports.mapEmoji = new Map([
         "shield"
     ],
     [
+        "🪚",
+        "carpentry saw"
+    ],
+    [
         "🔧",
         "wrench"
+    ],
+    [
+        "🪛",
+        "screwdriver"
     ],
     [
         "🔩",
@@ -13644,7 +14152,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "🦯",
-        "probing cane"
+        "white cane"
     ],
     [
         "🔗",
@@ -13659,12 +14167,20 @@ exports.mapEmoji = new Map([
         "chains"
     ],
     [
+        "🪝",
+        "hook"
+    ],
+    [
         "🧰",
         "toolbox"
     ],
     [
         "🧲",
         "magnet"
+    ],
+    [
+        "🪜",
+        "ladder"
     ],
     [
         "⚗️",
@@ -13723,6 +14239,18 @@ exports.mapEmoji = new Map([
         "door"
     ],
     [
+        "🛗",
+        "elevator"
+    ],
+    [
+        "🪞",
+        "mirror"
+    ],
+    [
+        "🪟",
+        "window"
+    ],
+    [
         "🛏️",
         "bed"
     ],
@@ -13747,12 +14275,20 @@ exports.mapEmoji = new Map([
         "toilet"
     ],
     [
+        "🪠",
+        "plunger"
+    ],
+    [
         "🚿",
         "shower"
     ],
     [
         "🛁",
         "bathtub"
+    ],
+    [
+        "🪤",
+        "mouse trap"
     ],
     [
         "🪒",
@@ -13779,8 +14315,16 @@ exports.mapEmoji = new Map([
         "roll of paper"
     ],
     [
+        "🪣",
+        "bucket"
+    ],
+    [
         "🧼",
         "soap"
+    ],
+    [
+        "🪥",
+        "toothbrush"
     ],
     [
         "🧽",
@@ -13807,6 +14351,10 @@ exports.mapEmoji = new Map([
         "coffin"
     ],
     [
+        "🪦",
+        "headstone"
+    ],
+    [
         "⚱️",
         "funeral urn"
     ],
@@ -13817,6 +14365,10 @@ exports.mapEmoji = new Map([
     [
         "🗿",
         "moai"
+    ],
+    [
+        "🪧",
+        "placard"
     ],
     [
         "🏧",
@@ -14359,12 +14911,32 @@ exports.mapEmoji = new Map([
         "male sign"
     ],
     [
-        "⚕️",
-        "medical symbol"
+        "⚧️",
+        "transgender symbol"
     ],
     [
-        "⚕",
-        "medical symbol"
+        "⚧",
+        "transgender symbol"
+    ],
+    [
+        "✖️",
+        "multiply"
+    ],
+    [
+        "✖",
+        "multiply"
+    ],
+    [
+        "➕",
+        "plus"
+    ],
+    [
+        "➖",
+        "minus"
+    ],
+    [
+        "➗",
+        "divide"
     ],
     [
         "♾️",
@@ -14373,6 +14945,62 @@ exports.mapEmoji = new Map([
     [
         "♾",
         "infinity"
+    ],
+    [
+        "‼️",
+        "double exclamation mark"
+    ],
+    [
+        "‼",
+        "double exclamation mark"
+    ],
+    [
+        "⁉️",
+        "exclamation question mark"
+    ],
+    [
+        "⁉",
+        "exclamation question mark"
+    ],
+    [
+        "❓",
+        "question mark"
+    ],
+    [
+        "❔",
+        "white question mark"
+    ],
+    [
+        "❕",
+        "white exclamation mark"
+    ],
+    [
+        "❗",
+        "exclamation mark"
+    ],
+    [
+        "〰️",
+        "wavy dash"
+    ],
+    [
+        "〰",
+        "wavy dash"
+    ],
+    [
+        "💱",
+        "currency exchange"
+    ],
+    [
+        "💲",
+        "heavy dollar sign"
+    ],
+    [
+        "⚕️",
+        "medical symbol"
+    ],
+    [
+        "⚕",
+        "medical symbol"
     ],
     [
         "♻️",
@@ -14427,32 +15055,12 @@ exports.mapEmoji = new Map([
         "check mark"
     ],
     [
-        "✖️",
-        "multiplication sign"
-    ],
-    [
-        "✖",
-        "multiplication sign"
-    ],
-    [
         "❌",
         "cross mark"
     ],
     [
         "❎",
         "cross mark button"
-    ],
-    [
-        "➕",
-        "plus sign"
-    ],
-    [
-        "➖",
-        "minus sign"
-    ],
-    [
-        "➗",
-        "division sign"
     ],
     [
         "➰",
@@ -14493,46 +15101,6 @@ exports.mapEmoji = new Map([
     [
         "❇",
         "sparkle"
-    ],
-    [
-        "‼️",
-        "double exclamation mark"
-    ],
-    [
-        "‼",
-        "double exclamation mark"
-    ],
-    [
-        "⁉️",
-        "exclamation question mark"
-    ],
-    [
-        "⁉",
-        "exclamation question mark"
-    ],
-    [
-        "❓",
-        "question mark"
-    ],
-    [
-        "❔",
-        "white question mark"
-    ],
-    [
-        "❕",
-        "white exclamation mark"
-    ],
-    [
-        "❗",
-        "exclamation mark"
-    ],
-    [
-        "〰️",
-        "wavy dash"
-    ],
-    [
-        "〰",
-        "wavy dash"
     ],
     [
         "©️",
@@ -15037,6 +15605,22 @@ exports.mapEmoji = new Map([
     [
         "🏳‍🌈",
         "rainbow flag"
+    ],
+    [
+        "🏳️‍⚧️",
+        "transgender flag"
+    ],
+    [
+        "🏳‍⚧️",
+        "transgender flag"
+    ],
+    [
+        "🏳️‍⚧",
+        "transgender flag"
+    ],
+    [
+        "🏳‍⚧",
+        "transgender flag"
     ],
     [
         "🏴‍☠️",
