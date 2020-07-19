@@ -11,8 +11,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "lerna:publish": "yarn run prepublishOnly && npx lerna publish && yarn run postpublishOnly",
-    "lerna:publish:yes": "yarn run prepublishOnly && npx lerna publish --yes --bump patch && yarn run postpublishOnly",
+    "lerna:publish:yes": "yarn run prepublishOnly:check-bin && yarn run prepublishOnly && npx lerna publish --yes --bump patch && yarn run postpublishOnly",
     "prepublish:fix-links": "ynpx @yarn-tool/fix-ws-links",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run prepublish:fix-links && ts-node ./script/run/ws-prepublish.ts",
     "postpublish:subtree": "ts-node ./script/run/postpublish-subtree.ts",
