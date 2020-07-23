@@ -1685,6 +1685,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 彻|徹|澈 1`] = `
+Array [
+  "彻",
+  "徹",
+  "澈",
+]
+`;
+
 exports[`validate char of map 征|徴|徵|怔|愣 1`] = `
 Array [
   "征",
