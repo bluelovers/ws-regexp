@@ -159,6 +159,7 @@ exports.table_same = [
     '鞦',
     '鬨',
     '譁',
+    '箇',
 ];
 exports.default = exports.table_same;
 //# sourceMappingURL=table_same.js.map

@@ -190,6 +190,8 @@ export const table_same = [
 
 	'譁',
 
+	'箇',
+
 ];
 
 export default table_same
