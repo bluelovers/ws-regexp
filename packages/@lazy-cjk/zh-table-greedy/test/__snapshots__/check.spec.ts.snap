@@ -249,6 +249,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 个|個|各|箇 1`] = `
+Array [
+  "个",
+  "個",
+  "各",
+  "箇",
+]
+`;
+
 exports[`validate char of map 丽|利|莉|麗 1`] = `
 Array [
   "丽",
