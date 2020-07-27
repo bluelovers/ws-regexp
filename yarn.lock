@@ -633,15 +633,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@ts-type/package-dts@^1.0.33":
-  version "1.0.33"
-  resolved "https://registry.npmjs.org/@ts-type/package-dts/-/package-dts-1.0.33.tgz#d55612cc8b7a56551a169f2e57523dde5dcc0bc5"
-  integrity sha512-kZxT28BCTsz+OKv9XHK+6BotJhyZ4zxXDyn3XuJzrGywMQEJkCN+3wos9g2UNf2cpUDiMtSE7ZNjVJ3IZd+diw==
-  dependencies:
-    "@types/semver" "^7.3.1"
-    ts-type "^1.2.25"
-
-"@ts-type/package-dts@^1.0.39":
+"@ts-type/package-dts@^1.0.33", "@ts-type/package-dts@^1.0.39":
   version "1.0.39"
   resolved "https://registry.npmjs.org/@ts-type/package-dts/-/package-dts-1.0.39.tgz#b53261bb68ad4578290ca824e83f173adc1e6424"
   integrity sha512-PpaKNA9Pyo9xycpuusUcREMVK9hT2mC83HqgKCaURAYNFkYQgVlVLjVr4SKdFJF3ItzpNizegm2TvK4ApYoEQQ==
@@ -1308,11 +1300,6 @@ char-regex@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
   integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
-
-chinese-parseint2@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/chinese-parseint2/-/chinese-parseint2-1.1.2.tgz#02221cf4ccde2df901f0805637701ca69ca14dcf"
-  integrity sha512-etJGmDIxA5SJIrhHOlISPQQmXP9JSMTF0r2PUJtGiBxArZMTt5k/jN3rV5T3bzy25CZc+zB6U8YDlIcAT38HBA==
 
 chinese-parseint2@^1.1.3:
   version "1.1.3"
@@ -4334,21 +4321,7 @@ stealthy-require@^1.1.1:
   resolved "https://registry.npmjs.org/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-str-util@^2.3.22:
-  version "2.3.25"
-  resolved "https://registry.npmjs.org/str-util/-/str-util-2.3.25.tgz#1f8195495ce4888af9fafc8f74c303ecad31a5c8"
-  integrity sha512-vVcRwtT4YE/pYPBBt6ENwjN9MxMo+PH/2cE7+2sPtJIVQGzf4VrbM3/lb39w5dON5npGJV9sSF6OFa2wHm92WA==
-  dependencies:
-    "@lazy-cjk/japanese" "^1.2.6"
-    chinese-parseint2 "^1.1.2"
-    cjk-conv "^1.2.88"
-    deepmerge "^4.2.2"
-    is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.0"
-    ts-type "^1.2.23"
-    uni-string "^1.1.10"
-
-str-util@^2.3.26:
+str-util@^2.3.22, str-util@^2.3.26:
   version "2.3.26"
   resolved "https://registry.npmjs.org/str-util/-/str-util-2.3.26.tgz#6b650c7847021b70dae5da44bfd4a2b957f88726"
   integrity sha512-HrRz1AYqhAlxLX3VdDp8VEx7IaV9kMMzpJTAEjykulgDwMUjDwJnuQaOxQsdSfYONryBfBrEkrF9WLuFkq12fQ==
@@ -4599,25 +4572,12 @@ ts-jest@^26.1.3:
     semver "7.x"
     yargs-parser "18.x"
 
-ts-toolbelt@^6.10.11:
-  version "6.13.11"
-  resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-6.13.11.tgz#46260d1cff0f2d635931df8d32239b73f2ed4f8d"
-  integrity sha512-QmvHwAofS1MAn1ndXCn2AVhxJLipaj4tK26SrhBTiydfgKtbLlU2efpIP/8Jocrc9ynNslZqrhqAesruJMlxCQ==
-
 ts-toolbelt@^6.13.28:
   version "6.13.33"
   resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-6.13.33.tgz#3ca91734e6cb5f74eb7695e398fed45f71571568"
   integrity sha512-vX12vIRMYSY5/5NveJKCMsTNKiT/xnNLVBzI8QRn0DukzylmYTI01vZpmFDF7uDaVX/Vq6Cweh2ckIv6AibGKQ==
 
-ts-type@^1.2.23, ts-type@^1.2.25:
-  version "1.2.25"
-  resolved "https://registry.npmjs.org/ts-type/-/ts-type-1.2.25.tgz#df22a21ffef30c32c362e5f086082aad5002f599"
-  integrity sha512-obwQ8ReEVs3RHKv59fPmBm6pfP/2XgCVzVF/SBSCMG1Rp9lkQI/MNOT/mVzLHWW8yEwhCKcoIdG1KmroslkPhA==
-  dependencies:
-    ts-toolbelt "^6.10.11"
-    typedarray-dts "^1.0.0"
-
-ts-type@^1.2.29:
+ts-type@^1.2.23, ts-type@^1.2.25, ts-type@^1.2.29:
   version "1.2.29"
   resolved "https://registry.npmjs.org/ts-type/-/ts-type-1.2.29.tgz#b03fd56921b628c80e9262e0dbf7423e45a3479c"
   integrity sha512-rSbX9RIn2WSTQMP4H/BFIlONqEgp+hDRwQ9XeXimNbvDB8Y6LiHVjG0/tky+tO5ZzExBUIMcUbzVIqKtQl4kzw==
