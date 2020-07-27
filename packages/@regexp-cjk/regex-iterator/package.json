@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@regexp-cjk/clone-regexp": "^1.0.2",
-    "ts-type": "^1.2.25"
+    "ts-type": "^1.2.29"
   },
   "publishConfig": {
     "access": "public"
