@@ -267,6 +267,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 久|乆|灸|玖|镹 1`] = `
+Array [
+  "久",
+  "乆",
+  "灸",
+  "玖",
+  "镹",
+]
+`;
+
 exports[`validate char of map 么|幺|庅|麼|麽 1`] = `
 Array [
   "么",
