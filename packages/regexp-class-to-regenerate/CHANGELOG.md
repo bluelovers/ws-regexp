@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/bluelovers/ws-regexp/compare/regexp-class-to-regenerate@1.0.16...regexp-class-to-regenerate@1.0.17) (2020-08-01)
+
+**Note:** Version bump only for package regexp-class-to-regenerate
+
+
+
+
+
 ## [1.0.16](https://github.com/bluelovers/ws-regexp/compare/regexp-class-to-regenerate@1.0.15...regexp-class-to-regenerate@1.0.16) (2020-07-27)
 
 **Note:** Version bump only for package regexp-class-to-regenerate

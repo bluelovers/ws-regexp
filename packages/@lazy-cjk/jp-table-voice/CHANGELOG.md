@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-voice@1.0.15...@lazy-cjk/jp-table-voice@1.0.16) (2020-08-01)
+
+
+### ♻️　Chores
+
+* update deps ([cbceeab](https://github.com/bluelovers/ws-regexp/commit/cbceeabefdd4c1830dd0ba8f1b6584d58fd5615e))
+
+
+
+
+
 ## [1.0.15](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-voice@1.0.14...@lazy-cjk/jp-table-voice@1.0.15) (2020-07-27)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.22](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-event@1.1.21...regexp-parser-event@1.1.22) (2020-08-01)
+
+
+### ♻️　Chores
+
+* update deps ([cbceeab](https://github.com/bluelovers/ws-regexp/commit/cbceeabefdd4c1830dd0ba8f1b6584d58fd5615e))
+
+
+
+
+
 ## [1.1.21](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-event@1.1.20...regexp-parser-event@1.1.21) (2020-07-27)
 
 
