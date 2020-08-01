@@ -100,6 +100,7 @@ export declare const table_jp_core: {
     readonly 懞: readonly ["蒙"];
     readonly 煇: readonly ["煇", "辉", "𪸩"];
     readonly 𪸩: readonly ["煇", "辉", "𪸩"];
+    readonly 签: readonly ["籤", "簽"];
 };
 /**
  * 此表內符合以下任意值時會觸發

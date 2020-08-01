@@ -488,6 +488,11 @@ export const table_jp_core = {
 		'𪸩',
 	],
 
+	'签': [
+		'籤',
+		'簽',
+	],
+
 } as const;
 
 /**
