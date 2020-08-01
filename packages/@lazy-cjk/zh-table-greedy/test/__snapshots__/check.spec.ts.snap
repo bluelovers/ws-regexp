@@ -1858,6 +1858,18 @@ Array [
 ]
 `;
 
+exports[`validate char of map 拣|捡|揀|撿|检|検|檢 1`] = `
+Array [
+  "拣",
+  "捡",
+  "揀",
+  "撿",
+  "检",
+  "検",
+  "檢",
+]
+`;
+
 exports[`validate char of map 拨|撥|播 1`] = `
 Array [
   "拨",
@@ -1916,16 +1928,6 @@ Array [
   "捜",
   "搜",
   "蒐",
-]
-`;
-
-exports[`validate char of map 捡|撿|检|検|檢 1`] = `
-Array [
-  "捡",
-  "撿",
-  "检",
-  "検",
-  "檢",
 ]
 `;
 
