@@ -2577,6 +2577,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 鱗|鳞|麐|麟 1`] = `
+Array [
+  "鱗",
+  "鳞",
+  "麐",
+  "麟",
+]
+`;
+
 exports[`validate char of map 鶇|鶫|鸫|𪂝 1`] = `
 Array [
   "鶇",
