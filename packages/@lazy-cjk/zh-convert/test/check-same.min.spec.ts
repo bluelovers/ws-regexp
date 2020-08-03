@@ -39,6 +39,8 @@ describe(`simple check`, () =>
 	([
 		'折',
 		'摺',
+		'吨',
+		'噸',
 	] as string[]).forEach((c) =>
 	{
 
