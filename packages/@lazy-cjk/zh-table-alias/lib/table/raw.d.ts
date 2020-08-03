@@ -378,4 +378,5 @@ export declare const table_plus_core: {
     readonly 毎: readonly ["毎", "每"];
     readonly 篦: readonly ["篦", "箆"];
     readonly 騨: readonly ["騨", "驒", "驔"];
+    readonly 猛: readonly ["猛", "勐"];
 };

@@ -1938,4 +1938,9 @@ export const table_plus_core = {
 		'驔',
 	],
 
+	'猛': [
+		'猛',
+		'勐',
+	],
+
 } as const;

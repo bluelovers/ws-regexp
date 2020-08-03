@@ -1706,6 +1706,10 @@ exports.table_plus_core = {
         "騨",
         "驒",
         "驔"
+    ],
+    "猛": [
+        "猛",
+        "勐"
     ]
 };
 //# sourceMappingURL=raw.js.map
