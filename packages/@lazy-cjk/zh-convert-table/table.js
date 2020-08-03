@@ -172,7 +172,7 @@ exports.table_cn2tw = {
     "劳": "勞",
     "势": "勢",
     "勋": "勛",
-    "勐": "猛",
+    "勐": "勐",
     "勚": "勩",
     "胜": "勝",
     "绩": "績",
@@ -2770,6 +2770,7 @@ exports.table_cn2tw = {
     "鬨": "鬨",
     "譁": "譁",
     "箇": "箇",
+    "猛": "猛",
 };
 exports.table_tw2cn = {
     "萬": "万",
@@ -6023,6 +6024,8 @@ exports.table_tw2cn = {
     "蔑": "蔑",
     "蒙": "蒙",
     "碹": "碹",
+    "勐": "勐",
+    "猛": "猛",
 };
 exports.default = exports;
 //# sourceMappingURL=table.js.map
