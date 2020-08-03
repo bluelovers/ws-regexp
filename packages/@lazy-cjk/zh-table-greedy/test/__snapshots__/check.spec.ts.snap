@@ -119,6 +119,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 㷉|尉|慰|熨|罻 1`] = `
+Array [
+  "㷉",
+  "尉",
+  "慰",
+  "熨",
+  "罻",
+]
+`;
+
 exports[`validate char of map 䃛|炼|煉|練|练|錬|鍊|鏈|链|𧹯|𫔀 1`] = `
 Array [
   "䃛",
@@ -678,6 +688,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 僖|喜|囍|憙|禧 1`] = `
+Array [
+  "僖",
+  "喜",
+  "囍",
+  "憙",
+  "禧",
+]
+`;
+
 exports[`validate char of map 僱|雇|頋|顧|顾 1`] = `
 Array [
   "僱",
@@ -902,6 +922,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 剪|翦 1`] = `
+Array [
+  "剪",
+  "翦",
+]
+`;
+
 exports[`validate char of map 剳|劄|扎|札|箚|紮 1`] = `
 Array [
   "剳",
@@ -919,6 +946,13 @@ Array [
   "勛",
   "勲",
   "勳",
+]
+`;
+
+exports[`validate char of map 勐|猛 1`] = `
+Array [
+  "勐",
+  "猛",
 ]
 `;
 
