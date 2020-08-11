@@ -1710,6 +1710,18 @@ exports.table_plus_core = {
     "猛": [
         "猛",
         "勐"
+    ],
+    "吿": [
+        "吿",
+        "告"
+    ],
+    "刃": [
+        "刃",
+        "刃"
+    ],
+    "教": [
+        "教",
+        "敎"
     ]
 };
 //# sourceMappingURL=raw.js.map
