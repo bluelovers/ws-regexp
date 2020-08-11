@@ -380,6 +380,6 @@ export declare const table_plus_core: {
     readonly 騨: readonly ["騨", "驒", "驔"];
     readonly 猛: readonly ["猛", "勐"];
     readonly 吿: readonly ["吿", "告"];
-    readonly 刃: readonly ["刃", "刃"];
+    readonly 刃: readonly ["刃", "刄"];
     readonly 教: readonly ["教", "敎"];
 };

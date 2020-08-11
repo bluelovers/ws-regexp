@@ -1718,7 +1718,7 @@ export const table_plus_core = {
 	],
 	"刃": [
 		"刃",
-		"刃"
+		"刄"
 	],
 	"教": [
 		"教",
