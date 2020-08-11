@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.40](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.39...@lazy-cjk/zh-table-alias@1.0.40) (2020-08-11)
+
+
+### 🛠　Build System
+
+* **zh-table-alias:** zh-table-alias table_jp:  , table_plus ([227cc2d](https://github.com/bluelovers/ws-regexp/commit/227cc2d196f0974cfcf573abc2d6fd05b88db1c2))
+* **zh-table-alias:** zh-table-alias table_jp: 吿|刃|教|告|敎 , table_plus 吿|刃|教|告|敎 ([e1d8e4d](https://github.com/bluelovers/ws-regexp/commit/e1d8e4d40fd930a57c1abda8279e5f7ebe5a93f9))
+
+
+
+
+
 ## [1.0.39](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.38...@lazy-cjk/zh-table-alias@1.0.39) (2020-08-03)
 
 

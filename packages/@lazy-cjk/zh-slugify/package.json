@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-slugify",
-  "version": "1.0.54",
+  "version": "1.0.55",
   "description": "",
   "keywords": [
     "char",
@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "@lazy-cjk/zh-table-greedy": "^1.0.52",
-    "@lazy-cjk/zh-table-list": "^1.0.51"
+    "@lazy-cjk/zh-table-list": "^1.0.52"
   },
   "publishConfig": {
     "access": "public"
