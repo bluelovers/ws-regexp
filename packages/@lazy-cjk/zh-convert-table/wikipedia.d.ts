@@ -19,5 +19,5 @@ export declare const wiki_s2t_v2: ITable;
  * https://zh.wikipedia.org/wiki/Wikipedia:%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86/%E7%B9%81%E7%AE%80%E5%8D%95%E5%AD%97
  */
 export declare const wiki_t2s_v2: ITable;
-declare const _default: typeof import("@lazy-cjk/zh-convert-table/wikipedia");
+declare const _default: typeof import("./wikipedia");
 export default _default;
