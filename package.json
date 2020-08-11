@@ -28,8 +28,8 @@
   "dependencies": {
     "@git-lazy/spawn": "^1.0.22",
     "@lazy-node/readlines": "^2.0.5",
-    "@yarn-tool/find-deps": "^1.0.23",
-    "@yarn-tool/ws-changed": "^1.0.32",
+    "@yarn-tool/find-deps": "^1.0.24",
+    "@yarn-tool/ws-changed": "^1.0.33",
     "bluebird": "^3.7.2",
     "build-ts-file": "^1.0.12",
     "cross-fetch": "^3.0.5",
@@ -39,13 +39,13 @@
     "fs-extra": "^9.0.1",
     "git-root2": "^1.0.20",
     "ignore": "^5.1.8",
-    "jest": "^26.2.2",
+    "jest": "^26.3.0",
     "jszip": "^3.5.0",
     "micromatch": "^4.0.2",
     "sort-object-keys2": "^2.0.3",
     "ts-jest": "^26.1.4",
     "uni-string": "^1.1.10",
-    "ws-pkg-list": "^1.0.46",
+    "ws-pkg-list": "^1.0.47",
     "xregexp": "^4.3.0",
     "zero-width": "^1.0.15"
   },
@@ -56,14 +56,14 @@
     "@types/diff": "^4.0.2",
     "@types/eslint": "^7.2.0",
     "@types/fs-extra": "^9.0.1",
-    "@types/jest": "^26.0.8",
-    "@types/lodash": "^4.14.158",
+    "@types/jest": "^26.0.9",
+    "@types/lodash": "^4.14.159",
     "@types/micromatch": "^4.0.1",
     "@types/node": "*",
     "@types/yargs": "^15.0.5",
     "eslint": "^7.6.0"
   },
   "peerDependencies": {
-    "lerna": "^3"
+    "lerna": "^3.22.1"
   }
 }
