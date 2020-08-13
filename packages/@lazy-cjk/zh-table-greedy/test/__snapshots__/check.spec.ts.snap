@@ -190,9 +190,10 @@ Array [
 ]
 `;
 
-exports[`validate char of map 䌽|埰|彩|採|睬|綵|踩|采 1`] = `
+exports[`validate char of map 䌽|倸|埰|彩|採|睬|綵|踩|采 1`] = `
 Array [
   "䌽",
+  "倸",
   "埰",
   "彩",
   "採",
