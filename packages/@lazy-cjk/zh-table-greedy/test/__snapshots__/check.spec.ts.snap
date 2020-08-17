@@ -2265,6 +2265,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 湌|飡|餐 1`] = `
+Array [
+  "湌",
+  "飡",
+  "餐",
+]
+`;
+
 exports[`validate char of map 溶|熔|融|螎|鎔|镕 1`] = `
 Array [
   "溶",
