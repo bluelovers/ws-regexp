@@ -56,12 +56,12 @@
     "@types/diff": "^4.0.2",
     "@types/eslint": "^7.2.0",
     "@types/fs-extra": "^9.0.1",
-    "@types/jest": "^26.0.9",
+    "@types/jest": "^26.0.10",
     "@types/lodash": "^4.14.159",
     "@types/micromatch": "^4.0.1",
     "@types/node": "*",
     "@types/yargs": "^15.0.5",
-    "eslint": "^7.6.0"
+    "eslint": "^7.7.0"
   },
   "peerDependencies": {
     "lerna": "^3.22.1"

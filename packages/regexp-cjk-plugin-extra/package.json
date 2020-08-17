@@ -78,7 +78,7 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.9",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "str-util": "^2.3.26",
     "uni-string": "^1.1.10"
   },
