@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/rewrite-pattern",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "capable of translating Unicode regular expressions",
   "keywords": [
     "expression",

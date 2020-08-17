@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-pattern@1.0.7...@regexp-cjk/rewrite-pattern@1.0.8) (2020-08-17)
+
+
+### ♻️　Chores
+
+* update deps ([bb52b67](https://github.com/bluelovers/ws-regexp/commit/bb52b67c5504e766875a6f7447112c7884dd7754))
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-pattern@1.0.6...@regexp-cjk/rewrite-pattern@1.0.7) (2020-07-19)
 
 

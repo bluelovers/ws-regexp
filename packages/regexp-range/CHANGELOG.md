@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.21](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.20...regexp-range@1.0.21) (2020-08-17)
+
+**Note:** Version bump only for package regexp-range
+
+
+
+
+
 ## [1.0.20](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.19...regexp-range@1.0.20) (2020-07-19)
 
 
