@@ -3,7 +3,7 @@
  */
 import { IOptionsInput, IOptionsRuntime, IRegExpUserInput } from './core';
 import { INodeInput } from 'regexp-parser-event';
-export declare function customizer(objValue: any, srcValue: any): any[];
+export declare function customizer<T extends any[], U extends any[]>(objValue: T, srcValue: U): [...T, ...U];
 export interface IGetSettingOptions<S extends IRegExpUserInput = IRegExpUserInput> {
     str: S;
     flags: string;

@@ -6,13 +6,12 @@ import { mergeWith, isArray } from 'lodash';
 import { IOptions, IOptionsInput, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './core';
 import { array_unique_overwrite } from 'array-hyper-unique';
 import { INodeInput } from 'regexp-parser-event';
-import zhRegExp from '../index';
 
-export function customizer(objValue, srcValue)
+export function customizer<T extends any[], U extends any[]>(objValue: T, srcValue: U)
 {
 	if (isArray(objValue))
 	{
-		return objValue.concat(srcValue);
+		return objValue.concat(srcValue) as [...T, ...U];
 	}
 }
 
