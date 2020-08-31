@@ -1404,6 +1404,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 埜|野 1`] = `
+Array [
+  "埜",
+  "野",
+]
+`;
+
 exports[`validate char of map 埼|崎|嵜|碕 1`] = `
 Array [
   "埼",
