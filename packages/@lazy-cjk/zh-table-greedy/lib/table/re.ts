@@ -147,7 +147,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[撥播]/ug, '拨'],
 	[/[挿揷]/ug, '插'],
 	[/[汀]/ug, '丁'],
-	[/[那]/ug, '娜'],
+	[/[娜哪]/ug, '那'],
 	[/[菈]/ug, '拉'],
 	[/[玲琳鈴铃淋]/ug, '林'],
 	[/[銘铭]/ug, '名'],

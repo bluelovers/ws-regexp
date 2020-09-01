@@ -1243,6 +1243,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 哪|娜|那 1`] = `
+Array [
+  "哪",
+  "娜",
+  "那",
+]
+`;
+
 exports[`validate char of map 唉|欸|誒|诶 1`] = `
 Array [
   "唉",
@@ -1526,13 +1534,6 @@ Array [
   "娘",
   "嬢",
   "孃",
-]
-`;
-
-exports[`validate char of map 娜|那 1`] = `
-Array [
-  "娜",
-  "那",
 ]
 `;
 
