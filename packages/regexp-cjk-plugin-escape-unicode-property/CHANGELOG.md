@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-escape-unicode-property@1.0.19...regexp-cjk-plugin-escape-unicode-property@1.0.20) (2020-11-10)
+
+**Note:** Version bump only for package regexp-cjk-plugin-escape-unicode-property
+
+
+
+
+
 ## [1.0.19](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-escape-unicode-property@1.0.18...regexp-cjk-plugin-escape-unicode-property@1.0.19) (2020-08-17)
 
 **Note:** Version bump only for package regexp-cjk-plugin-escape-unicode-property

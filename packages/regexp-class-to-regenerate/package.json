@@ -1,6 +1,6 @@
 {
   "name": "regexp-class-to-regenerate",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "convert Specified type RegExp to hacked regenerate object",
   "keywords": [
     "generator",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "regenerate": "^1.4.2",
-    "regexp-parser-event": "^1.1.22",
+    "regexp-parser-event": "^1.1.23",
     "regexpu-core": "^4.7.1"
   },
   "gitHead": "e79b293e6570ce6e908ffe9f58b7442f7673d30f"

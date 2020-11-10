@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.22](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.21...regexp-range@1.0.22) (2020-11-10)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([37d1a64](https://github.com/bluelovers/ws-regexp/commit/37d1a64a224cce19d5a738d1f64f45c60f8af31a))
+
+
+
+
+
 ## [1.0.21](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.20...regexp-range@1.0.21) (2020-08-17)
 
 **Note:** Version bump only for package regexp-range

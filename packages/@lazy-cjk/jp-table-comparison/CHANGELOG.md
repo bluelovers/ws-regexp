@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.12...@lazy-cjk/jp-table-comparison@1.0.13) (2020-11-10)
+
+
+### 🛠　Build System
+
+* update table ([93ae144](https://github.com/bluelovers/ws-regexp/commit/93ae144ff1e11707b933f608bffa18b6bd3d32b0))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([37d1a64](https://github.com/bluelovers/ws-regexp/commit/37d1a64a224cce19d5a738d1f64f45c60f8af31a))
+
+
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.11...@lazy-cjk/jp-table-comparison@1.0.12) (2020-07-19)
 
 

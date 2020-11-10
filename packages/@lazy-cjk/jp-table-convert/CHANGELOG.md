@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.26](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-convert@1.0.25...@lazy-cjk/jp-table-convert@1.0.26) (2020-11-10)
+
+
+### 🛠　Build System
+
+* update table ([18ff2c3](https://github.com/bluelovers/ws-regexp/commit/18ff2c319144c974a15005be9dba882b3e1746ee))
+
+
+
+
+
 ## [1.0.25](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-convert@1.0.24...@lazy-cjk/jp-table-convert@1.0.25) (2020-07-27)
 
 **Note:** Version bump only for package @lazy-cjk/jp-table-convert
