@@ -1145,6 +1145,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 吐|土 1`] = `
+Array [
+  "吐",
+  "土",
+]
+`;
+
 exports[`validate char of map 向|嚮 1`] = `
 Array [
   "向",

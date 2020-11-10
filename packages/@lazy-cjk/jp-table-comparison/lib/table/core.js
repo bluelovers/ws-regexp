@@ -11,6 +11,7 @@ exports.skip = [
     '隻',
     '无',
     '叶',
+    //'尨',
 ];
 exports.skip_00 = [
     '尨',

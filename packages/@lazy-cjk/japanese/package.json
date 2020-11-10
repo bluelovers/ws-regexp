@@ -41,11 +41,11 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "big.js": "^5.2.2",
+    "big.js": "^6.0.2",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "@types/big.js": "^4.0.5"
+    "@types/big.js": "^6.0.0"
   },
   "publishConfig": {
     "access": "public"

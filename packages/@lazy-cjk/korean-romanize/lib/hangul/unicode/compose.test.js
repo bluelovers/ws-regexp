@@ -9,6 +9,10 @@ const testCases = [
         jamoCodePoints: [0x1111, 0x1171, 0x11b6],
         expectedCodePoint: 0xd4db,
     },
+    // { // TODO
+    //   jamoCodePoints: [0x1100, 0x1162],
+    //   expectedCodePoint: 0xac1c
+    // }
 ];
 describe("arithmeticPrimaryCompositeMapping", () => {
     testCases.forEach(({ jamoCodePoints, expectedCodePoint }) => {

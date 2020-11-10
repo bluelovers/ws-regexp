@@ -57,5 +57,5 @@ export declare function unicodeEscape2(string: string, options?: {
     filter?: RegExp;
 }): string;
 export declare function escapeRegExp(str: string): string;
-declare const _default: Readonly<typeof import("regexp-helper-core")>;
+declare const _default: Readonly<typeof import(".")>;
 export default _default;

@@ -34,6 +34,7 @@ exports.list_range2 = [];
      * [ '洞', '幺', '两', '三', '刀', '五', '六', '拐', '八', '勾' ]
      */
     ['chineseMilitary'],
+    //['vietnam'],
 ].forEach(function (key) {
     let ls = numbers_1.predefineedTranscriptionConfigs.digits[key[0]];
     if (ls) {

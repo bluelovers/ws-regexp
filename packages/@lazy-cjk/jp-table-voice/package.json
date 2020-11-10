@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.9",
-    "ts-type": "^1.2.32"
+    "ts-type": "^1.2.34"
   },
   "publishConfig": {
     "access": "public"
