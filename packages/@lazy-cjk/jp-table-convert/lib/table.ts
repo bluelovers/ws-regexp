@@ -110,11 +110,6 @@ export const TABLE: ITABLE_MAIN = {
 			"zht": "個",
 			"zhs": "个"
 		},
-		"箇": {
-			"jp": "箇",
-			"zht": "個",
-			"zhs": "个"
-		},
 		"豊": {
 			"jp": "豊",
 			"zht": "豐",
@@ -2129,6 +2124,11 @@ export const TABLE: ITABLE_MAIN = {
 			"jp": "簡",
 			"zht": "簡",
 			"zhs": "简"
+		},
+		"箇": {
+			"jp": "箇",
+			"zht": "個",
+			"zhs": "个"
 		},
 		"節": {
 			"jp": "節",
