@@ -1958,4 +1958,10 @@ export const table_plus_core = {
 		'敎',
 	],
 
+	'蛎': [
+		'蛎',
+		'蜊',
+		'蠣',
+	],
+
 } as const;

@@ -1722,6 +1722,11 @@ exports.table_plus_core = {
     "教": [
         "教",
         "敎"
+    ],
+    "蛎": [
+        "蛎",
+        "蜊",
+        "蠣"
     ]
 };
 //# sourceMappingURL=raw.js.map
