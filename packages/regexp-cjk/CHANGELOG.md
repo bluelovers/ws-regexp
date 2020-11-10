@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.87](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.86...regexp-cjk@3.3.87) (2020-11-10)
+
+
+### 🔖　Miscellaneous
+
+* . ([599e6bb](https://github.com/bluelovers/ws-regexp/commit/599e6bb14bb2694b92edc63b005f682e13474697))
+
+
+
+
+
 ## [3.3.86](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.85...regexp-cjk@3.3.86) (2020-11-10)
 
 **Note:** Version bump only for package regexp-cjk

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.11](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.10...@lazy-cjk/japanese@1.2.11) (2020-11-10)
+
+
+### 🔖　Miscellaneous
+
+* . ([599e6bb](https://github.com/bluelovers/ws-regexp/commit/599e6bb14bb2694b92edc63b005f682e13474697))
+
+
+
+
+
 ## [1.2.10](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.9...@lazy-cjk/japanese@1.2.10) (2020-11-10)
 
 

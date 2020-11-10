@@ -1,6 +1,6 @@
 {
   "name": "regexgen2",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Generate regular expressions that match a set of strings",
   "keywords": [
     "regex",
