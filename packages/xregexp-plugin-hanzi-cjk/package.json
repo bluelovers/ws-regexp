@@ -30,8 +30,8 @@
   },
   "scripts": {
     "test": "jest",
-    "preversion": "yarn run prepublishOnly",
-    "prepublishOnly": "yarn run test",
+    "preversion": "yarn run test",
+    "prepublishOnly": "echo prepublishOnly",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "ncu": "yarn-tool ncu -u",
@@ -45,5 +45,5 @@
   "peerDependencies": {
     "xregexp": "*"
   },
-  "gitHead": "e79b293e6570ce6e908ffe9f58b7442f7673d30f"
+  "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b"
 }
