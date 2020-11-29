@@ -437,6 +437,18 @@ Array [
 ]
 `;
 
+exports[`validate char of map 伃|俞|兪|妤|瑜|諭|谕 1`] = `
+Array [
+  "伃",
+  "俞",
+  "兪",
+  "妤",
+  "瑜",
+  "諭",
+  "谕",
+]
+`;
+
 exports[`validate char of map 伎|妓|技 1`] = `
 Array [
   "伎",
@@ -1544,6 +1556,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 婉|宛|惌|琬|碗 1`] = `
+Array [
+  "婉",
+  "宛",
+  "惌",
+  "琬",
+  "碗",
+]
+`;
+
 exports[`validate char of map 媚|魅 1`] = `
 Array [
   "媚",
@@ -2186,6 +2208,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 毓|育 1`] = `
+Array [
+  "毓",
+  "育",
+]
+`;
+
 exports[`validate char of map 气|気|氣|汽|滊|炁 1`] = `
 Array [
   "气",
@@ -2341,6 +2370,13 @@ exports[`validate char of map 犬|狗 1`] = `
 Array [
   "犬",
   "狗",
+]
+`;
+
+exports[`validate char of map 玉|鈺 1`] = `
+Array [
+  "玉",
+  "鈺",
 ]
 `;
 
