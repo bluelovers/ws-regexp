@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/cns-11643",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "CNS11643中文標準交換碼全字庫(簡稱全字庫)",
   "keywords": [
     "cns-11643",

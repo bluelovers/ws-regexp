@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.12](https://github.com/bluelovers/regexpp/compare/regexpp2@1.3.11...regexpp2@1.3.12) (2021-02-04)
+
+
+### 🔖　Miscellaneous
+
+* . ([1c8bb96](https://github.com/bluelovers/regexpp/commit/1c8bb96673f0b28fea3d489b16f190d651b3e8e3))
+
+
+
+
+
 ## [1.3.11](https://github.com/bluelovers/regexpp/compare/regexpp2@1.3.10...regexpp2@1.3.11) (2020-11-10)
 
 
