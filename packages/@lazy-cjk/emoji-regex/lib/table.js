@@ -155,6 +155,14 @@ exports.mapEmoji = new Map([
         "face without mouth"
     ],
     [
+        "😶‍🌫️",
+        "face in clouds"
+    ],
+    [
+        "😶‍🌫",
+        "face in clouds"
+    ],
+    [
         "😏",
         "smirking face"
     ],
@@ -169,6 +177,10 @@ exports.mapEmoji = new Map([
     [
         "😬",
         "grimacing face"
+    ],
+    [
+        "😮‍💨",
+        "face exhaling"
     ],
     [
         "🤥",
@@ -232,7 +244,11 @@ exports.mapEmoji = new Map([
     ],
     [
         "😵",
-        "dizzy face"
+        "knocked-out face"
+    ],
+    [
+        "😵‍💫",
+        "face with spiral eyes"
     ],
     [
         "🤯",
@@ -529,6 +545,22 @@ exports.mapEmoji = new Map([
     [
         "💔",
         "broken heart"
+    ],
+    [
+        "❤️‍🔥",
+        "heart on fire"
+    ],
+    [
+        "❤‍🔥",
+        "heart on fire"
+    ],
+    [
+        "❤️‍🩹",
+        "mending heart"
+    ],
+    [
+        "❤‍🩹",
+        "mending heart"
     ],
     [
         "❤️",
@@ -1824,27 +1856,123 @@ exports.mapEmoji = new Map([
     ],
     [
         "🧔",
-        "man: beard"
+        "person: beard"
     ],
     [
         "🧔🏻",
-        "man: light skin tone, beard"
+        "person: light skin tone, beard"
     ],
     [
         "🧔🏼",
-        "man: medium-light skin tone, beard"
+        "person: medium-light skin tone, beard"
     ],
     [
         "🧔🏽",
-        "man: medium skin tone, beard"
+        "person: medium skin tone, beard"
     ],
     [
         "🧔🏾",
-        "man: medium-dark skin tone, beard"
+        "person: medium-dark skin tone, beard"
     ],
     [
         "🧔🏿",
+        "person: dark skin tone, beard"
+    ],
+    [
+        "🧔‍♂️",
+        "man: beard"
+    ],
+    [
+        "🧔‍♂",
+        "man: beard"
+    ],
+    [
+        "🧔🏻‍♂️",
+        "man: light skin tone, beard"
+    ],
+    [
+        "🧔🏻‍♂",
+        "man: light skin tone, beard"
+    ],
+    [
+        "🧔🏼‍♂️",
+        "man: medium-light skin tone, beard"
+    ],
+    [
+        "🧔🏼‍♂",
+        "man: medium-light skin tone, beard"
+    ],
+    [
+        "🧔🏽‍♂️",
+        "man: medium skin tone, beard"
+    ],
+    [
+        "🧔🏽‍♂",
+        "man: medium skin tone, beard"
+    ],
+    [
+        "🧔🏾‍♂️",
+        "man: medium-dark skin tone, beard"
+    ],
+    [
+        "🧔🏾‍♂",
+        "man: medium-dark skin tone, beard"
+    ],
+    [
+        "🧔🏿‍♂️",
         "man: dark skin tone, beard"
+    ],
+    [
+        "🧔🏿‍♂",
+        "man: dark skin tone, beard"
+    ],
+    [
+        "🧔‍♀️",
+        "woman: beard"
+    ],
+    [
+        "🧔‍♀",
+        "woman: beard"
+    ],
+    [
+        "🧔🏻‍♀️",
+        "woman: light skin tone, beard"
+    ],
+    [
+        "🧔🏻‍♀",
+        "woman: light skin tone, beard"
+    ],
+    [
+        "🧔🏼‍♀️",
+        "woman: medium-light skin tone, beard"
+    ],
+    [
+        "🧔🏼‍♀",
+        "woman: medium-light skin tone, beard"
+    ],
+    [
+        "🧔🏽‍♀️",
+        "woman: medium skin tone, beard"
+    ],
+    [
+        "🧔🏽‍♀",
+        "woman: medium skin tone, beard"
+    ],
+    [
+        "🧔🏾‍♀️",
+        "woman: medium-dark skin tone, beard"
+    ],
+    [
+        "🧔🏾‍♀",
+        "woman: medium-dark skin tone, beard"
+    ],
+    [
+        "🧔🏿‍♀️",
+        "woman: dark skin tone, beard"
+    ],
+    [
+        "🧔🏿‍♀",
+        "woman: dark skin tone, beard"
     ],
     [
         "👨‍🦰",
@@ -10411,12 +10539,392 @@ exports.mapEmoji = new Map([
         "kiss"
     ],
     [
+        "💏🏻",
+        "kiss: light skin tone"
+    ],
+    [
+        "💏🏼",
+        "kiss: medium-light skin tone"
+    ],
+    [
+        "💏🏽",
+        "kiss: medium skin tone"
+    ],
+    [
+        "💏🏾",
+        "kiss: medium-dark skin tone"
+    ],
+    [
+        "💏🏿",
+        "kiss: dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍💋‍🧑🏼",
+        "kiss: person, person, light skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍💋‍🧑🏼",
+        "kiss: person, person, light skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍💋‍🧑🏽",
+        "kiss: person, person, light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍💋‍🧑🏽",
+        "kiss: person, person, light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍💋‍🧑🏾",
+        "kiss: person, person, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍💋‍🧑🏾",
+        "kiss: person, person, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍💋‍🧑🏿",
+        "kiss: person, person, light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍💋‍🧑🏿",
+        "kiss: person, person, light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍💋‍🧑🏻",
+        "kiss: person, person, medium-light skin tone, light skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍💋‍🧑🏻",
+        "kiss: person, person, medium-light skin tone, light skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍💋‍🧑🏽",
+        "kiss: person, person, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍💋‍🧑🏽",
+        "kiss: person, person, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍💋‍🧑🏾",
+        "kiss: person, person, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍💋‍🧑🏾",
+        "kiss: person, person, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍💋‍🧑🏿",
+        "kiss: person, person, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍💋‍🧑🏿",
+        "kiss: person, person, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍💋‍🧑🏻",
+        "kiss: person, person, medium skin tone, light skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍💋‍🧑🏻",
+        "kiss: person, person, medium skin tone, light skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍💋‍🧑🏼",
+        "kiss: person, person, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍💋‍🧑🏼",
+        "kiss: person, person, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍💋‍🧑🏾",
+        "kiss: person, person, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍💋‍🧑🏾",
+        "kiss: person, person, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍💋‍🧑🏿",
+        "kiss: person, person, medium skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍💋‍🧑🏿",
+        "kiss: person, person, medium skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍💋‍🧑🏻",
+        "kiss: person, person, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍💋‍🧑🏻",
+        "kiss: person, person, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍💋‍🧑🏼",
+        "kiss: person, person, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍💋‍🧑🏼",
+        "kiss: person, person, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍💋‍🧑🏽",
+        "kiss: person, person, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍💋‍🧑🏽",
+        "kiss: person, person, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍💋‍🧑🏿",
+        "kiss: person, person, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍💋‍🧑🏿",
+        "kiss: person, person, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍💋‍🧑🏻",
+        "kiss: person, person, dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍💋‍🧑🏻",
+        "kiss: person, person, dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍💋‍🧑🏼",
+        "kiss: person, person, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍💋‍🧑🏼",
+        "kiss: person, person, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍💋‍🧑🏽",
+        "kiss: person, person, dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍💋‍🧑🏽",
+        "kiss: person, person, dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍💋‍🧑🏾",
+        "kiss: person, person, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍💋‍🧑🏾",
+        "kiss: person, person, dark skin tone, medium-dark skin tone"
+    ],
+    [
         "👩‍❤️‍💋‍👨",
         "kiss: woman, man"
     ],
     [
         "👩‍❤‍💋‍👨",
         "kiss: woman, man"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👨🏻",
+        "kiss: woman, man, light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👨🏻",
+        "kiss: woman, man, light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👨🏼",
+        "kiss: woman, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👨🏼",
+        "kiss: woman, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👨🏽",
+        "kiss: woman, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👨🏽",
+        "kiss: woman, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👨🏾",
+        "kiss: woman, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👨🏾",
+        "kiss: woman, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👨🏿",
+        "kiss: woman, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👨🏿",
+        "kiss: woman, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👨🏻",
+        "kiss: woman, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👨🏻",
+        "kiss: woman, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👨🏼",
+        "kiss: woman, man, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👨🏼",
+        "kiss: woman, man, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👨🏽",
+        "kiss: woman, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👨🏽",
+        "kiss: woman, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👨🏾",
+        "kiss: woman, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👨🏾",
+        "kiss: woman, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👨🏿",
+        "kiss: woman, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👨🏿",
+        "kiss: woman, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👨🏻",
+        "kiss: woman, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👨🏻",
+        "kiss: woman, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👨🏼",
+        "kiss: woman, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👨🏼",
+        "kiss: woman, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👨🏽",
+        "kiss: woman, man, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👨🏽",
+        "kiss: woman, man, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👨🏾",
+        "kiss: woman, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👨🏾",
+        "kiss: woman, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👨🏿",
+        "kiss: woman, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👨🏿",
+        "kiss: woman, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👨🏻",
+        "kiss: woman, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👨🏻",
+        "kiss: woman, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👨🏼",
+        "kiss: woman, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👨🏼",
+        "kiss: woman, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👨🏽",
+        "kiss: woman, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👨🏽",
+        "kiss: woman, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👨🏾",
+        "kiss: woman, man, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👨🏾",
+        "kiss: woman, man, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👨🏿",
+        "kiss: woman, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👨🏿",
+        "kiss: woman, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👨🏻",
+        "kiss: woman, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👨🏻",
+        "kiss: woman, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👨🏼",
+        "kiss: woman, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👨🏼",
+        "kiss: woman, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👨🏽",
+        "kiss: woman, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👨🏽",
+        "kiss: woman, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👨🏾",
+        "kiss: woman, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👨🏾",
+        "kiss: woman, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👨🏿",
+        "kiss: woman, man, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👨🏿",
+        "kiss: woman, man, dark skin tone"
     ],
     [
         "👨‍❤️‍💋‍👨",
@@ -10427,6 +10935,206 @@ exports.mapEmoji = new Map([
         "kiss: man, man"
     ],
     [
+        "👨🏻‍❤️‍💋‍👨🏻",
+        "kiss: man, man, light skin tone"
+    ],
+    [
+        "👨🏻‍❤‍💋‍👨🏻",
+        "kiss: man, man, light skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍💋‍👨🏼",
+        "kiss: man, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏻‍❤‍💋‍👨🏼",
+        "kiss: man, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍💋‍👨🏽",
+        "kiss: man, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏻‍❤‍💋‍👨🏽",
+        "kiss: man, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍💋‍👨🏾",
+        "kiss: man, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏻‍❤‍💋‍👨🏾",
+        "kiss: man, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍💋‍👨🏿",
+        "kiss: man, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏻‍❤‍💋‍👨🏿",
+        "kiss: man, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍💋‍👨🏻",
+        "kiss: man, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👨🏼‍❤‍💋‍👨🏻",
+        "kiss: man, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍💋‍👨🏼",
+        "kiss: man, man, medium-light skin tone"
+    ],
+    [
+        "👨🏼‍❤‍💋‍👨🏼",
+        "kiss: man, man, medium-light skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍💋‍👨🏽",
+        "kiss: man, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏼‍❤‍💋‍👨🏽",
+        "kiss: man, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍💋‍👨🏾",
+        "kiss: man, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏼‍❤‍💋‍👨🏾",
+        "kiss: man, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍💋‍👨🏿",
+        "kiss: man, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏼‍❤‍💋‍👨🏿",
+        "kiss: man, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍💋‍👨🏻",
+        "kiss: man, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👨🏽‍❤‍💋‍👨🏻",
+        "kiss: man, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍💋‍👨🏼",
+        "kiss: man, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏽‍❤‍💋‍👨🏼",
+        "kiss: man, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍💋‍👨🏽",
+        "kiss: man, man, medium skin tone"
+    ],
+    [
+        "👨🏽‍❤‍💋‍👨🏽",
+        "kiss: man, man, medium skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍💋‍👨🏾",
+        "kiss: man, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏽‍❤‍💋‍👨🏾",
+        "kiss: man, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍💋‍👨🏿",
+        "kiss: man, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👨🏽‍❤‍💋‍👨🏿",
+        "kiss: man, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍💋‍👨🏻",
+        "kiss: man, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏾‍❤‍💋‍👨🏻",
+        "kiss: man, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍💋‍👨🏼",
+        "kiss: man, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏾‍❤‍💋‍👨🏼",
+        "kiss: man, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍💋‍👨🏽",
+        "kiss: man, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏾‍❤‍💋‍👨🏽",
+        "kiss: man, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍💋‍👨🏾",
+        "kiss: man, man, medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍❤‍💋‍👨🏾",
+        "kiss: man, man, medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍💋‍👨🏿",
+        "kiss: man, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👨🏾‍❤‍💋‍👨🏿",
+        "kiss: man, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍💋‍👨🏻",
+        "kiss: man, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏿‍❤‍💋‍👨🏻",
+        "kiss: man, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍💋‍👨🏼",
+        "kiss: man, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏿‍❤‍💋‍👨🏼",
+        "kiss: man, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍💋‍👨🏽",
+        "kiss: man, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏿‍❤‍💋‍👨🏽",
+        "kiss: man, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍💋‍👨🏾",
+        "kiss: man, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍❤‍💋‍👨🏾",
+        "kiss: man, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍💋‍👨🏿",
+        "kiss: man, man, dark skin tone"
+    ],
+    [
+        "👨🏿‍❤‍💋‍👨🏿",
+        "kiss: man, man, dark skin tone"
+    ],
+    [
         "👩‍❤️‍💋‍👩",
         "kiss: woman, woman"
     ],
@@ -10435,8 +11143,388 @@ exports.mapEmoji = new Map([
         "kiss: woman, woman"
     ],
     [
+        "👩🏻‍❤️‍💋‍👩🏻",
+        "kiss: woman, woman, light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👩🏻",
+        "kiss: woman, woman, light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👩🏼",
+        "kiss: woman, woman, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👩🏼",
+        "kiss: woman, woman, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👩🏽",
+        "kiss: woman, woman, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👩🏽",
+        "kiss: woman, woman, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👩🏾",
+        "kiss: woman, woman, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👩🏾",
+        "kiss: woman, woman, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍💋‍👩🏿",
+        "kiss: woman, woman, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍💋‍👩🏿",
+        "kiss: woman, woman, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👩🏻",
+        "kiss: woman, woman, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👩🏻",
+        "kiss: woman, woman, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👩🏼",
+        "kiss: woman, woman, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👩🏼",
+        "kiss: woman, woman, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👩🏽",
+        "kiss: woman, woman, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👩🏽",
+        "kiss: woman, woman, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👩🏾",
+        "kiss: woman, woman, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👩🏾",
+        "kiss: woman, woman, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍💋‍👩🏿",
+        "kiss: woman, woman, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍💋‍👩🏿",
+        "kiss: woman, woman, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👩🏻",
+        "kiss: woman, woman, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👩🏻",
+        "kiss: woman, woman, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👩🏼",
+        "kiss: woman, woman, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👩🏼",
+        "kiss: woman, woman, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👩🏽",
+        "kiss: woman, woman, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👩🏽",
+        "kiss: woman, woman, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👩🏾",
+        "kiss: woman, woman, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👩🏾",
+        "kiss: woman, woman, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍💋‍👩🏿",
+        "kiss: woman, woman, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍💋‍👩🏿",
+        "kiss: woman, woman, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👩🏻",
+        "kiss: woman, woman, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👩🏻",
+        "kiss: woman, woman, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👩🏼",
+        "kiss: woman, woman, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👩🏼",
+        "kiss: woman, woman, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👩🏽",
+        "kiss: woman, woman, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👩🏽",
+        "kiss: woman, woman, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👩🏾",
+        "kiss: woman, woman, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👩🏾",
+        "kiss: woman, woman, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍💋‍👩🏿",
+        "kiss: woman, woman, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍💋‍👩🏿",
+        "kiss: woman, woman, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👩🏻",
+        "kiss: woman, woman, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👩🏻",
+        "kiss: woman, woman, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👩🏼",
+        "kiss: woman, woman, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👩🏼",
+        "kiss: woman, woman, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👩🏽",
+        "kiss: woman, woman, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👩🏽",
+        "kiss: woman, woman, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👩🏾",
+        "kiss: woman, woman, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👩🏾",
+        "kiss: woman, woman, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍💋‍👩🏿",
+        "kiss: woman, woman, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍💋‍👩🏿",
+        "kiss: woman, woman, dark skin tone"
+    ],
+    [
         "💑",
         "couple with heart"
+    ],
+    [
+        "💑🏻",
+        "couple with heart: light skin tone"
+    ],
+    [
+        "💑🏼",
+        "couple with heart: medium-light skin tone"
+    ],
+    [
+        "💑🏽",
+        "couple with heart: medium skin tone"
+    ],
+    [
+        "💑🏾",
+        "couple with heart: medium-dark skin tone"
+    ],
+    [
+        "💑🏿",
+        "couple with heart: dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍🧑🏼",
+        "couple with heart: person, person, light skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍🧑🏼",
+        "couple with heart: person, person, light skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍🧑🏽",
+        "couple with heart: person, person, light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍🧑🏽",
+        "couple with heart: person, person, light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍🧑🏾",
+        "couple with heart: person, person, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍🧑🏾",
+        "couple with heart: person, person, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤️‍🧑🏿",
+        "couple with heart: person, person, light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏻‍❤‍🧑🏿",
+        "couple with heart: person, person, light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍🧑🏻",
+        "couple with heart: person, person, medium-light skin tone, light skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍🧑🏻",
+        "couple with heart: person, person, medium-light skin tone, light skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍🧑🏽",
+        "couple with heart: person, person, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍🧑🏽",
+        "couple with heart: person, person, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍🧑🏾",
+        "couple with heart: person, person, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍🧑🏾",
+        "couple with heart: person, person, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤️‍🧑🏿",
+        "couple with heart: person, person, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏼‍❤‍🧑🏿",
+        "couple with heart: person, person, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍🧑🏻",
+        "couple with heart: person, person, medium skin tone, light skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍🧑🏻",
+        "couple with heart: person, person, medium skin tone, light skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍🧑🏼",
+        "couple with heart: person, person, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍🧑🏼",
+        "couple with heart: person, person, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍🧑🏾",
+        "couple with heart: person, person, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍🧑🏾",
+        "couple with heart: person, person, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤️‍🧑🏿",
+        "couple with heart: person, person, medium skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏽‍❤‍🧑🏿",
+        "couple with heart: person, person, medium skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍🧑🏻",
+        "couple with heart: person, person, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍🧑🏻",
+        "couple with heart: person, person, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍🧑🏼",
+        "couple with heart: person, person, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍🧑🏼",
+        "couple with heart: person, person, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍🧑🏽",
+        "couple with heart: person, person, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍🧑🏽",
+        "couple with heart: person, person, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏾‍❤️‍🧑🏿",
+        "couple with heart: person, person, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏾‍❤‍🧑🏿",
+        "couple with heart: person, person, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍🧑🏻",
+        "couple with heart: person, person, dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍🧑🏻",
+        "couple with heart: person, person, dark skin tone, light skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍🧑🏼",
+        "couple with heart: person, person, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍🧑🏼",
+        "couple with heart: person, person, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍🧑🏽",
+        "couple with heart: person, person, dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍🧑🏽",
+        "couple with heart: person, person, dark skin tone, medium skin tone"
+    ],
+    [
+        "🧑🏿‍❤️‍🧑🏾",
+        "couple with heart: person, person, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍❤‍🧑🏾",
+        "couple with heart: person, person, dark skin tone, medium-dark skin tone"
     ],
     [
         "👩‍❤️‍👨",
@@ -10447,6 +11535,206 @@ exports.mapEmoji = new Map([
         "couple with heart: woman, man"
     ],
     [
+        "👩🏻‍❤️‍👨🏻",
+        "couple with heart: woman, man, light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👨🏻",
+        "couple with heart: woman, man, light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👨🏼",
+        "couple with heart: woman, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👨🏼",
+        "couple with heart: woman, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👨🏽",
+        "couple with heart: woman, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👨🏽",
+        "couple with heart: woman, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👨🏾",
+        "couple with heart: woman, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👨🏾",
+        "couple with heart: woman, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👨🏿",
+        "couple with heart: woman, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👨🏿",
+        "couple with heart: woman, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👨🏻",
+        "couple with heart: woman, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👨🏻",
+        "couple with heart: woman, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👨🏼",
+        "couple with heart: woman, man, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👨🏼",
+        "couple with heart: woman, man, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👨🏽",
+        "couple with heart: woman, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👨🏽",
+        "couple with heart: woman, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👨🏾",
+        "couple with heart: woman, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👨🏾",
+        "couple with heart: woman, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👨🏿",
+        "couple with heart: woman, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👨🏿",
+        "couple with heart: woman, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👨🏻",
+        "couple with heart: woman, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👨🏻",
+        "couple with heart: woman, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👨🏼",
+        "couple with heart: woman, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👨🏼",
+        "couple with heart: woman, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👨🏽",
+        "couple with heart: woman, man, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👨🏽",
+        "couple with heart: woman, man, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👨🏾",
+        "couple with heart: woman, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👨🏾",
+        "couple with heart: woman, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👨🏿",
+        "couple with heart: woman, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👨🏿",
+        "couple with heart: woman, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👨🏻",
+        "couple with heart: woman, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👨🏻",
+        "couple with heart: woman, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👨🏼",
+        "couple with heart: woman, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👨🏼",
+        "couple with heart: woman, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👨🏽",
+        "couple with heart: woman, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👨🏽",
+        "couple with heart: woman, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👨🏾",
+        "couple with heart: woman, man, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👨🏾",
+        "couple with heart: woman, man, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👨🏿",
+        "couple with heart: woman, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👨🏿",
+        "couple with heart: woman, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👨🏻",
+        "couple with heart: woman, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👨🏻",
+        "couple with heart: woman, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👨🏼",
+        "couple with heart: woman, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👨🏼",
+        "couple with heart: woman, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👨🏽",
+        "couple with heart: woman, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👨🏽",
+        "couple with heart: woman, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👨🏾",
+        "couple with heart: woman, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👨🏾",
+        "couple with heart: woman, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👨🏿",
+        "couple with heart: woman, man, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👨🏿",
+        "couple with heart: woman, man, dark skin tone"
+    ],
+    [
         "👨‍❤️‍👨",
         "couple with heart: man, man"
     ],
@@ -10455,12 +11743,412 @@ exports.mapEmoji = new Map([
         "couple with heart: man, man"
     ],
     [
+        "👨🏻‍❤️‍👨🏻",
+        "couple with heart: man, man, light skin tone"
+    ],
+    [
+        "👨🏻‍❤‍👨🏻",
+        "couple with heart: man, man, light skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍👨🏼",
+        "couple with heart: man, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏻‍❤‍👨🏼",
+        "couple with heart: man, man, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍👨🏽",
+        "couple with heart: man, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏻‍❤‍👨🏽",
+        "couple with heart: man, man, light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍👨🏾",
+        "couple with heart: man, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏻‍❤‍👨🏾",
+        "couple with heart: man, man, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏻‍❤️‍👨🏿",
+        "couple with heart: man, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏻‍❤‍👨🏿",
+        "couple with heart: man, man, light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍👨🏻",
+        "couple with heart: man, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👨🏼‍❤‍👨🏻",
+        "couple with heart: man, man, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍👨🏼",
+        "couple with heart: man, man, medium-light skin tone"
+    ],
+    [
+        "👨🏼‍❤‍👨🏼",
+        "couple with heart: man, man, medium-light skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍👨🏽",
+        "couple with heart: man, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏼‍❤‍👨🏽",
+        "couple with heart: man, man, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍👨🏾",
+        "couple with heart: man, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏼‍❤‍👨🏾",
+        "couple with heart: man, man, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏼‍❤️‍👨🏿",
+        "couple with heart: man, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏼‍❤‍👨🏿",
+        "couple with heart: man, man, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍👨🏻",
+        "couple with heart: man, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👨🏽‍❤‍👨🏻",
+        "couple with heart: man, man, medium skin tone, light skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍👨🏼",
+        "couple with heart: man, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏽‍❤‍👨🏼",
+        "couple with heart: man, man, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍👨🏽",
+        "couple with heart: man, man, medium skin tone"
+    ],
+    [
+        "👨🏽‍❤‍👨🏽",
+        "couple with heart: man, man, medium skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍👨🏾",
+        "couple with heart: man, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏽‍❤‍👨🏾",
+        "couple with heart: man, man, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏽‍❤️‍👨🏿",
+        "couple with heart: man, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👨🏽‍❤‍👨🏿",
+        "couple with heart: man, man, medium skin tone, dark skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍👨🏻",
+        "couple with heart: man, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏾‍❤‍👨🏻",
+        "couple with heart: man, man, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍👨🏼",
+        "couple with heart: man, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏾‍❤‍👨🏼",
+        "couple with heart: man, man, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍👨🏽",
+        "couple with heart: man, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏾‍❤‍👨🏽",
+        "couple with heart: man, man, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍👨🏾",
+        "couple with heart: man, man, medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍❤‍👨🏾",
+        "couple with heart: man, man, medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍❤️‍👨🏿",
+        "couple with heart: man, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👨🏾‍❤‍👨🏿",
+        "couple with heart: man, man, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍👨🏻",
+        "couple with heart: man, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏿‍❤‍👨🏻",
+        "couple with heart: man, man, dark skin tone, light skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍👨🏼",
+        "couple with heart: man, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏿‍❤‍👨🏼",
+        "couple with heart: man, man, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍👨🏽",
+        "couple with heart: man, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏿‍❤‍👨🏽",
+        "couple with heart: man, man, dark skin tone, medium skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍👨🏾",
+        "couple with heart: man, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍❤‍👨🏾",
+        "couple with heart: man, man, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍❤️‍👨🏿",
+        "couple with heart: man, man, dark skin tone"
+    ],
+    [
+        "👨🏿‍❤‍👨🏿",
+        "couple with heart: man, man, dark skin tone"
+    ],
+    [
         "👩‍❤️‍👩",
         "couple with heart: woman, woman"
     ],
     [
         "👩‍❤‍👩",
         "couple with heart: woman, woman"
+    ],
+    [
+        "👩🏻‍❤️‍👩🏻",
+        "couple with heart: woman, woman, light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👩🏻",
+        "couple with heart: woman, woman, light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👩🏼",
+        "couple with heart: woman, woman, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👩🏼",
+        "couple with heart: woman, woman, light skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👩🏽",
+        "couple with heart: woman, woman, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👩🏽",
+        "couple with heart: woman, woman, light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👩🏾",
+        "couple with heart: woman, woman, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👩🏾",
+        "couple with heart: woman, woman, light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏻‍❤️‍👩🏿",
+        "couple with heart: woman, woman, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏻‍❤‍👩🏿",
+        "couple with heart: woman, woman, light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👩🏻",
+        "couple with heart: woman, woman, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👩🏻",
+        "couple with heart: woman, woman, medium-light skin tone, light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👩🏼",
+        "couple with heart: woman, woman, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👩🏼",
+        "couple with heart: woman, woman, medium-light skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👩🏽",
+        "couple with heart: woman, woman, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👩🏽",
+        "couple with heart: woman, woman, medium-light skin tone, medium skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👩🏾",
+        "couple with heart: woman, woman, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👩🏾",
+        "couple with heart: woman, woman, medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏼‍❤️‍👩🏿",
+        "couple with heart: woman, woman, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏼‍❤‍👩🏿",
+        "couple with heart: woman, woman, medium-light skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👩🏻",
+        "couple with heart: woman, woman, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👩🏻",
+        "couple with heart: woman, woman, medium skin tone, light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👩🏼",
+        "couple with heart: woman, woman, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👩🏼",
+        "couple with heart: woman, woman, medium skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👩🏽",
+        "couple with heart: woman, woman, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👩🏽",
+        "couple with heart: woman, woman, medium skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👩🏾",
+        "couple with heart: woman, woman, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👩🏾",
+        "couple with heart: woman, woman, medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏽‍❤️‍👩🏿",
+        "couple with heart: woman, woman, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏽‍❤‍👩🏿",
+        "couple with heart: woman, woman, medium skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👩🏻",
+        "couple with heart: woman, woman, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👩🏻",
+        "couple with heart: woman, woman, medium-dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👩🏼",
+        "couple with heart: woman, woman, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👩🏼",
+        "couple with heart: woman, woman, medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👩🏽",
+        "couple with heart: woman, woman, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👩🏽",
+        "couple with heart: woman, woman, medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👩🏾",
+        "couple with heart: woman, woman, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👩🏾",
+        "couple with heart: woman, woman, medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍❤️‍👩🏿",
+        "couple with heart: woman, woman, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏾‍❤‍👩🏿",
+        "couple with heart: woman, woman, medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👩🏻",
+        "couple with heart: woman, woman, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👩🏻",
+        "couple with heart: woman, woman, dark skin tone, light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👩🏼",
+        "couple with heart: woman, woman, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👩🏼",
+        "couple with heart: woman, woman, dark skin tone, medium-light skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👩🏽",
+        "couple with heart: woman, woman, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👩🏽",
+        "couple with heart: woman, woman, dark skin tone, medium skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👩🏾",
+        "couple with heart: woman, woman, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👩🏾",
+        "couple with heart: woman, woman, dark skin tone, medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍❤️‍👩🏿",
+        "couple with heart: woman, woman, dark skin tone"
+    ],
+    [
+        "👩🏿‍❤‍👩🏿",
+        "couple with heart: woman, woman, dark skin tone"
     ],
     [
         "👪",
@@ -13028,7 +14716,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "🎯",
-        "direct hit"
+        "bullseye"
     ],
     [
         "🪀",
@@ -14092,7 +15780,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "🔫",
-        "pistol"
+        "water pistol"
     ],
     [
         "🪃",
@@ -14964,7 +16652,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "❓",
-        "question mark"
+        "red question mark"
     ],
     [
         "❔",
@@ -14976,7 +16664,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "❗",
-        "exclamation mark"
+        "red exclamation mark"
     ],
     [
         "〰️",
