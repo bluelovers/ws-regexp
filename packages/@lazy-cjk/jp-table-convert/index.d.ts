@@ -14,5 +14,5 @@ import { IOptions } from './lib/types';
 export { ZHJP_TABLE, ZHJP_TABLE_SAFE };
 export { TABLE, TABLE_SAFE };
 export declare const defaultOptions: IOptions;
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

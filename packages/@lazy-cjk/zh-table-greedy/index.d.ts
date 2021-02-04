@@ -8,5 +8,5 @@ export { _greedyTableBuild };
 export declare function greedyTableTest(input: string): boolean;
 export declare function greedyTableCharArray(char: string): readonly string[];
 export declare function greedyTableReplace(input: string): string;
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

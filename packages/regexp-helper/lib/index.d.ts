@@ -32,5 +32,5 @@ export declare function prototypeToFlags<T extends Partial<{
 }>, R = Partial<typeof FlagsName> & {
     [k: string]: string;
 }>(inputObject: T, flagMap?: R): string;
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

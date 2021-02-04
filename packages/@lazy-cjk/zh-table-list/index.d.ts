@@ -26,5 +26,5 @@ export declare const jp: (char: string, options?: IOptions) => string[];
  * @returns {string[]}
  */
 export declare function auto(char: string, options?: IOptions): string[];
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

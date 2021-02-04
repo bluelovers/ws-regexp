@@ -14,5 +14,5 @@ export declare function zhs2jp(char: string, options?: IOptions): string[];
 export declare function zh2jp(char: string, options?: IOptions): string[];
 export declare function jp2zh(char: string, options?: IOptions): string[];
 export declare function lazyAll(char: string, options?: IOptions): string[];
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

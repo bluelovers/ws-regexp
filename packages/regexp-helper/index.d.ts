@@ -8,5 +8,5 @@ export declare const nativeFlags: string;
 export { getNativeFlags, stripNonNativeFlags, isNativeFlags };
 export { prototypeToFlags, prototypeToFlagsArray };
 export { parseRegularExpressionString };
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

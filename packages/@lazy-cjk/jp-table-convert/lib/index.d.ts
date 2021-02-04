@@ -69,5 +69,5 @@ export declare function cjk2zht(str: any, options?: IOptions): string;
  * @returns {string}
  */
 export declare function cjk2zhs(str: any, options?: IOptions): string;
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

@@ -16,5 +16,5 @@ export declare function parseRegExpLiteral(source: string | RegExp, options?: Re
  * @param options The options to validate.
  */
 export declare function validateRegExpLiteral(source: string, options?: RegExpValidator.Options): void;
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

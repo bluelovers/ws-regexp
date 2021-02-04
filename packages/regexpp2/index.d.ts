@@ -3,5 +3,5 @@
  */
 export * from "./src";
 export * from "./src/const";
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

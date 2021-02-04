@@ -25,5 +25,5 @@ export declare type IOptions = IFastGlobOptions & IOptionsConv & {
 export declare function handldTarget(search: string | string[], options?: IOptions): Bluebird<string[]>;
 export declare function handleOptions(options: IOptions): IOptions;
 export declare function handleContext(text: string, options: IOptionsConv): any;
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;
