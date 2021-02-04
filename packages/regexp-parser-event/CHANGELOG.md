@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.25](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-event@1.1.24...regexp-parser-event@1.1.25) (2021-02-04)
+
+**Note:** Version bump only for package regexp-parser-event
+
+
+
+
+
 ## [1.1.24](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-event@1.1.23...regexp-parser-event@1.1.24) (2020-11-10)
 
 

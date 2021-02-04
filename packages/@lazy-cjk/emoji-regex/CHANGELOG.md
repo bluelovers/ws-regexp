@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.6...@lazy-cjk/emoji-regex@1.0.7) (2021-02-04)
+
+
+### 🛠　Build System
+
+* update script ([af71c70](https://github.com/bluelovers/ws-regexp/commit/af71c706be44e8a4267d5d0c84503208df72d911))
+* **emoji:** update emoji cache ([ba29857](https://github.com/bluelovers/ws-regexp/commit/ba29857cb4078afd7078d147fe326cf3b16f9f49))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([2b007f5](https://github.com/bluelovers/ws-regexp/commit/2b007f51e17090a6a65297437efa5873ee4bde9f))
+
+
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.5...@lazy-cjk/emoji-regex@1.0.6) (2020-11-10)
 
 

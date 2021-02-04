@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.74](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.73...@lazy-cjk/slugify@1.0.74) (2021-02-04)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([2b007f5](https://github.com/bluelovers/ws-regexp/commit/2b007f51e17090a6a65297437efa5873ee4bde9f))
+
+
+
+
+
 ## [1.0.73](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.72...@lazy-cjk/slugify@1.0.73) (2020-11-29)
 
 **Note:** Version bump only for package @lazy-cjk/slugify
