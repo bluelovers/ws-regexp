@@ -80,7 +80,7 @@
     "@lazy-cjk/zh-slugify": "^1.0.64",
     "@regexp-cjk/regex-pinyin": "^1.0.1",
     "@sindresorhus/transliterate": "^0.1.1",
-    "emoji.json": "^13.0.0",
+    "emoji.json": "^13.1.0",
     "escape-string-regexp": "^4.0.0",
     "lodash": "^4.17.20",
     "regexp-helper": "^1.0.20",
