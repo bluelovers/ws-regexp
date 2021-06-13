@@ -1,29 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`add {
+  dotAll: true,
+  multiline: true,
+  ignoreCase: true,
+  global: true,
+  hasIndices: true
+} 1`] = `"dgims"`;
+
+exports[`add {
   sticky: true,
   unicode: true,
   dotAll: true,
   multiline: true,
   ignoreCase: true,
-  global: true
-} 1`] = `"gimsuy"`;
+  global: true,
+  hasIndices: true
+} 1`] = `"dgimsuy"`;
 
 exports[`add {
   unicode: true,
   dotAll: true,
   multiline: true,
   ignoreCase: true,
-  global: true
-} 1`] = `"gimsu"`;
+  global: true,
+  hasIndices: true
+} 1`] = `"dgimsu"`;
 
-exports[`add { dotAll: true, multiline: true, ignoreCase: true, global: true } 1`] = `"gims"`;
+exports[`add { global: true, hasIndices: true } 1`] = `"dg"`;
 
-exports[`add { global: true } 1`] = `"g"`;
+exports[`add { hasIndices: true } 1`] = `"d"`;
 
-exports[`add { ignoreCase: true, global: true } 1`] = `"gi"`;
+exports[`add { ignoreCase: true, global: true, hasIndices: true } 1`] = `"dgi"`;
 
-exports[`add { multiline: true, ignoreCase: true, global: true } 1`] = `"gim"`;
+exports[`add { multiline: true, ignoreCase: true, global: true, hasIndices: true } 1`] = `"dgim"`;
+
+exports[`remove {
+  dotAll: false,
+  multiline: false,
+  ignoreCase: false,
+  global: false,
+  hasIndices: false
+} 1`] = `"yu"`;
+
+exports[`remove {
+  multiline: false,
+  ignoreCase: false,
+  global: false,
+  hasIndices: false
+} 1`] = `"syu"`;
 
 exports[`remove {
   sticky: false,
@@ -31,7 +56,8 @@ exports[`remove {
   dotAll: false,
   multiline: false,
   ignoreCase: false,
-  global: false
+  global: false,
+  hasIndices: false
 } 1`] = `""`;
 
 exports[`remove {
@@ -39,13 +65,12 @@ exports[`remove {
   dotAll: false,
   multiline: false,
   ignoreCase: false,
-  global: false
+  global: false,
+  hasIndices: false
 } 1`] = `"y"`;
 
-exports[`remove { dotAll: false, multiline: false, ignoreCase: false, global: false } 1`] = `"uy"`;
+exports[`remove { global: false, hasIndices: false } 1`] = `"imsyu"`;
 
-exports[`remove { global: false } 1`] = `"imsuy"`;
+exports[`remove { hasIndices: false } 1`] = `"gimsyu"`;
 
-exports[`remove { ignoreCase: false, global: false } 1`] = `"msuy"`;
-
-exports[`remove { multiline: false, ignoreCase: false, global: false } 1`] = `"suy"`;
+exports[`remove { ignoreCase: false, global: false, hasIndices: false } 1`] = `"msyu"`;

@@ -9,6 +9,7 @@ var EnumFlagMap;
     EnumFlagMap["dotAll"] = "s";
     EnumFlagMap["sticky"] = "y";
     EnumFlagMap["unicode"] = "u";
+    EnumFlagMap["hasIndices"] = "d";
 })(EnumFlagMap = exports.EnumFlagMap || (exports.EnumFlagMap = {}));
 exports.flagsOrderReverse = [
     'sticky',
@@ -17,9 +18,10 @@ exports.flagsOrderReverse = [
     'multiline',
     'ignoreCase',
     'global',
+    'hasIndices',
 ];
 function rewriteFlags(flags, options) {
-    if (typeof flags === 'object') {
+    if (flags !== null && typeof flags === 'object') {
         ([flags, options] = ['', flags]);
     }
     flags = (flags !== null && flags !== void 0 ? flags : '');

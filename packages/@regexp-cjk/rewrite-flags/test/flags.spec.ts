@@ -1,5 +1,6 @@
 import rewriteFlags, { flagsOrderReverse, IOptionsRewriteFlags } from '..';
 import { inspect } from 'util';
+import { EnumFlagMap } from '../index';
 
 describe(`add`, () =>
 {
@@ -35,9 +36,7 @@ describe(`add`, () =>
 
 describe(`remove`, () =>
 {
-	const flags = `gimsuy`;
-
-	const maxLength = flags.length;
+	const flags: string = Object.values(EnumFlagMap).join('');
 
 	flagsOrderReverse
 		.forEach((key, i) =>

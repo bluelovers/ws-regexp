@@ -23,6 +23,7 @@ export interface IOptionsRewriteFlags {
         Modifies the [`unicode`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) property of the cloned `RegExp` instance.
      */
     unicode?: boolean;
+    hasIndices?: boolean;
 }
 export declare enum EnumFlagMap {
     global = "g",
@@ -30,8 +31,9 @@ export declare enum EnumFlagMap {
     multiline = "m",
     dotAll = "s",
     sticky = "y",
-    unicode = "u"
+    unicode = "u",
+    hasIndices = "d"
 }
-export declare const flagsOrderReverse: ("global" | "unicode" | "multiline" | "ignoreCase" | "sticky" | "dotAll")[];
+export declare const flagsOrderReverse: ("global" | "ignoreCase" | "multiline" | "dotAll" | "sticky" | "unicode" | "hasIndices")[];
 export declare function rewriteFlags(flags: string | IOptionsRewriteFlags, options?: IOptionsRewriteFlags): string;
 export default rewriteFlags;
