@@ -33,7 +33,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-/.*/
+/.nvmrc/
 .idea
 node_modules
 ~ci.list.txt

@@ -1,8 +1,8 @@
 {
-  "name": "@lazy-cjk/types",
+  "name": "@regexp-cjk/types",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/types#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/types#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
