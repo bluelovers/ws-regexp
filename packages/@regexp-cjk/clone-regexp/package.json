@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@regexp-cjk/rewrite-flags": "^1.0.2",
-    "clone-regexp": "^2.2.0"
+    "clone-regexp": "< 3 >= 2.2"
   },
   "publishConfig": {
     "access": "public"

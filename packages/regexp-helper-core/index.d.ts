@@ -17,7 +17,7 @@ export declare function toUnicode2(charCode: number | string, options?: {
     noMerge?: boolean;
     wrap?: boolean;
 }): string;
-export declare function _toUnicode(charCode: number, wrap?: boolean): `\\u{${string}}` | `\\u${string}`;
+export declare function _toUnicode(charCode: number, wrap?: boolean): string;
 export declare function isDoubleUnicode(str: string): boolean;
 export declare function isRegExp<T extends RegExp>(r: T): T & RegExp;
 export declare function isRegExp(r: RegExp): r is RegExp;

@@ -69,7 +69,7 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run test",
+    "preversion": "yarn run test",
     "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",

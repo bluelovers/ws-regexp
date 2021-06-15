@@ -80,7 +80,7 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run test",
+    "preversion": "yarn run test",
     "prepublishOnly_": "yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "echo postpublish && node ./script/publish-after",
@@ -92,7 +92,7 @@
   "dependencies": {
     "@lazy-cjk/zh-table-list": "^1.0.62",
     "array-hyper-unique": "^1.1.9",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "regexp-helper": "^1.0.21",
     "regexp-parser-event": "^1.1.25",
     "regexp-parser-literal": "^1.1.17",

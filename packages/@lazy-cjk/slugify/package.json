@@ -65,7 +65,7 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run test",
+    "preversion": "yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
@@ -79,15 +79,15 @@
     "@lazy-cjk/korean-romanize": "^1.0.8",
     "@lazy-cjk/zh-slugify": "^1.0.65",
     "@regexp-cjk/regex-pinyin": "^1.0.1",
-    "@sindresorhus/transliterate": "^0.1.1",
+    "@sindresorhus/transliterate": "< 1",
     "emoji.json": "^13.1.0",
-    "escape-string-regexp": "^4.0.0",
-    "lodash": "^4.17.20",
+    "escape-string-regexp": "< 5 >= 4",
+    "lodash": "^4.17.21",
     "regexp-helper": "^1.0.21",
     "transliteration": "^2.2.0"
   },
   "devDependencies": {
-    "@sindresorhus/slugify": "^1.1.0",
+    "@sindresorhus/slugify": "< 2 >= 1",
     "slugify-extra": "^1.0.0"
   },
   "publishConfig": {

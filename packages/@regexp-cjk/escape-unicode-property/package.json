@@ -22,7 +22,7 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run test",
+    "preversion": "yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@regexp-cjk/rewrite-pattern": "^1.0.10",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   },
   "publishConfig": {
     "access": "public"
