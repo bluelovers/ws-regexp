@@ -3,6 +3,7 @@
  */
 
 import { ICreateRegExp, ITypeCreateRegExp } from './index';
+import {} from '@regexp-cjk/types';
 
 export enum FlagsName
 {
@@ -45,6 +46,9 @@ export enum FlagsName
 	freeSpacing = 'x',
 	x = 'x',
 
+	indices = 'd',
+	d = 'd',
+
 	n = 'n',
 
 }
@@ -69,6 +73,30 @@ export const FlagsPattern: {
 	s: [
 		['^.$', '\n', true],
 	],
+
+	d: [
+		[
+			'a+(?<Z>z)?', 'xaaaz', null, (re, value, input, pattern, RegExpClass, flag, ...argv) =>
+		{
+			let ret: RegExpExecArray<'Z'> = re.exec(input);
+
+			if (
+				ret.indices[0][0] === 1
+				&& ret.indices[0][1] === 5
+				&& ret.indices[1][0] === 4
+				&& ret.indices[1][1] === 5
+				&& ret.indices.groups.Z[0] === 4
+				&& ret.indices.groups.Z[1] === 5
+			)
+			{
+				return true;
+			}
+
+			return false;
+		},
+		],
+	],
+
 };
 
 export interface IFlagsPatternTestFn

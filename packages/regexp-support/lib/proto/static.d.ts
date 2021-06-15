@@ -2,6 +2,7 @@
  * Created by user on 2018/4/28/028.
  */
 /// <reference lib="es2015.core" />
+/// <reference lib="es2015.symbol.wellknown" />
 /// <reference lib="es2018.regexp" />
 import { ITypeCreateRegExp } from '../index';
 interface IRegExpStaticPlus {
@@ -107,6 +108,7 @@ export declare const REGEXP_STATIC: {
     '$+'?: boolean;
     '$`'?: boolean;
     '$\''?: boolean;
+    readonly [Symbol.species]?: boolean;
 };
 export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     $10?: boolean;
@@ -131,5 +133,6 @@ export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     '$+'?: boolean;
     '$`'?: boolean;
     '$\''?: boolean;
+    readonly [Symbol.species]?: boolean;
 };
 export {};

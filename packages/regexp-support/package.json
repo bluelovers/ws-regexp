@@ -39,8 +39,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node ./test/flags.js && jest -u",
-    "prepublishOnly": "yarn run test",
+    "build:report": "node ./test/flags.js",
+    "test": "yarn run build:report && jest -u",
+    "preversion": "yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "ncu": "yarn-tool ncu -u",

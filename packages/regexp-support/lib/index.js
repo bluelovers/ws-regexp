@@ -55,17 +55,22 @@ RegExpClass = RegExp, testPattern = flags_1.FlagsPattern) {
         return testPattern[flag].every(function (v) {
             let [pattern, input, value, fn] = v;
             let bool;
-            let r = createRegExp(pattern, flag, RegExpClass);
-            if (fn) {
-                if (typeof fn == 'function') {
-                    bool = fn(r, value, input, pattern, RegExpClass, flag);
+            try {
+                let r = createRegExp(pattern, flag, RegExpClass);
+                if (fn) {
+                    if (typeof fn == 'function') {
+                        bool = fn(r, value, input, pattern, RegExpClass, flag);
+                    }
+                    else {
+                        bool = r[fn](input) === value;
+                    }
                 }
                 else {
-                    bool = r[fn](input) === value;
+                    bool = r.test(input) === value;
                 }
             }
-            else {
-                bool = r.test(input) === value;
+            catch (e) {
+                return false;
             }
             return bool;
         }) === true;

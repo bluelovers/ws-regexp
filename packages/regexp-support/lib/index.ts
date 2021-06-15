@@ -53,22 +53,29 @@ export function testFlag<T>(flag: string,
 			let [pattern, input, value, fn] = v;
 			let bool: boolean;
 
-			let r = createRegExp(pattern, flag, RegExpClass);
-
-			if (fn)
+			try
 			{
-				if (typeof fn == 'function')
+				let r = createRegExp(pattern, flag, RegExpClass);
+
+				if (fn)
 				{
-					bool = (fn as IFlagsPatternTestFn)(r, value, input, pattern, RegExpClass, flag);
+					if (typeof fn == 'function')
+					{
+						bool = (fn as IFlagsPatternTestFn)(r, value, input, pattern, RegExpClass, flag);
+					}
+					else
+					{
+						bool = r[fn](input) === value;
+					}
 				}
 				else
 				{
-					bool = r[fn](input) === value;
+					bool = r.test(input) === value;
 				}
 			}
-			else
+			catch (e)
 			{
-				bool = r.test(input) === value;
+				return false;
 			}
 
 			return bool;
@@ -77,8 +84,6 @@ export function testFlag<T>(flag: string,
 
 	return false;
 }
-
-import { PatternTest } from './pattern';
 
 export function testFlagsAll(RegExpClass: typeof RegExp = RegExp, skipPatternCheck?: boolean): {
 	g: boolean,

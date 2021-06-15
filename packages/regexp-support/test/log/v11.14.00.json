@@ -34,6 +34,8 @@
       "s": true,
       "freeSpacing": false,
       "x": false,
+      "indices": false,
+      "d": false,
       "n": false
     },
     "flagsAll": {
@@ -67,7 +69,8 @@
       "ignoreCase": true,
       "multiline": true,
       "sticky": true,
-      "unicode": true
+      "unicode": true,
+      "hasIndices": false
     },
     "static": {
       "$1": true,

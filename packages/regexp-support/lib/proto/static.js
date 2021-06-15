@@ -3,6 +3,7 @@
  * Created by user on 2018/4/28/028.
  */
 /// <reference lib="es2015.core" />
+/// <reference lib="es2015.symbol.wellknown" />
 /// <reference lib="es2018.regexp" />
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.testStatic = exports.REGEXP_STATIC = void 0;

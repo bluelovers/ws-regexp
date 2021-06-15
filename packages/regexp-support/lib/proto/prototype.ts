@@ -2,14 +2,20 @@
  * Created by user on 2018/4/28/028.
  */
 
+/// <reference lib="es2015.core" />
+/// <reference lib="es2015.symbol.wellknown" />
+/// <reference lib="es2018.regexp" />
+
 import { createRegExp, ITypeCreateRegExp } from '../index';
 
 export interface IRegExpPrototype extends RegExp
 {
 	readonly dotAll: boolean,
+	readonly hasIndices: boolean,
 }
 
 export const PROTOTYPE = {
+
 	source: false,
 	flags: false,
 
@@ -21,6 +27,8 @@ export const PROTOTYPE = {
 	multiline: false,
 	sticky: false,
 	unicode: false,
+
+	hasIndices: false,
 
 } as {
 	[k in keyof IRegExpPrototype]?: boolean

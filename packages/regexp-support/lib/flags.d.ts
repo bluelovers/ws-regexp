@@ -29,6 +29,8 @@ export declare enum FlagsName {
     s = "s",
     freeSpacing = "x",
     x = "x",
+    indices = "d",
+    d = "d",
     n = "n"
 }
 export declare const FlagsPattern: {

@@ -1,24 +1,25 @@
 {
   "versions": {
-    "node": "11.14.0",
-    "ares": "1.15.0",
-    "brotli": "1.0.7",
-    "cldr": "34.0",
-    "http_parser": "2.8.0",
-    "icu": "63.1",
-    "llhttp": "1.1.1",
-    "modules": "67",
-    "napi": "4",
-    "nghttp2": "1.37.0",
-    "openssl": "1.1.1b",
-    "tz": "2018e",
-    "unicode": "11.0",
-    "uv": "1.27.0",
-    "v8": "7.0.276.38-node.18",
+    "node": "16.3.0",
+    "ares": "1.17.1",
+    "brotli": "1.0.9",
+    "cldr": "39.0",
+    "icu": "69.1",
+    "llhttp": "6.0.2",
+    "modules": "93",
+    "napi": "8",
+    "nghttp2": "1.42.0",
+    "nghttp3": "0.1.0-DEV",
+    "ngtcp2": "0.1.0-DEV",
+    "openssl": "1.1.1k+quic",
+    "tz": "2021a",
+    "unicode": "13.0",
+    "uv": "1.41.0",
+    "v8": "9.0.257.25-node.16",
     "zlib": "1.2.11"
   },
   "support": {
-    "nativeFlags": "gimsuy",
+    "nativeFlags": "dgimsuy",
     "flags": {
       "multiline": true,
       "m": true,
@@ -34,11 +35,12 @@
       "s": true,
       "freeSpacing": false,
       "x": false,
-      "indices": false,
-      "d": false,
+      "indices": true,
+      "d": true,
       "n": false
     },
     "flagsAll": {
+      "d": true,
       "g": true,
       "i": true,
       "m": true,
@@ -70,7 +72,7 @@
       "multiline": true,
       "sticky": true,
       "unicode": true,
-      "hasIndices": false
+      "hasIndices": true
     },
     "static": {
       "$1": true,

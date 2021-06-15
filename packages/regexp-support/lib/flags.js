@@ -35,6 +35,8 @@ var FlagsName;
     // ---------------
     FlagsName["freeSpacing"] = "x";
     FlagsName["x"] = "x";
+    FlagsName["indices"] = "d";
+    FlagsName["d"] = "d";
     FlagsName["n"] = "n";
 })(FlagsName = exports.FlagsName || (exports.FlagsName = {}));
 Object
@@ -46,6 +48,22 @@ Object
 exports.FlagsPattern = {
     s: [
         ['^.$', '\n', true],
+    ],
+    d: [
+        [
+            'a+(?<Z>z)?', 'xaaaz', null, (re, value, input, pattern, RegExpClass, flag, ...argv) => {
+                let ret = re.exec(input);
+                if (ret.indices[0][0] === 1
+                    && ret.indices[0][1] === 5
+                    && ret.indices[1][0] === 4
+                    && ret.indices[1][1] === 5
+                    && ret.indices.groups.Z[0] === 4
+                    && ret.indices.groups.Z[1] === 5) {
+                    return true;
+                }
+                return false;
+            },
+        ],
     ],
 };
 exports.default = FlagsName;

@@ -26,6 +26,8 @@ export declare const support: Readonly<{
         readonly s: boolean;
         readonly freeSpacing: boolean;
         readonly x: boolean;
+        readonly indices: boolean;
+        readonly d: boolean;
         readonly n: boolean;
     };
     /**
@@ -59,6 +61,7 @@ export declare const support: Readonly<{
     };
     prototype: {
         readonly dotAll?: boolean;
+        readonly hasIndices?: boolean;
         exec?: boolean;
         test?: boolean;
         readonly source?: boolean;
@@ -70,6 +73,10 @@ export declare const support: Readonly<{
         readonly flags?: boolean;
         readonly sticky?: boolean;
         readonly unicode?: boolean;
+        [Symbol.match]?: boolean;
+        [Symbol.replace]?: boolean;
+        [Symbol.search]?: boolean;
+        [Symbol.split]?: boolean;
     };
     static: {
         $10?: boolean;
@@ -94,6 +101,7 @@ export declare const support: Readonly<{
         '$+'?: boolean;
         '$`'?: boolean;
         '$\''?: boolean;
+        readonly [Symbol.species]?: boolean;
     };
     symbol: {
         species: boolean;

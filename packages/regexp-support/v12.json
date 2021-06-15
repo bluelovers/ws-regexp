@@ -1,20 +1,20 @@
 {
   "versions": {
-    "node": "12.3.1",
+    "node": "12.16.2",
     "ares": "1.15.0",
     "brotli": "1.0.7",
-    "cldr": "35.1",
-    "http_parser": "2.8.0",
-    "icu": "64.2",
-    "llhttp": "1.1.3",
+    "cldr": "36.0",
+    "http_parser": "2.9.3",
+    "icu": "65.1",
+    "llhttp": "2.0.4",
     "modules": "72",
-    "napi": "4",
-    "nghttp2": "1.38.0",
-    "openssl": "1.1.1b",
-    "tz": "2019a",
+    "napi": "5",
+    "nghttp2": "1.40.0",
+    "openssl": "1.1.1e",
+    "tz": "2019c",
     "unicode": "12.1",
-    "uv": "1.29.1",
-    "v8": "7.4.288.27-node.18",
+    "uv": "1.34.2",
+    "v8": "7.8.279.23-node.34",
     "zlib": "1.2.11"
   },
   "support": {
@@ -34,6 +34,8 @@
       "s": true,
       "freeSpacing": false,
       "x": false,
+      "indices": false,
+      "d": false,
       "n": false
     },
     "flagsAll": {
@@ -67,7 +69,8 @@
       "ignoreCase": true,
       "multiline": true,
       "sticky": true,
-      "unicode": true
+      "unicode": true,
+      "hasIndices": false
     },
     "static": {
       "$1": true,
