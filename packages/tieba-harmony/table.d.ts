@@ -12,7 +12,7 @@ export declare const table: string[];
  *
  * @type {string[][]}
  */
-export declare const table2: String[][];
+export declare const table2: (string | String)[][];
 export declare const table3: string[][];
 declare const _default: typeof import("./table");
 export default _default;
