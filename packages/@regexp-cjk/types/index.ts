@@ -89,6 +89,27 @@ declare global
 
 	}
 
+	interface RegExpMatchArray<K extends string = string>
+	{
+		// @ts-ignore
+		groups?: Record<K, string>
+		indices?: IRegExpIndices<K>
+	}
+
+	interface RegExpExecArray<K extends string = string>
+	{
+		// @ts-ignore
+		groups?: Record<K, string>
+		indices?: IRegExpIndices<K>
+	}
+
+}
+
+export type IRegExpIndicesGroups<K extends string = string> = Record<K, [number, number]>
+
+export interface IRegExpIndices<K extends string = string> extends Array<[number, number]>
+{
+	groups?: IRegExpIndicesGroups<K>
 }
 
 export {}

@@ -76,5 +76,17 @@ declare global {
         rightContext: string;
         '$\'': string;
     }
+    interface RegExpMatchArray<K extends string = string> {
+        groups?: Record<K, string>;
+        indices?: IRegExpIndices<K>;
+    }
+    interface RegExpExecArray<K extends string = string> {
+        groups?: Record<K, string>;
+        indices?: IRegExpIndices<K>;
+    }
+}
+export declare type IRegExpIndicesGroups<K extends string = string> = Record<K, [number, number]>;
+export interface IRegExpIndices<K extends string = string> extends Array<[number, number]> {
+    groups?: IRegExpIndicesGroups<K>;
 }
 export {};
