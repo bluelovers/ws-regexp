@@ -50,6 +50,7 @@ function mergeOptions(base = {}, ...opts) {
         .concat(opts)
         .filter(o => o);
     if (arr.length > 1) {
+        // @ts-ignore
         base = lodash_1.mergeWith(...(arr.map(o => {
             return fixOptions(o);
             // @ts-ignore

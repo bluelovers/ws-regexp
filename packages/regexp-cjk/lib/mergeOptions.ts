@@ -80,6 +80,7 @@ export function mergeOptions<T extends INodeInput = INodeInput>(base: IOptionsIn
 
 	if (arr.length > 1)
 	{
+		// @ts-ignore
 		base = mergeWith(...(arr.map(o =>
 		{
 			return fixOptions(o);
