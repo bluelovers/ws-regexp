@@ -22,7 +22,7 @@ export class DefaultMap<K = State, V = State> extends Map<K, V>
 		this.defaultGetter = defaultGetter;
 	}
 
-	get(key)
+	override get(key)
 	{
 		if (!super.has(key))
 		{
@@ -33,6 +33,7 @@ export class DefaultMap<K = State, V = State> extends Map<K, V>
 
 		return super.get(key);
 	}
+
 }
 
 export default DefaultMap;
