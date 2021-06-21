@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-pattern@1.0.12...@regexp-cjk/rewrite-pattern@1.0.13) (2021-06-21)
+
+**Note:** Version bump only for package @regexp-cjk/rewrite-pattern
+
+
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-pattern@1.0.10...@regexp-cjk/rewrite-pattern@1.0.12) (2021-06-21)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.9](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.8...execall2@2.0.9) (2021-06-21)
+
+**Note:** Version bump only for package execall2
+
+
+
+
+
 ## [2.0.8](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.7...execall2@2.0.8) (2021-06-21)
 
 
