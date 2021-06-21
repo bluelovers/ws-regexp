@@ -68,8 +68,8 @@
     "build:commit": "ts-node ./test/script/commit-build.ts",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
@@ -77,6 +77,9 @@
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "chinese_convert": "^1.0.8"

@@ -66,6 +66,7 @@
     "diff": "^5.0.0",
     "fs-extra": "^10.0.0",
     "fs-iconv": "^3.0.12",
+    "tslib": "^2.3.0",
     "yargs": "^17.0.1"
   },
   "preferGlobal": true,

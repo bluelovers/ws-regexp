@@ -77,6 +77,7 @@
     "@lazy-cjk/zh-convert": "^1.0.34",
     "@lazy-cjk/zh-table-alias": "^1.0.44",
     "@lazy-cjk/zh-table-greedy": "^1.0.61",
+    "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {

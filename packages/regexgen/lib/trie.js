@@ -1,12 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Trie = void 0;
-const state_1 = __importDefault(require("./state"));
-const minimize_1 = __importDefault(require("./minimize"));
-const regex_1 = __importDefault(require("./regex"));
+const tslib_1 = require("tslib");
+const state_1 = tslib_1.__importDefault(require("./state"));
+const minimize_1 = tslib_1.__importDefault(require("./minimize"));
+const regex_1 = tslib_1.__importDefault(require("./regex"));
 /**
  * A Trie represents a set of strings in a tree data structure
  * where each edge represents a single character.

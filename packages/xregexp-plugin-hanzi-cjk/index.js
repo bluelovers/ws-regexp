@@ -2,15 +2,13 @@
 /**
  * Created by user on 2018/4/24/024.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isInstalled = exports.install = exports.addSupportToXRegExp = exports.X_REGEX_DATA = exports.isXRegExp = exports.createXRegExp = void 0;
-const xregexp_1 = __importDefault(require("xregexp"));
+const tslib_1 = require("tslib");
+const xregexp_1 = tslib_1.__importDefault(require("xregexp"));
 const zh_table_list_1 = require("@lazy-cjk/zh-table-list");
 const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
-const create_xregexp_1 = __importDefault(require("@regexp-cjk/create-xregexp"));
+const create_xregexp_1 = tslib_1.__importDefault(require("@regexp-cjk/create-xregexp"));
 exports.createXRegExp = create_xregexp_1.default;
 const is_xregexp_1 = require("@regexp-cjk/is-xregexp");
 Object.defineProperty(exports, "isXRegExp", { enumerable: true, get: function () { return is_xregexp_1.isXRegExp; } });

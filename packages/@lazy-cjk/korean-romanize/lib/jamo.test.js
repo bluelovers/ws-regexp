@@ -1,9 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const jamo_1 = __importDefault(require("./jamo"));
+const tslib_1 = require("tslib");
+const jamo_1 = tslib_1.__importDefault(require("./jamo"));
 const [initialConsonants, medialVowels, finalConsonants] = jamo_1.default;
 describe("Jamo dictionary", () => {
     test("should contain array of initial consonants (choseong)", () => {

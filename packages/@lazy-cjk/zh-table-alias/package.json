@@ -68,8 +68,8 @@
     "build:commit": "ts-node ./test/script/build-commit.ts",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
@@ -82,7 +82,8 @@
     "@lazy-cjk/zh-convert": "^1.0.34",
     "array-hyper-unique": "^1.1.9",
     "deepmerge-plus": "^2.1.3",
-    "ts-type": "^1.2.34"
+    "ts-type": "^1.2.34",
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"

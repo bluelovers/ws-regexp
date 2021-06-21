@@ -2,14 +2,12 @@
 /**
  * Created by user on 2020/5/31.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._slice = exports._trim = exports._core = exports._coreTextAfter = exports._coreText = exports._coreCase = exports.handleOptions = void 0;
-const deburr_1 = __importDefault(require("lodash/deburr"));
-const upperFirst_1 = __importDefault(require("lodash/upperFirst"));
-const upperCase_1 = __importDefault(require("lodash/upperCase"));
+const tslib_1 = require("tslib");
+const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));
+const upperFirst_1 = tslib_1.__importDefault(require("lodash/upperFirst"));
+const upperCase_1 = tslib_1.__importDefault(require("lodash/upperCase"));
 const regex_pinyin_1 = require("@regexp-cjk/regex-pinyin");
 const transliterate_1 = require("./core/transliterate");
 const reDefaultSeparator = new RegExp(`${regex_pinyin_1.reNotPinyinChar}+`, 'ug');

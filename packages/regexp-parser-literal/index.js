@@ -1,13 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.astToString = exports.fakePatternToRegExpLiteral = exports.parsePattern = exports.parseFlags = exports.parseRegExp = exports.createRegExpParser = exports.defaultRegExpParser = exports.EMOJI_REGEX = void 0;
+const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const regexpp2_1 = require("regexpp2");
-const emoji_regex_1 = __importDefault(require("emoji-regex"));
-const uni_string_1 = __importDefault(require("uni-string"));
+const emoji_regex_1 = tslib_1.__importDefault(require("emoji-regex"));
+const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
 // @ts-ignore
 exports.EMOJI_REGEX = emoji_regex_1.default();
 exports.defaultRegExpParser = createRegExpParser({

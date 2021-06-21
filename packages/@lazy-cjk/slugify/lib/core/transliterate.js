@@ -2,14 +2,12 @@
 /**
  * Created by user on 2020/6/2.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._text = void 0;
+const tslib_1 = require("tslib");
 const emoji_1 = require("../emoji");
 const cjk_1 = require("../cjk");
-const transliterate_1 = __importDefault(require("@sindresorhus/transliterate"));
+const transliterate_1 = tslib_1.__importDefault(require("@sindresorhus/transliterate"));
 const regex_pinyin_1 = require("@regexp-cjk/regex-pinyin");
 const reStrip = new RegExp(`[${regex_pinyin_1.reNotPinyinChar.source.replace(/^\[|\]$/g, '')}\u0020]+`, 'ug');
 function _text(word, options) {

@@ -2,12 +2,10 @@
 /**
  * Created by user on 2019/6/15.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.unicodePropertyEscape = exports.checkUnicodePropertyEscape = exports.astUnicodePropertyCharacterSet = exports.createZhRegExpCorePlugin = void 0;
-const regexp_parser_event_1 = __importDefault(require("regexp-parser-event"));
+const tslib_1 = require("tslib");
+const regexp_parser_event_1 = tslib_1.__importDefault(require("regexp-parser-event"));
 const rewrite_pattern_1 = require("@regexp-cjk/rewrite-pattern");
 const plugin_1 = require("regexp-cjk/lib/plugin");
 const escape_unicode_property_1 = require("@regexp-cjk/escape-unicode-property");

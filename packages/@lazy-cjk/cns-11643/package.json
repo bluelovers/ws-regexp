@@ -45,13 +45,16 @@
     "build:zhuyin": "ts-node ./test/script/build-zhuyin.ts",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"

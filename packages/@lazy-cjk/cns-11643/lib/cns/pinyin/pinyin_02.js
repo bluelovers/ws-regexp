@@ -2,10 +2,8 @@
 /**
  * Created by user on 2020/5/30.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-const pinyin_02_json_1 = __importDefault(require("./pinyin_02.json"));
+const tslib_1 = require("tslib");
+const pinyin_02_json_1 = tslib_1.__importDefault(require("./pinyin_02.json"));
 /**
  * 全字庫的拼音資料表格
  * 「CNS_pinyin_2」以聲調符號呈現

@@ -1,15 +1,13 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.setupParserEventEmitter = exports.coreHandler = exports.SymDefaults = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
+const tslib_1 = require("tslib");
 const conv_1 = require("./conv");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
-const regexp_range_1 = __importDefault(require("regexp-range"));
+const regexp_range_1 = tslib_1.__importDefault(require("regexp-range"));
 const mergeOptions_1 = require("./mergeOptions");
-const getSource_1 = __importDefault(require("./getSource"));
+const getSource_1 = tslib_1.__importDefault(require("./getSource"));
 const zh_table_list_1 = require("@lazy-cjk/zh-table-list");
 const plugin_1 = require("./plugin");
 exports.SymDefaults = Symbol.for('zhRegExp.defaults');

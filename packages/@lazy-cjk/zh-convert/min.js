@@ -2,26 +2,14 @@
 /**
  * Created by user on 2020/5/29.
  */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.cn2tw_min = exports.tw2cn_min = void 0;
+const tslib_1 = require("tslib");
 const util_1 = require("./lib/min/util");
-const table_tw2cn_debug_safe_1 = __importDefault(require("@lazy-cjk/static-build-zh-convert/data/table_tw2cn.debug.safe"));
+const table_tw2cn_debug_safe_1 = tslib_1.__importDefault(require("@lazy-cjk/static-build-zh-convert/data/table_tw2cn.debug.safe"));
 const index_1 = require("./index");
-const table_cn2tw_debug_safe_1 = __importDefault(require("@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug.safe"));
-__exportStar(require("./lib/types"), exports);
+const table_cn2tw_debug_safe_1 = tslib_1.__importDefault(require("@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug.safe"));
+tslib_1.__exportStar(require("./lib/types"), exports);
 /**
  * 以不造成歧異的字典表來取代
  */

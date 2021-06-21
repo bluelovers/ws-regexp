@@ -1,27 +1,9 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.char2pinyinTypeValue = exports.char2pinyin = exports.uni2pinyinTypeValue = exports.uni2pinyin = exports.zhuyin2pinyin = exports.zhuyin2pinyin_table = void 0;
-const uni2pinyin_01_1 = __importStar(require("./uni2pinyin_01"));
-const uni2pinyin_02_1 = __importStar(require("./uni2pinyin_02"));
+const tslib_1 = require("tslib");
+const uni2pinyin_01_1 = tslib_1.__importStar(require("./uni2pinyin_01"));
+const uni2pinyin_02_1 = tslib_1.__importStar(require("./uni2pinyin_02"));
 const uni2zhuyin_1 = require("./util/uni2zhuyin");
 function zhuyin2pinyin_table(pinyinMode) {
     const zhuyin2pinyinMode = pinyinMode ? uni2pinyin_01_1.zhuyin2pinyin_01_table : uni2pinyin_02_1.zhuyin2pinyin_02_table;

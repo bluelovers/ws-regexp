@@ -50,11 +50,14 @@
     "update:test": "ts-node scripts/update-fixtures.ts",
     "update:ids": "ts-node scripts/update-unicode-ids.ts"
   },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
   "engines": {
     "node": ">=4.0.0"
   },
+  "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b",
   "_types": [
     "./index.d.ts"
-  ],
-  "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b"
+  ]
 }

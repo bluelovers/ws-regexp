@@ -2,12 +2,10 @@
 /**
  * Created by user on 2020/5/31.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.splitChar = exports.replaceChar = exports.isExistsChar = exports.newCharMatchRegExp = void 0;
-const uniCharMatchSource_1 = __importDefault(require("./const/uniCharMatchSource"));
+const tslib_1 = require("tslib");
+const uniCharMatchSource_1 = tslib_1.__importDefault(require("./const/uniCharMatchSource"));
 const re_full_match = newCharMatchRegExp('u', (uniCharMatchSource) => `^${uniCharMatchSource}$`);
 const re_replace = newCharMatchRegExp('ug', (uniCharMatchSource) => `(${uniCharMatchSource})`);
 function newCharMatchRegExp(flags = 'u', fn) {

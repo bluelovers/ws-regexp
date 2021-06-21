@@ -37,8 +37,8 @@
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
@@ -48,7 +48,8 @@
   "dependencies": {
     "@lazy-cjk/japanese": "^1.2.12",
     "array-hyper-unique": "^1.1.9",
-    "fill-range": "^7.0.1"
+    "fill-range": "^7.0.1",
+    "tslib": "^2.3.0"
   },
   "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b"
 }

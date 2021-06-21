@@ -70,8 +70,8 @@
     "build:tsc": "ts-node ./test/script/build-ts.ts",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
@@ -81,6 +81,7 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.9",
+    "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {

@@ -2,14 +2,12 @@
 /**
  * Created by user on 2018/5/6/006.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.wrapToRegexName = exports.testUnicodeBlocksAll = exports.testUnicodeBlocks = exports.PatternTest = exports.UNICODE_BLOCKS_ALL = exports.UNICODE_BLOCKS = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+const tslib_1 = require("tslib");
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
-const blocks_1 = __importDefault(require("../cache/blocks"));
+const blocks_1 = tslib_1.__importDefault(require("../cache/blocks"));
 exports.KEY_PREFIX = '\\p{';
 exports.KEY_PREFIX_NEGATION = '\\P{';
 exports.KEY_SUFFIX = '}';

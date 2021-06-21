@@ -1,9 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const isHangul_1 = __importDefault(require("./isHangul"));
+const tslib_1 = require("tslib");
+const isHangul_1 = tslib_1.__importDefault(require("./isHangul"));
 const blocks_1 = require("./unicode/blocks");
 const describeTestBlock = (description, jamoBlock, expected) => describe(description, () => {
     const [start, stop] = jamoBlock;

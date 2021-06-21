@@ -67,8 +67,8 @@
     "build:commit": "git commit -m \"build: update table\" ./lib & echo build:commit",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly:lerna": "yarn run test && yarn run build:commit",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
@@ -79,6 +79,7 @@
   "dependencies": {
     "@lazy-cjk/jp-table-comparison": "^1.0.14",
     "regexp-helper": "^1.0.21",
+    "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {

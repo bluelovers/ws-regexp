@@ -64,8 +64,8 @@
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
@@ -84,7 +84,8 @@
     "escape-string-regexp": "< 5 >= 4",
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.21",
-    "transliteration": "^2.2.0"
+    "transliteration": "^2.2.0",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@sindresorhus/slugify": "< 2 >= 1",

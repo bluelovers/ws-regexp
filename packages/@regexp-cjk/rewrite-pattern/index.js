@@ -2,12 +2,10 @@
 /**
  * Created by user on 2020/6/8.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.rewriteRegExp = exports.rewriteRegExpCore = exports.rewritePatternByRegExp = exports.rewritePatternByRegExpCore = exports.rewritePattern = exports.rewritePatternCore = void 0;
-const regexpu_core_1 = __importDefault(require("regexpu-core"));
+const tslib_1 = require("tslib");
+const regexpu_core_1 = tslib_1.__importDefault(require("regexpu-core"));
 const util_1 = require("./lib/util");
 function rewritePatternCore(source, flags, options) {
     return regexpu_core_1.default(source, flags, options);

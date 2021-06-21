@@ -73,6 +73,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
+    "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
   "publishConfig": {

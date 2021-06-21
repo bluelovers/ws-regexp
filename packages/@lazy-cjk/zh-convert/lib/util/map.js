@@ -1,10 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.textMap4 = exports.textMap3 = exports.textMap2 = exports.textMap1 = exports.charMap = void 0;
-const uni_string_1 = __importDefault(require("uni-string"));
+const tslib_1 = require("tslib");
+const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
 const const_1 = require("../const");
 function charMap(s, table) {
     let t = table[s];

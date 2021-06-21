@@ -1,13 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.char2pinyinTypeValue_01 = exports.char2pinyin_01 = exports.uni2pinyinTypeValue_01 = exports.uni2pinyin_01 = exports.zhuyin2pinyin_01 = exports.zhuyin2pinyin_01_table = void 0;
+const tslib_1 = require("tslib");
 /**
  * Created by user on 2020/5/30.
  */
-const uni2zhuyin_1 = __importDefault(require("./uni2zhuyin"));
+const uni2zhuyin_1 = tslib_1.__importDefault(require("./uni2zhuyin"));
 const char2uni_1 = require("./char2uni");
 const uni2zhuyin_2 = require("./util/uni2zhuyin");
 /**

@@ -55,7 +55,8 @@
     "sort-package-json": "ynpx --quiet yarn-tool -- sort"
   },
   "dependencies": {
-    "@regexp-cjk/clone-regexp": "^1.0.2"
+    "@regexp-cjk/clone-regexp": "^1.0.2",
+    "tslib": "^2.3.0"
   },
   "gitHead": "e79b293e6570ce6e908ffe9f58b7442f7673d30f"
 }

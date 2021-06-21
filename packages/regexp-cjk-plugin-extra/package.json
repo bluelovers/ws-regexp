@@ -70,8 +70,8 @@
     "test": "jest",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -a -m \"postpublish new version\"",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort"
@@ -80,6 +80,7 @@
     "array-hyper-unique": "^1.1.9",
     "lodash": "^4.17.21",
     "str-util": "^2.3.26",
+    "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
   "peerDependencies": {

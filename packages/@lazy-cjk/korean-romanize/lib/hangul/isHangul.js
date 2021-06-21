@@ -1,10 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isHangul = void 0;
-const blocks_1 = __importDefault(require("./unicode/blocks"));
+const tslib_1 = require("tslib");
+const blocks_1 = tslib_1.__importDefault(require("./unicode/blocks"));
 const hangulBlocks = Object.entries(blocks_1.default)
     .filter(([blockName]) => blockName.startsWith("HANGUL"));
 /**

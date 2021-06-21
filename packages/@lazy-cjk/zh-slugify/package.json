@@ -64,8 +64,8 @@
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
@@ -74,7 +74,8 @@
   },
   "dependencies": {
     "@lazy-cjk/zh-table-greedy": "^1.0.61",
-    "@lazy-cjk/zh-table-list": "^1.0.62"
+    "@lazy-cjk/zh-table-list": "^1.0.62",
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"

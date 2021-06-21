@@ -2,16 +2,14 @@
 /**
  * Created by user on 2019/3/2.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleContext = exports.handleOptions = exports.handldTarget = exports.FnList = void 0;
+const tslib_1 = require("tslib");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
-const fast_glob_1 = __importDefault(require("@bluelovers/fast-glob"));
-const fs_iconv_1 = __importDefault(require("fs-iconv"));
-const bluebird_1 = __importDefault(require("bluebird"));
-const diff_1 = __importDefault(require("diff"));
+const fast_glob_1 = tslib_1.__importDefault(require("@bluelovers/fast-glob"));
+const fs_iconv_1 = tslib_1.__importDefault(require("fs-iconv"));
+const bluebird_1 = tslib_1.__importDefault(require("bluebird"));
+const diff_1 = tslib_1.__importDefault(require("diff"));
 const debug_color2_1 = require("debug-color2");
 const crlf_normalize_1 = require("crlf-normalize");
 const min_1 = require("@lazy-cjk/zh-convert/min");

@@ -40,7 +40,8 @@
   "dependencies": {
     "@lazy-cjk/zh-table-list": "^1.0.62",
     "@regexp-cjk/is-xregexp": "^1.0.1",
-    "regexp-helper": "^1.0.21"
+    "regexp-helper": "^1.0.21",
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "xregexp": "*"

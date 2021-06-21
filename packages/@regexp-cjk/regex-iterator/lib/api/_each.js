@@ -1,10 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._each = void 0;
-const clone_regexp_1 = __importDefault(require("@regexp-cjk/clone-regexp"));
+const tslib_1 = require("tslib");
+const clone_regexp_1 = tslib_1.__importDefault(require("@regexp-cjk/clone-regexp"));
 function* _each(input, re, options = {}) {
     let match;
     // @ts-ignore

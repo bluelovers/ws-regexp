@@ -1,11 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._build = void 0;
+const tslib_1 = require("tslib");
 const regexgen2_1 = require("regexgen2");
-const emoji_json_1 = __importDefault(require("emoji.json"));
+const emoji_json_1 = tslib_1.__importDefault(require("emoji.json"));
 function _build(emojiJson) {
     const trie = new regexgen2_1.Trie();
     trie.addAll(emoji_json_1.default.map(v => v.char));

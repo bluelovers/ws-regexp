@@ -1,12 +1,10 @@
 "use strict";
 // Unicode data for category "Letter (other)"
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDataFor = void 0;
+const tslib_1 = require("tslib");
 // @ts-ignore
-const Lo_1 = __importDefault(require("unicode/category/Lo"));
+const Lo_1 = tslib_1.__importDefault(require("unicode/category/Lo"));
 function snakeToCamel(str) {
     return str.replace(/([-_][a-z])/g, group => group
         .toUpperCase()

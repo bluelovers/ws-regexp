@@ -1,12 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.minimize = void 0;
-const map_1 = __importDefault(require("./map"));
-const set_1 = __importDefault(require("./set"));
-const state_1 = __importDefault(require("./state"));
+const tslib_1 = require("tslib");
+const map_1 = tslib_1.__importDefault(require("./map"));
+const set_1 = tslib_1.__importDefault(require("./set"));
+const state_1 = tslib_1.__importDefault(require("./state"));
 /**
  * Implements Hopcroft's DFA minimization algorithm.
  * https://en.wikipedia.org/wiki/DFA_minimization#Hopcroft.27s_algorithm

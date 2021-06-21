@@ -1,11 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createXRegExp = void 0;
+const tslib_1 = require("tslib");
 const is_xregexp_1 = require("@regexp-cjk/is-xregexp");
-const xregexp_1 = __importDefault(require("xregexp"));
+const xregexp_1 = tslib_1.__importDefault(require("xregexp"));
 function createXRegExp(pattern, flags, xr = xregexp_1.default) {
     if (typeof pattern === 'string') {
         return xr(pattern, flags);

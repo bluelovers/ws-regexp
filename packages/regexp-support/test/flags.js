@@ -2,11 +2,9 @@
 /**
  * Created by user on 2018/4/26/026.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const __1 = __importDefault(require(".."));
+const tslib_1 = require("tslib");
+const __1 = tslib_1.__importDefault(require(".."));
 const index_1 = require("../lib/util/index");
 const fs_extra_1 = require("fs-extra");
 const path_1 = require("path");

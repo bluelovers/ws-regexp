@@ -1,12 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.romanize = exports.romanizeWord = exports.syllableParser = exports.searchJamo = void 0;
-const jamo_1 = __importDefault(require("./jamo"));
+const tslib_1 = require("tslib");
+const jamo_1 = tslib_1.__importDefault(require("./jamo"));
 const decompose_1 = require("./hangul/unicode/decompose");
-const hangulReplace_1 = __importDefault(require("./hangul/hangulReplace"));
+const hangulReplace_1 = tslib_1.__importDefault(require("./hangul/hangulReplace"));
 const getJamoDictionary = (jamo, idx) => jamo_1.default[idx].find(o => o.jamo === jamo) ||
     jamo_1.default[idx].find(o => o.compatJamo === jamo);
 function searchJamo(node, params, prevNode) {

@@ -1,10 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.normalizeToCompat = void 0;
-const isHangul_1 = __importDefault(require("../isHangul"));
+const tslib_1 = require("tslib");
+const isHangul_1 = tslib_1.__importDefault(require("../isHangul"));
 const { _HANGUL_COMPATIBILITY_JAMO, _HANGUL_JAMO } = require("./blocks");
 const whichJamoSet = jamo => isHangul_1.default(jamo, Object.entries(_HANGUL_JAMO));
 const jaeum = {

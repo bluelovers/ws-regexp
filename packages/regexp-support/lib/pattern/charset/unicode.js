@@ -2,35 +2,14 @@
 /**
  * Created by user on 2018/5/6/006.
  */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.wrapToRegexName = exports.testUnicodeAll = exports.testUnicode = exports._testUnicode = exports.PatternTest = exports.UNICODE_NAME_ALIAS_ALL = exports.UNICODE_NAME_ALIAS = exports.UNICODE_ALL = exports.UNICODE = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+const tslib_1 = require("tslib");
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
-const categories_1 = __importStar(require("../cache/categories"));
-const properties_1 = __importDefault(require("../cache/properties"));
-const property_data_1 = __importDefault(require("../cache/property-data"));
+const categories_1 = tslib_1.__importStar(require("../cache/categories"));
+const properties_1 = tslib_1.__importDefault(require("../cache/properties"));
+const property_data_1 = tslib_1.__importDefault(require("../cache/property-data"));
 //console.log(properties);
 exports.KEY_PREFIX = '\\p{';
 exports.KEY_PREFIX_NEGATION = '\\P{';

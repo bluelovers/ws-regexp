@@ -39,8 +39,8 @@
     "test": "test"
   },
   "scripts": {
-    "build:report": "node ./test/flags.js",
     "test": "yarn run build:report && jest -u",
+    "build:report": "node ./test/flags.js",
     "preversion": "yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
@@ -48,7 +48,8 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "sort-object-keys2": "^2.0.3"
+    "sort-object-keys2": "^2.0.3",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "globby": "*",

@@ -2,16 +2,14 @@
 /**
  * Created by user on 2019/5/27.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._coreFn = exports.createZhRegExpPlugin = void 0;
+const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const fullhalf_1 = require("str-util/lib/fullhalf");
-const core_1 = __importDefault(require("uni-string/src/core"));
-const jp_table_voice_1 = __importDefault(require("@lazy-cjk/jp-table-voice"));
-const deburr_1 = __importDefault(require("lodash/deburr"));
+const core_1 = tslib_1.__importDefault(require("uni-string/src/core"));
+const jp_table_voice_1 = tslib_1.__importDefault(require("@lazy-cjk/jp-table-voice"));
+const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));
 const plugin_1 = require("regexp-cjk/lib/plugin");
 /**
  * 建立 擴充事件函數物件
