@@ -104,7 +104,7 @@ export class ParserEventEmitter extends EventEmitter
 		return this.emit(ParserEventEmitterEvent.change, inputAst, ...args)
 	}
 
-	emit<T extends INodeInput>(eventName: ParserEventEmitterEvent,
+	override emit<T extends INodeInput>(eventName: ParserEventEmitterEvent,
 		inputAst: T & INodePlus,
 		...args
 	): boolean
@@ -112,28 +112,28 @@ export class ParserEventEmitter extends EventEmitter
 		return (super.emit as IParserEventEmitterListenerSuper<T, ParserEventEmitterEvent>)(eventName, inputAst, eventName, this, ...args);
 	}
 
-	on<E extends ParserEventEmitterEvent.default>(eventName: E,
+	override on<E extends ParserEventEmitterEvent.default>(eventName: E,
 		listener: IParserEventEmitterListener<AST.Character, E>,
 	): this
-	on<E extends ParserEventEmitterEvent.class>(eventName: E,
+	override on<E extends ParserEventEmitterEvent.class>(eventName: E,
 		listener: IParserEventEmitterListener<AST.CharacterClass, E>,
 	): this
-	on<E extends ParserEventEmitterEvent.class_default>(eventName: E,
+	override on<E extends ParserEventEmitterEvent.class_default>(eventName: E,
 		listener: IParserEventEmitterListener<AST.Character, E>,
 	): this
-	on<E extends ParserEventEmitterEvent.class_range>(eventName: E,
+	override on<E extends ParserEventEmitterEvent.class_range>(eventName: E,
 		listener: IParserEventEmitterListener<AST.CharacterClassRange, E>,
 	): this
-	on<E extends ParserEventEmitterEvent.other>(eventName: E,
+	override on<E extends ParserEventEmitterEvent.other>(eventName: E,
 		listener: IParserEventEmitterListener<AST.CharacterClassElement, E>,
 	): this
-	on<E extends ParserEventEmitterEvent.uniset>(eventName: E,
+	override on<E extends ParserEventEmitterEvent.uniset>(eventName: E,
 		listener: IParserEventEmitterListener<AST.CharacterSet, E>,
 	): this
-	on<E extends ParserEventEmitterEvent>(eventName: ParserEventEmitterEvent,
+	override on<E extends ParserEventEmitterEvent>(eventName: ParserEventEmitterEvent,
 		listener: IParserEventEmitterListener<AST.Element, E>,
 	): this
-	on(eventName: ParserEventEmitterEvent, listener: IParserEventEmitterListener<any, ParserEventEmitterEvent>): this
+	override on(eventName: ParserEventEmitterEvent, listener: IParserEventEmitterListener<any, ParserEventEmitterEvent>): this
 	{
 		return super.on(eventName, listener);
 	}
@@ -354,7 +354,7 @@ export class ParserEventEmitter extends EventEmitter
 		this.astRegExpLiteral.pattern.changed = this.astRegExpLiteral.changed = bool;
 	}
 
-	toString(overwrite?: boolean, options?: IAstToStringOptions)
+	override toString(overwrite?: boolean, options?: IAstToStringOptions)
 	{
 		return astToString(this.astRegExpLiteral, {
 
