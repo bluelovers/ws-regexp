@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.32](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.31...regexp-support@1.0.32) (2021-06-21)
+
+
+### ✨　Features
+
+* check indices ([3876980](https://github.com/bluelovers/regexp-support/commit/38769806b0b8d24b12cbe4ab5d8d75ea066902ad))
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/regexp-support/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+
+
+
 ## [1.0.31](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.29...regexp-support@1.0.31) (2020-07-19)
 
 
