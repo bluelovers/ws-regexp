@@ -2167,6 +2167,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 桩|椿|樁 1`] = `
+Array [
+  "桩",
+  "椿",
+  "樁",
+]
+`;
+
 exports[`validate char of map 桶|筒 1`] = `
 Array [
   "桶",

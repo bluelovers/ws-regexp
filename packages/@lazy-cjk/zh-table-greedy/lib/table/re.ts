@@ -370,4 +370,6 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 	[/[妤兪伃諭谕瑜]/ug, '俞'],
 	[/[毓]/ug, '育'],
 
+	[/[椿樁]/ug, '桩'],
+
 ]
