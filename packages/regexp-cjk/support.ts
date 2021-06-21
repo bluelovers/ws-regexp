@@ -1,8 +1,7 @@
 /**
  * Created by user on 2018/3/2/002.
  */
-
-let re = /(wor)(ld)/g;
+const re = /(wor)(ld)/g;
 re.test('hello world!');
 
 // @ts-ignore
@@ -36,6 +35,9 @@ export function _multiEqual(a, b, ...argv)
 	return false;
 }
 
+/**
+ * @deprecated
+ */
 export const support = (function (): {
 	readonly leftContext: boolean;
 	readonly rightContext: boolean;

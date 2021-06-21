@@ -2,40 +2,19 @@
 /**
  * Created by user on 2018/1/31/031.
  */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseRegularExpressionString = exports.isRegExp = exports.create = exports.zhRegExp = exports.defaultOptions = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
+const tslib_1 = require("tslib");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
 const core_1 = require("./lib/core");
 const regexp_helper_core_1 = require("regexp-helper-core");
 Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_core_1.isRegExp; } });
-const RegexpHelper = __importStar(require("regexp-helper-core"));
-const mergeOptions_1 = __importStar(require("./lib/mergeOptions"));
+const RegexpHelper = tslib_1.__importStar(require("regexp-helper-core"));
+const mergeOptions_1 = tslib_1.__importStar(require("./lib/mergeOptions"));
 const getSource_1 = require("./lib/getSource");
 Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return getSource_1.parseRegularExpressionString; } });
-__exportStar(require("./version"), exports);
+tslib_1.__exportStar(require("./version"), exports);
 /**
  * @deprecated
  */
@@ -83,9 +62,6 @@ class zhRegExp extends RegExp {
     }
     static parseRegularExpressionString(str) {
         return getSource_1.parseRegularExpressionString(str);
-    }
-    static get support() {
-        return require('regexp-support').default;
     }
     static get version() {
         return require('./package.json').version;

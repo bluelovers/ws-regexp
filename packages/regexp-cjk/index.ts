@@ -9,7 +9,6 @@ import {
 	ParserEventEmitter,
 	ParserEventEmitterEvent,
 } from 'regexp-parser-event';
-import _support from 'regexp-support';
 import {
 	coreHandler,
 	ICoreHandlerReturn,
@@ -40,49 +39,49 @@ export const defaultOptions: IOptions = {};
 
 export class zhRegExp extends RegExp
 {
-	public source: string;
-	public flags: string;
+	public override source: string;
+	public override flags: string;
 
-	public dotAll: boolean;
+	public override dotAll: boolean;
 
-	public ignoreCase: boolean;
-	public global: boolean;
-	public multiline: boolean;
-	public sticky: boolean;
-	public unicode: boolean;
+	public override ignoreCase: boolean;
+	public override global: boolean;
+	public override multiline: boolean;
+	public override sticky: boolean;
+	public override unicode: boolean;
 
-	public lastIndex: number;
+	public override lastIndex: number;
 
 	/**
 	 * The non-standard leftContext property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. RegExp.$` is an alias for this property.
 	 *
 	 * @alias $`
 	 */
-	public static readonly leftContext: string;
+	public static override readonly leftContext: string;
 	/**
 	 * The non-standard rightContext property is a static and read-only property of regular expressions that contains the substring following the most recent match. RegExp.$' is an alias for this property.
 	 *
 	 * @alias $'
 	 */
-	public static readonly rightContext: string;
+	public static override readonly rightContext: string;
 	/**
 	 * The non-standard lastParen property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. RegExp.$+ is an alias for this property.
 	 *
 	 * @alias $+
 	 */
-	public static readonly lastParen: string;
+	public static override readonly lastParen: string;
 	/**
 	 * The non-standard lastMatch property is a static and read-only property of regular expressions that contains the last matched characters. RegExp.$& is an alias for this property.
 	 *
 	 * @alias $&
 	 */
-	public static readonly lastMatch: string;
+	public static override readonly lastMatch: string;
 	/**
 	 * The non-standard input property is a static property of regular expressions that contains the string against which a regular expression is matched. RegExp.$_ is an alias for this property.
 	 *
 	 * @alias $_
 	 */
-	public static readonly input: string;
+	public static override readonly input: string;
 
 	/**
 	 * default value only exists and work when use `zhRegExp.use(defaultOptions)`
@@ -161,15 +160,11 @@ export class zhRegExp extends RegExp
 		return parseRegularExpressionString(str);
 	}
 
-	static get support()
-	{
-		return require('regexp-support').default as typeof import('regexp-support').default;
-	}
-
 	static get version(): string
 	{
 		return require('./package.json').version
 	}
+
 }
 
 export namespace zhRegExp

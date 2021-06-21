@@ -1,10 +1,10 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.support = exports._multiEqual = exports.input = exports.lastMatch = exports.lastParen = exports.rightContext = exports.leftContext = void 0;
 /**
  * Created by user on 2018/3/2/002.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.support = exports._multiEqual = exports.input = exports.lastMatch = exports.lastParen = exports.rightContext = exports.leftContext = void 0;
-let re = /(wor)(ld)/g;
+const re = /(wor)(ld)/g;
 re.test('hello world!');
 // @ts-ignore
 exports.leftContext = _multiEqual(RegExp.leftContext, RegExp['$`'], 'hello ');
@@ -29,6 +29,9 @@ function _multiEqual(a, b, ...argv) {
     return false;
 }
 exports._multiEqual = _multiEqual;
+/**
+ * @deprecated
+ */
 exports.support = (function () {
     let s = Object.assign({}, exports);
     delete s.default;
