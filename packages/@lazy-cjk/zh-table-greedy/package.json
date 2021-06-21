@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-table-greedy",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "description": "搜尋字串用的漢字貪婪轉換表",
   "keywords": [
     "char",

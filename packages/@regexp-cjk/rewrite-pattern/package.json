@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/rewrite-pattern",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "capable of translating Unicode regular expressions",
   "keywords": [
     "expression",
@@ -62,7 +62,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@regexp-cjk/rewrite-flags": "^1.0.3",
+    "@regexp-cjk/rewrite-flags": "^1.0.4",
     "lodash": "^4.17.21",
     "regexpu-core": "^4.7.1",
     "tslib": "^2.3.0"

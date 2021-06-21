@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.26](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-event@1.1.25...regexp-parser-event@1.1.26) (2021-06-21)
+
+
+### 🐛　Bug Fixes
+
+* **typescript:** This member must have an 'override' modifier because it overrides a member in the base class 'EventEmitter'. ([41c9391](https://github.com/bluelovers/ws-regexp/commit/41c9391833263f1c796e3feb473387faaf5ebe90))
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/ws-regexp/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+### ♻️　Chores
+
+* update deps ([3633a97](https://github.com/bluelovers/ws-regexp/commit/3633a97e8014049c163d860dc07d3a5e0d02416f))
+
+
+
+
+
 ## [1.1.25](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-event@1.1.24...regexp-parser-event@1.1.25) (2021-02-04)
 
 **Note:** Version bump only for package regexp-parser-event

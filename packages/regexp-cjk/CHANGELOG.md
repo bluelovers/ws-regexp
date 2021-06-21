@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.90](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.89...regexp-cjk@3.3.90) (2021-06-21)
+
+
+### 🐛　Bug Fixes
+
+* **typescript:** A spread argument must either have a tuple type or be passed to a rest parameter. ([9a1fa2e](https://github.com/bluelovers/ws-regexp/commit/9a1fa2e9e4c6037827cfeb4508b11306ccc164cf))
+
+
+### 📦　Code Refactoring
+
+* remove regexp-support ([61cdce6](https://github.com/bluelovers/ws-regexp/commit/61cdce628f8e32652b95af31a8d5a7bf35dfef8b))
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/ws-regexp/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+### ♻️　Chores
+
+* update deps ([3633a97](https://github.com/bluelovers/ws-regexp/commit/3633a97e8014049c163d860dc07d3a5e0d02416f))
+
+
+### BREAKING CHANGE
+
+* remove `zhRegExp.support`
+
+
+
+
+
 ## [3.3.89](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.88...regexp-cjk@3.3.89) (2021-02-04)
 
 **Note:** Version bump only for package regexp-cjk

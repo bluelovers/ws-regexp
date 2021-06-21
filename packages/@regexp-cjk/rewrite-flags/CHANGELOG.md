@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.2...@regexp-cjk/rewrite-flags@1.0.4) (2021-06-21)
+
+
+### ✨　Features
+
+* support hasIndices ([faba484](https://github.com/bluelovers/ws-regexp/commit/faba484454a9155ed08fd44f5ea18eed2befc949))
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/ws-regexp/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+### ♻️　Chores
+
+* . ([8596a48](https://github.com/bluelovers/ws-regexp/commit/8596a480489c1b01c3d0c9841249eb622fefa538))
+
+
+### 🔖　Miscellaneous
+
+* . ([2fc9875](https://github.com/bluelovers/ws-regexp/commit/2fc9875ea48136c70e1dee845d4e1b14eca184a9))
+
+
+
+
+
 ## [1.0.3](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.2...@regexp-cjk/rewrite-flags@1.0.3) (2021-06-21)
 
 

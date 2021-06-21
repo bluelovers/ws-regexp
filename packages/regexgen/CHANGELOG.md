@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/bluelovers/ws-regexp/compare/regexgen2@1.3.6...regexgen2@1.3.9) (2021-06-21)
+
+
+### 🐛　Bug Fixes
+
+* This member must have an 'override' modifier because it overrides a member in the base class 'Map<K, V>'. ([b1ab166](https://github.com/bluelovers/ws-regexp/commit/b1ab16672a9f0988ccfa15827769ced5f46474b2))
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/ws-regexp/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+### ♻️　Chores
+
+* update deps ([3633a97](https://github.com/bluelovers/ws-regexp/commit/3633a97e8014049c163d860dc07d3a5e0d02416f))
+
+
+### 🔖　Miscellaneous
+
+* . ([2fc9875](https://github.com/bluelovers/ws-regexp/commit/2fc9875ea48136c70e1dee845d4e1b14eca184a9))
+* . ([bc27d71](https://github.com/bluelovers/ws-regexp/commit/bc27d71024cd06e308b59ba93b08dec6d074996b))
+
+
+
+
+
 ## [1.3.8](https://github.com/bluelovers/ws-regexp/compare/regexgen2@1.3.6...regexgen2@1.3.8) (2021-06-21)
 
 
