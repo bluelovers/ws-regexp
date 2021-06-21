@@ -1474,6 +1474,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 塌|踏 1`] = `
+Array [
+  "塌",
+  "踏",
+]
+`;
+
 exports[`validate char of map 塞|賽|赛 1`] = `
 Array [
   "塞",
@@ -1642,6 +1649,13 @@ Array [
   "岳",
   "嶽",
   "𡶦",
+]
+`;
+
+exports[`validate char of map 崁|嵌 1`] = `
+Array [
+  "崁",
+  "嵌",
 ]
 `;
 
@@ -1830,6 +1844,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 恰|洽 1`] = `
+Array [
+  "恰",
+  "洽",
+]
+`;
+
 exports[`validate char of map 悚|耸|聳 1`] = `
 Array [
   "悚",
@@ -1927,6 +1948,15 @@ exports[`validate char of map 拉|菈 1`] = `
 Array [
   "拉",
   "菈",
+]
+`;
+
+exports[`validate char of map 拙|絀|绌|黜 1`] = `
+Array [
+  "拙",
+  "絀",
+  "绌",
+  "黜",
 ]
 `;
 
@@ -2349,6 +2379,15 @@ Array [
   "飃",
   "飄",
   "飘",
+]
+`;
+
+exports[`validate char of map 漠|陌|默|黙 1`] = `
+Array [
+  "漠",
+  "陌",
+  "默",
+  "黙",
 ]
 `;
 
