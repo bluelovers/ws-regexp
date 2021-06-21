@@ -475,6 +475,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 但|旦 1`] = `
+Array [
+  "但",
+  "旦",
+]
+`;
+
 exports[`validate char of map 佔|占|沾 1`] = `
 Array [
   "佔",
