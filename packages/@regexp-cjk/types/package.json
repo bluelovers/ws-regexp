@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/types#readme",
   "bugs": {
@@ -28,8 +28,6 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
   "publishConfig": {
     "access": "public"
   }

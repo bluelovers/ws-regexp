@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.7...@lazy-cjk/emoji-regex@1.0.8) (2021-06-21)
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/ws-regexp/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.6...@lazy-cjk/emoji-regex@1.0.7) (2021-02-04)
 
 

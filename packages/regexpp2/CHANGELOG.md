@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.15](https://github.com/bluelovers/regexpp/compare/regexpp2@1.3.13...regexpp2@1.3.15) (2021-06-21)
+
+
+### 💎　Styles
+
+* use importHelpers ([6bedeef](https://github.com/bluelovers/regexpp/commit/6bedeefcb325c049cbdfaf3ba3fc3afa7140893d))
+
+
+### 🔖　Miscellaneous
+
+* . ([bc27d71](https://github.com/bluelovers/regexpp/commit/bc27d71024cd06e308b59ba93b08dec6d074996b))
+* . ([18785d5](https://github.com/bluelovers/regexpp/commit/18785d50469187976b7aff4379891b93d77140d6))
+
+
+
+
+
 ## [1.3.14](https://github.com/bluelovers/regexpp/compare/regexpp2@1.3.13...regexpp2@1.3.14) (2021-06-21)
 
 
