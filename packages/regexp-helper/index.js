@@ -5,8 +5,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseRegularExpressionString = exports.prototypeToFlagsArray = exports.prototypeToFlags = exports.isNativeFlags = exports.stripNonNativeFlags = exports.getNativeFlags = exports.nativeFlags = void 0;
 const tslib_1 = require("tslib");
-tslib_1.__exportStar(require("regexp-helper-core"), exports);
-const regexp_support_1 = tslib_1.__importDefault(require("regexp-support"));
+(0, tslib_1.__exportStar)(require("regexp-helper-core"), exports);
+const regexp_support_1 = (0, tslib_1.__importDefault)(require("regexp-support"));
 const lib_1 = require("./lib");
 Object.defineProperty(exports, "getNativeFlags", { enumerable: true, get: function () { return lib_1.getNativeFlags; } });
 Object.defineProperty(exports, "stripNonNativeFlags", { enumerable: true, get: function () { return lib_1.stripNonNativeFlags; } });

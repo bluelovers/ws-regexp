@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isHangul = void 0;
 const tslib_1 = require("tslib");
-const blocks_1 = tslib_1.__importDefault(require("./unicode/blocks"));
+const blocks_1 = (0, tslib_1.__importDefault)(require("./unicode/blocks"));
 const hangulBlocks = Object.entries(blocks_1.default)
     .filter(([blockName]) => blockName.startsWith("HANGUL"));
 /**

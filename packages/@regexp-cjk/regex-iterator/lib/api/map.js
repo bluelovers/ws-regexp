@@ -8,7 +8,7 @@ function _cb(match, index, re, _) {
 function map(input, re, cb, options = {}) {
     let ret = [];
     cb = cb !== null && cb !== void 0 ? cb : _cb;
-    for (const m of _each_1._each(input, re, options)) {
+    for (const m of (0, _each_1._each)(input, re, options)) {
         ret.push(cb(m.match, m.index, m.re, m));
     }
     return ret;

@@ -7,9 +7,9 @@ exports._coreFn = exports.createZhRegExpPlugin = void 0;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const fullhalf_1 = require("str-util/lib/fullhalf");
-const core_1 = tslib_1.__importDefault(require("uni-string/src/core"));
-const jp_table_voice_1 = tslib_1.__importDefault(require("@lazy-cjk/jp-table-voice"));
-const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));
+const core_1 = (0, tslib_1.__importDefault)(require("uni-string/src/core"));
+const jp_table_voice_1 = (0, tslib_1.__importDefault)(require("@lazy-cjk/jp-table-voice"));
+const deburr_1 = (0, tslib_1.__importDefault)(require("lodash/deburr"));
 const plugin_1 = require("regexp-cjk/lib/plugin");
 /**
  * 建立 擴充事件函數物件
@@ -35,7 +35,7 @@ function createZhRegExpPlugin(options = {}) {
             /**
              * 確保 此節點沒有被其他修改過
              */
-            if (!plugin_1.astNotChanged(ast)) {
+            if (!(0, plugin_1.astNotChanged)(ast)) {
                 return;
             }
             const raw = ast.raw;
@@ -126,18 +126,18 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
     }
     else {
         if (autoVoice) {
-            let ret = jp_table_voice_1.default(raw);
+            let ret = (0, jp_table_voice_1.default)(raw);
             ret && arr.push(...ret);
         }
         if (autoFullHaif) {
-            let cf = fullhalf_1.toFullWidth(raw);
-            let ch = fullhalf_1.toHalfWidth(raw);
+            let cf = (0, fullhalf_1.toFullWidth)(raw);
+            let ch = (0, fullhalf_1.toHalfWidth)(raw);
             arr.push(cf, ch);
             if (autoLocale) {
                 arr.push(cf.toLocaleLowerCase(), ch.toLocaleLowerCase(), raw.toLocaleLowerCase());
             }
             if (autoDeburr) {
-                arr.push(deburr_1.default(cf), deburr_1.default(ch), deburr_1.default(raw));
+                arr.push((0, deburr_1.default)(cf), (0, deburr_1.default)(ch), (0, deburr_1.default)(raw));
             }
         }
         else {
@@ -145,7 +145,7 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
                 arr.push(raw.toLocaleLowerCase());
             }
             if (autoDeburr) {
-                arr.push(deburr_1.default(raw));
+                arr.push((0, deburr_1.default)(raw));
             }
         }
         if (callback) {
@@ -161,7 +161,7 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
             }
         }
         arr.push(raw);
-        arr = array_hyper_unique_1.array_unique_overwrite(arr.filter(v => typeof v === 'string').sort());
+        arr = (0, array_hyper_unique_1.array_unique_overwrite)(arr.filter(v => typeof v === 'string').sort());
         if (cacheMap) {
             cacheMap.set(raw, arr);
         }

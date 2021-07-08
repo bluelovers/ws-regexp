@@ -18,14 +18,14 @@ var ParserEventEmitterEvent;
     ParserEventEmitterEvent["change"] = "change";
 })(ParserEventEmitterEvent = exports.ParserEventEmitterEvent || (exports.ParserEventEmitterEvent = {}));
 // @ts-ignore
-exports.ParserEventEmitterEventList = Object.freeze(array_hyper_unique_1.array_unique(Object.values(ParserEventEmitterEvent)));
+exports.ParserEventEmitterEventList = Object.freeze((0, array_hyper_unique_1.array_unique)(Object.values(ParserEventEmitterEvent)));
 class ParserEventEmitter extends events_1.EventEmitter {
     constructor(inputAst, flags = '') {
         super();
         this.astRegExpLiteral = null;
         const self = this;
         if (typeof inputAst == 'string' || inputAst.type == 'Pattern') {
-            inputAst = regexp_parser_literal_1.fakePatternToRegExpLiteral(inputAst, flags);
+            inputAst = (0, regexp_parser_literal_1.fakePatternToRegExpLiteral)(inputAst, flags);
         }
         this.astRegExpLiteral = inputAst;
         this.on("change" /* change */, function (ast) {
@@ -161,14 +161,14 @@ class ParserEventEmitter extends events_1.EventEmitter {
         }
     }
     getSource(overwrite, options) {
-        return regexp_parser_literal_1.astToString(this.astRegExpLiteral.pattern, {
+        return (0, regexp_parser_literal_1.astToString)(this.astRegExpLiteral.pattern, {
             ...options,
             // @ts-ignore
             debugChanged: overwrite ? 99 : this.astRegExpLiteral.pattern.changed,
         });
     }
     getFlags(overwrite, options) {
-        return regexp_parser_literal_1.astToString(this.astRegExpLiteral.flags, {
+        return (0, regexp_parser_literal_1.astToString)(this.astRegExpLiteral.flags, {
             ...options,
             // @ts-ignore
             debugChanged: overwrite ? 99 : this.astRegExpLiteral.flags.changed,
@@ -180,7 +180,7 @@ class ParserEventEmitter extends events_1.EventEmitter {
     }
     // @ts-ignore
     set source(pattern) {
-        pattern = typeof pattern == 'string' ? regexp_parser_literal_1.parsePattern(pattern, this.astRegExpLiteral.flags.unicode) : pattern;
+        pattern = typeof pattern == 'string' ? (0, regexp_parser_literal_1.parsePattern)(pattern, this.astRegExpLiteral.flags.unicode) : pattern;
         pattern.parent = this.astRegExpLiteral;
         this.astRegExpLiteral.pattern = pattern;
         this.changed = false;
@@ -191,7 +191,7 @@ class ParserEventEmitter extends events_1.EventEmitter {
     }
     // @ts-ignore
     set flags(flags) {
-        flags = typeof flags == 'string' ? regexp_parser_literal_1.parseFlags(flags) : flags;
+        flags = typeof flags == 'string' ? (0, regexp_parser_literal_1.parseFlags)(flags) : flags;
         flags.parent = this.astRegExpLiteral;
         this.astRegExpLiteral.flags = flags;
         // @ts-ignore
@@ -208,7 +208,7 @@ class ParserEventEmitter extends events_1.EventEmitter {
         this.astRegExpLiteral.pattern.changed = this.astRegExpLiteral.changed = bool;
     }
     toString(overwrite, options) {
-        return regexp_parser_literal_1.astToString(this.astRegExpLiteral, {
+        return (0, regexp_parser_literal_1.astToString)(this.astRegExpLiteral, {
             ...options,
             debugChanged: overwrite ? 99 : this.changed,
         });

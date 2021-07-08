@@ -5,10 +5,10 @@ const tslib_1 = require("tslib");
 const types_1 = require("./types");
 const table_1 = require("./table");
 const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
-const core_1 = tslib_1.__importDefault(require("uni-string/src/core"));
+const core_1 = (0, tslib_1.__importDefault)(require("uni-string/src/core"));
 const util_1 = require("./util");
 // /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u
-const REGEXP_TEST = new RegExp(cjk_conv_1._re_cjk_conv('u').source + '+', 'u');
+const REGEXP_TEST = new RegExp((0, cjk_conv_1._re_cjk_conv)('u').source + '+', 'u');
 const defaultOptions = {
     safe: true,
 };
@@ -32,7 +32,7 @@ var _;
                         return char;
                     }
                     let c;
-                    if (c = util_1._getdata(char, from, to, options.safe)) {
+                    if (c = (0, util_1._getdata)(char, from, to, options.safe)) {
                         return c;
                     }
                     return char;
@@ -94,10 +94,10 @@ function zh2jp(str, options) {
             return char;
         }
         let c;
-        if (c = util_1._getdata(char, types_1.KEY_ZHT, types_1.KEY_JP, options.safe)) {
+        if (c = (0, util_1._getdata)(char, types_1.KEY_ZHT, types_1.KEY_JP, options.safe)) {
             return c;
         }
-        else if (c = util_1._getdata(char, types_1.KEY_ZHS, types_1.KEY_JP, options.safe)) {
+        else if (c = (0, util_1._getdata)(char, types_1.KEY_ZHS, types_1.KEY_JP, options.safe)) {
             return c;
         }
         return char;
@@ -134,10 +134,10 @@ function cjk2zht(str, options) {
             return char;
         }
         let c;
-        if (c = util_1._getdata(char, types_1.KEY_JP, types_1.KEY_ZHT, options.safe)) {
+        if (c = (0, util_1._getdata)(char, types_1.KEY_JP, types_1.KEY_ZHT, options.safe)) {
             return c;
         }
-        else if (c = util_1._getdata(char, types_1.KEY_ZHS, types_1.KEY_ZHT, options.safe)) {
+        else if (c = (0, util_1._getdata)(char, types_1.KEY_ZHS, types_1.KEY_ZHT, options.safe)) {
             return c;
         }
         return char;
@@ -164,10 +164,10 @@ function cjk2zhs(str, options) {
             return char;
         }
         let c;
-        if (c = util_1._getdata(char, types_1.KEY_JP, types_1.KEY_ZHS, options.safe)) {
+        if (c = (0, util_1._getdata)(char, types_1.KEY_JP, types_1.KEY_ZHS, options.safe)) {
             return c;
         }
-        else if (c = util_1._getdata(char, types_1.KEY_ZHT, types_1.KEY_ZHS, options.safe)) {
+        else if (c = (0, util_1._getdata)(char, types_1.KEY_ZHT, types_1.KEY_ZHS, options.safe)) {
             return c;
         }
         return char;

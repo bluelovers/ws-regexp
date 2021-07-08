@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.unicodePropertyEscape = exports.checkUnicodePropertyEscape = exports.astUnicodePropertyCharacterSet = exports.createZhRegExpCorePlugin = void 0;
 const tslib_1 = require("tslib");
-const regexp_parser_event_1 = tslib_1.__importDefault(require("regexp-parser-event"));
+const regexp_parser_event_1 = (0, tslib_1.__importDefault)(require("regexp-parser-event"));
 const rewrite_pattern_1 = require("@regexp-cjk/rewrite-pattern");
 const plugin_1 = require("regexp-cjk/lib/plugin");
 const escape_unicode_property_1 = require("@regexp-cjk/escape-unicode-property");
@@ -24,13 +24,13 @@ function createZhRegExpCorePlugin(options = {}) {
                 const useUnicodeFlag = _flags.includes('u');
                 let ev = regexp_parser_event_1.default.create(str, flags || '');
                 let _do = escapeAll || escapeAuto && /\\p\{[^{}]+\}/i.test(str);
-                const _escapeOpts = util_1.handleOptions({
+                const _escapeOpts = (0, util_1.handleOptions)({
                     useUnicodeFlag,
                 }, _flags);
                 if (_do) {
                     ev.on("uniset" /* uniset */, function (ast, eventName, ev) {
-                        if (plugin_1.astNotChanged(ast) && astUnicodePropertyCharacterSet(ast)) {
-                            let raw = escape_unicode_property_1.escapeUnicodePropertyPatternCore(ast.raw, _escapeOpts.flags, _escapeOpts.options);
+                        if ((0, plugin_1.astNotChanged)(ast) && astUnicodePropertyCharacterSet(ast)) {
+                            let raw = (0, escape_unicode_property_1.escapeUnicodePropertyPatternCore)(ast.raw, _escapeOpts.flags, _escapeOpts.options);
                             if (raw !== ast.raw) {
                                 ast.raw = raw;
                                 ev.emitChange(ast);
@@ -38,8 +38,8 @@ function createZhRegExpCorePlugin(options = {}) {
                         }
                     });
                     ev.on("class" /* class */, function (ast, eventName, ev) {
-                        if (plugin_1.astNotChanged(ast) && escape_unicode_property_1.hasUnicodePropertyPattern(ast.raw)) {
-                            let raw = escape_unicode_property_1.escapeUnicodePropertyPatternCore(ast.raw, _escapeOpts.flags, _escapeOpts.options);
+                        if ((0, plugin_1.astNotChanged)(ast) && (0, escape_unicode_property_1.hasUnicodePropertyPattern)(ast.raw)) {
+                            let raw = (0, escape_unicode_property_1.escapeUnicodePropertyPatternCore)(ast.raw, _escapeOpts.flags, _escapeOpts.options);
                             if (raw !== ast.raw) {
                                 ast.raw = raw;
                                 delete ast.elements;
@@ -72,7 +72,7 @@ exports.checkUnicodePropertyEscape = checkUnicodePropertyEscape;
  * @deprecated
  */
 function unicodePropertyEscape(raw, flags, useUnicodeFlag) {
-    return rewrite_pattern_1.rewritePatternCore(raw, flags, {
+    return (0, rewrite_pattern_1.rewritePatternCore)(raw, flags, {
         unicodePropertyEscape: true,
         useUnicodeFlag,
     });

@@ -6,8 +6,8 @@ const array_hyper_unique_1 = require("array-hyper-unique");
 exports.defaultOptions = Object.freeze({
     safe: true,
 });
-exports.REGEXP_TEST = cjk_conv_1._re_cjk_conv('ug');
-exports.SAFE_MODE_CHAR = array_hyper_unique_1.array_unique([
+exports.REGEXP_TEST = (0, cjk_conv_1._re_cjk_conv)('ug');
+exports.SAFE_MODE_CHAR = (0, array_hyper_unique_1.array_unique)([
     '后',
     '里',
     '餵',

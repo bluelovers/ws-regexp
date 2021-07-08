@@ -39,7 +39,7 @@ const _support = {
             bool = a[flags_1.FlagsName[flags]];
         }
         else {
-            bool = lib_1.hasSupportFlag(flags_1.FlagsName[flags]);
+            bool = (0, lib_1.hasSupportFlag)(flags_1.FlagsName[flags]);
         }
         a[flags] = bool;
         return a;
@@ -47,18 +47,18 @@ const _support = {
     /**
      * all flag support without name and pattern test
      */
-    flagsAll: index_1.testFlagsAll(RegExp, true),
+    flagsAll: (0, index_1.testFlagsAll)(RegExp, true),
     /**
      * pattern support
      */
     pattern: Object.keys(pattern_1.PatternSupport).reduce(function (a, key) {
-        a[key] = pattern_1.testPattern(key);
+        a[key] = (0, pattern_1.testPattern)(key);
         return a;
     }, {}),
     //hasFlagsProp: /x/g.flags === 'g',
-    prototype: prototype_1.testPrototype(),
-    static: static_1.testStatic(),
-    symbol: symbol_1.testSymbol(),
+    prototype: (0, prototype_1.testPrototype)(),
+    static: (0, static_1.testStatic)(),
+    symbol: (0, symbol_1.testSymbol)(),
     objectStringTag: Object.prototype.toString.call(/a/),
     unicodeSet: (() => {
         return {
@@ -67,21 +67,21 @@ const _support = {
             blocks: false,
             //unicodeKeys: Object.keys(UNICODE_ALL),
             //scriptKeys: Object.keys(UNICODE_SCRIPTS_ALL),
-            unicodeTest: Object.entries(unicode_1.testUnicodeAll())
+            unicodeTest: Object.entries((0, unicode_1.testUnicodeAll)())
                 .reduce(function (a, b) {
                 if (b[1] !== null) {
                     a[b[0]] = b[1];
                 }
                 return a;
             }, {}),
-            scriptTest: Object.entries(unicode_script_1.testUnicodeScriptAll())
+            scriptTest: Object.entries((0, unicode_script_1.testUnicodeScriptAll)())
                 .reduce(function (a, b) {
                 if (b[1] !== null) {
                     a[b[0]] = b[1];
                 }
                 return a;
             }, {}),
-            blocksTest: Object.entries(unicode_blocks_1.testUnicodeBlocksAll())
+            blocksTest: Object.entries((0, unicode_blocks_1.testUnicodeBlocksAll)())
                 .reduce(function (a, b) {
                 if (b[1] !== null) {
                     a[b[0]] = b[1];

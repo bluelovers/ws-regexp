@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleContext = exports.handleOptions = exports.handldTarget = exports.FnList = void 0;
 const tslib_1 = require("tslib");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
-const fast_glob_1 = tslib_1.__importDefault(require("@bluelovers/fast-glob"));
-const fs_iconv_1 = tslib_1.__importDefault(require("fs-iconv"));
-const bluebird_1 = tslib_1.__importDefault(require("bluebird"));
-const diff_1 = tslib_1.__importDefault(require("diff"));
+const fast_glob_1 = (0, tslib_1.__importDefault)(require("@bluelovers/fast-glob"));
+const fs_iconv_1 = (0, tslib_1.__importDefault)(require("fs-iconv"));
+const bluebird_1 = (0, tslib_1.__importDefault)(require("bluebird"));
+const diff_1 = (0, tslib_1.__importDefault)(require("diff"));
 const debug_color2_1 = require("debug-color2");
 const crlf_normalize_1 = require("crlf-normalize");
 const min_1 = require("@lazy-cjk/zh-convert/min");
@@ -46,7 +46,7 @@ function handldTarget(search, options) {
             }));
             let txt_new = handleContext(txt_old, options);
             if (options.createPatch) {
-                let data = diff_1.default.createPatch(file + '.patch', crlf_normalize_1.crlf(txt_old), crlf_normalize_1.crlf(txt_new), void 0, void 0, {
+                let data = diff_1.default.createPatch(file + '.patch', (0, crlf_normalize_1.crlf)(txt_old), (0, crlf_normalize_1.crlf)(txt_new), void 0, void 0, {
                     newlineIsToken: true,
                 });
                 await fs_iconv_1.default.outputFile(file + '.patch', data);

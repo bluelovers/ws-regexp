@@ -85,7 +85,7 @@ function testPattern(name, RegExpClass = RegExp, testPatterns = exports.PatternT
             bool = testPatterns[name].every(function (v) {
                 let [pattern, flag, input, value, fn] = v;
                 let bool;
-                let r = index_1.createRegExp(pattern, flag, RegExpClass);
+                let r = (0, index_1.createRegExp)(pattern, flag, RegExpClass);
                 if (fn) {
                     if (typeof fn == 'function') {
                         bool = fn(r, value, input, pattern, RegExpClass, flag);

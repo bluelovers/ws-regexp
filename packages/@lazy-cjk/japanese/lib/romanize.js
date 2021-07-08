@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.romanize = void 0;
 const tslib_1 = require("tslib");
 const kana_1 = require("./kana");
-const extend_1 = tslib_1.__importDefault(require("lodash/extend"));
+const extend_1 = (0, tslib_1.__importDefault)(require("lodash/extend"));
 const romanize_1 = require("./data/romanize");
-tslib_1.__exportStar(require("./data/romanize"), exports);
+(0, tslib_1.__exportStar)(require("./data/romanize"), exports);
 /**
  * Convert input text into romaji.
  *
@@ -22,14 +22,14 @@ function romanize(string, config) {
         }
     }
     if (typeof config === 'object') {
-        config = extend_1.default({}, romanize_1.defaultRomanizationConfig, config);
+        config = (0, extend_1.default)({}, romanize_1.defaultRomanizationConfig, config);
     }
     else {
         throw new Error('You specified unknown config to japanese.romanize');
     }
-    const table = extend_1.default({}, romanize_1.romanizationTable);
+    const table = (0, extend_1.default)({}, romanize_1.romanizationTable);
     if (config['し'] === 'shi') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'し': 'shi',
             'しゃ': 'sha',
             'しゅ': 'shu',
@@ -38,7 +38,7 @@ function romanize(string, config) {
         });
     }
     if (config['ち'] === 'chi') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ち': 'chi',
             'ちゃ': 'cha',
             'ちゅ': 'chu',
@@ -49,7 +49,7 @@ function romanize(string, config) {
         });
     }
     if (config['つ'] === 'tsu') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'つ': 'tsu',
             'つぁ': 'tsa',
             'つぃ': 'tsi',
@@ -60,7 +60,7 @@ function romanize(string, config) {
         });
     }
     if (config['ふ'] === 'fu') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ふ': 'fu',
             'ふぁ': 'fa',
             'ふぃ': 'fi',
@@ -72,7 +72,7 @@ function romanize(string, config) {
         });
     }
     if (config['じ'] === 'ji') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'じ': 'ji',
             'じゃ': 'ja',
             'じゅ': 'ju',
@@ -81,7 +81,7 @@ function romanize(string, config) {
         });
     }
     if (config['ぢ'] === 'ji') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ぢ': 'ji',
             'ぢゃ': 'ja',
             'ぢゅ': 'ju',
@@ -92,7 +92,7 @@ function romanize(string, config) {
         });
     }
     if (config['ぢ'] === 'zi') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ぢ': 'zi',
             'ぢゃ': 'zya',
             'ぢゅ': 'zyu',
@@ -103,7 +103,7 @@ function romanize(string, config) {
         });
     }
     if (config['ぢ'] === 'dji') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ぢ': 'dji',
             'ぢゃ': 'dja',
             'ぢゅ': 'dju',
@@ -114,7 +114,7 @@ function romanize(string, config) {
         });
     }
     if (config['ぢ'] === 'dzi') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ぢ': 'dzi',
             'ぢゃ': 'dzya',
             'ぢゅ': 'dzyu',
@@ -125,7 +125,7 @@ function romanize(string, config) {
         });
     }
     if (config['づ'] === 'zu') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'づ': 'zu',
             'づぁ': 'zua',
             'づぃ': 'zui',
@@ -135,7 +135,7 @@ function romanize(string, config) {
         });
     }
     if (config['づ'] === 'dsu') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'づ': 'dsu',
             'づぁ': 'dsua',
             'づぃ': 'dsui',
@@ -145,7 +145,7 @@ function romanize(string, config) {
         });
     }
     if (config['づ'] === 'dzu') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'づ': 'dzu',
             'づぁ': 'dzua',
             'づぃ': 'dzui',
@@ -155,17 +155,17 @@ function romanize(string, config) {
         });
     }
     if (config['ゐ'] === 'i') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'ゐ': 'i',
             'ゑ': 'e',
         });
     }
     if (config['を'] === 'o') {
-        extend_1.default(table, {
+        (0, extend_1.default)(table, {
             'を': 'o',
         });
     }
-    string = kana_1.hiraganize(string);
+    string = (0, kana_1.hiraganize)(string);
     let dest = '';
     let previousToken = '';
     while (string.length > 0) {

@@ -13,14 +13,14 @@ const DummyCapturingGroup = {};
  */
 function elementsToAlternative(elements, parent) {
     for (const element of elements) {
-        util_1.assert(element.type !== "Disjunction" /* Disjunction */);
+        (0, util_1.assert)(element.type !== "Disjunction" /* Disjunction */);
         element.parent = parent;
     }
     return elements;
 }
 function addAlternativeElement(parent, node) {
     if (parent.type === "Disjunction" /* Disjunction */) {
-        util_1.last(parent.alternatives).push(node);
+        (0, util_1.last)(parent.alternatives).push(node);
     }
     else {
         parent.elements.push(node);
@@ -28,7 +28,7 @@ function addAlternativeElement(parent, node) {
 }
 function addCommonElement(parent, node) {
     if (parent.type === "Disjunction" /* Disjunction */) {
-        util_1.last(parent.alternatives).push(node);
+        (0, util_1.last)(parent.alternatives).push(node);
     }
     else if (parent.type === "CharacterClass" /* CharacterClass */) {
         parent.elements.push(node);
@@ -115,7 +115,7 @@ class RegExpParserState {
             parentNode.type === "CharacterClass" /* CharacterClass */) {
             throw new Error("UnknownError" /* UnknownError */);
         }
-        const prevNode = util_1.last(parentNode.elements);
+        const prevNode = (0, util_1.last)(parentNode.elements);
         if (prevNode != null && prevNode.type === "Disjunction" /* Disjunction */) {
             this._node = prevNode;
             prevNode.alternatives.push([]);
@@ -124,7 +124,7 @@ class RegExpParserState {
             this._node = {
                 type: "Disjunction" /* Disjunction */,
                 parent: parentNode,
-                start: util_1.last(this._disjunctionStartStack),
+                start: (0, util_1.last)(this._disjunctionStartStack),
                 end: start,
                 raw: "",
                 alternatives: [],
@@ -192,7 +192,7 @@ class RegExpParserState {
         }
         // Replace the last element.
         const elements = parentNode.type === "Disjunction" /* Disjunction */
-            ? util_1.last(parentNode.alternatives)
+            ? (0, util_1.last)(parentNode.alternatives)
             : parentNode.elements;
         const prevNode = elements.pop();
         const node = {
@@ -365,8 +365,8 @@ class RegExpParserState {
             min: leftNode,
             max: rightNode,
         };
-        util_1.assert(leftNode != null && leftNode.type === "Character" /* Character */);
-        util_1.assert(rightNode != null && rightNode.type === "Character" /* Character */);
+        (0, util_1.assert)(leftNode != null && leftNode.type === "Character" /* Character */);
+        (0, util_1.assert)(rightNode != null && rightNode.type === "Character" /* Character */);
         leftNode.parent = node;
         rightNode.parent = node;
         elements.push(node);

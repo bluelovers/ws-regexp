@@ -13,7 +13,7 @@ function word(name, options = {}) {
 }
 exports.word = word;
 function jp(txt, options = {}) {
-    return zh(jp_table_convert_1.zh2jp(zh(txt), {
+    return zh((0, jp_table_convert_1.zh2jp)(zh(txt), {
         // @ts-ignore
         skip: '竜龍制征里像拜冰澤涉丑兒娘姐姉志儿從辨勞' + (options.skip || ''),
         safe: typeof options.safe == 'boolean' ? options.safe : true,
@@ -55,7 +55,7 @@ function zh(txt, options = {}) {
         .replace(/里面/g, '裡面')
         .replace(/([今此])后/g, '$1後')
         .replace(/[么预枪丛迈这个尔儿从龙丝风劳弃别驯卢妈称号]+/ug, function (s) {
-        return zh_convert_1.cn2tw(s);
+        return (0, zh_convert_1.cn2tw)(s);
     });
 }
 exports.zh = zh;

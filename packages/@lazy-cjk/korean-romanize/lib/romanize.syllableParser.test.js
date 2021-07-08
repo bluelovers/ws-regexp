@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const romanize_1 = require("./romanize");
 describe("syllableParser", () => {
-    const parseSyllable = romanize_1.syllableParser({});
+    const parseSyllable = (0, romanize_1.syllableParser)({});
     test("should return a function", () => {
         expect(parseSyllable).toBeInstanceOf(Function);
     });

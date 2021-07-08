@@ -17,6 +17,6 @@ Object.defineProperty(exports, "TABLE_SAFE", { enumerable: true, get: function (
 const table_2 = require("./lib/table");
 Object.defineProperty(exports, "ZHJP_TABLE", { enumerable: true, get: function () { return table_2.TABLE; } });
 Object.defineProperty(exports, "ZHJP_TABLE_SAFE", { enumerable: true, get: function () { return table_2.TABLE_SAFE; } });
-tslib_1.__exportStar(require("./lib/table"), exports);
+(0, tslib_1.__exportStar)(require("./lib/table"), exports);
 exports.default = table_1.TABLE;
 //# sourceMappingURL=index.js.map

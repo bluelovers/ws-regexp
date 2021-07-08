@@ -11,7 +11,7 @@ function init(overwrite) {
             TABLE_SAFE: table_1.TABLE_SAFE,
         };
     }
-    return core_1._build_table(jp_table_comparison_1.ZHJP_TABLE, jp_table_comparison_1.ZHJP_TABLE_SAFE);
+    return (0, core_1._build_table)(jp_table_comparison_1.ZHJP_TABLE, jp_table_comparison_1.ZHJP_TABLE_SAFE);
 }
 exports.init = init;
 //# sourceMappingURL=init.js.map

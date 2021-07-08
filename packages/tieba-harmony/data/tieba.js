@@ -10,7 +10,7 @@ const list_1 = require("@lazy-cjk/zh-table-list/list");
  * 會變成 **
  * @type {string[]}
  */
-exports.star = list_1.arrCjk([
+exports.star = (0, list_1.arrCjk)([
     '下流',
     '下賤',
     '你媽',
@@ -53,11 +53,11 @@ exports.star.sort();
  * 被吞
  * @type {string[]}
  */
-exports.block = list_1.arrCjk([
+exports.block = (0, list_1.arrCjk)([
     '尼玛',
 ]);
 exports.block.sort();
-exports.data = array_hyper_unique_1.array_unique([
+exports.data = (0, array_hyper_unique_1.array_unique)([
     ...exports.star,
     ...exports.block,
 ]);

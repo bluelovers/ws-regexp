@@ -10,7 +10,7 @@ function jpListLazyAllMap(arr) {
 }
 exports.jpListLazyAllMap = jpListLazyAllMap;
 function jpListLazyAll(char) {
-    return jp_table_alias_1.lazyAll(char, {
+    return (0, jp_table_alias_1.lazyAll)(char, {
         safe: false,
         includeSelf: true,
     });

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.katakanize = exports.hiraganize = void 0;
 const tslib_1 = require("tslib");
 const kana_1 = require("./data/kana");
-tslib_1.__exportStar(require("./data/kana"), exports);
+(0, tslib_1.__exportStar)(require("./data/kana"), exports);
 const chr = String.fromCharCode;
 const ord = function (char) {
     return char.charCodeAt(0);

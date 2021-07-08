@@ -12,7 +12,7 @@ function zhTableAutoGreedyTable(s, options = {}) {
         options.safe = false;
     }
     options.greedyTable = options.greedyTable || true;
-    return zh_table_list_1.auto(s, options);
+    return (0, zh_table_list_1.auto)(s, options);
 }
 exports.zhTableAutoGreedyTable = zhTableAutoGreedyTable;
 function _word_zh_core(search, skip, zhTableFn = zh_table_list_1.auto, options = {}) {
@@ -24,7 +24,7 @@ function _word_zh_core(search, skip, zhTableFn = zh_table_list_1.auto, options =
             safe: false,
         };
     }
-    return search.replace(util_1._re_cjk_conv('ug'), function (char) {
+    return search.replace((0, util_1._re_cjk_conv)('ug'), function (char) {
         if (skip && skip.indexOf(char) != -1) {
             return char;
         }
@@ -42,7 +42,7 @@ function _word_zh_core2(search, skip, zhTableFn = zh_table_list_1.auto, options 
             safe: false,
         };
     }
-    return search.replace(util_1._re_cjk_conv('ug'), function (char) {
+    return search.replace((0, util_1._re_cjk_conv)('ug'), function (char) {
         if (skip && skip.indexOf(char) != -1) {
             return char;
         }

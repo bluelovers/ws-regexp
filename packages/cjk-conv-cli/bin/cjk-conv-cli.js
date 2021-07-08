@@ -2,7 +2,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const yargs_1 = tslib_1.__importDefault(require("yargs"));
+const yargs_1 = (0, tslib_1.__importDefault)(require("yargs"));
 const index_1 = require("../index");
 const cli = yargs_1.default
     .usage(`npx cjk-conv-cli xxxx.txt */file*.txt **/doc*.txt`)
@@ -48,7 +48,7 @@ let files = [
     ...argv.file,
     ...argv._,
 ];
-index_1.handldTarget(files, {
+(0, index_1.handldTarget)(files, {
     cwd: argv.cwd,
     tw2cn: argv.tw2cn,
     notMin: argv.notMin,

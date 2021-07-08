@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.utf8Split = exports.jsSplit = exports.toStrTable = exports.toStrTableArray = void 0;
 const tslib_1 = require("tslib");
-const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
+const uni_string_1 = (0, tslib_1.__importDefault)(require("uni-string"));
 function toStrTableArray(table, options = {}) {
     if (typeof table !== 'object' || Array.isArray(table)) {
         throw new TypeError(`table '${typeof table}' ${table}`);

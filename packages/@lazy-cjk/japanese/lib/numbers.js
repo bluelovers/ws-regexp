@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.transcribeNumber = void 0;
 const tslib_1 = require("tslib");
-const defaults_1 = tslib_1.__importDefault(require("lodash/defaults"));
-const big_js_1 = tslib_1.__importDefault(require("big.js"));
+const defaults_1 = (0, tslib_1.__importDefault)(require("lodash/defaults"));
+const big_js_1 = (0, tslib_1.__importDefault)(require("big.js"));
 const numbers_1 = require("./data/numbers");
 const numbers_2 = require("./util/numbers");
-tslib_1.__exportStar(require("./data/numbers"), exports);
+(0, tslib_1.__exportStar)(require("./data/numbers"), exports);
 function transcribeNumber(number, config) {
     if (typeof config === 'undefined') {
         // default config
@@ -19,7 +19,7 @@ function transcribeNumber(number, config) {
         }
     }
     if (typeof config === 'object') {
-        config = defaults_1.default({}, config, numbers_1.transcriptionConfigs['default']);
+        config = (0, defaults_1.default)({}, config, numbers_1.transcriptionConfigs['default']);
     }
     else {
         throw new Error('You specified unknown config to japanese.transcribeNumber');
@@ -57,9 +57,9 @@ function transcribeNumber(number, config) {
             // Paste number into binary form
             const buf = Buffer.alloc(8);
             buf.writeDoubleBE(number, 0);
-            let sign = numbers_2.getBit(buf, 0);
-            let exponent = numbers_2.getBits(buf, 1, 11);
-            let mantissa = numbers_2.getBits(buf, 12, 52);
+            let sign = (0, numbers_2.getBit)(buf, 0);
+            let exponent = (0, numbers_2.getBits)(buf, 1, 11);
+            let mantissa = (0, numbers_2.getBits)(buf, 12, 52);
             let fraction = null;
             exponent = parseInt(exponent.toString());
             if (exponent === 0) {

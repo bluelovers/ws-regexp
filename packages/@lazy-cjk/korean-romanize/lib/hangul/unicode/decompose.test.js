@@ -18,13 +18,13 @@ const hangulHexCases = {
 };
 describe("arithmeticDecompositionMappingLV", () => {
     test("should pull out correct code points for ㅍ and ㅟ from 0xd4db (퓛)", () => {
-        expect(decompose_1.arithmeticDecompositionMappingLV(0xd4db)).toStrictEqual([
+        expect((0, decompose_1.arithmeticDecompositionMappingLV)(0xd4db)).toStrictEqual([
             0x1111,
             0x1171,
         ]);
     });
     test("should pull out correct code points for ㅍ and ㅟ from 퓛", () => {
-        expect(decompose_1.arithmeticDecompositionMappingLV("퓛")).toStrictEqual([
+        expect((0, decompose_1.arithmeticDecompositionMappingLV)("퓛")).toStrictEqual([
             0x1111,
             0x1171,
         ]);
@@ -32,25 +32,25 @@ describe("arithmeticDecompositionMappingLV", () => {
 });
 describe("arithmeticDecompositionMappingLVT", () => {
     test("should pull out correct code point for trailing ㄹㅎ in 0x11b6 (퓛)", () => {
-        expect(decompose_1.arithmeticDecompositionMappingLVT(0xd4db)[1]).toBe(0x11b6);
+        expect((0, decompose_1.arithmeticDecompositionMappingLVT)(0xd4db)[1]).toBe(0x11b6);
     });
     test("should pull out correct code point for trailing ㄹㅎ in 퓛", () => {
-        expect(decompose_1.arithmeticDecompositionMappingLVT("퓛")[1]).toBe(0x11b6);
+        expect((0, decompose_1.arithmeticDecompositionMappingLVT)("퓛")[1]).toBe(0x11b6);
     });
 });
 describe("decomposeHangulChar", () => {
     Object.entries(hangulHexCases).forEach(([hangul, charCodes]) => {
         test(`should decompose ${hangul} to character codes [${charCodes.join(",")}] (${String.fromCodePoint(...charCodes)})`, () => {
-            expect(decompose_1.decomposeHangulChar(hangul)).toStrictEqual(charCodes);
+            expect((0, decompose_1.decomposeHangulChar)(hangul)).toStrictEqual(charCodes);
         });
         test(`should decompose code point ${hangul.codePointAt(0)} (${hangul}) to character codes [${charCodes.join(",")}]`, () => {
-            expect(decompose_1.decomposeHangulChar(hangul.codePointAt(0))).toStrictEqual(charCodes);
+            expect((0, decompose_1.decomposeHangulChar)(hangul.codePointAt(0))).toStrictEqual(charCodes);
         });
     });
 });
 describe("decomposeHangul (word)", () => {
     test("should decompose 훈민정음 into correct code points for each character", () => {
-        expect(decompose_1.decomposeHangul("훈민정음")).toStrictEqual([
+        expect((0, decompose_1.decomposeHangul)("훈민정음")).toStrictEqual([
             [0x1112, 0x116e, 0x11ab],
             [0x1106, 0x1175, 0x11ab],
             [0x110c, 0x1165, 0x11bc],

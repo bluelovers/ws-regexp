@@ -7,7 +7,7 @@ exports.fixOptions = exports.mergeOptions = exports.mergeOptions2 = exports.getS
 const lodash_1 = require("lodash");
 const array_hyper_unique_1 = require("array-hyper-unique");
 function customizer(objValue, srcValue) {
-    if (lodash_1.isArray(objValue)) {
+    if ((0, lodash_1.isArray)(objValue)) {
         return objValue.concat(srcValue);
     }
 }
@@ -51,7 +51,7 @@ function mergeOptions(base = {}, ...opts) {
         .filter(o => o);
     if (arr.length > 1) {
         // @ts-ignore
-        base = lodash_1.mergeWith(...(arr.map(o => {
+        base = (0, lodash_1.mergeWith)(...(arr.map(o => {
             return fixOptions(o);
             // @ts-ignore
         })), customizer);
@@ -80,7 +80,7 @@ export function MergeDefaultOptions(target: typeof zhRegExp): typeof zhRegExp
 function fixOptions(options, removeEmptyOn) {
     if (options.on) {
         if (Array.isArray(options.on)) {
-            array_hyper_unique_1.array_unique_overwrite(options.on);
+            (0, array_hyper_unique_1.array_unique_overwrite)(options.on);
         }
         else {
             options.on = [options.on];

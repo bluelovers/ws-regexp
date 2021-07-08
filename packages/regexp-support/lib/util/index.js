@@ -9,7 +9,7 @@ const util_1 = require("util");
 //util.inspect.defaultOptions.colors = true;
 function log_dir(...argv) {
     argv = argv.reduce(function (a, b) {
-        let c = util_1.inspect(b, {
+        let c = (0, util_1.inspect)(b, {
             colors: true,
         });
         a.push(c);
@@ -23,7 +23,7 @@ function _createFnTestPattern(initTestPatterns) {
     // @ts-ignore
     RegExpClass = RegExp, testPatterns = initTestPatterns) => {
         // @ts-ignore
-        return pattern_1.testPattern(name, RegExpClass, testPatterns);
+        return (0, pattern_1.testPattern)(name, RegExpClass, testPatterns);
     };
 }
 exports._createFnTestPattern = _createFnTestPattern;

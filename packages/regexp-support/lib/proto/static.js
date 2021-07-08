@@ -34,7 +34,7 @@ exports.REGEXP_STATIC = {
 // @ts-ignore
 function testStatic(RegExpClass = RegExp) {
     let rc = RegExpClass;
-    let re = index_1.createRegExp('(wor)(ld)', 'g', RegExpClass);
+    let re = (0, index_1.createRegExp)('(wor)(ld)', 'g', RegExpClass);
     re.test('hello world!');
     return Object.keys(exports.REGEXP_STATIC)
         .reduce(function (a, b) {

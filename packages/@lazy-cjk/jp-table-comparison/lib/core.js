@@ -9,7 +9,7 @@ function fixPlusTable(table) {
         return row
             .map(s => {
             if (typeof s === 'string') {
-                return zero_width_1.trimWithZeroWidth(s);
+                return (0, zero_width_1.trimWithZeroWidth)(s);
             }
             return s;
         });
@@ -26,7 +26,7 @@ function _jpTableCmparisonBuildPre(table, options) {
     PLUS_TABLE.forEach(function ([jp, zht, zhs]) {
         addNew(TABLE, jp, zht, zhs);
     });
-    TABLE = core_1.array_unique(TABLE.concat(table.teachKanjiComparison.filter(function (row) {
+    TABLE = (0, core_1.array_unique)(TABLE.concat(table.teachKanjiComparison.filter(function (row) {
         if (skip_00.includes(row[0][0])) {
             return false;
         }
@@ -85,10 +85,10 @@ function _jpTableCmparisonBuild(table, options) {
             TABLE_SAFE.push(TABLE[i]);
         }
     }
-    core_1.array_unique_overwrite(TABLE);
-    core_1.array_unique_overwrite(TABLE_SAFE);
-    core_1.array_unique_overwrite(PLUS_TABLE);
-    core_1.array_unique_overwrite(PLUS_TABLE_SAFE);
+    (0, core_1.array_unique_overwrite)(TABLE);
+    (0, core_1.array_unique_overwrite)(TABLE_SAFE);
+    (0, core_1.array_unique_overwrite)(PLUS_TABLE);
+    (0, core_1.array_unique_overwrite)(PLUS_TABLE_SAFE);
     return {
         TABLE,
         TABLE_SAFE,

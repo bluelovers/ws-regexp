@@ -1,8 +1,8 @@
 "use strict";
 // "...what have the Romans ever done for us?"
 const tslib_1 = require("tslib");
-const isHangul_1 = tslib_1.__importDefault(require("./hangul/isHangul"));
-const hangul_jamo_1 = tslib_1.__importDefault(require("./hangul/unicode/hangul-jamo"));
+const isHangul_1 = (0, tslib_1.__importDefault)(require("./hangul/isHangul"));
+const hangul_jamo_1 = (0, tslib_1.__importDefault)(require("./hangul/unicode/hangul-jamo"));
 const fromPairs = pairs => pairs.reduce((cache, pair) => {
     cache[pair[0]] = pair[1];
     return cache;
@@ -12,7 +12,7 @@ const jamoMapper = jamoSet => ({ jamo, roman }, idx) => {
     const unicodeJamo = jamoSet[idx].jamo;
     const compatJamo = jamo &&
         jamo !== unicodeJamo &&
-        isHangul_1.default(jamo) === "HANGUL_COMPATIBILITY_JAMO"
+        (0, isHangul_1.default)(jamo) === "HANGUL_COMPATIBILITY_JAMO"
         ? jamo
         : undefined;
     const compatJamoHex = compatJamo

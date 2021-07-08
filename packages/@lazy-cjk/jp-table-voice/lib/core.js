@@ -5,7 +5,7 @@ const array_hyper_unique_1 = require("array-hyper-unique");
 function _buildTablePlus(table_plus) {
     Object.keys(table_plus)
         .forEach(function (key) {
-        table_plus[key] = Object.freeze(array_hyper_unique_1.array_unique(table_plus[key]));
+        table_plus[key] = Object.freeze((0, array_hyper_unique_1.array_unique)(table_plus[key]));
         table_plus[key].forEach(function (s) {
             table_plus[s] = table_plus[key];
         });

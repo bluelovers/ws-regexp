@@ -14,7 +14,7 @@ function uni2cns(uni) {
 }
 exports.uni2cns = uni2cns;
 function char2cns(char) {
-    return uni2cns(char2uni_1.char2uni(char));
+    return uni2cns((0, char2uni_1.char2uni)(char));
 }
 exports.char2cns = char2cns;
 exports.default = uni2cns;

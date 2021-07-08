@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parens = exports.Literal = exports.Repetition = exports.Concatenation = exports.CharClass = exports.Alternation = void 0;
 const tslib_1 = require("tslib");
-const jsesc_1 = tslib_1.__importDefault(require("jsesc"));
-const regenerate_1 = tslib_1.__importDefault(require("regenerate"));
+const jsesc_1 = (0, tslib_1.__importDefault)(require("jsesc"));
+const regenerate_1 = (0, tslib_1.__importDefault)(require("regenerate"));
 /**
  * Represents an alternation (e.g. `foo|bar`)
  */
@@ -30,7 +30,7 @@ exports.Alternation = Alternation;
 class CharClass {
     constructor(a, b) {
         this.precedence = 1;
-        this.set = regenerate_1.default(a, b);
+        this.set = (0, regenerate_1.default)(a, b);
     }
     get length() {
         return 1;
@@ -124,7 +124,7 @@ class Literal {
         return this.value.length;
     }
     toString(flags) {
-        return jsesc_1.default(this.value, { es6: flags && flags.indexOf('u') !== -1 })
+        return (0, jsesc_1.default)(this.value, { es6: flags && flags.indexOf('u') !== -1 })
             .replace(/[\t\n\f\r\$\(\)\*\+\-\.\?\[\]\^\|]/g, '\\$&')
             // special handling to not escape curly braces which are part of Unicode escapes
             .replace(/(\\u\{[a-z0-9]+\})|([\{\}])/ig, (match, unicode, brace) => unicode || '\\' + brace);

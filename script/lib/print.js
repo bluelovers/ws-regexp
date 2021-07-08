@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.printTypeKeys = exports.printRecord = exports.printArray = void 0;
 const tslib_1 = require("tslib");
-const assert_1 = tslib_1.__importDefault(require("assert"));
+const assert_1 = (0, tslib_1.__importDefault)(require("assert"));
 const array_hyper_unique_1 = require("array-hyper-unique");
 function printArray(arrayTable, level) {
-    assert_1.default(Array.isArray(arrayTable));
+    (0, assert_1.default)(Array.isArray(arrayTable));
     let ls = [];
     let prepend = `\t`.repeat(level | 0);
     for (const v of arrayTable) {
@@ -24,7 +24,7 @@ function printRecord(data, level) {
 }
 exports.printRecord = printRecord;
 function printTypeKeys(data) {
-    return array_hyper_unique_1.array_unique(data)
+    return (0, array_hyper_unique_1.array_unique)(data)
         .map(v => `'${v}'`)
         .join(' | ');
 }

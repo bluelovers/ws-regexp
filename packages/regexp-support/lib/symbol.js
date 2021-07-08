@@ -14,7 +14,7 @@ exports.REGEXP_SYMBOL = {
 };
 // @ts-ignore
 function testSymbol(RegExpClass = RegExp) {
-    let r = index_1.createRegExp('', '', RegExpClass);
+    let r = (0, index_1.createRegExp)('', '', RegExpClass);
     return Object.keys(exports.REGEXP_SYMBOL)
         .reduce(function (a, key) {
         a[key] = (Symbol[key] && Symbol[key] in r);

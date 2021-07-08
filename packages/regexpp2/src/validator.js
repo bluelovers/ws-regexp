@@ -21,20 +21,20 @@ function isSyntaxCharacter(cp) {
         cp === unicode_1.VerticalLine);
 }
 function isRegExpIdentifierStart(cp) {
-    return unicode_1.isIdStart(cp) || cp === unicode_1.DollarSign || cp === unicode_1.LowLine;
+    return (0, unicode_1.isIdStart)(cp) || cp === unicode_1.DollarSign || cp === unicode_1.LowLine;
 }
 function isRegExpIdentifierPart(cp) {
-    return (unicode_1.isIdContinue(cp) ||
+    return ((0, unicode_1.isIdContinue)(cp) ||
         cp === unicode_1.DollarSign ||
         cp === unicode_1.LowLine ||
         cp === unicode_1.ZeroWidthNonJoiner ||
         cp === unicode_1.ZeroWidthJoiner);
 }
 function isUnicodePropertyNameCharacter(cp) {
-    return unicode_1.isLatinLetter(cp) || cp === unicode_1.LowLine;
+    return (0, unicode_1.isLatinLetter)(cp) || cp === unicode_1.LowLine;
 }
 function isUnicodePropertyValueCharacter(cp) {
-    return isUnicodePropertyNameCharacter(cp) || unicode_1.isDecimalDigit(cp);
+    return isUnicodePropertyNameCharacter(cp) || (0, unicode_1.isDecimalDigit)(cp);
 }
 function isValidUnicodeProperty(name, value) {
     //eslint-disable-next-line no-prototype-builtins
@@ -342,7 +342,7 @@ class RegExpValidator {
         let escaped = false;
         for (;;) {
             const cp = this.currentCodePoint;
-            if (cp === -1 || unicode_1.isLineTerminator(cp)) {
+            if (cp === -1 || (0, unicode_1.isLineTerminator)(cp)) {
                 const kind = inClass ? "character class" : "regular expression";
                 this.raise(`Unterminated ${kind}`);
             }
@@ -853,7 +853,7 @@ class RegExpValidator {
     }
     eatZero() {
         if (this.currentCodePoint === unicode_1.DigitZero &&
-            !unicode_1.isDecimalDigit(this.nextCodePoint)) {
+            !(0, unicode_1.isDecimalDigit)(this.nextCodePoint)) {
             this._lastIntValue = 0;
             this.advance();
             return true;
@@ -887,7 +887,7 @@ class RegExpValidator {
     // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlLetter
     eatControlLetter() {
         const cp = this.currentCodePoint;
-        if (unicode_1.isLatinLetter(cp)) {
+        if ((0, unicode_1.isLatinLetter)(cp)) {
             this.advance();
             this._lastIntValue = cp % 0x20;
             return true;
@@ -924,7 +924,7 @@ class RegExpValidator {
                 this.eat(unicode_1.LeftCurlyBracket) &&
                 this.eatHexDigits() &&
                 this.eat(unicode_1.RightCurlyBracket) &&
-                unicode_1.isValidUnicode(this._lastIntValue)) {
+                (0, unicode_1.isValidUnicode)(this._lastIntValue)) {
                 return true;
             }
             if (this.strict || this._uFlag) {
@@ -958,7 +958,7 @@ class RegExpValidator {
             return false;
         }
         if (this.strict) {
-            return !unicode_1.isIdContinue(cp);
+            return !(0, unicode_1.isIdContinue)(cp);
         }
         return (cp !== unicode_1.LatinSmallLetterC &&
             (!this._nFlag || cp !== unicode_1.LatinSmallLetterK));
@@ -1175,7 +1175,7 @@ class RegExpValidator {
     // https://www.ecma-international.org/ecma-262/8.0/#prod-strict-ClassControlLetter
     eatClassControlLetter() {
         const cp = this.currentCodePoint;
-        if (unicode_1.isDecimalDigit(cp) || cp === unicode_1.LowLine) {
+        if ((0, unicode_1.isDecimalDigit)(cp) || cp === unicode_1.LowLine) {
             this.advance();
             this._lastIntValue = cp % 0x20;
             return true;
@@ -1200,9 +1200,9 @@ class RegExpValidator {
     eatDecimalDigits() {
         const start = this.index;
         this._lastIntValue = 0;
-        while (unicode_1.isDecimalDigit(this.currentCodePoint)) {
+        while ((0, unicode_1.isDecimalDigit)(this.currentCodePoint)) {
             this._lastIntValue =
-                10 * this._lastIntValue + unicode_1.digitToInt(this.currentCodePoint);
+                10 * this._lastIntValue + (0, unicode_1.digitToInt)(this.currentCodePoint);
             this.advance();
         }
         return this.index !== start;
@@ -1211,9 +1211,9 @@ class RegExpValidator {
     eatHexDigits() {
         const start = this.index;
         this._lastIntValue = 0;
-        while (unicode_1.isHexDigit(this.currentCodePoint)) {
+        while ((0, unicode_1.isHexDigit)(this.currentCodePoint)) {
             this._lastIntValue =
-                16 * this._lastIntValue + unicode_1.digitToInt(this.currentCodePoint);
+                16 * this._lastIntValue + (0, unicode_1.digitToInt)(this.currentCodePoint);
             this.advance();
         }
         return this.index !== start;
@@ -1242,7 +1242,7 @@ class RegExpValidator {
     // https://www.ecma-international.org/ecma-262/8.0/#prod-OctalDigit
     eatOctalDigit() {
         const cp = this.currentCodePoint;
-        if (unicode_1.isOctalDigit(cp)) {
+        if ((0, unicode_1.isOctalDigit)(cp)) {
             this.advance();
             this._lastIntValue = cp - unicode_1.DigitZero;
             return true;
@@ -1258,11 +1258,11 @@ class RegExpValidator {
         this._lastIntValue = 0;
         for (let i = 0; i < length; ++i) {
             const cp = this.currentCodePoint;
-            if (!unicode_1.isHexDigit(cp)) {
+            if (!(0, unicode_1.isHexDigit)(cp)) {
                 this.rewind(start);
                 return false;
             }
-            this._lastIntValue = 16 * this._lastIntValue + unicode_1.digitToInt(cp);
+            this._lastIntValue = 16 * this._lastIntValue + (0, unicode_1.digitToInt)(cp);
             this.advance();
         }
         return true;

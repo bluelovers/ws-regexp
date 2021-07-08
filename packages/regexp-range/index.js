@@ -5,7 +5,7 @@
 const core_1 = require("./src/core");
 function matchRange(...argv) {
     // @ts-ignore
-    return core_1.matchRange(...argv);
+    return (0, core_1.matchRange)(...argv);
 }
 matchRange.matchRange = matchRange;
 matchRange.getOptions = core_1.getOptions;

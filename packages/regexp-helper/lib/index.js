@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.prototypeToFlags = exports.prototypeToFlagsArray = exports._getNativeFlags = exports.isNativeFlags = exports.stripNonNativeFlags = exports.getNativeFlags = exports.hasFlagsProp = exports.RE_NON_NATIVE_FLAGS = exports.RE_NATIVE_FLAGS = void 0;
 const tslib_1 = require("tslib");
-const regexp_support_1 = tslib_1.__importStar(require("regexp-support"));
+const regexp_support_1 = (0, tslib_1.__importStar)(require("regexp-support"));
 exports.RE_NATIVE_FLAGS = new RegExp(`[${regexp_support_1.default.nativeFlags}]`, 'g');
 exports.RE_NON_NATIVE_FLAGS = new RegExp(`[^${regexp_support_1.default.nativeFlags}]`, 'g');
 exports.hasFlagsProp = regexp_support_1.default.prototype.flags;

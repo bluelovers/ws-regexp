@@ -10,10 +10,10 @@ const jamoShortNames_1 = require("./jamoShortNames");
  * @returns {string} Unicode Hangul syllable short name
  */
 function getHangulCharShortName(s) {
-    const SIndex = computations_1.computeSIndex(s);
-    const LIndex = computations_1.computeLIndex(SIndex);
-    const VIndex = computations_1.computeVIndex(SIndex);
-    const TIndex = computations_1.computeTIndex(SIndex);
+    const SIndex = (0, computations_1.computeSIndex)(s);
+    const LIndex = (0, computations_1.computeLIndex)(SIndex);
+    const VIndex = (0, computations_1.computeVIndex)(SIndex);
+    const TIndex = (0, computations_1.computeTIndex)(SIndex);
     return jamoShortNames_1.JAMO_L_TABLE[LIndex] + jamoShortNames_1.JAMO_V_TABLE[VIndex] + jamoShortNames_1.JAMO_T_TABLE[TIndex];
 }
 exports.getHangulCharShortName = getHangulCharShortName;

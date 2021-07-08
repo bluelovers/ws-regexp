@@ -6,7 +6,7 @@ function _uniqueTable(table_jp) {
     Object.keys(table_jp)
         .forEach(function (key) {
         // @ts-ignore
-        table_jp[key] = array_hyper_unique_1.array_unique(table_jp[key]);
+        table_jp[key] = (0, array_hyper_unique_1.array_unique)(table_jp[key]);
     });
     return table_jp;
 }
@@ -14,7 +14,7 @@ exports._uniqueTable = _uniqueTable;
 function _buildTablePlus(table_plus) {
     Object.keys(table_plus)
         .forEach(function (key) {
-        table_plus[key] = array_hyper_unique_1.array_unique(table_plus[key]);
+        table_plus[key] = (0, array_hyper_unique_1.array_unique)(table_plus[key]);
         table_plus[key].forEach(function (s) {
             table_plus[s] = table_plus[key];
         });

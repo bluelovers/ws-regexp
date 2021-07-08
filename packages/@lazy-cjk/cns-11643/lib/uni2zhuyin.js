@@ -15,11 +15,11 @@ function uni2zhuyin_all(uni) {
 }
 exports.uni2zhuyin_all = uni2zhuyin_all;
 function char2zhuyin(char) {
-    return uni2zhuyin(char2uni_1.char2uni(char));
+    return uni2zhuyin((0, char2uni_1.char2uni)(char));
 }
 exports.char2zhuyin = char2zhuyin;
 function char2zhuyin_all(char) {
-    return uni2zhuyin_all(char2uni_1.char2uni(char));
+    return uni2zhuyin_all((0, char2uni_1.char2uni)(char));
 }
 exports.char2zhuyin_all = char2zhuyin_all;
 exports.default = uni2zhuyin;

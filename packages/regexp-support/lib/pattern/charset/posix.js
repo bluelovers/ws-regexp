@@ -37,7 +37,7 @@ exports.PatternTest = {
 // @ts-ignore
 function testPOXIX(name, RegExpClass = RegExp, testPatterns = exports.PatternTest) {
     // @ts-ignore
-    return pattern_1.testPattern(name, RegExpClass, testPatterns);
+    return (0, pattern_1.testPattern)(name, RegExpClass, testPatterns);
 }
 exports.testPOXIX = testPOXIX;
 exports.default = POXIX;

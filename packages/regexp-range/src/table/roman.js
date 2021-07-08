@@ -13,6 +13,6 @@ exports.list_range_raw = [
         [0x2170, 0x2170 + 12],
     ],
 ];
-exports.list_range = util_1.listRawToRange(exports.list_range_raw);
+exports.list_range = (0, util_1.listRawToRange)(exports.list_range_raw);
 exports.default = exports.list_range;
 //# sourceMappingURL=roman.js.map

@@ -20,15 +20,15 @@ function replaceUnicodePropertyPattern(source, cb) {
 }
 exports.replaceUnicodePropertyPattern = replaceUnicodePropertyPattern;
 function escapeUnicodePropertyPatternCore(source, flags, options) {
-    return rewrite_pattern_1.rewritePatternCore(source, flags !== null && flags !== void 0 ? flags : 'u', {
+    return (0, rewrite_pattern_1.rewritePatternCore)(source, flags !== null && flags !== void 0 ? flags : 'u', {
         ...options,
         unicodePropertyEscape: true,
     });
 }
 exports.escapeUnicodePropertyPatternCore = escapeUnicodePropertyPatternCore;
 function escapeUnicodePropertyPattern(source, flags, options) {
-    ({ flags, options } = util_1.handleOptions(options, flags));
-    return rewrite_pattern_1.rewritePatternCore(source, flags, options);
+    ({ flags, options } = (0, util_1.handleOptions)(options, flags));
+    return (0, rewrite_pattern_1.rewritePatternCore)(source, flags, options);
 }
 exports.escapeUnicodePropertyPattern = escapeUnicodePropertyPattern;
 exports.default = escapeUnicodePropertyPattern;

@@ -23,7 +23,7 @@ exports.PROTOTYPE = {
 // @ts-ignore
 function testPrototype(RegExpClass = RegExp) {
     const flags = 'g';
-    let r = index_1.createRegExp('', flags, RegExpClass);
+    let r = (0, index_1.createRegExp)('', flags, RegExpClass);
     return Object.keys(exports.PROTOTYPE)
         .reduce(function (a, b) {
         switch (b) {

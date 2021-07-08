@@ -22,8 +22,8 @@ function slugify(input, options = {}, unsafe2) {
             ...options.optionsZhTable,
         },
     };
-    let k = unsafe2 ? zh_table_greedy_1.greedyTableReplace(input) : input;
-    let arr = list_1.charTableList(k, options);
+    let k = unsafe2 ? (0, zh_table_greedy_1.greedyTableReplace)(input) : input;
+    let arr = (0, list_1.charTableList)(k, options);
     return arr
         .reduce(function (s, a) {
         s.push(a[0]);

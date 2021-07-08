@@ -20,7 +20,7 @@ function newZhPinyinFn(options) {
     if (useTransliteration) {
         return (s) => {
             if (s === null || s === void 0 ? void 0 : s.length) {
-                let n = transliteration_1.slugify(s);
+                let n = (0, transliteration_1.slugify)(s);
                 if (n === '') {
                     n = char2pinyin(s);
                 }

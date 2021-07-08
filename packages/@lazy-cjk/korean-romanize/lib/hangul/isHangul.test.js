@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const isHangul_1 = tslib_1.__importDefault(require("./isHangul"));
+const isHangul_1 = (0, tslib_1.__importDefault)(require("./isHangul"));
 const blocks_1 = require("./unicode/blocks");
 const describeTestBlock = (description, jamoBlock, expected) => describe(description, () => {
     const [start, stop] = jamoBlock;
@@ -9,10 +9,10 @@ const describeTestBlock = (description, jamoBlock, expected) => describe(descrip
         const char = String.fromCodePoint(charCode);
         test(`should determine ${char} is not hangul`, () => {
             if (expected) {
-                expect(isHangul_1.default(char)).toBeTruthy();
+                expect((0, isHangul_1.default)(char)).toBeTruthy();
             }
             else {
-                expect(isHangul_1.default(char)).toBe(false);
+                expect((0, isHangul_1.default)(char)).toBe(false);
             }
         });
     }
@@ -20,29 +20,29 @@ const describeTestBlock = (description, jamoBlock, expected) => describe(descrip
 describe("isHangul", () => {
     describe("should return null", () => {
         test("for an undefined input", () => {
-            expect(isHangul_1.default()).toBeNull();
+            expect((0, isHangul_1.default)()).toBeNull();
         });
         test("for a null input", () => {
-            expect(isHangul_1.default(null)).toBeNull();
+            expect((0, isHangul_1.default)(null)).toBeNull();
         });
         test("for NaN input", () => {
-            expect(isHangul_1.default(NaN)).toBeNull();
+            expect((0, isHangul_1.default)(NaN)).toBeNull();
         });
         test("for an object input", () => {
-            expect(isHangul_1.default({})).toBeNull();
+            expect((0, isHangul_1.default)({})).toBeNull();
         });
         test("for a number input", () => {
-            expect(isHangul_1.default(1945)).toBeNull();
+            expect((0, isHangul_1.default)(1945)).toBeNull();
         });
     });
     test("should return truthy for ㄱ", () => {
-        expect(isHangul_1.default("ㄱ")).toBeTruthy();
+        expect((0, isHangul_1.default)("ㄱ")).toBeTruthy();
     });
     test("should return truthy for ㅏ", () => {
-        expect(isHangul_1.default("ㅏ")).toBeTruthy();
+        expect((0, isHangul_1.default)("ㅏ")).toBeTruthy();
     });
     test("should return truthy for 가", () => {
-        expect(isHangul_1.default("가")).toBeTruthy();
+        expect((0, isHangul_1.default)("가")).toBeTruthy();
     });
     describeTestBlock("basic Latin", blocks_1.BASIC_LATIN, false);
     // describeTestBlock(

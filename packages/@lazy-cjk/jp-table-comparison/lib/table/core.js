@@ -16,7 +16,7 @@ exports.skip = [
 exports.skip_00 = [
     '尨',
 ];
-exports.PLUS_TABLE = array_hyper_unique_1.array_unique([
+exports.PLUS_TABLE = (0, array_hyper_unique_1.array_unique)([
     ['蝕', '蝕', '蚀'],
     ["絲", "絲", "丝"],
     ["異", "異", "异"],
@@ -79,7 +79,7 @@ exports.PLUS_TABLE = array_hyper_unique_1.array_unique([
     ["抜", "拔", null],
     ["専", "專", "专"],
 ]);
-exports.PLUS_TABLE_SAFE = array_hyper_unique_1.array_unique([
+exports.PLUS_TABLE_SAFE = (0, array_hyper_unique_1.array_unique)([
     ["絶", "絕", "绝"],
     ["別", "別", "别"],
     ["魯", "魯", "鲁"],

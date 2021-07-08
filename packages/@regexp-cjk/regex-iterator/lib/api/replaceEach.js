@@ -4,7 +4,7 @@ exports.replaceEach = void 0;
 const handleChainInput_1 = require("../util/handleChainInput");
 function replaceEach(input, chain, options = {}) {
     for (let row of chain) {
-        let [regexp, value,] = handleChainInput_1.handleChainInputCore2(row, options);
+        let [regexp, value,] = (0, handleChainInput_1.handleChainInputCore2)(row, options);
         input = input.replace(regexp, value);
     }
     return input;

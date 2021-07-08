@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.romanize = exports.romanizeWord = exports.syllableParser = exports.searchJamo = void 0;
 const tslib_1 = require("tslib");
-const jamo_1 = tslib_1.__importDefault(require("./jamo"));
+const jamo_1 = (0, tslib_1.__importDefault)(require("./jamo"));
 const decompose_1 = require("./hangul/unicode/decompose");
-const hangulReplace_1 = tslib_1.__importDefault(require("./hangul/hangulReplace"));
+const hangulReplace_1 = (0, tslib_1.__importDefault)(require("./hangul/hangulReplace"));
 const getJamoDictionary = (jamo, idx) => jamo_1.default[idx].find(o => o.jamo === jamo) ||
     jamo_1.default[idx].find(o => o.compatJamo === jamo);
 function searchJamo(node, params, prevNode) {
@@ -76,7 +76,7 @@ function syllableParser(method) {
 exports.syllableParser = syllableParser;
 function romanizeWord(word, options) {
     const { method = "RR", hyphenate = method === "RRT" || undefined } = typeof options === "object" ? options : {};
-    const mappedToRoman = decompose_1.decomposeHangul(word)
+    const mappedToRoman = (0, decompose_1.decomposeHangul)(word)
         .map(syllableParser(method))
         .reduce((prevSyllables, currentSyllable) => prevSyllables.concat(hyphenate ? [...currentSyllable, "-"] : currentSyllable), [])
         .join("")
@@ -87,7 +87,7 @@ function romanizeWord(word, options) {
 }
 exports.romanizeWord = romanizeWord;
 function romanize(text, options) {
-    return hangulReplace_1.default(text, word => romanizeWord(word, options));
+    return (0, hangulReplace_1.default)(text, word => romanizeWord(word, options));
 }
 exports.romanize = romanize;
 exports.default = romanize;

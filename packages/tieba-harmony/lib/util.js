@@ -6,8 +6,8 @@ const array_hyper_unique_1 = require("array-hyper-unique");
 Object.defineProperty(exports, "array_unique", { enumerable: true, get: function () { return array_hyper_unique_1.array_unique; } });
 const list_1 = require("@lazy-cjk/zh-table-list/list");
 Object.defineProperty(exports, "arrCjk", { enumerable: true, get: function () { return list_1.arrCjk; } });
-const regexp_cjk_1 = tslib_1.__importDefault(require("regexp-cjk"));
-const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
+const regexp_cjk_1 = (0, tslib_1.__importDefault)(require("regexp-cjk"));
+const uni_string_1 = (0, tslib_1.__importDefault)(require("uni-string"));
 function splitZh(s) {
     return s
         .split(/([\u4E00-\u9FFF\u{20000}-\u{2FA1F}])/u)
@@ -35,7 +35,7 @@ function arraySep(arr) {
         return a;
     }, []);
     ret.sort();
-    ret = array_hyper_unique_1.array_unique(ret);
+    ret = (0, array_hyper_unique_1.array_unique)(ret);
     return ret;
 }
 exports.arraySep = arraySep;
@@ -47,7 +47,7 @@ function arrayToRegExp(arr, unique = true) {
         return regexp_cjk_1.default.create(v, 'ig');
     });
     if (unique) {
-        ret = array_hyper_unique_1.array_unique(ret);
+        ret = (0, array_hyper_unique_1.array_unique)(ret);
     }
     return ret;
 }

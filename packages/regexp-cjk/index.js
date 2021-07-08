@@ -10,18 +10,18 @@ Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: fu
 const core_1 = require("./lib/core");
 const regexp_helper_core_1 = require("regexp-helper-core");
 Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_core_1.isRegExp; } });
-const RegexpHelper = tslib_1.__importStar(require("regexp-helper-core"));
-const mergeOptions_1 = tslib_1.__importStar(require("./lib/mergeOptions"));
+const RegexpHelper = (0, tslib_1.__importStar)(require("regexp-helper-core"));
+const mergeOptions_1 = (0, tslib_1.__importStar)(require("./lib/mergeOptions"));
 const getSource_1 = require("./lib/getSource");
 Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return getSource_1.parseRegularExpressionString; } });
-tslib_1.__exportStar(require("./version"), exports);
+(0, tslib_1.__exportStar)(require("./version"), exports);
 /**
  * @deprecated
  */
 exports.defaultOptions = {};
 class zhRegExp extends RegExp {
     constructor(str, ...argv) {
-        let { source, flags } = core_1.coreHandler(str, ...argv);
+        let { source, flags } = (0, core_1.coreHandler)(str, ...argv);
         super(source, flags);
     }
     /**
@@ -29,12 +29,12 @@ class zhRegExp extends RegExp {
      * @example `zhRegExp.use(defaultOptions)`
      */
     static use(defaultOptions) {
-        defaultOptions = mergeOptions_1.mergeOptions2({}, this[core_1.SymDefaults], defaultOptions);
+        defaultOptions = (0, mergeOptions_1.mergeOptions2)({}, this[core_1.SymDefaults], defaultOptions);
         const zhRegExpNew = new Proxy(zhRegExp, {
             // @ts-ignore
             construct(target, argArray, newTarget) {
-                let { str, flags, options, argv } = mergeOptions_1.getSettingOptions(...argArray);
-                options = mergeOptions_1.default({}, defaultOptions, options);
+                let { str, flags, options, argv } = (0, mergeOptions_1.getSettingOptions)(...argArray);
+                options = (0, mergeOptions_1.default)({}, defaultOptions, options);
                 return new zhRegExp(str, flags, options, ...argv);
             },
             // @ts-ignore
@@ -61,7 +61,7 @@ class zhRegExp extends RegExp {
         //return `/${this.source}/${this.flags}`;
     }
     static parseRegularExpressionString(str) {
-        return getSource_1.parseRegularExpressionString(str);
+        return (0, getSource_1.parseRegularExpressionString)(str);
     }
     static get version() {
         return require('./package.json').version;

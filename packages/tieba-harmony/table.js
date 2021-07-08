@@ -10,7 +10,7 @@ const array_hyper_unique_1 = require("array-hyper-unique");
  *
  * @type {string[][]}
  */
-exports.table = array_hyper_unique_1.array_unique([
+exports.table = (0, array_hyper_unique_1.array_unique)([
     '噁心',
     '触手',
     '白痴',
@@ -185,11 +185,11 @@ exports.table = array_hyper_unique_1.array_unique([
  *
  * @type {string[][]}
  */
-exports.table2 = array_hyper_unique_1.array_unique([
+exports.table2 = (0, array_hyper_unique_1.array_unique)([
     ['裸体', '果体', new String('裸$2')],
     ['奴隷', '奴隶',],
 ]);
-exports.table3 = array_hyper_unique_1.array_unique([
+exports.table3 = (0, array_hyper_unique_1.array_unique)([
     ['強姦', '弓虽姦'],
     ['強奸', '弓虽女干', '弓虽奸'],
     ['娼婦', '女昌妇'],

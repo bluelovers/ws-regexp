@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.isPattern = exports.hackRegenerate = exports.regexpClassToObject = exports.regenerate = void 0;
 const tslib_1 = require("tslib");
 const regexp_parser_event_1 = require("regexp-parser-event");
-const regexpu_core_1 = tslib_1.__importDefault(require("regexpu-core"));
-const regenerate_1 = tslib_1.__importDefault(require("regenerate"));
+const regexpu_core_1 = (0, tslib_1.__importDefault)(require("regexpu-core"));
+const regenerate_1 = (0, tslib_1.__importDefault)(require("regenerate"));
 exports.regenerate = regenerate_1.default;
 /**
  * convert Specified type RegExp to hacked regenerate object
@@ -19,7 +19,7 @@ function regexpClassToObject(re, flags) {
     }
     const hasUnicodeFlag = flags.includes('u');
     const sourceOrigin = re.source;
-    let source = regexpu_core_1.default(sourceOrigin, flags, {
+    let source = (0, regexpu_core_1.default)(sourceOrigin, flags, {
         unicodePropertyEscape: true,
         useUnicodeFlag: hasUnicodeFlag,
     });
@@ -30,7 +30,7 @@ function regexpClassToObject(re, flags) {
             throw new TypeError(`this regexp should only has class, but got ${source}`);
         }
         if (new_obj == null) {
-            new_obj = regenerate_1.default();
+            new_obj = (0, regenerate_1.default)();
         }
         else {
             throw new TypeError(`only allow one class, but got ${source}`);
@@ -54,7 +54,7 @@ function regexpClassToObject(re, flags) {
         if (ev.astSource.elements.length == 1) {
             let ast = ev.astSource.elements[0];
             if (ast.type === "Character" /* Character */) {
-                new_obj = regenerate_1.default();
+                new_obj = (0, regenerate_1.default)();
                 new_obj.add(ast.value);
             }
         }

@@ -10,9 +10,9 @@ const computations_1 = require("./computations");
  * @returns {array}
  */
 function arithmeticDecompositionMappingLV(s) {
-    const SIndex = computations_1.computeSIndex(s);
-    const LIndex = computations_1.computeLIndex(SIndex);
-    const VIndex = computations_1.computeVIndex(SIndex);
+    const SIndex = (0, computations_1.computeSIndex)(s);
+    const LIndex = (0, computations_1.computeLIndex)(SIndex);
+    const VIndex = (0, computations_1.computeVIndex)(SIndex);
     const LPart = constraints_1.LBase + LIndex;
     const VPart = constraints_1.VBase + VIndex;
     return [LPart, VPart];
@@ -25,9 +25,9 @@ exports.arithmeticDecompositionMappingLV = arithmeticDecompositionMappingLV;
  * @returns {array}
  */
 function arithmeticDecompositionMappingLVT(s) {
-    const SIndex = computations_1.computeSIndex(s);
-    const LVIndex = computations_1.computeLVIndex(SIndex);
-    const TIndex = computations_1.computeTIndex(SIndex);
+    const SIndex = (0, computations_1.computeSIndex)(s);
+    const LVIndex = (0, computations_1.computeLVIndex)(SIndex);
+    const TIndex = (0, computations_1.computeTIndex)(SIndex);
     const LVPart = constraints_1.SBase + LVIndex;
     const TPart = constraints_1.TBase + TIndex;
     return [LVPart, TPart];
@@ -53,7 +53,7 @@ exports.arithmeticDecompositionMappingLVT = arithmeticDecompositionMappingLVT;
 function decomposeHangulChar(s) {
     const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - constraints_1.SBase;
     const LVPart = arithmeticDecompositionMappingLV(s);
-    const TIndex = computations_1.computeTIndex(SIndex);
+    const TIndex = (0, computations_1.computeTIndex)(SIndex);
     if (TIndex > 0) {
         const TPart = constraints_1.TBase + TIndex;
         return LVPart.concat([TPart]);

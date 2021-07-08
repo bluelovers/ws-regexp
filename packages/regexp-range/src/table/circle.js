@@ -44,6 +44,6 @@ exports.list_range_raw = [
         [0x2780, 0x2780 + 10],
     ],
 ];
-exports.list_range = util_1.listRawToRange(exports.list_range_raw);
+exports.list_range = (0, util_1.listRawToRange)(exports.list_range_raw);
 exports.default = exports.list_range;
 //# sourceMappingURL=circle.js.map

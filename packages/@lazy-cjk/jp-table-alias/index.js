@@ -24,7 +24,7 @@ function _fromA2B(char, from, to, options = {}) {
             if (options && options.includeSelf) {
                 list.push(char);
             }
-            list = array_hyper_unique_1.array_unique_overwrite(list);
+            list = (0, array_hyper_unique_1.array_unique_overwrite)(list);
         }
         return list;
     }
@@ -50,13 +50,13 @@ exports.zhs2jp = zhs2jp;
 function zh2jp(char, options) {
     let arr = zht2jp(char, options)
         .concat(zhs2jp(char, options));
-    return array_hyper_unique_1.array_unique_overwrite(arr);
+    return (0, array_hyper_unique_1.array_unique_overwrite)(arr);
 }
 exports.zh2jp = zh2jp;
 function jp2zh(char, options) {
     let arr = jp2zht(char, options)
         .concat(jp2zhs(char, options));
-    return array_hyper_unique_1.array_unique_overwrite(arr);
+    return (0, array_hyper_unique_1.array_unique_overwrite)(arr);
 }
 exports.jp2zh = jp2zh;
 function lazyAll(char, options) {
@@ -70,7 +70,7 @@ function lazyAll(char, options) {
         a.push(b, ...zh2jp(b, options));
         return a;
     }, []));
-    return array_hyper_unique_1.array_unique_overwrite(arr);
+    return (0, array_hyper_unique_1.array_unique_overwrite)(arr);
 }
 exports.lazyAll = lazyAll;
 exports.default = exports;

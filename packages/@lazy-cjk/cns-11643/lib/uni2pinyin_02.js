@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.char2pinyinTypeValue_02 = exports.char2pinyin_02 = exports.uni2pinyinTypeValue_02 = exports.uni2pinyin_02 = exports.zhuyin2pinyin_02 = exports.zhuyin2pinyin_02_table = void 0;
 const tslib_1 = require("tslib");
-const uni2zhuyin_1 = tslib_1.__importDefault(require("./uni2zhuyin"));
+const uni2zhuyin_1 = (0, tslib_1.__importDefault)(require("./uni2zhuyin"));
 const char2uni_1 = require("./char2uni");
 const uni2zhuyin_2 = require("./util/uni2zhuyin");
 /**
@@ -33,12 +33,12 @@ exports.zhuyin2pinyin_02 = zhuyin2pinyin_02;
  * 「CNS_pinyin_2」以聲調符號呈現
  */
 function uni2pinyin_02(uni) {
-    let zhuyin = uni2zhuyin_1.default(uni);
+    let zhuyin = (0, uni2zhuyin_1.default)(uni);
     return zhuyin2pinyin_02_table()[zhuyin];
 }
 exports.uni2pinyin_02 = uni2pinyin_02;
 function uni2pinyinTypeValue_02(uni, pinyinType) {
-    pinyinType = uni2zhuyin_2.handlePinyinType(pinyinType);
+    pinyinType = (0, uni2zhuyin_2.handlePinyinType)(pinyinType);
     return uni2pinyin_02(uni)[pinyinType];
 }
 exports.uni2pinyinTypeValue_02 = uni2pinyinTypeValue_02;
@@ -48,11 +48,11 @@ exports.uni2pinyinTypeValue_02 = uni2pinyinTypeValue_02;
  * 「CNS_pinyin_2」以聲調符號呈現
  */
 function char2pinyin_02(char) {
-    return uni2pinyin_02(char2uni_1.char2uni(char));
+    return uni2pinyin_02((0, char2uni_1.char2uni)(char));
 }
 exports.char2pinyin_02 = char2pinyin_02;
 function char2pinyinTypeValue_02(char, pinyinType) {
-    pinyinType = uni2zhuyin_2.handlePinyinType(pinyinType);
+    pinyinType = (0, uni2zhuyin_2.handlePinyinType)(pinyinType);
     return char2pinyin_02(char)[pinyinType];
 }
 exports.char2pinyinTypeValue_02 = char2pinyinTypeValue_02;
