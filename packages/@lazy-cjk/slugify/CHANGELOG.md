@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.79](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.78...@lazy-cjk/slugify@1.0.79) (2021-07-09)
+
+
+### 🔖　Miscellaneous
+
+* . ([8e85c04](https://github.com/bluelovers/ws-regexp/commit/8e85c04a9cb7622ef865a383107dbc9ec2f512b4))
+
+
+
+
+
 ## [1.0.78](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.77...@lazy-cjk/slugify@1.0.78) (2021-07-09)
 
 
