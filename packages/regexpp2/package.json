@@ -56,7 +56,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b",
+  "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082",
   "_types": [
     "./index.d.ts"
   ]
