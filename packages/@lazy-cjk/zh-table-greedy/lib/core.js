@@ -14,14 +14,14 @@ function _greedyTableBuild(data) {
     _greedyTableCacheMap = new Map();
     const arr = _greedyTableCacheRegexp
         .reduce(function (arr, r) {
-        const a = util_1.reToStringList(r[0], r[1]);
+        const a = (0, util_1.reToStringList)(r[0], r[1]);
         a.forEach(c => {
             _greedyTableCacheMap.set(c, a);
         });
         arr.push(...a);
         return arr;
     }, []);
-    _greedyTableCacheTest = new RegExp(`[${array_hyper_unique_1.array_unique(arr).join('')}]`, 'u');
+    _greedyTableCacheTest = new RegExp(`[${(0, array_hyper_unique_1.array_unique)(arr).join('')}]`, 'u');
     return {
         _greedyTableCacheRegexp,
         _greedyTableCacheMap,
