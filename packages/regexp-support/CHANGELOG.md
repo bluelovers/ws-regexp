@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.35](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.34...regexp-support@1.0.35) (2021-07-09)
+
+
+### 🛠　Build System
+
+* update .js ([26829bc](https://github.com/bluelovers/regexp-support/commit/26829bcd9557c28497ac40f4b5c7648593ebaca4))
+
+
+
+
+
 ## [1.0.34](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.31...regexp-support@1.0.34) (2021-06-21)
 
 

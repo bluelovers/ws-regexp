@@ -1,6 +1,6 @@
 {
   "name": "regexp-support",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "check RegExp ( regular expressions ) support",
   "keywords": [
     "check",
@@ -40,6 +40,7 @@
   },
   "scripts": {
     "test": "yarn run build:report && jest -u",
+    "posttest": "git add ./test/log/* && git commit -m \"chore: new env test\" ./test/log/ & echo posttest",
     "build:report": "node ./test/flags.js",
     "preversion": "yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
