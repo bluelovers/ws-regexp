@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/novel-filename",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "",
   "keywords": [
     "char",
@@ -73,8 +73,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.30",
-    "@lazy-cjk/zh-convert": "^1.0.35",
+    "@lazy-cjk/jp-table-convert": "^1.0.32",
+    "@lazy-cjk/zh-convert": "^1.0.36",
     "tslib": "^2.3.0"
   },
   "publishConfig": {

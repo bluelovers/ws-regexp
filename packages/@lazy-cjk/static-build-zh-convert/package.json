@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/static-build-zh-convert",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "",
   "keywords": [
     "char",
@@ -80,8 +80,8 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@lazy-cjk/util": "^1.0.10",
-    "@lazy-cjk/zh-convert": "^1.0.35",
+    "@lazy-cjk/util": "^1.0.11",
+    "@lazy-cjk/zh-convert": "^1.0.36",
     "@lazy-cjk/zh-convert-table": "^1.0.21"
   },
   "publishConfig": {
