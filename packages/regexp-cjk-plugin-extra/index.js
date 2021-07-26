@@ -24,10 +24,9 @@ function createZhRegExpPlugin(options = {}) {
             cacheMap = options.cacheMap;
         }
     }
-    let { autoDeburr, autoFullHalf, autoLocale, autoVoice } = options;
+    let { autoDeburr, autoFullHalf, autoLocale, autoVoice, callback } = options;
     // @ts-ignore 相容於舊版的錯字
     autoFullHalf !== null && autoFullHalf !== void 0 ? autoFullHalf : (autoFullHalf = options.autoFullHaif);
-    let callback = options.callback;
     if (callback && typeof callback !== 'function') {
         throw new TypeError(`callback must is function`);
     }

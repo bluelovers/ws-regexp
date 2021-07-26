@@ -83,12 +83,10 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 		}
 	}
 
-	let { autoDeburr, autoFullHalf, autoLocale, autoVoice } = options;
+	let { autoDeburr, autoFullHalf, autoLocale, autoVoice, callback } = options;
 
 	// @ts-ignore 相容於舊版的錯字
 	autoFullHalf ??= options.autoFullHaif
-
-	let callback = options.callback;
 
 	if (callback && typeof callback !== 'function')
 	{
