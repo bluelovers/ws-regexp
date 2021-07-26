@@ -24,7 +24,9 @@ function createZhRegExpPlugin(options = {}) {
             cacheMap = options.cacheMap;
         }
     }
-    let { autoDeburr, autoFullHaif, autoLocale, autoVoice } = options;
+    let { autoDeburr, autoFullHalf, autoLocale, autoVoice } = options;
+    // @ts-ignore 相容於舊版的錯字
+    autoFullHalf !== null && autoFullHalf !== void 0 ? autoFullHalf : (autoFullHalf = options.autoFullHaif);
     let callback = options.callback;
     if (callback && typeof callback !== 'function') {
         throw new TypeError(`callback must is function`);
@@ -63,7 +65,7 @@ function createZhRegExpPlugin(options = {}) {
                 case '］':
                     arr = _coreFn(raw2, {
                         autoDeburr,
-                        autoFullHaif,
+                        autoFullHalf,
                         autoLocale,
                         autoVoice,
                         cacheMap,
@@ -86,7 +88,7 @@ function createZhRegExpPlugin(options = {}) {
                     if (core_1.default.size(raw) == 1) {
                         arr = _coreFn(raw, {
                             autoDeburr,
-                            autoFullHaif,
+                            autoFullHalf,
                             autoLocale,
                             autoVoice,
                             cacheMap,
@@ -119,7 +121,7 @@ exports.createZhRegExpPlugin = createZhRegExpPlugin;
  *
  * @private
  */
-function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMap, callback, }) {
+function _coreFn(raw, { autoDeburr, autoFullHalf, autoLocale, autoVoice, cacheMap, callback, }) {
     let arr = [];
     if (cacheMap && cacheMap.has(raw)) {
         arr = cacheMap.get(raw);
@@ -129,7 +131,7 @@ function _coreFn(raw, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMa
             let ret = (0, jp_table_voice_1.default)(raw);
             ret && arr.push(...ret);
         }
-        if (autoFullHaif) {
+        if (autoFullHalf) {
             let cf = (0, fullhalf_1.toFullWidth)(raw);
             let ch = (0, fullhalf_1.toHalfWidth)(raw);
             arr.push(cf, ch);

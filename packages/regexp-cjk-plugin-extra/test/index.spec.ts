@@ -3,7 +3,7 @@ import createZhRegExpPlugin, { IZhRegExpPluginOptions } from '../index';
 
 const allOptions: IZhRegExpPluginOptions = Object.freeze({
 	autoDeburr: true,
-	autoFullHaif: true,
+	autoFullHalf: true,
 	autoLocale: true,
 	autoVoice: true,
 });
@@ -16,7 +16,7 @@ describe(`base`, () => {
 			word: /a/ui,
 			word_match: `Ａ`,
 			options: {
-				autoFullHaif: true,
+				autoFullHalf: true,
 			}
 		},
 		{
@@ -24,7 +24,7 @@ describe(`base`, () => {
 			word: /Ａ/ui,
 			word_match: `a`,
 			options: {
-				autoFullHaif: true,
+				autoFullHalf: true,
 			}
 		},
 		{
@@ -32,7 +32,7 @@ describe(`base`, () => {
 			word: / /ui,
 			word_match: `　`,
 			options: {
-				autoFullHaif: true,
+				autoFullHalf: true,
 			}
 		},
 		{

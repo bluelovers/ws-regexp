@@ -7,7 +7,7 @@ import createZhRegExpPlugin, { IZhRegExpPluginOptions } from 'regexp-cjk-plugin-
 
 let options: IZhRegExpPluginOptions = {
 	autoDeburr: true,
-	autoFullHaif: true,
+	autoFullHalf: true,
 	autoLocale: true,
 	autoVoice: true,
 };

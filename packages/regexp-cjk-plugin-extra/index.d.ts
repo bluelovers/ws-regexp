@@ -12,7 +12,7 @@ export interface IZhRegExpPluginOptionsCore {
     /**
      * 自動配對 半形 全形
      */
-    autoFullHaif?: boolean;
+    autoFullHalf?: boolean;
     /**
      * 配對本地化字元
      */
@@ -50,5 +50,5 @@ export declare function createZhRegExpPlugin(options?: IZhRegExpPluginOptions): 
  *
  * @private
  */
-export declare function _coreFn(raw: string, { autoDeburr, autoFullHaif, autoLocale, autoVoice, cacheMap, callback, }: IZhRegExpPluginOptionsRuntime): string[];
+export declare function _coreFn(raw: string, { autoDeburr, autoFullHalf, autoLocale, autoVoice, cacheMap, callback, }: IZhRegExpPluginOptionsRuntime): string[];
 export default createZhRegExpPlugin;

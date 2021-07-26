@@ -30,7 +30,7 @@ export interface IZhRegExpPluginOptionsCore
 	/**
 	 * 自動配對 半形 全形
 	 */
-	autoFullHaif?: boolean,
+	autoFullHalf?: boolean,
 	/**
 	 * 配對本地化字元
 	 */
@@ -83,7 +83,10 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 		}
 	}
 
-	let { autoDeburr, autoFullHaif, autoLocale, autoVoice } = options;
+	let { autoDeburr, autoFullHalf, autoLocale, autoVoice } = options;
+
+	// @ts-ignore 相容於舊版的錯字
+	autoFullHalf ??= options.autoFullHaif
 
 	let callback = options.callback;
 
@@ -137,7 +140,7 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 
 					arr = _coreFn(raw2, {
 						autoDeburr,
-						autoFullHaif,
+						autoFullHalf,
 						autoLocale,
 						autoVoice,
 						cacheMap,
@@ -167,7 +170,7 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
 					{
 						arr = _coreFn(raw, {
 							autoDeburr,
-							autoFullHaif,
+							autoFullHalf,
 							autoLocale,
 							autoVoice,
 							cacheMap,
@@ -207,7 +210,7 @@ export function createZhRegExpPlugin(options: IZhRegExpPluginOptions = {}): IOpt
  */
 export function _coreFn(raw: string, {
 	autoDeburr,
-	autoFullHaif,
+	autoFullHalf,
 	autoLocale,
 	autoVoice,
 	cacheMap,
@@ -229,7 +232,7 @@ export function _coreFn(raw: string, {
 			ret && arr.push(...ret)
 		}
 
-		if (autoFullHaif)
+		if (autoFullHalf)
 		{
 			let cf = toFullWidth(raw);
 			let ch = toHalfWidth(raw);
