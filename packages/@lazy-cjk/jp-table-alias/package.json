@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-alias",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "",
   "keywords": [
     "char",
@@ -73,7 +73,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.33",
+    "@lazy-cjk/jp-table-convert": "^1.0.34",
     "array-hyper-unique": "^1.1.10",
     "tslib": "^2.3.0"
   },

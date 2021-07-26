@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.35](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.34...regexp-cjk-plugin-extra@1.0.35) (2021-07-26)
+
+
+### 🐛　Bug Fixes
+
+* 修改錯字 { `autoFullHaif` => `autoFullHalf` } 並且保留錯字相容性 ([44197e0](https://github.com/bluelovers/ws-regexp/commit/44197e0c00afd55a57c240817c25fd953a0f6c21))
+
+
+### 📦　Code Refactoring
+
+* small change ([cb09e97](https://github.com/bluelovers/ws-regexp/commit/cb09e976300ecb40cf2a70d8311c209f89101068))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([7768418](https://github.com/bluelovers/ws-regexp/commit/776841897b19d2d4b3d4a6800c81247652e438d3))
+
+
+
+
+
 ## [1.0.34](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.33...regexp-cjk-plugin-extra@1.0.34) (2021-07-09)
 
 

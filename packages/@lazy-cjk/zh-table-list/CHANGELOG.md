@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.68](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.67...@lazy-cjk/zh-table-list@1.0.68) (2021-07-26)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([7768418](https://github.com/bluelovers/ws-regexp/commit/776841897b19d2d4b3d4a6800c81247652e438d3))
+
+
+
+
+
 ## [1.0.67](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.66...@lazy-cjk/zh-table-list@1.0.67) (2021-07-09)
 
 

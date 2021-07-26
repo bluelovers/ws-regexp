@@ -1,6 +1,6 @@
 {
   "name": "@node-novel/pattern-split",
-  "version": "1.1.57",
+  "version": "1.1.58",
   "description": "try output RegExp Pattern as readable string list",
   "keywords": [],
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@node-novel/pattern-split#readme",
@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.10",
-    "regexp-cjk": "^3.3.94",
-    "regexp-parser-literal": "^1.1.22",
+    "regexp-cjk": "^3.3.95",
+    "regexp-parser-literal": "^1.1.23",
     "regexpp2": "^1.3.19",
     "tslib": "^2.3.0"
   },
