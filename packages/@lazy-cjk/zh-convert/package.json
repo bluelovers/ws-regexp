@@ -78,10 +78,10 @@
   },
   "dependencies": {
     "@lazy-cjk/static-build-zh-convert": "^1.0.38",
-    "array-hyper-unique": "^1.1.9",
+    "array-hyper-unique": "^1.1.10",
     "regexp-helper": "^1.0.26",
     "tslib": "^2.3.0",
-    "uni-string": "^1.1.10"
+    "uni-string": "^1.1.11"
   },
   "publishConfig": {
     "access": "public"

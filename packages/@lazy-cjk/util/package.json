@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "uni-string": "^1.1.10"
+    "uni-string": "^1.1.11"
   },
   "publishConfig": {
     "access": "public"

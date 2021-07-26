@@ -73,8 +73,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.9",
-    "ts-type": "^1.2.34",
+    "array-hyper-unique": "^1.1.10",
+    "ts-type": "^1.2.39",
     "tslib": "^2.3.0"
   },
   "publishConfig": {

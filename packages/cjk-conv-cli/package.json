@@ -59,13 +59,13 @@
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
     "@lazy-cjk/zh-convert": "^1.0.37",
-    "array-hyper-unique": "^1.1.9",
+    "array-hyper-unique": "^1.1.10",
     "bluebird": "^3.7.2",
-    "crlf-normalize": "^1.0.5",
-    "debug-color2": "^1.2.3",
+    "crlf-normalize": "^1.0.6",
+    "debug-color2": "^1.2.7",
     "diff": "^5.0.0",
     "fs-extra": "^10.0.0",
-    "fs-iconv": "^3.0.12",
+    "fs-iconv": "^3.1.2",
     "tslib": "^2.3.0",
     "yargs": "^17.0.1"
   },

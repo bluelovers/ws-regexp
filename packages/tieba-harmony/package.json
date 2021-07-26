@@ -63,9 +63,9 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.1.9",
+    "array-hyper-unique": "^1.1.10",
     "tslib": "^2.3.0",
-    "uni-string": "^1.1.10"
+    "uni-string": "^1.1.11"
   },
   "peerDependencies": {
     "@lazy-cjk/zh-table-list": "*",
