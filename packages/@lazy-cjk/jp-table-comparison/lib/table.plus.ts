@@ -2,6 +2,12 @@
 
 import { IPLUS_TABLE } from './types';
 
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * DO NOT EDIT.
+ * @see {@link ./table/core.ts}
+ */
+
 export const PLUS_TABLE: IPLUS_TABLE = [
 	["箋","箋","笺"],
 	["駄","馱","驮"],
@@ -59,6 +65,12 @@ export const PLUS_TABLE: IPLUS_TABLE = [
 	["鶇","鶇","鸫"],
 	["黙","默","默"],
 ];
+
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * DO NOT EDIT.
+ * @see {@link ./table/core.ts}
+ */
 
 export const PLUS_TABLE_SAFE: IPLUS_TABLE = [
 	["弐","貳","贰"],

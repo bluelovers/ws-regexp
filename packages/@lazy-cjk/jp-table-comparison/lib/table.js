@@ -1,6 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TABLE_SAFE = exports.TABLE = void 0;
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * DO NOT EDIT.
+ * @see {@link ./table/core.ts}
+ */
 exports.TABLE = [
     [["会"], ["會"], ["会"]],
     [["箋"], ["箋"], ["笺"]],
@@ -749,6 +754,11 @@ exports.TABLE = [
     [["黙"], ["默"], ["默"]],
     [["齢"], ["齡"], ["龄"]],
 ];
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * DO NOT EDIT.
+ * @see {@link ./table/core.ts}
+ */
 exports.TABLE_SAFE = [
     [["会"], ["會"], ["会"]],
     [["箋"], ["箋"], ["笺"]],

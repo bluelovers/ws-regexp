@@ -2,6 +2,12 @@
 
 import { IKanjiComparisonTable } from './types';
 
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * DO NOT EDIT.
+ * @see {@link ./table/core.ts}
+ */
+
 export const TABLE: IKanjiComparisonTable = [
 	[["会"],["會"],["会"]],
 	[["箋"],["箋"],["笺"]],
@@ -750,6 +756,12 @@ export const TABLE: IKanjiComparisonTable = [
 	[["黙"],["默"],["默"]],
 	[["齢"],["齡"],["龄"]],
 ];
+
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * DO NOT EDIT.
+ * @see {@link ./table/core.ts}
+ */
 
 export const TABLE_SAFE: IKanjiComparisonTable = [
 	[["会"],["會"],["会"]],
