@@ -383,4 +383,5 @@ export declare const table_plus_core: {
     readonly 刃: readonly ["刃", "刄"];
     readonly 教: readonly ["教", "敎"];
     readonly 蛎: readonly ["蛎", "蜊", "蠣"];
+    readonly 步: readonly ["步", "歩"];
 };

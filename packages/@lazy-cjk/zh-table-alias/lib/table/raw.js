@@ -1727,6 +1727,10 @@ exports.table_plus_core = {
         "蛎",
         "蜊",
         "蠣"
+    ],
+    "步": [
+        "步",
+        "歩"
     ]
 };
 //# sourceMappingURL=raw.js.map
