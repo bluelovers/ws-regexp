@@ -1529,6 +1529,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 奖|奨|奬|獎 1`] = `
+Array [
+  "奖",
+  "奨",
+  "奬",
+  "獎",
+]
+`;
+
 exports[`validate char of map 奥|奧|澳|袄|襖 1`] = `
 Array [
   "奥",
