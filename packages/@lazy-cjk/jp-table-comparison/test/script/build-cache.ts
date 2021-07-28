@@ -13,6 +13,7 @@ import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from '../..
 import { array_unique_overwrite, array_unique } from 'array-hyper-unique';
 import { sortBySlugify } from '@lazy-cjk/sort';
 import { compareCaseInsensitive } from '@bluelovers/string-natural-compare/core';
+import { lineSplit } from 'crlf-normalize';
 
 const data = _jpTableCmparisonBuild({
 	PLUS_TABLE,
@@ -34,7 +35,10 @@ const data = _jpTableCmparisonBuild({
 	sortTable(data.TABLE);
 	sortTable(data.TABLE_SAFE);
 
+	lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 	lines.push(`export const TABLE: IKanjiComparisonTable = [\n${printTable(data.TABLE).join('\n')}\n];`);
+
+	lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 	lines.push(`export const TABLE_SAFE: IKanjiComparisonTable = [\n${printTable(data.TABLE_SAFE).join('\n')}\n];`);
 
 	lines.push(``);
@@ -58,7 +62,10 @@ const data = _jpTableCmparisonBuild({
 	sortTablePlus(data.PLUS_TABLE);
 	sortTablePlus(data.PLUS_TABLE_SAFE);
 
+	lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 	lines.push(`export const PLUS_TABLE: IPLUS_TABLE = [\n${printTable(data.PLUS_TABLE).join('\n')}\n];`);
+
+	lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 	lines.push(`export const PLUS_TABLE_SAFE: IPLUS_TABLE = [\n${printTable(data.PLUS_TABLE_SAFE).join('\n')}\n];`);
 
 	lines.push(``);
@@ -89,8 +96,10 @@ const data = _jpTableCmparisonBuild({
 
 		let re = new RegExp(`[${keys.join('')}]`, 'u');
 
+		lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 		lines.push(`export const _re_table_keys = ${re.toString()};`);
 
+		lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 		lines.push(`export  default _re_table_keys`);
 
 		lines.push(``);
@@ -109,6 +118,7 @@ const data = _jpTableCmparisonBuild({
 
 		lines.push(``);
 
+		lines.push(printJSDOC(`Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;\nDO NOT EDIT.\n@see {@link ./table/core.ts}`));
 		lines.push(`export const _table_keys = [\n${printTable(keys).join('\n')}\n];`);
 
 		lines.push(`export  default _table_keys`);
@@ -193,4 +203,12 @@ function sortTablePlus(table: IPLUS_TABLE)
 	return table.sort((s1, s2) => {
 		return comp(s1[0], s2[0])
 	})
+}
+
+function printJSDOC(msg: string)
+{
+	const c = '\n * ';
+
+	return `/**${c}${lineSplit(msg).join(c)}${c}/`
+		.replace(/\*\s+\/$/, '*/');
 }
