@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-slugify",
-  "version": "1.0.71",
+  "version": "1.0.72",
   "description": "",
   "keywords": [
     "char",
@@ -73,8 +73,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/zh-table-greedy": "^1.0.69",
-    "@lazy-cjk/zh-table-list": "^1.0.68",
+    "@lazy-cjk/zh-table-greedy": "^1.0.70",
+    "@lazy-cjk/zh-table-list": "^1.0.69",
     "tslib": "^2.3.0"
   },
   "publishConfig": {

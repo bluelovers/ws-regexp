@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.22](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.21...@lazy-cjk/jp-table-comparison@1.0.22) (2021-07-28)
+
+
+### 🛠　Build System
+
+* update table ([47c07e6](https://github.com/bluelovers/ws-regexp/commit/47c07e69e18dd317a7cadf19db694434aa6c6df4))
+* 增加 jsdoc 描述來表示這是自動生成出來的列表，防止誤編輯，並且提示原始來源 ([9cb9d5a](https://github.com/bluelovers/ws-regexp/commit/9cb9d5a9b5e5b86ee5705b68af8655b19e2f8830))
+
+
+
+
+
 ## [1.0.21](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.20...@lazy-cjk/jp-table-comparison@1.0.21) (2021-07-26)
 
 

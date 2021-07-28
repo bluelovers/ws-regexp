@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.49](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.48...@lazy-cjk/zh-table-alias@1.0.49) (2021-07-28)
+
+
+### 🐛　Bug Fixes
+
+* 修正只有輸入 `歩` 時會包含 `步`，而輸入 `步` 沒有包含 `歩` 的問題 ([6ce6ded](https://github.com/bluelovers/ws-regexp/commit/6ce6dedb4cc782e2f5a4de9f7a1ec010601a76b9))
+
+
+### 🛠　Build System
+
+* **zh-table-alias:** zh-table-alias table_jp: 步|歩 , table_plus 步|歩 ([f49ab64](https://github.com/bluelovers/ws-regexp/commit/f49ab64fb0515702202ed1348f0392657a2c1213))
+
+
+
+
+
 ## [1.0.48](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.47...@lazy-cjk/zh-table-alias@1.0.48) (2021-07-26)
 
 
