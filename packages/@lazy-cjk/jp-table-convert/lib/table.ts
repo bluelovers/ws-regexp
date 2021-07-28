@@ -2,11 +2,23 @@
 
 import { ITABLE_MAIN } from './types';
 
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison;
+ * DO NOT EDIT.
+ * @see {@link @lazy-cjk/jp-table-comparison}
+ */
+
 export const TABLE_KEYS = [
 	"jp",
 	"zht",
 	"zhs"
 ] as const;
+
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison;
+ * DO NOT EDIT.
+ * @see {@link @lazy-cjk/jp-table-comparison}
+ */
 
 export const TABLE: ITABLE_MAIN = {
 	"jp": {
@@ -11006,6 +11018,12 @@ export const TABLE: ITABLE_MAIN = {
 		}
 	}
 };
+
+/**
+ * Code generated from @lazy-cjk/jp-table-comparison;
+ * DO NOT EDIT.
+ * @see {@link @lazy-cjk/jp-table-comparison}
+ */
 
 export const TABLE_SAFE: ITABLE_MAIN = {
 	"jp": {
