@@ -1964,4 +1964,9 @@ export const table_plus_core = {
 		'蠣',
 	],
 
+	'步': [
+		'步',
+		'歩',
+	],
+
 } as const;
