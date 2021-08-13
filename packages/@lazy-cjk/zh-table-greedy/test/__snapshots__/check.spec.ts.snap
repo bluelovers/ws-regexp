@@ -97,6 +97,19 @@ Array [
 ]
 `;
 
+exports[`validate char of map 㤼|刦|刧|刼|劫|𠉨|𠛗|𠞏 1`] = `
+Array [
+  "㤼",
+  "刦",
+  "刧",
+  "刼",
+  "劫",
+  "𠉨",
+  "𠛗",
+  "𠞏",
+]
+`;
+
 exports[`validate char of map 㬅|嫚|曼|漫|熳|蔓 1`] = `
 Array [
   "㬅",
