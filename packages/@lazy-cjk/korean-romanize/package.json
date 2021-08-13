@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/korean-romanize",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "String conversion utility to romanize Korean characters",
   "keywords": [
     "alphabet",

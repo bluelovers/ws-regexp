@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/emoji-regex",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/emoji-regex#readme",
   "bugs": {
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "emoji.json": "^13.1.0",
-    "regexgen2": "^1.3.12"
+    "regexgen2": "^1.3.13"
   },
   "publishConfig": {
     "access": "public"

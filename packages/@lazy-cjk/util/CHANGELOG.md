@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.14](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/util@1.0.13...@lazy-cjk/util@1.0.14) (2021-08-13)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([9911e52](https://github.com/bluelovers/ws-regexp/commit/9911e52d7b63a7292ae15139cccf1737944a870e))
+
+
+
+
+
 ## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/util@1.0.12...@lazy-cjk/util@1.0.13) (2021-07-26)
 
 

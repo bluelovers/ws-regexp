@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.12](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.11...execall2@2.0.12) (2021-08-13)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([9911e52](https://github.com/bluelovers/ws-regexp/commit/9911e52d7b63a7292ae15139cccf1737944a870e))
+
+
+
+
+
 ## [2.0.11](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.10...execall2@2.0.11) (2021-07-09)
 
 

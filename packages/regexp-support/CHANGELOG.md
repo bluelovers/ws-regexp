@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.38](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.37...regexp-support@1.0.38) (2021-08-13)
+
+
+### ♻️　Chores
+
+* new env test ([d1f324f](https://github.com/bluelovers/regexp-support/commit/d1f324f8654203d5983d434bf0be59d3d6047f77))
+* **deps:** update deps ([9911e52](https://github.com/bluelovers/regexp-support/commit/9911e52d7b63a7292ae15139cccf1737944a870e))
+
+
+
+
+
 ## [1.0.37](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.36...regexp-support@1.0.37) (2021-07-09)
 
 
