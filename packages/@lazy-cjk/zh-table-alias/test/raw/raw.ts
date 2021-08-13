@@ -1969,4 +1969,11 @@ export const table_plus_core = {
 		'歩',
 	],
 
+	'劫': [
+		'刦',
+		'刧',
+		'刼',
+		'劫',
+	],
+
 } as const;

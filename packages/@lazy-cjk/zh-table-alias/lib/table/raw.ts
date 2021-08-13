@@ -1732,6 +1732,12 @@ export const table_plus_core = {
 	"步": [
 		"步",
 		"歩"
+	],
+	"劫": [
+		"刦",
+		"刧",
+		"刼",
+		"劫"
 	]
 } as const;
 
