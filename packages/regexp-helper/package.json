@@ -49,7 +49,7 @@
   "dependencies": {
     "regexp-helper-core": "^1.0.18",
     "regexp-support": "^1.0.37",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
 }

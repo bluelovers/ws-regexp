@@ -75,7 +75,7 @@
   "dependencies": {
     "@lazy-cjk/jp-table-convert": "^1.0.35",
     "@lazy-cjk/zh-convert": "^1.0.38",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "publishConfig": {
     "access": "public"

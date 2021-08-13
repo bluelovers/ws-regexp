@@ -51,7 +51,7 @@
     "update:ids": "ts-node scripts/update-unicode-ids.ts"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "engines": {
     "node": ">=4.0.0"

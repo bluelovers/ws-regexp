@@ -114,7 +114,7 @@
     "@yarn-tool/find-deps": "^1.0.38",
     "@yarn-tool/ws-changed": "^1.0.47",
     "bluebird": "^3.7.2",
-    "build-ts-file": "^1.0.12",
+    "build-ts-file": "^1.0.13",
     "cross-fetch": "^3.1.4",
     "cross-spawn-extra": "^2.1.0",
     "debug-color2": "^1.2.7",
@@ -123,13 +123,13 @@
     "git-root2": "^1.0.24",
     "ignore": "^5.1.8",
     "jest": "^27.0.6",
-    "jszip": "^3.7.0",
+    "jszip": "^3.7.1",
     "micromatch": "^4.0.4",
     "sort-object-keys2": "^2.0.3",
     "ts-jest": "^27.0.4",
     "uni-string": "^1.1.11",
     "ws-pkg-list": "^1.0.61",
-    "xregexp": "^5.0.2",
+    "xregexp": "^5.1.0",
     "zero-width": "^1.0.16"
   },
   "devDependencies": {
@@ -138,14 +138,14 @@
     "@types/diff": "^5.0.1",
     "@types/eslint": "^7.28.0",
     "@types/fs-extra": "^9.0.12",
-    "@types/jest": "^26.0.24",
-    "@types/lodash": "^4.14.171",
+    "@types/jest": "^27.0.1",
+    "@types/lodash": "^4.14.172",
     "@types/micromatch": "^4.0.2",
     "@types/node": "*",
     "@types/xregexp": "^4.4.0",
     "@types/yargs": "^17.0.2",
-    "eslint": "^7.31.0",
-    "tslib": "^2.3.0"
+    "eslint": "^7.32.0",
+    "tslib": "^2.3.1"
   },
   "peerDependencies": {
     "lerna": "^4.0.0"

@@ -85,7 +85,7 @@
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.26",
     "transliteration": "^2.2.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@sindresorhus/slugify": "< 2 >= 1",

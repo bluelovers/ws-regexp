@@ -79,7 +79,7 @@
   "dependencies": {
     "@lazy-cjk/jp-table-comparison": "^1.0.22",
     "regexp-helper": "^1.0.26",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "uni-string": "^1.1.11"
   },
   "publishConfig": {

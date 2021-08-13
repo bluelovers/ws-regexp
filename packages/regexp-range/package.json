@@ -49,7 +49,7 @@
     "@lazy-cjk/japanese": "^1.2.18",
     "array-hyper-unique": "^1.1.10",
     "fill-range": "^7.0.1",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
 }
