@@ -1208,6 +1208,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 吒|咤|詫|诧 1`] = `
+Array [
+  "吒",
+  "咤",
+  "詫",
+  "诧",
+]
+`;
+
 exports[`validate char of map 吨|噸|訰 1`] = `
 Array [
   "吨",
