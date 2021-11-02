@@ -5,6 +5,7 @@ const tslib_1 = require("tslib");
 const conv_1 = require("./conv");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
+Object.defineProperty(exports, "ParserEventEmitterEvent", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitterEvent; } });
 const regexp_range_1 = (0, tslib_1.__importDefault)(require("regexp-range"));
 const mergeOptions_1 = require("./mergeOptions");
 const getSource_1 = (0, tslib_1.__importDefault)(require("./getSource"));

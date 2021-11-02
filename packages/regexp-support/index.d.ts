@@ -91,16 +91,16 @@ export declare const support: Readonly<{
         $7?: boolean;
         $8?: boolean;
         $9?: boolean;
-        lastMatch?: boolean;
-        leftContext?: boolean;
-        rightContext?: boolean;
         input?: boolean;
         $_?: boolean;
-        '$&'?: boolean;
+        lastMatch?: boolean;
+        "$&"?: boolean;
         lastParen?: boolean;
-        '$+'?: boolean;
-        '$`'?: boolean;
-        '$\''?: boolean;
+        "$+"?: boolean;
+        leftContext?: boolean;
+        "$`"?: boolean;
+        rightContext?: boolean;
+        "$'"?: boolean;
         readonly [Symbol.species]?: boolean;
     };
     symbol: {

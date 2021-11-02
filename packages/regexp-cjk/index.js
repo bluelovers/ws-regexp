@@ -7,6 +7,7 @@ exports.parseRegularExpressionString = exports.isRegExp = exports.create = expor
 const tslib_1 = require("tslib");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
+Object.defineProperty(exports, "ParserEventEmitterEvent", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitterEvent; } });
 const core_1 = require("./lib/core");
 const regexp_helper_core_1 = require("regexp-helper-core");
 Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_core_1.isRegExp; } });
