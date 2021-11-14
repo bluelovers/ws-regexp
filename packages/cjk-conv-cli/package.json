@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv-cli",
-  "version": "1.0.67",
+  "version": "1.0.68",
   "description": "cli version for cjk-conv ( cn2tw_min, tw2cn_min, cn2tw, tw2cn )",
   "keywords": [
     "char",
