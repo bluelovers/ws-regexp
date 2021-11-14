@@ -1,6 +1,6 @@
 {
   "name": "regexp-parser-event",
-  "version": "1.1.35",
+  "version": "1.1.36",
   "description": "## API",
   "keywords": [
     "build",
@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "array-hyper-unique": "^1.1.10",
-    "regexp-parser-literal": "^1.1.28",
+    "regexp-parser-literal": "^1.1.29",
     "regexpp2": "^1.3.20",
     "ts-type": "^1.2.40",
     "tslib": "^2.3.1"

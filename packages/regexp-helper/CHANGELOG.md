@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.30](https://github.com/bluelovers/ws-regexp/compare/regexp-helper@1.0.28...regexp-helper@1.0.30) (2021-11-14)
+
+
+### 🔖　Miscellaneous
+
+* . ([5019e34](https://github.com/bluelovers/ws-regexp/commit/5019e34c0a6180b297865180efde3d422b232bcd))
+
+
+
+
+
 ## [1.0.29](https://github.com/bluelovers/ws-regexp/compare/regexp-helper@1.0.28...regexp-helper@1.0.29) (2021-11-14)
 
 **Note:** Version bump only for package regexp-helper

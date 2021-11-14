@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.9...@regexp-cjk/rewrite-flags@1.0.13) (2021-11-14)
+
+
+### 🔖　Miscellaneous
+
+* . ([5019e34](https://github.com/bluelovers/ws-regexp/commit/5019e34c0a6180b297865180efde3d422b232bcd))
+* . ([5ef9099](https://github.com/bluelovers/ws-regexp/commit/5ef909929c3ff70488308ef59f1cc4f933fed9ab))
+* . ([399f162](https://github.com/bluelovers/ws-regexp/commit/399f162173a9c78e66629d44e08473e750f99cd0))
+* . ([4af9579](https://github.com/bluelovers/ws-regexp/commit/4af9579580a10117037142bf9612b9366a5460f4))
+
+
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.9...@regexp-cjk/rewrite-flags@1.0.12) (2021-11-14)
 
 

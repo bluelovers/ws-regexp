@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk",
-  "version": "3.3.100",
+  "version": "3.3.101",
   "description": "Generate JavaScript-compatible regular expressions with chinese/jp/zh/cn",
   "keywords": [
     "big5",
@@ -90,13 +90,13 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "@lazy-cjk/zh-table-list": "^1.0.74",
+    "@lazy-cjk/zh-table-list": "^1.0.75",
     "array-hyper-unique": "^1.1.10",
     "lodash": "^4.17.21",
-    "regexp-helper": "^1.0.28",
-    "regexp-parser-event": "^1.1.34",
-    "regexp-parser-literal": "^1.1.27",
-    "regexp-range": "^1.0.34",
+    "regexp-helper": "^1.0.30",
+    "regexp-parser-event": "^1.1.36",
+    "regexp-parser-literal": "^1.1.29",
+    "regexp-range": "^1.0.36",
     "tslib": "^2.3.1"
   },
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
