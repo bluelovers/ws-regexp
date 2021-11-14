@@ -34,6 +34,6 @@ export declare enum EnumFlagMap {
     unicode = "u",
     hasIndices = "d"
 }
-export declare const flagsOrderReverse: ("global" | "unicode" | "dotAll" | "ignoreCase" | "multiline" | "sticky" | "hasIndices")[];
+export declare const flagsOrderReverse: ("unicode" | "global" | "dotAll" | "ignoreCase" | "multiline" | "sticky" | "hasIndices")[];
 export declare function rewriteFlags(flags: string | IOptionsRewriteFlags, options?: IOptionsRewriteFlags): string;
 export default rewriteFlags;
