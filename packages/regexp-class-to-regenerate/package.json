@@ -44,7 +44,7 @@
   "dependencies": {
     "regenerate": "^1.4.2",
     "regexp-parser-event": "^1.1.31",
-    "regexpu-core": "^4.7.1",
+    "regexpu-core": "^4.8.0",
     "tslib": "^2.3.1"
   },
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
