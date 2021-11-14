@@ -2301,6 +2301,16 @@ Array [
 ]
 `;
 
+exports[`validate char of map 殒|殞|磒|陨|隕 1`] = `
+Array [
+  "殒",
+  "殞",
+  "磒",
+  "陨",
+  "隕",
+]
+`;
+
 exports[`validate char of map 毓|育 1`] = `
 Array [
   "毓",
