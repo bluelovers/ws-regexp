@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.26](https://github.com/bluelovers/ws-regexp/compare/regexp-class-to-regenerate@1.0.25...regexp-class-to-regenerate@1.0.26) (2021-11-14)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([959969d](https://github.com/bluelovers/ws-regexp/commit/959969d85e5c8f453211efe6eb63ce3b333fc00c))
+
+
+
+
+
 ## [1.0.25](https://github.com/bluelovers/ws-regexp/compare/regexp-class-to-regenerate@1.0.24...regexp-class-to-regenerate@1.0.25) (2021-08-13)
 
 

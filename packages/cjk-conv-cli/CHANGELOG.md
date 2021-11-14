@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.67](https://github.com/bluelovers/ws-regexp/compare/cjk-conv-cli@1.0.65...cjk-conv-cli@1.0.67) (2021-11-14)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([959969d](https://github.com/bluelovers/ws-regexp/commit/959969d85e5c8f453211efe6eb63ce3b333fc00c))
+
+
+### 🔖　Miscellaneous
+
+* . ([4b930d7](https://github.com/bluelovers/ws-regexp/commit/4b930d7ac02ef91a014bb8c3d354707519574d87))
+
+
+
+
+
 ## [1.0.66](https://github.com/bluelovers/ws-regexp/compare/cjk-conv-cli@1.0.65...cjk-conv-cli@1.0.66) (2021-11-14)
 
 

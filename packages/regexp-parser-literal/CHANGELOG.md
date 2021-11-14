@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.26](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-literal@1.1.24...regexp-parser-literal@1.1.26) (2021-11-14)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([959969d](https://github.com/bluelovers/ws-regexp/commit/959969d85e5c8f453211efe6eb63ce3b333fc00c))
+
+
+### 🔖　Miscellaneous
+
+* . ([4b930d7](https://github.com/bluelovers/ws-regexp/commit/4b930d7ac02ef91a014bb8c3d354707519574d87))
+
+
+
+
+
 ## [1.1.25](https://github.com/bluelovers/ws-regexp/compare/regexp-parser-literal@1.1.24...regexp-parser-literal@1.1.25) (2021-11-14)
 
 
