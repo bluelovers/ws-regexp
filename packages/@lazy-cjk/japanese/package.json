@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/japanese",
-  "version": "1.2.19",
+  "version": "1.2.20",
   "description": "Util collection for Japanese text processing. Hiraganize, Katakanize, and Romanize.",
   "keywords": [
     "japanese",
@@ -45,7 +45,6 @@
     "lodash": "^4.17.21",
     "tslib": "^2.3.1"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },
