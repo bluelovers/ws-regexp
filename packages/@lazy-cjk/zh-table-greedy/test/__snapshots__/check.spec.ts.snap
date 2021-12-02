@@ -568,6 +568,14 @@ Array [
 ]
 `;
 
+exports[`validate char of map 佰|百|𦣻 1`] = `
+Array [
+  "佰",
+  "百",
+  "𦣻",
+]
+`;
+
 exports[`validate char of map 侂|托|拓|拕|拖|杔|託|讬 1`] = `
 Array [
   "侂",
