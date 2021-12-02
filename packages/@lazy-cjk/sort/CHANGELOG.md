@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.57](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/sort@1.0.56...@lazy-cjk/sort@1.0.57) (2021-12-02)
+
+**Note:** Version bump only for package @lazy-cjk/sort
+
+
+
+
+
 ## [1.0.56](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/sort@1.0.54...@lazy-cjk/sort@1.0.56) (2021-11-14)
 
 
