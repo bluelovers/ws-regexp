@@ -8,8 +8,7 @@ function internalXRegExpData(xr) {
 }
 exports.internalXRegExpData = internalXRegExpData;
 function isXRegExp(xr) {
-    var _a;
-    return !!((_a = xr) === null || _a === void 0 ? void 0 : _a[X_REGEX_DATA]);
+    return !!(xr === null || xr === void 0 ? void 0 : xr[X_REGEX_DATA]);
 }
 exports.isXRegExp = isXRegExp;
 exports.default = isXRegExp;
