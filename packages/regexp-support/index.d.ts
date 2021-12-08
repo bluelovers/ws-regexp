@@ -77,6 +77,7 @@ export declare const support: Readonly<{
         [Symbol.replace]?: boolean;
         [Symbol.search]?: boolean;
         [Symbol.split]?: boolean;
+        [Symbol.matchAll]?: boolean;
     };
     static: {
         $10?: boolean;

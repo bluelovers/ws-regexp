@@ -6,7 +6,7 @@ import { outputFile } from 'fs-extra';
 import { join } from 'path';
 import assert from 'assert';
 import emitTsFiles from 'build-ts-file';
-import { array_unique_overwrite, array_unique } from 'array-hyper-unique/core';
+import { array_unique_overwrite, array_unique } from 'array-hyper-unique';
 import { _table_tw, table_jp_core, table_plus_core } from '../raw/raw';
 import { _buildTablePlus, _uniqueTable } from '../../lib/util/unique';
 import { _mergeTable } from '../../lib/util/table';

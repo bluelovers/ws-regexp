@@ -1,5 +1,5 @@
 import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from './types';
-import { array_unique, array_unique_overwrite } from 'array-hyper-unique/core';
+import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
 import { trimWithZeroWidth } from 'zero-width';
 
 export function fixPlusTable<T extends string[][]>(table: T): T

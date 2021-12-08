@@ -27,6 +27,7 @@ export declare const PROTOTYPE: {
     [Symbol.replace]?: boolean;
     [Symbol.search]?: boolean;
     [Symbol.split]?: boolean;
+    [Symbol.matchAll]?: boolean;
 };
 export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     readonly dotAll?: boolean;
@@ -46,4 +47,5 @@ export declare function testPrototype<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     [Symbol.replace]?: boolean;
     [Symbol.search]?: boolean;
     [Symbol.split]?: boolean;
+    [Symbol.matchAll]?: boolean;
 };
