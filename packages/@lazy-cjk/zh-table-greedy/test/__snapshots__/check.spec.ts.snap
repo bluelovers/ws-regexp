@@ -1030,6 +1030,13 @@ Array [
 ]
 `;
 
+exports[`validate char of map 勿|毋 1`] = `
+Array [
+  "勿",
+  "毋",
+]
+`;
+
 exports[`validate char of map 匪|扉|斐|緋|绯|翡|菲|蜚|誹|诽|霏|非 1`] = `
 Array [
   "匪",
@@ -2436,6 +2443,15 @@ Array [
   "螎",
   "鎔",
   "镕",
+]
+`;
+
+exports[`validate char of map 滥|濫|烂|爛 1`] = `
+Array [
+  "滥",
+  "濫",
+  "烂",
+  "爛",
 ]
 `;
 
