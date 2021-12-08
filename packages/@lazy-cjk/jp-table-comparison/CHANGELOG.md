@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.24](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.23...@lazy-cjk/jp-table-comparison@1.0.24) (2021-12-08)
+
+
+### 📦　Code Refactoring
+
+* update import `@bluelovers/string-natural-compare` ([2890969](https://github.com/bluelovers/ws-regexp/commit/28909698fb1bb1ff68a410d2de31a14667868a0f))
+* update import `array-hyper-unique` ([e1f9a07](https://github.com/bluelovers/ws-regexp/commit/e1f9a072e3a86c14a93129cfb3e38eade4c81c8a))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([235b884](https://github.com/bluelovers/ws-regexp/commit/235b8842993c00bfcc75c0699e32cd7f2f54706f))
+
+
+
+
+
 ## [1.0.23](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.22...@lazy-cjk/jp-table-comparison@1.0.23) (2021-08-13)
 
 

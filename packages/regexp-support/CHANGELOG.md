@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.42](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.41...regexp-support@1.0.42) (2021-12-08)
+
+
+### 📦　Code Refactoring
+
+* update import `array-hyper-unique` ([e1f9a07](https://github.com/bluelovers/regexp-support/commit/e1f9a072e3a86c14a93129cfb3e38eade4c81c8a))
+
+
+
+
+
 ## [1.0.41](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.39...regexp-support@1.0.41) (2021-11-14)
 
 
