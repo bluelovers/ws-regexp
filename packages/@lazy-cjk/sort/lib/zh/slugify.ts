@@ -1,5 +1,5 @@
 import { slugify } from '@lazy-cjk/zh-slugify';
-import { compareCaseInsensitive } from '@bluelovers/string-natural-compare/core';
+import { compareCaseInsensitive } from '@bluelovers/string-natural-compare';
 
 let cacheMap: Map<string, string>;
 let _get: (s: string) => string;

@@ -12,7 +12,7 @@ import emitTsFiles from 'build-ts-file';
 import { IPLUS_TABLE, ITeachKanjiComparison, IKanjiComparisonTable } from '../../lib/types';
 import { array_unique_overwrite, array_unique } from 'array-hyper-unique';
 import { sortBySlugify } from '@lazy-cjk/sort';
-import { compareCaseInsensitive } from '@bluelovers/string-natural-compare/core';
+import { compareCaseInsensitive } from '@bluelovers/string-natural-compare';
 import { lineSplit } from 'crlf-normalize';
 
 const data = _jpTableCmparisonBuild({
