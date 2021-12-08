@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@lazy-cjk/japanese": "^1.2.24",
-    "array-hyper-unique": "^1.1.10",
+    "array-hyper-unique": "^2.0.6",
     "fill-range": "^7.0.1",
     "tslib": "^2.3.1"
   },

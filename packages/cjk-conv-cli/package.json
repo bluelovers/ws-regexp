@@ -59,15 +59,15 @@
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
     "@lazy-cjk/zh-convert": "^1.0.41",
-    "array-hyper-unique": "^1.1.10",
+    "array-hyper-unique": "^2.0.6",
     "bluebird": "^3.7.2",
     "crlf-normalize": "^1.0.6",
     "debug-color2": "^1.2.7",
     "diff": "^5.0.0",
     "fs-extra": "^10.0.0",
-    "fs-iconv": "^3.1.6",
+    "fs-iconv": "^3.1.7",
     "tslib": "^2.3.1",
-    "yargs": "^17.2.1"
+    "yargs": "^17.3.0"
   },
   "preferGlobal": true,
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
