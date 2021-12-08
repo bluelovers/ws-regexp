@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.56](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.55...@lazy-cjk/zh-table-alias@1.0.56) (2021-12-08)
+
+
+### 📦　Code Refactoring
+
+* update import `array-hyper-unique` ([e1f9a07](https://github.com/bluelovers/ws-regexp/commit/e1f9a072e3a86c14a93129cfb3e38eade4c81c8a))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([235b884](https://github.com/bluelovers/ws-regexp/commit/235b8842993c00bfcc75c0699e32cd7f2f54706f))
+
+
+
+
+
 ## [1.0.55](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.51...@lazy-cjk/zh-table-alias@1.0.55) (2021-11-14)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.42](https://github.com/bluelovers/ws-regexp/compare/xregexp-plugin-hanzi-cjk@1.0.41...xregexp-plugin-hanzi-cjk@1.0.42) (2021-12-08)
+
+**Note:** Version bump only for package xregexp-plugin-hanzi-cjk
+
+
+
+
+
 ## [1.0.41](https://github.com/bluelovers/ws-regexp/compare/xregexp-plugin-hanzi-cjk@1.0.40...xregexp-plugin-hanzi-cjk@1.0.41) (2021-12-02)
 
 

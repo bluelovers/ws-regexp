@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.44](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/novel-filename@1.0.43...@lazy-cjk/novel-filename@1.0.44) (2021-12-08)
+
+**Note:** Version bump only for package @lazy-cjk/novel-filename
+
+
+
+
+
 ## [1.0.43](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/novel-filename@1.0.42...@lazy-cjk/novel-filename@1.0.43) (2021-11-14)
 
 **Note:** Version bump only for package @lazy-cjk/novel-filename
