@@ -4,12 +4,9 @@
 
 import { rewriteFlags, IOptionsRewriteFlags } from '@regexp-cjk/rewrite-flags';
 import { rewritePatternOptions, handleOptions } from './lib/util';
-import { rewritePatternV4, IOptionsRegExpUCoreV4 } from '@regexp-cjk/regexpu-core-v4';
+import { rewritePatternV4, IOptionsRegExpUCoreV4 as IOptionsRewritePatternCore } from '@regexp-cjk/regexpu-core-v4';
 
-export interface IOptionsRewritePatternCore extends IOptionsRegExpUCoreV4
-{
-
-}
+export type { IOptionsRewritePatternCore }
 
 export interface IOptionsRewritePattern extends IOptionsRewritePatternCore
 {

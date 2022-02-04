@@ -2,9 +2,8 @@
  * Created by user on 2020/6/8.
  */
 import { IOptionsRewriteFlags } from '@regexp-cjk/rewrite-flags';
-import { IOptionsRegExpUCoreV4 } from '@regexp-cjk/regexpu-core-v4';
-export interface IOptionsRewritePatternCore extends IOptionsRegExpUCoreV4 {
-}
+import { IOptionsRegExpUCoreV4 as IOptionsRewritePatternCore } from '@regexp-cjk/regexpu-core-v4';
+export type { IOptionsRewritePatternCore };
 export interface IOptionsRewritePattern extends IOptionsRewritePatternCore {
     flags?: string;
     rewriteFlags?: IOptionsRewriteFlags;
