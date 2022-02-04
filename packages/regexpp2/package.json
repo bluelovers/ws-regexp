@@ -1,6 +1,6 @@
 {
   "name": "regexpp2",
-  "version": "1.3.21",
+  "version": "1.3.22",
   "description": "Regular expression parser for ECMAScript 2018.",
   "keywords": [
     "abstract",

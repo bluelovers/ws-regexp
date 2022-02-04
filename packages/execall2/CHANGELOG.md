@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.18](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.17...execall2@2.0.18) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+
+
+
 ## [2.0.17](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.16...execall2@2.0.17) (2021-12-02)
 
 

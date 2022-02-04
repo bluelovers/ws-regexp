@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.67](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.66...@node-novel/pattern-split@1.1.67) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+
+
+
 ## [1.1.66](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.65...@node-novel/pattern-split@1.1.66) (2021-12-08)
 
 

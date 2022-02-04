@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.35](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-voice@1.0.33...@lazy-cjk/jp-table-voice@1.0.35) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([6bfdd80](https://github.com/bluelovers/ws-regexp/commit/6bfdd805bb9e8a704b05cbe1db25b6edb02d4121))
+
+
+### 🔖　Miscellaneous
+
+* . ([0b6545d](https://github.com/bluelovers/ws-regexp/commit/0b6545dd60e673a9fde083bf16a1823eb140f3a7))
+
+
+
+
+
 ## [1.0.34](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-voice@1.0.33...@lazy-cjk/jp-table-voice@1.0.34) (2022-02-04)
 
 

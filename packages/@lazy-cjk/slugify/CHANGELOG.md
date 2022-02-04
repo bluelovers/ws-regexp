@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.89](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.88...@lazy-cjk/slugify@1.0.89) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+
+
+
 ## [1.0.88](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.87...@lazy-cjk/slugify@1.0.88) (2021-12-08)
 
 **Note:** Version bump only for package @lazy-cjk/slugify

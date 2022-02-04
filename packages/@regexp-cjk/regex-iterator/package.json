@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/regex-iterator",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "",
   "keywords": [
     "regex",
@@ -46,7 +46,7 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "@regexp-cjk/clone-regexp": "^1.0.15",
+    "@regexp-cjk/clone-regexp": "^1.0.17",
     "ts-type": "^2.1.4",
     "tslib": "^2.3.1"
   },

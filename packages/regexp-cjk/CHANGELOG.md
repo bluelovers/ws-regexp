@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.105](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.104...regexp-cjk@3.3.105) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+
+
+
 ## [3.3.104](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.103...regexp-cjk@3.3.104) (2021-12-08)
 
 

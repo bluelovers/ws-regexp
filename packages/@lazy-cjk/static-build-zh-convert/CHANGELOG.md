@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.46](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/static-build-zh-convert@1.0.45...@lazy-cjk/static-build-zh-convert@1.0.46) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+
+
+
 ## [1.0.45](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/static-build-zh-convert@1.0.43...@lazy-cjk/static-build-zh-convert@1.0.45) (2021-12-08)
 
 

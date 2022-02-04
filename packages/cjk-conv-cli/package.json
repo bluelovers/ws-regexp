@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv-cli",
-  "version": "1.0.70",
+  "version": "1.0.71",
   "description": "cli version for cjk-conv ( cn2tw_min, tw2cn_min, cn2tw, tw2cn )",
   "keywords": [
     "char",
@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
-    "@lazy-cjk/zh-convert": "^1.0.42",
+    "@lazy-cjk/zh-convert": "^1.0.43",
     "array-hyper-unique": "^2.0.6",
     "bluebird": "^3.7.2",
     "crlf-normalize": "^1.0.7",
