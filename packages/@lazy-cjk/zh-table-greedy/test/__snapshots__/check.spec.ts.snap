@@ -2711,6 +2711,15 @@ Array [
 ]
 `;
 
+exports[`validate char of map 裏|裡|里|𥚃 1`] = `
+Array [
+  "裏",
+  "裡",
+  "里",
+  "𥚃",
+]
+`;
+
 exports[`validate char of map 詞|词|辞|辭 1`] = `
 Array [
   "詞",
