@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.15...@regexp-cjk/rewrite-flags@1.0.16) (2022-02-04)
+
+
+### ✨　Features
+
+* add `v` (`unicodeSets`) flag ([f0636fd](https://github.com/bluelovers/ws-regexp/commit/f0636fdcf81ab80386fd5d3295ebbcf9a6d451b0))
+
+
+### 🔖　Miscellaneous
+
+* . ([1b30457](https://github.com/bluelovers/ws-regexp/commit/1b3045702374eb162b46bd5a0123ae479e061455))
+
+
+
+
+
 ## [1.0.15](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.14...@regexp-cjk/rewrite-flags@1.0.15) (2021-12-02)
 
 

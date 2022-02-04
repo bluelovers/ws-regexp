@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.27](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-pattern@1.0.26...@regexp-cjk/rewrite-pattern@1.0.27) (2022-02-04)
+
+
+### 📦　Code Refactoring
+
+* use @regexp-cjk/regexpu-core-v4 ([244d280](https://github.com/bluelovers/ws-regexp/commit/244d2806d3d11982ba304e109c059be3436c7723))
+
+
+### 🔖　Miscellaneous
+
+* . ([cd0ab18](https://github.com/bluelovers/ws-regexp/commit/cd0ab18621ecc711307b5a48f0b26d468136f782))
+
+
+
+
+
 ## [1.0.26](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-pattern@1.0.25...@regexp-cjk/rewrite-pattern@1.0.26) (2022-02-04)
 
 
