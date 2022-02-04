@@ -5,8 +5,17 @@ exports[`add {
   multiline: true,
   ignoreCase: true,
   global: true,
-  hasIndices: true
-} 1`] = `"dgims"`;
+  hasIndices: true,
+  unicodeSets: true
+} 1`] = `"vdgims"`;
+
+exports[`add {
+  multiline: true,
+  ignoreCase: true,
+  global: true,
+  hasIndices: true,
+  unicodeSets: true
+} 1`] = `"vdgim"`;
 
 exports[`add {
   sticky: true,
@@ -15,8 +24,9 @@ exports[`add {
   multiline: true,
   ignoreCase: true,
   global: true,
-  hasIndices: true
-} 1`] = `"dgimsuy"`;
+  hasIndices: true,
+  unicodeSets: true
+} 1`] = `"vdgimsuy"`;
 
 exports[`add {
   unicode: true,
@@ -24,30 +34,40 @@ exports[`add {
   multiline: true,
   ignoreCase: true,
   global: true,
-  hasIndices: true
-} 1`] = `"dgimsu"`;
+  hasIndices: true,
+  unicodeSets: true
+} 1`] = `"vdgimsu"`;
 
-exports[`add { global: true, hasIndices: true } 1`] = `"dg"`;
+exports[`add { global: true, hasIndices: true, unicodeSets: true } 1`] = `"vdg"`;
 
-exports[`add { hasIndices: true } 1`] = `"d"`;
+exports[`add { hasIndices: true, unicodeSets: true } 1`] = `"vd"`;
 
-exports[`add { ignoreCase: true, global: true, hasIndices: true } 1`] = `"dgi"`;
+exports[`add { ignoreCase: true, global: true, hasIndices: true, unicodeSets: true } 1`] = `"vdgi"`;
 
-exports[`add { multiline: true, ignoreCase: true, global: true, hasIndices: true } 1`] = `"dgim"`;
+exports[`add { unicodeSets: true } 1`] = `"v"`;
 
 exports[`remove {
   dotAll: false,
   multiline: false,
   ignoreCase: false,
   global: false,
-  hasIndices: false
+  hasIndices: false,
+  unicodeSets: false
 } 1`] = `"yu"`;
+
+exports[`remove {
+  ignoreCase: false,
+  global: false,
+  hasIndices: false,
+  unicodeSets: false
+} 1`] = `"msyu"`;
 
 exports[`remove {
   multiline: false,
   ignoreCase: false,
   global: false,
-  hasIndices: false
+  hasIndices: false,
+  unicodeSets: false
 } 1`] = `"syu"`;
 
 exports[`remove {
@@ -57,7 +77,8 @@ exports[`remove {
   multiline: false,
   ignoreCase: false,
   global: false,
-  hasIndices: false
+  hasIndices: false,
+  unicodeSets: false
 } 1`] = `""`;
 
 exports[`remove {
@@ -66,11 +87,12 @@ exports[`remove {
   multiline: false,
   ignoreCase: false,
   global: false,
-  hasIndices: false
+  hasIndices: false,
+  unicodeSets: false
 } 1`] = `"y"`;
 
-exports[`remove { global: false, hasIndices: false } 1`] = `"imsyu"`;
+exports[`remove { global: false, hasIndices: false, unicodeSets: false } 1`] = `"imsyu"`;
 
-exports[`remove { hasIndices: false } 1`] = `"gimsyu"`;
+exports[`remove { hasIndices: false, unicodeSets: false } 1`] = `"gimsyu"`;
 
-exports[`remove { ignoreCase: false, global: false, hasIndices: false } 1`] = `"msyu"`;
+exports[`remove { unicodeSets: false } 1`] = `"gimsyud"`;
