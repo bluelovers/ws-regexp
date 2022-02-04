@@ -1,0 +1,2 @@
+"use strict";function e(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var r,t=e(require("regexpu-core"));function o(...e){return t.default(...e)}exports.EnumOptionsRegExpUCoreValueMode=void 0,(r=exports.EnumOptionsRegExpUCoreValueMode||(exports.EnumOptionsRegExpUCoreValueMode={})).transform="transform",r.parse="parse",exports.default=o,exports.rewritePatternV5=o;
+//# sourceMappingURL=index.cjs.production.min.cjs.map

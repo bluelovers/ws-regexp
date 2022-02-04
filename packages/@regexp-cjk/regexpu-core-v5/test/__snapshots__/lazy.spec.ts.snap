@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[
+  '[^[a-h]&&[f-z]]',
+  'v',
+  { unicodeSetsFlag: 'transform', unicodeFlag: 'transform' }
+] 1`] = `
+Object {
+  "actual": "(?:(?![f-h])[\\\\s\\\\S])",
+  "changed": true,
+}
+`;
+
+exports[`[
+  '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
+  'u',
+  { unicodeFlag: 'transform', unicodePropertyEscapes: 'transform' }
+] 1`] = `
+Object {
+  "actual": "(?:\\\\uD811[\\\\uDC00-\\\\uDE46])",
+  "changed": true,
+}
+`;
+
+exports[`[
+  '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
+  'u',
+  { unicodePropertyEscapes: 'transform' }
+] 1`] = `
+Object {
+  "actual": "[\\\\u{14400}-\\\\u{14646}]",
+  "changed": true,
+}
+`;
+
+exports[`[
+  'First_Name: (?<firstname>\\\\w+), Last_Name: (?<lastname>\\\\w+)',
+  '',
+  { namedGroups: 'transform' }
+] 1`] = `
+Object {
+  "actual": "First_Name: (\\\\w+), Last_Name: (\\\\w+)",
+  "changed": true,
+}
+`;
+
+exports[`[
+  'First_Name: (?<firstname>\\\\w+), Last_Name: (?<lastname>\\\\w+)',
+  '',
+  {}
+] 1`] = `
+Object {
+  "actual": "First_Name: (?<firstname>\\\\w+), Last_Name: (?<lastname>\\\\w+)",
+  "changed": false,
+}
+`;
+
+exports[`[
+  'First_Name: (?<firstname>\\\\w+), Last_Name: (?<lastname>\\\\w+)\\\\k<firstname>',
+  '',
+  { namedGroups: 'transform' }
+] 1`] = `
+Object {
+  "actual": "First_Name: (\\\\w+), Last_Name: (\\\\w+)\\\\1",
+  "changed": true,
+}
+`;
+
+exports[`[ '(?<name>.)\\\\k<name>', '', { namedGroups: 'transform' } ] 1`] = `
+Object {
+  "actual": "(.)\\\\1",
+  "changed": true,
+}
+`;
+
+exports[`[ '.', '', { dotAllFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": ".",
+  "changed": false,
+}
+`;
+
+exports[`[ '.', 's', { dotAllFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": "[\\\\s\\\\S]",
+  "changed": true,
+}
+`;
+
+exports[`[ '.', 'su', { dotAllFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": "[\\\\s\\\\S]",
+  "changed": true,
+}
+`;
+
+exports[`[ '[\\\\p{Emoji}&&\\\\p{ASCII}]', 'u', { unicodeSetsFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": "[\\\\p{Emoji}&&\\\\p{ASCII}]",
+  "changed": false,
+}
+`;
+
+exports[`[ '[^[a-h]&&[f-z]]', 'v', { unicodeSetsFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": "[^f-h]",
+  "changed": true,
+}
+`;
+
+exports[`[ '\\\\u{ab}', '', { unicodeFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": "u\\\\{ab\\\\}",
+  "changed": true,
+}
+`;
+
+exports[`[ '\\\\u{ab}', 'u', { unicodeFlag: 'transform' } ] 1`] = `
+Object {
+  "actual": "\\\\xAB",
+  "changed": true,
+}
+`;
