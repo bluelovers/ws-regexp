@@ -78,7 +78,7 @@
     "@lazy-cjk/zh-table-alias": "^1.0.56",
     "@lazy-cjk/zh-table-greedy": "^1.0.81",
     "tslib": "^2.3.1",
-    "uni-string": "^1.1.11"
+    "uni-string": "^1.1.12"
   },
   "publishConfig": {
     "access": "public"

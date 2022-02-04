@@ -61,13 +61,13 @@
     "@lazy-cjk/zh-convert": "^1.0.42",
     "array-hyper-unique": "^2.0.6",
     "bluebird": "^3.7.2",
-    "crlf-normalize": "^1.0.6",
+    "crlf-normalize": "^1.0.7",
     "debug-color2": "^1.2.7",
     "diff": "^5.0.0",
     "fs-extra": "^10.0.0",
-    "fs-iconv": "^3.1.7",
+    "fs-iconv": "^3.1.8",
     "tslib": "^2.3.1",
-    "yargs": "^17.3.0"
+    "yargs": "^17.3.1"
   },
   "preferGlobal": true,
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
