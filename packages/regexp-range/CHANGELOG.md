@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.40](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.39...regexp-range@1.0.40) (2022-02-04)
+
+
+### 🔖　Miscellaneous
+
+* . ([1b49c3a](https://github.com/bluelovers/ws-regexp/commit/1b49c3ab0b637b5ff52b8417849560a451e0d3ee))
+
+
+
+
+
 ## [1.0.39](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.38...regexp-range@1.0.39) (2022-02-04)
 
 

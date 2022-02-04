@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/japanese",
-  "version": "1.2.26",
+  "version": "1.2.27",
   "description": "Util collection for Japanese text processing. Hiraganize, Katakanize, and Romanize.",
   "keywords": [
     "japanese",

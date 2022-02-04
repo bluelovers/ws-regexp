@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.16](https://github.com/bluelovers/ws-regexp/compare/regexgen2@1.3.15...regexgen2@1.3.16) (2022-02-04)
+
+
+### 🔖　Miscellaneous
+
+* . ([1b49c3a](https://github.com/bluelovers/ws-regexp/commit/1b49c3ab0b637b5ff52b8417849560a451e0d3ee))
+
+
+
+
+
 ## [1.3.15](https://github.com/bluelovers/ws-regexp/compare/regexgen2@1.3.13...regexgen2@1.3.15) (2022-02-04)
 
 
