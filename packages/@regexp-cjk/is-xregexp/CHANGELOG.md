@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/is-xregexp@1.0.6...@regexp-cjk/is-xregexp@1.0.7) (2022-02-04)
+
+
+### 🔖　Miscellaneous
+
+* . ([d863cc5](https://github.com/bluelovers/ws-regexp/commit/d863cc51192f80c946d7163b860f341b422ae811))
+
+
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/is-xregexp@1.0.5...@regexp-cjk/is-xregexp@1.0.6) (2021-12-02)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/create-xregexp@1.0.11...@regexp-cjk/create-xregexp@1.0.12) (2022-02-04)
+
+
+### 🔖　Miscellaneous
+
+* . ([d863cc5](https://github.com/bluelovers/ws-regexp/commit/d863cc51192f80c946d7163b860f341b422ae811))
+
+
+
+
+
 ## [1.0.11](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/create-xregexp@1.0.10...@regexp-cjk/create-xregexp@1.0.11) (2022-02-04)
 
 

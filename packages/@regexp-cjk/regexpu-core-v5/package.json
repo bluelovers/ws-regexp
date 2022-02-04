@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/regexpu-core-v5",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "regexpu-core v5 api",
   "keywords": [
     "regexpu-core",
@@ -91,8 +91,6 @@
     "regexpu-core": "^5.0.1",
     "ts-type": "^2.1.4"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
   "publishConfig": {
     "access": "public"
   },
