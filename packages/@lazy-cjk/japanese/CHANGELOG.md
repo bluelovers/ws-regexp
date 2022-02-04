@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.25](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.24...@lazy-cjk/japanese@1.2.25) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/ws-regexp/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+
+
+
 ## [1.2.24](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.19...@lazy-cjk/japanese@1.2.24) (2021-11-14)
 
 

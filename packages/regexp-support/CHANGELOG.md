@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.44](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.43...regexp-support@1.0.44) (2022-02-04)
+
+
+### 🛠　Build System
+
+* update typescript ([2fe5ed4](https://github.com/bluelovers/regexp-support/commit/2fe5ed4bc31717187d91d13d0b64ae797a72731f))
+
+
+### ♻️　Chores
+
+* new env test ([6f1782c](https://github.com/bluelovers/regexp-support/commit/6f1782c20f975bfa98c8928b2e6f1051f3c75e5f))
+
+
+
+
+
 ## [1.0.43](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.41...regexp-support@1.0.43) (2021-12-08)
 
 
