@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.reToStringList = void 0;
 const tslib_1 = require("tslib");
-const uni_string_1 = (0, tslib_1.__importDefault)(require("uni-string"));
+const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
 const array_hyper_unique_1 = require("array-hyper-unique");
 function reToStringList(re, char) {
     const s = re.source

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.normalizeToCompat = void 0;
 const tslib_1 = require("tslib");
-const isHangul_1 = (0, tslib_1.__importDefault)(require("../isHangul"));
+const isHangul_1 = tslib_1.__importDefault(require("../isHangul"));
 const { _HANGUL_COMPATIBILITY_JAMO, _HANGUL_JAMO } = require("./blocks");
 const whichJamoSet = jamo => (0, isHangul_1.default)(jamo, Object.entries(_HANGUL_JAMO));
 const jaeum = {

@@ -7,7 +7,7 @@ exports.wrapToRegexName = exports.testUnicodeBlocksAll = exports.testUnicodeBloc
 const tslib_1 = require("tslib");
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
-const blocks_1 = (0, tslib_1.__importDefault)(require("../cache/blocks"));
+const blocks_1 = tslib_1.__importDefault(require("../cache/blocks"));
 exports.KEY_PREFIX = '\\p{';
 exports.KEY_PREFIX_NEGATION = '\\P{';
 exports.KEY_SUFFIX = '}';

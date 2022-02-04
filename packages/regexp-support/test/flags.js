@@ -4,7 +4,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const __1 = (0, tslib_1.__importDefault)(require(".."));
+const __1 = tslib_1.__importDefault(require(".."));
 const index_1 = require("../lib/util/index");
 const fs_extra_1 = require("fs-extra");
 const path_1 = require("path");

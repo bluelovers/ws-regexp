@@ -5,10 +5,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.wrapToRegexName = exports.testUnicodeScriptAll = exports.testUnicodeScript = exports._testUnicodeScript = exports.PatternTest = exports.UNICODE_SCRIPTS_NAME_ALIAS = exports.UNICODE_SCRIPTS_ALL = exports.UNICODE_SCRIPTS = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
 const tslib_1 = require("tslib");
-const property_data_1 = (0, tslib_1.__importDefault)(require("../cache/property-data"));
+const property_data_1 = tslib_1.__importDefault(require("../cache/property-data"));
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
-const scripts_1 = (0, tslib_1.__importDefault)(require("../cache/scripts"));
+const scripts_1 = tslib_1.__importDefault(require("../cache/scripts"));
 exports.KEY_PREFIX = '\\p{Script=';
 exports.KEY_PREFIX_NEGATION = '\\P{Script=';
 exports.KEY_SUFFIX = '}';

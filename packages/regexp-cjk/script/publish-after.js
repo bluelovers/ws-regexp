@@ -4,12 +4,12 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const PackageJson = (0, tslib_1.__importStar)(require("../package.json"));
+const path_1 = tslib_1.__importDefault(require("path"));
+const PackageJson = tslib_1.__importStar(require("../package.json"));
 // @ts-ignore
 const cross_spawn_extra_1 = require("cross-spawn-extra");
 // @ts-ignore
-const core_1 = (0, tslib_1.__importDefault)(require("git-root2/core"));
+const core_1 = tslib_1.__importDefault(require("git-root2/core"));
 (async () => {
     const project_root = path_1.default.join(__dirname, '..');
     let gitroot;

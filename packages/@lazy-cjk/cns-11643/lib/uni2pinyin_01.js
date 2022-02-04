@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /**
  * Created by user on 2020/5/30.
  */
-const uni2zhuyin_1 = (0, tslib_1.__importDefault)(require("./uni2zhuyin"));
+const uni2zhuyin_1 = tslib_1.__importDefault(require("./uni2zhuyin"));
 const char2uni_1 = require("./char2uni");
 const uni2zhuyin_2 = require("./util/uni2zhuyin");
 /**

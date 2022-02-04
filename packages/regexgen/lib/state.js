@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.State = void 0;
 const tslib_1 = require("tslib");
-const map_1 = (0, tslib_1.__importDefault)(require("./map"));
+const map_1 = tslib_1.__importDefault(require("./map"));
 /**
  * Represents a state in a DFA.
  */

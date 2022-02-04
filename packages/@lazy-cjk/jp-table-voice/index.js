@@ -5,8 +5,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EnumTableVoice = exports.table_voice = void 0;
 const tslib_1 = require("tslib");
-(0, tslib_1.__exportStar)(require("./lib/core"), exports);
-(0, tslib_1.__exportStar)(require("./lib/util"), exports);
+tslib_1.__exportStar(require("./lib/core"), exports);
+tslib_1.__exportStar(require("./lib/util"), exports);
 const table_1 = require("./lib/table");
 Object.defineProperty(exports, "table_voice", { enumerable: true, get: function () { return table_1.table_voice; } });
 const util_1 = require("./lib/util");

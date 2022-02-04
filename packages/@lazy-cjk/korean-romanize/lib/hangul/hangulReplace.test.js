@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const hangulReplace_1 = (0, tslib_1.__importDefault)(require("./hangulReplace"));
+const hangulReplace_1 = tslib_1.__importDefault(require("./hangulReplace"));
 const testCases = [
     {
         text: "창세가 is a shamanistic creation myth from 함훙, 함경도.",

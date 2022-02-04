@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createRegExp = exports.testFlagsAll = exports.testFlag = exports.hasSupportFlag = exports.FlagsName = void 0;
 const tslib_1 = require("tslib");
-const flags_1 = (0, tslib_1.__importStar)(require("./flags"));
+const flags_1 = tslib_1.__importStar(require("./flags"));
 exports.FlagsName = flags_1.default;
 /**
  * Check whether a RegExp flag is supported

@@ -9,8 +9,8 @@ const regexp_cjk_1 = require("regexp-cjk");
 const regexp_parser_literal_1 = require("regexp-parser-literal");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const util_1 = require("./lib/util");
-(0, tslib_1.__exportStar)(require("./lib/util"), exports);
-(0, tslib_1.__exportStar)(require("./lib/types"), exports);
+tslib_1.__exportStar(require("./lib/util"), exports);
+tslib_1.__exportStar(require("./lib/types"), exports);
 function novelPatternSplit(input, options = {}) {
     let r = new regexp_cjk_1.zhRegExp(input, {
         // 禁用自動生成漢字數列 [一-十] 之類

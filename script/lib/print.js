@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.printTypeKeys = exports.printRecord = exports.printArray = void 0;
 const tslib_1 = require("tslib");
-const assert_1 = (0, tslib_1.__importDefault)(require("assert"));
+const assert_1 = tslib_1.__importDefault(require("assert"));
 const array_hyper_unique_1 = require("array-hyper-unique");
 function printArray(arrayTable, level) {
     (0, assert_1.default)(Array.isArray(arrayTable));

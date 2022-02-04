@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.splitLimit = void 0;
 const tslib_1 = require("tslib");
-const _each_1 = (0, tslib_1.__importDefault)(require("./_each"));
+const _each_1 = tslib_1.__importDefault(require("./_each"));
 const greedySplit_1 = require("../util/split/greedySplit");
 function _pushNonEmpty(arr, s, allowEmpty) {
     if (s !== '' || allowEmpty === true) {

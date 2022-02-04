@@ -1,7 +1,7 @@
 "use strict";
 const tslib_1 = require("tslib");
 const constraints_1 = require("./constraints");
-const getData_1 = (0, tslib_1.__importDefault)(require("./getData"));
+const getData_1 = tslib_1.__importDefault(require("./getData"));
 // totals including archaic jamo
 const LTotal = 90; // initial consonants
 const VTotal = 4 * 16 + 2; // medial vowels

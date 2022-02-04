@@ -4,8 +4,8 @@ exports.astToString = exports.fakePatternToRegExpLiteral = exports.parsePattern 
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const regexpp2_1 = require("regexpp2");
-const emoji_regex_1 = (0, tslib_1.__importDefault)(require("emoji-regex"));
-const uni_string_1 = (0, tslib_1.__importDefault)(require("uni-string"));
+const emoji_regex_1 = tslib_1.__importDefault(require("emoji-regex"));
+const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
 // @ts-ignore
 exports.EMOJI_REGEX = (0, emoji_regex_1.default)();
 exports.defaultRegExpParser = createRegExpParser({

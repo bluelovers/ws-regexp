@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.minimize = void 0;
 const tslib_1 = require("tslib");
-const map_1 = (0, tslib_1.__importDefault)(require("./map"));
-const set_1 = (0, tslib_1.__importDefault)(require("./set"));
-const state_1 = (0, tslib_1.__importDefault)(require("./state"));
+const map_1 = tslib_1.__importDefault(require("./map"));
+const set_1 = tslib_1.__importDefault(require("./set"));
+const state_1 = tslib_1.__importDefault(require("./state"));
 /**
  * Implements Hopcroft's DFA minimization algorithm.
  * https://en.wikipedia.org/wiki/DFA_minimization#Hopcroft.27s_algorithm

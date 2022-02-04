@@ -11,11 +11,11 @@ Object.defineProperty(exports, "ParserEventEmitterEvent", { enumerable: true, ge
 const core_1 = require("./lib/core");
 const regexp_helper_core_1 = require("regexp-helper-core");
 Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_core_1.isRegExp; } });
-const RegexpHelper = (0, tslib_1.__importStar)(require("regexp-helper-core"));
-const mergeOptions_1 = (0, tslib_1.__importStar)(require("./lib/mergeOptions"));
+const RegexpHelper = tslib_1.__importStar(require("regexp-helper-core"));
+const mergeOptions_1 = tslib_1.__importStar(require("./lib/mergeOptions"));
 const getSource_1 = require("./lib/getSource");
 Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return getSource_1.parseRegularExpressionString; } });
-(0, tslib_1.__exportStar)(require("./version"), exports);
+tslib_1.__exportStar(require("./version"), exports);
 /**
  * @deprecated
  */

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const isHangul_1 = (0, tslib_1.__importDefault)(require("./isHangul"));
+const isHangul_1 = tslib_1.__importDefault(require("./isHangul"));
 const blocks_1 = require("./unicode/blocks");
 const describeTestBlock = (description, jamoBlock, expected) => describe(description, () => {
     const [start, stop] = jamoBlock;

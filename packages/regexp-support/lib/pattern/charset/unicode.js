@@ -7,9 +7,9 @@ exports.wrapToRegexName = exports.testUnicodeAll = exports.testUnicode = exports
 const tslib_1 = require("tslib");
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
-const categories_1 = (0, tslib_1.__importStar)(require("../cache/categories"));
-const properties_1 = (0, tslib_1.__importDefault)(require("../cache/properties"));
-const property_data_1 = (0, tslib_1.__importDefault)(require("../cache/property-data"));
+const categories_1 = tslib_1.__importStar(require("../cache/categories"));
+const properties_1 = tslib_1.__importDefault(require("../cache/properties"));
+const property_data_1 = tslib_1.__importDefault(require("../cache/property-data"));
 //console.log(properties);
 exports.KEY_PREFIX = '\\p{';
 exports.KEY_PREFIX_NEGATION = '\\P{';

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getBits = exports.getBit = void 0;
 const tslib_1 = require("tslib");
 // Get nth bit from buffer
-const big_js_1 = (0, tslib_1.__importDefault)(require("big.js"));
+const big_js_1 = tslib_1.__importDefault(require("big.js"));
 function getBit(buffer, position) {
     let byteIndex = Math.floor(position / 8);
     let byte = buffer[byteIndex] || 0;

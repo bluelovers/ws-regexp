@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.transcribeNumber = void 0;
 const tslib_1 = require("tslib");
-const defaults_1 = (0, tslib_1.__importDefault)(require("lodash/defaults"));
-const big_js_1 = (0, tslib_1.__importDefault)(require("big.js"));
+const defaults_1 = tslib_1.__importDefault(require("lodash/defaults"));
+const big_js_1 = tslib_1.__importDefault(require("big.js"));
 const numbers_1 = require("./data/numbers");
 const numbers_2 = require("./util/numbers");
-(0, tslib_1.__exportStar)(require("./data/numbers"), exports);
+tslib_1.__exportStar(require("./data/numbers"), exports);
 function transcribeNumber(number, config) {
     if (typeof config === 'undefined') {
         // default config

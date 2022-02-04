@@ -5,8 +5,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getOptions = exports.fillRange = exports.toRegExpString = exports.matchRange = exports.TABLE_RANGE = void 0;
 const tslib_1 = require("tslib");
-const fill_range_1 = (0, tslib_1.__importDefault)(require("fill-range"));
-const table_1 = (0, tslib_1.__importDefault)(require("./table"));
+const fill_range_1 = tslib_1.__importDefault(require("fill-range"));
+const table_1 = tslib_1.__importDefault(require("./table"));
 exports.TABLE_RANGE = table_1.default;
 const array_hyper_unique_1 = require("array-hyper-unique");
 function matchRange(from, to, options = {}) {

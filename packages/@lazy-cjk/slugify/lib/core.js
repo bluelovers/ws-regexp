@@ -5,9 +5,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._slice = exports._trim = exports._core = exports._coreTextAfter = exports._coreText = exports._coreCase = exports.handleOptions = void 0;
 const tslib_1 = require("tslib");
-const deburr_1 = (0, tslib_1.__importDefault)(require("lodash/deburr"));
-const upperFirst_1 = (0, tslib_1.__importDefault)(require("lodash/upperFirst"));
-const upperCase_1 = (0, tslib_1.__importDefault)(require("lodash/upperCase"));
+const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));
+const upperFirst_1 = tslib_1.__importDefault(require("lodash/upperFirst"));
+const upperCase_1 = tslib_1.__importDefault(require("lodash/upperCase"));
 const regex_pinyin_1 = require("@regexp-cjk/regex-pinyin");
 const transliterate_1 = require("./core/transliterate");
 const reDefaultSeparator = new RegExp(`${regex_pinyin_1.reNotPinyinChar}+`, 'ug');

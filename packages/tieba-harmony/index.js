@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.splitChar = exports.loopTable = exports.getTable = exports.unescape = exports.escape = exports.SP_REGEXP_STRICT = exports.SP_ESCAPE = exports.SP_REGEXP_UNSAFE = exports.SP_REGEXP = exports.SP_KEY = void 0;
 const tslib_1 = require("tslib");
 const regexp_cjk_1 = require("regexp-cjk");
-(0, tslib_1.__exportStar)(require("./table"), exports);
+tslib_1.__exportStar(require("./table"), exports);
 const table_1 = require("./table");
 exports.SP_KEY = '#_@_#';
 exports.SP_REGEXP = '(?:\@|（·?）|\-|\/|\\\(\\\)|%|￥|_|\\\?|？|\\\||#|\\\$|[（\\\(](?:和谐|河蟹)[\\\)）]|（河）（蟹）|[（\\(][河蟹]{1,2}[\\)）]| |\\\.|[・·]|\\*|□|圌|[=＝]|\\\\\\\\|\\\/\\\/|｜)';

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const normalizeToCompat_1 = (0, tslib_1.__importDefault)(require("./normalizeToCompat"));
+const normalizeToCompat_1 = tslib_1.__importDefault(require("./normalizeToCompat"));
 describe("normalizeToCompat function", () => {
     test("should return false for non-Hangul", () => {
         expect((0, normalizeToCompat_1.default)("A")).toBe(false);

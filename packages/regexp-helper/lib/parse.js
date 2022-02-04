@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.rRegularExpressionString = exports.parseRegularExpressionString = void 0;
 const tslib_1 = require("tslib");
-const regexp_support_1 = (0, tslib_1.__importDefault)(require("regexp-support"));
+const regexp_support_1 = tslib_1.__importDefault(require("regexp-support"));
 function parseRegularExpressionString(str, options = {}) {
     let m = rRegularExpressionString(options).exec(str);
     if (m) {

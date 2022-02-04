@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.auto = exports.jp = exports.cn = exports.tw = void 0;
 const tslib_1 = require("tslib");
 const jp_table_convert_1 = require("@lazy-cjk/jp-table-convert");
-const zh_table_alias_1 = (0, tslib_1.__importDefault)(require("@lazy-cjk/zh-table-alias"));
-const jp_table_alias_1 = (0, tslib_1.__importDefault)(require("@lazy-cjk/jp-table-alias"));
+const zh_table_alias_1 = tslib_1.__importDefault(require("@lazy-cjk/zh-table-alias"));
+const jp_table_alias_1 = tslib_1.__importDefault(require("@lazy-cjk/jp-table-alias"));
 const zh_table_greedy_1 = require("@lazy-cjk/zh-table-greedy");
 const util_1 = require("./lib/util");
-(0, tslib_1.__exportStar)(require("./lib/types"), exports);
+tslib_1.__exportStar(require("./lib/types"), exports);
 /**
  * 取出此漢字所對應的繁漢字
  * @type {(char: string, options?: IOptions) => string[]}

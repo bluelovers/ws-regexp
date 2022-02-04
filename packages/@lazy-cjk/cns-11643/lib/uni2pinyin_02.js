@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.char2pinyinTypeValue_02 = exports.char2pinyin_02 = exports.uni2pinyinTypeValue_02 = exports.uni2pinyin_02 = exports.zhuyin2pinyin_02 = exports.zhuyin2pinyin_02_table = void 0;
 const tslib_1 = require("tslib");
-const uni2zhuyin_1 = (0, tslib_1.__importDefault)(require("./uni2zhuyin"));
+const uni2zhuyin_1 = tslib_1.__importDefault(require("./uni2zhuyin"));
 const char2uni_1 = require("./char2uni");
 const uni2zhuyin_2 = require("./util/uni2zhuyin");
 /**

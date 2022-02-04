@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.romanize = void 0;
 const tslib_1 = require("tslib");
 const kana_1 = require("./kana");
-const extend_1 = (0, tslib_1.__importDefault)(require("lodash/extend"));
+const extend_1 = tslib_1.__importDefault(require("lodash/extend"));
 const romanize_1 = require("./data/romanize");
-(0, tslib_1.__exportStar)(require("./data/romanize"), exports);
+tslib_1.__exportStar(require("./data/romanize"), exports);
 /**
  * Convert input text into romaji.
  *

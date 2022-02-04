@@ -5,7 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.rewriteRegExp = exports.rewriteRegExpCore = exports.rewritePatternByRegExp = exports.rewritePatternByRegExpCore = exports.rewritePattern = exports.rewritePatternCore = void 0;
 const tslib_1 = require("tslib");
-const regexpu_core_1 = (0, tslib_1.__importDefault)(require("regexpu-core"));
+const regexpu_core_1 = tslib_1.__importDefault(require("regexpu-core"));
 const util_1 = require("./lib/util");
 function rewritePatternCore(source, flags, options) {
     return (0, regexpu_core_1.default)(source, flags, options);

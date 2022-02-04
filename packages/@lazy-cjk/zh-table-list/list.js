@@ -5,8 +5,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.arrCjk = exports.textList = exports.charTableList = void 0;
 const tslib_1 = require("tslib");
-const index_1 = (0, tslib_1.__importDefault)(require("./index"));
-const uni_string_1 = (0, tslib_1.__importDefault)(require("uni-string"));
+const index_1 = tslib_1.__importDefault(require("./index"));
+const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
 const jp_table_convert_1 = require("@lazy-cjk/jp-table-convert");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
 /**

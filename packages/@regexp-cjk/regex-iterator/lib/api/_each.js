@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._each = void 0;
 const tslib_1 = require("tslib");
-const clone_regexp_1 = (0, tslib_1.__importDefault)(require("@regexp-cjk/clone-regexp"));
+const clone_regexp_1 = tslib_1.__importDefault(require("@regexp-cjk/clone-regexp"));
 function* _each(input, re, options = {}) {
     let match;
     // @ts-ignore

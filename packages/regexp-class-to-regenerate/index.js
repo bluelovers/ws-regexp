@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.isPattern = exports.hackRegenerate = exports.regexpClassToObject = exports.regenerate = void 0;
 const tslib_1 = require("tslib");
 const regexp_parser_event_1 = require("regexp-parser-event");
-const regexpu_core_1 = (0, tslib_1.__importDefault)(require("regexpu-core"));
-const regenerate_1 = (0, tslib_1.__importDefault)(require("regenerate"));
+const regexpu_core_1 = tslib_1.__importDefault(require("regexpu-core"));
+const regenerate_1 = tslib_1.__importDefault(require("regenerate"));
 exports.regenerate = regenerate_1.default;
 /**
  * convert Specified type RegExp to hacked regenerate object

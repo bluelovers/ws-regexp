@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parens = exports.Literal = exports.Repetition = exports.Concatenation = exports.CharClass = exports.Alternation = void 0;
 const tslib_1 = require("tslib");
-const jsesc_1 = (0, tslib_1.__importDefault)(require("jsesc"));
-const regenerate_1 = (0, tslib_1.__importDefault)(require("regenerate"));
+const jsesc_1 = tslib_1.__importDefault(require("jsesc"));
+const regenerate_1 = tslib_1.__importDefault(require("regenerate"));
 /**
  * Represents an alternation (e.g. `foo|bar`)
  */
