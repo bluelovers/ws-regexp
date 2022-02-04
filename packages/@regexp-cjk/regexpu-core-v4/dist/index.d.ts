@@ -57,6 +57,14 @@ export interface IOptionsRegExpUCoreV4 {
 	 * This option is a function that gets called when a named capture group is found.
 	 * It receives two parameters:
 	 * the name of the group, and its index.
+	 *
+	 * @example
+	 * rewritePattern('(?<name>.)\\k<name>', '', {
+	 *   onNamedGroup(name, index) {
+	 *     console.log(name, index);
+	 *     // → 'name', 1
+	 *   }
+	 * });
 	 */
 	onNamedGroup?(name: string, index: number): void;
 	/**
@@ -94,6 +102,8 @@ export interface IOptionsRegExpUCoreV4 {
  * // But with the ES2015 `u` flag, it matches astral symbols too:
  * rewritePattern('foo.bar', 'u');
  * // → 'foo(?:[\\0-\\t\\x0B\\f\\x0E-\\u2027\\u202A-\\uD7FF\\uDC00-\\uFFFF]|[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|[\\uD800-\\uDBFF])bar'
+ *
+ * @see https://github.com/mathiasbynens/regexpu-core/tree/v4.8.0#readme
  */
 export declare function rewritePatternV4(pattern: string, flags?: string, options?: IOptionsRegExpUCoreV4): string;
 export default rewritePatternV4;
