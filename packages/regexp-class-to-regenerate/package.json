@@ -42,9 +42,9 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
+    "@regexp-cjk/regexpu-core-v4": "^1.0.0",
     "regenerate": "^1.4.2",
     "regexp-parser-event": "^1.1.40",
-    "regexpu-core": "<5 >=4.8.0",
     "tslib": "^2.3.1"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

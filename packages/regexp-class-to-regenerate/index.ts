@@ -3,9 +3,9 @@ import {
 	ParserEventEmitterEvent,
 } from 'regexp-parser-event';
 import { EnumTypeNode } from 'regexpp2/src/const';
-import rewritePattern from 'regexpu-core';
 import regenerate from 'regenerate';
 import { NodeBase, Pattern } from 'regexpp2/src/ast';
+import { rewritePatternV4 } from '@regexp-cjk/regexpu-core-v4';
 
 export { regenerate }
 
@@ -36,7 +36,7 @@ export function regexpClassToObject(re: RegExp, flags?: string): IRegenerateObje
 
 	const sourceOrigin = re.source;
 
-	let source = rewritePattern(sourceOrigin, flags, {
+	let source = rewritePatternV4(sourceOrigin, flags, {
 		unicodePropertyEscape: true,
 		useUnicodeFlag: hasUnicodeFlag,
 	});
