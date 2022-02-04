@@ -40,6 +40,6 @@
     "regenerate": "^1.4.2",
     "tslib": "^2.3.1"
   },
-  "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082",
+  "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771",
   "runkitExample": "const regexgen = require('regexgen');\n\nregexgen(['foobar', 'foobaz', 'foozap', 'fooza']);"
 }
