@@ -24,6 +24,10 @@ export interface IOptionsRewriteFlags {
      */
     unicode?: boolean;
     hasIndices?: boolean;
+    /**
+     * https://github.com/tc39/proposal-regexp-set-notation
+     */
+    unicodeSets?: boolean;
 }
 export declare enum EnumFlagMap {
     global = "g",
@@ -32,8 +36,9 @@ export declare enum EnumFlagMap {
     dotAll = "s",
     sticky = "y",
     unicode = "u",
-    hasIndices = "d"
+    hasIndices = "d",
+    unicodeSets = "v"
 }
-export declare const flagsOrderReverse: ("global" | "unicode" | "dotAll" | "ignoreCase" | "multiline" | "sticky" | "hasIndices")[];
+export declare const flagsOrderReverse: readonly ["sticky", "unicode", "dotAll", "multiline", "ignoreCase", "global", "hasIndices", "unicodeSets"];
 export declare function rewriteFlags(flags: string | IOptionsRewriteFlags, options?: IOptionsRewriteFlags): string;
 export default rewriteFlags;

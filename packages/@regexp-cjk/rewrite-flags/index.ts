@@ -32,6 +32,11 @@ export interface IOptionsRewriteFlags
 	unicode?: boolean;
 
 	hasIndices?: boolean;
+
+	/**
+	 * https://github.com/tc39/proposal-regexp-set-notation
+	 */
+	unicodeSets?: boolean;
 }
 
 export enum EnumFlagMap
@@ -43,6 +48,7 @@ export enum EnumFlagMap
 	sticky = 'y',
 	unicode = 'u',
 	hasIndices = 'd',
+	unicodeSets = 'v',
 }
 
 export const flagsOrderReverse = [
@@ -53,7 +59,8 @@ export const flagsOrderReverse = [
 	'ignoreCase',
 	'global',
 	'hasIndices',
-] as (keyof typeof EnumFlagMap)[]
+	'unicodeSets',
+] as const
 
 export function rewriteFlags(flags: string | IOptionsRewriteFlags, options?: IOptionsRewriteFlags): string
 {

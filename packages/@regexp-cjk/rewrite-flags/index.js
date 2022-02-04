@@ -10,6 +10,7 @@ var EnumFlagMap;
     EnumFlagMap["sticky"] = "y";
     EnumFlagMap["unicode"] = "u";
     EnumFlagMap["hasIndices"] = "d";
+    EnumFlagMap["unicodeSets"] = "v";
 })(EnumFlagMap = exports.EnumFlagMap || (exports.EnumFlagMap = {}));
 exports.flagsOrderReverse = [
     'sticky',
@@ -19,6 +20,7 @@ exports.flagsOrderReverse = [
     'ignoreCase',
     'global',
     'hasIndices',
+    'unicodeSets',
 ];
 function rewriteFlags(flags, options) {
     if (flags !== null && typeof flags === 'object') {
