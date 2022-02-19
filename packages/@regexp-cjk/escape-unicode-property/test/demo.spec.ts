@@ -5,7 +5,6 @@ import {
 	isUnicodePropertyPattern, replaceUnicodePropertyPattern,
 } from '../index';
 import { inspect } from 'util';
-import escapeStringRegexp from 'escape-string-regexp';
 import { IOptionsRewritePattern } from '@regexp-cjk/rewrite-pattern';
 import { handleOptions } from '../lib/util';
 import { EnumFlagMap } from '@regexp-cjk/rewrite-flags';

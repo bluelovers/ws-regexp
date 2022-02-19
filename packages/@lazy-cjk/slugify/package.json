@@ -81,7 +81,6 @@
     "@regexp-cjk/regex-pinyin": "^1.0.4",
     "@sindresorhus/transliterate": "< 1",
     "emoji.json": "^13.1.0",
-    "escape-string-regexp": "< 5 >= 4",
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.34",
     "transliteration": "^2.2.0",
