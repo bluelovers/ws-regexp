@@ -32,5 +32,5 @@ export interface ICreateRegExp {
     create?(pattern: any, flag?: any): any;
     create?(pattern: any, flag?: any, ...argv: any[]): any;
 }
-export declare type ITypeCreateRegExp<T> = T extends typeof RegExp ? typeof RegExp : T extends ICreateRegExp ? ICreateRegExp : any;
+export type ITypeCreateRegExp<T> = T extends typeof RegExp ? typeof RegExp : T extends ICreateRegExp ? ICreateRegExp : any;
 export declare function createRegExp<T>(pattern: string, flag?: string, RegExpClass?: ITypeCreateRegExp<T>): RegExp;
