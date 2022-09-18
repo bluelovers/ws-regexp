@@ -1,7 +1,7 @@
 /**
  * Created by user on 2018/5/3/003.
  */
-export declare type IOptions = {
+export type IOptions = {
     allowNonNativeSlash?: boolean;
     allowNonNativeFlags?: boolean;
     throwError?: boolean;

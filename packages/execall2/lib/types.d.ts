@@ -32,7 +32,7 @@ export interface IMatchesRow<T extends RegExp = RegExp> extends IExecAllRegExpEx
     leftContext?: string;
     rightContext?: string;
 }
-export declare type IMatches<T extends RegExp = RegExp> = IMatchesRow<T>[] & {
+export type IMatches<T extends RegExp = RegExp> = IMatchesRow<T>[] & {
     /**
      * regular expressions
      *

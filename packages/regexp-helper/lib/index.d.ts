@@ -17,7 +17,7 @@ export declare function isNativeFlags(flags: string): boolean;
  * @returns {String} Native flags in use.
  */
 export declare function _getNativeFlags<T extends RegExp>(regex: T): string;
-export declare type valueof<T> = T[keyof T];
+export type valueof<T> = T[keyof T];
 export declare function prototypeToFlagsArray<T extends Partial<{
     [k in keyof typeof FlagsName]?: any;
 } & {

@@ -9,7 +9,7 @@ function _get(char, idx) {
     if (!char.length) {
         throw new TypeError(`char: '${char}', not valid`);
     }
-    else if (idx !== 0 /* '01' */ && idx !== 1 /* '02' */ && idx !== 2 /* '03' */) {
+    else if (idx !== 0 /* EnumTableVoice['01'] */ && idx !== 1 /* EnumTableVoice['02'] */ && idx !== 2 /* EnumTableVoice['03'] */) {
         throw new TypeError(`char: '${char}', not valid`);
     }
     if (table_1.table_voice[char]) {
@@ -29,21 +29,21 @@ exports.getVoiceAll = getVoiceAll;
  * 清音
  */
 function toVoice01(char) {
-    return _get(char, 0 /* '01' */);
+    return _get(char, 0 /* EnumTableVoice['01'] */);
 }
 exports.toVoice01 = toVoice01;
 /**
  * 濁音
  */
 function toVoice02(char) {
-    return _get(char, 1 /* '02' */);
+    return _get(char, 1 /* EnumTableVoice['02'] */);
 }
 exports.toVoice02 = toVoice02;
 /**
  * 半濁音
  */
 function toVoice03(char) {
-    return _get(char, 2 /* '03' */);
+    return _get(char, 2 /* EnumTableVoice['03'] */);
 }
 exports.toVoice03 = toVoice03;
 //# sourceMappingURL=util.js.map

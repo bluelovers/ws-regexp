@@ -3,7 +3,7 @@
  */
 import TABLE_RANGE from './table';
 export { TABLE_RANGE };
-export declare type IOptions = {
+export type IOptions = {
     /**
      * 字元範圍表
      */

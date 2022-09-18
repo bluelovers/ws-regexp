@@ -3,7 +3,7 @@
  */
 import { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '@lazy-cjk/jp-table-convert';
-export declare type IOptions = {
+export type IOptions = {
     optionsZhTable?: IOptionsZhTable;
     skip?: any;
     lang?: 'cn' | 'jp' | 'auto' | string;

@@ -28,7 +28,7 @@ class ParserEventEmitter extends events_1.EventEmitter {
             inputAst = (0, regexp_parser_literal_1.fakePatternToRegExpLiteral)(inputAst, flags);
         }
         this.astRegExpLiteral = inputAst;
-        this.on("change" /* change */, function (ast) {
+        this.on("change" /* ParserEventEmitterEvent.change */, function (ast) {
             self._change(ast, true);
             self.changed = true;
         });
@@ -60,7 +60,7 @@ class ParserEventEmitter extends events_1.EventEmitter {
      * same as this.emit(ParserEventEmitterEvent.change, ast)
      */
     emitChange(inputAst, ...args) {
-        return this.emit("change" /* change */, inputAst, ...args);
+        return this.emit("change" /* ParserEventEmitterEvent.change */, inputAst, ...args);
     }
     emit(eventName, inputAst, ...args) {
         return super.emit(eventName, inputAst, eventName, this, ...args);
@@ -83,18 +83,18 @@ class ParserEventEmitter extends events_1.EventEmitter {
         let event;
         switch (inputAst.type) {
             case 'Character':
-                event = eventPrefix + "default" /* default */;
+                event = eventPrefix + "default" /* ParserEventEmitterEvent.default */;
                 break;
             case 'CharacterClass':
-                event = "class" /* class */;
+                event = "class" /* ParserEventEmitterEvent.class */;
                 do_elements = true;
                 sub_prefix = 'class_';
                 break;
             case 'CharacterClassRange':
-                event = "class_range" /* class_range */;
+                event = "class_range" /* ParserEventEmitterEvent.class_range */;
                 break;
             case 'CharacterSet':
-                event = eventPrefix + "uniset" /* uniset */;
+                event = eventPrefix + "uniset" /* ParserEventEmitterEvent.uniset */;
                 break;
             case 'Quantifier':
                 do_elements = true;
@@ -127,10 +127,10 @@ class ParserEventEmitter extends events_1.EventEmitter {
                 break;
             default:
                 if (eventPrefix === 'class_') {
-                    event = "class_other" /* class_other */;
+                    event = "class_other" /* ParserEventEmitterEvent.class_other */;
                 }
                 else {
-                    event = eventPrefix + "other" /* other */;
+                    event = eventPrefix + "other" /* ParserEventEmitterEvent.other */;
                 }
                 break;
         }

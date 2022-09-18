@@ -2,7 +2,6 @@
  * Created by user on 2020/5/22.
  */
 
-import UString from 'uni-string';
 import { array_unique, array_unique_overwrite } from 'array-hyper-unique';
 import { reToStringList } from './util';
 

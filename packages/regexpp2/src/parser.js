@@ -13,13 +13,13 @@ const DummyCapturingGroup = {};
  */
 function elementsToAlternative(elements, parent) {
     for (const element of elements) {
-        (0, util_1.assert)(element.type !== "Disjunction" /* Disjunction */);
+        (0, util_1.assert)(element.type !== "Disjunction" /* EnumTypeNode.Disjunction */);
         element.parent = parent;
     }
     return elements;
 }
 function addAlternativeElement(parent, node) {
-    if (parent.type === "Disjunction" /* Disjunction */) {
+    if (parent.type === "Disjunction" /* EnumTypeNode.Disjunction */) {
         (0, util_1.last)(parent.alternatives).push(node);
     }
     else {
@@ -27,10 +27,10 @@ function addAlternativeElement(parent, node) {
     }
 }
 function addCommonElement(parent, node) {
-    if (parent.type === "Disjunction" /* Disjunction */) {
+    if (parent.type === "Disjunction" /* EnumTypeNode.Disjunction */) {
         (0, util_1.last)(parent.alternatives).push(node);
     }
-    else if (parent.type === "CharacterClass" /* CharacterClass */) {
+    else if (parent.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
         parent.elements.push(node);
     }
     else {
@@ -46,24 +46,24 @@ class RegExpParserState {
         this._capturingGroups = [];
         this.source = "";
         this.strict = Boolean(options && options.strict);
-        this.ecmaVersion = (options && options.ecmaVersion) || 2018 /* v2018 */;
+        this.ecmaVersion = (options && options.ecmaVersion) || 2018 /* EnumEcmaVersion.v2018 */;
         this.disableChkCharacterClassRange = Boolean(options && options.disableChkCharacterClassRange);
     }
     get pattern() {
-        if (this._node.type !== "Pattern" /* Pattern */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (this._node.type !== "Pattern" /* EnumTypeNode.Pattern */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         return this._node;
     }
     get flags() {
-        if (this._flags.type !== "Flags" /* Flags */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (this._flags.type !== "Flags" /* EnumTypeNode.Flags */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         return this._flags;
     }
     onFlags(start, end, global, ignoreCase, multiline, unicode, sticky, dotAll) {
         this._flags = {
-            type: "Flags" /* Flags */,
+            type: "Flags" /* EnumTypeNode.Flags */,
             parent: null,
             start,
             end,
@@ -78,7 +78,7 @@ class RegExpParserState {
     }
     onPatternEnter(start) {
         this._node = {
-            type: "Pattern" /* Pattern */,
+            type: "Pattern" /* EnumTypeNode.Pattern */,
             parent: null,
             start,
             end: start,
@@ -111,18 +111,18 @@ class RegExpParserState {
             return;
         }
         const parentNode = this._node;
-        if (parentNode.type === "Disjunction" /* Disjunction */ ||
-            parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "Disjunction" /* EnumTypeNode.Disjunction */ ||
+            parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         const prevNode = (0, util_1.last)(parentNode.elements);
-        if (prevNode != null && prevNode.type === "Disjunction" /* Disjunction */) {
+        if (prevNode != null && prevNode.type === "Disjunction" /* EnumTypeNode.Disjunction */) {
             this._node = prevNode;
             prevNode.alternatives.push([]);
         }
         else {
             this._node = {
-                type: "Disjunction" /* Disjunction */,
+                type: "Disjunction" /* EnumTypeNode.Disjunction */,
                 parent: parentNode,
                 start: (0, util_1.last)(this._disjunctionStartStack),
                 end: start,
@@ -144,11 +144,11 @@ class RegExpParserState {
     }
     onGroupEnter(start) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         this._node = {
-            type: "Group" /* Group */,
+            type: "Group" /* EnumTypeNode.Group */,
             parent: parentNode,
             start,
             end: start,
@@ -164,11 +164,11 @@ class RegExpParserState {
     }
     onCapturingGroupEnter(start, name) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         this._node = {
-            type: "CapturingGroup" /* CapturingGroup */,
+            type: "CapturingGroup" /* EnumTypeNode.CapturingGroup */,
             parent: parentNode,
             start,
             end: start,
@@ -187,16 +187,16 @@ class RegExpParserState {
     }
     onQuantifier(start, end, min, max, greedy) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         // Replace the last element.
-        const elements = parentNode.type === "Disjunction" /* Disjunction */
+        const elements = parentNode.type === "Disjunction" /* EnumTypeNode.Disjunction */
             ? (0, util_1.last)(parentNode.alternatives)
             : parentNode.elements;
         const prevNode = elements.pop();
         const node = {
-            type: "Quantifier" /* Quantifier */,
+            type: "Quantifier" /* EnumTypeNode.Quantifier */,
             parent: parentNode,
             start,
             end,
@@ -211,11 +211,11 @@ class RegExpParserState {
     }
     onLookaroundAssertionEnter(start, kind, negate) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         this._node = {
-            type: "Assertion" /* Assertion */,
+            type: "Assertion" /* EnumTypeNode.Assertion */,
             parent: parentNode,
             start,
             end: start,
@@ -233,11 +233,11 @@ class RegExpParserState {
     }
     onEdgeAssertion(start, end, kind) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         addAlternativeElement(parentNode, {
-            type: "Assertion" /* EdgeAssertion */,
+            type: "Assertion" /* EnumTypeNode.EdgeAssertion */,
             parent: parentNode,
             start,
             end,
@@ -247,11 +247,11 @@ class RegExpParserState {
     }
     onWordBoundaryAssertion(start, end, kind, negate) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         addAlternativeElement(parentNode, {
-            type: "Assertion" /* WordBoundaryAssertion */,
+            type: "Assertion" /* EnumTypeNode.WordBoundaryAssertion */,
             parent: parentNode,
             start,
             end,
@@ -262,11 +262,11 @@ class RegExpParserState {
     }
     onAnyCharacterSet(start, end, kind) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         addAlternativeElement(parentNode, {
-            type: "CharacterSet" /* AnyCharacterSet */,
+            type: "CharacterSet" /* EnumTypeNode.AnyCharacterSet */,
             parent: parentNode,
             start,
             end,
@@ -276,7 +276,7 @@ class RegExpParserState {
     }
     onEscapeCharacterSet(start, end, kind, negate) {
         addCommonElement(this._node, {
-            type: "CharacterSet" /* EscapeCharacterSet */,
+            type: "CharacterSet" /* EnumTypeNode.EscapeCharacterSet */,
             parent: this._node,
             start,
             end,
@@ -287,7 +287,7 @@ class RegExpParserState {
     }
     onUnicodePropertyCharacterSet(start, end, kind, key, value, negate) {
         addCommonElement(this._node, {
-            type: "CharacterSet" /* UnicodePropertyCharacterSet */,
+            type: "CharacterSet" /* EnumTypeNode.UnicodePropertyCharacterSet */,
             parent: this._node,
             start,
             end,
@@ -300,7 +300,7 @@ class RegExpParserState {
     }
     onCharacter(start, end, value) {
         addCommonElement(this._node, {
-            type: "Character" /* Character */,
+            type: "Character" /* EnumTypeNode.Character */,
             parent: this._node,
             start,
             end,
@@ -310,11 +310,11 @@ class RegExpParserState {
     }
     onBackreference(start, end, ref) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         const node = {
-            type: "Backreference" /* Backreference */,
+            type: "Backreference" /* EnumTypeNode.Backreference */,
             parent: parentNode,
             start,
             end,
@@ -327,11 +327,11 @@ class RegExpParserState {
     }
     onCharacterClassEnter(start, negate) {
         const parentNode = this._node;
-        if (parentNode.type === "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type === "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         this._node = {
-            type: "CharacterClass" /* CharacterClass */,
+            type: "CharacterClass" /* EnumTypeNode.CharacterClass */,
             parent: parentNode,
             start,
             end: start,
@@ -348,8 +348,8 @@ class RegExpParserState {
     }
     onCharacterClassRange(start, end, min, max) {
         const parentNode = this._node;
-        if (parentNode.type !== "CharacterClass" /* CharacterClass */) {
-            throw new Error("UnknownError" /* UnknownError */);
+        if (parentNode.type !== "CharacterClass" /* EnumTypeNode.CharacterClass */) {
+            throw new Error("UnknownError" /* EnumError.UnknownError */);
         }
         // Replace the last three elements.
         const elements = parentNode.elements;
@@ -357,7 +357,7 @@ class RegExpParserState {
         elements.pop(); // hyphen
         const leftNode = elements.pop();
         const node = {
-            type: "CharacterClassRange" /* CharacterClassRange */,
+            type: "CharacterClassRange" /* EnumTypeNode.CharacterClassRange */,
             parent: parentNode,
             start,
             end,
@@ -365,8 +365,8 @@ class RegExpParserState {
             min: leftNode,
             max: rightNode,
         };
-        (0, util_1.assert)(leftNode != null && leftNode.type === "Character" /* Character */);
-        (0, util_1.assert)(rightNode != null && rightNode.type === "Character" /* Character */);
+        (0, util_1.assert)(leftNode != null && leftNode.type === "Character" /* EnumTypeNode.Character */);
+        (0, util_1.assert)(rightNode != null && rightNode.type === "Character" /* EnumTypeNode.Character */);
         leftNode.parent = node;
         rightNode.parent = node;
         elements.push(node);
@@ -394,7 +394,7 @@ class RegExpParser {
         const pattern = this._state.pattern;
         const flags = this._state.flags;
         const literal = {
-            type: "RegExpLiteral" /* RegExpLiteral */,
+            type: "RegExpLiteral" /* EnumTypeNode.RegExpLiteral */,
             parent: null,
             start,
             end,

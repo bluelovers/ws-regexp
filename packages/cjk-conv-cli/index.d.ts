@@ -11,7 +11,7 @@ export declare const FnList: {
     cn2tw: typeof cn2tw;
     tw2cn: typeof tw2cn;
 };
-export declare type IOptionsConv = {
+export type IOptionsConv = {
     cwd?: string;
     tw2cn?: boolean;
     notMin?: boolean;
@@ -19,7 +19,7 @@ export declare type IOptionsConv = {
     createBackup?: boolean;
     createPatch?: boolean;
 };
-export declare type IOptions = IFastGlobOptions & IOptionsConv & {
+export type IOptions = IFastGlobOptions & IOptionsConv & {
     deep?: boolean | number;
 };
 export declare function handldTarget(search: string | string[], options?: IOptions): Bluebird<string[]>;

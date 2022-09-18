@@ -25,7 +25,7 @@ function regexpClassToObject(re, flags) {
     });
     let ev = regexp_parser_event_1.ParserEventEmitter.create(source, flags);
     let new_obj;
-    ev.on("class" /* class */, function (ast, eventName, ev, ...argv) {
+    ev.on("class" /* ParserEventEmitterEvent.class */, function (ast, eventName, ev, ...argv) {
         if (!isPattern(ast.parent) || ast.parent.elements.length != 1) {
             throw new TypeError(`this regexp should only has class, but got ${source}`);
         }
@@ -37,10 +37,10 @@ function regexpClassToObject(re, flags) {
         }
         ast.elements.forEach(sub_ast => {
             switch (sub_ast.type) {
-                case "CharacterClassRange" /* CharacterClassRange */:
+                case "CharacterClassRange" /* EnumTypeNode.CharacterClassRange */:
                     new_obj.addRange(sub_ast.min.value, sub_ast.max.value);
                     break;
-                case "Character" /* Character */:
+                case "Character" /* EnumTypeNode.Character */:
                     new_obj.add(sub_ast.value);
                     break;
                 default:
@@ -53,7 +53,7 @@ function regexpClassToObject(re, flags) {
     if (new_obj == null) {
         if (ev.astSource.elements.length == 1) {
             let ast = ev.astSource.elements[0];
-            if (ast.type === "Character" /* Character */) {
+            if (ast.type === "Character" /* EnumTypeNode.Character */) {
                 new_obj = (0, regenerate_1.default)();
                 new_obj.add(ast.value);
             }
@@ -121,7 +121,7 @@ function hackRegenerate(obj, flags, hasUnicodeFlag) {
 }
 exports.hackRegenerate = hackRegenerate;
 function isPattern(ast) {
-    return (ast.type == "Pattern" /* Pattern */);
+    return (ast.type == "Pattern" /* EnumTypeNode.Pattern */);
 }
 exports.isPattern = isPattern;
 exports.default = regexpClassToObject;

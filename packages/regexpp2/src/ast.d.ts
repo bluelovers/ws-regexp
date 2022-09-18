@@ -2,31 +2,31 @@
  * The type which includes all nodes.
  */
 import { EnumKindAssertion, EnumKindCharacterSet, EnumKindEdgeAssertion, EnumKindEscapeCharacterSet, EnumTypeNode } from './const';
-export declare type Node = BranchNode | LeafNode;
+export type Node = BranchNode | LeafNode;
 /**
  * The type which includes all branch nodes.
  */
-export declare type BranchNode = RegExpLiteral | Pattern | Disjunction | Group | CapturingGroup | Quantifier | CharacterClass | LookaroundAssertion | CharacterClassRange;
+export type BranchNode = RegExpLiteral | Pattern | Disjunction | Group | CapturingGroup | Quantifier | CharacterClass | LookaroundAssertion | CharacterClassRange;
 /**
  * The type which includes all leaf nodes.
  */
-export declare type LeafNode = BoundaryAssertion | CharacterSet | Character | Backreference | Flags;
+export type LeafNode = BoundaryAssertion | CharacterSet | Character | Backreference | Flags;
 /**
  * The type which includes all atom nodes.
  */
-export declare type Element = Disjunction | Group | CapturingGroup | Quantifier | CharacterClass | Assertion | CharacterSet | Character | Backreference;
+export type Element = Disjunction | Group | CapturingGroup | Quantifier | CharacterClass | Assertion | CharacterSet | Character | Backreference;
 /**
  * The type which includes all character class atom nodes.
  */
-export declare type CharacterClassElement = EscapeCharacterSet | UnicodePropertyCharacterSet | Character | CharacterClassRange;
+export type CharacterClassElement = EscapeCharacterSet | UnicodePropertyCharacterSet | Character | CharacterClassRange;
 /**
  * The type which includes all atom nodes that Alternative node can have as children.
  */
-export declare type AlternativeElement = Group | CapturingGroup | Quantifier | CharacterClass | Assertion | CharacterSet | Character | Backreference;
+export type AlternativeElement = Group | CapturingGroup | Quantifier | CharacterClass | Assertion | CharacterSet | Character | Backreference;
 /**
  * The type which includes all atom nodes that Quantifier node can have as children.
  */
-export declare type QuantifiableElement = Group | CapturingGroup | CharacterClass | LookaheadAssertion | CharacterSet | Character | Backreference;
+export type QuantifiableElement = Group | CapturingGroup | CharacterClass | LookaheadAssertion | CharacterSet | Character | Backreference;
 /**
  * The type which defines common properties for all node types.
  */
@@ -91,7 +91,7 @@ export interface CapturingGroup extends NodeBase {
 /**
  * The lookaround assertion.
  */
-export declare type LookaroundAssertion = LookaheadAssertion | LookbehindAssertion;
+export type LookaroundAssertion = LookaheadAssertion | LookbehindAssertion;
 /**
  * The lookahead assertion.
  * E.g. `(?=ab)`, `(?!ab)`
@@ -149,11 +149,11 @@ export interface CharacterClassRange extends NodeBase {
 /**
  * The assertion.
  */
-export declare type Assertion = BoundaryAssertion | LookaroundAssertion;
+export type Assertion = BoundaryAssertion | LookaroundAssertion;
 /**
  * The boundary assertion.
  */
-export declare type BoundaryAssertion = EdgeAssertion | WordBoundaryAssertion;
+export type BoundaryAssertion = EdgeAssertion | WordBoundaryAssertion;
 /**
  * The edge boundary assertion.
  * E.g. `^`, `$`
@@ -176,7 +176,7 @@ export interface WordBoundaryAssertion extends NodeBase {
 /**
  * The character set.
  */
-export declare type CharacterSet = AnyCharacterSet | EscapeCharacterSet | UnicodePropertyCharacterSet;
+export type CharacterSet = AnyCharacterSet | EscapeCharacterSet | UnicodePropertyCharacterSet;
 /**
  * The dot.
  * E.g. `.`

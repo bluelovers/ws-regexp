@@ -85,7 +85,7 @@ declare global {
         indices?: IRegExpIndices<K>;
     }
 }
-export declare type IRegExpIndicesGroups<K extends string = string> = Record<K, [number, number]>;
+export type IRegExpIndicesGroups<K extends string = string> = Record<K, [number, number]>;
 export interface IRegExpIndices<K extends string = string> extends Array<[number, number]> {
     groups?: IRegExpIndicesGroups<K>;
 }

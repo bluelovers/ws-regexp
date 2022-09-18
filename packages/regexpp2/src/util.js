@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.last = exports.assert = void 0;
 function assert(condition, message) {
     if (!condition) {
-        throw new Error(message || "AssertionError" /* AssertionError */);
+        throw new Error(message || "AssertionError" /* EnumError.AssertionError */);
     }
 }
 exports.assert = assert;

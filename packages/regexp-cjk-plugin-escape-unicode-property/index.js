@@ -28,7 +28,7 @@ function createZhRegExpCorePlugin(options = {}) {
                     useUnicodeFlag,
                 }, _flags);
                 if (_do) {
-                    ev.on("uniset" /* uniset */, function (ast, eventName, ev) {
+                    ev.on("uniset" /* ParserEventEmitterEvent.uniset */, function (ast, eventName, ev) {
                         if ((0, plugin_1.astNotChanged)(ast) && astUnicodePropertyCharacterSet(ast)) {
                             let raw = (0, escape_unicode_property_1.escapeUnicodePropertyPatternCore)(ast.raw, _escapeOpts.flags, _escapeOpts.options);
                             if (raw !== ast.raw) {
@@ -37,7 +37,7 @@ function createZhRegExpCorePlugin(options = {}) {
                             }
                         }
                     });
-                    ev.on("class" /* class */, function (ast, eventName, ev) {
+                    ev.on("class" /* ParserEventEmitterEvent.class */, function (ast, eventName, ev) {
                         if ((0, plugin_1.astNotChanged)(ast) && (0, escape_unicode_property_1.hasUnicodePropertyPattern)(ast.raw)) {
                             let raw = (0, escape_unicode_property_1.escapeUnicodePropertyPatternCore)(ast.raw, _escapeOpts.flags, _escapeOpts.options);
                             if (raw !== ast.raw) {
@@ -57,7 +57,7 @@ function createZhRegExpCorePlugin(options = {}) {
 }
 exports.createZhRegExpCorePlugin = createZhRegExpCorePlugin;
 function astUnicodePropertyCharacterSet(ast) {
-    return (ast.kind === "property" /* UnicodePropertyCharacterSet */);
+    return (ast.kind === "property" /* EnumKindCharacterSet.UnicodePropertyCharacterSet */);
 }
 exports.astUnicodePropertyCharacterSet = astUnicodePropertyCharacterSet;
 function checkUnicodePropertyEscape(ast) {

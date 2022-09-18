@@ -1,7 +1,7 @@
 /**
  * Created by user on 2020/5/31.
  */
-export declare type IRomanizationConfigsKeys = 'wikipedia' | 'traditional hepburn' | 'modified hepburn' | 'kunrei' | 'nihon';
+export type IRomanizationConfigsKeys = 'wikipedia' | 'traditional hepburn' | 'modified hepburn' | 'kunrei' | 'nihon';
 /**
  * Config is represented as plain object,
  * where object keys stand for a collection of similar characters,

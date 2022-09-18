@@ -16,7 +16,7 @@ export interface ICloneRegexpOptionsCustom<T extends RegExp = RegExp> {
 }
 export interface ICloneRegexpOptions<T extends RegExp = RegExp> extends ICloneRegexpOptionsCore, ICloneRegexpOptionsCustom<T> {
 }
-export declare type IRegExpWithClone<T extends RegExp = RegExp> = T extends {
+export type IRegExpWithClone<T extends RegExp = RegExp> = T extends {
     clone?(...argv: any[]): any;
 } ? T : T & {
     clone?(options?: ICloneRegexpOptionsCore, ...argv: any[]): T;

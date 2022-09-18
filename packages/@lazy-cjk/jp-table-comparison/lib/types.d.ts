@@ -1,11 +1,11 @@
-export declare type IKanjiComparisonTable = [string[], string[], string[]][];
-export declare type IPLUS_TABLE = [string, string, string][];
+export type IKanjiComparisonTable = [string[], string[], string[]][];
+export type IPLUS_TABLE = [string, string, string][];
 /**
  * teachKanjiComparison.json
  */
-export declare type ITeachKanjiComparison = ITeachKanjiComparisonRecord[];
-export declare type ITeachKanjiComparisonRecord = [ITeachKanjiComparisonSub, ITeachKanjiComparisonSub, ITeachKanjiComparisonSub];
-export declare type ITeachKanjiComparisonSub = [string, ...string[]];
+export type ITeachKanjiComparison = ITeachKanjiComparisonRecord[];
+export type ITeachKanjiComparisonRecord = [ITeachKanjiComparisonSub, ITeachKanjiComparisonSub, ITeachKanjiComparisonSub];
+export type ITeachKanjiComparisonSub = [string, ...string[]];
 /**
  * teachKanjiComparison.cache.json
  * teachKanjiComparison.cache2.json

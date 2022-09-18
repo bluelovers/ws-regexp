@@ -1,6 +1,6 @@
 import { CapturingGroup, CharacterClass, Disjunction, Flags, Group, LookaroundAssertion, Pattern, RegExpLiteral } from "./ast";
 import { EnumEcmaVersion } from './const';
-export declare type AppendableNode = Pattern | Disjunction | Group | CapturingGroup | CharacterClass | LookaroundAssertion;
+export type AppendableNode = Pattern | Disjunction | Group | CapturingGroup | CharacterClass | LookaroundAssertion;
 export declare namespace RegExpParser {
     /**
      * The options for RegExpParser construction.

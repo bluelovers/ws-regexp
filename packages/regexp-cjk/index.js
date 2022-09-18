@@ -21,10 +21,6 @@ tslib_1.__exportStar(require("./version"), exports);
  */
 exports.defaultOptions = {};
 class zhRegExp extends RegExp {
-    constructor(str, ...argv) {
-        let { source, flags } = (0, core_1.coreHandler)(str, ...argv);
-        super(source, flags);
-    }
     /**
      * create a new zhRegExp class with default value
      * @example `zhRegExp.use(defaultOptions)`
@@ -47,6 +43,10 @@ class zhRegExp extends RegExp {
             },
         });
         return zhRegExpNew;
+    }
+    constructor(str, ...argv) {
+        let { source, flags } = (0, core_1.coreHandler)(str, ...argv);
+        super(source, flags);
     }
     static create(str, flags = null, skip, ...argv) {
         return new this(str, flags, skip, ...argv);

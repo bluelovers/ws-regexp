@@ -107,8 +107,8 @@ export declare const enum EnumTypeNode {
      */
     Flags = "Flags"
 }
-export declare type EnumKindLookAssertion = EnumKindAssertion.LookaheadAssertion | EnumKindAssertion.LookbehindAssertion;
-export declare type EnumKindEdgeAssertion = EnumKindAssertion.EdgeAssertion_Start | EnumKindAssertion.EdgeAssertion_End;
+export type EnumKindLookAssertion = EnumKindAssertion.LookaheadAssertion | EnumKindAssertion.LookbehindAssertion;
+export type EnumKindEdgeAssertion = EnumKindAssertion.EdgeAssertion_Start | EnumKindAssertion.EdgeAssertion_End;
 export declare const enum EnumKindAssertion {
     LookaheadAssertion = "lookahead",
     LookbehindAssertion = "lookbehind",
@@ -116,7 +116,7 @@ export declare const enum EnumKindAssertion {
     EdgeAssertion_End = "end",
     WordBoundaryAssertion = "word"
 }
-export declare type EnumKindEscapeCharacterSet = EnumKindCharacterSet.EscapeCharacterSet_Digit | EnumKindCharacterSet.EscapeCharacterSet_Space | EnumKindCharacterSet.EscapeCharacterSet_Word;
+export type EnumKindEscapeCharacterSet = EnumKindCharacterSet.EscapeCharacterSet_Digit | EnumKindCharacterSet.EscapeCharacterSet_Space | EnumKindCharacterSet.EscapeCharacterSet_Word;
 export declare const enum EnumKindCharacterSet {
     AnyCharacterSet = "any",
     EscapeCharacterSet_Digit = "digit",
