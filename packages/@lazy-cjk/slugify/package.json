@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/slugify"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -61,7 +62,9 @@
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "preversion": "yarn run test",
@@ -79,15 +82,15 @@
     "@lazy-cjk/korean-romanize": "^1.0.17",
     "@lazy-cjk/zh-slugify": "^1.0.82",
     "@regexp-cjk/regex-pinyin": "^1.0.4",
-    "@sindresorhus/transliterate": "< 1",
+    "@sindresorhus/transliterate": "<1",
     "emoji.json": "^13.1.0",
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.34",
-    "transliteration": "^2.2.0",
-    "tslib": "^2.3.1"
+    "transliteration": "^2.3.5",
+    "tslib": ">=2"
   },
   "devDependencies": {
-    "@sindresorhus/slugify": "< 2 >= 1",
+    "@sindresorhus/slugify": "<2 >=1",
     "slugify-extra": "^1.0.0"
   },
   "publishConfig": {

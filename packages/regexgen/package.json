@@ -14,7 +14,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexgen"
   },
   "license": "MIT",
   "author": "Devon Govett <devongovett@gmail.com>",
@@ -27,6 +28,9 @@
   },
   "scripts": {
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -38,7 +42,7 @@
   "dependencies": {
     "jsesc": "^3.0.2",
     "regenerate": "^1.4.2",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771",
   "runkitExample": "const regexgen = require('regexgen');\n\nregexgen(['foobar', 'foobaz', 'foozap', 'fooza']);"

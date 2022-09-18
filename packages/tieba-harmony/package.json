@@ -42,7 +42,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/tieba-harmony"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -53,6 +54,9 @@
   },
   "scripts": {
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -63,9 +67,9 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.0.6",
-    "tslib": "^2.3.1",
-    "uni-string": "^1.1.12"
+    "array-hyper-unique": "^2.0.8",
+    "tslib": ">=2",
+    "uni-string": "^2.0.1"
   },
   "peerDependencies": {
     "@lazy-cjk/zh-table-list": "*",

@@ -26,7 +26,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/cns-11643"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -36,7 +37,9 @@
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:jest",
     "test:jest": "jest -u",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "build": "yarn run build:download && yarn run build:unzip && yarn run build:data",
     "build:cache": "ts-node ./test/script/build-cache.ts",
     "build:data": "yarn run build:cache && yarn run build:zhuyin",
@@ -54,7 +57,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "publishConfig": {
     "access": "public"

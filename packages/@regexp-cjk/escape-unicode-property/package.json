@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@regexp-cjk/escape-unicode-property"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -18,7 +19,9 @@
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "preversion": "yarn run test",
@@ -32,7 +35,7 @@
   "dependencies": {
     "@regexp-cjk/rewrite-pattern": "^1.0.28",
     "lodash": "^4.17.21",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "publishConfig": {
     "access": "public"

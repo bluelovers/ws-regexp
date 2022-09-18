@@ -22,7 +22,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-range"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -34,7 +35,10 @@
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -47,9 +51,9 @@
   },
   "dependencies": {
     "@lazy-cjk/japanese": "^1.2.27",
-    "array-hyper-unique": "^2.0.6",
+    "array-hyper-unique": "^2.0.8",
     "fill-range": "^7.0.1",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }

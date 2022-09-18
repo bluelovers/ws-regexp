@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/jp-table-alias"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -61,9 +62,12 @@
     "lint": "npx eslint **/*.ts",
     "test": "echo \"Error: no test specified\"",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
+    "preversion": "yarn run test",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
@@ -74,8 +78,8 @@
   },
   "dependencies": {
     "@lazy-cjk/jp-table-convert": "^1.0.43",
-    "array-hyper-unique": "^2.0.6",
-    "tslib": "^2.3.1"
+    "array-hyper-unique": "^2.0.8",
+    "tslib": ">=2"
   },
   "publishConfig": {
     "access": "public"

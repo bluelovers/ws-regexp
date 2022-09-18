@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/zh-convert"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -62,7 +63,9 @@
     "pretest": "yarn run build",
     "test": "yarn run test:jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "build": "ts-node ./test/script/build-cache.ts",
     "build:commit": "ts-node ./test/script/build-commit.ts",
     "npm:publish": "npm publish",
@@ -78,10 +81,10 @@
   },
   "dependencies": {
     "@lazy-cjk/static-build-zh-convert": "^1.0.47",
-    "array-hyper-unique": "^2.0.6",
+    "array-hyper-unique": "^2.0.8",
     "regexp-helper": "^1.0.34",
-    "tslib": "^2.3.1",
-    "uni-string": "^1.1.12"
+    "tslib": ">=2",
+    "uni-string": "^2.0.1"
   },
   "publishConfig": {
     "access": "public"

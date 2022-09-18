@@ -35,7 +35,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/korean-romanize"
   },
   "license": "UNLICENSED",
   "author": "James Moon <mooniker@gmail.com>",
@@ -50,8 +51,11 @@
   "scripts": {
     "test": "yarn run test:jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "preversion": "yarn run test",
     "preversion_": "yarn run test",
     "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
@@ -59,7 +63,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "devDependencies": {
     "unicode": "^14.0.0"

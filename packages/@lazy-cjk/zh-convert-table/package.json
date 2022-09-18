@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/zh-convert-table"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -62,7 +63,9 @@
     "pretest": "yarn run build",
     "test": "yarn run test:jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "prebuild": "ynpx build-ts-file -- ./lib/table/table_same.ts",
     "build": "ts-node ./test/script/build-cache.ts",
     "build:commit": "ts-node ./test/script/commit-build.ts",
@@ -79,7 +82,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "devDependencies": {
     "chinese_convert": "^1.0.8"

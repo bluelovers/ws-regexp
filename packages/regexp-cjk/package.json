@@ -64,7 +64,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-cjk"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -76,7 +77,10 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "test": "yarn run test:local",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:local": "jest",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -91,13 +95,13 @@
   },
   "dependencies": {
     "@lazy-cjk/zh-table-list": "^1.0.80",
-    "array-hyper-unique": "^2.0.6",
+    "array-hyper-unique": "^2.0.8",
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.34",
     "regexp-parser-event": "^1.1.40",
     "regexp-parser-literal": "^1.1.33",
     "regexp-range": "^1.0.40",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }

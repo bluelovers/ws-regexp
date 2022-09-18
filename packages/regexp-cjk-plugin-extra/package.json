@@ -56,7 +56,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-cjk-plugin-extra"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -68,6 +69,9 @@
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -77,11 +81,11 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.0.6",
+    "array-hyper-unique": "^2.0.8",
     "lodash": "^4.17.21",
-    "str-util": "^2.3.28",
-    "tslib": "^2.3.1",
-    "uni-string": "^1.1.12"
+    "str-util": "^2.3.34",
+    "tslib": ">=2",
+    "uni-string": "^2.0.1"
   },
   "peerDependencies": {
     "@lazy-cjk/jp-table-voice": "*",

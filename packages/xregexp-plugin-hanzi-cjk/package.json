@@ -20,7 +20,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/xregexp-plugin-hanzi-cjk"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -30,6 +31,9 @@
   },
   "scripts": {
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "preversion": "yarn run test",
     "prepublishOnly": "echo prepublishOnly",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
@@ -41,7 +45,7 @@
     "@lazy-cjk/zh-table-list": "^1.0.80",
     "@regexp-cjk/is-xregexp": "^1.0.7",
     "regexp-helper": "^1.0.34",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "peerDependencies": {
     "xregexp": "*"

@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/emoji-regex"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -19,14 +20,16 @@
     "pretest": "yarn run build",
     "test": "jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "posttest": "yarn run postbuild:commit",
     "build": "ts-node ./test/script/build-cache.ts",
     "postbuild:commit": "git commit -m \"build(emoji): update emoji cache\" ./lib & echo postbuild:commit",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
@@ -34,7 +37,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "devDependencies": {
     "emoji.json": "^13.1.0",

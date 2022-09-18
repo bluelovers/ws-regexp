@@ -36,7 +36,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/execall2"
   },
   "license": "MIT",
   "author": "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
@@ -47,6 +48,9 @@
   },
   "scripts": {
     "test": "node ./test/test",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "preversion": "yarn run test",
     "prepublishOnly_": "yarn run prepublishOnly:check-bin && yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
@@ -56,7 +60,7 @@
   },
   "dependencies": {
     "@regexp-cjk/clone-regexp": "^1.0.20",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }

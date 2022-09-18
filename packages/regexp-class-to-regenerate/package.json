@@ -18,7 +18,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-class-to-regenerate"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -30,6 +31,9 @@
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -45,7 +49,7 @@
     "@regexp-cjk/regexpu-core-v4": "^1.0.3",
     "regenerate": "^1.4.2",
     "regexp-parser-event": "^1.1.40",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }

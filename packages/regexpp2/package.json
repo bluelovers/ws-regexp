@@ -19,13 +19,14 @@
     "tree",
     "validator"
   ],
-  "homepage": "https://github.com/bluelovers/regexpp#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexpp2#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/regexpp/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/regexpp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexpp2"
   },
   "license": "MIT",
   "author": "Toru Nagashima (https://github.com/mysticatea)",
@@ -34,11 +35,15 @@
     "test": "test"
   },
   "scripts": {
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "ynpx mocha -- --require ts-node/register --reporter dot --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
+    "test:snapshot": "yarn run test -- -u",
     "build": "yarn run update:ids && build-ts-file ./src/unicode/ids.ts",
     "build:commit": "git commit -m \"build: update unicode ids\" ./src/unicode & echo build:commit",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "preversion": "yarn run test",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly:lerna_": "yarn run build && yarn run build:commit",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
@@ -51,7 +56,7 @@
     "update:ids": "ts-node scripts/update-unicode-ids.ts"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "engines": {
     "node": ">=4.0.0"

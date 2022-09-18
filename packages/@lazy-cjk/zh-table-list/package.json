@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/zh-table-list"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -61,9 +62,12 @@
     "lint": "npx eslint **/*.ts",
     "test": "echo \"Error: no test specified\"",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
+    "preversion": "yarn run test",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
@@ -77,8 +81,8 @@
     "@lazy-cjk/zh-convert": "^1.0.44",
     "@lazy-cjk/zh-table-alias": "^1.0.58",
     "@lazy-cjk/zh-table-greedy": "^1.0.84",
-    "tslib": "^2.3.1",
-    "uni-string": "^1.1.12"
+    "tslib": ">=2",
+    "uni-string": "^2.0.1"
   },
   "publishConfig": {
     "access": "public"

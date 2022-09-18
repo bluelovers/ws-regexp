@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/@lazy-cjk/zh-slugify"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -61,7 +62,9 @@
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:jest",
     "test:jest": "jest",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "preversion": "yarn run test",
@@ -75,7 +78,7 @@
   "dependencies": {
     "@lazy-cjk/zh-table-greedy": "^1.0.84",
     "@lazy-cjk/zh-table-list": "^1.0.80",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "publishConfig": {
     "access": "public"

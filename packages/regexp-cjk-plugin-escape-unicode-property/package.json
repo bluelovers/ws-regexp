@@ -45,7 +45,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-cjk-plugin-escape-unicode-property"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -57,7 +58,10 @@
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:local",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:local": "jest",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -68,7 +72,7 @@
   },
   "dependencies": {
     "@regexp-cjk/escape-unicode-property": "^1.0.23",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "peerDependencies": {
     "regexp-cjk": "*",

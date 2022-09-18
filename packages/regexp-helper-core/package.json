@@ -27,7 +27,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-helper-core"
   },
   "license": "MIT",
   "author": "bluelovers",
@@ -37,6 +38,9 @@
   },
   "scripts": {
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "preversion": "yarn run test",
@@ -46,7 +50,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b"
 }

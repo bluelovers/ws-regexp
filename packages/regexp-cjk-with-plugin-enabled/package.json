@@ -91,7 +91,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-cjk-with-plugin-enabled"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -101,7 +102,9 @@
     "lint": "ynpx --quiet eslint -- **/*.ts",
     "test": "echo \"Error: no test specified\"",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "preversion": "echo preversion && yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
@@ -112,7 +115,7 @@
     "regexp-cjk": "^3.3.106",
     "regexp-cjk-plugin-escape-unicode-property": "^1.0.33",
     "regexp-cjk-plugin-extra": "^1.0.41",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }

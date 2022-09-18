@@ -23,13 +23,14 @@
     "unicode",
     "valid"
   ],
-  "homepage": "https://github.com/bluelovers/regexp-support#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/regexp-support#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/regexp-support/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/regexp-support.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/regexp-support"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -40,6 +41,9 @@
   },
   "scripts": {
     "test": "yarn run build:report && jest -u",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "posttest": "git add ./test/log/* && git commit -m \"chore: new env test\" ./test/log/ & echo posttest",
     "build:report": "node ./test/flags.js",
     "preversion": "yarn run test",
@@ -50,7 +54,7 @@
   },
   "dependencies": {
     "sort-object-keys2": "^2.0.3",
-    "tslib": "^2.3.1"
+    "tslib": ">=2"
   },
   "devDependencies": {
     "globby": "*",
