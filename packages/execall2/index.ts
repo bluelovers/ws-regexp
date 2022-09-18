@@ -1,5 +1,5 @@
 /// <reference lib="es2018.regexp" />
-import _cloneRegexp, { ICloneRegexp } from '@regexp-cjk/clone-regexp';
+import { cloneRegexp as _cloneRegexp, ICloneRegexp } from '@regexp-cjk/clone-regexp';
 
 export * from './lib/types';
 
@@ -88,4 +88,3 @@ export function execall<T extends RegExp = RegExp>(inputRegExp: T | RegExp,
 export { execall as execAll }
 
 export default execall;
-

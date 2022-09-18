@@ -2,7 +2,7 @@
 import { array_unique } from 'array-hyper-unique';
 import { arrCjk } from '@lazy-cjk/zh-table-list/list';
 import zhRegExp from 'regexp-cjk';
-import UString from 'uni-string';
+import { UString } from 'uni-string';
 import { star } from '../data/tieba';
 
 export { array_unique, arrCjk }

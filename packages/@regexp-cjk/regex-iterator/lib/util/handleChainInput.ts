@@ -1,5 +1,5 @@
 import { IChainInput, IChainInputObject, IChainInputArray } from '../types';
-import cloneRegexp, { ICloneRegexpOptions } from '@regexp-cjk/clone-regexp';
+import { cloneRegexp, ICloneRegexpOptions } from '@regexp-cjk/clone-regexp';
 
 export function handleChainInputCore2(row: IChainInput | IChainInputArray, options?: ICloneRegexpOptions): [RegExp, string | ((substring: string, ...args: string[]) => string)]
 {

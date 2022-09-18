@@ -1,4 +1,4 @@
-import _each from './_each';
+import { _each } from './_each';
 import { ICloneRegexpOptionsCustom, ICloneRegexpOptions } from '@regexp-cjk/clone-regexp/lib/types';
 import { IReturnTypeEachCore } from '../types';
 import { greedySplit } from '../util/split/greedySplit';

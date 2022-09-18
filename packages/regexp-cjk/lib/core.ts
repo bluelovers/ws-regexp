@@ -10,7 +10,7 @@ import {
 import regexpRange from 'regexp-range';
 import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
 import { fixOptions, getSettingOptions, IGetSettingOptions } from './mergeOptions';
-import getRegExpSourcePattern from './getSource';
+import { getRegExpSourcePattern } from './getSource';
 import { auto as zhTableAuto } from '@lazy-cjk/zh-table-list';
 import { astNotChanged, astOldRaw } from './plugin';
 
@@ -268,4 +268,3 @@ export function setupParserEventEmitter(ev: ParserEventEmitter, options: IOption
 }
 
 export default coreHandler
-

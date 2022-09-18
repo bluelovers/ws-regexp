@@ -5,7 +5,7 @@ import { IGetSettingOptions } from './mergeOptions';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
 export { IOptionsZhTable };
 export declare const SymDefaults: unique symbol;
-export declare type IOptionsCore = {
+export type IOptionsCore = {
     skip?: string;
     disableZh?: boolean;
     /**
@@ -57,13 +57,13 @@ export interface IOptionsOnCore {
         hasFlags: boolean;
     };
 }
-export declare type IOptions<T extends INodeInput = INodeInput> = IOptionsCore & {
+export type IOptions<T extends INodeInput = INodeInput> = IOptionsCore & {
     on?: IOptionsOn<T> | IOptionsOn<T>[];
 };
-export declare type IOptionsRuntime<T extends INodeInput = INodeInput> = IOptionsCore & {
+export type IOptionsRuntime<T extends INodeInput = INodeInput> = IOptionsCore & {
     on?: IOptionsOn<T>[];
 };
-export declare type IOptionsInput<T extends INodeInput = INodeInput> = IOptions<T> | IOptionsRuntime<T>;
+export type IOptionsInput<T extends INodeInput = INodeInput> = IOptions<T> | IOptionsRuntime<T>;
 export interface ICoreHandlerReturn<T extends INodeInput = INodeInput> {
     source: string;
     flags: string;
@@ -71,7 +71,7 @@ export interface ICoreHandlerReturn<T extends INodeInput = INodeInput> {
 }
 export interface IOptionsOn<T extends INodeInput = INodeInput> extends IParserEventEmitterListenerMap<T> {
 }
-export declare type IRegExpUserInput = string | RegExp;
+export type IRegExpUserInput = string | RegExp;
 export declare function coreHandler(str: IRegExpUserInput, flags?: string, options?: IOptionsInput | string, ...argv: any[]): ICoreHandlerReturn;
 export declare function coreHandler(str: IRegExpUserInput, options?: IOptionsInput, ...argv: any[]): ICoreHandlerReturn;
 export declare function setupParserEventEmitter(ev: ParserEventEmitter, options: IOptionsInput): ParserEventEmitter;

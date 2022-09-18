@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.textMap4 = exports.textMap3 = exports.textMap2 = exports.textMap1 = exports.charMap = void 0;
-const tslib_1 = require("tslib");
-const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
+const uni_string_1 = require("uni-string");
 const const_1 = require("../const");
 function charMap(s, table) {
     let t = table[s];
@@ -20,7 +19,7 @@ function textMap1(text, table) {
 }
 exports.textMap1 = textMap1;
 function textMap2(text, table) {
-    let toText = uni_string_1.default.split(text, '');
+    let toText = uni_string_1.UString.split(text, '');
     let len = toText.length;
     for (let i = 0; i < len; i++) {
         toText[i] = charMap(toText[i], table);

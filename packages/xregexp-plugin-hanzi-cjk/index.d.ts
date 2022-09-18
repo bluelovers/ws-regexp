@@ -2,7 +2,7 @@
  * Created by user on 2018/4/24/024.
  */
 import XRegExp, { TokenOptions } from 'xregexp';
-import createXRegExp from '@regexp-cjk/create-xregexp';
+import { createXRegExp } from '@regexp-cjk/create-xregexp';
 import { isXRegExp, X_REGEX_DATA } from '@regexp-cjk/is-xregexp';
 export interface IOptions extends TokenOptions {
     flags?: TokenOptions["flag"];

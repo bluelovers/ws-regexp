@@ -2,7 +2,7 @@
 import { array_unique } from 'array-hyper-unique';
 import { AST, RegExpParser } from 'regexpp2';
 import EmojiRegex from 'emoji-regex';
-import UString from 'uni-string';
+import { UString } from 'uni-string';
 
 // @ts-ignore
 export const EMOJI_REGEX: RegExp = EmojiRegex();

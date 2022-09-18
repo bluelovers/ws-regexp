@@ -3,7 +3,7 @@
  */
 import { IOptionsOn } from 'regexp-cjk/lib/core';
 import { INodeInput } from 'regexp-parser-event';
-export declare type ICacheMap = Map<string, string[]>;
+export type ICacheMap = Map<string, string[]>;
 export interface IZhRegExpPluginOptionsCore {
     /**
      * 平假名片假名的 清濁音
@@ -29,13 +29,13 @@ export interface IZhRegExpPluginOptionsCore {
     callback?(raw: string): string | string[];
     on?: IOptionsOn<INodeInput>;
 }
-export declare type IZhRegExpPluginOptions = IZhRegExpPluginOptionsCore & {
+export type IZhRegExpPluginOptions = IZhRegExpPluginOptionsCore & {
     /**
      * 緩存
      */
     cacheMap?: boolean | ICacheMap;
 };
-export declare type IZhRegExpPluginOptionsRuntime = IZhRegExpPluginOptionsCore & {
+export type IZhRegExpPluginOptionsRuntime = IZhRegExpPluginOptionsCore & {
     /**
      * 緩存
      */

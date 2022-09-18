@@ -3,7 +3,7 @@
  */
 
 import zhTable, { IOptions as IOptionsZhTable } from './index';
-import UString from 'uni-string';
+import { UString } from 'uni-string';
 import { IOptions as IOptionsCjkConv, cjk2zht, cjk2zhs, cjk2jp } from '@lazy-cjk/jp-table-convert';
 import { cn2tw } from '@lazy-cjk/zh-convert';
 

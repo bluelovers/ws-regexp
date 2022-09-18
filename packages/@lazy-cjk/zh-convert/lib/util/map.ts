@@ -1,4 +1,4 @@
-import UString from 'uni-string';
+import { UString } from 'uni-string';
 import { ITable } from '../types';
 import { REGEXP_TEST } from '../const';
 
@@ -57,4 +57,3 @@ export function textMap4(text: string, table: ITable): string
 		return charMap(s, table);
 	});
 }
-

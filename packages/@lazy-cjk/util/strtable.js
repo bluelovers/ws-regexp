@@ -4,8 +4,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.utf8Split = exports.jsSplit = exports.toStrTable = exports.toStrTableArray = void 0;
-const tslib_1 = require("tslib");
-const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
+const uni_string_1 = require("uni-string");
 function toStrTableArray(table, options = {}) {
     if (typeof table !== 'object' || Array.isArray(table)) {
         throw new TypeError(`table '${typeof table}' ${table}`);
@@ -54,7 +53,7 @@ function jsSplit(s) {
 }
 exports.jsSplit = jsSplit;
 function utf8Split(s) {
-    return uni_string_1.default.split(s, '');
+    return uni_string_1.UString.split(s, '');
 }
 exports.utf8Split = utf8Split;
 exports.default = exports;

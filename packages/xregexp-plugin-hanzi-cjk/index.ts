@@ -5,7 +5,7 @@
 import XRegExp, { TokenScopeOption, TokenFlag, TokenOptions, TokenScope } from 'xregexp';
 import { auto } from '@lazy-cjk/zh-table-list';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
-import createXRegExp from '@regexp-cjk/create-xregexp';
+import { createXRegExp } from '@regexp-cjk/create-xregexp';
 import { isXRegExp, X_REGEX_DATA } from '@regexp-cjk/is-xregexp';
 
 export interface IOptions extends TokenOptions

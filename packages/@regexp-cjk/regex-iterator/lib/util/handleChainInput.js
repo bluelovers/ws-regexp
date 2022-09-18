@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleChainInput = exports.handleChainInputCore = exports.handleChainInputCore2 = void 0;
-const tslib_1 = require("tslib");
-const clone_regexp_1 = tslib_1.__importDefault(require("@regexp-cjk/clone-regexp"));
+const clone_regexp_1 = require("@regexp-cjk/clone-regexp");
 function handleChainInputCore2(row, options) {
     let regexp;
     let replaceValue;
@@ -47,7 +46,7 @@ function handleChainInputCore(row, options) {
 exports.handleChainInputCore = handleChainInputCore;
 function handleChainInput(row, options) {
     let ret = handleChainInputCore(row, options);
-    ret.regexp = (0, clone_regexp_1.default)(ret.regexp, options);
+    ret.regexp = (0, clone_regexp_1.cloneRegexp)(ret.regexp, options);
     return ret;
 }
 exports.handleChainInput = handleChainInput;

@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.cjk2zhs = exports.cjk2zht = exports.cjk2jp = exports.zh2jp = exports.zhs2zht = exports.zht2zhs = exports.zht2jp = exports.zhs2jp = exports.jp2zhs = exports.jp2zht = void 0;
-const tslib_1 = require("tslib");
 const types_1 = require("./types");
 const table_1 = require("./table");
 const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
-const core_1 = tslib_1.__importDefault(require("uni-string/src/core"));
+const uni_string_1 = require("uni-string");
 const util_1 = require("./util");
 // /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u
 const REGEXP_TEST = new RegExp((0, cjk_conv_1._re_cjk_conv)('u').source + '+', 'u');
@@ -26,7 +25,7 @@ var _;
                     return str;
                 }
                 options = Object.assign({}, defaultOptions, options);
-                return core_1.default.split(str, '')
+                return uni_string_1.UString.split(str, '')
                     .map(function (char) {
                     if (options.skip && options.skip.indexOf(char) != -1) {
                         return char;
@@ -88,7 +87,7 @@ function zh2jp(str, options) {
         return str;
     }
     options = Object.assign({}, defaultOptions, options);
-    return core_1.default.split(str, '')
+    return uni_string_1.UString.split(str, '')
         .map(function (char) {
         if (options.skip && options.skip.indexOf(char) != -1) {
             return char;
@@ -128,7 +127,7 @@ function cjk2zht(str, options) {
         return str;
     }
     options = Object.assign({}, defaultOptions, options);
-    return core_1.default.split(str, '')
+    return uni_string_1.UString.split(str, '')
         .map(function (char) {
         if (options.skip && options.skip.indexOf(char) != -1) {
             return char;
@@ -158,7 +157,7 @@ function cjk2zhs(str, options) {
         return str;
     }
     options = Object.assign({}, defaultOptions, options);
-    return core_1.default.split(str, '')
+    return uni_string_1.UString.split(str, '')
         .map(function (char) {
         if (options.skip && options.skip.indexOf(char) != -1) {
             return char;

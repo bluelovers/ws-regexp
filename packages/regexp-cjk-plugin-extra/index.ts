@@ -13,8 +13,8 @@ import {
 	toHalfWidth,
 } from 'str-util/lib/fullhalf';
 import { IOptionsOn } from 'regexp-cjk/lib/core';
-import UString from 'uni-string/src/core';
-import getVoiceAll from '@lazy-cjk/jp-table-voice';
+import { UString } from 'uni-string';
+import { getVoiceAll } from '@lazy-cjk/jp-table-voice';
 import { INodeInput, ParserEventEmitterEvent } from 'regexp-parser-event';
 import deburr from 'lodash/deburr';
 import { astNotChanged } from 'regexp-cjk/lib/plugin';

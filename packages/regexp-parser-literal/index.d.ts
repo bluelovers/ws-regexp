@@ -6,14 +6,14 @@ export declare function parseRegExp(input: string, objRegExpParser?: RegExpParse
 export declare function parseFlags(input: string, objRegExpParser?: RegExpParser): AST.Flags;
 export declare function parsePattern(input: string, uFlag?: boolean | string, objRegExpParser?: RegExpParser): AST.Pattern;
 export declare function fakePatternToRegExpLiteral(pattern: AST.Pattern | string, flags?: string | AST.Flags, objRegExpParser?: RegExpParser): AST.RegExpLiteral;
-export declare type IAstToStringOptions = {
+export type IAstToStringOptions = {
     debugChanged?: boolean | number;
     noUniqueClass?: boolean;
     doUniqueClassEmoji?: boolean;
     sortClass?: boolean;
 };
 export declare function astToString(ast: AST.Element & INodePlus | AST.Node & INodePlus, options?: IAstToStringOptions): string;
-export declare type INodePlus = {
+export type INodePlus = {
     changed?: boolean;
     old_raw?: string;
 };

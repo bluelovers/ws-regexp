@@ -2,7 +2,7 @@
  * Created by user on 2020/5/29.
  */
 
-import UString from 'uni-string';
+import { UString } from 'uni-string';
 
 export interface IOptions
 {

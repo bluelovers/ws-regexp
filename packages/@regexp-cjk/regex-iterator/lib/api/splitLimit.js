@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.splitLimit = void 0;
-const tslib_1 = require("tslib");
-const _each_1 = tslib_1.__importDefault(require("./_each"));
+const _each_1 = require("./_each");
 const greedySplit_1 = require("../util/split/greedySplit");
 function _pushNonEmpty(arr, s, allowEmpty) {
     if (s !== '' || allowEmpty === true) {
@@ -31,7 +30,7 @@ function splitLimit(input, separator, limit, options) {
     excludeSubMatched = !!excludeSubMatched;
     let size = 0;
     let row;
-    for (row of (0, _each_1.default)(input, separator, options)) {
+    for (row of (0, _each_1._each)(input, separator, options)) {
         let { match, re } = row;
         let s;
         s = input.slice(lastIndex, match.index);

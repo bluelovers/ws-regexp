@@ -1,7 +1,7 @@
 import { IFrom2To, IOptions, KEY_ZHT, KEY_ZHS, KEY_JP } from './types';
 import { TABLE, TABLE_KEYS } from './table';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
-import UString from 'uni-string/src/core';
+import { UString } from 'uni-string';
 import { _getdata } from './util';
 
 // /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u

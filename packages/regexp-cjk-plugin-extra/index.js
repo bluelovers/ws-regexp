@@ -7,8 +7,8 @@ exports._coreFn = exports.createZhRegExpPlugin = void 0;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const fullhalf_1 = require("str-util/lib/fullhalf");
-const core_1 = tslib_1.__importDefault(require("uni-string/src/core"));
-const jp_table_voice_1 = tslib_1.__importDefault(require("@lazy-cjk/jp-table-voice"));
+const uni_string_1 = require("uni-string");
+const jp_table_voice_1 = require("@lazy-cjk/jp-table-voice");
 const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));
 const plugin_1 = require("regexp-cjk/lib/plugin");
 /**
@@ -84,7 +84,7 @@ function createZhRegExpPlugin(options = {}) {
                     });
                     break;
                 default:
-                    if (core_1.default.size(raw) == 1) {
+                    if (uni_string_1.UString.size(raw) == 1) {
                         arr = _coreFn(raw, {
                             autoDeburr,
                             autoFullHalf,
@@ -127,7 +127,7 @@ function _coreFn(raw, { autoDeburr, autoFullHalf, autoLocale, autoVoice, cacheMa
     }
     else {
         if (autoVoice) {
-            let ret = (0, jp_table_voice_1.default)(raw);
+            let ret = (0, jp_table_voice_1.getVoiceAll)(raw);
             ret && arr.push(...ret);
         }
         if (autoFullHalf) {

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.arrCjk = exports.textList = exports.charTableList = void 0;
 const tslib_1 = require("tslib");
 const index_1 = tslib_1.__importDefault(require("./index"));
-const uni_string_1 = tslib_1.__importDefault(require("uni-string"));
+const uni_string_1 = require("uni-string");
 const jp_table_convert_1 = require("@lazy-cjk/jp-table-convert");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
 /**
@@ -18,7 +18,7 @@ const zh_convert_1 = require("@lazy-cjk/zh-convert");
  * ```
  */
 function charTableList(text, options = {}) {
-    let a = uni_string_1.default.split(text, '');
+    let a = uni_string_1.UString.split(text, '');
     options = Object.assign({}, options);
     let optionsZhTable = Object.assign({
         safe: true,
