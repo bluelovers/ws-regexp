@@ -104,7 +104,7 @@
     "coverage:all": "yarn-tool ws run coverage --concurrency 1",
     "lint:all": "yarn-tool ws run lint --concurrency 1",
     "pretest": "echo pretest",
-    "test": "yarn-tool ws run test",
+    "test": "yarn-tool ws run test:since",
     "test:all": "yarn-tool ws run test --concurrency 1",
     "test:jest:clearCache": "jest --clearCache",
     "test:since": "yarn run test:all -- --since",

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`default ⓪ ~ ㊿ 1`] = `
-Array [
+[
   "⓪",
   "①",
   "②",
@@ -57,7 +57,7 @@ Array [
 `;
 
 exports[`default 一 ~ 十 1`] = `
-Array [
+[
   "一",
   "二",
   "三",
@@ -74,7 +74,7 @@ Array [
 exports[`default 三 ~ 五 createRegExpClass 1`] = `"三四五"`;
 
 exports[`default 二 ~ 七 1`] = `
-Array [
+[
   "二",
   "三",
   "四",
@@ -93,7 +93,7 @@ exports[`default 壹 ~ 什 1`] = `"壹貳參肆伍陸柒捌玖什贰叁陆"`;
 exports[`default 壹 ~ 什 createRegExpClass findFirstOne 1`] = `"壹貳參肆伍陸柒捌玖什"`;
 
 exports[`default 零 ~ 拾 1`] = `
-Array [
+[
   "零",
   "壱",
   "弐",

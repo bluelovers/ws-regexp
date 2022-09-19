@@ -4,7 +4,11 @@ import { ITABLE_MAIN } from './types';
 
 /**
  * Code generated from @lazy-cjk/jp-table-comparison;
+ * 
+
  * DO NOT EDIT.
+ * 
+
  * @see {@link @lazy-cjk/jp-table-comparison}
  */
 
@@ -16,7 +20,11 @@ export const TABLE_KEYS = [
 
 /**
  * Code generated from @lazy-cjk/jp-table-comparison;
+ * 
+
  * DO NOT EDIT.
+ * 
+
  * @see {@link @lazy-cjk/jp-table-comparison}
  */
 
@@ -11021,7 +11029,11 @@ export const TABLE: ITABLE_MAIN = {
 
 /**
  * Code generated from @lazy-cjk/jp-table-comparison;
+ * 
+
  * DO NOT EDIT.
+ * 
+
  * @see {@link @lazy-cjk/jp-table-comparison}
  */
 

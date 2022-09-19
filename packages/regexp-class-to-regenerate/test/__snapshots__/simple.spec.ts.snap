@@ -2,7 +2,7 @@
 
 exports[`regexpClassToObject 1`] = `
 regenerate {
-  "data": Array [
+  "data": [
     8203,
     8205,
     8206,

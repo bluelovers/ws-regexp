@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UNICODE_ALL ! 1`] = `
-Object {
+{
   "char": "!",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -25,9 +25,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL " 1`] = `
-Object {
-  "char": "\\"",
-  "map": Array [
+{
+  "char": """,
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -47,9 +47,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL # 1`] = `
-Object {
+{
   "char": "#",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -69,9 +69,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL $ 1`] = `
-Object {
+{
   "char": "$",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -88,9 +88,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL % 1`] = `
-Object {
+{
   "char": "%",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -108,9 +108,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL & 1`] = `
-Object {
+{
   "char": "&",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -128,9 +128,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ' 1`] = `
-Object {
+{
   "char": "'",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -152,9 +152,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ( 1`] = `
-Object {
+{
   "char": "(",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -174,9 +174,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ) 1`] = `
-Object {
+{
   "char": ")",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -196,9 +196,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL * 1`] = `
-Object {
+{
   "char": "*",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -218,9 +218,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL + 1`] = `
-Object {
+{
   "char": "+",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -238,9 +238,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL , 1`] = `
-Object {
+{
   "char": ",",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -260,9 +260,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL . 1`] = `
-Object {
+{
   "char": ".",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -286,9 +286,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL / 1`] = `
-Object {
+{
   "char": "/",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -306,9 +306,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL : 1`] = `
-Object {
+{
   "char": ":",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -330,9 +330,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ; 1`] = `
-Object {
+{
   "char": ";",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -352,9 +352,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL < 1`] = `
-Object {
+{
   "char": "<",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -374,9 +374,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL = 1`] = `
-Object {
+{
   "char": "=",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -394,9 +394,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL > 1`] = `
-Object {
+{
   "char": ">",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -416,9 +416,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ? 1`] = `
-Object {
+{
   "char": "?",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -440,9 +440,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL @ 1`] = `
-Object {
+{
   "char": "@",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -460,9 +460,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL [ 1`] = `
-Object {
+{
   "char": "[",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -482,9 +482,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\ 1`] = `
-Object {
-  "char": "\\\\",
-  "map": Array [
+{
+  "char": "\\",
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -502,9 +502,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\u0009 1`] = `
-Object {
+{
   "char": "	",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -522,10 +522,10 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\u000a 1`] = `
-Object {
+{
   "char": "
 ",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -543,9 +543,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\u000c 1`] = `
-Object {
+{
   "char": "",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -563,10 +563,10 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\u000d 1`] = `
-Object {
+{
   "char": "
 ",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -584,9 +584,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\u0020 1`] = `
-Object {
+{
   "char": " ",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -605,9 +605,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL \\u1f3fd 1`] = `
-Object {
+{
   "char": "🏽",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -627,9 +627,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ] 1`] = `
-Object {
+{
   "char": "]",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -649,9 +649,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ^ 1`] = `
-Object {
+{
   "char": "^",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -673,9 +673,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL _ 1`] = `
-Object {
+{
   "char": "_",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -695,9 +695,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL \` 1`] = `
-Object {
+{
   "char": "\`",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -718,9 +718,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL { 1`] = `
-Object {
+{
   "char": "{",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -740,9 +740,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL | 1`] = `
-Object {
+{
   "char": "|",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -760,9 +760,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL } 1`] = `
-Object {
+{
   "char": "}",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -782,9 +782,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ~ 1`] = `
-Object {
+{
   "char": "~",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -802,9 +802,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL - 1`] = `
-Object {
+{
   "char": "-",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -823,9 +823,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL cánh 1`] = `
-Object {
+{
   "char": "cánh",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -860,9 +860,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL « 1`] = `
-Object {
+{
   "char": "«",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -883,9 +883,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL » 1`] = `
-Object {
+{
   "char": "»",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -906,9 +906,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ā 1`] = `
-Object {
+{
   "char": "ā",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -943,9 +943,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ň 1`] = `
-Object {
+{
   "char": "ň",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -980,9 +980,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ̀ 1`] = `
-Object {
+{
   "char": "̀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -1005,9 +1005,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ͳ 1`] = `
-Object {
+{
   "char": "ͳ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1042,9 +1042,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Θ 1`] = `
-Object {
+{
   "char": "Θ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1081,9 +1081,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Σ 1`] = `
-Object {
+{
   "char": "Σ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1120,9 +1120,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Ϫ 1`] = `
-Object {
+{
   "char": "Ϫ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1159,9 +1159,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Ж 1`] = `
-Object {
+{
   "char": "Ж",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1198,9 +1198,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL летачко 1`] = `
-Object {
+{
   "char": "летачко",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1235,9 +1235,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ؤ 1`] = `
-Object {
+{
   "char": "ؤ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1261,9 +1261,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL لمو 1`] = `
-Object {
+{
   "char": "لمو",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1287,9 +1287,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ऄ 1`] = `
-Object {
+{
   "char": "ऄ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1313,9 +1313,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL আমার 1`] = `
-Object {
+{
   "char": "আমার",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1329,9 +1329,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ் 1`] = `
-Object {
+{
   "char": "்",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -1354,9 +1354,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ༁ 1`] = `
-Object {
+{
   "char": "༁",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1370,9 +1370,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ༬ 1`] = `
-Object {
+{
   "char": "༬",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1386,9 +1386,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ༺ 1`] = `
-Object {
+{
   "char": "༺",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -1405,9 +1405,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ༼ 1`] = `
-Object {
+{
   "char": "༼",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -1424,9 +1424,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ང 1`] = `
-Object {
+{
   "char": "ང",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1450,9 +1450,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ხომალდი 1`] = `
-Object {
+{
   "char": "ხომალდი",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1485,9 +1485,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ማንዣበቢያ 1`] = `
-Object {
+{
   "char": "ማንዣበቢያ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1511,9 +1511,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Ḁ 1`] = `
-Object {
+{
   "char": "Ḁ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1550,9 +1550,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL … 1`] = `
-Object {
+{
   "char": "…",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -1571,9 +1571,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ‹ 1`] = `
-Object {
+{
   "char": "‹",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -1594,9 +1594,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL › 1`] = `
-Object {
+{
   "char": "›",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -1617,9 +1617,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ※ 1`] = `
-Object {
+{
   "char": "※",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1636,9 +1636,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⁉ 1`] = `
-Object {
+{
   "char": "⁉",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -1662,9 +1662,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⁰ 1`] = `
-Object {
+{
   "char": "⁰",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -1680,9 +1680,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⃓ 1`] = `
-Object {
+{
   "char": "⃓",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -1704,9 +1704,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⃝ 1`] = `
-Object {
+{
   "char": "⃝",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -1723,9 +1723,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Ⅶ 1`] = `
-Object {
+{
   "char": "Ⅶ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1760,9 +1760,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL → 1`] = `
-Object {
+{
   "char": "→",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1779,9 +1779,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ∑ 1`] = `
-Object {
+{
   "char": "∑",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -1800,9 +1800,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ∢ 1`] = `
-Object {
+{
   "char": "∢",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -1821,9 +1821,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⑪ 1`] = `
-Object {
+{
   "char": "⑪",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -1839,9 +1839,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⒄ 1`] = `
-Object {
+{
   "char": "⒄",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -1857,9 +1857,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⒰ 1`] = `
-Object {
+{
   "char": "⒰",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -1875,9 +1875,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⓛ 1`] = `
-Object {
+{
   "char": "ⓛ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -1904,9 +1904,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⓶ 1`] = `
-Object {
+{
   "char": "⓶",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1920,9 +1920,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ─ 1`] = `
-Object {
+{
   "char": "─",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1938,9 +1938,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ▀ 1`] = `
-Object {
+{
   "char": "▀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1956,9 +1956,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ■ 1`] = `
-Object {
+{
   "char": "■",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -1975,9 +1975,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ☀ 1`] = `
-Object {
+{
   "char": "☀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Emoji",
@@ -1994,9 +1994,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ✄ 1`] = `
-Object {
+{
   "char": "✄",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -2012,9 +2012,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⟪ 1`] = `
-Object {
+{
   "char": "⟪",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -2034,9 +2034,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⟵ 1`] = `
-Object {
+{
   "char": "⟵",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -2053,9 +2053,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⧓ 1`] = `
-Object {
+{
   "char": "⧓",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -2072,9 +2072,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ⧻ 1`] = `
-Object {
+{
   "char": "⧻",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -2091,9 +2091,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL 「 1`] = `
-Object {
+{
   "char": "「",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -2114,9 +2114,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL や 1`] = `
-Object {
+{
   "char": "や",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -2140,9 +2140,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ゙ 1`] = `
-Object {
+{
   "char": "゙",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -2165,9 +2165,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL カタカナ 1`] = `
-Object {
+{
   "char": "カタカナ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -2191,9 +2191,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL 中文字符 1`] = `
-Object {
+{
   "char": "中文字符",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -2221,9 +2221,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL 👧👧👧🏻 1`] = `
-Object {
+{
   "char": "👧👧👧🏻",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Emoji",
@@ -2237,9 +2237,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL 😀 1`] = `
-Object {
+{
   "char": "😀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Emoji",
@@ -2255,9 +2255,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ５ 1`] = `
-Object {
+{
   "char": "５",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -2280,9 +2280,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL ？ 1`] = `
-Object {
+{
   "char": "？",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -2303,9 +2303,9 @@ Object {
 `;
 
 exports[`UNICODE_ALL Ｖ 1`] = `
-Object {
+{
   "char": "Ｖ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -2342,9 +2342,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ! 1`] = `
-Object {
+{
   "char": "!",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2366,9 +2366,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL " 1`] = `
-Object {
-  "char": "\\"",
-  "map": Array [
+{
+  "char": """,
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2388,9 +2388,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL # 1`] = `
-Object {
+{
   "char": "#",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2410,9 +2410,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL $ 1`] = `
-Object {
+{
   "char": "$",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2429,9 +2429,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL % 1`] = `
-Object {
+{
   "char": "%",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2449,9 +2449,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL & 1`] = `
-Object {
+{
   "char": "&",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2469,9 +2469,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ' 1`] = `
-Object {
+{
   "char": "'",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2493,9 +2493,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ( 1`] = `
-Object {
+{
   "char": "(",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2515,9 +2515,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ) 1`] = `
-Object {
+{
   "char": ")",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2537,9 +2537,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL * 1`] = `
-Object {
+{
   "char": "*",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2559,9 +2559,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL + 1`] = `
-Object {
+{
   "char": "+",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2579,9 +2579,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL , 1`] = `
-Object {
+{
   "char": ",",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2601,9 +2601,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL . 1`] = `
-Object {
+{
   "char": ".",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2627,9 +2627,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL / 1`] = `
-Object {
+{
   "char": "/",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2647,9 +2647,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL : 1`] = `
-Object {
+{
   "char": ":",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2671,9 +2671,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ; 1`] = `
-Object {
+{
   "char": ";",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2693,9 +2693,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL < 1`] = `
-Object {
+{
   "char": "<",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2715,9 +2715,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL = 1`] = `
-Object {
+{
   "char": "=",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2735,9 +2735,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL > 1`] = `
-Object {
+{
   "char": ">",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2757,9 +2757,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ? 1`] = `
-Object {
+{
   "char": "?",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2781,9 +2781,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL @ 1`] = `
-Object {
+{
   "char": "@",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2801,9 +2801,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL [ 1`] = `
-Object {
+{
   "char": "[",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2823,9 +2823,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\ 1`] = `
-Object {
-  "char": "\\\\",
-  "map": Array [
+{
+  "char": "\\",
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2843,9 +2843,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\u0009 1`] = `
-Object {
+{
   "char": "	",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2863,10 +2863,10 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\u000a 1`] = `
-Object {
+{
   "char": "
 ",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2884,9 +2884,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\u000c 1`] = `
-Object {
+{
   "char": "",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2904,10 +2904,10 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\u000d 1`] = `
-Object {
+{
   "char": "
 ",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2925,9 +2925,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\u0020 1`] = `
-Object {
+{
   "char": " ",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2946,9 +2946,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \\u1f3fd 1`] = `
-Object {
+{
   "char": "🏽",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -2968,9 +2968,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ] 1`] = `
-Object {
+{
   "char": "]",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -2990,9 +2990,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ^ 1`] = `
-Object {
+{
   "char": "^",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3014,9 +3014,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL _ 1`] = `
-Object {
+{
   "char": "_",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3036,9 +3036,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL \` 1`] = `
-Object {
+{
   "char": "\`",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3059,9 +3059,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL { 1`] = `
-Object {
+{
   "char": "{",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3081,9 +3081,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL | 1`] = `
-Object {
+{
   "char": "|",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3101,9 +3101,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL } 1`] = `
-Object {
+{
   "char": "}",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3123,9 +3123,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ~ 1`] = `
-Object {
+{
   "char": "~",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3143,9 +3143,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL - 1`] = `
-Object {
+{
   "char": "-",
-  "map": Array [
+  "map": [
     "ASCII",
     "Any",
     "Assigned",
@@ -3164,9 +3164,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL cánh 1`] = `
-Object {
+{
   "char": "cánh",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3201,9 +3201,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL « 1`] = `
-Object {
+{
   "char": "«",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -3224,9 +3224,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL » 1`] = `
-Object {
+{
   "char": "»",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -3247,9 +3247,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ā 1`] = `
-Object {
+{
   "char": "ā",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3284,9 +3284,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ň 1`] = `
-Object {
+{
   "char": "ň",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3321,9 +3321,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ̀ 1`] = `
-Object {
+{
   "char": "̀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -3346,9 +3346,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ͳ 1`] = `
-Object {
+{
   "char": "ͳ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3383,9 +3383,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Θ 1`] = `
-Object {
+{
   "char": "Θ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3422,9 +3422,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Σ 1`] = `
-Object {
+{
   "char": "Σ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3461,9 +3461,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Ϫ 1`] = `
-Object {
+{
   "char": "Ϫ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3500,9 +3500,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Ж 1`] = `
-Object {
+{
   "char": "Ж",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3539,9 +3539,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL летачко 1`] = `
-Object {
+{
   "char": "летачко",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3576,9 +3576,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ؤ 1`] = `
-Object {
+{
   "char": "ؤ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3602,9 +3602,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL لمو 1`] = `
-Object {
+{
   "char": "لمو",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3628,9 +3628,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ऄ 1`] = `
-Object {
+{
   "char": "ऄ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3654,9 +3654,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL আমার 1`] = `
-Object {
+{
   "char": "আমার",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3670,9 +3670,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ் 1`] = `
-Object {
+{
   "char": "்",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -3695,9 +3695,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ༁ 1`] = `
-Object {
+{
   "char": "༁",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -3711,9 +3711,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ༬ 1`] = `
-Object {
+{
   "char": "༬",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -3727,9 +3727,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ༺ 1`] = `
-Object {
+{
   "char": "༺",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -3746,9 +3746,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ༼ 1`] = `
-Object {
+{
   "char": "༼",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -3765,9 +3765,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ང 1`] = `
-Object {
+{
   "char": "ང",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3791,9 +3791,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ხომალდი 1`] = `
-Object {
+{
   "char": "ხომალდი",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3826,9 +3826,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ማንዣበቢያ 1`] = `
-Object {
+{
   "char": "ማንዣበቢያ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3852,9 +3852,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Ḁ 1`] = `
-Object {
+{
   "char": "Ḁ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -3891,9 +3891,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL … 1`] = `
-Object {
+{
   "char": "…",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -3912,9 +3912,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ‹ 1`] = `
-Object {
+{
   "char": "‹",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -3935,9 +3935,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL › 1`] = `
-Object {
+{
   "char": "›",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -3958,9 +3958,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ※ 1`] = `
-Object {
+{
   "char": "※",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -3977,9 +3977,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⁉ 1`] = `
-Object {
+{
   "char": "⁉",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4003,9 +4003,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⁰ 1`] = `
-Object {
+{
   "char": "⁰",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4021,9 +4021,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⃓ 1`] = `
-Object {
+{
   "char": "⃓",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -4045,9 +4045,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⃝ 1`] = `
-Object {
+{
   "char": "⃝",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -4064,9 +4064,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Ⅶ 1`] = `
-Object {
+{
   "char": "Ⅶ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -4101,9 +4101,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL → 1`] = `
-Object {
+{
   "char": "→",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4120,9 +4120,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ∑ 1`] = `
-Object {
+{
   "char": "∑",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -4141,9 +4141,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ∢ 1`] = `
-Object {
+{
   "char": "∢",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -4162,9 +4162,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⑪ 1`] = `
-Object {
+{
   "char": "⑪",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4180,9 +4180,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⒄ 1`] = `
-Object {
+{
   "char": "⒄",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4198,9 +4198,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⒰ 1`] = `
-Object {
+{
   "char": "⒰",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4216,9 +4216,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⓛ 1`] = `
-Object {
+{
   "char": "ⓛ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -4245,9 +4245,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⓶ 1`] = `
-Object {
+{
   "char": "⓶",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4261,9 +4261,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ─ 1`] = `
-Object {
+{
   "char": "─",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4279,9 +4279,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ▀ 1`] = `
-Object {
+{
   "char": "▀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4297,9 +4297,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ■ 1`] = `
-Object {
+{
   "char": "■",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4316,9 +4316,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ☀ 1`] = `
-Object {
+{
   "char": "☀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Emoji",
@@ -4335,9 +4335,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ✄ 1`] = `
-Object {
+{
   "char": "✄",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4353,9 +4353,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⟪ 1`] = `
-Object {
+{
   "char": "⟪",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -4375,9 +4375,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⟵ 1`] = `
-Object {
+{
   "char": "⟵",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4394,9 +4394,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⧓ 1`] = `
-Object {
+{
   "char": "⧓",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4413,9 +4413,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ⧻ 1`] = `
-Object {
+{
   "char": "⧻",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Gr_Base",
@@ -4432,9 +4432,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL 「 1`] = `
-Object {
+{
   "char": "「",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Bidi_M",
@@ -4455,9 +4455,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL や 1`] = `
-Object {
+{
   "char": "や",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -4481,9 +4481,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ゙ 1`] = `
-Object {
+{
   "char": "゙",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CI",
@@ -4506,9 +4506,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL カタカナ 1`] = `
-Object {
+{
   "char": "カタカナ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -4532,9 +4532,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL 中文字符 1`] = `
-Object {
+{
   "char": "中文字符",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",
@@ -4562,9 +4562,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL 👧👧👧🏻 1`] = `
-Object {
+{
   "char": "👧👧👧🏻",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Emoji",
@@ -4578,9 +4578,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL 😀 1`] = `
-Object {
+{
   "char": "😀",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "Emoji",
@@ -4596,9 +4596,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ５ 1`] = `
-Object {
+{
   "char": "５",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4621,9 +4621,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL ？ 1`] = `
-Object {
+{
   "char": "？",
-  "map": Array [
+  "map": [
     "Any",
     "Assigned",
     "CWKCF",
@@ -4644,9 +4644,9 @@ Object {
 `;
 
 exports[`UNICODE_SCRIPTS_ALL Ｖ 1`] = `
-Object {
+{
   "char": "Ｖ",
-  "map": Array [
+  "map": [
     "Alpha",
     "Alphabetic",
     "Any",

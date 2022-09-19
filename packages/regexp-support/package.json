@@ -40,7 +40,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "yarn run build:report && jest -u",
+    "test": "yarn run build:report && jest -u && echo test",
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",

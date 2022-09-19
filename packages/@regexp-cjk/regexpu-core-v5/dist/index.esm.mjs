@@ -1,15 +1,14 @@
-import _rewritePattern from 'regexpu-core';
+import r from "regexpu-core";
 
-var EnumOptionsRegExpUCoreValueMode;
+var e;
 
-(function (EnumOptionsRegExpUCoreValueMode) {
-  EnumOptionsRegExpUCoreValueMode["transform"] = "transform";
-  EnumOptionsRegExpUCoreValueMode["parse"] = "parse";
-})(EnumOptionsRegExpUCoreValueMode || (EnumOptionsRegExpUCoreValueMode = {}));
-
-function rewritePatternV5(...argv) {
-  return _rewritePattern(...argv);
+function rewritePatternV5(...e) {
+  return r(...e);
 }
 
-export { EnumOptionsRegExpUCoreValueMode, rewritePatternV5 as default, rewritePatternV5 };
+!function(r) {
+  r.transform = "transform", r.parse = "parse";
+}(e || (e = {}));
+
+export { e as EnumOptionsRegExpUCoreValueMode, rewritePatternV5 as default, rewritePatternV5 };
 //# sourceMappingURL=index.esm.mjs.map

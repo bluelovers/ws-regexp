@@ -106,6 +106,9 @@ export interface IOptionsRegExpUCoreV4 {
  * @see https://github.com/mathiasbynens/regexpu-core/tree/v4.8.0#readme
  */
 export declare function rewritePatternV4(pattern: string, flags?: string, options?: IOptionsRegExpUCoreV4): string;
-export default rewritePatternV4;
+
+export {
+	rewritePatternV4 as default,
+};
 
 export {};

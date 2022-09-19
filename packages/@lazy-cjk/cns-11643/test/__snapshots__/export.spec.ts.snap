@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`import check 1`] = `
-Array [
+[
   "zhuyin2pinyin_01_table",
   "zhuyin2pinyin_01",
   "uni2pinyin_01",

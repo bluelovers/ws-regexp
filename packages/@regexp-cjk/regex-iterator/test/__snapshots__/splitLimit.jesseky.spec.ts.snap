@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RegExp separator contains multiple groups and keep submatches:  limit limit:2 1`] = `
-Array [
+[
   "apple",
   "*pear  .+.  melon ^-^ banana",
 ]
 `;
 
 exports[`RegExp separator contains multiple groups and keep submatches:  limit limit:3 1`] = `
-Array [
+[
   "apple",
   "*",
   "-pear  .+.  melon ^-^ banana",
@@ -16,7 +16,7 @@ Array [
 `;
 
 exports[`RegExp separator contains multiple groups and keep submatches:  limit limit:4 1`] = `
-Array [
+[
   "apple",
   "*",
   "-",
@@ -25,7 +25,7 @@ Array [
 `;
 
 exports[`RegExp separator contains multiple groups and keep submatches:  limit limit:5 1`] = `
-Array [
+[
   "apple",
   "*",
   "-",
@@ -35,14 +35,14 @@ Array [
 `;
 
 exports[`RegExp separator with groups and keep submatches:  limit limit:2 1`] = `
-Array [
+[
   "apple *",
   "-* pear  .+.  melon ^-^ banana",
 ]
 `;
 
 exports[`RegExp separator with groups and keep submatches:  limit limit:3 1`] = `
-Array [
+[
   "apple *",
   "-",
   "* pear  .+.  melon ^-^ banana",
@@ -50,7 +50,7 @@ Array [
 `;
 
 exports[`RegExp separator with groups and keep submatches:  limit limit:4 1`] = `
-Array [
+[
   "apple *",
   "-",
   "* pear  .+.  melon ^",
@@ -59,7 +59,7 @@ Array [
 `;
 
 exports[`RegExp separator with groups and keep submatches:  limit limit:5 1`] = `
-Array [
+[
   "apple *",
   "-",
   "* pear  .+.  melon ^",

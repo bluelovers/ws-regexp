@@ -5,9 +5,9 @@ exports[`simple [
   'u',
   { unicodePropertyEscape: false }
 ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -21,7 +21,7 @@ exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
   'u',
   { unicodePropertyEscape: false }
-] test 1`] = `"\\\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
+] test 1`] = `"\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
 
 exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
@@ -34,9 +34,9 @@ exports[`simple [
   'u',
   { unicodePropertyEscape: false, useUnicodeFlag: false }
 ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -50,7 +50,7 @@ exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
   'u',
   { unicodePropertyEscape: false, useUnicodeFlag: false }
-] test 1`] = `"\\\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
+] test 1`] = `"\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
 
 exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
@@ -63,9 +63,9 @@ exports[`simple [
   'u',
   { unicodePropertyEscape: false, useUnicodeFlag: true }
 ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -79,7 +79,7 @@ exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
   'u',
   { unicodePropertyEscape: false, useUnicodeFlag: true }
-] test 1`] = `"\\\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
+] test 1`] = `"\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
 
 exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
@@ -92,9 +92,9 @@ exports[`simple [
   'u',
   { unicodePropertyEscape: true }
 ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -108,7 +108,7 @@ exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
   'u',
   { unicodePropertyEscape: true }
-] test 1`] = `"[\\\\u{14400}-\\\\u{14646}]"`;
+] test 1`] = `"[\\u{14400}-\\u{14646}]"`;
 
 exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
@@ -121,9 +121,9 @@ exports[`simple [
   'u',
   { unicodePropertyEscape: true, useUnicodeFlag: false }
 ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -137,7 +137,7 @@ exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
   'u',
   { unicodePropertyEscape: true, useUnicodeFlag: false }
-] test 1`] = `"(?:\\\\uD811[\\\\uDC00-\\\\uDE46])"`;
+] test 1`] = `"(?:\\uD811[\\uDC00-\\uDE46])"`;
 
 exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
@@ -150,9 +150,9 @@ exports[`simple [
   'u',
   { unicodePropertyEscape: true, useUnicodeFlag: true }
 ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -166,7 +166,7 @@ exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
   'u',
   { unicodePropertyEscape: true, useUnicodeFlag: true }
-] test 1`] = `"[\\\\u{14400}-\\\\u{14646}]"`;
+] test 1`] = `"[\\u{14400}-\\u{14646}]"`;
 
 exports[`simple [
   '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}',
@@ -179,9 +179,9 @@ exports[`simple [ '(?<=.)a' ] test 1`] = `"(?<=.)a"`;
 exports[`simple [ '(?<=.)a' ] test 2`] = `/\\(\\?<=\\.\\)a/`;
 
 exports[`simple [ '(?<=.)a', '', { lookbehind: true } ] options 1`] = `
-Object {
+{
   "flags": "",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -194,14 +194,14 @@ exports[`simple [ '(?<=.)a', '', { lookbehind: true } ] test 1`] = `"(?<=.)a"`;
 
 exports[`simple [ '(?<=.)a', '', { lookbehind: true } ] test 2`] = `/\\(\\?<=\\.\\)a/`;
 
-exports[`simple [ '(?<name>.)\\\\k<name>' ] test 1`] = `"(.)\\\\1"`;
+exports[`simple [ '(?<name>.)\\\\k<name>' ] test 1`] = `"(.)\\1"`;
 
 exports[`simple [ '(?<name>.)\\\\k<name>' ] test 2`] = `/\\(\\.\\)\\\\1/`;
 
 exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] options 1`] = `
-Object {
+{
   "flags": "",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -210,14 +210,14 @@ Object {
 }
 `;
 
-exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 1`] = `"(.)\\\\1"`;
+exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 1`] = `"(.)\\1"`;
 
 exports[`simple [ '(?<name>.)\\\\k<name>', '', { namedGroup: true } ] test 2`] = `/\\(\\.\\)\\\\1/`;
 
 exports[`simple [ '.', '', { dotAllFlag: true } ] options 1`] = `
-Object {
+{
   "flags": "",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -231,9 +231,9 @@ exports[`simple [ '.', '', { dotAllFlag: true } ] test 1`] = `"."`;
 exports[`simple [ '.', '', { dotAllFlag: true } ] test 2`] = `/\\./`;
 
 exports[`simple [ '.', 'su', { dotAllFlag: false } ] options 1`] = `
-Object {
+{
   "flags": "su",
-  "options": Object {
+  "options": {
     "dotAllFlag": false,
     "lookbehind": true,
     "namedGroup": true,
@@ -242,14 +242,14 @@ Object {
 }
 `;
 
-exports[`simple [ '.', 'su', { dotAllFlag: false } ] test 1`] = `"[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u{10FFFF}]"`;
+exports[`simple [ '.', 'su', { dotAllFlag: false } ] test 1`] = `"[\\0-\\t\\x0B\\f\\x0E-\\u2027\\u202A-\\u{10FFFF}]"`;
 
 exports[`simple [ '.', 'su', { dotAllFlag: false } ] test 2`] = `/\\[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u\\{10FFFF\\}\\]/su`;
 
 exports[`simple [ '.', 'su', { dotAllFlag: true } ] options 1`] = `
-Object {
+{
   "flags": "su",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": true,
@@ -258,18 +258,18 @@ Object {
 }
 `;
 
-exports[`simple [ '.', 'su', { dotAllFlag: true } ] test 1`] = `"[\\\\0-\\\\u{10FFFF}]"`;
+exports[`simple [ '.', 'su', { dotAllFlag: true } ] test 1`] = `"[\\0-\\u{10FFFF}]"`;
 
 exports[`simple [ '.', 'su', { dotAllFlag: true } ] test 2`] = `/\\[\\\\0-\\\\u\\{10FFFF\\}\\]/su`;
 
-exports[`simple [ '.', 'u' ] test 1`] = `"[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u{10FFFF}]"`;
+exports[`simple [ '.', 'u' ] test 1`] = `"[\\0-\\t\\x0B\\f\\x0E-\\u2027\\u202A-\\u{10FFFF}]"`;
 
 exports[`simple [ '.', 'u' ] test 2`] = `/\\[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u\\{10FFFF\\}\\]/u`;
 
 exports[`simple [ '.', 'u', { dotAllFlag: false } ] options 1`] = `
-Object {
+{
   "flags": "u",
-  "options": Object {
+  "options": {
     "dotAllFlag": false,
     "lookbehind": true,
     "namedGroup": true,
@@ -278,19 +278,19 @@ Object {
 }
 `;
 
-exports[`simple [ '.', 'u', { dotAllFlag: false } ] test 1`] = `"[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u{10FFFF}]"`;
+exports[`simple [ '.', 'u', { dotAllFlag: false } ] test 1`] = `"[\\0-\\t\\x0B\\f\\x0E-\\u2027\\u202A-\\u{10FFFF}]"`;
 
 exports[`simple [ '.', 'u', { dotAllFlag: false } ] test 2`] = `/\\[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u\\{10FFFF\\}\\]/u`;
 
-exports[`simple [ '[\\\\u{1D306}-\\\\u{1D308}a-z]', 'u' ] test 1`] = `"[a-z\\\\u{1D306}-\\\\u{1D308}]"`;
+exports[`simple [ '[\\\\u{1D306}-\\\\u{1D308}a-z]', 'u' ] test 1`] = `"[a-z\\u{1D306}-\\u{1D308}]"`;
 
 exports[`simple [ '[\\\\u{1D306}-\\\\u{1D308}a-z]', 'u' ] test 2`] = `/\\[a-z\\\\u\\{1D306\\}-\\\\u\\{1D308\\}\\]/u`;
 
-exports[`simple [ '[\\\\u{1D306}-\\\\u{1D308}a-z]', 'ui' ] test 1`] = `"[a-z\\\\u{1D306}-\\\\u{1D308}]"`;
+exports[`simple [ '[\\\\u{1D306}-\\\\u{1D308}a-z]', 'ui' ] test 1`] = `"[a-z\\u{1D306}-\\u{1D308}]"`;
 
 exports[`simple [ '[\\\\u{1D306}-\\\\u{1D308}a-z]', 'ui' ] test 2`] = `/\\[a-z\\\\u\\{1D306\\}-\\\\u\\{1D308\\}\\]/iu`;
 
-exports[`simple [ '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}', 'u' ] test 1`] = `"\\\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
+exports[`simple [ '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}', 'u' ] test 1`] = `"\\p{Script_Extensions=Anatolian_Hieroglyphs}"`;
 
 exports[`simple [ '\\\\p{Script_Extensions=Anatolian_Hieroglyphs}', 'u' ] test 2`] = `/\\\\p\\{Script_Extensions=Anatolian_Hieroglyphs\\}/u`;
 
@@ -298,14 +298,14 @@ exports[`simple [ 'foo.bar' ] test 1`] = `"foo.bar"`;
 
 exports[`simple [ 'foo.bar' ] test 2`] = `/foo\\.bar/`;
 
-exports[`simple [ 'foo.bar', 'u' ] test 1`] = `"foo[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u{10FFFF}]bar"`;
+exports[`simple [ 'foo.bar', 'u' ] test 1`] = `"foo[\\0-\\t\\x0B\\f\\x0E-\\u2027\\u202A-\\u{10FFFF}]bar"`;
 
 exports[`simple [ 'foo.bar', 'u' ] test 2`] = `/foo\\[\\\\0-\\\\t\\\\x0B\\\\f\\\\x0E-\\\\u2027\\\\u202A-\\\\u\\{10FFFF\\}\\]bar/u`;
 
 exports[`simple ThrowError [ '(?<=.)a', '', { lookbehind: false } ] options 1`] = `
-Object {
+{
   "flags": "",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": false,
     "namedGroup": true,
@@ -315,9 +315,9 @@ Object {
 `;
 
 exports[`simple ThrowError [ '(?<name>.)\\\\k<name>', '', { namedGroup: false } ] options 1`] = `
-Object {
+{
   "flags": "",
-  "options": Object {
+  "options": {
     "dotAllFlag": true,
     "lookbehind": true,
     "namedGroup": false,

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`char2pinyin_01 𠬠 1`] = `
-Array [
+[
   "mou3",
   "mou3",
   "mou3",
@@ -10,7 +10,7 @@ Array [
 `;
 
 exports[`char2pinyin_01 𠮷 1`] = `
-Array [
+[
   "ji2",
   "ji2",
   "ji2",
@@ -19,7 +19,7 @@ Array [
 `;
 
 exports[`char2pinyin_01 𡬶 1`] = `
-Array [
+[
   "xin2",
   "shin2",
   "syin2",
@@ -28,7 +28,7 @@ Array [
 `;
 
 exports[`char2pinyin_01 𢎐 1`] = `
-Array [
+[
   "shang4",
   "shang4",
   "shang4",
@@ -37,7 +37,7 @@ Array [
 `;
 
 exports[`char2pinyin_01 𣛙 1`] = `
-Array [
+[
   "shuo4",
   "shuo4",
   "shwo4",
@@ -46,7 +46,7 @@ Array [
 `;
 
 exports[`char2pinyin_01 𫗭 1`] = `
-Array [
+[
   "wei4",
   "wei4",
   "wei4",
@@ -55,7 +55,7 @@ Array [
 `;
 
 exports[`char2pinyin_02 𠬠 1`] = `
-Array [
+[
   "mǒu",
   "mǒu",
   "mǒu",
@@ -64,7 +64,7 @@ Array [
 `;
 
 exports[`char2pinyin_02 𠮷 1`] = `
-Array [
+[
   "jí",
   "jí",
   "jí",
@@ -73,7 +73,7 @@ Array [
 `;
 
 exports[`char2pinyin_02 𡬶 1`] = `
-Array [
+[
   "xín",
   "shīn",
   "syīn",
@@ -82,7 +82,7 @@ Array [
 `;
 
 exports[`char2pinyin_02 𢎐 1`] = `
-Array [
+[
   "shàng",
   "shàng",
   "shàng",
@@ -91,7 +91,7 @@ Array [
 `;
 
 exports[`char2pinyin_02 𣛙 1`] = `
-Array [
+[
   "shuò",
   "shuò",
   "shwò",
@@ -100,7 +100,7 @@ Array [
 `;
 
 exports[`char2pinyin_02 𫗭 1`] = `
-Array [
+[
   "wèi",
   "wèi",
   "wèi",

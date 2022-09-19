@@ -9,10 +9,10 @@ exports[`𠮷 /^[𠮷]$/u 1`] = `/\\^\\[𠮷\\]\\$/u`;
 exports[`𠮷 codePointAt 1`] = `134071`;
 
 exports[`𠮷 surrogatePair 1`] = `
-Array [
+[
   55362,
   57271,
 ]
 `;
 
-exports[`𠮷 toUnicode 1`] = `"\\\\u{20bb7}"`;
+exports[`𠮷 toUnicode 1`] = `"\\u{20bb7}"`;

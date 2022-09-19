@@ -2,7 +2,11 @@
 
 /**
  * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * 
+
  * DO NOT EDIT.
+ * 
+
  * @see {@link ./table/core.ts}
  */
 
@@ -10,7 +14,11 @@ export const _re_table_keys = /[罗会會箋笺網网処處处話话駄馱驮万
 
 /**
  * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ * 
+
  * DO NOT EDIT.
+ * 
+
  * @see {@link ./table/core.ts}
  */
 

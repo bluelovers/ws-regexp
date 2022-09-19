@@ -4,8 +4,8 @@ export declare const enum EnumOptionsRegExpUCoreValueMode {
 	transform = "transform",
 	parse = "parse"
 }
-export declare type IOptionsValue01 = false | ITSTypeAndStringLiteral<EnumOptionsRegExpUCoreValueMode.transform>;
-export declare type IOptionsValue02 = ITSTypeAndStringLiteral<EnumOptionsRegExpUCoreValueMode.parse> | IOptionsValue01;
+export type IOptionsValue01 = false | ITSTypeAndStringLiteral<EnumOptionsRegExpUCoreValueMode.transform>;
+export type IOptionsValue02 = ITSTypeAndStringLiteral<EnumOptionsRegExpUCoreValueMode.parse> | IOptionsValue01;
 /**
  * These options can be set to false or 'transform'.
  * When using 'transform',
@@ -159,6 +159,9 @@ export interface IOptionsRegExpUCoreV5 extends IOptionsRegExpUCoreV5Stable, IOpt
  * @see https://github.com/mathiasbynens/regexpu-core
  */
 export declare function rewritePatternV5(pattern: string, flags?: string, options?: IOptionsRegExpUCoreV5): string;
-export default rewritePatternV5;
+
+export {
+	rewritePatternV5 as default,
+};
 
 export {};

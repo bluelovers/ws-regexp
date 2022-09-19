@@ -3,7 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TABLE_SAFE = exports.TABLE = exports.TABLE_KEYS = void 0;
 /**
  * Code generated from @lazy-cjk/jp-table-comparison;
+ *
+
  * DO NOT EDIT.
+ *
+
  * @see {@link @lazy-cjk/jp-table-comparison}
  */
 exports.TABLE_KEYS = [
@@ -13,7 +17,11 @@ exports.TABLE_KEYS = [
 ];
 /**
  * Code generated from @lazy-cjk/jp-table-comparison;
+ *
+
  * DO NOT EDIT.
+ *
+
  * @see {@link @lazy-cjk/jp-table-comparison}
  */
 exports.TABLE = {
@@ -11016,7 +11024,11 @@ exports.TABLE = {
 };
 /**
  * Code generated from @lazy-cjk/jp-table-comparison;
+ *
+
  * DO NOT EDIT.
+ *
+
  * @see {@link @lazy-cjk/jp-table-comparison}
  */
 exports.TABLE_SAFE = {

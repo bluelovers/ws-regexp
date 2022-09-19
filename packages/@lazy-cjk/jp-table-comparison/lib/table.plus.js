@@ -3,7 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PLUS_TABLE_SAFE = exports.PLUS_TABLE = void 0;
 /**
  * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ *
+
  * DO NOT EDIT.
+ *
+
  * @see {@link ./table/core.ts}
  */
 exports.PLUS_TABLE = [
@@ -65,7 +69,11 @@ exports.PLUS_TABLE = [
 ];
 /**
  * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
+ *
+
  * DO NOT EDIT.
+ *
+
  * @see {@link ./table/core.ts}
  */
 exports.PLUS_TABLE_SAFE = [

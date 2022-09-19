@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`import check 1`] = `
-Array [
+[
   "wiki_s2t",
   "wiki_t2s",
   "wiki_s2t_v2",

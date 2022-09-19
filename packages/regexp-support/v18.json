@@ -1,21 +1,21 @@
 {
   "versions": {
-    "node": "18.7.0",
+    "node": "18.9.0",
     "ares": "1.18.1",
     "brotli": "1.0.9",
     "cldr": "41.0",
     "icu": "71.1",
-    "llhttp": "6.0.7",
+    "llhttp": "6.0.9",
     "modules": "108",
     "napi": "8",
     "nghttp2": "1.47.0",
     "nghttp3": "0.1.0-DEV",
     "ngtcp2": "0.1.0-DEV",
     "openssl": "3.0.5+quic",
-    "tz": "2022a",
+    "tz": "2022b",
     "unicode": "14.0",
     "uv": "1.43.0",
-    "v8": "10.2.154.13-node.9",
+    "v8": "10.2.154.15-node.12",
     "zlib": "1.2.11"
   },
   "support": {
