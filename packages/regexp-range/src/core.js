@@ -5,9 +5,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getOptions = exports.fillRange = exports.toRegExpString = exports.matchRange = exports.TABLE_RANGE = void 0;
 const tslib_1 = require("tslib");
-const fill_range_1 = tslib_1.__importDefault(require("fill-range"));
-const table_1 = tslib_1.__importDefault(require("./table"));
-exports.TABLE_RANGE = table_1.default;
+const fill_range_1 = tslib_1.__importDefault(require("@bluelovers/fill-range"));
+const regexp_range_table_1 = require("@lazy-cjk/regexp-range-table");
+Object.defineProperty(exports, "TABLE_RANGE", { enumerable: true, get: function () { return regexp_range_table_1.TABLE_RANGE; } });
 const array_hyper_unique_1 = require("array-hyper-unique");
 function matchRange(from, to, options = {}) {
     options = getOptions(options);
@@ -82,9 +82,28 @@ function fillRange(from, to, options = {}) {
 exports.fillRange = fillRange;
 function getOptions(options) {
     let opts = Object.assign({}, options);
-    opts.dataTables = opts.dataTables || table_1.default;
+    opts.dataTables = opts.dataTables || regexp_range_table_1.TABLE_RANGE;
     return opts;
 }
 exports.getOptions = getOptions;
+Object.defineProperty(matchRange, "__esModule", { value: true });
+Object.defineProperty(matchRange, 'matchRange', {
+    value: matchRange,
+});
+Object.defineProperty(matchRange, 'getOptions', {
+    value: getOptions,
+});
+Object.defineProperty(matchRange, 'toRegExpString', {
+    value: toRegExpString,
+});
+Object.defineProperty(matchRange, 'TABLE_RANGE', {
+    value: regexp_range_table_1.TABLE_RANGE,
+});
+Object.defineProperty(matchRange, 'fillRange', {
+    value: fillRange,
+});
+Object.defineProperty(matchRange, 'default', {
+    value: matchRange,
+});
 exports.default = matchRange;
 //# sourceMappingURL=core.js.map

@@ -2,8 +2,8 @@
  * Created by user on 2018/5/7/007.
  */
 
-import _fillRange from 'fill-range';
-import TABLE_RANGE from './table';
+import { default as _fillRange } from '@bluelovers/fill-range';
+import { TABLE_RANGE } from '@lazy-cjk/regexp-range-table';
 import { array_unique_overwrite } from 'array-hyper-unique';
 
 export { TABLE_RANGE }
@@ -159,5 +159,26 @@ export function getOptions(options: IOptions): IOptions
 
 	return opts;
 }
+
+Object.defineProperty(matchRange, "__esModule", { value: true });
+
+Object.defineProperty(matchRange, 'matchRange', {
+	value: matchRange,
+});
+Object.defineProperty(matchRange, 'getOptions', {
+	value: getOptions,
+});
+Object.defineProperty(matchRange, 'toRegExpString', {
+	value: toRegExpString,
+});
+Object.defineProperty(matchRange, 'TABLE_RANGE', {
+	value: TABLE_RANGE,
+});
+Object.defineProperty(matchRange, 'fillRange', {
+	value: fillRange,
+});
+Object.defineProperty(matchRange, 'default', {
+	value: matchRange,
+});
 
 export default matchRange;

@@ -1,7 +1,7 @@
 /**
  * Created by user on 2018/5/7/007.
  */
-import TABLE_RANGE from './table';
+import { TABLE_RANGE } from '@lazy-cjk/regexp-range-table';
 export { TABLE_RANGE };
 export type IOptions = {
     /**
