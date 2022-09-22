@@ -7,7 +7,7 @@ import {
 	ParserEventEmitter,
 	ParserEventEmitterEvent,
 } from 'regexp-parser-event';
-import regexpRange from 'regexp-range';
+import { matchRange as regexpRange } from 'regexp-range';
 import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
 import { fixOptions, getSettingOptions, IGetSettingOptions } from './mergeOptions';
 import { getRegExpSourcePattern } from './getSource';

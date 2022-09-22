@@ -100,7 +100,7 @@
     "regexp-helper": "^1.0.34",
     "regexp-parser-event": "^1.1.40",
     "regexp-parser-literal": "^1.1.33",
-    "regexp-range": "^1.0.40",
+    "regexp-range": "^2.0.0",
     "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

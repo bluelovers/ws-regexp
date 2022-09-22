@@ -2,7 +2,7 @@
  * Created by user on 2018/5/7/007.
  */
 
-import { default as _fillRange } from '@bluelovers/fill-range';
+import { fill as _fillRange } from '@bluelovers/fill-range';
 import { TABLE_RANGE } from '@lazy-cjk/regexp-range-table';
 import { array_unique_overwrite } from 'array-hyper-unique';
 
@@ -35,16 +35,16 @@ export type IOptions = {
 	findFirstOne?: boolean,
 }
 
-export function matchRange(from, to, options: IOptions & {
+export function matchRange(from: string | number, to: string | number, options: IOptions & {
 	createRegExpString: true,
 }): string
-export function matchRange(from, to, options?: IOptions): string[]
-export function matchRange(from, to, options: IOptions = {}): string[] | string
+export function matchRange(from: string | number, to: string | number, options?: IOptions): string[]
+export function matchRange(from: string | number, to: string | number, options: IOptions = {}): string[] | string
 {
 	options = getOptions(options);
 
-	let s = from;
-	let e = to;
+	let s = from as string;
+	let e = to as string;
 
 	let ret: string[] = [];
 
@@ -105,7 +105,7 @@ export function toRegExpString(arr: string[], warpClass?: boolean)
 	return warpClass ? '[' + s + ']' : s;
 }
 
-export function fillRange(from, to, options: IOptions = {}): string[]
+export function fillRange(from: string | number, to: string | number, options: IOptions = {}): string[]
 {
 	options = getOptions(options);
 
@@ -137,7 +137,7 @@ export function fillRange(from, to, options: IOptions = {}): string[]
 			ret = _fillRange(s, e);
 		}
 
-		if (!ret || !ret.length)
+		if (!ret?.length)
 		{
 			ret = null;
 		}

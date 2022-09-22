@@ -2,8 +2,8 @@
  * Created by user on 2018/5/7/007.
  */
 
-import matchRange, { TABLE_RANGE } from '..';
-//import matchRange, { TABLE_RANGE } from 'regexp-range';
+import { matchRange } from '../src';
+import { TABLE_RANGE } from '@lazy-cjk/regexp-range-table';
 
 console.dir(TABLE_RANGE);
 

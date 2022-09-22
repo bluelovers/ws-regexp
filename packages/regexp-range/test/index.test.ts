@@ -1,4 +1,4 @@
-import matchRange, { TABLE_RANGE } from '..';
+import { matchRange } from '../src';
 
 describe('default', (): void =>
 {

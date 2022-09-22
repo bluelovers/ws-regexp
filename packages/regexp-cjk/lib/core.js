@@ -1,12 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.setupParserEventEmitter = exports.coreHandler = exports.SymDefaults = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
-const tslib_1 = require("tslib");
 const conv_1 = require("./conv");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
 Object.defineProperty(exports, "ParserEventEmitterEvent", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitterEvent; } });
-const regexp_range_1 = tslib_1.__importDefault(require("regexp-range"));
+const regexp_range_1 = require("regexp-range");
 const mergeOptions_1 = require("./mergeOptions");
 const getSource_1 = require("./getSource");
 const zh_table_list_1 = require("@lazy-cjk/zh-table-list");
@@ -52,7 +51,7 @@ function coreHandler(str, flags = null, options = {}, ...argv) {
             ev.on("class_range" /* ParserEventEmitterEvent.class_range */, function (ast, ...argv) {
                 let s = ast.min.raw;
                 let e = ast.max.raw;
-                let ret = (0, regexp_range_1.default)(s, e, {
+                let ret = (0, regexp_range_1.matchRange)(s, e, {
                     createRegExpString: true,
                 });
                 if (ret) {
