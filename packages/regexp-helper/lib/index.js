@@ -4,11 +4,10 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.prototypeToFlags = exports.prototypeToFlagsArray = exports._getNativeFlags = exports.isNativeFlags = exports.stripNonNativeFlags = exports.getNativeFlags = exports.hasFlagsProp = exports.RE_NON_NATIVE_FLAGS = exports.RE_NATIVE_FLAGS = void 0;
-const tslib_1 = require("tslib");
-const regexp_support_1 = tslib_1.__importStar(require("regexp-support"));
-exports.RE_NATIVE_FLAGS = new RegExp(`[${regexp_support_1.default.nativeFlags}]`, 'g');
-exports.RE_NON_NATIVE_FLAGS = new RegExp(`[^${regexp_support_1.default.nativeFlags}]`, 'g');
-exports.hasFlagsProp = regexp_support_1.default.prototype.flags;
+const regexp_support_1 = require("regexp-support");
+exports.RE_NATIVE_FLAGS = new RegExp(`[${regexp_support_1.support.nativeFlags}]`, 'g');
+exports.RE_NON_NATIVE_FLAGS = new RegExp(`[^${regexp_support_1.support.nativeFlags}]`, 'g');
+exports.hasFlagsProp = regexp_support_1.support.prototype.flags;
 function getNativeFlags(target) {
     let flags;
     if (target instanceof RegExp) {
@@ -44,11 +43,8 @@ function _getNativeFlags(regex) {
         /\/([a-z]*)$/i.exec(RegExp.prototype.toString.call(regex))[1];
 }
 exports._getNativeFlags = _getNativeFlags;
-function prototypeToFlagsArray(inputObject, 
-// @ts-ignore
-flagMap = regexp_support_1.FlagsName) {
-    return Object
-        .keys(flagMap)
+function prototypeToFlagsArray(inputObject, flagMap = regexp_support_1.FlagsName) {
+    return Object.keys(flagMap)
         .reduce(function (a, name) {
         if (inputObject[name] === true
             && (name in flagMap)
@@ -60,9 +56,7 @@ flagMap = regexp_support_1.FlagsName) {
         .sort();
 }
 exports.prototypeToFlagsArray = prototypeToFlagsArray;
-function prototypeToFlags(inputObject, 
-// @ts-ignore
-flagMap = regexp_support_1.FlagsName) {
+function prototypeToFlags(inputObject, flagMap = regexp_support_1.FlagsName) {
     return prototypeToFlagsArray(inputObject, flagMap)
         .join('');
 }
