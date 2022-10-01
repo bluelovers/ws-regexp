@@ -1,10 +1,7 @@
-/**
- * Created by user on 2018/5/7/007.
- */
 export declare const TABLE_RANGE: {
-	chinese: string[][];
-	chinese2: string[][];
-	circle: string[][];
+	readonly chinese: string[][];
+	readonly chinese2: string[][];
+	readonly circle: string[][];
 };
 export type IOptions = {
 	/**

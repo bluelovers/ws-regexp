@@ -53,6 +53,7 @@
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "posttest": "yarn run build",
     "build": "yarn run build:tsdx && yarn run build:dts:bundle",
     "build:dts:bundle": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --inline-declare-global & echo build:dts:bundle",
@@ -82,7 +83,7 @@
   "dependencies": {
     "@bluelovers/fill-range": "^7.0.2",
     "@lazy-cjk/regexp-range-table": "^1.0.0",
-    "array-hyper-unique": "^2.0.8"
+    "array-hyper-unique": "^2.1.2"
   },
   "packageManager": "yarn@1.22.19",
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

@@ -40,6 +40,7 @@
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "build": "yarn run build:download && yarn run build:unzip && yarn run build:data",
     "build:cache": "ts-node ./test/script/build-cache.ts",
     "build:data": "yarn run build:cache && yarn run build:zhuyin",

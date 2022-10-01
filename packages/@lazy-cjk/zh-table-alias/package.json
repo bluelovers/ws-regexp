@@ -66,6 +66,7 @@
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "prebuild": "ynpx build-ts-file -- ./test/raw/raw.ts",
     "build": "ts-node ./test/script/build-cache.ts",
     "build:commit": "ts-node ./test/script/build-commit.ts",
@@ -83,7 +84,7 @@
   "dependencies": {
     "@lazy-cjk/jp-table-alias": "^1.0.38",
     "@lazy-cjk/zh-convert": "^1.0.44",
-    "array-hyper-unique": "^2.0.8",
+    "array-hyper-unique": "^2.1.2",
     "deepmerge-plus": "^2.1.3",
     "ts-type": ">=2",
     "tslib": ">=2"

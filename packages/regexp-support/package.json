@@ -44,6 +44,7 @@
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "posttest": "git add ./test/log/* && git commit -m \"chore: new env test\" ./test/log/ & echo posttest",
     "build:report": "node ./test/flags.js",
     "preversion": "yarn run test",
@@ -53,7 +54,7 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "sort-object-keys2": "^2.0.3",
+    "sort-object-keys2": "^3.0.2",
     "tslib": ">=2"
   },
   "devDependencies": {

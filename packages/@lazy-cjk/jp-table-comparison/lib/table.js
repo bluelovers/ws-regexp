@@ -3,11 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TABLE_SAFE = exports.TABLE = void 0;
 /**
  * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
- *
-
  * DO NOT EDIT.
- *
-
  * @see {@link ./table/core.ts}
  */
 exports.TABLE = [
@@ -760,11 +756,7 @@ exports.TABLE = [
 ];
 /**
  * Code generated from @lazy-cjk/jp-table-comparison/lib/table/core.ts;
- *
-
  * DO NOT EDIT.
- *
-
  * @see {@link ./table/core.ts}
  */
 exports.TABLE_SAFE = [
