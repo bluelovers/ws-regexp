@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk-with-plugin-enabled",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "zhRegExp from all plugin enabled with unsafe options",
   "keywords": [
     "big5",
@@ -113,9 +113,9 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "regexp-cjk": "^3.3.106",
-    "regexp-cjk-plugin-escape-unicode-property": "^1.0.33",
-    "regexp-cjk-plugin-extra": "^1.0.41",
+    "regexp-cjk": "^3.3.107",
+    "regexp-cjk-plugin-escape-unicode-property": "^1.0.34",
+    "regexp-cjk-plugin-extra": "^1.0.42",
     "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/clone-regexp",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/clone-regexp#readme",
   "bugs": {
@@ -29,7 +29,7 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "@regexp-cjk/rewrite-flags": "^1.0.17",
+    "@regexp-cjk/rewrite-flags": "^1.0.18",
     "clone-regexp": "<3 >=2.2",
     "tslib": ">=2"
   },

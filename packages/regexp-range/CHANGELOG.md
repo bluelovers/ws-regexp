@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.40...regexp-range@2.0.1) (2022-10-16)
+
+
+### BREAKING CHANGES
+
+* regexp-range
+
+
+
+### 📦　Code Refactoring
+
+* regexp-range ([2e1c91b](https://github.com/bluelovers/ws-regexp/commit/2e1c91bb3a0c4ac6ebfa01c4770c76af06e24b7b))
+
+
+### 📚　Documentation
+
+* update meta and deps ([333919c](https://github.com/bluelovers/ws-regexp/commit/333919c0bfbed688463fa4850d47ec29cbf0a1a2))
+
+
+### 🚨　Tests
+
+* update snapshot ([b305f86](https://github.com/bluelovers/ws-regexp/commit/b305f86986b073c1504fc842d019a61453a69741))
+
+
+### 🛠　Build System
+
+* update typescript ([8a56808](https://github.com/bluelovers/ws-regexp/commit/8a568085c5047a1ae2fa9f79421b15a405c9c489))
+
+
+### 📌　Dependencies
+
+* update deps ([84eb794](https://github.com/bluelovers/ws-regexp/commit/84eb7941e3fbd630fde0b2996fb5e2f9be101179))
+
+
+### 🔖　Miscellaneous
+
+* . ([b4e9e19](https://github.com/bluelovers/ws-regexp/commit/b4e9e1991320d9407642002ff6568c69443a7a74))
+* . ([229f772](https://github.com/bluelovers/ws-regexp/commit/229f772b2f011dc066b127d4a1d9fcb379156395))
+
+
+
 ## [1.0.40](https://github.com/bluelovers/ws-regexp/compare/regexp-range@1.0.39...regexp-range@1.0.40) (2022-02-04)
 
 

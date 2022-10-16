@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.47](https://github.com/bluelovers/ws-regexp/compare/regexp-support@1.0.46...regexp-support@1.0.47) (2022-10-16)
+
+
+
+### 📚　Documentation
+
+* update meta and deps ([333919c](https://github.com/bluelovers/ws-regexp/commit/333919c0bfbed688463fa4850d47ec29cbf0a1a2))
+
+
+### 🚨　Tests
+
+* update snapshot ([b305f86](https://github.com/bluelovers/ws-regexp/commit/b305f86986b073c1504fc842d019a61453a69741))
+
+
+### ♻️　Chores
+
+* new env test ([eff3806](https://github.com/bluelovers/ws-regexp/commit/eff3806bafc8033308f65dc6400256fe96db1a5b))
+* new env test ([2fd143b](https://github.com/bluelovers/ws-regexp/commit/2fd143bfe34c0b97b529aa8ceeb7e8204357165d))
+* new env test ([6d5bec2](https://github.com/bluelovers/ws-regexp/commit/6d5bec2fc0fe924aa486db20dcab780e2e15bfdb))
+
+
+### 📌　Dependencies
+
+* update deps ([2811845](https://github.com/bluelovers/ws-regexp/commit/28118450fad02f8883bf328a98b2166f7b6b3fc3))
+* update deps ([84eb794](https://github.com/bluelovers/ws-regexp/commit/84eb7941e3fbd630fde0b2996fb5e2f9be101179))
+
+
+
 ## [1.0.46](https://github.com/bluelovers/regexp-support/compare/regexp-support@1.0.45...regexp-support@1.0.46) (2022-02-04)
 
 

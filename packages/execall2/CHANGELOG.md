@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.22](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.21...execall2@2.0.22) (2022-10-16)
+
+
+
+### 📦　Code Refactoring
+
+* update import ([1c65802](https://github.com/bluelovers/ws-regexp/commit/1c658029a945b07193d30d26bddafd1ba23944a5))
+
+
+### 📚　Documentation
+
+* update meta and deps ([333919c](https://github.com/bluelovers/ws-regexp/commit/333919c0bfbed688463fa4850d47ec29cbf0a1a2))
+
+
+### 🚨　Tests
+
+* update snapshot ([b305f86](https://github.com/bluelovers/ws-regexp/commit/b305f86986b073c1504fc842d019a61453a69741))
+
+
+### 🛠　Build System
+
+* update typescript ([8a56808](https://github.com/bluelovers/ws-regexp/commit/8a568085c5047a1ae2fa9f79421b15a405c9c489))
+
+
+### 📌　Dependencies
+
+* update deps ([84eb794](https://github.com/bluelovers/ws-regexp/commit/84eb7941e3fbd630fde0b2996fb5e2f9be101179))
+
+
+
 ## [2.0.21](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.20...execall2@2.0.21) (2022-02-04)
 
 **Note:** Version bump only for package execall2

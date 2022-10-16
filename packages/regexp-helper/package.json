@@ -1,6 +1,6 @@
 {
   "name": "regexp-helper",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "regexp-helper",
   "keywords": [
     "check",
@@ -52,8 +52,8 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "regexp-helper-core": "^1.0.19",
-    "regexp-support": "^1.0.46",
+    "regexp-helper-core": "^1.0.20",
+    "regexp-support": "^1.0.47",
     "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

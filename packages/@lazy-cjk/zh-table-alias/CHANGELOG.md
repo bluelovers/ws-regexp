@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.59](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.58...@lazy-cjk/zh-table-alias@1.0.59) (2022-10-16)
+
+
+
+### 📚　Documentation
+
+* update meta and deps ([333919c](https://github.com/bluelovers/ws-regexp/commit/333919c0bfbed688463fa4850d47ec29cbf0a1a2))
+
+
+### 🚨　Tests
+
+* update snapshot ([b305f86](https://github.com/bluelovers/ws-regexp/commit/b305f86986b073c1504fc842d019a61453a69741))
+
+
+### 🛠　Build System
+
+* update typescript ([8a56808](https://github.com/bluelovers/ws-regexp/commit/8a568085c5047a1ae2fa9f79421b15a405c9c489))
+* **zh-table-alias:** zh-table-alias table_jp:  , table_plus ([76e3987](https://github.com/bluelovers/ws-regexp/commit/76e39875d9b316a910b0bf1d5490d37901ac7afd))
+
+
+### 📌　Dependencies
+
+* update deps ([2811845](https://github.com/bluelovers/ws-regexp/commit/28118450fad02f8883bf328a98b2166f7b6b3fc3))
+* update deps ([84eb794](https://github.com/bluelovers/ws-regexp/commit/84eb7941e3fbd630fde0b2996fb5e2f9be101179))
+
+
+
 ## [1.0.58](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.57...@lazy-cjk/zh-table-alias@1.0.58) (2022-02-04)
 
 
