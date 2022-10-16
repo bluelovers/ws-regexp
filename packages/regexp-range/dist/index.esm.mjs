@@ -6,55 +6,39 @@ export { TABLE_RANGE } from "@lazy-cjk/regexp-range-table";
 
 import { array_unique_overwrite as n } from "array-hyper-unique";
 
-function matchRange(e, t, a = {}) {
-  a = getOptions(a);
-  let r = e, g = t, i = [], l = !!a.findFirstOne;
-  return Object.keys(a.dataTables).some((function(e) {
+function matchRange(e, t, r = {}) {
+  r = getOptions(r);
+  let a = e, i = t, l = [], g = !!r.findFirstOne;
+  return Object.keys(r.dataTables).some((function(e) {
     let t;
-    if (a.dataTables[e].some((function(e) {
-      let n = e.indexOf(r), a = e.indexOf(g, n);
-      if (-1 !== n && -1 !== a) return i.push(...e.slice(n, a + 1)), t = !0, l;
+    if (r.dataTables[e].some((function(e) {
+      let n = e.indexOf(a), r = e.indexOf(i, n);
+      if (-1 !== n && -1 !== r) return l.push(...e.slice(n, r + 1)), t = !0, g;
     })), t) return !0;
-  })), i && i.length ? (n(i), a.createRegExpString ? toRegExpString(i, a.createRegExpClass) : i) : null;
+  })), l && l.length ? (n(l), r.createRegExpString ? toRegExpString(l, r.createRegExpClass) : l) : null;
 }
 
 function toRegExpString(e, t) {
-  if (1 == e.length) return e[0];
+  if (1 === e.length) return e[0];
   let n = e.join("");
   return t ? "[" + n + "]" : n;
 }
 
-function fillRange(t, n, a = {}) {
-  let r = t, g = n, i = null;
-  if (i = matchRange(t, n, a = getOptions(a)), !i && (a.arrayMode || 1 == String(r).length && 1 == String(g).length)) {
-    var l;
+function fillRange(t, n, r = {}) {
+  let a = t, i = n, l = null;
+  if (l = matchRange(t, n, r = getOptions(r)), !l && (r.arrayMode || 1 === String(a).length && 1 === String(i).length)) {
+    var g;
     let t;
-    t = "string" != typeof r || "string" != typeof g || r.charCodeAt(0) <= g.charCodeAt(0), 
-    t && (i = e(r, g)), null !== (l = i) && void 0 !== l && l.length || (i = null);
+    t = "string" != typeof a || "string" != typeof i || a.charCodeAt(0) <= i.charCodeAt(0), 
+    t && (l = e(a, i)), null !== (g = l) && void 0 !== g && g.length || (l = null);
   }
-  return Array.isArray(i) && (i = i.map((e => String(e)))), i;
+  return Array.isArray(l) && (l = l.map((e => String(e)))), l;
 }
 
 function getOptions(e) {
   let n = Object.assign({}, e);
   return n.dataTables = n.dataTables || t, n;
 }
-
-Object.defineProperty(matchRange, "__esModule", {
-  value: !0
-}), Object.defineProperty(matchRange, "matchRange", {
-  value: matchRange
-}), Object.defineProperty(matchRange, "getOptions", {
-  value: getOptions
-}), Object.defineProperty(matchRange, "toRegExpString", {
-  value: toRegExpString
-}), Object.defineProperty(matchRange, "TABLE_RANGE", {
-  value: t
-}), Object.defineProperty(matchRange, "fillRange", {
-  value: fillRange
-}), Object.defineProperty(matchRange, "default", {
-  value: matchRange
-});
 
 export { matchRange as default, fillRange, getOptions, matchRange, toRegExpString };
 //# sourceMappingURL=index.esm.mjs.map

@@ -95,7 +95,7 @@ export function matchRange(from: string | number, to: string | number, options: 
 
 export function toRegExpString(arr: string[], warpClass?: boolean)
 {
-	if (arr.length == 1)
+	if (arr.length === 1)
 	{
 		return arr[0];
 	}
@@ -109,18 +109,18 @@ export function fillRange(from: string | number, to: string | number, options: I
 {
 	options = getOptions(options);
 
-	let s =from;
+	let s = from;
 	let e = to;
 
 	let ret: string[] = null;
 
 	ret = matchRange(from, to, options);
 
-	if (!ret && (options.arrayMode || String(s).length == 1 && String(e).length == 1))
+	if (!ret && (options.arrayMode || String(s).length === 1 && String(e).length === 1))
 	{
 		let _ok: boolean;
 
-		if (typeof s == 'string' && typeof e == 'string')
+		if (typeof s === 'string' && typeof e === 'string')
 		{
 			let a = s.charCodeAt(0);
 			let b = e.charCodeAt(0);
@@ -160,25 +160,26 @@ export function getOptions(options: IOptions): IOptions
 	return opts;
 }
 
-Object.defineProperty(matchRange, "__esModule", { value: true });
+// @ts-ignore
+if (process.env.TSDX_FORMAT !== 'esm')
+{
+	Object.defineProperty(matchRange, "__esModule", { value: true });
 
-Object.defineProperty(matchRange, 'matchRange', {
-	value: matchRange,
-});
-Object.defineProperty(matchRange, 'getOptions', {
-	value: getOptions,
-});
-Object.defineProperty(matchRange, 'toRegExpString', {
-	value: toRegExpString,
-});
-Object.defineProperty(matchRange, 'TABLE_RANGE', {
-	value: TABLE_RANGE,
-});
-Object.defineProperty(matchRange, 'fillRange', {
-	value: fillRange,
-});
-Object.defineProperty(matchRange, 'default', {
-	value: matchRange,
-});
+	Object.defineProperty(matchRange, 'matchRange', { value: matchRange });
+	Object.defineProperty(matchRange, 'default', { value: matchRange });
+
+	Object.defineProperty(matchRange, 'getOptions', {
+		value: getOptions,
+	});
+	Object.defineProperty(matchRange, 'toRegExpString', {
+		value: toRegExpString,
+	});
+	Object.defineProperty(matchRange, 'TABLE_RANGE', {
+		value: TABLE_RANGE,
+	});
+	Object.defineProperty(matchRange, 'fillRange', {
+		value: fillRange,
+	});
+}
 
 export default matchRange;
