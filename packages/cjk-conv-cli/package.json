@@ -65,13 +65,13 @@
   "dependencies": {
     "@bluelovers/fast-glob": "^3.0.4",
     "@lazy-cjk/zh-convert": "^1.0.44",
-    "array-hyper-unique": "^2.1.2",
+    "array-hyper-unique": "^2.1.4",
     "bluebird": "^3.7.2",
-    "crlf-normalize": "^1.0.15",
+    "crlf-normalize": "^1.0.16",
     "debug-color2": "^1.3.2",
     "diff": "^5.1.0",
     "fs-extra": "^10.1.0",
-    "fs-iconv": "^3.1.15",
+    "fs-iconv": "^3.1.17",
     "tslib": ">=2",
     "yargs": "^17.6.0"
   },

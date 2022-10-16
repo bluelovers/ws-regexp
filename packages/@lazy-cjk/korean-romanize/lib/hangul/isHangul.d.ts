@@ -6,7 +6,7 @@
  * @param {*} char
  * @param {blocks}
  */
-export declare function isHangul(char?: any, blocks?: [string, number[] | {
+export declare function isHangul(char?: any, blocks?: [string, typeof import("./unicode/blocks") | number[] | {
     CHOSEONG: number[];
     RIEUL_JONGSEONG: number[];
     JUNGSEONG: number[];
@@ -15,5 +15,5 @@ export declare function isHangul(char?: any, blocks?: [string, number[] | {
     RIEUL: number[];
     JAEUM: number[];
     MOEUM: number[];
-} | typeof import("./unicode/blocks")][]): string | false;
+}][]): string | false;
 export default isHangul;

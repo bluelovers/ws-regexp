@@ -84,9 +84,9 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.1.2",
+    "array-hyper-unique": "^2.1.4",
     "tslib": ">=2",
-    "uni-string": "^2.0.1"
+    "uni-string": "^2.0.2"
   },
   "publishConfig": {
     "access": "public"

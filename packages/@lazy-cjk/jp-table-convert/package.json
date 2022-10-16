@@ -84,7 +84,7 @@
     "@lazy-cjk/jp-table-comparison": "^1.0.28",
     "regexp-helper": "^1.0.34",
     "tslib": ">=2",
-    "uni-string": "^2.0.1"
+    "uni-string": "^2.0.2"
   },
   "publishConfig": {
     "access": "public"

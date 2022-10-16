@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "@lazy-cjk/jp-table-convert": "^1.0.43",
-    "array-hyper-unique": "^2.1.2",
+    "array-hyper-unique": "^2.1.4",
     "tslib": ">=2"
   },
   "publishConfig": {

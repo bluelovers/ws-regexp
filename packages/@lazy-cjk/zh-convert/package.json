@@ -82,10 +82,10 @@
   },
   "dependencies": {
     "@lazy-cjk/static-build-zh-convert": "^1.0.47",
-    "array-hyper-unique": "^2.1.2",
+    "array-hyper-unique": "^2.1.4",
     "regexp-helper": "^1.0.34",
     "tslib": ">=2",
-    "uni-string": "^2.0.1"
+    "uni-string": "^2.0.2"
   },
   "publishConfig": {
     "access": "public"

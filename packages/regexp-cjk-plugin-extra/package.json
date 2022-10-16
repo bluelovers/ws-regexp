@@ -82,11 +82,11 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.1.2",
+    "array-hyper-unique": "^2.1.4",
     "lodash": "^4.17.21",
-    "str-util": "^2.3.35",
+    "str-util": "^2.3.36",
     "tslib": ">=2",
-    "uni-string": "^2.0.1"
+    "uni-string": "^2.0.2"
   },
   "peerDependencies": {
     "@lazy-cjk/jp-table-voice": "*",
