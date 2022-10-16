@@ -1,4 +1,4 @@
-import Trie from './lib/trie';
+import { Trie } from './lib/trie';
 /**
  * Generates a regular expression that matches the given input strings.
  * @param {Array<string>} inputs

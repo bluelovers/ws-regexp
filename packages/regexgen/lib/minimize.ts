@@ -1,8 +1,8 @@
-import Map from './map';
+import { DefaultMap as Map } from './map';
 
-import Set from './set';
+import { ExtendedSet as Set } from './set';
 
-import State from './state';
+import { State } from './state';
 
 /**
  * Implements Hopcroft's DFA minimization algorithm.

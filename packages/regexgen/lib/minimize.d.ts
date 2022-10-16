@@ -1,4 +1,4 @@
-import State from './state';
+import { State } from './state';
 /**
  * Implements Hopcroft's DFA minimization algorithm.
  * https://en.wikipedia.org/wiki/DFA_minimization#Hopcroft.27s_algorithm

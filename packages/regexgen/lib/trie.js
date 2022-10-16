@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Trie = void 0;
-const tslib_1 = require("tslib");
-const state_1 = tslib_1.__importDefault(require("./state"));
-const minimize_1 = tslib_1.__importDefault(require("./minimize"));
-const regex_1 = tslib_1.__importDefault(require("./regex"));
+const state_1 = require("./state");
+const minimize_1 = require("./minimize");
+const regex_1 = require("./regex");
 /**
  * A Trie represents a set of strings in a tree data structure
  * where each edge represents a single character.
@@ -13,7 +12,7 @@ const regex_1 = tslib_1.__importDefault(require("./regex"));
 class Trie {
     constructor() {
         this.alphabet = new Set;
-        this.root = new state_1.default;
+        this.root = new state_1.State;
     }
     /**
      * Adds the given string to the trie.
@@ -41,7 +40,7 @@ class Trie {
      * @return {State} - the starting state of the minimal DFA
      */
     minimize() {
-        return (0, minimize_1.default)(this.root);
+        return (0, minimize_1.minimize)(this.root);
     }
     /**
      * Returns a regex pattern that matches the strings in the trie.
@@ -49,7 +48,7 @@ class Trie {
      * @return {string} pattern - The regex pattern.
      */
     toString(flags) {
-        return (0, regex_1.default)(this.minimize(), flags);
+        return (0, regex_1.toRegex)(this.minimize(), flags);
     }
     /**
      * Returns a regex that matches the strings in the trie.

@@ -1,4 +1,4 @@
-import State from './state';
+import { State } from './state';
 
 /**
  * This ES6 Map subclass calls the getter function passed to

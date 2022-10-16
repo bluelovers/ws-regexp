@@ -1,4 +1,4 @@
-import Map from './map';
+import { DefaultMap as Map } from './map';
 
 /**
  * Represents a state in a DFA.

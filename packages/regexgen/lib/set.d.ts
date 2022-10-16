@@ -1,4 +1,4 @@
-import State from './state';
+import { State } from './state';
 /**
  * This class extends the native ES6 Set class with some additional methods
  */

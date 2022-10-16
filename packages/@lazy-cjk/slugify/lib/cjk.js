@@ -1,12 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.slugifyCjk = exports._replaceCjk = void 0;
-const tslib_1 = require("tslib");
 const core_1 = require("./core");
 const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
-const romanize_1 = tslib_1.__importDefault(require("@lazy-cjk/japanese/lib/romanize"));
+const romanize_1 = require("@lazy-cjk/japanese/lib/romanize");
 const kana_1 = require("@lazy-cjk/japanese/lib/data/kana");
-const korean_romanize_1 = tslib_1.__importDefault(require("@lazy-cjk/korean-romanize"));
+const korean_romanize_1 = require("@lazy-cjk/korean-romanize");
 const chinese_1 = require("./cjk/chinese");
 const REGEXP_TEST = new RegExp((0, cjk_conv_1._re_cjk_conv)('u').source, 'ug');
 const REGEXP_TEST_JP = new RegExp('(?:(?:' + kana_1.katakanaRegex.source + ')|(?:' + kana_1.hiraganaRegex.source + '))+', 'ug');
@@ -22,13 +21,13 @@ function _replaceCjk(text, options) {
         return s;
     });
     text = text.replace(REGEXP_TEST_JP, (s) => {
-        let n = (0, romanize_1.default)(s);
+        let n = (0, romanize_1.romanize)(s);
         if (n !== '') {
             return n;
         }
         return s;
     });
-    text = (0, korean_romanize_1.default)(text);
+    text = (0, korean_romanize_1.romanize)(text);
     return text;
 }
 exports._replaceCjk = _replaceCjk;

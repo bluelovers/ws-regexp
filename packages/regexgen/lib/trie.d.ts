@@ -1,4 +1,4 @@
-import State from './state';
+import { State } from './state';
 /**
  * A Trie represents a set of strings in a tree data structure
  * where each edge represents a single character.

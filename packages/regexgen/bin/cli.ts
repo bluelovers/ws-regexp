@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import regexgen from '../';
+import { regexgen } from '../';
 
 let args = process.argv.slice(2);
 let flags = '';

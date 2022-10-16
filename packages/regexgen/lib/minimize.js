@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.minimize = void 0;
-const tslib_1 = require("tslib");
-const map_1 = tslib_1.__importDefault(require("./map"));
-const set_1 = tslib_1.__importDefault(require("./set"));
-const state_1 = tslib_1.__importDefault(require("./state"));
+const map_1 = require("./map");
+const set_1 = require("./set");
+const state_1 = require("./state");
 /**
  * Implements Hopcroft's DFA minimization algorithm.
  * https://en.wikipedia.org/wiki/DFA_minimization#Hopcroft.27s_algorithm
@@ -13,21 +12,21 @@ const state_1 = tslib_1.__importDefault(require("./state"));
  * @return {State} - the new initial state
  */
 function minimize(root) {
-    let states = new set_1.default(root.visit());
+    let states = new set_1.ExtendedSet(root.visit());
     let finalStates = states.filter(s => s.accepting);
     // Create a map of incoming transitions to each state, grouped by character.
-    let transitions = new map_1.default(k => new map_1.default(k => new set_1.default));
+    let transitions = new map_1.DefaultMap(k => new map_1.DefaultMap(k => new set_1.ExtendedSet));
     for (let s of states) {
         for (let [t, st] of s.transitions) {
             transitions.get(st).get(t).add(s);
         }
     }
-    let P = new set_1.default([finalStates, states.difference(finalStates)]);
-    let W = new set_1.default(P);
+    let P = new set_1.ExtendedSet([finalStates, states.difference(finalStates)]);
+    let W = new set_1.ExtendedSet(P);
     while (W.size > 0) {
         let A = W.shift();
         // Collect states that have transitions leading to states in A, grouped by character.
-        let t = new map_1.default(k => new set_1.default);
+        let t = new map_1.DefaultMap(k => new set_1.ExtendedSet);
         for (let s of A) {
             for (let [T, X] of transitions.get(s)) {
                 // @ts-ignore
@@ -61,7 +60,7 @@ function minimize(root) {
     }
     // Each set S in P now represents a state in the minimized DFA.
     // Build the new states and transitions.
-    let newStates = new map_1.default(k => new state_1.default);
+    let newStates = new map_1.DefaultMap(k => new state_1.State);
     let initial = null;
     for (let S of P) {
         let first = S.first();

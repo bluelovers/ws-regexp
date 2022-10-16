@@ -1,5 +1,5 @@
 import { Alternation, CharClass, Concatenation, Repetition, Literal } from './ast';
-import State from './state';
+import { State } from './state';
 /**
  * Implements Brzozowski's algebraic method to convert a DFA into a regular
  * expression pattern.

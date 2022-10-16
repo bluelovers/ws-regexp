@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.State = void 0;
-const tslib_1 = require("tslib");
-const map_1 = tslib_1.__importDefault(require("./map"));
+const map_1 = require("./map");
 /**
  * Represents a state in a DFA.
  */
 class State {
     constructor() {
         this.accepting = false;
-        this.transitions = new map_1.default(k => new State);
+        this.transitions = new map_1.DefaultMap(k => new State);
     }
     /**
      * A generator that yields all states in the subtree

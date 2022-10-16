@@ -1,9 +1,9 @@
 import { IOptionsSlugify } from './types';
 import { _core } from './core';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
-import romanize_jp from '@lazy-cjk/japanese/lib/romanize';
+import { romanize as romanize_jp } from '@lazy-cjk/japanese/lib/romanize';
 import { katakanaRegex, hiraganaRegex } from '@lazy-cjk/japanese/lib/data/kana';
-import romanize_kr from '@lazy-cjk/korean-romanize';
+import { romanize as romanize_kr } from '@lazy-cjk/korean-romanize';
 import { newZhPinyinFn } from './cjk/chinese';
 
 const REGEXP_TEST = new RegExp(_re_cjk_conv('u').source, 'ug');
