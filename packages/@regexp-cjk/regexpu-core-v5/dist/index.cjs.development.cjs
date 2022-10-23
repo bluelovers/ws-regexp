@@ -9,12 +9,10 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var _rewritePattern__default = /*#__PURE__*/_interopDefaultLegacy(_rewritePattern);
 
 exports.EnumOptionsRegExpUCoreValueMode = void 0;
-
 (function (EnumOptionsRegExpUCoreValueMode) {
   EnumOptionsRegExpUCoreValueMode["transform"] = "transform";
   EnumOptionsRegExpUCoreValueMode["parse"] = "parse";
 })(exports.EnumOptionsRegExpUCoreValueMode || (exports.EnumOptionsRegExpUCoreValueMode = {}));
-
 function rewritePatternV5(...argv) {
   return _rewritePattern__default["default"](...argv);
 }

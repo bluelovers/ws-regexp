@@ -1,2 +1,21 @@
-"use strict";function _interopDefaultLegacy(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var e,r=_interopDefaultLegacy(require("regexpu-core"));function rewritePatternV5(...e){return r.default(...e)}exports.EnumOptionsRegExpUCoreValueMode=void 0,(e=exports.EnumOptionsRegExpUCoreValueMode||(exports.EnumOptionsRegExpUCoreValueMode={})).transform="transform",e.parse="parse",exports.default=rewritePatternV5,exports.rewritePatternV5=rewritePatternV5;
+"use strict";
+
+function _interopDefaultLegacy(e) {
+  return e && "object" == typeof e && "default" in e ? e : {
+    default: e
+  };
+}
+
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+
+var e, r = _interopDefaultLegacy(require("regexpu-core"));
+
+function rewritePatternV5(...e) {
+  return r.default(...e);
+}
+
+exports.EnumOptionsRegExpUCoreValueMode = void 0, (e = exports.EnumOptionsRegExpUCoreValueMode || (exports.EnumOptionsRegExpUCoreValueMode = {})).transform = "transform", 
+e.parse = "parse", exports.default = rewritePatternV5, exports.rewritePatternV5 = rewritePatternV5;
 //# sourceMappingURL=index.cjs.production.min.cjs.map

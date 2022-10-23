@@ -25,7 +25,6 @@ function listRawToRange(list_range_raw) {
   return list_range_raw.reduce(function (a, data) {
     let c = data.reduce(function (a2, v) {
       let s;
-
       if (typeof v == 'number') {
         s = String.fromCharCode(v);
       } else if (typeof v == 'string') {
@@ -41,13 +40,11 @@ function listRawToRange(list_range_raw) {
       } else {
         throw new TypeError();
       }
-
       if (Array.isArray(s)) {
         a2 = a2.concat(s);
       } else {
         a2.push(s);
       }
-
       return a2;
     }, []);
     a.push(c);
