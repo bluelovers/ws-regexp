@@ -37,7 +37,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
