@@ -52,7 +52,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "regexp-helper-core": "^1.0.20",
+    "regexp-helper-core": "^2.0.0",
     "regexp-support": "^1.0.47",
     "tslib": ">=2"
   },
