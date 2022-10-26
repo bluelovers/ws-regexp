@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.49](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/static-build-zh-convert@1.0.48...@lazy-cjk/static-build-zh-convert@1.0.49) (2022-10-26)
+
+**Note:** Version bump only for package @lazy-cjk/static-build-zh-convert
+
+
+
+
+
 ## [1.0.48](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/static-build-zh-convert@1.0.47...@lazy-cjk/static-build-zh-convert@1.0.48) (2022-10-16)
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-regexp/compare/regexp-helper-core@1.0.20...regexp-helper-core@2.0.2) (2022-10-26)
+
+
+
+### 📦　Code Refactoring
+
+* use tsdx ([99e8c37](https://github.com/bluelovers/ws-regexp/commit/99e8c3710065df6c4464465ab07ba5f3f4ad0306))
+
+
+### 🔖　Miscellaneous
+
+* . ([4089709](https://github.com/bluelovers/ws-regexp/commit/408970963472ab4f3016ab389383965e8c542b59))
+* . ([621aac7](https://github.com/bluelovers/ws-regexp/commit/621aac7839f3bd650e7cab1bb8519b5cdcd96d55))
+* . ([41fbf52](https://github.com/bluelovers/ws-regexp/commit/41fbf52f2f202a48a6a809598df93239ba0f86da))
+
+
+
 ## [2.0.1](https://github.com/bluelovers/ws-regexp/compare/regexp-helper-core@1.0.20...regexp-helper-core@2.0.1) (2022-10-26)
 
 

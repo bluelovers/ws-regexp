@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.108](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.107...regexp-cjk@3.3.108) (2022-10-26)
+
+
+### BREAKING CHANGES
+
+* remove isRegExp
+
+
+
+### 📦　Code Refactoring
+
+* remove isRegExp ([d1978ba](https://github.com/bluelovers/ws-regexp/commit/d1978ba1e8e3b379a362ac6efe61e77dd423d01d))
+
+
+### 🔖　Miscellaneous
+
+* . ([66feffa](https://github.com/bluelovers/ws-regexp/commit/66feffa0a8fcae25a3116d7da3fc6d30fb38c433))
+
+
+
 ## [3.3.107](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.106...regexp-cjk@3.3.107) (2022-10-16)
 
 

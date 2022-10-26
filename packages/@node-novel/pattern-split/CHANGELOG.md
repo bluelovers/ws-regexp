@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.70](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.69...@node-novel/pattern-split@1.1.70) (2022-10-26)
+
+
+
+### 📌　Dependencies
+
+* update deps ([fa10737](https://github.com/bluelovers/ws-regexp/commit/fa10737cd795d5a3cd08ba608b3bc41a66080502))
+
+
+
 ## [1.1.69](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.68...@node-novel/pattern-split@1.1.69) (2022-10-16)
 
 
