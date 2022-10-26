@@ -20,7 +20,7 @@ import {
 	SymDefaults,
 } from './lib/core';
 import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
-import mergeOptions, { getSettingOptions, mergeOptions2 } from './lib/mergeOptions';
+import { mergeOptions, getSettingOptions, mergeOptions2 } from './lib/mergeOptions';
 import { parseRegularExpressionString } from './lib/getSource';
 export * from './version';
 

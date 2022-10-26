@@ -9,7 +9,7 @@ const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
 Object.defineProperty(exports, "ParserEventEmitterEvent", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitterEvent; } });
 const core_1 = require("./lib/core");
-const mergeOptions_1 = tslib_1.__importStar(require("./lib/mergeOptions"));
+const mergeOptions_1 = require("./lib/mergeOptions");
 const getSource_1 = require("./lib/getSource");
 Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return getSource_1.parseRegularExpressionString; } });
 tslib_1.__exportStar(require("./version"), exports);
@@ -28,7 +28,7 @@ class zhRegExp extends RegExp {
             // @ts-ignore
             construct(target, argArray, newTarget) {
                 let { str, flags, options, argv } = (0, mergeOptions_1.getSettingOptions)(...argArray);
-                options = (0, mergeOptions_1.default)({}, defaultOptions, options);
+                options = (0, mergeOptions_1.mergeOptions)({}, defaultOptions, options);
                 return new zhRegExp(str, flags, options, ...argv);
             },
             // @ts-ignore
