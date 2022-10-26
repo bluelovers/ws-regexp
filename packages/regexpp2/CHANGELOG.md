@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.26](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.24...regexpp2@1.3.26) (2022-10-26)
+
+
+
+### 🐛　Bug Fixes
+
+* miss .js ([cf6ab1d](https://github.com/bluelovers/ws-regexp/commit/cf6ab1d1f353b42c46227372ff70b9bff457618e))
+
+
+
 ## [1.3.24](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.23...regexpp2@1.3.24) (2022-10-16)
 
 
