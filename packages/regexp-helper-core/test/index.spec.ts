@@ -1,4 +1,4 @@
-import { toUnicode, surrogatePair, toHex, unicodeUnEscape } from '../index';
+import { toUnicode, surrogatePair, toHex, unicodeUnEscape } from '../src/index';
 
 describe(`𠮷`, () =>
 {
@@ -47,7 +47,6 @@ describe(`𠮷`, () =>
 	{
 
 		let actual = surrogatePair(c.codePointAt(0));
-		let expected = '\\u{20bb7}';
 
 		let c0 = c.charCodeAt(0);
 		let c1 = c.charCodeAt(1);

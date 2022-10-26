@@ -3,16 +3,15 @@
  */
 
 import * as util from "util";
-import core from '..';
-import { toHex, surrogatePair, unicodeUnEscape, unicodeEscape } from '../index';
+import { toHex, surrogatePair, unicodeUnEscape, unicodeEscape, toUnicode } from '../src/index';
 
 util.inspect.defaultOptions.colors = true;
 
-console.dir(core.toUnicode('𠮷'));
-console.dir(core.toUnicode('𠮷'.codePointAt(0)));
+console.dir(toUnicode('𠮷'));
+console.dir(toUnicode('𠮷'.codePointAt(0)));
 
-console.dir(core.toUnicode('𠮷', true));
-console.dir(core.toUnicode('𠮷'.codePointAt(0), true));
+console.dir(toUnicode('𠮷', true));
+console.dir(toUnicode('𠮷'.codePointAt(0), true));
 
 console.dir(/[𠮷]/u.test('𠮷'));
 console.dir(/[\u{20bb7}]/u.test('𠮷'));
@@ -28,7 +27,7 @@ console.dir('\uffff'.codePointAt(0));
 console.dir(toHex('𠮷'.codePointAt(0)));
 
 console.dir(unicodeUnEscape('\\u{20bb7}'));
-console.dir(unicodeUnEscape(core.toUnicode('𠮷')));
+console.dir(unicodeUnEscape(toUnicode('𠮷')));
 
 console.dir(unicodeEscape('𠮷\n123'));
 

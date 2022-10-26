@@ -2,7 +2,7 @@ export const REGEXP_TO_STRING_TAG = Object.prototype.toString.call(/a/) as strin
 
 export function toHex(n: number, toUpperCase?: boolean)
 {
-	let s = n.toString(16).padStart(4, '0');
+	const s = n.toString(16).padStart(4, '0');
 	return toUpperCase ? s.toUpperCase() : s;
 }
 
@@ -22,7 +22,7 @@ export function toUnicode(charCode: number | string, noMerge?: boolean, wrap?: b
 {
 	let s: string;
 
-	if (typeof charCode == 'string')
+	if (typeof charCode === 'string')
 	{
 		s = charCode;
 		charCode = s.codePointAt(0);
@@ -32,7 +32,7 @@ export function toUnicode(charCode: number | string, noMerge?: boolean, wrap?: b
 	{
 		let p: number[];
 
-		if (typeof s != 'string')
+		if (typeof s !== 'string')
 		{
 			//s = String.fromCodePoint(charCode);
 			p = surrogatePair(charCode);
@@ -59,21 +59,21 @@ export function toUnicode2(charCode: number | string, options: {
 	return toUnicode(charCode, options.noMerge, options.wrap)
 }
 
-export function _toUnicode(charCode: number, wrap?: boolean)
+export function _toUnicode(charCode: number, wrap?: boolean): `\\u${string}` | `\\u{${string}}`
 {
-	let hex = toHex(charCode);
-	return (wrap || hex.length > 4) ? `\\u{${hex}}` : `\\u${hex}`;
+	const hex = toHex(charCode);
+	return (wrap || hex.length > 4) ? `\\u{${hex}}` as const : `\\u${hex}` as const;
 }
 
 export function isDoubleUnicode(str: string)
 {
-	return str.charCodeAt(0) == str.codePointAt(0);
+	return str.charCodeAt(0) === str.codePointAt(0);
 }
 
 export function isRegExp<T extends RegExp>(r: T): T & RegExp
 export function isRegExp(r: RegExp): r is RegExp
-export function isRegExp(r): RegExp | null
-export function isRegExp(r)
+export function isRegExp(r: unknown): RegExp | null
+export function isRegExp(r: unknown)
 {
 	if ((r instanceof RegExp) || Object.prototype.toString.call(r) === REGEXP_TO_STRING_TAG)
 	{
@@ -93,8 +93,8 @@ export function isRegExp(r)
  */
 export function surrogatePair(codepoint: number)
 {
-	let h = Math.floor((codepoint - 0x10000) / 0x400) + 0xd800;
-	let l = (codepoint - 0x10000) % 0x400 + 0xdc00;
+	const h = Math.floor((codepoint - 0x10000) / 0x400) + 0xd800;
+	const l = (codepoint - 0x10000) % 0x400 + 0xdc00;
 
 	return Object.assign([h, l] as [number, number], {
 		h,
@@ -114,7 +114,7 @@ export function unicodeUnEscape(string: string, noLeadingSolidus?: boolean)
 	// note: this will match `u{123}` (no leading `\`) as well
 	const r = noLeadingSolidus ? /u\{([0-9a-fA-F]{1,8})\}/g : /\\u\{([0-9a-fA-F]{1,8})\}/g;
 
-	return string.replace(r, function ($0, $1)
+	return string.replace(r, ($0, $1) =>
 	{
 		return String.fromCodePoint(parseInt($1, 16));
 	});
@@ -138,9 +138,9 @@ export function unicodeEscape(string: string,
 	filter = /./ug
 )
 {
-	return string.replace(filter, function ($0, $1)
+	return string.replace(filter, ($0) =>
 	{
-		let s = toUnicode($0, noMerge, !noWrap);
+		const s = toUnicode($0, noMerge, !noWrap);
 
 		return noLeadingSolidus ? s.replace(/\\/, '') : s;
 	});
@@ -161,6 +161,18 @@ export function escapeRegExp(str: string)
 	return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-export default exports as Readonly<typeof import('./index')>
-
-Object.freeze(exports);
+export default {
+	REGEXP_TO_STRING_TAG,
+	_toUnicode,
+	escapeRegExp,
+	isDoubleUnicode,
+	isRegExp,
+	surrogatePair,
+	toHex,
+	toUnicode,
+	toUnicode2,
+	unicodeEscape,
+	unicodeEscape2,
+	unicodeUnEscape,
+	unicodeUnEscape2
+}

@@ -17,11 +17,11 @@ export declare function toUnicode2(charCode: number | string, options?: {
     noMerge?: boolean;
     wrap?: boolean;
 }): string;
-export declare function _toUnicode(charCode: number, wrap?: boolean): string;
+export declare function _toUnicode(charCode: number, wrap?: boolean): `\\u${string}` | `\\u{${string}}`;
 export declare function isDoubleUnicode(str: string): boolean;
 export declare function isRegExp<T extends RegExp>(r: T): T & RegExp;
 export declare function isRegExp(r: RegExp): r is RegExp;
-export declare function isRegExp(r: any): RegExp | null;
+export declare function isRegExp(r: unknown): RegExp | null;
 /**
  * @link https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
  * @link https://github.com/ikatyang/regexp-util/blob/7810ce61ff8becd728b745eb6d5c1ca76adfebe0/src/charset.ts#L289
@@ -57,5 +57,19 @@ export declare function unicodeEscape2(string: string, options?: {
     filter?: RegExp;
 }): string;
 export declare function escapeRegExp(str: string): string;
-declare const _default: Readonly<typeof import("./index")>;
+declare const _default: {
+    REGEXP_TO_STRING_TAG: string;
+    _toUnicode: typeof _toUnicode;
+    escapeRegExp: typeof escapeRegExp;
+    isDoubleUnicode: typeof isDoubleUnicode;
+    isRegExp: typeof isRegExp;
+    surrogatePair: typeof surrogatePair;
+    toHex: typeof toHex;
+    toUnicode: typeof toUnicode;
+    toUnicode2: typeof toUnicode2;
+    unicodeEscape: typeof unicodeEscape;
+    unicodeEscape2: typeof unicodeEscape2;
+    unicodeUnEscape: typeof unicodeUnEscape;
+    unicodeUnEscape2: typeof unicodeUnEscape2;
+};
 export default _default;
