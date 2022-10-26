@@ -3,15 +3,12 @@
  * Created by user on 2018/1/31/031.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.parseRegularExpressionString = exports.isRegExp = exports.create = exports.zhRegExp = exports.defaultOptions = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
+exports.parseRegularExpressionString = exports.create = exports.zhRegExp = exports.defaultOptions = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
 const tslib_1 = require("tslib");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
 Object.defineProperty(exports, "ParserEventEmitterEvent", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitterEvent; } });
 const core_1 = require("./lib/core");
-const regexp_helper_core_1 = require("regexp-helper-core");
-Object.defineProperty(exports, "isRegExp", { enumerable: true, get: function () { return regexp_helper_core_1.isRegExp; } });
-const RegexpHelper = tslib_1.__importStar(require("regexp-helper-core"));
 const mergeOptions_1 = tslib_1.__importStar(require("./lib/mergeOptions"));
 const getSource_1 = require("./lib/getSource");
 Object.defineProperty(exports, "parseRegularExpressionString", { enumerable: true, get: function () { return getSource_1.parseRegularExpressionString; } });
@@ -69,9 +66,6 @@ class zhRegExp extends RegExp {
     }
 }
 exports.zhRegExp = zhRegExp;
-(function (zhRegExp) {
-    zhRegExp.isRegExp = RegexpHelper.isRegExp;
-})(zhRegExp = exports.zhRegExp || (exports.zhRegExp = {}));
 exports.create = zhRegExp.create.bind(zhRegExp);
 exports.default = zhRegExp;
 //# sourceMappingURL=index.js.map

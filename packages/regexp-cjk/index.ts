@@ -19,9 +19,7 @@ import {
 	IOptionsRuntime, IRegExpUserInput,
 	SymDefaults,
 } from './lib/core';
-import { isRegExp } from 'regexp-helper-core';
 import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
-import * as RegexpHelper from 'regexp-helper-core';
 import mergeOptions, { getSettingOptions, mergeOptions2 } from './lib/mergeOptions';
 import { parseRegularExpressionString } from './lib/getSource';
 export * from './version';
@@ -164,17 +162,11 @@ export class zhRegExp extends RegExp
 	{
 		return require('./package.json').version
 	}
-
-}
-
-export namespace zhRegExp
-{
-	export import isRegExp = RegexpHelper.isRegExp;
 }
 
 export const create = zhRegExp.create.bind(zhRegExp) as typeof zhRegExp.create;
 
-export { isRegExp, parseRegularExpressionString }
+export { parseRegularExpressionString }
 
 export interface IApi<T = zhRegExp>
 {

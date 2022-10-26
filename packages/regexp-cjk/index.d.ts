@@ -4,9 +4,7 @@
 import { IAstToStringOptions } from 'regexp-parser-literal';
 import { INodeInput, IParserEventEmitterListener, ParserEventEmitter, ParserEventEmitterEvent } from 'regexp-parser-event';
 import { ICoreHandlerReturn, IOptions, IOptionsCore, IOptionsInput, IOptionsOn, IOptionsRuntime, IRegExpUserInput, SymDefaults } from './lib/core';
-import { isRegExp } from 'regexp-helper-core';
 import { IOptions as IOptionsZhTable } from '@lazy-cjk/zh-table-list';
-import * as RegexpHelper from 'regexp-helper-core';
 import { parseRegularExpressionString } from './lib/getSource';
 export * from './version';
 export { ParserEventEmitterEvent, ParserEventEmitter, INodeInput, IParserEventEmitterListener, IAstToStringOptions };
@@ -84,11 +82,8 @@ export declare class zhRegExp extends RegExp {
     };
     static get version(): string;
 }
-export declare namespace zhRegExp {
-    export import isRegExp = RegexpHelper.isRegExp;
-}
 export declare const create: typeof zhRegExp.create;
-export { isRegExp, parseRegularExpressionString };
+export { parseRegularExpressionString };
 export interface IApi<T = zhRegExp> {
     (str: string | RegExp, flags?: string, options?: IOptions | string): T;
     (str: string | RegExp, options?: IOptions): T;

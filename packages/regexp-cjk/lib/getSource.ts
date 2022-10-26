@@ -2,15 +2,15 @@ import { IGetSettingOptions } from './mergeOptions';
 
 export function parseRegularExpressionString(str: string)
 {
-	let m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
+	const m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
 	if (m)
 	{
-		let [s, d, r, f] = m;
+		const [slash, d, r, f] = m;
 
 		return {
 			source: typeof r !== 'undefined' ? r : '',
 			flags: typeof f !== 'undefined' ? f : '',
-			slash: s,
+			slash,
 			input: str,
 		};
 	}

@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getRegExpSourcePattern = exports.parseRegularExpressionString = void 0;
 function parseRegularExpressionString(str) {
-    let m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
+    const m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
     if (m) {
-        let [s, d, r, f] = m;
+        const [slash, d, r, f] = m;
         return {
             source: typeof r !== 'undefined' ? r : '',
             flags: typeof f !== 'undefined' ? f : '',
-            slash: s,
+            slash,
             input: str,
         };
     }
