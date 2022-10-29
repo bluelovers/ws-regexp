@@ -4,9 +4,9 @@
 
 import { IOptions } from './lib/types';
 import { fixOptions } from './lib/min/util';
-import tableTw2CnDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_tw2cn.debug.safe';
+import tableTw2CnDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_tw2cn.debug.safe.json';
 import { tw2cn, cn2tw } from './index';
-import tableCn2TwDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug.safe';
+import tableCn2TwDebugSafe from '@lazy-cjk/static-build-zh-convert/data/table_cn2tw.debug.safe.json';
 
 export * from './lib/types';
 
