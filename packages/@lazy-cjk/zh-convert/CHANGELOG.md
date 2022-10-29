@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.47](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert@1.0.46...@lazy-cjk/zh-convert@1.0.47) (2022-10-29)
+
+
+
+### 🐛　Bug Fixes
+
+* avoid tsdx build failed ([6c0d9b0](https://github.com/bluelovers/ws-regexp/commit/6c0d9b0b619236f6bd0d1f198d6dfc837a870664))
+
+
+
 ## [1.0.46](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert@1.0.45...@lazy-cjk/zh-convert@1.0.46) (2022-10-26)
 
 **Note:** Version bump only for package @lazy-cjk/zh-convert
