@@ -1990,6 +1990,16 @@ exports[`validate char of map 択|择|擇|沢|泽|澤 1`] = `
 ]
 `;
 
+exports[`validate char of map 抴|拽|曳|曵|栧 1`] = `
+[
+  "抴",
+  "拽",
+  "曳",
+  "曵",
+  "栧",
+]
+`;
+
 exports[`validate char of map 抹|袜|襪 1`] = `
 [
   "抹",
