@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.31](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-iterator@1.0.30...@regexp-cjk/regex-iterator@1.0.31) (2023-02-28)
+
+
+
+### ♻️　Chores
+
+* update package.json ([2d3e193](https://github.com/bluelovers/ws-regexp/commit/2d3e1938f552c1801c4c66d9361ac9b01e466833))
+
+
+
 ## [1.0.30](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-iterator@1.0.29...@regexp-cjk/regex-iterator@1.0.30) (2022-10-16)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/slugify",
-  "version": "1.0.94",
+  "version": "1.0.95",
   "description": "Unicode to Latin transliteration + slugify module",
   "keywords": [
     "char",
@@ -78,15 +78,15 @@
   },
   "dependencies": {
     "@lazy-cjk/cns-11643": "^1.0.32",
-    "@lazy-cjk/emoji-regex": "^1.0.17",
-    "@lazy-cjk/japanese": "^1.2.28",
-    "@lazy-cjk/korean-romanize": "^1.0.20",
-    "@lazy-cjk/zh-slugify": "^1.0.85",
-    "@regexp-cjk/regex-pinyin": "^1.0.5",
+    "@lazy-cjk/emoji-regex": "^1.0.18",
+    "@lazy-cjk/japanese": "^1.2.33",
+    "@lazy-cjk/korean-romanize": "^1.0.25",
+    "@lazy-cjk/zh-slugify": "^1.0.86",
+    "@regexp-cjk/regex-pinyin": "^1.0.10",
     "@sindresorhus/transliterate": "<1",
     "emoji.json": "^13.1.0",
     "lodash": "^4.17.21",
-    "regexp-helper": "^1.0.36",
+    "regexp-helper": "^1.0.37",
     "transliteration": "^2.3.5",
     "tslib": ">=2"
   },
