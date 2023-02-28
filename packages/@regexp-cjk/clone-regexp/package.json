@@ -15,6 +15,7 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
+    "coverage": "yarn run test -- --coverage",
     "lint": "ynpx --quiet eslint -- **/*.ts",
     "test": "jest",
     "test:jest": "ynpx --quiet jest -- --coverage",
