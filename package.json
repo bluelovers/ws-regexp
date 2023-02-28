@@ -122,7 +122,7 @@
     "build:since": "yarn run build:all -- --since",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
     "ci:build": "echo ci:build",
-    "lerna:publish": "yarn run prepublishOnly:lerna && npx lerna publish && yarn run postpublishOnly",
+    "lerna:publish": "yarn run prepublishOnly:lerna && lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "yarn run prepublishOnly:check-bin && yarn run prepublishOnly:lerna && npx lerna publish --yes --bump patch && yarn run postpublishOnly",
     "ws:fix-all": "yarn-tool fix-all  --overwriteHostedGitInfo",
     "ws:fix-all:resetStaticFiles": "yarn run ws:fix-all -- --resetStaticFiles",
