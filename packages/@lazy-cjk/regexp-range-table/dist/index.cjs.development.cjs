@@ -54,7 +54,7 @@ function listRawToRange(list_range_raw) {
 
 exports.TABLE_RANGE = TABLE_RANGE;
 exports.TABLE_RANGE_ALL = TABLE_RANGE_ALL;
-exports["default"] = TABLE_RANGE;
+exports.default = TABLE_RANGE;
 exports.listRawToRange = listRawToRange;
 exports.roman = list_range;
 //# sourceMappingURL=index.cjs.development.cjs.map
