@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.34](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.32...tieba-harmony@2.0.34) (2023-02-28)
+
+
+
+### ♻️　Chores
+
+* update package.json ([2d3e193](https://github.com/bluelovers/ws-regexp/commit/2d3e1938f552c1801c4c66d9361ac9b01e466833))
+
+
+### 🔖　Miscellaneous
+
+* . ([9359512](https://github.com/bluelovers/ws-regexp/commit/93595125b9ab7ebcac4e69cd21026709b994c1fc))
+
+
+
 ## [2.0.33](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.32...tieba-harmony@2.0.33) (2023-02-28)
 
 
