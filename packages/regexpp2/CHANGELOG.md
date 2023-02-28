@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.28](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.27...regexpp2@1.3.28) (2023-02-28)
+
+
+
+### ♻️　Chores
+
+* update package.json ([2d3e193](https://github.com/bluelovers/ws-regexp/commit/2d3e1938f552c1801c4c66d9361ac9b01e466833))
+
+
+
 ## [1.3.27](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.24...regexpp2@1.3.27) (2022-10-26)
 
 

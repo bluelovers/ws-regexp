@@ -89,7 +89,7 @@ var index = {
 
 exports.REGEXP_TO_STRING_TAG = REGEXP_TO_STRING_TAG;
 exports._toUnicode = _toUnicode;
-exports["default"] = index;
+exports.default = index;
 exports.escapeRegExp = escapeRegExp;
 exports.isDoubleUnicode = isDoubleUnicode;
 exports.isRegExp = isRegExp;

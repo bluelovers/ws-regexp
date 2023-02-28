@@ -195,7 +195,7 @@
     "@types/js-yaml": "^4.0.5",
     "@types/lodash": "^4.14.186",
     "@types/micromatch": "^4.0.2",
-    "@types/node": "*",
+    "@types/node": "latest",
     "@types/xregexp": "^4.4.0",
     "@types/yargs": "^17.0.13",
     "@yarn-tool/ws-find-up-paths": "*",

@@ -1004,10 +1004,10 @@
   dependencies:
     "@types/braces" "*"
 
-"@types/node@*":
-  version "18.7.23"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.7.23.tgz#75c580983846181ebe5f4abc40fe9dfb2d65665f"
-  integrity sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==
+"@types/node@*", "@types/node@latest":
+  version "18.14.2"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.14.2.tgz#c076ed1d7b6095078ad3cf21dfeea951842778b1"
+  integrity sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==
 
 "@types/prettier@^2.1.5":
   version "2.7.1"
@@ -3209,6 +3209,13 @@ regenerator-runtime@^0.13.4:
   version "0.13.9"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
+
+regexp-helper-core@^1.0.19:
+  version "1.0.20"
+  resolved "https://registry.npmjs.org/regexp-helper-core/-/regexp-helper-core-1.0.20.tgz#2457d4ff8728cdf11bfeb7393bd4f96441d3a89f"
+  integrity sha512-PbCsL+qc2L42JhnrFTTdTPxHEGpTIqQVE+bKmmce40zf4IsAd3zrjbPUp/0OTTjN9cLRcb7OaArrxAVDyU5IlA==
+  dependencies:
+    tslib ">=2"
 
 regexpp@^3.2.0:
   version "3.2.0"

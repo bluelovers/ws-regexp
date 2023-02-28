@@ -1,19 +1,13 @@
 "use strict";
 
-function _interopDefaultLegacy(e) {
-  return e && "object" == typeof e && "default" in e ? e : {
-    default: e
-  };
-}
-
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 
-var e, r = _interopDefaultLegacy(require("regexpu-core"));
+var e, r = require("regexpu-core");
 
 function rewritePatternV5(...e) {
-  return r.default(...e);
+  return r(...e);
 }
 
 exports.EnumOptionsRegExpUCoreValueMode = void 0, (e = exports.EnumOptionsRegExpUCoreValueMode || (exports.EnumOptionsRegExpUCoreValueMode = {})).transform = "transform", 

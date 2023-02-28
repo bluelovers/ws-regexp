@@ -1,19 +1,13 @@
 "use strict";
 
-function _interopDefaultLegacy(e) {
-  return e && "object" == typeof e && "default" in e ? e : {
-    default: e
-  };
-}
-
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 
-var e = _interopDefaultLegacy(require("regexpu-core"));
+var e = require("regexpu-core");
 
-function rewritePatternV4(...t) {
-  return e.default(...t);
+function rewritePatternV4(...r) {
+  return e(...r);
 }
 
 exports.default = rewritePatternV4, exports.rewritePatternV4 = rewritePatternV4;
