@@ -55,7 +55,7 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "sort-object-keys2": "^3.0.4",
+    "sort-object-keys2": "^3.0.5",
     "tslib": ">=2"
   },
   "devDependencies": {

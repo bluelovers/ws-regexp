@@ -92,7 +92,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "regexpu-core": "^5.2.1",
+    "regexpu-core": "^5.3.2",
     "ts-type": ">=2"
   },
   "packageManager": "yarn@^1.22.11",

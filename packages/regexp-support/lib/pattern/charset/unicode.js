@@ -55,7 +55,7 @@ var UNICODE_NAME_ALIAS;
     UNICODE_NAME_ALIAS["Quotation_Mark"] = "QMark";
     UNICODE_NAME_ALIAS["Pattern_Syntax"] = "Pat_Syn";
     UNICODE_NAME_ALIAS["Ideographic"] = "Ideo";
-})(UNICODE_NAME_ALIAS = exports.UNICODE_NAME_ALIAS || (exports.UNICODE_NAME_ALIAS = {}));
+})(UNICODE_NAME_ALIAS || (exports.UNICODE_NAME_ALIAS = UNICODE_NAME_ALIAS = {}));
 Object.keys(UNICODE_NAME_ALIAS)
     .forEach(function (key) {
     let k2 = UNICODE_NAME_ALIAS[key];

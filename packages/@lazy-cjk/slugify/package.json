@@ -84,7 +84,7 @@
     "@lazy-cjk/zh-slugify": "^1.0.86",
     "@regexp-cjk/regex-pinyin": "^1.0.10",
     "@sindresorhus/transliterate": "<1",
-    "emoji.json": "^13.1.0",
+    "emoji.json": "^15.0.0",
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.37",
     "transliteration": "^2.3.5",

@@ -15,7 +15,7 @@ var EnumPinyinMode;
      * @type {EnumPinyinMode.tone}
      */
     EnumPinyinMode[EnumPinyinMode["tone"] = 1] = "tone";
-})(EnumPinyinMode = exports.EnumPinyinMode || (exports.EnumPinyinMode = {}));
+})(EnumPinyinMode || (exports.EnumPinyinMode = EnumPinyinMode = {}));
 var EnumPinyinType;
 (function (EnumPinyinType) {
     /**
@@ -34,5 +34,5 @@ var EnumPinyinType;
      * 韋式(wei)
      */
     EnumPinyinType[EnumPinyinType["wei"] = 3] = "wei";
-})(EnumPinyinType = exports.EnumPinyinType || (exports.EnumPinyinType = {}));
+})(EnumPinyinType || (exports.EnumPinyinType = EnumPinyinType = {}));
 //# sourceMappingURL=types.js.map

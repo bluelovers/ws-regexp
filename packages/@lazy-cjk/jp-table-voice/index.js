@@ -24,6 +24,6 @@ var EnumTableVoice;
      * 半濁音
      */
     EnumTableVoice[EnumTableVoice["03"] = 2] = "03";
-})(EnumTableVoice = exports.EnumTableVoice || (exports.EnumTableVoice = {}));
+})(EnumTableVoice || (exports.EnumTableVoice = EnumTableVoice = {}));
 exports.default = util_1.getVoiceAll;
 //# sourceMappingURL=index.js.map

@@ -16,7 +16,7 @@ var ParserEventEmitterEvent;
     ParserEventEmitterEvent["class_other"] = "class_other";
     ParserEventEmitterEvent["class_uniset"] = "class_uniset";
     ParserEventEmitterEvent["change"] = "change";
-})(ParserEventEmitterEvent = exports.ParserEventEmitterEvent || (exports.ParserEventEmitterEvent = {}));
+})(ParserEventEmitterEvent || (exports.ParserEventEmitterEvent = ParserEventEmitterEvent = {}));
 // @ts-ignore
 exports.ParserEventEmitterEventList = Object.freeze((0, array_hyper_unique_1.array_unique)(Object.values(ParserEventEmitterEvent)));
 class ParserEventEmitter extends events_1.EventEmitter {

@@ -24,7 +24,7 @@ var POXIX;
     POXIX["upper"] = "upper";
     POXIX["word"] = "word";
     POXIX["xdigit"] = "xdigit";
-})(POXIX = exports.POXIX || (exports.POXIX = {}));
+})(POXIX || (exports.POXIX = POXIX = {}));
 exports.PatternTest = {
     alnum: [
         ['^[:alnum:]+$', 'g', 'azAZ09', true, 'test'],

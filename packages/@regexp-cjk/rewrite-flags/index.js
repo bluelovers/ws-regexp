@@ -11,7 +11,7 @@ var EnumFlagMap;
     EnumFlagMap["unicode"] = "u";
     EnumFlagMap["hasIndices"] = "d";
     EnumFlagMap["unicodeSets"] = "v";
-})(EnumFlagMap = exports.EnumFlagMap || (exports.EnumFlagMap = {}));
+})(EnumFlagMap || (exports.EnumFlagMap = EnumFlagMap = {}));
 exports.flagsOrderReverse = [
     'sticky',
     'unicode',

@@ -110,7 +110,7 @@ var EnumTypeNode;
      * The flags.
      */
     EnumTypeNode["Flags"] = "Flags";
-})(EnumTypeNode = exports.EnumTypeNode || (exports.EnumTypeNode = {}));
+})(EnumTypeNode || (exports.EnumTypeNode = EnumTypeNode = {}));
 var EnumKindAssertion;
 (function (EnumKindAssertion) {
     EnumKindAssertion["LookaheadAssertion"] = "lookahead";
@@ -118,7 +118,7 @@ var EnumKindAssertion;
     EnumKindAssertion["EdgeAssertion_Start"] = "start";
     EnumKindAssertion["EdgeAssertion_End"] = "end";
     EnumKindAssertion["WordBoundaryAssertion"] = "word";
-})(EnumKindAssertion = exports.EnumKindAssertion || (exports.EnumKindAssertion = {}));
+})(EnumKindAssertion || (exports.EnumKindAssertion = EnumKindAssertion = {}));
 var EnumKindCharacterSet;
 (function (EnumKindCharacterSet) {
     EnumKindCharacterSet["AnyCharacterSet"] = "any";
@@ -126,7 +126,7 @@ var EnumKindCharacterSet;
     EnumKindCharacterSet["EscapeCharacterSet_Space"] = "space";
     EnumKindCharacterSet["EscapeCharacterSet_Word"] = "word";
     EnumKindCharacterSet["UnicodePropertyCharacterSet"] = "property";
-})(EnumKindCharacterSet = exports.EnumKindCharacterSet || (exports.EnumKindCharacterSet = {}));
+})(EnumKindCharacterSet || (exports.EnumKindCharacterSet = EnumKindCharacterSet = {}));
 var EnumEcmaVersion;
 (function (EnumEcmaVersion) {
     EnumEcmaVersion[EnumEcmaVersion["v5"] = 5] = "v5";
@@ -134,11 +134,11 @@ var EnumEcmaVersion;
     EnumEcmaVersion[EnumEcmaVersion["v2016"] = 2016] = "v2016";
     EnumEcmaVersion[EnumEcmaVersion["v2017"] = 2017] = "v2017";
     EnumEcmaVersion[EnumEcmaVersion["v2018"] = 2018] = "v2018";
-})(EnumEcmaVersion = exports.EnumEcmaVersion || (exports.EnumEcmaVersion = {}));
+})(EnumEcmaVersion || (exports.EnumEcmaVersion = EnumEcmaVersion = {}));
 var EnumError;
 (function (EnumError) {
     EnumError["UnknownError"] = "UnknownError";
     EnumError["AssertionError"] = "AssertionError";
-})(EnumError = exports.EnumError || (exports.EnumError = {}));
+})(EnumError || (exports.EnumError = EnumError = {}));
 exports.default = exports;
 //# sourceMappingURL=const.js.map

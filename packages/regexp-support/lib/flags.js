@@ -38,7 +38,7 @@ var FlagsName;
     FlagsName["indices"] = "d";
     FlagsName["d"] = "d";
     FlagsName["n"] = "n";
-})(FlagsName = exports.FlagsName || (exports.FlagsName = {}));
+})(FlagsName || (exports.FlagsName = FlagsName = {}));
 Object
     .keys(FlagsName)
     .forEach(function (v) {

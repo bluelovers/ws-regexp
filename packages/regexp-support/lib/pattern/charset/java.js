@@ -23,6 +23,6 @@ var JAVA;
     JAVA["upper"] = "Upper";
     //word = 'word',
     JAVA["xdigit"] = "XDigit";
-})(JAVA = exports.JAVA || (exports.JAVA = {}));
+})(JAVA || (exports.JAVA = JAVA = {}));
 exports.default = JAVA;
 //# sourceMappingURL=java.js.map
