@@ -1,3 +1,4 @@
+/// <reference types="regexp-class-to-regenerate/regenerate" />
 import regenerate, { IRegenerateObject } from 'regenerate';
 /**
  * Represents an alternation (e.g. `foo|bar`)

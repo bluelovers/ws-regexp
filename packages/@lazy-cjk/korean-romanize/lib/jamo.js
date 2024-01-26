@@ -43,7 +43,7 @@ const choseong = [
     },
     { jamo: "ㄸ", roman: "tt" },
     {
-        jamo: "ㄹ",
+        jamo: "ㄹ", // initial
         roman: {
             default: "r",
             // ㄱ
@@ -157,7 +157,7 @@ const jongseong = [
     },
     { jamo: "ㄳ", roman: { default: "k", ...nasalAssimilation.trailingGNg } },
     {
-        jamo: "ㄴ",
+        jamo: "ㄴ", // final
         roman: {
             default: "n",
             ㄱ: "n",
@@ -199,7 +199,7 @@ const jongseong = [
             default: "p",
             vowelNext: "b",
             ㄹ: "m",
-            [String.fromCodePoint(0x1105)]: "m",
+            [String.fromCodePoint(0x1105)]: "m", // ㄹ
             ...nasalAssimilation.trailingBM,
             RRT: "b",
         },

@@ -1,3 +1,4 @@
+/// <reference types="regexp-class-to-regenerate/regenerate" />
 import regenerate from 'regenerate';
 import { NodeBase, Pattern } from 'regexpp2/src/ast';
 export { regenerate };
