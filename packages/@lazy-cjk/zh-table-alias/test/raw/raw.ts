@@ -1976,4 +1976,14 @@ export const table_plus_core = {
 		'劫',
 	],
 
+	'鎚': [
+		'鎚',
+		'錘',
+		'锤',
+	],
+
+	'捶': [
+		'搥',
+	],
+
 } as const;

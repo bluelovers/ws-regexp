@@ -404,4 +404,6 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 
 	[/[曵抴栧拽]/ug, '曳'],
 
+	[/[捶搥椎槌錘鎚锤]/ug, '捶'],
+
 ]

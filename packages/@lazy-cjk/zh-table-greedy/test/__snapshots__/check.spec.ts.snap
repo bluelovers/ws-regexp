@@ -2113,6 +2113,18 @@ exports[`validate char of map 捜|搜|蒐 1`] = `
 ]
 `;
 
+exports[`validate char of map 捶|搥|椎|槌|錘|鎚|锤 1`] = `
+[
+  "捶",
+  "搥",
+  "椎",
+  "槌",
+  "錘",
+  "鎚",
+  "锤",
+]
+`;
+
 exports[`validate char of map 掠|略|畧 1`] = `
 [
   "掠",
