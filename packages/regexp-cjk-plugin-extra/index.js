@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports._coreFn = exports.createZhRegExpPlugin = void 0;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
-const fullhalf_1 = require("str-util/lib/fullhalf");
+const fullhalf_1 = require("@lazy-cjk/fullhalf");
 const uni_string_1 = require("uni-string");
 const jp_table_voice_1 = require("@lazy-cjk/jp-table-voice");
 const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));

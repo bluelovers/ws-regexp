@@ -4,14 +4,9 @@
 
 import { array_unique_overwrite } from 'array-hyper-unique'
 import {
-	FullHalfCore,
-	toFullNumber,
-	toHalfNumber,
-	toFullEnglish,
-	toHalfEnglish,
 	toFullWidth,
 	toHalfWidth,
-} from 'str-util/lib/fullhalf';
+} from '@lazy-cjk/fullhalf';
 import { IOptionsOn } from 'regexp-cjk/lib/core';
 import { UString } from 'uni-string';
 import { getVoiceAll } from '@lazy-cjk/jp-table-voice';

@@ -84,9 +84,9 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
+    "@lazy-cjk/fullhalf": "^1.0.1",
     "array-hyper-unique": "^2.1.4",
     "lodash": "^4.17.21",
-    "str-util": "^2.3.39",
     "tslib": ">=2",
     "uni-string": "^2.0.5"
   },
