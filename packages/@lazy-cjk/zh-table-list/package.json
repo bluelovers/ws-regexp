@@ -83,7 +83,7 @@
     "@lazy-cjk/zh-table-alias": "^1.0.62",
     "@lazy-cjk/zh-table-greedy": "^1.0.90",
     "tslib": ">=2",
-    "uni-string": "^2.0.5"
+    "uni-string": "^2.0.7"
   },
   "publishConfig": {
     "access": "public"

@@ -10,7 +10,9 @@ function matchRange(from, to, options = {}) {
   let e = to;
   let ret = [];
   let findFirstOne = !!options.findFirstOne;
-  Object.keys(options.dataTables).some(function (key) {
+  Object.keys(options.dataTables)
+  // @ts-ignore
+  .some(function (key) {
     let bool;
     options.dataTables[key].some(function (arr) {
       let i = arr.indexOf(s);
@@ -74,6 +76,7 @@ function getOptions(options) {
   opts.dataTables = opts.dataTables || regexpRangeTable.TABLE_RANGE;
   return opts;
 }
+// @ts-ignore
 {
   Object.defineProperty(matchRange, "__esModule", {
     value: true

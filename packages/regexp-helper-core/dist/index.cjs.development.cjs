@@ -7,6 +7,18 @@ function toHex(n, toUpperCase) {
   const s = n.toString(16).padStart(4, '0');
   return toUpperCase ? s.toUpperCase() : s;
 }
+/**
+ * @code
+ * console.log(core.toUnicode('𠮷')); // => \u{20bb7}
+ * console.log(core.toUnicode('𠮷'.codePointAt(0)));
+ *
+ * console.log(core.toUnicode('𠮷', true)); // => \ud842\udfb7
+ * console.log(core.toUnicode('𠮷'.codePointAt(0), true));
+ *
+ * /[𠮷]/u.test('𠮷')
+ * /[\u{20bb7}]/u.test('𠮷')
+ * /[\ud842\udfb7]/u.test('𠮷')
+ */
 function toUnicode(charCode, noMerge, wrap) {
   let s;
   if (typeof charCode === 'string') {
@@ -42,6 +54,14 @@ function isRegExp(r) {
   }
   return null;
 }
+/**
+ * @link https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+ * @link https://github.com/ikatyang/regexp-util/blob/7810ce61ff8becd728b745eb6d5c1ca76adfebe0/src/charset.ts#L289
+ *
+ * @code
+ * surrogatePair('𠮷'.codePointAt(0)) // => { h: 55362, l: 57271 }
+ * console.log('𠮷'.charCodeAt(0), '𠮷'.charCodeAt(1)) // => 55362 57271
+ */
 function surrogatePair(codepoint) {
   const h = Math.floor((codepoint - 0x10000) / 0x400) + 0xd800;
   const l = (codepoint - 0x10000) % 0x400 + 0xdc00;
@@ -50,6 +70,13 @@ function surrogatePair(codepoint) {
     l
   });
 }
+/**
+ * https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+ *
+ * @code
+ * unicodeUnEscape('\\u{48}\\u{65}\\u{6c}\\u{6c}\\u{6f}\\u{20}\\u{77}\\u{6f}\\u{72}\\u{6c}\\u{64}') // => 'Hello world'
+ * unicodeUnEscape('\\u{20bb7}') // => '𠮷'
+ */
 function unicodeUnEscape(string, noLeadingSolidus) {
   const r = noLeadingSolidus ? /u\{([0-9a-fA-F]{1,8})\}/g : /\\u\{([0-9a-fA-F]{1,8})\}/g;
   return string.replace(r, ($0, $1) => {
@@ -59,6 +86,10 @@ function unicodeUnEscape(string, noLeadingSolidus) {
 function unicodeUnEscape2(string, options = {}) {
   return unicodeUnEscape(string, options.noLeadingSolidus);
 }
+/**
+ * @code
+ * unicodeEscape('𠮷') // => '\\u{20bb7}'
+ */
 function unicodeEscape(string, noLeadingSolidus, noMerge, noWrap, filter = /./ug) {
   return string.replace(filter, $0 => {
     const s = toUnicode($0, noMerge, !noWrap);

@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var _rewritePattern = require('regexpu-core');
 
+// @ts-ignore
 exports.EnumOptionsRegExpUCoreValueMode = void 0;
 (function (EnumOptionsRegExpUCoreValueMode) {
   EnumOptionsRegExpUCoreValueMode["transform"] = "transform";

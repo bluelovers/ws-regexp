@@ -433,6 +433,7 @@ ParserEventEmitter {
     "start": 0,
     "type": "RegExpLiteral",
   },
+  Symbol(shapeMode): false,
   Symbol(kCapture): false,
 }
 `;
@@ -510,6 +511,7 @@ ParserEventEmitter {
     "start": 0,
     "type": "RegExpLiteral",
   },
+  Symbol(shapeMode): false,
   Symbol(kCapture): false,
 }
 `;
@@ -572,6 +574,7 @@ ParserEventEmitter {
     "start": 0,
     "type": "RegExpLiteral",
   },
+  Symbol(shapeMode): false,
   Symbol(kCapture): false,
 }
 `;
@@ -681,6 +684,7 @@ ParserEventEmitter {
     "start": 0,
     "type": "RegExpLiteral",
   },
+  Symbol(shapeMode): false,
   Symbol(kCapture): false,
 }
 `;

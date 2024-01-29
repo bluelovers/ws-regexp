@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var _rewritePattern = require('regexpu-core');
 
+// @ts-ignore
 function rewritePatternV4(...argv) {
   return _rewritePattern(...argv);
 }

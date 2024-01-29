@@ -85,7 +85,7 @@
     "array-hyper-unique": "^2.1.4",
     "regexp-helper": "^1.0.37",
     "tslib": ">=2",
-    "uni-string": "^2.0.5"
+    "uni-string": "^2.0.7"
   },
   "publishConfig": {
     "access": "public"
