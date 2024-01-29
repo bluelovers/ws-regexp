@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk-plugin-escape-unicode-property",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "use regexpu for escape unicode property in regexp-cjk",
   "keywords": [
     "char",
@@ -72,7 +72,7 @@
     "sort-package-json": "npx yarn-tool sort"
   },
   "dependencies": {
-    "@regexp-cjk/escape-unicode-property": "^1.0.26",
+    "@regexp-cjk/escape-unicode-property": "^1.0.27",
     "tslib": ">=2"
   },
   "peerDependencies": {

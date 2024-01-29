@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.63](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.62...@lazy-cjk/zh-table-alias@1.0.63) (2024-01-29)
+
+
+
+### ✨　Features
+
+* 捶搥椎槌錘鎚锤 ([00a4a48](https://github.com/bluelovers/ws-regexp/commit/00a4a48c3bcbfb9664317c18cd3959739239aa7d))
+
+
+### 🛠　Build System
+
+* **zh-table-alias:** zh-table-alias table_jp: 鎚|捶|錘|锤|搥 , table_plus 鎚|捶|錘|锤|搥 ([05a992b](https://github.com/bluelovers/ws-regexp/commit/05a992bbb4ab17597cf888074e5bc79ac794df0e))
+
+
+### 🔖　Miscellaneous
+
+* . ([153b9b2](https://github.com/bluelovers/ws-regexp/commit/153b9b2ca07434f55f4f09f791715247120973e3))
+* . ([f2d7c04](https://github.com/bluelovers/ws-regexp/commit/f2d7c0441003ffa26c14f21e74e30b6724fef0c8))
+
+
+
 ## [1.0.62](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.61...@lazy-cjk/zh-table-alias@1.0.62) (2023-02-28)
 
 **Note:** Version bump only for package @lazy-cjk/zh-table-alias

@@ -1,6 +1,6 @@
 {
   "name": "xregexp-plugin-hanzi-cjk",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "add regexp-cjk plugin for xregexp, make xregexp auto match chinese/japanese hanzi.",
   "keywords": [
     "chinese",
@@ -43,9 +43,9 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "@lazy-cjk/zh-table-list": "^1.0.84",
+    "@lazy-cjk/zh-table-list": "^1.0.85",
     "@regexp-cjk/is-xregexp": "^1.0.13",
-    "regexp-helper": "^1.0.37",
+    "regexp-helper": "^1.0.38",
     "tslib": ">=2"
   },
   "peerDependencies": {

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.34](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.33...@lazy-cjk/japanese@1.2.34) (2024-01-29)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([f2d7c04](https://github.com/bluelovers/ws-regexp/commit/f2d7c0441003ffa26c14f21e74e30b6724fef0c8))
+
+
+
 ## [1.2.33](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.28...@lazy-cjk/japanese@1.2.33) (2023-02-28)
 
 

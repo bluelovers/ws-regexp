@@ -1,6 +1,6 @@
 {
   "name": "execall2",
-  "version": "2.0.23",
+  "version": "2.0.24",
   "description": "Find multiple RegExp matches in a string",
   "keywords": [
     "all",
@@ -61,7 +61,7 @@
     "sort-package-json": "ynpx --quiet yarn-tool -- sort"
   },
   "dependencies": {
-    "@regexp-cjk/clone-regexp": "^1.0.22",
+    "@regexp-cjk/clone-regexp": "^1.0.23",
     "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
