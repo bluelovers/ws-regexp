@@ -43,6 +43,10 @@ exports.mapEmoji = new Map([
         "upside-down face"
     ],
     [
+        "🫠",
+        "melting face"
+    ],
+    [
         "😉",
         "winking face"
     ],
@@ -120,11 +124,19 @@ exports.mapEmoji = new Map([
     ],
     [
         "🤗",
-        "hugging face"
+        "smiling face with open hands"
     ],
     [
         "🤭",
         "face with hand over mouth"
+    ],
+    [
+        "🫢",
+        "face with open eyes and hand over mouth"
+    ],
+    [
+        "🫣",
+        "face with peeking eye"
     ],
     [
         "🤫",
@@ -133,6 +145,10 @@ exports.mapEmoji = new Map([
     [
         "🤔",
         "thinking face"
+    ],
+    [
+        "🫡",
+        "saluting face"
     ],
     [
         "🤐",
@@ -153,6 +169,10 @@ exports.mapEmoji = new Map([
     [
         "😶",
         "face without mouth"
+    ],
+    [
+        "🫥",
+        "dotted line face"
     ],
     [
         "😶‍🌫️",
@@ -185,6 +205,26 @@ exports.mapEmoji = new Map([
     [
         "🤥",
         "lying face"
+    ],
+    [
+        "🫨",
+        "shaking face"
+    ],
+    [
+        "🙂‍↔️",
+        "head shaking horizontally"
+    ],
+    [
+        "🙂‍↔",
+        "head shaking horizontally"
+    ],
+    [
+        "🙂‍↕️",
+        "head shaking vertically"
+    ],
+    [
+        "🙂‍↕",
+        "head shaking vertically"
     ],
     [
         "😌",
@@ -244,7 +284,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "😵",
-        "knocked-out face"
+        "face with crossed-out eyes"
     ],
     [
         "😵‍💫",
@@ -283,6 +323,10 @@ exports.mapEmoji = new Map([
         "confused face"
     ],
     [
+        "🫤",
+        "face with diagonal mouth"
+    ],
+    [
         "😟",
         "worried face"
     ],
@@ -317,6 +361,10 @@ exports.mapEmoji = new Map([
     [
         "🥺",
         "pleading face"
+    ],
+    [
+        "🥹",
+        "face holding back tears"
     ],
     [
         "😦",
@@ -384,7 +432,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "😡",
-        "pouting face"
+        "enraged face"
     ],
     [
         "😠",
@@ -495,10 +543,6 @@ exports.mapEmoji = new Map([
         "speak-no-evil monkey"
     ],
     [
-        "💋",
-        "kiss mark"
-    ],
-    [
         "💌",
         "love letter"
     ],
@@ -571,6 +615,10 @@ exports.mapEmoji = new Map([
         "red heart"
     ],
     [
+        "🩷",
+        "pink heart"
+    ],
+    [
         "🧡",
         "orange heart"
     ],
@@ -587,6 +635,10 @@ exports.mapEmoji = new Map([
         "blue heart"
     ],
     [
+        "🩵",
+        "light blue heart"
+    ],
+    [
         "💜",
         "purple heart"
     ],
@@ -599,8 +651,16 @@ exports.mapEmoji = new Map([
         "black heart"
     ],
     [
+        "🩶",
+        "grey heart"
+    ],
+    [
         "🤍",
         "white heart"
+    ],
+    [
+        "💋",
+        "kiss mark"
     ],
     [
         "💯",
@@ -633,10 +693,6 @@ exports.mapEmoji = new Map([
     [
         "🕳",
         "hole"
-    ],
-    [
-        "💣",
-        "bomb"
     ],
     [
         "💬",
@@ -680,7 +736,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "💤",
-        "zzz"
+        "ZZZ"
     ],
     [
         "👋",
@@ -807,6 +863,150 @@ exports.mapEmoji = new Map([
         "vulcan salute: dark skin tone"
     ],
     [
+        "🫱",
+        "rightwards hand"
+    ],
+    [
+        "🫱🏻",
+        "rightwards hand: light skin tone"
+    ],
+    [
+        "🫱🏼",
+        "rightwards hand: medium-light skin tone"
+    ],
+    [
+        "🫱🏽",
+        "rightwards hand: medium skin tone"
+    ],
+    [
+        "🫱🏾",
+        "rightwards hand: medium-dark skin tone"
+    ],
+    [
+        "🫱🏿",
+        "rightwards hand: dark skin tone"
+    ],
+    [
+        "🫲",
+        "leftwards hand"
+    ],
+    [
+        "🫲🏻",
+        "leftwards hand: light skin tone"
+    ],
+    [
+        "🫲🏼",
+        "leftwards hand: medium-light skin tone"
+    ],
+    [
+        "🫲🏽",
+        "leftwards hand: medium skin tone"
+    ],
+    [
+        "🫲🏾",
+        "leftwards hand: medium-dark skin tone"
+    ],
+    [
+        "🫲🏿",
+        "leftwards hand: dark skin tone"
+    ],
+    [
+        "🫳",
+        "palm down hand"
+    ],
+    [
+        "🫳🏻",
+        "palm down hand: light skin tone"
+    ],
+    [
+        "🫳🏼",
+        "palm down hand: medium-light skin tone"
+    ],
+    [
+        "🫳🏽",
+        "palm down hand: medium skin tone"
+    ],
+    [
+        "🫳🏾",
+        "palm down hand: medium-dark skin tone"
+    ],
+    [
+        "🫳🏿",
+        "palm down hand: dark skin tone"
+    ],
+    [
+        "🫴",
+        "palm up hand"
+    ],
+    [
+        "🫴🏻",
+        "palm up hand: light skin tone"
+    ],
+    [
+        "🫴🏼",
+        "palm up hand: medium-light skin tone"
+    ],
+    [
+        "🫴🏽",
+        "palm up hand: medium skin tone"
+    ],
+    [
+        "🫴🏾",
+        "palm up hand: medium-dark skin tone"
+    ],
+    [
+        "🫴🏿",
+        "palm up hand: dark skin tone"
+    ],
+    [
+        "🫷",
+        "leftwards pushing hand"
+    ],
+    [
+        "🫷🏻",
+        "leftwards pushing hand: light skin tone"
+    ],
+    [
+        "🫷🏼",
+        "leftwards pushing hand: medium-light skin tone"
+    ],
+    [
+        "🫷🏽",
+        "leftwards pushing hand: medium skin tone"
+    ],
+    [
+        "🫷🏾",
+        "leftwards pushing hand: medium-dark skin tone"
+    ],
+    [
+        "🫷🏿",
+        "leftwards pushing hand: dark skin tone"
+    ],
+    [
+        "🫸",
+        "rightwards pushing hand"
+    ],
+    [
+        "🫸🏻",
+        "rightwards pushing hand: light skin tone"
+    ],
+    [
+        "🫸🏼",
+        "rightwards pushing hand: medium-light skin tone"
+    ],
+    [
+        "🫸🏽",
+        "rightwards pushing hand: medium skin tone"
+    ],
+    [
+        "🫸🏾",
+        "rightwards pushing hand: medium-dark skin tone"
+    ],
+    [
+        "🫸🏿",
+        "rightwards pushing hand: dark skin tone"
+    ],
+    [
         "👌",
         "OK hand"
     ],
@@ -929,6 +1129,30 @@ exports.mapEmoji = new Map([
     [
         "🤞🏿",
         "crossed fingers: dark skin tone"
+    ],
+    [
+        "🫰",
+        "hand with index finger and thumb crossed"
+    ],
+    [
+        "🫰🏻",
+        "hand with index finger and thumb crossed: light skin tone"
+    ],
+    [
+        "🫰🏼",
+        "hand with index finger and thumb crossed: medium-light skin tone"
+    ],
+    [
+        "🫰🏽",
+        "hand with index finger and thumb crossed: medium skin tone"
+    ],
+    [
+        "🫰🏾",
+        "hand with index finger and thumb crossed: medium-dark skin tone"
+    ],
+    [
+        "🫰🏿",
+        "hand with index finger and thumb crossed: dark skin tone"
     ],
     [
         "🤟",
@@ -1151,6 +1375,30 @@ exports.mapEmoji = new Map([
         "index pointing up: dark skin tone"
     ],
     [
+        "🫵",
+        "index pointing at the viewer"
+    ],
+    [
+        "🫵🏻",
+        "index pointing at the viewer: light skin tone"
+    ],
+    [
+        "🫵🏼",
+        "index pointing at the viewer: medium-light skin tone"
+    ],
+    [
+        "🫵🏽",
+        "index pointing at the viewer: medium skin tone"
+    ],
+    [
+        "🫵🏾",
+        "index pointing at the viewer: medium-dark skin tone"
+    ],
+    [
+        "🫵🏿",
+        "index pointing at the viewer: dark skin tone"
+    ],
+    [
         "👍",
         "thumbs up"
     ],
@@ -1343,6 +1591,30 @@ exports.mapEmoji = new Map([
         "raising hands: dark skin tone"
     ],
     [
+        "🫶",
+        "heart hands"
+    ],
+    [
+        "🫶🏻",
+        "heart hands: light skin tone"
+    ],
+    [
+        "🫶🏼",
+        "heart hands: medium-light skin tone"
+    ],
+    [
+        "🫶🏽",
+        "heart hands: medium skin tone"
+    ],
+    [
+        "🫶🏾",
+        "heart hands: medium-dark skin tone"
+    ],
+    [
+        "🫶🏿",
+        "heart hands: dark skin tone"
+    ],
+    [
         "👐",
         "open hands"
     ],
@@ -1393,6 +1665,106 @@ exports.mapEmoji = new Map([
     [
         "🤝",
         "handshake"
+    ],
+    [
+        "🤝🏻",
+        "handshake: light skin tone"
+    ],
+    [
+        "🤝🏼",
+        "handshake: medium-light skin tone"
+    ],
+    [
+        "🤝🏽",
+        "handshake: medium skin tone"
+    ],
+    [
+        "🤝🏾",
+        "handshake: medium-dark skin tone"
+    ],
+    [
+        "🤝🏿",
+        "handshake: dark skin tone"
+    ],
+    [
+        "🫱🏻‍🫲🏼",
+        "handshake: light skin tone, medium-light skin tone"
+    ],
+    [
+        "🫱🏻‍🫲🏽",
+        "handshake: light skin tone, medium skin tone"
+    ],
+    [
+        "🫱🏻‍🫲🏾",
+        "handshake: light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🫱🏻‍🫲🏿",
+        "handshake: light skin tone, dark skin tone"
+    ],
+    [
+        "🫱🏼‍🫲🏻",
+        "handshake: medium-light skin tone, light skin tone"
+    ],
+    [
+        "🫱🏼‍🫲🏽",
+        "handshake: medium-light skin tone, medium skin tone"
+    ],
+    [
+        "🫱🏼‍🫲🏾",
+        "handshake: medium-light skin tone, medium-dark skin tone"
+    ],
+    [
+        "🫱🏼‍🫲🏿",
+        "handshake: medium-light skin tone, dark skin tone"
+    ],
+    [
+        "🫱🏽‍🫲🏻",
+        "handshake: medium skin tone, light skin tone"
+    ],
+    [
+        "🫱🏽‍🫲🏼",
+        "handshake: medium skin tone, medium-light skin tone"
+    ],
+    [
+        "🫱🏽‍🫲🏾",
+        "handshake: medium skin tone, medium-dark skin tone"
+    ],
+    [
+        "🫱🏽‍🫲🏿",
+        "handshake: medium skin tone, dark skin tone"
+    ],
+    [
+        "🫱🏾‍🫲🏻",
+        "handshake: medium-dark skin tone, light skin tone"
+    ],
+    [
+        "🫱🏾‍🫲🏼",
+        "handshake: medium-dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🫱🏾‍🫲🏽",
+        "handshake: medium-dark skin tone, medium skin tone"
+    ],
+    [
+        "🫱🏾‍🫲🏿",
+        "handshake: medium-dark skin tone, dark skin tone"
+    ],
+    [
+        "🫱🏿‍🫲🏻",
+        "handshake: dark skin tone, light skin tone"
+    ],
+    [
+        "🫱🏿‍🫲🏼",
+        "handshake: dark skin tone, medium-light skin tone"
+    ],
+    [
+        "🫱🏿‍🫲🏽",
+        "handshake: dark skin tone, medium skin tone"
+    ],
+    [
+        "🫱🏿‍🫲🏾",
+        "handshake: dark skin tone, medium-dark skin tone"
     ],
     [
         "🙏",
@@ -1685,6 +2057,10 @@ exports.mapEmoji = new Map([
     [
         "👄",
         "mouth"
+    ],
+    [
+        "🫦",
+        "biting lip"
     ],
     [
         "👶",
@@ -5547,6 +5923,30 @@ exports.mapEmoji = new Map([
         "woman construction worker: dark skin tone"
     ],
     [
+        "🫅",
+        "person with crown"
+    ],
+    [
+        "🫅🏻",
+        "person with crown: light skin tone"
+    ],
+    [
+        "🫅🏼",
+        "person with crown: medium-light skin tone"
+    ],
+    [
+        "🫅🏽",
+        "person with crown: medium skin tone"
+    ],
+    [
+        "🫅🏾",
+        "person with crown: medium-dark skin tone"
+    ],
+    [
+        "🫅🏿",
+        "person with crown: dark skin tone"
+    ],
+    [
         "🤴",
         "prince"
     ],
@@ -6025,6 +6425,54 @@ exports.mapEmoji = new Map([
     [
         "🤰🏿",
         "pregnant woman: dark skin tone"
+    ],
+    [
+        "🫃",
+        "pregnant man"
+    ],
+    [
+        "🫃🏻",
+        "pregnant man: light skin tone"
+    ],
+    [
+        "🫃🏼",
+        "pregnant man: medium-light skin tone"
+    ],
+    [
+        "🫃🏽",
+        "pregnant man: medium skin tone"
+    ],
+    [
+        "🫃🏾",
+        "pregnant man: medium-dark skin tone"
+    ],
+    [
+        "🫃🏿",
+        "pregnant man: dark skin tone"
+    ],
+    [
+        "🫄",
+        "pregnant person"
+    ],
+    [
+        "🫄🏻",
+        "pregnant person: light skin tone"
+    ],
+    [
+        "🫄🏼",
+        "pregnant person: medium-light skin tone"
+    ],
+    [
+        "🫄🏽",
+        "pregnant person: medium skin tone"
+    ],
+    [
+        "🫄🏾",
+        "pregnant person: medium-dark skin tone"
+    ],
+    [
+        "🫄🏿",
+        "pregnant person: dark skin tone"
     ],
     [
         "🤱",
@@ -7099,6 +7547,10 @@ exports.mapEmoji = new Map([
         "woman zombie"
     ],
     [
+        "🧌",
+        "troll"
+    ],
+    [
         "💆",
         "person getting massage"
     ],
@@ -7459,6 +7911,246 @@ exports.mapEmoji = new Map([
         "woman walking: dark skin tone"
     ],
     [
+        "🚶‍➡️",
+        "person walking facing right"
+    ],
+    [
+        "🚶‍➡",
+        "person walking facing right"
+    ],
+    [
+        "🚶🏻‍➡️",
+        "person walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍➡",
+        "person walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏼‍➡️",
+        "person walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍➡",
+        "person walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏽‍➡️",
+        "person walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍➡",
+        "person walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏾‍➡️",
+        "person walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍➡",
+        "person walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏿‍➡️",
+        "person walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍➡",
+        "person walking facing right: dark skin tone"
+    ],
+    [
+        "🚶‍♀️‍➡️",
+        "woman walking facing right"
+    ],
+    [
+        "🚶‍♀‍➡️",
+        "woman walking facing right"
+    ],
+    [
+        "🚶‍♀️‍➡",
+        "woman walking facing right"
+    ],
+    [
+        "🚶‍♀‍➡",
+        "woman walking facing right"
+    ],
+    [
+        "🚶🏻‍♀️‍➡️",
+        "woman walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍♀‍➡️",
+        "woman walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍♀️‍➡",
+        "woman walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍♀‍➡",
+        "woman walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏼‍♀️‍➡️",
+        "woman walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍♀‍➡️",
+        "woman walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍♀️‍➡",
+        "woman walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍♀‍➡",
+        "woman walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏽‍♀️‍➡️",
+        "woman walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍♀‍➡️",
+        "woman walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍♀️‍➡",
+        "woman walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍♀‍➡",
+        "woman walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏾‍♀️‍➡️",
+        "woman walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍♀‍➡️",
+        "woman walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍♀️‍➡",
+        "woman walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍♀‍➡",
+        "woman walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏿‍♀️‍➡️",
+        "woman walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍♀‍➡️",
+        "woman walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍♀️‍➡",
+        "woman walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍♀‍➡",
+        "woman walking facing right: dark skin tone"
+    ],
+    [
+        "🚶‍♂️‍➡️",
+        "man walking facing right"
+    ],
+    [
+        "🚶‍♂‍➡️",
+        "man walking facing right"
+    ],
+    [
+        "🚶‍♂️‍➡",
+        "man walking facing right"
+    ],
+    [
+        "🚶‍♂‍➡",
+        "man walking facing right"
+    ],
+    [
+        "🚶🏻‍♂️‍➡️",
+        "man walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍♂‍➡️",
+        "man walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍♂️‍➡",
+        "man walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏻‍♂‍➡",
+        "man walking facing right: light skin tone"
+    ],
+    [
+        "🚶🏼‍♂️‍➡️",
+        "man walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍♂‍➡️",
+        "man walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍♂️‍➡",
+        "man walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏼‍♂‍➡",
+        "man walking facing right: medium-light skin tone"
+    ],
+    [
+        "🚶🏽‍♂️‍➡️",
+        "man walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍♂‍➡️",
+        "man walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍♂️‍➡",
+        "man walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏽‍♂‍➡",
+        "man walking facing right: medium skin tone"
+    ],
+    [
+        "🚶🏾‍♂️‍➡️",
+        "man walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍♂‍➡️",
+        "man walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍♂️‍➡",
+        "man walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏾‍♂‍➡",
+        "man walking facing right: medium-dark skin tone"
+    ],
+    [
+        "🚶🏿‍♂️‍➡️",
+        "man walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍♂‍➡️",
+        "man walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍♂️‍➡",
+        "man walking facing right: dark skin tone"
+    ],
+    [
+        "🚶🏿‍♂‍➡",
+        "man walking facing right: dark skin tone"
+    ],
+    [
         "🧍",
         "person standing"
     ],
@@ -7699,6 +8391,246 @@ exports.mapEmoji = new Map([
         "woman kneeling: dark skin tone"
     ],
     [
+        "🧎‍➡️",
+        "person kneeling facing right"
+    ],
+    [
+        "🧎‍➡",
+        "person kneeling facing right"
+    ],
+    [
+        "🧎🏻‍➡️",
+        "person kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍➡",
+        "person kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏼‍➡️",
+        "person kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍➡",
+        "person kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏽‍➡️",
+        "person kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍➡",
+        "person kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏾‍➡️",
+        "person kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍➡",
+        "person kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏿‍➡️",
+        "person kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍➡",
+        "person kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎‍♀️‍➡️",
+        "woman kneeling facing right"
+    ],
+    [
+        "🧎‍♀‍➡️",
+        "woman kneeling facing right"
+    ],
+    [
+        "🧎‍♀️‍➡",
+        "woman kneeling facing right"
+    ],
+    [
+        "🧎‍♀‍➡",
+        "woman kneeling facing right"
+    ],
+    [
+        "🧎🏻‍♀️‍➡️",
+        "woman kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍♀‍➡️",
+        "woman kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍♀️‍➡",
+        "woman kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍♀‍➡",
+        "woman kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏼‍♀️‍➡️",
+        "woman kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍♀‍➡️",
+        "woman kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍♀️‍➡",
+        "woman kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍♀‍➡",
+        "woman kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏽‍♀️‍➡️",
+        "woman kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍♀‍➡️",
+        "woman kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍♀️‍➡",
+        "woman kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍♀‍➡",
+        "woman kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏾‍♀️‍➡️",
+        "woman kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍♀‍➡️",
+        "woman kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍♀️‍➡",
+        "woman kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍♀‍➡",
+        "woman kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏿‍♀️‍➡️",
+        "woman kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍♀‍➡️",
+        "woman kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍♀️‍➡",
+        "woman kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍♀‍➡",
+        "woman kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎‍♂️‍➡️",
+        "man kneeling facing right"
+    ],
+    [
+        "🧎‍♂‍➡️",
+        "man kneeling facing right"
+    ],
+    [
+        "🧎‍♂️‍➡",
+        "man kneeling facing right"
+    ],
+    [
+        "🧎‍♂‍➡",
+        "man kneeling facing right"
+    ],
+    [
+        "🧎🏻‍♂️‍➡️",
+        "man kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍♂‍➡️",
+        "man kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍♂️‍➡",
+        "man kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏻‍♂‍➡",
+        "man kneeling facing right: light skin tone"
+    ],
+    [
+        "🧎🏼‍♂️‍➡️",
+        "man kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍♂‍➡️",
+        "man kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍♂️‍➡",
+        "man kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏼‍♂‍➡",
+        "man kneeling facing right: medium-light skin tone"
+    ],
+    [
+        "🧎🏽‍♂️‍➡️",
+        "man kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍♂‍➡️",
+        "man kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍♂️‍➡",
+        "man kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏽‍♂‍➡",
+        "man kneeling facing right: medium skin tone"
+    ],
+    [
+        "🧎🏾‍♂️‍➡️",
+        "man kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍♂‍➡️",
+        "man kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍♂️‍➡",
+        "man kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏾‍♂‍➡",
+        "man kneeling facing right: medium-dark skin tone"
+    ],
+    [
+        "🧎🏿‍♂️‍➡️",
+        "man kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍♂‍➡️",
+        "man kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍♂️‍➡",
+        "man kneeling facing right: dark skin tone"
+    ],
+    [
+        "🧎🏿‍♂‍➡",
+        "man kneeling facing right: dark skin tone"
+    ],
+    [
         "🧑‍🦯",
         "person with white cane"
     ],
@@ -7721,6 +8653,54 @@ exports.mapEmoji = new Map([
     [
         "🧑🏿‍🦯",
         "person with white cane: dark skin tone"
+    ],
+    [
+        "🧑‍🦯‍➡️",
+        "person with white cane facing right"
+    ],
+    [
+        "🧑‍🦯‍➡",
+        "person with white cane facing right"
+    ],
+    [
+        "🧑🏻‍🦯‍➡️",
+        "person with white cane facing right: light skin tone"
+    ],
+    [
+        "🧑🏻‍🦯‍➡",
+        "person with white cane facing right: light skin tone"
+    ],
+    [
+        "🧑🏼‍🦯‍➡️",
+        "person with white cane facing right: medium-light skin tone"
+    ],
+    [
+        "🧑🏼‍🦯‍➡",
+        "person with white cane facing right: medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍🦯‍➡️",
+        "person with white cane facing right: medium skin tone"
+    ],
+    [
+        "🧑🏽‍🦯‍➡",
+        "person with white cane facing right: medium skin tone"
+    ],
+    [
+        "🧑🏾‍🦯‍➡️",
+        "person with white cane facing right: medium-dark skin tone"
+    ],
+    [
+        "🧑🏾‍🦯‍➡",
+        "person with white cane facing right: medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍🦯‍➡️",
+        "person with white cane facing right: dark skin tone"
+    ],
+    [
+        "🧑🏿‍🦯‍➡",
+        "person with white cane facing right: dark skin tone"
     ],
     [
         "👨‍🦯",
@@ -7747,6 +8727,54 @@ exports.mapEmoji = new Map([
         "man with white cane: dark skin tone"
     ],
     [
+        "👨‍🦯‍➡️",
+        "man with white cane facing right"
+    ],
+    [
+        "👨‍🦯‍➡",
+        "man with white cane facing right"
+    ],
+    [
+        "👨🏻‍🦯‍➡️",
+        "man with white cane facing right: light skin tone"
+    ],
+    [
+        "👨🏻‍🦯‍➡",
+        "man with white cane facing right: light skin tone"
+    ],
+    [
+        "👨🏼‍🦯‍➡️",
+        "man with white cane facing right: medium-light skin tone"
+    ],
+    [
+        "👨🏼‍🦯‍➡",
+        "man with white cane facing right: medium-light skin tone"
+    ],
+    [
+        "👨🏽‍🦯‍➡️",
+        "man with white cane facing right: medium skin tone"
+    ],
+    [
+        "👨🏽‍🦯‍➡",
+        "man with white cane facing right: medium skin tone"
+    ],
+    [
+        "👨🏾‍🦯‍➡️",
+        "man with white cane facing right: medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍🦯‍➡",
+        "man with white cane facing right: medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍🦯‍➡️",
+        "man with white cane facing right: dark skin tone"
+    ],
+    [
+        "👨🏿‍🦯‍➡",
+        "man with white cane facing right: dark skin tone"
+    ],
+    [
         "👩‍🦯",
         "woman with white cane"
     ],
@@ -7769,6 +8797,54 @@ exports.mapEmoji = new Map([
     [
         "👩🏿‍🦯",
         "woman with white cane: dark skin tone"
+    ],
+    [
+        "👩‍🦯‍➡️",
+        "woman with white cane facing right"
+    ],
+    [
+        "👩‍🦯‍➡",
+        "woman with white cane facing right"
+    ],
+    [
+        "👩🏻‍🦯‍➡️",
+        "woman with white cane facing right: light skin tone"
+    ],
+    [
+        "👩🏻‍🦯‍➡",
+        "woman with white cane facing right: light skin tone"
+    ],
+    [
+        "👩🏼‍🦯‍➡️",
+        "woman with white cane facing right: medium-light skin tone"
+    ],
+    [
+        "👩🏼‍🦯‍➡",
+        "woman with white cane facing right: medium-light skin tone"
+    ],
+    [
+        "👩🏽‍🦯‍➡️",
+        "woman with white cane facing right: medium skin tone"
+    ],
+    [
+        "👩🏽‍🦯‍➡",
+        "woman with white cane facing right: medium skin tone"
+    ],
+    [
+        "👩🏾‍🦯‍➡️",
+        "woman with white cane facing right: medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍🦯‍➡",
+        "woman with white cane facing right: medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍🦯‍➡️",
+        "woman with white cane facing right: dark skin tone"
+    ],
+    [
+        "👩🏿‍🦯‍➡",
+        "woman with white cane facing right: dark skin tone"
     ],
     [
         "🧑‍🦼",
@@ -7795,6 +8871,54 @@ exports.mapEmoji = new Map([
         "person in motorized wheelchair: dark skin tone"
     ],
     [
+        "🧑‍🦼‍➡️",
+        "person in motorized wheelchair facing right"
+    ],
+    [
+        "🧑‍🦼‍➡",
+        "person in motorized wheelchair facing right"
+    ],
+    [
+        "🧑🏻‍🦼‍➡️",
+        "person in motorized wheelchair facing right: light skin tone"
+    ],
+    [
+        "🧑🏻‍🦼‍➡",
+        "person in motorized wheelchair facing right: light skin tone"
+    ],
+    [
+        "🧑🏼‍🦼‍➡️",
+        "person in motorized wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "🧑🏼‍🦼‍➡",
+        "person in motorized wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍🦼‍➡️",
+        "person in motorized wheelchair facing right: medium skin tone"
+    ],
+    [
+        "🧑🏽‍🦼‍➡",
+        "person in motorized wheelchair facing right: medium skin tone"
+    ],
+    [
+        "🧑🏾‍🦼‍➡️",
+        "person in motorized wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "🧑🏾‍🦼‍➡",
+        "person in motorized wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍🦼‍➡️",
+        "person in motorized wheelchair facing right: dark skin tone"
+    ],
+    [
+        "🧑🏿‍🦼‍➡",
+        "person in motorized wheelchair facing right: dark skin tone"
+    ],
+    [
         "👨‍🦼",
         "man in motorized wheelchair"
     ],
@@ -7817,6 +8941,54 @@ exports.mapEmoji = new Map([
     [
         "👨🏿‍🦼",
         "man in motorized wheelchair: dark skin tone"
+    ],
+    [
+        "👨‍🦼‍➡️",
+        "man in motorized wheelchair facing right"
+    ],
+    [
+        "👨‍🦼‍➡",
+        "man in motorized wheelchair facing right"
+    ],
+    [
+        "👨🏻‍🦼‍➡️",
+        "man in motorized wheelchair facing right: light skin tone"
+    ],
+    [
+        "👨🏻‍🦼‍➡",
+        "man in motorized wheelchair facing right: light skin tone"
+    ],
+    [
+        "👨🏼‍🦼‍➡️",
+        "man in motorized wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👨🏼‍🦼‍➡",
+        "man in motorized wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👨🏽‍🦼‍➡️",
+        "man in motorized wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👨🏽‍🦼‍➡",
+        "man in motorized wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👨🏾‍🦼‍➡️",
+        "man in motorized wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍🦼‍➡",
+        "man in motorized wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍🦼‍➡️",
+        "man in motorized wheelchair facing right: dark skin tone"
+    ],
+    [
+        "👨🏿‍🦼‍➡",
+        "man in motorized wheelchair facing right: dark skin tone"
     ],
     [
         "👩‍🦼",
@@ -7843,6 +9015,54 @@ exports.mapEmoji = new Map([
         "woman in motorized wheelchair: dark skin tone"
     ],
     [
+        "👩‍🦼‍➡️",
+        "woman in motorized wheelchair facing right"
+    ],
+    [
+        "👩‍🦼‍➡",
+        "woman in motorized wheelchair facing right"
+    ],
+    [
+        "👩🏻‍🦼‍➡️",
+        "woman in motorized wheelchair facing right: light skin tone"
+    ],
+    [
+        "👩🏻‍🦼‍➡",
+        "woman in motorized wheelchair facing right: light skin tone"
+    ],
+    [
+        "👩🏼‍🦼‍➡️",
+        "woman in motorized wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👩🏼‍🦼‍➡",
+        "woman in motorized wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👩🏽‍🦼‍➡️",
+        "woman in motorized wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👩🏽‍🦼‍➡",
+        "woman in motorized wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👩🏾‍🦼‍➡️",
+        "woman in motorized wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍🦼‍➡",
+        "woman in motorized wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍🦼‍➡️",
+        "woman in motorized wheelchair facing right: dark skin tone"
+    ],
+    [
+        "👩🏿‍🦼‍➡",
+        "woman in motorized wheelchair facing right: dark skin tone"
+    ],
+    [
         "🧑‍🦽",
         "person in manual wheelchair"
     ],
@@ -7865,6 +9085,54 @@ exports.mapEmoji = new Map([
     [
         "🧑🏿‍🦽",
         "person in manual wheelchair: dark skin tone"
+    ],
+    [
+        "🧑‍🦽‍➡️",
+        "person in manual wheelchair facing right"
+    ],
+    [
+        "🧑‍🦽‍➡",
+        "person in manual wheelchair facing right"
+    ],
+    [
+        "🧑🏻‍🦽‍➡️",
+        "person in manual wheelchair facing right: light skin tone"
+    ],
+    [
+        "🧑🏻‍🦽‍➡",
+        "person in manual wheelchair facing right: light skin tone"
+    ],
+    [
+        "🧑🏼‍🦽‍➡️",
+        "person in manual wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "🧑🏼‍🦽‍➡",
+        "person in manual wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "🧑🏽‍🦽‍➡️",
+        "person in manual wheelchair facing right: medium skin tone"
+    ],
+    [
+        "🧑🏽‍🦽‍➡",
+        "person in manual wheelchair facing right: medium skin tone"
+    ],
+    [
+        "🧑🏾‍🦽‍➡️",
+        "person in manual wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "🧑🏾‍🦽‍➡",
+        "person in manual wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "🧑🏿‍🦽‍➡️",
+        "person in manual wheelchair facing right: dark skin tone"
+    ],
+    [
+        "🧑🏿‍🦽‍➡",
+        "person in manual wheelchair facing right: dark skin tone"
     ],
     [
         "👨‍🦽",
@@ -7891,6 +9159,54 @@ exports.mapEmoji = new Map([
         "man in manual wheelchair: dark skin tone"
     ],
     [
+        "👨‍🦽‍➡️",
+        "man in manual wheelchair facing right"
+    ],
+    [
+        "👨‍🦽‍➡",
+        "man in manual wheelchair facing right"
+    ],
+    [
+        "👨🏻‍🦽‍➡️",
+        "man in manual wheelchair facing right: light skin tone"
+    ],
+    [
+        "👨🏻‍🦽‍➡",
+        "man in manual wheelchair facing right: light skin tone"
+    ],
+    [
+        "👨🏼‍🦽‍➡️",
+        "man in manual wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👨🏼‍🦽‍➡",
+        "man in manual wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👨🏽‍🦽‍➡️",
+        "man in manual wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👨🏽‍🦽‍➡",
+        "man in manual wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👨🏾‍🦽‍➡️",
+        "man in manual wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👨🏾‍🦽‍➡",
+        "man in manual wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👨🏿‍🦽‍➡️",
+        "man in manual wheelchair facing right: dark skin tone"
+    ],
+    [
+        "👨🏿‍🦽‍➡",
+        "man in manual wheelchair facing right: dark skin tone"
+    ],
+    [
         "👩‍🦽",
         "woman in manual wheelchair"
     ],
@@ -7913,6 +9229,54 @@ exports.mapEmoji = new Map([
     [
         "👩🏿‍🦽",
         "woman in manual wheelchair: dark skin tone"
+    ],
+    [
+        "👩‍🦽‍➡️",
+        "woman in manual wheelchair facing right"
+    ],
+    [
+        "👩‍🦽‍➡",
+        "woman in manual wheelchair facing right"
+    ],
+    [
+        "👩🏻‍🦽‍➡️",
+        "woman in manual wheelchair facing right: light skin tone"
+    ],
+    [
+        "👩🏻‍🦽‍➡",
+        "woman in manual wheelchair facing right: light skin tone"
+    ],
+    [
+        "👩🏼‍🦽‍➡️",
+        "woman in manual wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👩🏼‍🦽‍➡",
+        "woman in manual wheelchair facing right: medium-light skin tone"
+    ],
+    [
+        "👩🏽‍🦽‍➡️",
+        "woman in manual wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👩🏽‍🦽‍➡",
+        "woman in manual wheelchair facing right: medium skin tone"
+    ],
+    [
+        "👩🏾‍🦽‍➡️",
+        "woman in manual wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👩🏾‍🦽‍➡",
+        "woman in manual wheelchair facing right: medium-dark skin tone"
+    ],
+    [
+        "👩🏿‍🦽‍➡️",
+        "woman in manual wheelchair facing right: dark skin tone"
+    ],
+    [
+        "👩🏿‍🦽‍➡",
+        "woman in manual wheelchair facing right: dark skin tone"
     ],
     [
         "🏃",
@@ -8033,6 +9397,246 @@ exports.mapEmoji = new Map([
     [
         "🏃🏿‍♀",
         "woman running: dark skin tone"
+    ],
+    [
+        "🏃‍➡️",
+        "person running facing right"
+    ],
+    [
+        "🏃‍➡",
+        "person running facing right"
+    ],
+    [
+        "🏃🏻‍➡️",
+        "person running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍➡",
+        "person running facing right: light skin tone"
+    ],
+    [
+        "🏃🏼‍➡️",
+        "person running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍➡",
+        "person running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏽‍➡️",
+        "person running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍➡",
+        "person running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏾‍➡️",
+        "person running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍➡",
+        "person running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏿‍➡️",
+        "person running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍➡",
+        "person running facing right: dark skin tone"
+    ],
+    [
+        "🏃‍♀️‍➡️",
+        "woman running facing right"
+    ],
+    [
+        "🏃‍♀‍➡️",
+        "woman running facing right"
+    ],
+    [
+        "🏃‍♀️‍➡",
+        "woman running facing right"
+    ],
+    [
+        "🏃‍♀‍➡",
+        "woman running facing right"
+    ],
+    [
+        "🏃🏻‍♀️‍➡️",
+        "woman running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍♀‍➡️",
+        "woman running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍♀️‍➡",
+        "woman running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍♀‍➡",
+        "woman running facing right: light skin tone"
+    ],
+    [
+        "🏃🏼‍♀️‍➡️",
+        "woman running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍♀‍➡️",
+        "woman running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍♀️‍➡",
+        "woman running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍♀‍➡",
+        "woman running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏽‍♀️‍➡️",
+        "woman running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍♀‍➡️",
+        "woman running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍♀️‍➡",
+        "woman running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍♀‍➡",
+        "woman running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏾‍♀️‍➡️",
+        "woman running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍♀‍➡️",
+        "woman running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍♀️‍➡",
+        "woman running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍♀‍➡",
+        "woman running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏿‍♀️‍➡️",
+        "woman running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍♀‍➡️",
+        "woman running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍♀️‍➡",
+        "woman running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍♀‍➡",
+        "woman running facing right: dark skin tone"
+    ],
+    [
+        "🏃‍♂️‍➡️",
+        "man running facing right"
+    ],
+    [
+        "🏃‍♂‍➡️",
+        "man running facing right"
+    ],
+    [
+        "🏃‍♂️‍➡",
+        "man running facing right"
+    ],
+    [
+        "🏃‍♂‍➡",
+        "man running facing right"
+    ],
+    [
+        "🏃🏻‍♂️‍➡️",
+        "man running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍♂‍➡️",
+        "man running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍♂️‍➡",
+        "man running facing right: light skin tone"
+    ],
+    [
+        "🏃🏻‍♂‍➡",
+        "man running facing right: light skin tone"
+    ],
+    [
+        "🏃🏼‍♂️‍➡️",
+        "man running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍♂‍➡️",
+        "man running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍♂️‍➡",
+        "man running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏼‍♂‍➡",
+        "man running facing right: medium-light skin tone"
+    ],
+    [
+        "🏃🏽‍♂️‍➡️",
+        "man running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍♂‍➡️",
+        "man running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍♂️‍➡",
+        "man running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏽‍♂‍➡",
+        "man running facing right: medium skin tone"
+    ],
+    [
+        "🏃🏾‍♂️‍➡️",
+        "man running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍♂‍➡️",
+        "man running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍♂️‍➡",
+        "man running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏾‍♂‍➡",
+        "man running facing right: medium-dark skin tone"
+    ],
+    [
+        "🏃🏿‍♂️‍➡️",
+        "man running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍♂‍➡️",
+        "man running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍♂️‍➡",
+        "man running facing right: dark skin tone"
+    ],
+    [
+        "🏃🏿‍♂‍➡",
+        "man running facing right: dark skin tone"
     ],
     [
         "💃",
@@ -12151,10 +13755,6 @@ exports.mapEmoji = new Map([
         "couple with heart: woman, woman, dark skin tone"
     ],
     [
-        "👪",
-        "family"
-    ],
-    [
         "👨‍👩‍👦",
         "family: man, woman, boy"
     ],
@@ -12275,6 +13875,26 @@ exports.mapEmoji = new Map([
         "people hugging"
     ],
     [
+        "👪",
+        "family"
+    ],
+    [
+        "🧑‍🧑‍🧒",
+        "family: adult, adult, child"
+    ],
+    [
+        "🧑‍🧑‍🧒‍🧒",
+        "family: adult, adult, child, child"
+    ],
+    [
+        "🧑‍🧒",
+        "family: adult, child"
+    ],
+    [
+        "🧑‍🧒‍🧒",
+        "family: adult, child, child"
+    ],
+    [
         "👣",
         "footprints"
     ],
@@ -12393,6 +14013,14 @@ exports.mapEmoji = new Map([
     [
         "🐴",
         "horse face"
+    ],
+    [
+        "🫎",
+        "moose"
+    ],
+    [
+        "🫏",
+        "donkey"
     ],
     [
         "🐎",
@@ -12655,6 +14283,22 @@ exports.mapEmoji = new Map([
         "parrot"
     ],
     [
+        "🪽",
+        "wing"
+    ],
+    [
+        "🐦‍⬛",
+        "black bird"
+    ],
+    [
+        "🪿",
+        "goose"
+    ],
+    [
+        "🐦‍🔥",
+        "phoenix"
+    ],
+    [
         "🐸",
         "frog"
     ],
@@ -12729,6 +14373,14 @@ exports.mapEmoji = new Map([
     [
         "🐚",
         "spiral shell"
+    ],
+    [
+        "🪸",
+        "coral"
+    ],
+    [
+        "🪼",
+        "jellyfish"
     ],
     [
         "🐌",
@@ -12815,6 +14467,10 @@ exports.mapEmoji = new Map([
         "white flower"
     ],
     [
+        "🪷",
+        "lotus"
+    ],
+    [
         "🏵️",
         "rosette"
     ],
@@ -12845,6 +14501,10 @@ exports.mapEmoji = new Map([
     [
         "🌷",
         "tulip"
+    ],
+    [
+        "🪻",
+        "hyacinth"
     ],
     [
         "🌱",
@@ -12903,6 +14563,18 @@ exports.mapEmoji = new Map([
         "leaf fluttering in wind"
     ],
     [
+        "🪹",
+        "empty nest"
+    ],
+    [
+        "🪺",
+        "nest with eggs"
+    ],
+    [
+        "🍄",
+        "mushroom"
+    ],
+    [
         "🍇",
         "grapes"
     ],
@@ -12921,6 +14593,10 @@ exports.mapEmoji = new Map([
     [
         "🍋",
         "lemon"
+    ],
+    [
+        "🍋‍🟩",
+        "lime"
     ],
     [
         "🍌",
@@ -13031,16 +14707,28 @@ exports.mapEmoji = new Map([
         "onion"
     ],
     [
-        "🍄",
-        "mushroom"
-    ],
-    [
         "🥜",
         "peanuts"
     ],
     [
+        "🫘",
+        "beans"
+    ],
+    [
         "🌰",
         "chestnut"
+    ],
+    [
+        "🫚",
+        "ginger root"
+    ],
+    [
+        "🫛",
+        "pea pod"
+    ],
+    [
+        "🍄‍🟫",
+        "brown mushroom"
     ],
     [
         "🍞",
@@ -13379,6 +15067,10 @@ exports.mapEmoji = new Map([
         "tumbler glass"
     ],
     [
+        "🫗",
+        "pouring liquid"
+    ],
+    [
         "🥤",
         "cup with straw"
     ],
@@ -13421,6 +15113,10 @@ exports.mapEmoji = new Map([
     [
         "🔪",
         "kitchen knife"
+    ],
+    [
+        "🫙",
+        "jar"
     ],
     [
         "🏺",
@@ -13735,6 +15431,10 @@ exports.mapEmoji = new Map([
         "carousel horse"
     ],
     [
+        "🛝",
+        "playground slide"
+    ],
+    [
         "🎡",
         "ferris wheel"
     ],
@@ -13947,6 +15647,10 @@ exports.mapEmoji = new Map([
         "fuel pump"
     ],
     [
+        "🛞",
+        "wheel"
+    ],
+    [
         "🚨",
         "police car light"
     ],
@@ -13969,6 +15673,10 @@ exports.mapEmoji = new Map([
     [
         "⚓",
         "anchor"
+    ],
+    [
+        "🛟",
+        "ring buoy"
     ],
     [
         "⛵",
@@ -14727,6 +16435,10 @@ exports.mapEmoji = new Map([
         "kite"
     ],
     [
+        "🔫",
+        "water pistol"
+    ],
+    [
         "🎱",
         "pool 8 ball"
     ],
@@ -14737,10 +16449,6 @@ exports.mapEmoji = new Map([
     [
         "🪄",
         "magic wand"
-    ],
-    [
-        "🧿",
-        "nazar amulet"
     ],
     [
         "🎮",
@@ -14773,6 +16481,10 @@ exports.mapEmoji = new Map([
     [
         "🪅",
         "piñata"
+    ],
+    [
+        "🪩",
+        "mirror ball"
     ],
     [
         "🪆",
@@ -14947,6 +16659,10 @@ exports.mapEmoji = new Map([
         "woman’s clothes"
     ],
     [
+        "🪭",
+        "folding hand fan"
+    ],
+    [
         "👛",
         "purse"
     ],
@@ -15005,6 +16721,10 @@ exports.mapEmoji = new Map([
     [
         "👢",
         "woman’s boot"
+    ],
+    [
+        "🪮",
+        "hair pick"
     ],
     [
         "👑",
@@ -15175,6 +16895,14 @@ exports.mapEmoji = new Map([
         "long drum"
     ],
     [
+        "🪇",
+        "maracas"
+    ],
+    [
+        "🪈",
+        "flute"
+    ],
+    [
         "📱",
         "mobile phone"
     ],
@@ -15205,6 +16933,10 @@ exports.mapEmoji = new Map([
     [
         "🔋",
         "battery"
+    ],
+    [
+        "🪫",
+        "low battery"
     ],
     [
         "🔌",
@@ -15779,8 +17511,8 @@ exports.mapEmoji = new Map([
         "crossed swords"
     ],
     [
-        "🔫",
-        "water pistol"
+        "💣",
+        "bomb"
     ],
     [
         "🪃",
@@ -15845,6 +17577,14 @@ exports.mapEmoji = new Map([
     [
         "🔗",
         "link"
+    ],
+    [
+        "⛓️‍💥",
+        "broken chain"
+    ],
+    [
+        "⛓‍💥",
+        "broken chain"
     ],
     [
         "⛓️",
@@ -15919,8 +17659,16 @@ exports.mapEmoji = new Map([
         "adhesive bandage"
     ],
     [
+        "🩼",
+        "crutch"
+    ],
+    [
         "🩺",
         "stethoscope"
+    ],
+    [
+        "🩻",
+        "x-ray"
     ],
     [
         "🚪",
@@ -16011,6 +17759,10 @@ exports.mapEmoji = new Map([
         "soap"
     ],
     [
+        "🫧",
+        "bubbles"
+    ],
+    [
         "🪥",
         "toothbrush"
     ],
@@ -16051,12 +17803,24 @@ exports.mapEmoji = new Map([
         "funeral urn"
     ],
     [
+        "🧿",
+        "nazar amulet"
+    ],
+    [
+        "🪬",
+        "hamsa"
+    ],
+    [
         "🗿",
         "moai"
     ],
     [
         "🪧",
         "placard"
+    ],
+    [
+        "🪪",
+        "identification card"
     ],
     [
         "🏧",
@@ -16399,6 +18163,10 @@ exports.mapEmoji = new Map([
         "dotted six-pointed star"
     ],
     [
+        "🪯",
+        "khanda"
+    ],
+    [
         "♈",
         "Aries"
     ],
@@ -16575,6 +18343,10 @@ exports.mapEmoji = new Map([
         "antenna bars"
     ],
     [
+        "🛜",
+        "wireless"
+    ],
+    [
         "📳",
         "vibration mode"
     ],
@@ -16625,6 +18397,10 @@ exports.mapEmoji = new Map([
     [
         "➗",
         "divide"
+    ],
+    [
+        "🟰",
+        "heavy equals sign"
     ],
     [
         "♾️",
@@ -18244,7 +20020,7 @@ exports.mapEmoji = new Map([
     ],
     [
         "🇹🇷",
-        "flag: Turkey"
+        "flag: Türkiye"
     ],
     [
         "🇹🇹",
