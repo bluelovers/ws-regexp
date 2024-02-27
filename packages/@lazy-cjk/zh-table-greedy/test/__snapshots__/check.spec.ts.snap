@@ -2514,6 +2514,15 @@ exports[`validate char of map 烟|煙|腌|菸|醃 1`] = `
 ]
 `;
 
+exports[`validate char of map 熏|燻|薫|薰 1`] = `
+[
+  "熏",
+  "燻",
+  "薫",
+  "薰",
+]
+`;
+
 exports[`validate char of map 熒|荧|萤|蛍|螢 1`] = `
 [
   "熒",
