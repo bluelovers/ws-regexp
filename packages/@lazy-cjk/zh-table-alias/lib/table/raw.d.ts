@@ -101,6 +101,7 @@ export declare const table_jp_core: {
     readonly 煇: readonly ["煇", "辉", "𪸩"];
     readonly 𪸩: readonly ["煇", "辉", "𪸩"];
     readonly 签: readonly ["籤", "簽"];
+    readonly 燻: readonly ["燻", "熏", "薫", "薰"];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -237,7 +238,7 @@ export declare const table_plus_core: {
     readonly 貳: readonly ["貳", "贰", "弐", "貮", "𢎐", "二"];
     readonly 隷: readonly ["隷", "隸", "隶"];
     readonly 姫: readonly ["姫", "姬"];
-    readonly 燻: readonly ["燻", "熏"];
+    readonly 薫: readonly ["薫", "熏", "薰"];
     readonly 籲: readonly ["籲", "龥"];
     readonly 齧: readonly ["齧", "啮", "𪘂", "囓", "噛", "嚙"];
     readonly 鹼: readonly ["鹼", "碱", "硷"];
