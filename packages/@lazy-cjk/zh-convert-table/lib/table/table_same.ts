@@ -195,6 +195,10 @@ export const table_same = [
 	'勐',
 	'猛',
 
+	'熏',
+	'薰',
+	'燻',
+
 ];
 
 export default table_same

@@ -162,6 +162,9 @@ exports.table_same = [
     '箇',
     '勐',
     '猛',
+    '熏',
+    '薰',
+    '燻',
 ];
 exports.default = exports.table_same;
 //# sourceMappingURL=table_same.js.map
