@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-pinyin@1.0.10...@regexp-cjk/regex-pinyin@1.0.11) (2024-02-28)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([bc3fad3](https://github.com/bluelovers/ws-regexp/commit/bc3fad3796d5b1792e14ac6b27896732616e58b8))
+
+
+
 ## [1.0.10](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-pinyin@1.0.5...@regexp-cjk/regex-pinyin@1.0.10) (2023-02-28)
 
 

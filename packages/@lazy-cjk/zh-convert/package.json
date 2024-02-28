@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-convert",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "",
   "keywords": [
     "char",
@@ -81,7 +81,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/static-build-zh-convert": "^1.0.52",
+    "@lazy-cjk/static-build-zh-convert": "^1.0.53",
     "array-hyper-unique": "^2.1.4",
     "regexp-helper": "^1.0.38",
     "tslib": ">=2",

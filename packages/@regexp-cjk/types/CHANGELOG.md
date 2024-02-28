@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/types@1.0.5...@regexp-cjk/types@1.0.6) (2024-02-28)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([bc3fad3](https://github.com/bluelovers/ws-regexp/commit/bc3fad3796d5b1792e14ac6b27896732616e58b8))
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/types@1.0.4...@regexp-cjk/types@1.0.5) (2023-02-28)
 
 

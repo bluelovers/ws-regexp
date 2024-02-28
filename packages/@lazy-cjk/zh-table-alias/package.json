@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-table-alias",
-  "version": "1.0.63",
+  "version": "1.0.64",
   "description": "",
   "keywords": [
     "char",
@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "@lazy-cjk/jp-table-alias": "^1.0.42",
-    "@lazy-cjk/zh-convert": "^1.0.49",
+    "@lazy-cjk/zh-convert": "^1.0.50",
     "array-hyper-unique": "^2.1.4",
     "deepmerge-plus": "^3.0.2",
     "ts-type": ">=2",

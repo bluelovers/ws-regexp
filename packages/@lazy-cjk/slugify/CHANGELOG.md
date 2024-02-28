@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.97](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.96...@lazy-cjk/slugify@1.0.97) (2024-02-28)
+
+**Note:** Version bump only for package @lazy-cjk/slugify
+
+
+
+
+
 ## [1.0.96](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.95...@lazy-cjk/slugify@1.0.96) (2024-01-29)
 
 

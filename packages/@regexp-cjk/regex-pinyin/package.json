@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/regex-pinyin",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "check input text is pinyin like",
   "keywords": [
     "pinyin",
