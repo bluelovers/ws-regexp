@@ -38,6 +38,7 @@
     "coverage": "yarn run test -- --coverage",
     "test": "echo \"Error: no test specified\"",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:coverage": "yarn run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "ynpx mocha -- --require ts-node/register --timeout 10000 \"test/**/*.ts\" --exclude \"**/*.d.ts\" --exclude \"**/visitor*\"",
     "test:snapshot": "yarn run test -- -u",
@@ -55,6 +56,7 @@
     "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexpp2",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p",
     "update:test": "ts-node scripts/update-fixtures.ts",
     "update:ids": "ts-node scripts/update-unicode-ids.ts"
   },

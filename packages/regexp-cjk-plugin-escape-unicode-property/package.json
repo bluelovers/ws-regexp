@@ -59,6 +59,7 @@
     "lint": "npx eslint **/*.ts",
     "test": "yarn run test:local",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:coverage": "yarn run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:local": "jest",
     "test:snapshot": "yarn run test -- -u",
@@ -69,7 +70,8 @@
     "prepublish:lockfile": "npx sync-lockfile .",
     "postpublish_": "git commit -m \"publish new version\" .",
     "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort"
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
     "@regexp-cjk/escape-unicode-property": "^1.0.27",

@@ -34,6 +34,7 @@
     "coverage": "yarn run test -- --coverage",
     "test": "yarn run test:local && yarn run test:regexp",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:coverage": "yarn run test:jest -- --coverage",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:local": "jest",
     "test:regexp": "yt ws run --scope regexp-cjk test:local",
@@ -46,7 +47,8 @@
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "postpublish_": "git commit -a -m \"postpublish new version\"",
     "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort"
+    "sort-package-json": "npx yarn-tool sort",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
     "array-hyper-unique": "^2.1.4",
