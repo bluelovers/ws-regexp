@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/escape-unicode-property@1.0.27...@regexp-cjk/escape-unicode-property@1.0.28) (2024-03-01)
+
+
+
+### 📌　Dependencies
+
+* update deps ([e9a581a](https://github.com/bluelovers/ws-regexp/commit/e9a581a6e0532881e0950c5b296946744737aad6))
+
+
+
 ## [1.0.27](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/escape-unicode-property@1.0.26...@regexp-cjk/escape-unicode-property@1.0.27) (2024-01-29)
 
 **Note:** Version bump only for package @regexp-cjk/escape-unicode-property

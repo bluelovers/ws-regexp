@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.54](https://github.com/bluelovers/ws-regexp/compare/regexp-support@1.0.53...regexp-support@1.0.54) (2024-03-01)
+
+
+
+### ♻️　Chores
+
+* new env test ([5df10d3](https://github.com/bluelovers/ws-regexp/commit/5df10d32b8c613229f2c61b5eae5ce01b7627b50))
+
+
+### 📌　Dependencies
+
+* update deps ([e9a581a](https://github.com/bluelovers/ws-regexp/commit/e9a581a6e0532881e0950c5b296946744737aad6))
+
+
+
 ## [1.0.53](https://github.com/bluelovers/ws-regexp/compare/regexp-support@1.0.52...regexp-support@1.0.53) (2024-01-29)
 
 

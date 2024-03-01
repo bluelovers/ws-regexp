@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regexpu-core-v4@1.0.9...@regexp-cjk/regexpu-core-v4@1.0.10) (2024-03-01)
+
+
+
+### 📌　Dependencies
+
+* update deps ([e9a581a](https://github.com/bluelovers/ws-regexp/commit/e9a581a6e0532881e0950c5b296946744737aad6))
+
+
+
 ## [1.0.9](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regexpu-core-v4@1.0.8...@regexp-cjk/regexpu-core-v4@1.0.9) (2024-01-29)
 
 

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/regexp-range-table@1.0.5...@lazy-cjk/regexp-range-table@1.0.6) (2024-03-01)
+
+
+
+### 📌　Dependencies
+
+* update deps ([e9a581a](https://github.com/bluelovers/ws-regexp/commit/e9a581a6e0532881e0950c5b296946744737aad6))
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/regexp-range-table@1.0.4...@lazy-cjk/regexp-range-table@1.0.5) (2024-01-29)
 
 

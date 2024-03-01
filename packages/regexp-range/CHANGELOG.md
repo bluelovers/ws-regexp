@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/bluelovers/ws-regexp/compare/regexp-range@2.0.4...regexp-range@2.0.5) (2024-03-01)
+
+
+
+### 📌　Dependencies
+
+* update deps ([e9a581a](https://github.com/bluelovers/ws-regexp/commit/e9a581a6e0532881e0950c5b296946744737aad6))
+
+
+
 ## [2.0.4](https://github.com/bluelovers/ws-regexp/compare/regexp-range@2.0.3...regexp-range@2.0.4) (2024-01-29)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "regexp-cjk-plugin-escape-unicode-property",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "description": "use regexpu for escape unicode property in regexp-cjk",
   "keywords": [
     "char",
@@ -74,7 +74,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/escape-unicode-property": "^1.0.27",
+    "@regexp-cjk/escape-unicode-property": "^1.0.28",
     "tslib": ">=2"
   },
   "peerDependencies": {

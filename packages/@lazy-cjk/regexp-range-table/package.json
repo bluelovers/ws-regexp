@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/regexp-range-table",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "keywords": [
     "big5",
@@ -158,7 +158,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "devDependencies": {
-    "@lazy-cjk/japanese": "^1.2.34"
+    "@lazy-cjk/japanese": "^1.2.35"
   },
   "packageManager": "yarn@1.22.19",
   "publishConfig": {
