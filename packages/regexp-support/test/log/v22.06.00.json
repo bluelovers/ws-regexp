@@ -75,7 +75,7 @@
       "dotUnicodeEmoji": true,
       "classSub": false,
       "unicodeWrap": true,
-      "unicodeSets": false
+      "unicodeSets": true
     },
     "prototype": {
       "source": true,
@@ -87,6 +87,7 @@
       "multiline": true,
       "sticky": true,
       "unicode": true,
+      "unicodeSets": true,
       "hasIndices": true
     },
     "static": {
