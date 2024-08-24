@@ -1,6 +1,7 @@
-import isHangul from '../isHangul';
+import { isHangul } from '../isHangul';
 
-const { _HANGUL_COMPATIBILITY_JAMO, _HANGUL_JAMO } = require("./blocks");
+import { _HANGUL_COMPATIBILITY_JAMO, _HANGUL_JAMO } from "./blocks";
+
 const whichJamoSet = jamo => isHangul(jamo, Object.entries(_HANGUL_JAMO));
 
 const jaeum = {

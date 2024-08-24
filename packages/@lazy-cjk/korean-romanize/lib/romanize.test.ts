@@ -1,5 +1,6 @@
 import { searchJamo, romanize, romanizeWord } from './romanize';
 import { words as _words } from '../test';
+import { EnumOptionsRomanizeMethod } from './types';
 
 const words = Object.entries(_words);
 
@@ -60,7 +61,7 @@ describe("romanizeWord function", () =>
 			{
 				test(`${hangulWord} to ${RRT}`, () =>
 				{
-					expect(romanizeWord(hangulWord, { method: "RRT" })).toBe(
+					expect(romanizeWord(hangulWord, { method: EnumOptionsRomanizeMethod.RRT })).toBe(
 						RRT.toLowerCase(),
 					);
 				});

@@ -1,4 +1,4 @@
-import unicodeBlocks from './unicode/blocks';
+import * as unicodeBlocks from './unicode/blocks';
 
 const hangulBlocks = Object.entries(unicodeBlocks)
 	.filter(([blockName]) =>
@@ -13,11 +13,11 @@ const hangulBlocks = Object.entries(unicodeBlocks)
  * @param {*} char
  * @param {blocks}
  */
-export function isHangul(char?, blocks = hangulBlocks)
+export function isHangul(char?: string, blocks = hangulBlocks)
 {
 	if (typeof char !== "string")
 	{
-		return null;
+		return null as null;
 	}
 
 	const codePoint = char.codePointAt(0);

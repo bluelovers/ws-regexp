@@ -3,7 +3,7 @@
 // @ts-ignore
 import lo from 'unicode/category/Lo';
 
-function snakeToCamel(str)
+function snakeToCamel(str: string)
 {
 	return str.replace(/([-_][a-z])/g, group =>
 		group
@@ -13,21 +13,22 @@ function snakeToCamel(str)
 	);
 }
 
-function clean(data)
+function clean(data: Record<string, string>)
 {
 	return Object.entries(data)
 		.map(([key, value]) => ({
 			[snakeToCamel(key)]:
 				typeof value === "string" && value.trim() === "" ? undefined : value,
 		}))
-		.reduce((acc, item) => Object.assign(acc, item), {});
+		.reduce((acc, item) => Object.assign(acc, item), {} as Record<string, string>);
 }
 
-export function getDataFor(codePoint)
+export function getUnicodeDataFor(codePoint: number)
 {
-	const data = lo[codePoint];
+	// @ts-ignore
+	const data: Record<string, string> = lo[codePoint];
 
 	return clean(data);
 }
 
-export default getDataFor
+export default getUnicodeDataFor

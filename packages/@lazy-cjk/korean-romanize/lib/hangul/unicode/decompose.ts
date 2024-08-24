@@ -1,6 +1,15 @@
 import { SBase, LBase, VBase, TBase } from './constraints';
 
-import { computeSIndex, computeLIndex, computeVIndex, computeLVIndex, computeTIndex } from './computations';
+import {
+	computeSIndex,
+	computeLIndex,
+	computeVIndex,
+	computeLVIndex,
+	computeTIndex,
+	handleSIndexInput,
+} from './computations';
+
+import { IBlock } from '../../types';
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
@@ -8,7 +17,7 @@ import { computeSIndex, computeLIndex, computeVIndex, computeLVIndex, computeTIn
  * @param {(string|integer)} s
  * @returns {array}
  */
-export function arithmeticDecompositionMappingLV(s)
+export function arithmeticDecompositionMappingLV(s: string | number)
 {
 	const SIndex = computeSIndex(s);
 	const LIndex = computeLIndex(SIndex);
@@ -17,7 +26,7 @@ export function arithmeticDecompositionMappingLV(s)
 	const LPart = LBase + LIndex;
 	const VPart = VBase + VIndex;
 
-	return [LPart, VPart];
+	return [LPart, VPart] satisfies IBlock;
 }
 
 /**
@@ -26,7 +35,7 @@ export function arithmeticDecompositionMappingLV(s)
  * @param {(string|integer)} s
  * @returns {array}
  */
-export function arithmeticDecompositionMappingLVT(s)
+export function arithmeticDecompositionMappingLVT(s: string | number)
 {
 	const SIndex = computeSIndex(s);
 	const LVIndex = computeLVIndex(SIndex);
@@ -35,7 +44,7 @@ export function arithmeticDecompositionMappingLVT(s)
 	const LVPart = SBase + LVIndex;
 	const TPart = TBase + TIndex;
 
-	return [LVPart, TPart];
+	return [LVPart, TPart] satisfies IBlock;
 }
 
 /**
@@ -55,9 +64,9 @@ export function arithmeticDecompositionMappingLVT(s)
  * @param {(string|integer)} s
  * @returns {array}
  */
-export function decomposeHangulChar(s)
+export function decomposeHangulChar(s: string | number)
 {
-	const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - SBase;
+	const SIndex = handleSIndexInput(s);
 
 	const LVPart = arithmeticDecompositionMappingLV(s);
 	const TIndex = computeTIndex(SIndex);
@@ -68,7 +77,7 @@ export function decomposeHangulChar(s)
 		return LVPart.concat([TPart]);
 	}
 
-	return LVPart;
+	return LVPart satisfies IBlock;
 }
 
 /**
@@ -77,7 +86,7 @@ export function decomposeHangulChar(s)
  * @param {string} word
  * @returns {array}
  */
-export function decomposeHangul(word)
+export function decomposeHangul(word: string)
 {
 	return [...word].map(decomposeHangulChar);
 }

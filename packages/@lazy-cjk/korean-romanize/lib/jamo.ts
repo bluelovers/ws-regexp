@@ -1,39 +1,45 @@
 // "...what have the Romans ever done for us?"
 
-import isHangul from './hangul/isHangul';
+import { isHangul } from './hangul/isHangul';
 
-import hangul from './hangul/unicode/hangul-jamo';
+import { ListJamoHangul } from './hangul/unicode/hangul-jamo';
+import { IJamoEntry, IJamoRomanEntry, IJamoRomanEntryCompat } from './types';
 
-const fromPairs = pairs =>
-	pairs.reduce((cache, pair) =>
+function fromPairs(pairs: [string, string][])
+{
+	return pairs.reduce((cache, pair) =>
 	{
 		cache[pair[0]] = pair[1];
 		return cache;
-	}, {});
+	}, {} as Record<string, string>);
+}
 
 const [
 	initialConsonants,
 	medialVowels,
 	finalConsonants,
-] = hangul;
+] = ListJamoHangul;
 
-const jamoMapper = jamoSet => ({ jamo, roman }, idx) =>
+function jamoMapper(jamoSet: IJamoEntry[])
 {
-	const unicodeJamo = jamoSet[idx].jamo;
+	return ({ jamo, roman }: IJamoRomanEntry, idx: number) =>
+	{
+		const unicodeJamo = jamoSet[idx].jamo;
 
-	const compatJamo =
-		jamo &&
-		jamo !== unicodeJamo &&
-		isHangul(jamo) === "HANGUL_COMPATIBILITY_JAMO"
-			? jamo
+		const compatJamo =
+			jamo &&
+			jamo !== unicodeJamo &&
+			isHangul(jamo) === "HANGUL_COMPATIBILITY_JAMO"
+				? jamo
+				: undefined;
+
+		const compatJamoHex = compatJamo
+			? compatJamo.codePointAt(0).toString(16)
 			: undefined;
 
-	const compatJamoHex = compatJamo
-		? compatJamo.codePointAt(0).toString(16)
-		: undefined;
-
-	return Object.assign(jamoSet[idx], { roman, compatJamo, compatJamoHex });
-};
+		return Object.assign(jamoSet[idx], { roman, compatJamo, compatJamoHex }) satisfies IJamoRomanEntryCompat as IJamoRomanEntryCompat;
+	};
+}
 
 // initial consonants
 const choseong = [
@@ -134,8 +140,10 @@ const jungseong = [
 	{ jamo: "ㅣ", roman: "i" },
 ].map(jamoMapper(medialVowels));
 
-const assimilate = (jamos, sound) =>
-	fromPairs(jamos.map(jamo => [jamo, sound]));
+function assimilate(jamos: string[], sound: string)
+{
+	return fromPairs(jamos.map(jamo => [jamo, sound]));
+}
 
 const nasalAssimilators = [
 	"ㄴ",
@@ -303,4 +311,4 @@ const jongseong = [
 	},
 ].map(jamoMapper(finalConsonants));
 
-export = [choseong, jungseong, jongseong];
+export const ListJamoRoman = [choseong, jungseong, jongseong] as const

@@ -1,6 +1,6 @@
-import jamo from './jamo';
+import { ListJamoRoman } from './jamo';
 
-const [initialConsonants, medialVowels, finalConsonants] = jamo;
+const [initialConsonants, medialVowels, finalConsonants] = ListJamoRoman;
 
 describe("Jamo dictionary", () =>
 {

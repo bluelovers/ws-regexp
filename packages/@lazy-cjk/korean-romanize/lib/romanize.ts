@@ -1,17 +1,25 @@
-import jamos from './jamo';
+import { ListJamoRoman } from './jamo';
 
 import { decomposeHangul } from './hangul/unicode/decompose';
 
-import replaceHangul from './hangul/hangulReplace';
+import { hangulReplace } from './hangul/hangulReplace';
+import { EnumOptionsRomanizeMethod, IOptionsRomanize } from './types';
 
-const getJamoDictionary = (jamo, idx) =>
-	jamos[idx].find(o => o.jamo === jamo) ||
-	jamos[idx].find(o => o.compatJamo === jamo);
+function getJamoDictionary(jamo: string | number, idx: number)
+{
+	if (typeof jamo === 'number')
+	{
+		jamo = String.fromCodePoint(jamo)
+	}
+
+	return ListJamoRoman[idx].find(o => o.jamo === jamo) ||
+		ListJamoRoman[idx].find(o => o.compatJamo === jamo);
+}
 
 export function searchJamo(node, params, prevNode?)
 {
 	const { method, vowelNext, consonantNext, consonantPrev } = params || {
-		method: "RR",
+		method: EnumOptionsRomanizeMethod.RR,
 	};
 
 	if (typeof node === "string")
@@ -72,10 +80,11 @@ export function searchJamo(node, params, prevNode?)
 
 export function syllableParser(method)
 {
-	return function (syllable, idx, word)
+	return function (syllable: number[], idx: number, word: number[][])
 	{
 		// next subsequent initial consonant (choseong)
 		const next = idx + 1 < word.length ? word[idx + 1][0] : undefined;
+		// @ts-ignore
 		const vowelNext = next === 0x110b || next === "ᄋ";
 
 		// only exists this isn't first syllable in word
@@ -86,13 +95,11 @@ export function syllableParser(method)
 
 		return syllable.map((jamo, jamoIdx) =>
 		{
-			const dict =
-				getJamoDictionary(jamo, jamoIdx) ||
-				getJamoDictionary(String.fromCodePoint(jamo), jamoIdx);
+			const dict = getJamoDictionary(jamo, jamoIdx);
 
 			if (!dict)
 			{
-				throw new Error("missing dict " + jamo);
+				throw new RangeError("missing dict " + jamo);
 			}
 
 			const roman = searchJamo(dict, {
@@ -107,15 +114,9 @@ export function syllableParser(method)
 	};
 }
 
-export interface IOptionsRomanize
-{
-	method?: string;
-	hyphenate?: boolean;
-}
-
 export function romanizeWord(word: string, options?: string | IOptionsRomanize)
 {
-	const { method = "RR", hyphenate = method === "RRT" || undefined } =
+	const { method = EnumOptionsRomanizeMethod.RR, hyphenate = method === EnumOptionsRomanizeMethod.RRT || undefined } =
 		typeof options === "object" ? options : {};
 
 	const mappedToRoman = decomposeHangul(word)
@@ -135,9 +136,9 @@ export function romanizeWord(word: string, options?: string | IOptionsRomanize)
 		: mappedToRoman.replace(/-$/, "");
 }
 
-export function romanize(text: string, options?)
+export function romanize(text: string, options?: IOptionsRomanize)
 {
-	return replaceHangul(text, word => romanizeWord(word, options));
+	return hangulReplace(text, word => romanizeWord(word, options));
 }
 
 export default romanize

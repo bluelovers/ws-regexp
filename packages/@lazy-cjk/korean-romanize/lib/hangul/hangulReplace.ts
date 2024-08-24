@@ -1,5 +1,7 @@
-import hangulPattern from './unicode/hangulPattern';
+import { hangulPattern } from './unicode/hangulPattern';
 
-export function hangulReplace(text, callback) { return text.replace(hangulPattern, callback); }
+export function hangulReplace(text: string, callback: (s: string) => string) {
+	return text.replace(hangulPattern, callback);
+}
 
 export default hangulReplace;

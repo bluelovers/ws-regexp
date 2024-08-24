@@ -9,7 +9,11 @@ export const VBase = 0x1161
  */
 export const TBase = 0x11a7
 
-export const LCount = 19; // number of lead consonants in Hangul
+/**
+ * number of lead consonants in Hangul
+ * @type {number}
+ */
+export const LCount = 19;
 
 /**
  * Number of LV_Syllables per each leading consonant

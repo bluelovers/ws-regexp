@@ -1,9 +1,10 @@
-const getUnicodeDataFor = require("./getData");
+import { getUnicodeDataFor } from './getData';
+import { IJamoEntry } from '../../types';
 
-function getMapping(mapping)
+function getMapping(mapping: string)
 {
 	// "mapping": "<compat> 1100",
-	if (mapping && typeof mapping === "string" && mapping.includes("<compat>"))
+	if (typeof mapping === "string" && mapping.includes("<compat>"))
 	{
 		return String.fromCodePoint(parseInt(mapping.split(" ")[1], 16));
 	}
@@ -19,7 +20,7 @@ function getMapping(mapping)
 function indexCompatJamo(
 	offset = 0x3131,
 	limit = 0x318e - offset,
-	numCurrent?,
+	numCurrent?: number,
 )
 {
 	return Array(limit)
@@ -28,14 +29,14 @@ function indexCompatJamo(
 		{
 			const codePoint = offset + idx;
 			const unicodeData = getUnicodeDataFor(codePoint);
-			const mapsTo = getMapping(unicodeData.mapping);
+			const mapsTo = getMapping(unicodeData['mapping']);
 
 			return {
 				jamo: String.fromCodePoint(offset + idx),
 				archaic: idx + 1 > numCurrent,
 				mapsTo,
 				unicodeData,
-			};
+			} satisfies IJamoEntry;
 		});
 }
 
