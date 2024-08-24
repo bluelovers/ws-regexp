@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/korean-romanize@1.0.27...@lazy-cjk/korean-romanize@1.0.28) (2024-08-24)
+
+
+
+### 🐛　Bug Fixes
+
+* ㄱㄱㅎ ([738397e](https://github.com/bluelovers/ws-regexp/commit/738397e0bff76772f3a5fe3c48a3a4702421211f))
+
+
+### 📦　Code Refactoring
+
+* update import and types ([5dd0a76](https://github.com/bluelovers/ws-regexp/commit/5dd0a76f309f9b0b56a5fed9e6d9a2a9c67ca80f))
+
+
+### 🚨　Tests
+
+* fix type error ([bc1139b](https://github.com/bluelovers/ws-regexp/commit/bc1139bb16c796ad099a37b60a1a991d7808884b))
+
+
+### 🛠　Build System
+
+* update build ([ce24c2b](https://github.com/bluelovers/ws-regexp/commit/ce24c2bae947f88098fe6501eb117ae74a331149))
+
+
+
 ## [1.0.27](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/korean-romanize@1.0.26...@lazy-cjk/korean-romanize@1.0.27) (2024-03-01)
 
 

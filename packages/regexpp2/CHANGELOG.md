@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.35](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.34...regexpp2@1.3.35) (2024-08-24)
+
+
+
+### 🛠　Build System
+
+* update build ([ce24c2b](https://github.com/bluelovers/ws-regexp/commit/ce24c2bae947f88098fe6501eb117ae74a331149))
+
+
+
 ## [1.3.34](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.33...regexpp2@1.3.34) (2024-03-01)
 
 

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.22...@regexp-cjk/rewrite-flags@1.0.23) (2024-08-24)
+
+
+
+### 🛠　Build System
+
+* update build ([ce24c2b](https://github.com/bluelovers/ws-regexp/commit/ce24c2bae947f88098fe6501eb117ae74a331149))
+
+
+
 ## [1.0.22](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/rewrite-flags@1.0.21...@regexp-cjk/rewrite-flags@1.0.22) (2024-03-01)
 
 
