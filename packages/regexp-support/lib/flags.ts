@@ -24,6 +24,12 @@ export enum FlagsName
 	unicode = 'u',
 	u = 'u',
 
+	/**
+	 * @see https://v8.dev/features/regexp-v-flag
+	 */
+	unicodeSets = 'v',
+	v = 'v',
+
 	// ---------------
 
 	/**

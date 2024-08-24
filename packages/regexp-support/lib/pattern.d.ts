@@ -15,6 +15,7 @@ export declare const PatternSupport: {
     dotUnicodeEmoji: boolean;
     classSub: boolean;
     unicodeWrap: boolean;
+    unicodeSets: boolean;
 };
 export declare const PatternTest: {
     [k in keyof typeof PatternSupport]?: IPatternTestRow[];

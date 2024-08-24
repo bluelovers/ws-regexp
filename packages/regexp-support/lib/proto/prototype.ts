@@ -28,6 +28,8 @@ export const PROTOTYPE = {
 	sticky: false,
 	unicode: false,
 
+	unicodeSets: false,
+
 	hasIndices: false,
 
 } as {

@@ -17,6 +17,11 @@ var FlagsName;
     FlagsName["y"] = "y";
     FlagsName["unicode"] = "u";
     FlagsName["u"] = "u";
+    /**
+     * @see https://v8.dev/features/regexp-v-flag
+     */
+    FlagsName["unicodeSets"] = "v";
+    FlagsName["v"] = "v";
     // ---------------
     /**
      * dot match all mode

@@ -19,6 +19,7 @@ exports.PROTOTYPE = {
     multiline: false,
     sticky: false,
     unicode: false,
+    unicodeSets: false,
     hasIndices: false,
 };
 // @ts-ignore

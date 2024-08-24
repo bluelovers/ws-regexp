@@ -23,6 +23,8 @@ export const PatternSupport = {
 	classSub: false,
 
 	unicodeWrap: false,
+
+	unicodeSets: false,
 };
 
 export const PatternTest: {
@@ -97,6 +99,12 @@ export const PatternTest: {
 	unicodeWrap: [
 		['^\\u{20bb7}$', 'u', '𠮷', true, 'test'],
 	],
+
+	unicodeSets: [
+		['^\\p{RGI_Emoji}$', 'v', '⚽', true, 'test'],
+		['^\\p{RGI_Emoji}$', 'v', '👨🏾‍⚕️', true, 'test'],
+	],
+
 };
 
 export interface IPatternTestFn

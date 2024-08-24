@@ -22,6 +22,8 @@ export declare const support: Readonly<{
         readonly y: boolean;
         readonly unicode: boolean;
         readonly u: boolean;
+        readonly unicodeSets: boolean;
+        readonly v: boolean;
         readonly dotAll: boolean;
         readonly s: boolean;
         readonly freeSpacing: boolean;
@@ -58,6 +60,7 @@ export declare const support: Readonly<{
         dotUnicodeEmoji: boolean;
         classSub: boolean;
         unicodeWrap: boolean;
+        unicodeSets: boolean;
     };
     prototype: {
         readonly dotAll?: boolean;
