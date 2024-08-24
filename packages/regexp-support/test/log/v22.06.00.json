@@ -42,6 +42,8 @@
       "y": true,
       "unicode": true,
       "u": true,
+      "unicodeSets": true,
+      "v": true,
       "dotAll": true,
       "s": true,
       "freeSpacing": false,
@@ -72,7 +74,8 @@
       "lookBehindNegative": true,
       "dotUnicodeEmoji": true,
       "classSub": false,
-      "unicodeWrap": true
+      "unicodeWrap": true,
+      "unicodeSets": false
     },
     "prototype": {
       "source": true,
