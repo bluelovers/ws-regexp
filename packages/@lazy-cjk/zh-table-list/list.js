@@ -3,7 +3,9 @@
  * Created by user on 2018/6/10/010.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrCjk = exports.textList = exports.charTableList = void 0;
+exports.charTableList = charTableList;
+exports.textList = textList;
+exports.arrCjk = arrCjk;
 const tslib_1 = require("tslib");
 const index_1 = tslib_1.__importDefault(require("./index"));
 const uni_string_1 = require("uni-string");
@@ -32,7 +34,6 @@ function charTableList(text, options = {}) {
         return a;
     }, []);
 }
-exports.charTableList = charTableList;
 /**
  *
  * @example
@@ -71,7 +72,6 @@ function textList(text, options = {}) {
     aa.sort();
     return aa;
 }
-exports.textList = textList;
 /**
  * @example
  * arrCjk(['司马', '上官', '欧阳', '夏侯'])
@@ -96,6 +96,5 @@ function arrCjk(arr, options = {}) {
         };
     }
 }
-exports.arrCjk = arrCjk;
 exports.default = exports;
 //# sourceMappingURL=list.js.map

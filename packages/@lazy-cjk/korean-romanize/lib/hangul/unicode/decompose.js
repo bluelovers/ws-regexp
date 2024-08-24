@@ -1,8 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.decomposeHangul = exports.decomposeHangulChar = exports.arithmeticDecompositionMappingLVT = exports.arithmeticDecompositionMappingLV = void 0;
+exports.arithmeticDecompositionMappingLV = arithmeticDecompositionMappingLV;
+exports.arithmeticDecompositionMappingLVT = arithmeticDecompositionMappingLVT;
+exports.decomposeHangulChar = decomposeHangulChar;
+exports.decomposeHangul = decomposeHangul;
 const constraints_1 = require("./constraints");
 const computations_1 = require("./computations");
+const utils_1 = require("../../utils");
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
  *
@@ -17,7 +21,6 @@ function arithmeticDecompositionMappingLV(s) {
     const VPart = constraints_1.VBase + VIndex;
     return [LPart, VPart];
 }
-exports.arithmeticDecompositionMappingLV = arithmeticDecompositionMappingLV;
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LVT" Hangul syllable types
  *
@@ -32,7 +35,6 @@ function arithmeticDecompositionMappingLVT(s) {
     const TPart = constraints_1.TBase + TIndex;
     return [LVPart, TPart];
 }
-exports.arithmeticDecompositionMappingLVT = arithmeticDecompositionMappingLVT;
 /**
  * Derives a canonical decomposition of a precomposed/composite Hangul syllable
  *
@@ -51,7 +53,7 @@ exports.arithmeticDecompositionMappingLVT = arithmeticDecompositionMappingLVT;
  * @returns {array}
  */
 function decomposeHangulChar(s) {
-    const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - constraints_1.SBase;
+    const SIndex = (0, computations_1.handleSIndexInput)(s);
     const LVPart = arithmeticDecompositionMappingLV(s);
     const TIndex = (0, computations_1.computeTIndex)(SIndex);
     if (TIndex > 0) {
@@ -60,15 +62,26 @@ function decomposeHangulChar(s) {
     }
     return LVPart;
 }
-exports.decomposeHangulChar = decomposeHangulChar;
 /**
  * Returns a mapping of each Hangul character provided to an array of code points for the decomposed letters (jamo)
  *
  * @param {string} word
  * @returns {array}
  */
-function decomposeHangul(word) {
-    return [...word].map(decomposeHangulChar);
+function decomposeHangul(word, method) {
+    return [...word].map(s => {
+        try {
+            return decomposeHangulChar(s);
+        }
+        catch (e) {
+            const ss = (0, utils_1.getJamoDictionary)(s, 0);
+            if (ss) {
+                return [(0, utils_1.searchJamo)(ss, {
+                        method
+                    })];
+            }
+            throw e;
+        }
+    });
 }
-exports.decomposeHangul = decomposeHangul;
 //# sourceMappingURL=decompose.js.map

@@ -1,2 +1,2 @@
-declare const _default: any[][];
-export = _default;
+import { IJamoRomanEntryCompat } from './types';
+export declare const ListJamoRoman: readonly [IJamoRomanEntryCompat[], IJamoRomanEntryCompat[], IJamoRomanEntryCompat[]];

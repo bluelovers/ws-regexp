@@ -3,7 +3,7 @@
  * Created by user on 2020/6/2.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._text = void 0;
+exports._text = _text;
 const tslib_1 = require("tslib");
 const emoji_1 = require("../emoji");
 const cjk_1 = require("../cjk");
@@ -29,5 +29,4 @@ function _text(word, options) {
         .replace(/[\s\u00a0]/g, ' ');
     return word;
 }
-exports._text = _text;
 //# sourceMappingURL=transliterate.js.map

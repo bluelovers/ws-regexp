@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validateRegExpLiteral = exports.parseRegExpLiteral = exports.RegExpValidator = exports.RegExpParser = exports.AST = void 0;
+exports.RegExpValidator = exports.RegExpParser = exports.AST = void 0;
+exports.parseRegExpLiteral = parseRegExpLiteral;
+exports.validateRegExpLiteral = validateRegExpLiteral;
 const tslib_1 = require("tslib");
 const AST = tslib_1.__importStar(require("./ast"));
 exports.AST = AST;
@@ -19,7 +21,6 @@ tslib_1.__exportStar(require("./const"), exports);
 function parseRegExpLiteral(source, options) {
     return new parser_1.RegExpParser(options).parseLiteral((source instanceof RegExp) ? source.toString() : source);
 }
-exports.parseRegExpLiteral = parseRegExpLiteral;
 /**
  * Validate a given regular expression literal.
  * @param source The source code to validate.
@@ -28,7 +29,6 @@ exports.parseRegExpLiteral = parseRegExpLiteral;
 function validateRegExpLiteral(source, options) {
     return new validator_1.RegExpValidator(options).validateLiteral(source);
 }
-exports.validateRegExpLiteral = validateRegExpLiteral;
 /*
 export function visitRegExpAST(
     node: AST.Node,

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const romanize_1 = require("./romanize");
 const test_1 = require("../test");
+const utils_1 = require("./utils");
 const words = Object.entries(test_1.words);
 describe("romanizeWord function", () => {
     describe("should romanize simple words", () => {
@@ -44,7 +45,7 @@ describe("romanizeWord function", () => {
             // @ts-ignore
             .forEach(([hangulWord, { RRT }]) => {
             test(`${hangulWord} to ${RRT}`, () => {
-                expect((0, romanize_1.romanizeWord)(hangulWord, { method: "RRT" })).toBe(RRT.toLowerCase());
+                expect((0, romanize_1.romanizeWord)(hangulWord, { method: "RRT" /* EnumOptionsRomanizeMethod.RRT */ })).toBe(RRT.toLowerCase());
             });
         });
     });
@@ -63,7 +64,7 @@ describe("romanize function", () => {
 describe("searchJamo function", () => {
     test("should throw an error if not supplied with a node to search", () => {
         // @ts-ignore
-        expect(() => (0, romanize_1.searchJamo)()).toThrow();
+        expect(() => (0, utils_1.searchJamo)()).toThrow();
     });
 });
 //# sourceMappingURL=romanize.test.js.map

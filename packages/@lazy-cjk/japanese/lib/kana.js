@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.katakanize = exports.hiraganize = void 0;
+exports.hiraganize = hiraganize;
+exports.katakanize = katakanize;
 const tslib_1 = require("tslib");
 const kana_1 = require("./data/kana");
 tslib_1.__exportStar(require("./data/kana"), exports);
@@ -21,7 +22,6 @@ function hiraganize(string) {
         }
     });
 }
-exports.hiraganize = hiraganize;
 /**
  * Convert input hiragana into katakana.
  */
@@ -35,5 +35,4 @@ function katakanize(string) {
         }
     });
 }
-exports.katakanize = katakanize;
 //# sourceMappingURL=kana.js.map

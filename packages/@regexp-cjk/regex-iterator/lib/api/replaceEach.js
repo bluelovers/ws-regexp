@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.replaceEach = void 0;
+exports.replaceEach = replaceEach;
 const handleChainInput_1 = require("../util/handleChainInput");
 function replaceEach(input, chain, options = {}) {
     for (let row of chain) {
@@ -9,6 +9,5 @@ function replaceEach(input, chain, options = {}) {
     }
     return input;
 }
-exports.replaceEach = replaceEach;
 exports.default = replaceEach;
 //# sourceMappingURL=replaceEach.js.map

@@ -1,2 +1,2 @@
-export declare function hangulReplace(text: any, callback: any): any;
+export declare function hangulReplace(text: string, callback: (s: string) => string): string;
 export default hangulReplace;

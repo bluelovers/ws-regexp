@@ -23,5 +23,4 @@ exports.CJK_SYMBOLS_AND_PUNCTUATION = [0x3000, 0x303f];
 // _HALFWIDTH_UNICODE_CHOSEONG: [0xffa1, 0xffbe],
 // _HALFWIDTH_UNICODE_JUNGSEONG: [0xffc2, 0xffdc],
 // _HALFWIDTH_UNICODE_JONGSEONG: [0xffa1, 0xffbe],
-exports.default = exports;
 //# sourceMappingURL=blocks.js.map

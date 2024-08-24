@@ -1,2 +1,2 @@
-declare const hangulPattern: RegExp;
-export = hangulPattern;
+export declare const hangulPattern: RegExp;
+export default hangulPattern;

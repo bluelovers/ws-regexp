@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.normalizeToCompat = void 0;
-const tslib_1 = require("tslib");
-const isHangul_1 = tslib_1.__importDefault(require("../isHangul"));
-const { _HANGUL_COMPATIBILITY_JAMO, _HANGUL_JAMO } = require("./blocks");
-const whichJamoSet = jamo => (0, isHangul_1.default)(jamo, Object.entries(_HANGUL_JAMO));
+exports.normalizeToCompat = normalizeToCompat;
+const isHangul_1 = require("../isHangul");
+const blocks_1 = require("./blocks");
+const _HANGUL_JAMO_ENTRIES = Object.entries(blocks_1._HANGUL_JAMO);
+function whichJamoSet(jamo) {
+    return (0, isHangul_1.isHangul)(jamo, _HANGUL_JAMO_ENTRIES);
+}
 const jaeum = {
     ᄀ: "ㄱ",
     ᄁ: "ㄲ",
@@ -59,17 +61,16 @@ function normalizeToCompat(jamo) {
         return jamoSet;
     }
     if (jamoSet === "RIEUL_JONGSEONG") {
-        const jungseongOffset = jamo.codePointAt(0) - _HANGUL_JAMO.RIEUL_JONGSEONG[0];
-        const maeumOffset = _HANGUL_COMPATIBILITY_JAMO.RIEUL[0];
+        const jungseongOffset = jamo.codePointAt(0) - blocks_1._HANGUL_JAMO.RIEUL_JONGSEONG[0];
+        const maeumOffset = blocks_1._HANGUL_COMPATIBILITY_JAMO.RIEUL[0];
         return String.fromCodePoint(maeumOffset + jungseongOffset);
     }
     if (jamoSet === "JUNGSEONG") {
-        const jungseongOffset = jamo.codePointAt(0) - _HANGUL_JAMO.JUNGSEONG[0];
-        const maeumOffset = _HANGUL_COMPATIBILITY_JAMO.MOEUM[0];
+        const jungseongOffset = jamo.codePointAt(0) - blocks_1._HANGUL_JAMO.JUNGSEONG[0];
+        const maeumOffset = blocks_1._HANGUL_COMPATIBILITY_JAMO.MOEUM[0];
         return String.fromCodePoint(maeumOffset + jungseongOffset);
     }
     return jaeum[jamo];
 }
-exports.normalizeToCompat = normalizeToCompat;
 exports.default = normalizeToCompat;
 //# sourceMappingURL=normalizeToCompat.js.map

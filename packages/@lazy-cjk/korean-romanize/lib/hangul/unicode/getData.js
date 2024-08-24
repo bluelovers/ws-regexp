@@ -1,7 +1,7 @@
 "use strict";
 // Unicode data for category "Letter (other)"
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getDataFor = void 0;
+exports.getUnicodeDataFor = getUnicodeDataFor;
 const tslib_1 = require("tslib");
 // @ts-ignore
 const Lo_1 = tslib_1.__importDefault(require("unicode/category/Lo"));
@@ -18,10 +18,10 @@ function clean(data) {
     }))
         .reduce((acc, item) => Object.assign(acc, item), {});
 }
-function getDataFor(codePoint) {
+function getUnicodeDataFor(codePoint) {
+    // @ts-ignore
     const data = Lo_1.default[codePoint];
     return clean(data);
 }
-exports.getDataFor = getDataFor;
-exports.default = getDataFor;
+exports.default = getUnicodeDataFor;
 //# sourceMappingURL=getData.js.map

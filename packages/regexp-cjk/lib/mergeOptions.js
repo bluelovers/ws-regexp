@@ -3,7 +3,11 @@
  * Created by user on 2019/6/15.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fixOptions = exports.mergeOptions = exports.mergeOptions2 = exports.getSettingOptions = exports.customizer = void 0;
+exports.customizer = customizer;
+exports.getSettingOptions = getSettingOptions;
+exports.mergeOptions2 = mergeOptions2;
+exports.mergeOptions = mergeOptions;
+exports.fixOptions = fixOptions;
 const lodash_1 = require("lodash");
 const array_hyper_unique_1 = require("array-hyper-unique");
 function customizer(objValue, srcValue) {
@@ -11,7 +15,6 @@ function customizer(objValue, srcValue) {
         return objValue.concat(srcValue);
     }
 }
-exports.customizer = customizer;
 function getSettingOptions(str, flags = null, options = {}, ...argv) {
     if (flags !== null && typeof flags == 'object') {
         options = Object.assign({}, flags);
@@ -32,7 +35,6 @@ function getSettingOptions(str, flags = null, options = {}, ...argv) {
         argv,
     };
 }
-exports.getSettingOptions = getSettingOptions;
 /**
  * for `zhRegExp.use` only
  */
@@ -44,7 +46,6 @@ function mergeOptions2(base = {}, ...opts) {
     }
     return ret;
 }
-exports.mergeOptions2 = mergeOptions2;
 function mergeOptions(base = {}, ...opts) {
     let arr = [base || {}]
         .concat(opts)
@@ -58,7 +59,6 @@ function mergeOptions(base = {}, ...opts) {
     }
     return fixOptions(base);
 }
-exports.mergeOptions = mergeOptions;
 /*
 export function MergeDefaultOptions(target: typeof zhRegExp): typeof zhRegExp
 {
@@ -98,6 +98,5 @@ function fixOptions(options, removeEmptyOn) {
     // @ts-ignore
     return options;
 }
-exports.fixOptions = fixOptions;
 exports.default = mergeOptions;
 //# sourceMappingURL=mergeOptions.js.map

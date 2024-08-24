@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.splitLimit = void 0;
+exports.splitLimit = splitLimit;
 const _each_1 = require("./_each");
 const greedySplit_1 = require("../util/split/greedySplit");
 function _pushNonEmpty(arr, s, allowEmpty) {
@@ -98,6 +98,5 @@ function splitLimit(input, separator, limit, options) {
     }
     return ret;
 }
-exports.splitLimit = splitLimit;
 exports.default = splitLimit;
 //# sourceMappingURL=splitLimit.js.map

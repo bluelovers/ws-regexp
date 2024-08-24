@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getRegExpSourcePattern = exports.parseRegularExpressionString = void 0;
+exports.parseRegularExpressionString = parseRegularExpressionString;
+exports.getRegExpSourcePattern = getRegExpSourcePattern;
 function parseRegularExpressionString(str) {
     const m = /^([\/#$%])(.+?)\1([a-z]*)$/.exec(str);
     if (m) {
@@ -14,7 +15,6 @@ function parseRegularExpressionString(str) {
     }
     return null;
 }
-exports.parseRegularExpressionString = parseRegularExpressionString;
 function getRegExpSourcePattern(opts) {
     const { str, options } = opts;
     const { defaultFlags } = options;
@@ -54,6 +54,5 @@ function getRegExpSourcePattern(opts) {
         hasFlags,
     };
 }
-exports.getRegExpSourcePattern = getRegExpSourcePattern;
 exports.default = getRegExpSourcePattern;
 //# sourceMappingURL=getSource.js.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Trie = exports.regexgen = void 0;
+exports.Trie = void 0;
+exports.regexgen = regexgen;
 const trie_1 = require("./lib/trie");
 Object.defineProperty(exports, "Trie", { enumerable: true, get: function () { return trie_1.Trie; } });
 /**
@@ -14,7 +15,6 @@ function regexgen(inputs, flags) {
     trie.addAll(inputs);
     return trie.toRegExp(flags);
 }
-exports.regexgen = regexgen;
 regexgen.Trie = trie_1.Trie;
 exports.default = regexgen;
 //# sourceMappingURL=index.js.map

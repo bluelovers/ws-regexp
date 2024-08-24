@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleOptions = void 0;
+exports.handleOptions = handleOptions;
 const util_1 = require("@regexp-cjk/rewrite-pattern/lib/util");
 const lodash_1 = require("lodash");
 function handleOptions(options, flags) {
@@ -11,5 +11,4 @@ function handleOptions(options, flags) {
         },
     }), flags !== null && flags !== void 0 ? flags : 'u');
 }
-exports.handleOptions = handleOptions;
 //# sourceMappingURL=util.js.map

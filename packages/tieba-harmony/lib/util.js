@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayToRegExp = exports.arraySep = exports.splitZh = exports.arrCjk = exports.array_unique = void 0;
+exports.arrCjk = exports.array_unique = void 0;
+exports.splitZh = splitZh;
+exports.arraySep = arraySep;
+exports.arrayToRegExp = arrayToRegExp;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 Object.defineProperty(exports, "array_unique", { enumerable: true, get: function () { return array_hyper_unique_1.array_unique; } });
@@ -13,7 +16,6 @@ function splitZh(s) {
         .split(/([\u4E00-\u9FFF\u{20000}-\u{2FA1F}])/u)
         .filter(v => v !== '');
 }
-exports.splitZh = splitZh;
 /**
  * @example console.log(arraySep(star));
  */
@@ -38,7 +40,6 @@ function arraySep(arr) {
     ret = (0, array_hyper_unique_1.array_unique)(ret);
     return ret;
 }
-exports.arraySep = arraySep;
 /**
  * @example arrayToRegExp(arraySep(star).map(v => v.join('')))
  */
@@ -51,5 +52,4 @@ function arrayToRegExp(arr, unique = true) {
     }
     return ret;
 }
-exports.arrayToRegExp = arrayToRegExp;
 //# sourceMappingURL=util.js.map

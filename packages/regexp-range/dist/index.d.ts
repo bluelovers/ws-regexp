@@ -1,8 +1,5 @@
-export declare const TABLE_RANGE: {
-	readonly chinese: string[][];
-	readonly chinese2: string[][];
-	readonly circle: string[][];
-};
+import { TABLE_RANGE } from '@lazy-cjk/regexp-range-table';
+
 export type IOptions = {
 	/**
 	 * 字元範圍表
@@ -34,6 +31,7 @@ export declare function fillRange(from: string | number, to: string | number, op
 export declare function getOptions(options: IOptions): IOptions;
 
 export {
+	TABLE_RANGE,
 	matchRange as default,
 };
 

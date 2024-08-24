@@ -3,7 +3,8 @@
  * Created by user on 2018/4/28/028.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testSymbol = exports.REGEXP_SYMBOL = void 0;
+exports.REGEXP_SYMBOL = void 0;
+exports.testSymbol = testSymbol;
 const index_1 = require("./index");
 exports.REGEXP_SYMBOL = {
     species: false,
@@ -21,5 +22,4 @@ function testSymbol(RegExpClass = RegExp) {
         return a;
     }, {});
 }
-exports.testSymbol = testSymbol;
 //# sourceMappingURL=symbol.js.map

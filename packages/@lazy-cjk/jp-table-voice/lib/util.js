@@ -1,6 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toVoice03 = exports.toVoice02 = exports.toVoice01 = exports.getVoiceAll = exports._get = void 0;
+exports._get = _get;
+exports.getVoiceAll = getVoiceAll;
+exports.toVoice01 = toVoice01;
+exports.toVoice02 = toVoice02;
+exports.toVoice03 = toVoice03;
 /**
  * Created by user on 2020/5/27.
  */
@@ -16,7 +20,6 @@ function _get(char, idx) {
         return table_1.table_voice[char][idx];
     }
 }
-exports._get = _get;
 /**
  * 清濁音
  * [清音, 濁音, 半濁音]
@@ -24,26 +27,22 @@ exports._get = _get;
 function getVoiceAll(char) {
     return table_1.table_voice[char];
 }
-exports.getVoiceAll = getVoiceAll;
 /**
  * 清音
  */
 function toVoice01(char) {
     return _get(char, 0 /* EnumTableVoice['01'] */);
 }
-exports.toVoice01 = toVoice01;
 /**
  * 濁音
  */
 function toVoice02(char) {
     return _get(char, 1 /* EnumTableVoice['02'] */);
 }
-exports.toVoice02 = toVoice02;
 /**
  * 半濁音
  */
 function toVoice03(char) {
     return _get(char, 2 /* EnumTableVoice['03'] */);
 }
-exports.toVoice03 = toVoice03;
 //# sourceMappingURL=util.js.map

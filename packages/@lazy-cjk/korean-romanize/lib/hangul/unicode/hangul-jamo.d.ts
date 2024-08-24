@@ -1,8 +1,19 @@
-declare const _default: {
+export declare const ListJamoHangul: readonly [{
     jamo: string;
     archaic: boolean;
     unicodeData: {
-        [x: number]: unknown;
+        [x: string]: string;
     };
-}[][];
-export = _default;
+}[], {
+    jamo: string;
+    archaic: boolean;
+    unicodeData: {
+        [x: string]: string;
+    };
+}[], {
+    jamo: string;
+    archaic: boolean;
+    unicodeData: {
+        [x: string]: string;
+    };
+}[]];

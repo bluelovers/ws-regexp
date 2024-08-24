@@ -1,9 +1,15 @@
-export declare function searchJamo(node: any, params: any, prevNode?: any): any;
-export declare function syllableParser(method: any): (syllable: any, idx: any, word: any) => any;
-export interface IOptionsRomanize {
-    method?: string;
-    hyphenate?: boolean;
-}
-export declare function romanizeWord(word: string, options?: string | IOptionsRomanize): any;
-export declare function romanize(text: string, options?: any): any;
+import { EnumOptionsRomanizeMethod, IOptionsRomanize } from './types';
+export declare function syllableParser(method: EnumOptionsRomanizeMethod): (syllable: number[] | string[], idx: number, word: (number[] | string[])[]) => string[];
+/**
+ * only allow input korean text
+ *
+ * @example romanizeWord(`안녕하십니까`)
+ */
+export declare function romanizeWord(word: string, options?: string | IOptionsRomanize): string;
+/**
+ * only handle korean text
+ *
+ * @example romanize(`안녕하십니까 a b c 中文`)
+ */
+export declare function romanize(text: string, options?: IOptionsRomanize): string;
 export default romanize;

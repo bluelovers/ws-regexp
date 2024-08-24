@@ -3,7 +3,8 @@
  * Created by user on 2018/5/3/003.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rRegularExpressionString = exports.parseRegularExpressionString = void 0;
+exports.parseRegularExpressionString = parseRegularExpressionString;
+exports.rRegularExpressionString = rRegularExpressionString;
 const tslib_1 = require("tslib");
 const regexp_support_1 = tslib_1.__importDefault(require("regexp-support"));
 function parseRegularExpressionString(str, options = {}) {
@@ -22,10 +23,8 @@ function parseRegularExpressionString(str, options = {}) {
     }
     return null;
 }
-exports.parseRegularExpressionString = parseRegularExpressionString;
 function rRegularExpressionString(options = {}) {
     return new RegExp(`^(${options.allowNonNativeSlash ? '[\\/#$%]' : '\\/'})(..*)\\1([${options.allowNonNativeFlags ? 'a-zA-Z' : regexp_support_1.default.nativeFlags}]*)$`);
 }
-exports.rRegularExpressionString = rRegularExpressionString;
 exports.default = parseRegularExpressionString;
 //# sourceMappingURL=parse.js.map

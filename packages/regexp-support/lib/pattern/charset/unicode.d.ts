@@ -306,7 +306,7 @@ export declare const PatternTest: {
     [k in keyof typeof UNICODE_ALL]?: IPatternTestRow[];
 };
 export declare const _testUnicode: {
-    (name: string, RegExpClass?: RegExpConstructor, testPatterns?: {
+    (name: string, RegExpClass?: typeof RegExp, testPatterns?: {
         White_Space?: IPatternTestRow[];
         Letter?: IPatternTestRow[];
         Lower?: IPatternTestRow[];

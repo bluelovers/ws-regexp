@@ -1,25 +1,30 @@
 "use strict";
 // "...what have the Romans ever done for us?"
-const tslib_1 = require("tslib");
-const isHangul_1 = tslib_1.__importDefault(require("./hangul/isHangul"));
-const hangul_jamo_1 = tslib_1.__importDefault(require("./hangul/unicode/hangul-jamo"));
-const fromPairs = pairs => pairs.reduce((cache, pair) => {
-    cache[pair[0]] = pair[1];
-    return cache;
-}, {});
-const [initialConsonants, medialVowels, finalConsonants,] = hangul_jamo_1.default;
-const jamoMapper = jamoSet => ({ jamo, roman }, idx) => {
-    const unicodeJamo = jamoSet[idx].jamo;
-    const compatJamo = jamo &&
-        jamo !== unicodeJamo &&
-        (0, isHangul_1.default)(jamo) === "HANGUL_COMPATIBILITY_JAMO"
-        ? jamo
-        : undefined;
-    const compatJamoHex = compatJamo
-        ? compatJamo.codePointAt(0).toString(16)
-        : undefined;
-    return Object.assign(jamoSet[idx], { roman, compatJamo, compatJamoHex });
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListJamoRoman = void 0;
+const isHangul_1 = require("./hangul/isHangul");
+const hangul_jamo_1 = require("./hangul/unicode/hangul-jamo");
+function fromPairs(pairs) {
+    return pairs.reduce((cache, pair) => {
+        cache[pair[0]] = pair[1];
+        return cache;
+    }, {});
+}
+const [initialConsonants, medialVowels, finalConsonants,] = hangul_jamo_1.ListJamoHangul;
+function jamoMapper(jamoSet) {
+    return ({ jamo, roman }, idx) => {
+        const unicodeJamo = jamoSet[idx].jamo;
+        const compatJamo = jamo &&
+            jamo !== unicodeJamo &&
+            (0, isHangul_1.isHangul)(jamo) === "HANGUL_COMPATIBILITY_JAMO"
+            ? jamo
+            : undefined;
+        const compatJamoHex = compatJamo
+            ? compatJamo.codePointAt(0).toString(16)
+            : undefined;
+        return Object.assign(jamoSet[idx], { roman, compatJamo, compatJamoHex });
+    };
+}
 // initial consonants
 const choseong = [
     { jamo: "ㄱ", roman: { default: "g", MR: "k" } },
@@ -117,7 +122,9 @@ const jungseong = [
     { jamo: "ㅢ", roman: "ui" },
     { jamo: "ㅣ", roman: "i" },
 ].map(jamoMapper(medialVowels));
-const assimilate = (jamos, sound) => fromPairs(jamos.map(jamo => [jamo, sound]));
+function assimilate(jamos, sound) {
+    return fromPairs(jamos.map(jamo => [jamo, sound]));
+}
 const nasalAssimilators = [
     "ㄴ",
     String.fromCodePoint(0x1102),
@@ -281,5 +288,5 @@ const jongseong = [
         },
     },
 ].map(jamoMapper(finalConsonants));
-module.exports = [choseong, jungseong, jongseong];
+exports.ListJamoRoman = [choseong, jungseong, jongseong];
 //# sourceMappingURL=jamo.js.map

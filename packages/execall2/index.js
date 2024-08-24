@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.execAll = exports.execall = void 0;
+exports.execall = execall;
+exports.execAll = execall;
 const tslib_1 = require("tslib");
 /// <reference lib="es2018.regexp" />
 const clone_regexp_1 = require("@regexp-cjk/clone-regexp");
@@ -60,7 +61,5 @@ function execall(inputRegExp, input, options) {
     }
     return matches;
 }
-exports.execall = execall;
-exports.execAll = execall;
 exports.default = execall;
 //# sourceMappingURL=index.js.map

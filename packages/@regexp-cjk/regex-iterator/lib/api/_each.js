@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._each = void 0;
+exports._each = _each;
 const clone_regexp_1 = require("@regexp-cjk/clone-regexp");
 function* _each(input, re, options = {}) {
     let match;
@@ -25,6 +25,5 @@ function* _each(input, re, options = {}) {
         }
     }
 }
-exports._each = _each;
 exports.default = _each;
 //# sourceMappingURL=_each.js.map

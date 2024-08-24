@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.removeSame = void 0;
+exports.removeSame = removeSame;
 function removeSame(table) {
     return Object.entries(table)
         .reduce(function (a, b) {
@@ -11,5 +11,4 @@ function removeSame(table) {
         return a;
     }, {});
 }
-exports.removeSame = removeSame;
 //# sourceMappingURL=util.js.map

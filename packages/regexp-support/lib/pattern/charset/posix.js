@@ -3,7 +3,8 @@
  * Created by user on 2018/4/27/027.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testPOXIX = exports.PatternTest = exports.POXIX = void 0;
+exports.PatternTest = exports.POXIX = void 0;
+exports.testPOXIX = testPOXIX;
 const pattern_1 = require("../../pattern");
 /**
  * @link https://www.regular-expressions.info/posixbrackets.html
@@ -39,6 +40,5 @@ function testPOXIX(name, RegExpClass = RegExp, testPatterns = exports.PatternTes
     // @ts-ignore
     return (0, pattern_1.testPattern)(name, RegExpClass, testPatterns);
 }
-exports.testPOXIX = testPOXIX;
 exports.default = POXIX;
 //# sourceMappingURL=posix.js.map

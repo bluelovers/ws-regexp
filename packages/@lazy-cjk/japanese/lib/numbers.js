@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.transcribeNumber = void 0;
+exports.transcribeNumber = transcribeNumber;
 const tslib_1 = require("tslib");
 const defaults_1 = tslib_1.__importDefault(require("lodash/defaults"));
 const big_js_1 = tslib_1.__importDefault(require("big.js"));
@@ -139,6 +139,5 @@ function transcribeNumber(number, config) {
     transcription = lit + transcription;
     return transcription;
 }
-exports.transcribeNumber = transcribeNumber;
 exports.default = transcribeNumber;
 //# sourceMappingURL=numbers.js.map

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handlePinyinType = void 0;
+exports.handlePinyinType = handlePinyinType;
 const types_1 = require("../types");
 function handlePinyinType(pinyinType) {
     if (typeof pinyinType !== 'number' || !(pinyinType in types_1.EnumPinyinType)) {
@@ -8,5 +8,4 @@ function handlePinyinType(pinyinType) {
     }
     return pinyinType;
 }
-exports.handlePinyinType = handlePinyinType;
 //# sourceMappingURL=uni2zhuyin.js.map

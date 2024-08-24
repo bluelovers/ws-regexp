@@ -3,7 +3,8 @@
  * Created by user on 2020/6/8.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleOptions = exports.rewritePatternOptions = void 0;
+exports.rewritePatternOptions = rewritePatternOptions;
+exports.handleOptions = handleOptions;
 const lodash_1 = require("lodash");
 const rewrite_flags_1 = require("@regexp-cjk/rewrite-flags");
 function rewritePatternOptions(options, flags) {
@@ -15,7 +16,6 @@ function rewritePatternOptions(options, flags) {
         useUnicodeFlag: (_a = flags === null || flags === void 0 ? void 0 : flags.includes) === null || _a === void 0 ? void 0 : _a.call(flags, 'u'),
     });
 }
-exports.rewritePatternOptions = rewritePatternOptions;
 function handleOptions(options, flags) {
     var _a;
     flags = (_a = options === null || options === void 0 ? void 0 : options.flags) !== null && _a !== void 0 ? _a : flags;
@@ -29,5 +29,4 @@ function handleOptions(options, flags) {
         flags,
     };
 }
-exports.handleOptions = handleOptions;
 //# sourceMappingURL=util.js.map

@@ -3,7 +3,8 @@
  * Created by user on 2019/5/27.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._coreFn = exports.createZhRegExpPlugin = void 0;
+exports.createZhRegExpPlugin = createZhRegExpPlugin;
+exports._coreFn = _coreFn;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const fullhalf_1 = require("@lazy-cjk/fullhalf");
@@ -114,7 +115,6 @@ function createZhRegExpPlugin(options = {}) {
         },
     };
 }
-exports.createZhRegExpPlugin = createZhRegExpPlugin;
 /**
  * 分享內部處理函數 方便拿去使用或者擴充
  *
@@ -169,6 +169,5 @@ function _coreFn(raw, { autoDeburr, autoFullHalf, autoLocale, autoVoice, cacheMa
     }
     return arr;
 }
-exports._coreFn = _coreFn;
 exports.default = createZhRegExpPlugin;
 //# sourceMappingURL=index.js.map

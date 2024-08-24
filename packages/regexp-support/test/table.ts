@@ -4,10 +4,6 @@
 
 import { UNICODE_SCRIPTS_ALL, wrapToRegexName as wrapToRegexName2 } from '../lib/pattern/charset/unicode-script';
 import { UNICODE, UNICODE_ALL, wrapToRegexName } from '../lib/pattern/charset/unicode';
-import CACHE_BLOCKS from '../lib/pattern/cache/blocks';
-import CACHE_CATEGORIES, { NAME_ALIAS } from '../lib/pattern/cache/categories';
-import CACHE_PROPERTIES from '../lib/pattern/cache/properties';
-import CACHE_SCRIPTS from '../lib/pattern/cache/scripts';
 
 import * as util from "util";
 

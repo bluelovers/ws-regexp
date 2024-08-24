@@ -3,7 +3,8 @@
  * Created by user on 2018/4/28/028.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testPrototype = exports.PROTOTYPE = void 0;
+exports.PROTOTYPE = void 0;
+exports.testPrototype = testPrototype;
 /// <reference lib="es2015.core" />
 /// <reference lib="es2015.symbol.wellknown" />
 /// <reference lib="es2018.regexp" />
@@ -38,5 +39,4 @@ function testPrototype(RegExpClass = RegExp) {
         return a;
     }, {});
 }
-exports.testPrototype = testPrototype;
 //# sourceMappingURL=prototype.js.map

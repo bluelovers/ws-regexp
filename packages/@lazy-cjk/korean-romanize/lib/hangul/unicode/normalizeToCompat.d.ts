@@ -1,2 +1,2 @@
-export declare function normalizeToCompat(jamo: any): any;
+export declare function normalizeToCompat(jamo: string): any;
 export default normalizeToCompat;

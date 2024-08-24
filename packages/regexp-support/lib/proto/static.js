@@ -6,7 +6,8 @@
 /// <reference lib="es2015.symbol.wellknown" />
 /// <reference lib="es2018.regexp" />
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testStatic = exports.REGEXP_STATIC = void 0;
+exports.REGEXP_STATIC = void 0;
+exports.testStatic = testStatic;
 const index_1 = require("../index");
 exports.REGEXP_STATIC = {
     $1: false,
@@ -74,5 +75,4 @@ function testStatic(RegExpClass = RegExp) {
         return a;
     }, {});
 }
-exports.testStatic = testStatic;
 //# sourceMappingURL=static.js.map

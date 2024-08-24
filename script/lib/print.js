@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.printTypeKeys = exports.printRecord = exports.printArray = void 0;
+exports.printArray = printArray;
+exports.printRecord = printRecord;
+exports.printTypeKeys = printTypeKeys;
 const tslib_1 = require("tslib");
 const assert_1 = tslib_1.__importDefault(require("assert"));
 const array_hyper_unique_1 = require("array-hyper-unique");
@@ -13,7 +15,6 @@ function printArray(arrayTable, level) {
     }
     return ls;
 }
-exports.printArray = printArray;
 function printRecord(data, level) {
     let ls = [];
     let prepend = `\t`.repeat(level | 0);
@@ -22,11 +23,9 @@ function printRecord(data, level) {
     }
     return ls;
 }
-exports.printRecord = printRecord;
 function printTypeKeys(data) {
     return (0, array_hyper_unique_1.array_unique)(data)
         .map(v => `'${v}'`)
         .join(' | ');
 }
-exports.printTypeKeys = printTypeKeys;
 //# sourceMappingURL=print.js.map

@@ -10,6 +10,9 @@ export declare const TABLE_RANGE_ALL: {
 	readonly roman: string[][];
 };
 export declare function listRawToRange(list_range_raw: (string | number | number[])[][]): string[][];
+/**
+ * roman
+ */
 declare const list_range: string[][];
 
 export {

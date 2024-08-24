@@ -1,4 +1,4 @@
-export declare function getDataFor(codePoint: any): {
-    [x: number]: unknown;
+export declare function getUnicodeDataFor(codePoint: number): {
+    [x: string]: string;
 };
-export default getDataFor;
+export default getUnicodeDataFor;

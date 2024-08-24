@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cjk2zhs = exports.cjk2zht = exports.cjk2jp = exports.zh2jp = exports.zhs2zht = exports.zht2zhs = exports.zht2jp = exports.zhs2jp = exports.jp2zhs = exports.jp2zht = void 0;
+exports.cjk2jp = exports.zhs2zht = exports.zht2zhs = exports.zht2jp = exports.zhs2jp = exports.jp2zhs = exports.jp2zht = void 0;
+exports.zh2jp = zh2jp;
+exports.cjk2zht = cjk2zht;
+exports.cjk2zhs = cjk2zhs;
 const types_1 = require("./types");
 const table_1 = require("./table");
 const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
@@ -103,7 +106,6 @@ function zh2jp(str, options) {
     })
         .join('');
 }
-exports.zh2jp = zh2jp;
 /**
  * only 只將簡繁日 當中共通的 簡繁漢字 => 轉為日文漢字
  *
@@ -143,7 +145,6 @@ function cjk2zht(str, options) {
     })
         .join('');
 }
-exports.cjk2zht = cjk2zht;
 /**
  * only 只將簡繁日 當中共通的 漢字 => 轉為簡體漢字
  * 請勿作為簡繁轉換用
@@ -173,6 +174,5 @@ function cjk2zhs(str, options) {
     })
         .join('');
 }
-exports.cjk2zhs = cjk2zhs;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

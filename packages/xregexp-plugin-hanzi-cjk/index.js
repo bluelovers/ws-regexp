@@ -3,7 +3,10 @@
  * Created by user on 2018/4/24/024.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isInstalled = exports.install = exports.addSupportToXRegExp = exports.X_REGEX_DATA = exports.isXRegExp = exports.createXRegExp = void 0;
+exports.X_REGEX_DATA = exports.isXRegExp = exports.createXRegExp = void 0;
+exports.addSupportToXRegExp = addSupportToXRegExp;
+exports.install = addSupportToXRegExp;
+exports.isInstalled = isInstalled;
 const tslib_1 = require("tslib");
 const xregexp_1 = tslib_1.__importDefault(require("xregexp"));
 const zh_table_list_1 = require("@lazy-cjk/zh-table-list");
@@ -44,11 +47,8 @@ function addSupportToXRegExp(xr, options = {}) {
     }
     return xr;
 }
-exports.addSupportToXRegExp = addSupportToXRegExp;
-exports.install = addSupportToXRegExp;
 function isInstalled(xr) {
     return _CACHE.has(xr !== null && xr !== void 0 ? xr : xregexp_1.default);
 }
-exports.isInstalled = isInstalled;
 exports.default = addSupportToXRegExp;
 //# sourceMappingURL=index.js.map

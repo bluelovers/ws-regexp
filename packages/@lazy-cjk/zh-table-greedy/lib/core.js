@@ -3,7 +3,7 @@
  * Created by user on 2020/5/22.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._greedyTableBuild = void 0;
+exports._greedyTableBuild = _greedyTableBuild;
 const array_hyper_unique_1 = require("array-hyper-unique");
 const util_1 = require("./util");
 function _greedyTableBuild(data) {
@@ -28,5 +28,4 @@ function _greedyTableBuild(data) {
         _greedyTableCacheTest,
     };
 }
-exports._greedyTableBuild = _greedyTableBuild;
 //# sourceMappingURL=core.js.map

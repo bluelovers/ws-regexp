@@ -3,7 +3,10 @@
  * Created by user on 2020/5/22.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.greedyTableReplace = exports.greedyTableCharArray = exports.greedyTableTest = exports._greedyTableBuild = exports._greedyTableCacheRegexp = exports._greedyTableCacheMap = exports._greedyTableCacheTest = void 0;
+exports._greedyTableBuild = exports._greedyTableCacheRegexp = exports._greedyTableCacheMap = exports._greedyTableCacheTest = void 0;
+exports.greedyTableTest = greedyTableTest;
+exports.greedyTableCharArray = greedyTableCharArray;
+exports.greedyTableReplace = greedyTableReplace;
 const core_1 = require("./lib/core");
 Object.defineProperty(exports, "_greedyTableBuild", { enumerable: true, get: function () { return core_1._greedyTableBuild; } });
 const table_1 = require("./lib/table");
@@ -13,11 +16,9 @@ Object.defineProperty(exports, "_greedyTableCacheRegexp", { enumerable: true, ge
 function greedyTableTest(input) {
     return table_1._greedyTableCacheTest.test(input);
 }
-exports.greedyTableTest = greedyTableTest;
 function greedyTableCharArray(char) {
     return table_1._greedyTableCacheMap.get(char);
 }
-exports.greedyTableCharArray = greedyTableCharArray;
 function greedyTableReplace(input) {
     if (greedyTableTest(input)) {
         return table_1._greedyTableCacheRegexp
@@ -27,6 +28,5 @@ function greedyTableReplace(input) {
     }
     return input;
 }
-exports.greedyTableReplace = greedyTableReplace;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

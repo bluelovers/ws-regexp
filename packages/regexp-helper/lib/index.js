@@ -3,7 +3,13 @@
  * Created by user on 2018/4/28/028.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.prototypeToFlags = exports.prototypeToFlagsArray = exports._getNativeFlags = exports.isNativeFlags = exports.stripNonNativeFlags = exports.getNativeFlags = exports.hasFlagsProp = exports.RE_NON_NATIVE_FLAGS = exports.RE_NATIVE_FLAGS = void 0;
+exports.hasFlagsProp = exports.RE_NON_NATIVE_FLAGS = exports.RE_NATIVE_FLAGS = void 0;
+exports.getNativeFlags = getNativeFlags;
+exports.stripNonNativeFlags = stripNonNativeFlags;
+exports.isNativeFlags = isNativeFlags;
+exports._getNativeFlags = _getNativeFlags;
+exports.prototypeToFlagsArray = prototypeToFlagsArray;
+exports.prototypeToFlags = prototypeToFlags;
 const regexp_support_1 = require("regexp-support");
 exports.RE_NATIVE_FLAGS = new RegExp(`[${regexp_support_1.support.nativeFlags}]`, 'g');
 exports.RE_NON_NATIVE_FLAGS = new RegExp(`[^${regexp_support_1.support.nativeFlags}]`, 'g');
@@ -21,15 +27,12 @@ function getNativeFlags(target) {
     }
     return flags;
 }
-exports.getNativeFlags = getNativeFlags;
 function stripNonNativeFlags(flags) {
     return flags.replace(exports.RE_NON_NATIVE_FLAGS, '');
 }
-exports.stripNonNativeFlags = stripNonNativeFlags;
 function isNativeFlags(flags) {
     return (flags === '') || !exports.RE_NON_NATIVE_FLAGS.test(flags);
 }
-exports.isNativeFlags = isNativeFlags;
 /**
  * Returns native `RegExp` flags used by a regex object.
  *
@@ -42,7 +45,6 @@ function _getNativeFlags(regex) {
         regex.flags :
         /\/([a-z]*)$/i.exec(RegExp.prototype.toString.call(regex))[1];
 }
-exports._getNativeFlags = _getNativeFlags;
 function prototypeToFlagsArray(inputObject, flagMap = regexp_support_1.FlagsName) {
     return Object.keys(flagMap)
         .reduce(function (a, name) {
@@ -55,11 +57,9 @@ function prototypeToFlagsArray(inputObject, flagMap = regexp_support_1.FlagsName
     }, [])
         .sort();
 }
-exports.prototypeToFlagsArray = prototypeToFlagsArray;
 function prototypeToFlags(inputObject, flagMap = regexp_support_1.FlagsName) {
     return prototypeToFlagsArray(inputObject, flagMap)
         .join('');
 }
-exports.prototypeToFlags = prototypeToFlags;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

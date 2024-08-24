@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleChainRowResult = void 0;
+exports.handleChainRowResult = handleChainRowResult;
 function handleChainRowResult({ regexp, backref, }, str, match, { allowFallbackToSource }) {
     let ret;
     if (match !== null && typeof match !== 'undefined') {
@@ -28,6 +28,5 @@ function handleChainRowResult({ regexp, backref, }, str, match, { allowFallbackT
     }
     return ret;
 }
-exports.handleChainRowResult = handleChainRowResult;
 exports.default = handleChainRowResult;
 //# sourceMappingURL=handleChainRowResult.js.map

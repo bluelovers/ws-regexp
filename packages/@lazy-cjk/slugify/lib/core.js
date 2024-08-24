@@ -3,7 +3,13 @@
  * Created by user on 2020/5/31.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._slice = exports._trim = exports._core = exports._coreTextAfter = exports._coreText = exports._coreCase = exports.handleOptions = void 0;
+exports.handleOptions = handleOptions;
+exports._coreCase = _coreCase;
+exports._coreText = _coreText;
+exports._coreTextAfter = _coreTextAfter;
+exports._core = _core;
+exports._trim = _trim;
+exports._slice = _slice;
 const tslib_1 = require("tslib");
 const deburr_1 = tslib_1.__importDefault(require("lodash/deburr"));
 const upperFirst_1 = tslib_1.__importDefault(require("lodash/upperFirst"));
@@ -20,7 +26,6 @@ function handleOptions(options) {
     options.transliterate = (_d = options.transliterate) !== null && _d !== void 0 ? _d : true;
     return options;
 }
-exports.handleOptions = handleOptions;
 function _coreCase(word, options) {
     options = options || {};
     if (options.upperCaseExtra) {
@@ -42,7 +47,6 @@ function _coreCase(word, options) {
     }
     return word;
 }
-exports._coreCase = _coreCase;
 function _coreText(word, options) {
     word = (0, transliterate_1._text)(word, options);
     word = _coreCase(word, options);
@@ -51,13 +55,11 @@ function _coreText(word, options) {
     }
     return word;
 }
-exports._coreText = _coreText;
 function _coreTextAfter(word, options) {
     word = _slice(word, options);
     word = _trim(word, options);
     return word;
 }
-exports._coreTextAfter = _coreTextAfter;
 function _core(word, options) {
     if (word === '') {
         return '';
@@ -74,13 +76,11 @@ function _core(word, options) {
     }
     return word;
 }
-exports._core = _core;
 function _trim(word, options) {
     return word
         .trim()
         .replace(options.trimRegexp, '');
 }
-exports._trim = _trim;
 function _slice(word, options) {
     if (word.length && options.maxLength) {
         word = word.slice(0, options.maxLength);
@@ -88,5 +88,4 @@ function _slice(word, options) {
     word = _trim(word, options);
     return word;
 }
-exports._slice = _slice;
 //# sourceMappingURL=core.js.map

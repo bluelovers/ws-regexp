@@ -8,9 +8,6 @@ import { IPatternTestFn, IPatternTestRow, PatternSupport, testPattern } from '..
 import { _createFnTestPattern, log_dir } from '../../util/index';
 import { _wrapToRegexName } from './index';
 
-import CACHE_BLOCKS from '../cache/blocks';
-import CACHE_CATEGORIES from '../cache/categories';
-import CACHE_PROPERTIES from '../cache/properties';
 import CACHE_SCRIPTS from '../cache/scripts';
 
 export const KEY_PREFIX = '\\p{Script=';

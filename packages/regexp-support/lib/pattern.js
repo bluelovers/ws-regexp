@@ -3,7 +3,9 @@
  * Created by user on 2018/4/26/026.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testNamedCapturingGroups = exports.testPattern = exports.PatternTest = exports.PatternSupport = void 0;
+exports.PatternTest = exports.PatternSupport = void 0;
+exports.testPattern = testPattern;
+exports.testNamedCapturingGroups = testNamedCapturingGroups;
 const index_1 = require("./index");
 exports.PatternSupport = {
     namedCapturingGroups: false,
@@ -118,7 +120,6 @@ function testPattern(name, RegExpClass = RegExp, testPatterns = exports.PatternT
     }
     return null;
 }
-exports.testPattern = testPattern;
 function testNamedCapturingGroups(key, flags) {
     return [`U\\+(?<${key}>[0-9A-F]{4})`, flags || '', 'U+2620', {
             groups: { [key]: '2620' },
@@ -134,5 +135,4 @@ function testNamedCapturingGroups(key, flags) {
             });
         }];
 }
-exports.testNamedCapturingGroups = testNamedCapturingGroups;
 //# sourceMappingURL=pattern.js.map

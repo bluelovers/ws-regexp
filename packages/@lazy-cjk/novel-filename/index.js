@@ -1,17 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.zh = exports.jp = exports.word = exports.filename = void 0;
+exports.filename = filename;
+exports.word = word;
+exports.jp = jp;
+exports.zh = zh;
 const jp_table_convert_1 = require("@lazy-cjk/jp-table-convert");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
 function filename(name, options = {}) {
     return jp(name, options)
         .replace(/·/g, '・');
 }
-exports.filename = filename;
 function word(name, options = {}) {
     return jp(name, options);
 }
-exports.word = word;
 function jp(txt, options = {}) {
     return zh((0, jp_table_convert_1.zh2jp)(zh(txt), {
         // @ts-ignore
@@ -33,7 +34,6 @@ function jp(txt, options = {}) {
         .replace(/仮/g, '假')
         .replace(/戦/g, '戰');
 }
-exports.jp = jp;
 function zh(txt, options = {}) {
     return txt
         .replace(/[\u2000-\u200F]/g, '')
@@ -58,6 +58,5 @@ function zh(txt, options = {}) {
         return (0, zh_convert_1.cn2tw)(s);
     });
 }
-exports.zh = zh;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.astToString = exports.fakePatternToRegExpLiteral = exports.parsePattern = exports.parseFlags = exports.parseRegExp = exports.createRegExpParser = exports.defaultRegExpParser = exports.EMOJI_REGEX = void 0;
+exports.defaultRegExpParser = exports.EMOJI_REGEX = void 0;
+exports.createRegExpParser = createRegExpParser;
+exports.parseRegExp = parseRegExp;
+exports.parseFlags = parseFlags;
+exports.parsePattern = parsePattern;
+exports.fakePatternToRegExpLiteral = fakePatternToRegExpLiteral;
+exports.astToString = astToString;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const regexpp2_1 = require("regexpp2");
@@ -14,18 +20,15 @@ exports.defaultRegExpParser = createRegExpParser({
 function createRegExpParser(options) {
     return new regexpp2_1.RegExpParser(options);
 }
-exports.createRegExpParser = createRegExpParser;
 function parseRegExp(input, objRegExpParser = exports.defaultRegExpParser) {
     input = input
         .replace(/\n/g, '\\n')
         .replace(/\r/g, '\\r');
     return objRegExpParser.parseLiteral(input);
 }
-exports.parseRegExp = parseRegExp;
 function parseFlags(input, objRegExpParser = exports.defaultRegExpParser) {
     return objRegExpParser.parseFlags(input);
 }
-exports.parseFlags = parseFlags;
 function parsePattern(input, uFlag = false, objRegExpParser = exports.defaultRegExpParser) {
     if (typeof uFlag == 'string') {
         uFlag = parseFlags(uFlag).unicode;
@@ -35,7 +38,6 @@ function parsePattern(input, uFlag = false, objRegExpParser = exports.defaultReg
         .replace(/\r/g, '\\r');
     return objRegExpParser.parsePattern(input, 0, input.length, uFlag);
 }
-exports.parsePattern = parsePattern;
 function fakePatternToRegExpLiteral(pattern, flags = '', objRegExpParser = exports.defaultRegExpParser) {
     let data;
     if (!flags) {
@@ -60,7 +62,6 @@ function fakePatternToRegExpLiteral(pattern, flags = '', objRegExpParser = expor
     }
     return data;
 }
-exports.fakePatternToRegExpLiteral = fakePatternToRegExpLiteral;
 function astToString(ast, options = {}) {
     let source;
     let _update_;
@@ -233,6 +234,5 @@ function astToString(ast, options = {}) {
     }
     return source;
 }
-exports.astToString = astToString;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.greedySplit = void 0;
+exports.greedySplit = greedySplit;
 function greedySplit(str, separator, limit) {
     const result = str.split(separator, limit);
     if (result.length === limit) {
@@ -21,5 +21,4 @@ function greedySplit(str, separator, limit) {
     }
     return result;
 }
-exports.greedySplit = greedySplit;
 //# sourceMappingURL=greedySplit.js.map

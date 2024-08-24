@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addNew = exports._jpTableCmparisonBuild = exports._jpTableCmparisonBuildPre = exports.fixPlusTable = void 0;
+exports.fixPlusTable = fixPlusTable;
+exports._jpTableCmparisonBuildPre = _jpTableCmparisonBuildPre;
+exports._jpTableCmparisonBuild = _jpTableCmparisonBuild;
+exports.addNew = addNew;
 const array_hyper_unique_1 = require("array-hyper-unique");
 const zero_width_1 = require("zero-width");
 function fixPlusTable(table) {
@@ -15,7 +18,6 @@ function fixPlusTable(table) {
         });
     });
 }
-exports.fixPlusTable = fixPlusTable;
 function _jpTableCmparisonBuildPre(table, options) {
     var _a, _b;
     const skip = (_a = options === null || options === void 0 ? void 0 : options.skip) !== null && _a !== void 0 ? _a : [];
@@ -51,7 +53,6 @@ function _jpTableCmparisonBuildPre(table, options) {
         PLUS_TABLE_SAFE,
     };
 }
-exports._jpTableCmparisonBuildPre = _jpTableCmparisonBuildPre;
 function _jpTableCmparisonBuild(table, options) {
     let { TABLE, TABLE_SAFE, PLUS_TABLE, PLUS_TABLE_SAFE, } = _jpTableCmparisonBuildPre(table, options);
     let cache = [];
@@ -96,7 +97,6 @@ function _jpTableCmparisonBuild(table, options) {
         PLUS_TABLE_SAFE,
     };
 }
-exports._jpTableCmparisonBuild = _jpTableCmparisonBuild;
 function addNew(table, jp, zht, zhs) {
     jp = Array.isArray(jp) ? jp : [jp];
     zht = Array.isArray(zht) ? zht : [zht];
@@ -108,5 +108,4 @@ function addNew(table, jp, zht, zhs) {
     ]);
     return table;
 }
-exports.addNew = addNew;
 //# sourceMappingURL=core.js.map

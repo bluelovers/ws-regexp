@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._wrapFn = exports._get = void 0;
+exports._get = _get;
+exports._wrapFn = _wrapFn;
 const tslib_1 = require("tslib");
 const array_hyper_unique_1 = require("array-hyper-unique");
 const core_1 = require("@lazy-cjk/zh-table-alias/lib/util/core");
@@ -9,7 +10,6 @@ function _get(a, value, ...values) {
     a = (0, core_1._get)(a, value, ...values);
     return (0, array_hyper_unique_1.array_unique)(a).sort();
 }
-exports._get = _get;
 function _wrapFn(fn) {
     return function (char, options = {}) {
         if (!char) {
@@ -24,5 +24,4 @@ function _wrapFn(fn) {
         return a;
     };
 }
-exports._wrapFn = _wrapFn;
 //# sourceMappingURL=util.js.map

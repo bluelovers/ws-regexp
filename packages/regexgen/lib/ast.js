@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.parens = exports.Literal = exports.Repetition = exports.Concatenation = exports.CharClass = exports.Alternation = void 0;
+exports.Literal = exports.Repetition = exports.Concatenation = exports.CharClass = exports.Alternation = void 0;
+exports.parens = parens;
 const tslib_1 = require("tslib");
 const jsesc_1 = tslib_1.__importDefault(require("jsesc"));
 const regenerate_1 = tslib_1.__importDefault(require("regenerate"));
@@ -155,5 +156,4 @@ function parens(exp, parent, flags) {
     }
     return str;
 }
-exports.parens = parens;
 //# sourceMappingURL=ast.js.map

@@ -3,7 +3,10 @@
  * Created by user on 2019/6/15.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.unicodePropertyEscape = exports.checkUnicodePropertyEscape = exports.astUnicodePropertyCharacterSet = exports.createZhRegExpCorePlugin = void 0;
+exports.createZhRegExpCorePlugin = createZhRegExpCorePlugin;
+exports.astUnicodePropertyCharacterSet = astUnicodePropertyCharacterSet;
+exports.checkUnicodePropertyEscape = checkUnicodePropertyEscape;
+exports.unicodePropertyEscape = unicodePropertyEscape;
 const tslib_1 = require("tslib");
 const regexp_parser_event_1 = tslib_1.__importDefault(require("regexp-parser-event"));
 const rewrite_pattern_1 = require("@regexp-cjk/rewrite-pattern");
@@ -55,17 +58,14 @@ function createZhRegExpCorePlugin(options = {}) {
         }
     };
 }
-exports.createZhRegExpCorePlugin = createZhRegExpCorePlugin;
 function astUnicodePropertyCharacterSet(ast) {
     return (ast.kind === "property" /* EnumKindCharacterSet.UnicodePropertyCharacterSet */);
 }
-exports.astUnicodePropertyCharacterSet = astUnicodePropertyCharacterSet;
 function checkUnicodePropertyEscape(ast) {
     if (ast.value == 'Punctuation') {
         return true;
     }
 }
-exports.checkUnicodePropertyEscape = checkUnicodePropertyEscape;
 /**
  * use @regexp-cjk/escape-unicode-property
  *
@@ -77,6 +77,5 @@ function unicodePropertyEscape(raw, flags, useUnicodeFlag) {
         useUnicodeFlag,
     });
 }
-exports.unicodePropertyEscape = unicodePropertyEscape;
 exports.default = createZhRegExpCorePlugin;
 //# sourceMappingURL=index.js.map

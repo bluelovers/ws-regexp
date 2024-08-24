@@ -3,7 +3,7 @@
  * Created by user on 2020/5/29.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.slugify = void 0;
+exports.slugify = slugify;
 const zh_table_greedy_1 = require("@lazy-cjk/zh-table-greedy");
 const list_1 = require("@lazy-cjk/zh-table-list/list");
 /**
@@ -31,6 +31,5 @@ function slugify(input, options = {}, unsafe2) {
     }, [])
         .join('');
 }
-exports.slugify = slugify;
 exports.default = slugify;
 //# sourceMappingURL=index.js.map

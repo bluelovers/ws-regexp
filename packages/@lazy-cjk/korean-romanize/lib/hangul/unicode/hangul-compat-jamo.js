@@ -1,8 +1,8 @@
 "use strict";
-const getUnicodeDataFor = require("./getData");
+const getData_1 = require("./getData");
 function getMapping(mapping) {
     // "mapping": "<compat> 1100",
-    if (mapping && typeof mapping === "string" && mapping.includes("<compat>")) {
+    if (typeof mapping === "string" && mapping.includes("<compat>")) {
         return String.fromCodePoint(parseInt(mapping.split(" ")[1], 16));
     }
 }
@@ -18,8 +18,8 @@ function indexCompatJamo(offset = 0x3131, limit = 0x318e - offset, numCurrent) {
         .fill({})
         .map((p, idx) => {
         const codePoint = offset + idx;
-        const unicodeData = getUnicodeDataFor(codePoint);
-        const mapsTo = getMapping(unicodeData.mapping);
+        const unicodeData = (0, getData_1.getUnicodeDataFor)(codePoint);
+        const mapsTo = getMapping(unicodeData['mapping']);
         return {
             jamo: String.fromCodePoint(offset + idx),
             archaic: idx + 1 > numCurrent,

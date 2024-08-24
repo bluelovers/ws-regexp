@@ -3,7 +3,10 @@
  * Created by user on 2018/5/6/006.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.wrapToRegexName = exports.testUnicodeAll = exports.testUnicode = exports._testUnicode = exports.PatternTest = exports.UNICODE_NAME_ALIAS_ALL = exports.UNICODE_NAME_ALIAS = exports.UNICODE_ALL = exports.UNICODE = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+exports._testUnicode = exports.PatternTest = exports.UNICODE_NAME_ALIAS_ALL = exports.UNICODE_NAME_ALIAS = exports.UNICODE_ALL = exports.UNICODE = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+exports.testUnicode = testUnicode;
+exports.testUnicodeAll = testUnicodeAll;
+exports.wrapToRegexName = wrapToRegexName;
 const tslib_1 = require("tslib");
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
@@ -313,7 +316,6 @@ function testUnicode(name, RegExpClass, testPatterns = exports.PatternTest) {
     }
     return (0, exports._testUnicode)(name, RegExpClass, testPatterns);
 }
-exports.testUnicode = testUnicode;
 // @ts-ignore
 function testUnicodeAll(RegExpClass = RegExp, testPatterns = exports.PatternTest) {
     return Object.keys(exports.UNICODE_ALL).reduce(function (a, name) {
@@ -325,7 +327,6 @@ function testUnicodeAll(RegExpClass = RegExp, testPatterns = exports.PatternTest
         return a;
     }, {});
 }
-exports.testUnicodeAll = testUnicodeAll;
 function wrapToRegexName(name, negation) {
     let prefix = exports.KEY_PREFIX;
     if (negation) {
@@ -333,6 +334,5 @@ function wrapToRegexName(name, negation) {
     }
     return (0, index_2._wrapToRegexName)(name, prefix, exports.KEY_SUFFIX);
 }
-exports.wrapToRegexName = wrapToRegexName;
 exports.default = exports;
 //# sourceMappingURL=unicode.js.map

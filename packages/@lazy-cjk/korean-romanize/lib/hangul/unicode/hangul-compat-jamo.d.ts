@@ -2,6 +2,8 @@ declare const _default: {
     jamo: string;
     archaic: boolean;
     mapsTo: string;
-    unicodeData: any;
+    unicodeData: {
+        [x: string]: string;
+    };
 }[];
 export = _default;

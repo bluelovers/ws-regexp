@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.char2cns = exports.uni2cns = void 0;
+exports.uni2cns = uni2cns;
+exports.char2cns = char2cns;
 const char2uni_1 = require("./char2uni");
 function uni2cns(uni) {
     uni = parseInt(uni.toString());
@@ -12,10 +13,8 @@ function uni2cns(uni) {
     }
     return require('./cns/unicode/uni2cns.bmp.json')[uni];
 }
-exports.uni2cns = uni2cns;
 function char2cns(char) {
     return uni2cns((0, char2uni_1.char2uni)(char));
 }
-exports.char2cns = char2cns;
 exports.default = uni2cns;
 //# sourceMappingURL=uni2cns.js.map

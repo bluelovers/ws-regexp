@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.gitSubtreePush = void 0;
+exports.gitSubtreePush = gitSubtreePush;
 const tslib_1 = require("tslib");
 /**
  * Created by user on 2020/5/13.
@@ -52,5 +52,4 @@ async function gitSubtreePush(module_name) {
         (0, fs_extra_1.unlinkSync)(file);
     }
 }
-exports.gitSubtreePush = gitSubtreePush;
 //# sourceMappingURL=git-subtree-push.js.map

@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.computeLVIndex = exports.computeTIndex = exports.computeVIndex = exports.computeLIndex = exports.computeSIndex = exports.intDiv = void 0;
+exports.intDiv = intDiv;
+exports.handleSIndexInput = handleSIndexInput;
+exports.computeSIndex = computeSIndex;
+exports.computeLIndex = computeLIndex;
+exports.computeVIndex = computeVIndex;
+exports.computeTIndex = computeTIndex;
+exports.computeLVIndex = computeLVIndex;
 const constraints_1 = require("./constraints");
 /**
  * Returns an integer division quotient (rounded down)
@@ -11,19 +17,21 @@ const constraints_1 = require("./constraints");
 function intDiv(dividend, divisor) {
     return Math.floor(dividend / divisor);
 }
-exports.intDiv = intDiv;
+function handleSIndexInput(s) {
+    const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - constraints_1.SBase;
+    return SIndex;
+}
 /**
  *
  * @param {(string|integer)} s
  */
 function computeSIndex(s) {
-    const SIndex = (typeof s === "string" ? s.charCodeAt(0) : s) - constraints_1.SBase;
+    const SIndex = handleSIndexInput(s);
     if (0 > SIndex || SIndex >= constraints_1.SCount) {
-        throw new Error(`Not a Hangul syllable: ${s}`);
+        throw new RangeError(`Not a Hangul syllable: ${s}, index: ${SIndex} should not >= ${constraints_1.SCount}`);
     }
     return SIndex;
 }
-exports.computeSIndex = computeSIndex;
 /**
  *
  * @param {integer} SIndex
@@ -31,7 +39,6 @@ exports.computeSIndex = computeSIndex;
 function computeLIndex(SIndex) {
     return intDiv(SIndex, constraints_1.NCount);
 } // integer division rounded down
-exports.computeLIndex = computeLIndex;
 /**
  *
  * @param {integer} SIndex
@@ -39,7 +46,6 @@ exports.computeLIndex = computeLIndex;
 function computeVIndex(SIndex) {
     return intDiv(SIndex % constraints_1.NCount, constraints_1.TCount);
 }
-exports.computeVIndex = computeVIndex;
 /**
  *
  * @param {integer} SIndex
@@ -47,7 +53,6 @@ exports.computeVIndex = computeVIndex;
 function computeTIndex(SIndex) {
     return SIndex % constraints_1.TCount;
 }
-exports.computeTIndex = computeTIndex;
 /**
  *
  * @param {integer} SIndex
@@ -55,5 +60,4 @@ exports.computeTIndex = computeTIndex;
 function computeLVIndex(SIndex) {
     return (SIndex / constraints_1.TCount) * constraints_1.TCount;
 }
-exports.computeLVIndex = computeLVIndex;
 //# sourceMappingURL=computations.js.map

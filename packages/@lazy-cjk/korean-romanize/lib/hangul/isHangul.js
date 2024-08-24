@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isHangul = void 0;
+exports.isHangul = isHangul;
 const tslib_1 = require("tslib");
-const blocks_1 = tslib_1.__importDefault(require("./unicode/blocks"));
-const hangulBlocks = Object.entries(blocks_1.default)
+const unicodeBlocks = tslib_1.__importStar(require("./unicode/blocks"));
+const hangulBlocks = Object.entries(unicodeBlocks)
     .filter(([blockName]) => blockName.startsWith("HANGUL"));
 /**
  * Check whether a provided character belongs to a Hangul Unicode block
@@ -26,6 +26,5 @@ function isHangul(char, blocks = hangulBlocks) {
     }
     return false;
 }
-exports.isHangul = isHangul;
 exports.default = isHangul;
 //# sourceMappingURL=isHangul.js.map

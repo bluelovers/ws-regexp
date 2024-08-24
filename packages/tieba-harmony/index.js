@@ -3,7 +3,12 @@
  * Created by user on 2018/1/31/031.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.splitChar = exports.loopTable = exports.getTable = exports.unescape = exports.escape = exports.SP_REGEXP_STRICT = exports.SP_ESCAPE = exports.SP_REGEXP_UNSAFE = exports.SP_REGEXP = exports.SP_KEY = void 0;
+exports.SP_REGEXP_STRICT = exports.SP_ESCAPE = exports.SP_REGEXP_UNSAFE = exports.SP_REGEXP = exports.SP_KEY = void 0;
+exports.escape = escape;
+exports.unescape = unescape;
+exports.getTable = getTable;
+exports.loopTable = loopTable;
+exports.splitChar = splitChar;
 const tslib_1 = require("tslib");
 const regexp_cjk_1 = require("regexp-cjk");
 tslib_1.__exportStar(require("./table"), exports);
@@ -29,7 +34,6 @@ function escape(text, options = {}) {
     } while (--count > 0);
     return text;
 }
-exports.escape = escape;
 function unescape(text, options = {}) {
     let count = options.count || 1;
     const fn = options.toRegExp ? options.toRegExp : regexp_cjk_1.create;
@@ -61,7 +65,6 @@ function unescape(text, options = {}) {
     }, options);
     return text;
 }
-exports.unescape = unescape;
 function getTable(options = {}) {
     return loopTable(function (value, index, array, options, cache) {
         let rs;
@@ -87,7 +90,6 @@ function getTable(options = {}) {
         return rs;
     }, options);
 }
-exports.getTable = getTable;
 function loopTable(cb, options) {
     options.flags = typeof options.flags == 'string' ? options.flags : 'ig';
     options.fnSplitChar = options.fnSplitChar || splitChar;
@@ -110,10 +112,8 @@ function loopTable(cb, options) {
         return a;
     }, []);
 }
-exports.loopTable = loopTable;
 function splitChar(s) {
     return s.split('');
 }
-exports.splitChar = splitChar;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

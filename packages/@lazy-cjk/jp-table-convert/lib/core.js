@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._build_table = exports._build_record = void 0;
+exports._build_record = _build_record;
+exports._build_table = _build_table;
 const types_1 = require("./types");
 function _build_record(src) {
     let to = {};
@@ -42,7 +43,6 @@ function _build_record(src) {
     });
     return to;
 }
-exports._build_record = _build_record;
 function _build_table(ZHJP_TABLE, ZHJP_TABLE_SAFE) {
     const TABLE = _build_record(ZHJP_TABLE);
     const TABLE_SAFE = _build_record(ZHJP_TABLE_SAFE);
@@ -51,5 +51,4 @@ function _build_table(ZHJP_TABLE, ZHJP_TABLE_SAFE) {
         TABLE_SAFE,
     };
 }
-exports._build_table = _build_table;
 //# sourceMappingURL=core.js.map

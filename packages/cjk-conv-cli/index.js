@@ -3,7 +3,10 @@
  * Created by user on 2019/3/2.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleContext = exports.handleOptions = exports.handldTarget = exports.FnList = void 0;
+exports.FnList = void 0;
+exports.handldTarget = handldTarget;
+exports.handleOptions = handleOptions;
+exports.handleContext = handleContext;
 const tslib_1 = require("tslib");
 const zh_convert_1 = require("@lazy-cjk/zh-convert");
 const fast_glob_1 = tslib_1.__importDefault(require("@bluelovers/fast-glob"));
@@ -77,7 +80,6 @@ function handldTarget(search, options) {
         });
     });
 }
-exports.handldTarget = handldTarget;
 function handleOptions(options) {
     options = options || {};
     options.tw2cn = !!options.tw2cn;
@@ -88,7 +90,6 @@ function handleOptions(options) {
     options.cwd = options.cwd || process.cwd();
     return options;
 }
-exports.handleOptions = handleOptions;
 function handleContext(text, options) {
     let fn = (options.tw2cn ? 'tw2cn' : 'cn2tw')
         + (options.notMin ? '' : '_min');
@@ -98,6 +99,5 @@ function handleContext(text, options) {
     }
     return exports.FnList[fn](text, opts);
 }
-exports.handleContext = handleContext;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

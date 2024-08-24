@@ -278,9 +278,6 @@ export declare const support: Readonly<{
             Pat_Syn: boolean;
             Pattern_White_Space: boolean;
             Pat_WS: boolean;
-            /**
-             * pattern support
-             */
             Quotation_Mark: boolean;
             QMark: boolean;
             Radical: boolean;
@@ -635,9 +632,7 @@ export declare const support: Readonly<{
             InCJK_Unified_Ideographs: boolean;
             InCJK_Unified_Ideographs_Extension_A: boolean;
             InCJK_Unified_Ideographs_Extension_B: boolean;
-            InCJK_Unified_Ideographs_Extension_C: boolean; /**
-             * all flag support without name and pattern test
-             */
+            InCJK_Unified_Ideographs_Extension_C: boolean;
             InCJK_Unified_Ideographs_Extension_D: boolean;
             InCJK_Unified_Ideographs_Extension_E: boolean;
             InCJK_Unified_Ideographs_Extension_F: boolean;

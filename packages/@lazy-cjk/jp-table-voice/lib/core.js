@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._buildTablePlus = void 0;
+exports._buildTablePlus = _buildTablePlus;
 const array_hyper_unique_1 = require("array-hyper-unique");
 function _buildTablePlus(table_plus) {
     Object.keys(table_plus)
@@ -13,5 +13,4 @@ function _buildTablePlus(table_plus) {
     // @ts-ignore
     return table_plus;
 }
-exports._buildTablePlus = _buildTablePlus;
 //# sourceMappingURL=core.js.map

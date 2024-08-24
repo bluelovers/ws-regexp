@@ -3,7 +3,8 @@
  * Created by user on 2018/6/10/010.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.auto = exports.jp = exports.cn = exports.tw = void 0;
+exports.jp = exports.cn = exports.tw = void 0;
+exports.auto = auto;
 const tslib_1 = require("tslib");
 const jp_table_convert_1 = require("@lazy-cjk/jp-table-convert");
 const zh_table_alias_1 = tslib_1.__importDefault(require("@lazy-cjk/zh-table-alias"));
@@ -68,6 +69,5 @@ function auto(char, options = {}) {
     */
     return a;
 }
-exports.auto = auto;
 exports.default = exports;
 //# sourceMappingURL=index.js.map

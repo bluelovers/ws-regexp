@@ -9,7 +9,11 @@ exports.VBase = 0x1161;
  * one less than the beginning of the range of trailing consonants, which starts at 0x11a8
  */
 exports.TBase = 0x11a7;
-exports.LCount = 19; // number of lead consonants in Hangul
+/**
+ * number of lead consonants in Hangul
+ * @type {number}
+ */
+exports.LCount = 19;
 /**
  * Number of LV_Syllables per each leading consonant
  */

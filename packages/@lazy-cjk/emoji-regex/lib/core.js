@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._build = void 0;
+exports._build = _build;
 const tslib_1 = require("tslib");
 const regexgen2_1 = require("regexgen2");
 const emoji_json_1 = tslib_1.__importDefault(require("emoji.json"));
@@ -15,5 +15,4 @@ function _build(emojiJson) {
         entriesEmoji,
     };
 }
-exports._build = _build;
 //# sourceMappingURL=core.js.map

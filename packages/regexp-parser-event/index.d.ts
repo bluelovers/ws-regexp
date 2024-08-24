@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { AST } from "regexpp2";
 import { EventEmitter } from 'events';
 import { ITSPartialRecord, ITSOverwrite } from 'ts-type';

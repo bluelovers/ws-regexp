@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.map = void 0;
+exports.map = map;
 const _each_1 = require("./_each");
 function _cb(match, index, re, _) {
     return match;
@@ -13,6 +13,5 @@ function map(input, re, cb, options = {}) {
     }
     return ret;
 }
-exports.map = map;
 exports.default = map;
 //# sourceMappingURL=map.js.map

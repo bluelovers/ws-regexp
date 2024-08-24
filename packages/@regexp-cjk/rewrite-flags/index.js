@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rewriteFlags = exports.flagsOrderReverse = exports.EnumFlagMap = void 0;
+exports.flagsOrderReverse = exports.EnumFlagMap = void 0;
+exports.rewriteFlags = rewriteFlags;
 var EnumFlagMap;
 (function (EnumFlagMap) {
     EnumFlagMap["global"] = "g";
@@ -41,6 +42,5 @@ function rewriteFlags(flags, options) {
     });
     return flags;
 }
-exports.rewriteFlags = rewriteFlags;
 exports.default = rewriteFlags;
 //# sourceMappingURL=index.js.map

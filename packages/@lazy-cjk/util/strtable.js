@@ -3,7 +3,10 @@
  * Created by user on 2020/5/29.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.utf8Split = exports.jsSplit = exports.toStrTable = exports.toStrTableArray = void 0;
+exports.toStrTableArray = toStrTableArray;
+exports.toStrTable = toStrTable;
+exports.jsSplit = jsSplit;
+exports.utf8Split = utf8Split;
 const uni_string_1 = require("uni-string");
 function toStrTableArray(table, options = {}) {
     if (typeof table !== 'object' || Array.isArray(table)) {
@@ -39,7 +42,6 @@ function toStrTableArray(table, options = {}) {
         to,
     };
 }
-exports.toStrTableArray = toStrTableArray;
 function toStrTable(table, options) {
     let { from, to, } = toStrTableArray(table, options);
     return {
@@ -47,14 +49,11 @@ function toStrTable(table, options) {
         to: to.join(''),
     };
 }
-exports.toStrTable = toStrTable;
 function jsSplit(s) {
     return s.split('');
 }
-exports.jsSplit = jsSplit;
 function utf8Split(s) {
     return uni_string_1.UString.split(s, '');
 }
-exports.utf8Split = utf8Split;
 exports.default = exports;
 //# sourceMappingURL=strtable.js.map

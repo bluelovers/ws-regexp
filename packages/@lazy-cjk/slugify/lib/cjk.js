@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.slugifyCjk = exports._replaceCjk = void 0;
+exports._replaceCjk = _replaceCjk;
+exports.slugifyCjk = slugifyCjk;
 const core_1 = require("./core");
 const cjk_conv_1 = require("regexp-helper/lib/cjk-conv");
 const romanize_1 = require("@lazy-cjk/japanese/lib/romanize");
@@ -30,9 +31,7 @@ function _replaceCjk(text, options) {
     text = (0, korean_romanize_1.romanize)(text);
     return text;
 }
-exports._replaceCjk = _replaceCjk;
 function slugifyCjk(word, options) {
     return (0, core_1._core)(_replaceCjk(word), options);
 }
-exports.slugifyCjk = slugifyCjk;
 //# sourceMappingURL=cjk.js.map

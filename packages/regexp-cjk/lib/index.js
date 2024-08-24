@@ -5,7 +5,8 @@
  * 已廢棄 僅用於舊版相容
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._word_zh_core = exports._word_zh = void 0;
+exports._word_zh_core = void 0;
+exports._word_zh = _word_zh;
 const __1 = require("..");
 const conv_1 = require("./conv");
 Object.defineProperty(exports, "_word_zh_core", { enumerable: true, get: function () { return conv_1._word_zh_core; } });
@@ -24,5 +25,4 @@ function _word_zh(search, ret, flags = 'ig', skip) {
     }
     return [s, ret, flags];
 }
-exports._word_zh = _word_zh;
 //# sourceMappingURL=index.js.map

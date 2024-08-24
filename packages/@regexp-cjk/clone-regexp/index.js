@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cloneRegexp = void 0;
+exports.cloneRegexp = cloneRegexp;
 const tslib_1 = require("tslib");
 /// <reference lib="es2018.regexp" />
 const clone_regexp_1 = tslib_1.__importDefault(require("clone-regexp"));
@@ -26,6 +26,5 @@ function cloneRegexp(inputRegExp, options = {}) {
     }
     return re;
 }
-exports.cloneRegexp = cloneRegexp;
 exports.default = cloneRegexp;
 //# sourceMappingURL=index.js.map

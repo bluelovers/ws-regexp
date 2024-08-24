@@ -3,7 +3,8 @@
  * Created by user on 2020/5/31.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.slugifyEmoji = exports._replaceEmoji = void 0;
+exports._replaceEmoji = _replaceEmoji;
+exports.slugifyEmoji = slugifyEmoji;
 const core_1 = require("./core");
 const emoji_regex_1 = require("@lazy-cjk/emoji-regex");
 function _replaceEmoji(word, options) {
@@ -13,9 +14,7 @@ function _replaceEmoji(word, options) {
         return emoji_regex_1.mapEmoji.get(emoji) + append;
     });
 }
-exports._replaceEmoji = _replaceEmoji;
 function slugifyEmoji(word, options) {
     return (0, core_1._core)(_replaceEmoji(word), options);
 }
-exports.slugifyEmoji = slugifyEmoji;
 //# sourceMappingURL=emoji.js.map

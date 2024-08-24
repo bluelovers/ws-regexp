@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._buildTablePlus = exports._uniqueTable = void 0;
+exports._uniqueTable = _uniqueTable;
+exports._buildTablePlus = _buildTablePlus;
 const array_hyper_unique_1 = require("array-hyper-unique");
 function _uniqueTable(table_jp) {
     Object.keys(table_jp)
@@ -10,7 +11,6 @@ function _uniqueTable(table_jp) {
     });
     return table_jp;
 }
-exports._uniqueTable = _uniqueTable;
 function _buildTablePlus(table_plus) {
     Object.keys(table_plus)
         .forEach(function (key) {
@@ -22,5 +22,4 @@ function _buildTablePlus(table_plus) {
     // @ts-ignore
     return table_plus;
 }
-exports._buildTablePlus = _buildTablePlus;
 //# sourceMappingURL=unique.js.map

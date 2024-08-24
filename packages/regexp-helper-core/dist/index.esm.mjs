@@ -1,4 +1,4 @@
-const e = Object.prototype.toString.call(/a/);
+const e = /*#__PURE__*/ Object.prototype.toString.call(/a/);
 
 function toHex(e, o) {
   const n = e.toString(16).padStart(4, "0");

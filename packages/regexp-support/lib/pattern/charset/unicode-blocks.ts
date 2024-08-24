@@ -2,15 +2,12 @@
  * Created by user on 2018/5/6/006.
  */
 
-import { ICreateRegExp, ITypeCreateRegExp } from '../../index';
-import { IPatternTestFn, IPatternTestRow, PatternSupport, testPattern } from '../../pattern';
-import { _createFnTestPattern, log_dir } from '../../util/index';
+import { ITypeCreateRegExp } from '../../index';
+import { IPatternTestRow } from '../../pattern';
+import { _createFnTestPattern } from '../../util/index';
 import { _wrapToRegexName } from './index';
 
-import CACHE_BLOCKS from '../cache/blocks';
-import CACHE_CATEGORIES from '../cache/categories';
-import CACHE_PROPERTIES from '../cache/properties';
-import CACHE_SCRIPTS from '../cache/scripts';
+import * as CACHE_BLOCKS from '../cache/blocks';
 
 export const KEY_PREFIX = '\\p{';
 export const KEY_PREFIX_NEGATION = '\\P{';

@@ -1,5 +1,6 @@
-import { Alternative, Assertion, Backreference, CapturingGroup, Character, CharacterClass, CharacterClassRange, CharacterSet, Flags, Group, Node, Pattern, Quantifier, RegExpLiteral } from "./ast";
+import { Assertion, Backreference, CapturingGroup, Character, CharacterClass, CharacterClassRange, CharacterSet, Flags, Group, Node, Pattern, Quantifier, RegExpLiteral } from "./ast";
 /**
+ * @deprecated merge not done, don't use
  * The visitor to walk on AST.
  */
 export declare class RegExpVisitor {

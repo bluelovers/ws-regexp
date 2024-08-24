@@ -324,7 +324,7 @@ export declare const PatternTest: {
     [k in keyof typeof UNICODE_SCRIPTS_ALL]?: IPatternTestRow[];
 };
 export declare const _testUnicodeScript: {
-    (name: string, RegExpClass?: RegExpConstructor, testPatterns?: {
+    (name: string, RegExpClass?: typeof RegExp, testPatterns?: {
         Greek?: IPatternTestRow[];
         Latin?: IPatternTestRow[];
         Katakana?: IPatternTestRow[];

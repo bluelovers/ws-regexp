@@ -1,7 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LatinSmallLetterR = exports.LatinSmallLetterP = exports.LatinSmallLetterN = exports.LatinSmallLetterM = exports.LatinSmallLetterK = exports.LatinSmallLetterI = exports.LatinSmallLetterG = exports.LatinSmallLetterF = exports.LatinSmallLetterD = exports.LatinSmallLetterC = exports.LatinSmallLetterB = exports.LatinSmallLetterA = exports.LowLine = exports.LatinCapitalLetterZ = exports.LatinCapitalLetterW = exports.LatinCapitalLetterS = exports.LatinCapitalLetterP = exports.LatinCapitalLetterF = exports.LatinCapitalLetterD = exports.LatinCapitalLetterB = exports.LatinCapitalLetterA = exports.QuestionMark = exports.GreaterThanSign = exports.EqualsSign = exports.LessThanSign = exports.Colon = exports.DigitNine = exports.DigitSeven = exports.DigitOne = exports.DigitZero = exports.Solidus = exports.FullStop = exports.HyphenMinus = exports.Comma = exports.PlusSign = exports.Asterisk = exports.RightParenthesis = exports.LeftParenthesis = exports.DollarSign = exports.ExclamationMark = exports.CarriageReturn = exports.FormFeed = exports.LineTabulation = exports.LineFeed = exports.CharacterTabulation = exports.Backspace = exports.Null = exports.PropertyData = exports.isIdStart = exports.isIdContinue = void 0;
-exports.digitToInt = exports.isValidUnicode = exports.isLineTerminator = exports.isHexDigit = exports.isOctalDigit = exports.isDecimalDigit = exports.isLatinLetter = exports.MaxCodePoint = exports.MinCodePoint = exports.ParagraphSeparator = exports.LineSeparator = exports.ZeroWidthJoiner = exports.ZeroWidthNonJoiner = exports.RightCurlyBracket = exports.VerticalLine = exports.LeftCurlyBracket = exports.CircumflexAccent = exports.RightSquareBracket = exports.ReverseSolidus = exports.LeftSquareBracket = exports.LatinSmallLetterZ = exports.LatinSmallLetterY = exports.LatinSmallLetterX = exports.LatinSmallLetterW = exports.LatinSmallLetterV = exports.LatinSmallLetterU = exports.LatinSmallLetterT = exports.LatinSmallLetterS = void 0;
+exports.MaxCodePoint = exports.MinCodePoint = exports.ParagraphSeparator = exports.LineSeparator = exports.ZeroWidthJoiner = exports.ZeroWidthNonJoiner = exports.RightCurlyBracket = exports.VerticalLine = exports.LeftCurlyBracket = exports.CircumflexAccent = exports.RightSquareBracket = exports.ReverseSolidus = exports.LeftSquareBracket = exports.LatinSmallLetterZ = exports.LatinSmallLetterY = exports.LatinSmallLetterX = exports.LatinSmallLetterW = exports.LatinSmallLetterV = exports.LatinSmallLetterU = exports.LatinSmallLetterT = exports.LatinSmallLetterS = void 0;
+exports.isLatinLetter = isLatinLetter;
+exports.isDecimalDigit = isDecimalDigit;
+exports.isOctalDigit = isOctalDigit;
+exports.isHexDigit = isHexDigit;
+exports.isLineTerminator = isLineTerminator;
+exports.isValidUnicode = isValidUnicode;
+exports.digitToInt = digitToInt;
 var ids_1 = require("./ids");
 Object.defineProperty(exports, "isIdContinue", { enumerable: true, get: function () { return ids_1.isIdContinue; } });
 Object.defineProperty(exports, "isIdStart", { enumerable: true, get: function () { return ids_1.isIdStart; } });
@@ -79,32 +86,26 @@ function isLatinLetter(code) {
     return ((code >= exports.LatinCapitalLetterA && code <= exports.LatinCapitalLetterZ) ||
         (code >= exports.LatinSmallLetterA && code <= exports.LatinSmallLetterZ));
 }
-exports.isLatinLetter = isLatinLetter;
 function isDecimalDigit(code) {
     return code >= exports.DigitZero && code <= exports.DigitNine;
 }
-exports.isDecimalDigit = isDecimalDigit;
 function isOctalDigit(code) {
     return code >= exports.DigitZero && code <= exports.DigitSeven;
 }
-exports.isOctalDigit = isOctalDigit;
 function isHexDigit(code) {
     return ((code >= exports.DigitZero && code <= exports.DigitNine) ||
         (code >= exports.LatinCapitalLetterA && code <= exports.LatinCapitalLetterF) ||
         (code >= exports.LatinSmallLetterA && code <= exports.LatinSmallLetterF));
 }
-exports.isHexDigit = isHexDigit;
 function isLineTerminator(code) {
     return (code === exports.LineFeed ||
         code === exports.CarriageReturn ||
         code === exports.LineSeparator ||
         code === exports.ParagraphSeparator);
 }
-exports.isLineTerminator = isLineTerminator;
 function isValidUnicode(code) {
     return code >= exports.MinCodePoint && code <= exports.MaxCodePoint;
 }
-exports.isValidUnicode = isValidUnicode;
 function digitToInt(code) {
     if (code >= exports.LatinSmallLetterA && code <= exports.LatinSmallLetterF) {
         return code - exports.LatinSmallLetterA + 10;
@@ -114,5 +115,4 @@ function digitToInt(code) {
     }
     return code - exports.DigitZero;
 }
-exports.digitToInt = digitToInt;
 //# sourceMappingURL=index.js.map

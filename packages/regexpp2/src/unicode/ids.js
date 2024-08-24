@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isIdContinue = exports.isIdStart = void 0;
+exports.isIdStart = isIdStart;
+exports.isIdContinue = isIdContinue;
 /* Generated from DerivedCoreProperties-13.0.0.txt */
 // @formatter:off
 function isIdStart(cp) {
@@ -14,7 +15,6 @@ function isIdStart(cp) {
         return true;
     return isLargeIdStart(cp);
 }
-exports.isIdStart = isIdStart;
 function isIdContinue(cp) {
     if (cp < 0x30)
         return false;
@@ -32,7 +32,6 @@ function isIdContinue(cp) {
         return true;
     return isLargeIdStart(cp) || isLargeIdContinue(cp);
 }
-exports.isIdContinue = isIdContinue;
 function isLargeIdStart(cp) {
     if (cp < 0xa62a) {
         if (cp < 0x1065) {

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.reduce = exports._reduceCore = void 0;
+exports._reduceCore = _reduceCore;
+exports.reduce = reduce;
 const handleChainInput_1 = require("../util/handleChainInput");
 const _each_1 = require("./_each");
 const handleChainRowResult_1 = require("../util/handleChainRowResult");
@@ -24,10 +25,8 @@ function* _reduceCore(input, chain, options = {}) {
         yield str;
     }
 }
-exports._reduceCore = _reduceCore;
 function reduce(input, chain, options = {}) {
     return [..._reduceCore(input, chain, options)];
 }
-exports.reduce = reduce;
 exports.default = reduce;
 //# sourceMappingURL=reduce.js.map

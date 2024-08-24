@@ -3,7 +3,11 @@
  * Created by user on 2018/4/26/026.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createRegExp = exports.testFlagsAll = exports.testFlag = exports.hasSupportFlag = exports.FlagsName = void 0;
+exports.FlagsName = void 0;
+exports.hasSupportFlag = hasSupportFlag;
+exports.testFlag = testFlag;
+exports.testFlagsAll = testFlagsAll;
+exports.createRegExp = createRegExp;
 const tslib_1 = require("tslib");
 const flags_1 = tslib_1.__importStar(require("./flags"));
 exports.FlagsName = flags_1.default;
@@ -29,7 +33,6 @@ function hasSupportFlag(flag, RegExpClass = RegExp, skipPatternCheck) {
     }
     return isSupported;
 }
-exports.hasSupportFlag = hasSupportFlag;
 function testFlag(flag, 
 // @ts-ignore
 RegExpClass = RegExp, testPattern = flags_1.FlagsPattern) {
@@ -59,7 +62,6 @@ RegExpClass = RegExp, testPattern = flags_1.FlagsPattern) {
     }
     return false;
 }
-exports.testFlag = testFlag;
 function testFlagsAll(RegExpClass = RegExp, skipPatternCheck) {
     let flagsAll = {};
     for (let i = 65; i <= 90; i++) {
@@ -84,7 +86,6 @@ function testFlagsAll(RegExpClass = RegExp, skipPatternCheck) {
     }, {});
     return flagsAll;
 }
-exports.testFlagsAll = testFlagsAll;
 // @ts-ignore
 function createRegExp(pattern, flag, RegExpClass = RegExp) {
     let r;
@@ -96,5 +97,4 @@ function createRegExp(pattern, flag, RegExpClass = RegExp) {
     }
     return r;
 }
-exports.createRegExp = createRegExp;
 //# sourceMappingURL=index.js.map

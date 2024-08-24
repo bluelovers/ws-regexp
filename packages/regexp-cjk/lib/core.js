@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.setupParserEventEmitter = exports.coreHandler = exports.SymDefaults = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
+exports.SymDefaults = exports.ParserEventEmitter = exports.ParserEventEmitterEvent = void 0;
+exports.coreHandler = coreHandler;
+exports.setupParserEventEmitter = setupParserEventEmitter;
 const conv_1 = require("./conv");
 const regexp_parser_event_1 = require("regexp-parser-event");
 Object.defineProperty(exports, "ParserEventEmitter", { enumerable: true, get: function () { return regexp_parser_event_1.ParserEventEmitter; } });
@@ -94,7 +96,6 @@ function coreHandler(str, flags = null, options = {}, ...argv) {
         options: options,
     };
 }
-exports.coreHandler = coreHandler;
 function setupParserEventEmitter(ev, options) {
     const onList = (0, mergeOptions_1.fixOptions)(options).on;
     if (onList) {
@@ -110,6 +111,5 @@ function setupParserEventEmitter(ev, options) {
     }
     return ev;
 }
-exports.setupParserEventEmitter = setupParserEventEmitter;
 exports.default = coreHandler;
 //# sourceMappingURL=core.js.map

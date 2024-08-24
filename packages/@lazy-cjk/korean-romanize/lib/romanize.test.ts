@@ -1,6 +1,7 @@
-import { searchJamo, romanize, romanizeWord } from './romanize';
+import { romanize, romanizeWord } from './romanize';
 import { words as _words } from '../test';
 import { EnumOptionsRomanizeMethod } from './types';
+import { searchJamo } from './utils';
 
 const words = Object.entries(_words);
 

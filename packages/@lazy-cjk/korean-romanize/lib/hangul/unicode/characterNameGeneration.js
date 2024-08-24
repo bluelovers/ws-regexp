@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getHangulCharName = exports.getHangulCharShortName = void 0;
+exports.getHangulCharShortName = getHangulCharShortName;
+exports.getHangulCharName = getHangulCharName;
 const computations_1 = require("./computations");
 const jamoShortNames_1 = require("./jamoShortNames");
 /**
@@ -16,7 +17,6 @@ function getHangulCharShortName(s) {
     const TIndex = (0, computations_1.computeTIndex)(SIndex);
     return jamoShortNames_1.JAMO_L_TABLE[LIndex] + jamoShortNames_1.JAMO_V_TABLE[VIndex] + jamoShortNames_1.JAMO_T_TABLE[TIndex];
 }
-exports.getHangulCharShortName = getHangulCharShortName;
 /**
  * Constructs a precomposed Hangul syllable name
  *
@@ -30,5 +30,4 @@ exports.getHangulCharShortName = getHangulCharShortName;
 function getHangulCharName(s) {
     return "HANGUL SYLLABLE " + getHangulCharShortName(s);
 }
-exports.getHangulCharName = getHangulCharName;
 //# sourceMappingURL=characterNameGeneration.js.map

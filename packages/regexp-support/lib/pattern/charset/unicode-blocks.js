@@ -3,11 +3,13 @@
  * Created by user on 2018/5/6/006.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.wrapToRegexName = exports.testUnicodeBlocksAll = exports.testUnicodeBlocks = exports.PatternTest = exports.UNICODE_BLOCKS_ALL = exports.UNICODE_BLOCKS = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+exports.testUnicodeBlocks = exports.PatternTest = exports.UNICODE_BLOCKS_ALL = exports.UNICODE_BLOCKS = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+exports.testUnicodeBlocksAll = testUnicodeBlocksAll;
+exports.wrapToRegexName = wrapToRegexName;
 const tslib_1 = require("tslib");
 const index_1 = require("../../util/index");
 const index_2 = require("./index");
-const blocks_1 = tslib_1.__importDefault(require("../cache/blocks"));
+const CACHE_BLOCKS = tslib_1.__importStar(require("../cache/blocks"));
 exports.KEY_PREFIX = '\\p{';
 exports.KEY_PREFIX_NEGATION = '\\P{';
 exports.KEY_SUFFIX = '}';
@@ -19,7 +21,7 @@ exports.UNICODE_BLOCKS = {
     InBasic_Latin: false,
 };
 exports.UNICODE_BLOCKS_ALL = {
-    ...blocks_1.default,
+    ...CACHE_BLOCKS,
     ...exports.UNICODE_BLOCKS,
 };
 exports.PatternTest = {
@@ -36,7 +38,6 @@ function testUnicodeBlocksAll(RegExpClass = RegExp, testPatterns = exports.Patte
         return a;
     }, {});
 }
-exports.testUnicodeBlocksAll = testUnicodeBlocksAll;
 function wrapToRegexName(name, negation) {
     let prefix = exports.KEY_PREFIX;
     if (negation) {
@@ -44,5 +45,4 @@ function wrapToRegexName(name, negation) {
     }
     return (0, index_2._wrapToRegexName)(name, prefix, exports.KEY_SUFFIX);
 }
-exports.wrapToRegexName = wrapToRegexName;
 //# sourceMappingURL=unicode-blocks.js.map

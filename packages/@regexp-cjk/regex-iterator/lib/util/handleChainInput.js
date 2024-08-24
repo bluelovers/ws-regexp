@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleChainInput = exports.handleChainInputCore = exports.handleChainInputCore2 = void 0;
+exports.handleChainInputCore2 = handleChainInputCore2;
+exports.handleChainInputCore = handleChainInputCore;
+exports.handleChainInput = handleChainInput;
 const clone_regexp_1 = require("@regexp-cjk/clone-regexp");
 function handleChainInputCore2(row, options) {
     let regexp;
@@ -22,7 +24,6 @@ function handleChainInputCore2(row, options) {
     }
     return [regexp, replaceValue];
 }
-exports.handleChainInputCore2 = handleChainInputCore2;
 function handleChainInputCore(row, options) {
     let regexp;
     let backref = 0;
@@ -43,12 +44,10 @@ function handleChainInputCore(row, options) {
         replaceValue,
     };
 }
-exports.handleChainInputCore = handleChainInputCore;
 function handleChainInput(row, options) {
     let ret = handleChainInputCore(row, options);
     ret.regexp = (0, clone_regexp_1.cloneRegexp)(ret.regexp, options);
     return ret;
 }
-exports.handleChainInput = handleChainInput;
 exports.default = handleChainInput;
 //# sourceMappingURL=handleChainInput.js.map

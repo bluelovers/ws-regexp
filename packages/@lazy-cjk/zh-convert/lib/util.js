@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._call = exports.getOptions = exports.getOptionsSkip = void 0;
+exports.getOptionsSkip = getOptionsSkip;
+exports.getOptions = getOptions;
+exports._call = _call;
 const const_1 = require("./const");
 function getOptionsSkip(options, skip = const_1.SAFE_MODE_CHAR) {
     if (!options.skip) {
@@ -20,7 +22,6 @@ function getOptionsSkip(options, skip = const_1.SAFE_MODE_CHAR) {
     }
     return options;
 }
-exports.getOptionsSkip = getOptionsSkip;
 function getOptions(options = {}, defaultOpts = const_1.defaultOptions, skip = const_1.SAFE_MODE_CHAR) {
     options = Object.assign({}, defaultOpts, options);
     if (options.safe) {
@@ -29,7 +30,6 @@ function getOptions(options = {}, defaultOpts = const_1.defaultOptions, skip = c
     }
     return options;
 }
-exports.getOptions = getOptions;
 function _call(fn, text, options = {}, ...argv) {
     options = getOptions(options);
     if (options.skip || options.table || options.tableOnly) {
@@ -59,5 +59,4 @@ function _call(fn, text, options = {}, ...argv) {
     }
     return fn(text, options, ...argv);
 }
-exports._call = _call;
 //# sourceMappingURL=util.js.map

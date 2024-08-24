@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isPattern = exports.hackRegenerate = exports.regexpClassToObject = exports.regenerate = void 0;
+exports.regenerate = void 0;
+exports.regexpClassToObject = regexpClassToObject;
+exports.hackRegenerate = hackRegenerate;
+exports.isPattern = isPattern;
 const tslib_1 = require("tslib");
 const regexp_parser_event_1 = require("regexp-parser-event");
 const regenerate_1 = tslib_1.__importDefault(require("regenerate"));
@@ -64,7 +67,6 @@ function regexpClassToObject(re, flags) {
     }
     return hackRegenerate(new_obj, flags, hasUnicodeFlag);
 }
-exports.regexpClassToObject = regexpClassToObject;
 function hackRegenerate(obj, flags, hasUnicodeFlag) {
     Object.defineProperties(obj, {
         flags: {
@@ -119,10 +121,8 @@ function hackRegenerate(obj, flags, hasUnicodeFlag) {
     });
     return obj;
 }
-exports.hackRegenerate = hackRegenerate;
 function isPattern(ast) {
     return (ast.type == "Pattern" /* EnumTypeNode.Pattern */);
 }
-exports.isPattern = isPattern;
 exports.default = regexpClassToObject;
 //# sourceMappingURL=index.js.map

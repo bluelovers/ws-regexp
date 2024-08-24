@@ -1,17 +1,18 @@
+import { EnumOptionsRomanizeMethod } from '../../types';
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
  *
  * @param {(string|integer)} s
  * @returns {array}
  */
-export declare function arithmeticDecompositionMappingLV(s: any): number[];
+export declare function arithmeticDecompositionMappingLV(s: string | number): [number, number];
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LVT" Hangul syllable types
  *
  * @param {(string|integer)} s
  * @returns {array}
  */
-export declare function arithmeticDecompositionMappingLVT(s: any): number[];
+export declare function arithmeticDecompositionMappingLVT(s: string | number): [number, number];
 /**
  * Derives a canonical decomposition of a precomposed/composite Hangul syllable
  *
@@ -29,11 +30,11 @@ export declare function arithmeticDecompositionMappingLVT(s: any): number[];
  * @param {(string|integer)} s
  * @returns {array}
  */
-export declare function decomposeHangulChar(s: any): number[];
+export declare function decomposeHangulChar(s: string | number): number[];
 /**
  * Returns a mapping of each Hangul character provided to an array of code points for the decomposed letters (jamo)
  *
  * @param {string} word
  * @returns {array}
  */
-export declare function decomposeHangul(word: any): number[][];
+export declare function decomposeHangul(word: string, method: EnumOptionsRomanizeMethod): (number[] | string[])[];

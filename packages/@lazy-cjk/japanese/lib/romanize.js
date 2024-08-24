@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.romanize = void 0;
+exports.romanize = romanize;
 const tslib_1 = require("tslib");
 const kana_1 = require("./kana");
 const extend_1 = tslib_1.__importDefault(require("lodash/extend"));
@@ -359,6 +359,5 @@ function romanize(string, config) {
     }
     return dest;
 }
-exports.romanize = romanize;
 exports.default = romanize;
 //# sourceMappingURL=romanize.js.map

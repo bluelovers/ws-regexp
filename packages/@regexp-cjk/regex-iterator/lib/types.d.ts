@@ -1,4 +1,3 @@
-/// <reference lib="es2018.regexp" />
 declare global {
     interface RegExpConstructor {
         leftContext: string;

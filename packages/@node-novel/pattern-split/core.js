@@ -3,7 +3,7 @@
  * Created by user on 2020/6/5.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.novelPatternSplit = void 0;
+exports.novelPatternSplit = novelPatternSplit;
 const tslib_1 = require("tslib");
 const regexp_cjk_1 = require("regexp-cjk");
 const regexp_parser_literal_1 = require("regexp-parser-literal");
@@ -116,7 +116,6 @@ function novelPatternSplit(input, options = {}) {
     }
     return patterns;
 }
-exports.novelPatternSplit = novelPatternSplit;
 novelPatternSplit.novelPatternSplit = novelPatternSplit;
 novelPatternSplit.getRawString = util_1.getRawString;
 novelPatternSplit.default = novelPatternSplit;

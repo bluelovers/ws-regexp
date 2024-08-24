@@ -1,6 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.concat = exports.commonSubstring = exports.removeCommonSubstring = exports.union = exports.star = exports.toRegex = void 0;
+exports.toRegex = toRegex;
+exports.star = star;
+exports.union = union;
+exports.removeCommonSubstring = removeCommonSubstring;
+exports.commonSubstring = commonSubstring;
+exports.concat = concat;
 const ast_1 = require("./ast");
 /**
  * Implements Brzozowski's algebraic method to convert a DFA into a regular
@@ -50,14 +55,12 @@ function toRegex(root, flags) {
     }
     return B[0].toString(flags);
 }
-exports.toRegex = toRegex;
 /**
  * Creates a repetition if `exp` exists.
  */
 function star(exp) {
     return exp ? new ast_1.Repetition(exp, '*') : null;
 }
-exports.star = star;
 /**
  * Creates a union between two expressions
  */
@@ -98,7 +101,6 @@ function union(a, b) {
     }
     return a || b;
 }
-exports.union = union;
 /**
  * Removes the common prefix or suffix from the two expressions
  */
@@ -116,7 +118,6 @@ function removeCommonSubstring(a, b, side) {
     b = b.removeSubstring(side, s.length);
     return [a, b, s];
 }
-exports.removeCommonSubstring = removeCommonSubstring;
 /**
  * Finds the common prefix or suffix between to strings
  */
@@ -139,7 +140,6 @@ function commonSubstring(a, b, side) {
     }
     return res;
 }
-exports.commonSubstring = commonSubstring;
 /**
  * Creates a concatenation between expressions a and b
  */
@@ -165,6 +165,5 @@ function concat(a, b) {
     }
     return new ast_1.Concatenation(a, b);
 }
-exports.concat = concat;
 exports.default = toRegex;
 //# sourceMappingURL=regex.js.map

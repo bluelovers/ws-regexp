@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.newZhPinyinFn = void 0;
+exports.newZhPinyinFn = newZhPinyinFn;
 const uni2pinyin_01_1 = require("@lazy-cjk/cns-11643/lib/uni2pinyin_01");
 const uni2pinyin_02_1 = require("@lazy-cjk/cns-11643/lib/uni2pinyin_02");
 const types_1 = require("@lazy-cjk/cns-11643/lib/types");
@@ -43,5 +43,4 @@ function newZhPinyinFn(options) {
         return s;
     };
 }
-exports.newZhPinyinFn = newZhPinyinFn;
 //# sourceMappingURL=chinese.js.map

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.minimize = void 0;
+exports.minimize = minimize;
 const map_1 = require("./map");
 const set_1 = require("./set");
 const state_1 = require("./state");
@@ -75,6 +75,5 @@ function minimize(root) {
     }
     return initial;
 }
-exports.minimize = minimize;
 exports.default = minimize;
 //# sourceMappingURL=minimize.js.map

@@ -3,7 +3,10 @@
  * Created by user on 2018/5/6/006.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.wrapToRegexName = exports.testUnicodeScriptAll = exports.testUnicodeScript = exports._testUnicodeScript = exports.PatternTest = exports.UNICODE_SCRIPTS_NAME_ALIAS = exports.UNICODE_SCRIPTS_ALL = exports.UNICODE_SCRIPTS = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+exports._testUnicodeScript = exports.PatternTest = exports.UNICODE_SCRIPTS_NAME_ALIAS = exports.UNICODE_SCRIPTS_ALL = exports.UNICODE_SCRIPTS = exports.KEY_SUFFIX = exports.KEY_PREFIX_NEGATION = exports.KEY_PREFIX = void 0;
+exports.testUnicodeScript = testUnicodeScript;
+exports.testUnicodeScriptAll = testUnicodeScriptAll;
+exports.wrapToRegexName = wrapToRegexName;
 const tslib_1 = require("tslib");
 const property_data_1 = tslib_1.__importDefault(require("../cache/property-data"));
 const index_1 = require("../../util/index");
@@ -113,7 +116,6 @@ function testUnicodeScript(name, RegExpClass, testPatterns = exports.PatternTest
     }
     return (0, exports._testUnicodeScript)(name, RegExpClass, testPatterns);
 }
-exports.testUnicodeScript = testUnicodeScript;
 // @ts-ignore
 function testUnicodeScriptAll(RegExpClass = RegExp, testPatterns = exports.PatternTest) {
     return Object.keys(exports.UNICODE_SCRIPTS_ALL).reduce(function (a, key) {
@@ -121,7 +123,6 @@ function testUnicodeScriptAll(RegExpClass = RegExp, testPatterns = exports.Patte
         return a;
     }, {});
 }
-exports.testUnicodeScriptAll = testUnicodeScriptAll;
 function wrapToRegexName(name, negation) {
     let prefix = exports.KEY_PREFIX;
     if (negation) {
@@ -129,5 +130,4 @@ function wrapToRegexName(name, negation) {
     }
     return (0, index_2._wrapToRegexName)(name, prefix, exports.KEY_SUFFIX);
 }
-exports.wrapToRegexName = wrapToRegexName;
 //# sourceMappingURL=unicode-script.js.map

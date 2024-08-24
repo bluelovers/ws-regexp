@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arithmeticPrimaryCompositeMappingWithLVPart = exports.arithmeticPrimaryCompositeMapping = exports.computeTIndexFromTPart = void 0;
+exports.computeTIndexFromTPart = computeTIndexFromTPart;
+exports.arithmeticPrimaryCompositeMapping = arithmeticPrimaryCompositeMapping;
+exports.arithmeticPrimaryCompositeMappingWithLVPart = arithmeticPrimaryCompositeMappingWithLVPart;
 const constraints_1 = require("./constraints");
 /**
  * Computes TIndex for a given TPart
@@ -11,7 +13,6 @@ const constraints_1 = require("./constraints");
 function computeTIndexFromTPart(TPart = 0) {
     return TPart - constraints_1.TBase;
 }
-exports.computeTIndexFromTPart = computeTIndexFromTPart;
 /**
  * Computes a precomposed/composite syllable mapping for a given a Hangul letter (jamo) sequence
  *
@@ -47,10 +48,8 @@ function arithmeticPrimaryCompositeMapping(LPart, VPart, TPart) {
     const TIndex = computeTIndexFromTPart(TPart);
     return constraints_1.SBase + LVIndex + TIndex;
 }
-exports.arithmeticPrimaryCompositeMapping = arithmeticPrimaryCompositeMapping;
 function arithmeticPrimaryCompositeMappingWithLVPart(LVPart, TPart) {
     const TIndex = computeTIndexFromTPart(TPart);
     return LVPart + TIndex;
 }
-exports.arithmeticPrimaryCompositeMappingWithLVPart = arithmeticPrimaryCompositeMappingWithLVPart;
 //# sourceMappingURL=compose.js.map

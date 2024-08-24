@@ -1,9 +1,6 @@
 /**
  * Created by user on 2018/4/28/028.
  */
-/// <reference lib="es2015.core" />
-/// <reference lib="es2015.symbol.wellknown" />
-/// <reference lib="es2018.regexp" />
 import { ITypeCreateRegExp } from '../index';
 interface IRegExpStaticPlus {
     /**
@@ -85,31 +82,7 @@ export interface IRegExpStatic2 extends IRegExpStatic {
     $10?: string;
     $100?: string;
 }
-export declare const REGEXP_STATIC: {
-    $10?: boolean;
-    $100?: boolean;
-    readonly prototype?: boolean;
-    $1?: boolean;
-    $2?: boolean;
-    $3?: boolean;
-    $4?: boolean;
-    $5?: boolean;
-    $6?: boolean;
-    $7?: boolean;
-    $8?: boolean;
-    $9?: boolean;
-    input?: boolean;
-    $_?: boolean;
-    lastMatch?: boolean;
-    "$&"?: boolean;
-    lastParen?: boolean;
-    "$+"?: boolean;
-    leftContext?: boolean;
-    "$`"?: boolean;
-    rightContext?: boolean;
-    "$'"?: boolean;
-    readonly [Symbol.species]?: boolean;
-};
+export declare const REGEXP_STATIC: { [k in keyof IRegExpStatic2]?: boolean; };
 export declare function testStatic<T>(RegExpClass?: ITypeCreateRegExp<T>): {
     $10?: boolean;
     $100?: boolean;
