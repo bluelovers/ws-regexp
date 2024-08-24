@@ -45,17 +45,17 @@ describe("isHangul", () =>
 
 		test("for NaN input", () =>
 		{
-			expect(isHangul(NaN)).toBeNull();
+			expect(isHangul(NaN as any)).toBeNull();
 		});
 
 		test("for an object input", () =>
 		{
-			expect(isHangul({})).toBeNull();
+			expect(isHangul({} as any)).toBeNull();
 		});
 
 		test("for a number input", () =>
 		{
-			expect(isHangul(1945)).toBeNull();
+			expect(isHangul(1945 as any)).toBeNull();
 		});
 	});
 

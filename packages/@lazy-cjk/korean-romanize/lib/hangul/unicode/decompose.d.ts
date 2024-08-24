@@ -37,4 +37,4 @@ export declare function decomposeHangulChar(s: string | number): number[];
  * @param {string} word
  * @returns {array}
  */
-export declare function decomposeHangul(word: string, method: EnumOptionsRomanizeMethod): (number[] | string[])[];
+export declare function decomposeHangul(word: string, method?: EnumOptionsRomanizeMethod): (number[] | string[])[];

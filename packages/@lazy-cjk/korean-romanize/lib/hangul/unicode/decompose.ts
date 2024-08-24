@@ -87,7 +87,7 @@ export function decomposeHangulChar(s: string | number)
  * @param {string} word
  * @returns {array}
  */
-export function decomposeHangul(word: string, method: EnumOptionsRomanizeMethod)
+export function decomposeHangul(word: string, method?: EnumOptionsRomanizeMethod)
 {
 	return [...word].map(s => {
 		try

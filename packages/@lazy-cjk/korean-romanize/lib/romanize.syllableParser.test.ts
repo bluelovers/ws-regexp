@@ -2,7 +2,7 @@ import { syllableParser } from './romanize';
 
 describe("syllableParser", () =>
 {
-	const parseSyllable = syllableParser({});
+	const parseSyllable = syllableParser({} as any);
 
 	test("should return a function", () =>
 	{
