@@ -1,3 +1,5 @@
+import { searchJamo } from './utils';
+
 export const enum EnumOptionsRomanizeMethod
 {
 	RR = "RR",
@@ -26,6 +28,7 @@ export interface IJamoEntry extends IJamoBase
 export type IJamoRomanData = {
 	default: string,
 	MR?: string,
+	vowelNext?: string,
 } & {
 	[k in string]?: string
 } & {
@@ -48,4 +51,14 @@ export interface IOptionsRomanize
 	method?: EnumOptionsRomanizeMethod;
 	hyphenate?: boolean;
 }
+
+export interface ISearchJamoParams
+{
+	method: EnumOptionsRomanizeMethod;
+	vowelNext?: boolean,
+	consonantPrev?: number,
+	consonantNext?: number,
+}
+
+export type ISearchJamoNode = string | IJamoRomanEntryCompat | IJamoRomanData
 

@@ -1,4 +1,4 @@
-import hangulReplace from './hangulReplace';
+import { hangulReplace } from './hangulReplace';
 
 const testCases = [
 	{

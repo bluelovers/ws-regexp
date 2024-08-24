@@ -2,7 +2,12 @@ import { isHangul } from '../isHangul';
 
 import { _HANGUL_COMPATIBILITY_JAMO, _HANGUL_JAMO } from "./blocks";
 
-const whichJamoSet = jamo => isHangul(jamo, Object.entries(_HANGUL_JAMO));
+const _HANGUL_JAMO_ENTRIES = Object.entries(_HANGUL_JAMO);
+
+function whichJamoSet(jamo: string)
+{
+	return isHangul(jamo, _HANGUL_JAMO_ENTRIES);
+}
 
 const jaeum = {
 	ᄀ: "ㄱ",
@@ -53,7 +58,7 @@ const jaeum = {
 	ᇂ: "ㅎ",
 };
 
-export function normalizeToCompat(jamo)
+export function normalizeToCompat(jamo: string)
 {
 	const jamoSet = whichJamoSet(jamo);
 

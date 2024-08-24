@@ -1,4 +1,4 @@
-import normalizeToCompat from './normalizeToCompat';
+import { normalizeToCompat } from './normalizeToCompat';
 
 describe("normalizeToCompat function", () =>
 {

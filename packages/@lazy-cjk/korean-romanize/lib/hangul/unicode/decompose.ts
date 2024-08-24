@@ -9,7 +9,8 @@ import {
 	handleSIndexInput,
 } from './computations';
 
-import { IBlock } from '../../types';
+import { EnumOptionsRomanizeMethod, IBlock } from '../../types';
+import { getJamoDictionary, searchJamo } from '../../utils';
 
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
@@ -86,8 +87,26 @@ export function decomposeHangulChar(s: string | number)
  * @param {string} word
  * @returns {array}
  */
-export function decomposeHangul(word: string)
+export function decomposeHangul(word: string, method: EnumOptionsRomanizeMethod)
 {
-	return [...word].map(decomposeHangulChar);
-}
+	return [...word].map(s => {
+		try
+		{
+			return decomposeHangulChar(s)
+		}
+		catch (e)
+		{
 
+			const ss = getJamoDictionary(s, 0);
+
+			if (ss)
+			{
+				return [searchJamo(ss, {
+						method
+					})]
+			}
+
+			throw e
+		}
+	});
+}

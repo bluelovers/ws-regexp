@@ -1,6 +1,7 @@
-import hangulPattern from './hangulPattern';
+import { hangulPattern } from './hangulPattern';
+import * as CACHE_BLOCKS from './blocks';
 
-const HANGUL_BLOCKS = Object.entries(require("./blocks")).filter(
+const HANGUL_BLOCKS = Object.entries(CACHE_BLOCKS).filter(
 	([blockName]) => blockName.startsWith("HANGUL"),
 ) as any;
 
