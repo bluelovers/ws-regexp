@@ -40,5 +40,11 @@ export interface IOptionsSlugify
 		pinyinMode?: EnumPinyinMode,
 		pinyinType?: EnumPinyinType,
 	},
+
+	/**
+	 * @default true
+	 * @see {import('@lazy-cjk/korean-romanize').IOptionsRomanize}
+	 */
+	ignoreUnSupported?: boolean,
 }
 

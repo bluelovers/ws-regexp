@@ -40,7 +40,9 @@ export function _replaceCjk(text: string, options?: IOptionsSlugify)
 		return s
 	});
 
-	text = romanize_kr(text);
+	text = romanize_kr(text, {
+		ignoreUnSupported: options.ignoreUnSupported ?? true,
+	});
 
 	return text
 }

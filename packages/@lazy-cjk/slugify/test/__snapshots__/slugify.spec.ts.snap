@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`slugify: {"emoji":true} 1`] = `"bu zhi yuan  jí mǒu xín wèi shuò shàng   zhe lei zi hamburger pizza meat on bone poultry leg rice cracker rice ball cooked rice curry rice Pixiv  Judo yuforia  5026941 wu masahiro  gao fei che nasheng tu hui chang oapuridecong shun diao jiao   veevee     meu m     Whiskers"`;
+
+exports[`slugify: {"noStripOthers":true} 1`] = `"bu-zhi-yuan- jí-mǒu-xín-wèi-shuò-shàng- ...zhe-lei-zi-🍔 🍕 🍖 🍗 🍘 🍙 🍚 🍛[Pixiv] Judo yuforia (5026941)(wu-masahiro)] gao-fei-che-nasheng-tu-hui-chang-oapuridecong-shun-diao-jiao- ☆﹐﹑veevee˚ㆍ ㅔㅣ ㅑㅣㅗmeuㅛㅕm ㅜ ㅏㅏ Whiskers ˶˃ᆺ˂˶"`;
+
+exports[`slugify: {} 1`] = `"bu zhi yuan  jí mǒu xín wèi shuò shàng   zhe lei zi Pixiv  Judo yuforia  5026941 wu masahiro  gao fei che nasheng tu hui chang oapuridecong shun diao jiao   veevee     meu m     Whiskers"`;
+
+exports[`transliterate: {"emoji":true} 1`] = `"buzhiyuan jímǒuxínwèishuòshàng ...zheleizihamburger  pizza  meat on bone  poultry leg  rice cracker  rice ball  cooked rice  curry rice [Pixiv] Judo yuforia (5026941)(wumasahiro)] gaofeichenashengtuhuichangoapuridecongshundiaojiao ☆﹐﹑veevee˚ㆍ ㅔㅣ ㅑㅣㅗmeuㅛㅕm ㅜ ㅏㅏ Whiskers ˶˃ᆺ˂˶"`;
+
+exports[`transliterate: {"noStripOthers":true} 1`] = `"buzhiyuan jímǒuxínwèishuòshàng ...zheleizi🍔 🍕 🍖 🍗 🍘 🍙 🍚 🍛[Pixiv] Judo yuforia (5026941)(wumasahiro)] gaofeichenashengtuhuichangoapuridecongshundiaojiao ☆﹐﹑veevee˚ㆍ ㅔㅣ ㅑㅣㅗmeuㅛㅕm ㅜ ㅏㅏ Whiskers ˶˃ᆺ˂˶"`;
+
+exports[`transliterate: {} 1`] = `"buzhiyuan jímǒuxínwèishuòshàng ...zheleizi🍔 🍕 🍖 🍗 🍘 🍙 🍚 🍛[Pixiv] Judo yuforia (5026941)(wumasahiro)] gaofeichenashengtuhuichangoapuridecongshundiaojiao ☆﹐﹑veevee˚ㆍ ㅔㅣ ㅑㅣㅗmeuㅛㅕm ㅜ ㅏㅏ Whiskers ˶˃ᆺ˂˶"`;

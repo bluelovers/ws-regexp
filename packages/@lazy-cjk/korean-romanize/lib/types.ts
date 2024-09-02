@@ -1,4 +1,3 @@
-import { searchJamo } from './utils';
 
 export const enum EnumOptionsRomanizeMethod
 {
@@ -50,6 +49,8 @@ export interface IOptionsRomanize
 {
 	method?: EnumOptionsRomanizeMethod;
 	hyphenate?: boolean;
+	ignoreUnSupported?: boolean,
+	stripUnSupported?: boolean,
 }
 
 export interface ISearchJamoParams

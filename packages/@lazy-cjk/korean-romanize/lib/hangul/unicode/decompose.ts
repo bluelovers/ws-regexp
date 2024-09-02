@@ -9,7 +9,7 @@ import {
 	handleSIndexInput,
 } from './computations';
 
-import { EnumOptionsRomanizeMethod, IBlock } from '../../types';
+import { EnumOptionsRomanizeMethod, IBlock, IOptionsRomanize } from '../../types';
 import { getJamoDictionary, searchJamo } from '../../utils';
 
 /**
@@ -87,8 +87,10 @@ export function decomposeHangulChar(s: string | number)
  * @param {string} word
  * @returns {array}
  */
-export function decomposeHangul(word: string, method?: EnumOptionsRomanizeMethod)
+export function decomposeHangul(word: string, options?: IOptionsRomanize)
 {
+	options ??= {};
+
 	return [...word].map(s => {
 		try
 		{
@@ -102,8 +104,16 @@ export function decomposeHangul(word: string, method?: EnumOptionsRomanizeMethod
 			if (ss)
 			{
 				return [searchJamo(ss, {
-						method
+						method: options.method
 					})]
+			}
+			else if (options.stripUnSupported)
+			{
+				return ['']
+			}
+			else if (options.ignoreUnSupported)
+			{
+				return [s]
 			}
 
 			throw e

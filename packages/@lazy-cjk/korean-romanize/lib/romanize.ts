@@ -4,7 +4,7 @@ import { hangulReplace } from './hangul/hangulReplace';
 import { EnumOptionsRomanizeMethod, IOptionsRomanize } from './types';
 import { getJamoDictionary, handleRomanizeOptions, searchJamo } from './utils';
 
-export function syllableParser(method: EnumOptionsRomanizeMethod)
+export function syllableParser(opts: IOptionsRomanize)
 {
 	return function (syllable: number[] | string[], idx: number, word: (number[] | string[])[])
 	{
@@ -38,7 +38,7 @@ export function syllableParser(method: EnumOptionsRomanizeMethod)
 			}
 
 			const roman = searchJamo(dict, {
-				method,
+				method: opts.method,
 				vowelNext: jamoIdx === 2 ? vowelNext : undefined,
 				consonantPrev: jamoIdx === 0 ? consonantPrev : undefined,
 				consonantNext: jamoIdx === 2 ? next : undefined,
@@ -54,26 +54,23 @@ export function syllableParser(method: EnumOptionsRomanizeMethod)
  *
  * @example romanizeWord(`안녕하십니까`)
  */
-export function romanizeWord(word: string, options?: string | IOptionsRomanize)
+export function romanizeWord(word: string, options?: EnumOptionsRomanizeMethod | IOptionsRomanize)
 {
-	const {
-		method,
-		hyphenate,
-	} = handleRomanizeOptions(options)
+	const opts = handleRomanizeOptions(options)
 
-	const mappedToRoman = decomposeHangul(word, method)
-		.map(syllableParser(method))
+	const mappedToRoman = decomposeHangul(word, opts)
+		.map(syllableParser(opts))
 		.reduce(
 			(prevSyllables, currentSyllable) =>
 				prevSyllables.concat(
-					hyphenate ? [...currentSyllable, "-"] : currentSyllable,
+					opts.hyphenate ? [...currentSyllable, "-"] : currentSyllable,
 				),
 			[],
 		)
 		.join("")
 		.replace("--", "-");
 
-	return hyphenate === false
+	return opts.hyphenate === false
 		? mappedToRoman.replace("-", "")
 		: mappedToRoman.replace(/-$/, "");
 }

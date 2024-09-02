@@ -85,14 +85,24 @@ export function searchJamo(node: ISearchJamoNode, params: ISearchJamoParams, pre
 	}
 }
 
-export function handleRomanizeOptions(options?: string | IOptionsRomanize)
+export function handleRomanizeOptions(options?: EnumOptionsRomanizeMethod | IOptionsRomanize)
 {
-	const { method = EnumOptionsRomanizeMethod.RR, hyphenate = method === EnumOptionsRomanizeMethod.RRT || undefined } =
-		typeof options === "object" ? options : {};
-
-	return {
-		method,
-		hyphenate,
+	if (typeof options === 'string')
+	{
+		options = {
+			method: options,
+		}
 	}
+	else
+	{
+		options = {
+			...options
+		};
+	}
+
+	options.method ??= EnumOptionsRomanizeMethod.RR;
+	options.hyphenate ??= options.method === EnumOptionsRomanizeMethod.RRT || undefined
+
+	return options
 }
 
