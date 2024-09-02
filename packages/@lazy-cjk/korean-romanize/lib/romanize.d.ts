@@ -1,11 +1,11 @@
 import { EnumOptionsRomanizeMethod, IOptionsRomanize } from './types';
-export declare function syllableParser(method: EnumOptionsRomanizeMethod): (syllable: number[] | string[], idx: number, word: (number[] | string[])[]) => string[];
+export declare function syllableParser(opts: IOptionsRomanize): (syllable: number[] | string[], idx: number, word: (number[] | string[])[]) => string[];
 /**
  * only allow input korean text
  *
  * @example romanizeWord(`안녕하십니까`)
  */
-export declare function romanizeWord(word: string, options?: string | IOptionsRomanize): string;
+export declare function romanizeWord(word: string, options?: EnumOptionsRomanizeMethod | IOptionsRomanize): string;
 /**
  * only handle korean text
  *

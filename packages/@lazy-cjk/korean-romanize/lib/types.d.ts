@@ -33,6 +33,8 @@ export interface IJamoRomanEntryCompat extends IJamoRomanEntry {
 export interface IOptionsRomanize {
     method?: EnumOptionsRomanizeMethod;
     hyphenate?: boolean;
+    ignoreUnSupported?: boolean;
+    stripUnSupported?: boolean;
 }
 export interface ISearchJamoParams {
     method: EnumOptionsRomanizeMethod;

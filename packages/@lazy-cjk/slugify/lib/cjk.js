@@ -11,7 +11,7 @@ const chinese_1 = require("./cjk/chinese");
 const REGEXP_TEST = new RegExp((0, cjk_conv_1._re_cjk_conv)('u').source, 'ug');
 const REGEXP_TEST_JP = new RegExp('(?:(?:' + kana_1.katakanaRegex.source + ')|(?:' + kana_1.hiraganaRegex.source + '))+', 'ug');
 function _replaceCjk(text, options) {
-    var _a;
+    var _a, _b;
     let append = (options === null || options === void 0 ? void 0 : options.noSepBetweenZhChar) ? '' : ((_a = options === null || options === void 0 ? void 0 : options.separator) !== null && _a !== void 0 ? _a : ' ');
     const char2pinyin = (0, chinese_1.newZhPinyinFn)(options);
     text = text.replace(REGEXP_TEST, (s) => {
@@ -28,7 +28,9 @@ function _replaceCjk(text, options) {
         }
         return s;
     });
-    text = (0, korean_romanize_1.romanize)(text);
+    text = (0, korean_romanize_1.romanize)(text, {
+        ignoreUnSupported: (_b = options.ignoreUnSupported) !== null && _b !== void 0 ? _b : true,
+    });
     return text;
 }
 function slugifyCjk(word, options) {

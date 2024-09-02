@@ -1,4 +1,4 @@
-import { EnumOptionsRomanizeMethod } from '../../types';
+import { IOptionsRomanize } from '../../types';
 /**
  * Based on "Arithmetic Decomposition Mapping" as described in Unicode core spec for "LV" Hangul syllable types
  *
@@ -37,4 +37,4 @@ export declare function decomposeHangulChar(s: string | number): number[];
  * @param {string} word
  * @returns {array}
  */
-export declare function decomposeHangul(word: string, method?: EnumOptionsRomanizeMethod): (string[] | number[])[];
+export declare function decomposeHangul(word: string, options?: IOptionsRomanize): (string[] | number[])[];

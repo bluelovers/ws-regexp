@@ -56,10 +56,19 @@ function searchJamo(node, params, prevNode) {
     }
 }
 function handleRomanizeOptions(options) {
-    const { method = "RR" /* EnumOptionsRomanizeMethod.RR */, hyphenate = method === "RRT" /* EnumOptionsRomanizeMethod.RRT */ || undefined } = typeof options === "object" ? options : {};
-    return {
-        method,
-        hyphenate,
-    };
+    var _a, _b;
+    if (typeof options === 'string') {
+        options = {
+            method: options,
+        };
+    }
+    else {
+        options = {
+            ...options
+        };
+    }
+    (_a = options.method) !== null && _a !== void 0 ? _a : (options.method = "RR" /* EnumOptionsRomanizeMethod.RR */);
+    (_b = options.hyphenate) !== null && _b !== void 0 ? _b : (options.hyphenate = options.method === "RRT" /* EnumOptionsRomanizeMethod.RRT */ || undefined);
+    return options;
 }
 //# sourceMappingURL=utils.js.map

@@ -6,7 +6,7 @@ exports.romanize = romanize;
 const decompose_1 = require("./hangul/unicode/decompose");
 const hangulReplace_1 = require("./hangul/hangulReplace");
 const utils_1 = require("./utils");
-function syllableParser(method) {
+function syllableParser(opts) {
     return function (syllable, idx, word) {
         // next subsequent initial consonant (choseong)
         const next = idx + 1 < word.length ? word[idx + 1][0] : undefined;
@@ -28,7 +28,7 @@ function syllableParser(method) {
                 throw new RangeError("missing dict " + jamo);
             }
             const roman = (0, utils_1.searchJamo)(dict, {
-                method,
+                method: opts.method,
                 vowelNext: jamoIdx === 2 ? vowelNext : undefined,
                 consonantPrev: jamoIdx === 0 ? consonantPrev : undefined,
                 consonantNext: jamoIdx === 2 ? next : undefined,
@@ -43,13 +43,13 @@ function syllableParser(method) {
  * @example romanizeWord(`안녕하십니까`)
  */
 function romanizeWord(word, options) {
-    const { method, hyphenate, } = (0, utils_1.handleRomanizeOptions)(options);
-    const mappedToRoman = (0, decompose_1.decomposeHangul)(word, method)
-        .map(syllableParser(method))
-        .reduce((prevSyllables, currentSyllable) => prevSyllables.concat(hyphenate ? [...currentSyllable, "-"] : currentSyllable), [])
+    const opts = (0, utils_1.handleRomanizeOptions)(options);
+    const mappedToRoman = (0, decompose_1.decomposeHangul)(word, opts)
+        .map(syllableParser(opts))
+        .reduce((prevSyllables, currentSyllable) => prevSyllables.concat(opts.hyphenate ? [...currentSyllable, "-"] : currentSyllable), [])
         .join("")
         .replace("--", "-");
-    return hyphenate === false
+    return opts.hyphenate === false
         ? mappedToRoman.replace("-", "")
         : mappedToRoman.replace(/-$/, "");
 }

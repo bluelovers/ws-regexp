@@ -68,7 +68,8 @@ function decomposeHangulChar(s) {
  * @param {string} word
  * @returns {array}
  */
-function decomposeHangul(word, method) {
+function decomposeHangul(word, options) {
+    options !== null && options !== void 0 ? options : (options = {});
     return [...word].map(s => {
         try {
             return decomposeHangulChar(s);
@@ -77,8 +78,14 @@ function decomposeHangul(word, method) {
             const ss = (0, utils_1.getJamoDictionary)(s, 0);
             if (ss) {
                 return [(0, utils_1.searchJamo)(ss, {
-                        method
+                        method: options.method
                     })];
+            }
+            else if (options.stripUnSupported) {
+                return [''];
+            }
+            else if (options.ignoreUnSupported) {
+                return [s];
             }
             throw e;
         }
