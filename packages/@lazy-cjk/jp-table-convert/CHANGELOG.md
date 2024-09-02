@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.50](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-convert@1.0.49...@lazy-cjk/jp-table-convert@1.0.50) (2024-09-02)
+
+**Note:** Version bump only for package @lazy-cjk/jp-table-convert
+
+
+
+
+
 ## [1.0.49](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-convert@1.0.48...@lazy-cjk/jp-table-convert@1.0.49) (2024-08-24)
 
 

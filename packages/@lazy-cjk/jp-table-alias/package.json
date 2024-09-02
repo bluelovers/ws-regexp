@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-alias",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "description": "",
   "keywords": [
     "char",
@@ -80,7 +80,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.49",
+    "@lazy-cjk/jp-table-convert": "^1.0.50",
     "array-hyper-unique": "^2.1.4",
     "tslib": ">=2"
   },

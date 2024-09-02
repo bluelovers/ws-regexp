@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.100](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.99...@lazy-cjk/slugify@1.0.100) (2024-09-02)
+
+
+
+### 📦　Code Refactoring
+
+* add `ignoreUnSupported` ([7ff26d3](https://github.com/bluelovers/ws-regexp/commit/7ff26d3ca5649c14491370d7cb4610bcc29900e1))
+
+
+### 🛠　Build System
+
+* update build ([4bcb82b](https://github.com/bluelovers/ws-regexp/commit/4bcb82b513ad199eb20f9a6a92aec38ef89cbe42))
+
+
+
 ## [1.0.99](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.98...@lazy-cjk/slugify@1.0.99) (2024-08-24)
 
 
