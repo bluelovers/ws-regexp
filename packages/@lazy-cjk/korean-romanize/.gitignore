@@ -221,3 +221,7 @@ dist/*.umd.*.*s
 
 !/.yarnrc.yml
 .turbo
+
+*.test.d.ts
+*.test.js
+*.test.js.map
