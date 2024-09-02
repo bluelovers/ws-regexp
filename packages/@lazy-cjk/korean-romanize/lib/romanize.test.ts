@@ -47,7 +47,7 @@ describe("romanizeWord function", () =>
 			{
 				test(`${hangulWord} to ${RR}`, () =>
 				{
-					expect(romanizeWord(hangulWord, "RR")).toBe(RR.toLowerCase());
+					expect(romanizeWord(hangulWord, EnumOptionsRomanizeMethod.RR)).toBe(RR.toLowerCase());
 				});
 			});
 	});
