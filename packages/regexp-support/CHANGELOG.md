@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.56](https://github.com/bluelovers/ws-regexp/compare/regexp-support@1.0.55...regexp-support@1.0.56) (2024-09-02)
+
+
+
+### ✨　Features
+
+* unicodeSets ([a9b36de](https://github.com/bluelovers/ws-regexp/commit/a9b36de64ef6d9a655522cdcba83c48eef052ea4))
+
+
+### ♻️　Chores
+
+* new env test ([cc53b15](https://github.com/bluelovers/ws-regexp/commit/cc53b156bf4df12b023eb628a69efe18f4ccd15c))
+* new env test ([e668477](https://github.com/bluelovers/ws-regexp/commit/e668477beb23752df9b32ce4d87571b378edb75f))
+* new env test ([13dd722](https://github.com/bluelovers/ws-regexp/commit/13dd722ed3e96c05872dc17f96a2b35c311d2120))
+
+
+
 ## [1.0.55](https://github.com/bluelovers/ws-regexp/compare/regexp-support@1.0.54...regexp-support@1.0.55) (2024-08-24)
 
 
