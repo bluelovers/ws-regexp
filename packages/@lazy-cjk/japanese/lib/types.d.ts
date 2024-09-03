@@ -1,7 +1,15 @@
 /**
  * Created by user on 2020/5/31.
  */
-export type IRomanizationConfigsKeys = 'wikipedia' | 'traditional hepburn' | 'modified hepburn' | 'kunrei' | 'nihon';
+import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
+export declare const enum EnumRomanizationConfigsKeys {
+    'wikipedia' = "wikipedia",
+    'traditional_hepburn' = "traditional hepburn",
+    'modified_hepburn' = "modified hepburn",
+    'kunrei' = "kunrei",
+    'nihon' = "nihon"
+}
+export type IRomanizationConfigsKeys = ITSTypeAndStringLiteral<EnumRomanizationConfigsKeys>;
 /**
  * Config is represented as plain object,
  * where object keys stand for a collection of similar characters,
@@ -30,4 +38,6 @@ export interface IOptionsRomanize {
     ゐ?: string;
     を?: string;
     punctuation?: boolean;
+    configPreset?: IRomanizationConfigsKeys;
+    ignoreUnSupported?: boolean;
 }
