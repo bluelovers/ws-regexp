@@ -178,7 +178,7 @@ describe('japanese.transcribeNumber()', () =>
 			},
 		);
 
-		test.skip('must perfectly transcribe very minor numbers into string', () =>
+		test('must perfectly transcribe very minor numbers into string', () =>
 		{
 			// Number.MIN_SAFE_INTEGER
 			expect(japanese.transcribeNumber(MIN_SAFE_INTEGER)).toStrictEqual([
@@ -187,7 +187,7 @@ describe('japanese.transcribeNumber()', () =>
 				'千九百九十二億',
 				'五千四百七十四万',
 				'九百九十一',
-			]);
+			].join(''));
 
 			// PI
 			expect(
@@ -196,7 +196,7 @@ describe('japanese.transcribeNumber()', () =>
 				'マイナス',
 				'三千百四十一無量大数',
 				'五千九百二十六不可思議',
-				'五千三百五十八那由多',
+				'五千三百五十八那由他',
 				'九千七百九十三阿僧祇',
 				'二千三百八十四恒河沙',
 				'六千二百六十四極',
@@ -242,7 +242,7 @@ describe('japanese.transcribeNumber()', () =>
 				'二九四八一六五八〇八',
 				'五千五百九十三無量大数',
 				'三千二百十二不可思議',
-				'三千三百四十八那由多',
+				'三千三百四十八那由他',
 				'二千七百四十七阿僧祇',
 				'九千七百八十二恒河沙',
 				'六千二百四極',
