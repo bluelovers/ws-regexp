@@ -50,6 +50,7 @@
   "dependencies": {
     "big.js": "^6.2.1",
     "lodash": "^4.17.21",
+    "ts-type": "^3.0.1",
     "tslib": ">=2"
   },
   "publishConfig": {

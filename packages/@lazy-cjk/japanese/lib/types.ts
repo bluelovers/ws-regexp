@@ -1,9 +1,18 @@
 /**
  * Created by user on 2020/5/31.
  */
+import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 
+export const enum EnumRomanizationConfigsKeys
+{
+	'wikipedia' = 'wikipedia',
+	'traditional_hepburn' = 'traditional hepburn',
+	'modified_hepburn' = 'modified hepburn',
+	'kunrei' = 'kunrei',
+	'nihon' = 'nihon',
+}
 
-export type IRomanizationConfigsKeys = 'wikipedia' | 'traditional hepburn' | 'modified hepburn' | 'kunrei' | 'nihon';
+export type IRomanizationConfigsKeys = ITSTypeAndStringLiteral<EnumRomanizationConfigsKeys>;
 
 /**
  * Config is represented as plain object,
@@ -34,4 +43,6 @@ export interface IOptionsRomanize
 	ゐ?: string;
 	を?: string;
 	punctuation?: boolean;
+	configPreset?: IRomanizationConfigsKeys;
+	ignoreUnSupported?: boolean,
 }

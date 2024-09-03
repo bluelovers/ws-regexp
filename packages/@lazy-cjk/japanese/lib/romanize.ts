@@ -8,21 +8,13 @@ import {
 	romanizePuncutuationTable,
 	romanizationTable,
 } from './data/romanize';
-import { IOptionsRomanize, IRomanizationConfigsKeys } from './types';
+import { EnumRomanizationConfigsKeys, IOptionsRomanize, IRomanizationConfigsKeys } from './types';
 
 export * from './data/romanize';
 
-/**
- * Convert input text into romaji.
- *
- * important: Most definitions of Japanese text romanizations require total recognition of Japanese text, but robots cannot actually think or understand! Some conversions are hopelessly poor. For example, ISO 3602 defines that "こうし" which means "講師" must be romanized as "kôsi", while "こうし" which means "子牛" must be romanized as "kousi" (because 子牛 is mixed word of 子 and 牛), though these are apparently the same in Kana-form. While japanese.js is very... very very thoroughly tested, this module (and any other romanization machines) cannot distinguish between these semantics. So unfortunately, you cannot use this function for official writing or something. Ugh.
- */
-export function romanize(string: string, config?: IRomanizationConfigsKeys | IOptionsRomanize)
+export function handleRomanizeOptionsAndTable(config?: IRomanizationConfigsKeys | IOptionsRomanize)
 {
-	if (typeof config === 'undefined')
-	{
-		config = 'wikipedia';
-	}
+	config ??= EnumRomanizationConfigsKeys.wikipedia;
 
 	if (typeof config === 'string')
 	{
@@ -36,7 +28,7 @@ export function romanize(string: string, config?: IRomanizationConfigsKeys | IOp
 
 	if (typeof config === 'object')
 	{
-		config = extend({}, defaultRomanizationConfig, config);
+		config = extend({}, romanizationConfigs[config?.configPreset] ?? defaultRomanizationConfig, config);
 	}
 	else
 	{
@@ -210,6 +202,24 @@ export function romanize(string: string, config?: IRomanizationConfigsKeys | IOp
 		});
 	}
 
+	return {
+		config,
+		table,
+	}
+}
+
+/**
+ * Convert input text into romaji.
+ *
+ * important: Most definitions of Japanese text romanizations require total recognition of Japanese text, but robots cannot actually think or understand! Some conversions are hopelessly poor. For example, ISO 3602 defines that "こうし" which means "講師" must be romanized as "kôsi", while "こうし" which means "子牛" must be romanized as "kousi" (because 子牛 is mixed word of 子 and 牛), though these are apparently the same in Kana-form. While japanese.js is very... very very thoroughly tested, this module (and any other romanization machines) cannot distinguish between these semantics. So unfortunately, you cannot use this function for official writing or something. Ugh.
+ */
+export function romanize(string: string, inputConfig?: IRomanizationConfigsKeys | IOptionsRomanize)
+{
+	const {
+		config,
+		table,
+	} = handleRomanizeOptionsAndTable(inputConfig);
+
 	string = hiraganize(string);
 
 	let dest = '';
@@ -239,6 +249,16 @@ export function romanize(string: string, config?: IRomanizationConfigsKeys | IOp
 		}
 
 		let tokenDest = table[token] || '';
+		if (tokenDest === '')
+		{
+			if (config.ignoreUnSupported)
+			{
+				dest += token;
+			}
+			previousToken = '';
+
+			continue;
+		}
 
 		// small tsu
 		if (previousToken === 'っ')
