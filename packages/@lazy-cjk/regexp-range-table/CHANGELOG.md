@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/regexp-range-table@1.0.7...@lazy-cjk/regexp-range-table@1.0.8) (2024-09-03)
+
+**Note:** Version bump only for package @lazy-cjk/regexp-range-table
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/regexp-range-table@1.0.6...@lazy-cjk/regexp-range-table@1.0.7) (2024-08-24)
 
 

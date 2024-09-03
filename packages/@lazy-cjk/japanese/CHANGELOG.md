@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.37](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.36...@lazy-cjk/japanese@1.2.37) (2024-09-03)
+
+
+### BREAKING CHANGES
+
+* support Negative Zero `-0`
+* fix bug and refactor
+
+
+
+### 🐛　Bug Fixes
+
+* support Negative Zero `-0` ([222bc6b](https://github.com/bluelovers/ws-regexp/commit/222bc6b078d8fd772e36614c96f46c86c8cd2c27))
+
+
+### ✨　Features
+
+* add `ignoreUnSupported` ([869a2c0](https://github.com/bluelovers/ws-regexp/commit/869a2c04e48012ee8a2c8800cfacf7e0ef745406))
+
+
+### 📦　Code Refactoring
+
+* fix bug and refactor ([e5bba43](https://github.com/bluelovers/ws-regexp/commit/e5bba43049c349d757c435c8356238a8b01af120))
+
+
+### 🚨　Tests
+
+* enable test ([3047b3d](https://github.com/bluelovers/ws-regexp/commit/3047b3d207981ddccc96ba7f35d585a8df8cbce3))
+
+
+### 🛠　Build System
+
+* update build ([082a300](https://github.com/bluelovers/ws-regexp/commit/082a3008e8b1e07d256e6de64c22165827d4eba3))
+* update build ([d30e237](https://github.com/bluelovers/ws-regexp/commit/d30e237e50e6c820529b3f77a6f0d76c3fd7a7fe))
+
+
+
 ## [1.2.36](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/japanese@1.2.35...@lazy-cjk/japanese@1.2.36) (2024-08-24)
 
 
