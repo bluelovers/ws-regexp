@@ -9,16 +9,14 @@ import {
 	MAX_SAFE_INTEGER,
 } from './data/numbers';
 import { getBits, getBit } from './util/numbers';
+import { EnumTranscribeNumberConfigsKeys, IOptionsTranscribeNumber, IOptionsTranscribeNumberRuntime } from './types';
+import { ITSTypeAndStringLiteral } from 'ts-type/lib/helper/string';
 
 export * from './data/numbers';
 
-export function transcribeNumber(number: number | string, config?): string
+export function handleTranscribeNumberOptions(config?: Partial<IOptionsTranscribeNumber> | ITSTypeAndStringLiteral<EnumTranscribeNumberConfigsKeys>)
 {
-	if (typeof config === 'undefined')
-	{
-		// default config
-		config = transcriptionConfigs['default'];
-	}
+	config ??= transcriptionConfigs['default']
 
 	if (typeof config === 'string')
 	{
@@ -32,7 +30,7 @@ export function transcribeNumber(number: number | string, config?): string
 
 	if (typeof config === 'object')
 	{
-		config = extend({}, config, transcriptionConfigs['default']);
+		config = extend({}, config, transcriptionConfigs[config?.configPreset] ?? transcriptionConfigs['default']) as IOptionsTranscribeNumber;
 	}
 	else
 	{
@@ -79,8 +77,14 @@ export function transcribeNumber(number: number | string, config?): string
 		}
 	}
 
-	// Unify input to string
+	return config as IOptionsTranscribeNumberRuntime
+}
 
+/**
+ * Unify input to string
+ */
+export function unifyInputToString(number: number | string)
+{
 	if (typeof number === 'number')
 	{
 		if (MIN_SAFE_INTEGER <= number && number < MAX_SAFE_INTEGER)
@@ -122,6 +126,14 @@ export function transcribeNumber(number: number | string, config?): string
 	{
 		throw new ReferenceError('Type of `number` is unsupported');
 	}
+
+	return number
+}
+
+export function transcribeNumber(number: number | string, inputConfig?: Partial<IOptionsTranscribeNumber> | ITSTypeAndStringLiteral<EnumTranscribeNumberConfigsKeys>): string
+{
+	const config = handleTranscribeNumberOptions(inputConfig);
+	number = unifyInputToString(number);
 
 	let length = number.length;
 

@@ -3,7 +3,7 @@ import { specialKatakanizationTable, specialHiraganizationTable, hiraganaRegex, 
 export * from './data/kana';
 
 const chr = String.fromCharCode;
-const ord = function (char)
+const ord = function (char: string)
 {
 	return char.charCodeAt(0);
 };

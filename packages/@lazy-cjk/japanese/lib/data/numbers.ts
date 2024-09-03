@@ -1,13 +1,14 @@
 /**
  * Created by user on 2020/5/31.
  */
+import { EnumTranscribeNumberConfigsKeys, ITranscribeNumberConfig } from '../types';
 
 // Compatify Number.MAX_SAFE_INTEGER and Number.MIN_SAFE_INTEGER
 export const MAX_SAFE_INTEGER = 9007199254740991;
 export const MIN_SAFE_INTEGER = -9007199254740991;
 
 export const transcriptionConfigs = {
-	'default': {
+	[EnumTranscribeNumberConfigsKeys.default]: {
 		minusSign: 'マイナス',
 		decimalPoint: '・',
 		digits: 'common',
@@ -16,18 +17,18 @@ export const transcriptionConfigs = {
 		truncateOne: ['十', '百', '千', '拾', '佰', '阡', '仟'],
 		smallUnitNames: 'none',
 	},
-	formal: {
+	[EnumTranscribeNumberConfigsKeys.formal]: {
 		digits: 'formal',
 		unitNames: 'formal',
 		specialUnitNames: 'common',
 		smallUnitNames: 'common',
 	},
-	traditional: {
+	[EnumTranscribeNumberConfigsKeys.traditional]: {
 		digits: 'traditional',
 		specialUnitNames: 'full',
 		smallUnitNames: 'full',
 	},
-} as const;
+} satisfies Record<EnumTranscribeNumberConfigsKeys, ITranscribeNumberConfig>;
 
 export const predefineedTranscriptionConfigs = {
 	digits: {

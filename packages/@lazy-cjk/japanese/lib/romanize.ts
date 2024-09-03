@@ -253,11 +253,8 @@ export function romanize(string: string, inputConfig?: IRomanizationConfigsKeys 
 		{
 			if (config.ignoreUnSupported)
 			{
-				dest += token;
+				tokenDest = token;
 			}
-			previousToken = '';
-
-			continue;
 		}
 
 		// small tsu
