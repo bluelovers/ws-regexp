@@ -1,14 +1,11 @@
 "use strict";
-/**
- * Created by user on 2020/5/31.
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.predefineedTranscriptionConfigs = exports.transcriptionConfigs = exports.MIN_SAFE_INTEGER = exports.MAX_SAFE_INTEGER = void 0;
 // Compatify Number.MAX_SAFE_INTEGER and Number.MIN_SAFE_INTEGER
 exports.MAX_SAFE_INTEGER = 9007199254740991;
 exports.MIN_SAFE_INTEGER = -9007199254740991;
 exports.transcriptionConfigs = {
-    'default': {
+    ["default" /* EnumTranscribeNumberConfigsKeys.default */]: {
         minusSign: 'マイナス',
         decimalPoint: '・',
         digits: 'common',
@@ -17,13 +14,13 @@ exports.transcriptionConfigs = {
         truncateOne: ['十', '百', '千', '拾', '佰', '阡', '仟'],
         smallUnitNames: 'none',
     },
-    formal: {
+    ["formal" /* EnumTranscribeNumberConfigsKeys.formal */]: {
         digits: 'formal',
         unitNames: 'formal',
         specialUnitNames: 'common',
         smallUnitNames: 'common',
     },
-    traditional: {
+    ["traditional" /* EnumTranscribeNumberConfigsKeys.traditional */]: {
         digits: 'traditional',
         specialUnitNames: 'full',
         smallUnitNames: 'full',

@@ -1,28 +1,25 @@
-/**
- * Created by user on 2020/5/31.
- */
 export declare const MAX_SAFE_INTEGER = 9007199254740991;
 export declare const MIN_SAFE_INTEGER = -9007199254740991;
 export declare const transcriptionConfigs: {
-    readonly default: {
-        readonly minusSign: "マイナス";
-        readonly decimalPoint: "・";
-        readonly digits: "common";
-        readonly unitNames: "jinkoki3";
-        readonly specialUnitNames: "none";
-        readonly truncateOne: readonly ["十", "百", "千", "拾", "佰", "阡", "仟"];
-        readonly smallUnitNames: "none";
+    default: {
+        minusSign: string;
+        decimalPoint: string;
+        digits: "common";
+        unitNames: "jinkoki3";
+        specialUnitNames: "none";
+        truncateOne: string[];
+        smallUnitNames: "none";
     };
-    readonly formal: {
-        readonly digits: "formal";
-        readonly unitNames: "formal";
-        readonly specialUnitNames: "common";
-        readonly smallUnitNames: "common";
+    formal: {
+        digits: "formal";
+        unitNames: "formal";
+        specialUnitNames: "common";
+        smallUnitNames: "common";
     };
-    readonly traditional: {
-        readonly digits: "traditional";
-        readonly specialUnitNames: "full";
-        readonly smallUnitNames: "full";
+    traditional: {
+        digits: "traditional";
+        specialUnitNames: "full";
+        smallUnitNames: "full";
     };
 };
 export declare const predefineedTranscriptionConfigs: {

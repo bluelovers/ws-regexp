@@ -194,10 +194,8 @@ function romanize(string, inputConfig) {
         let tokenDest = table[token] || '';
         if (tokenDest === '') {
             if (config.ignoreUnSupported) {
-                dest += token;
+                tokenDest = token;
             }
-            previousToken = '';
-            continue;
         }
         // small tsu
         if (previousToken === 'っ') {
