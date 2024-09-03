@@ -80,8 +80,8 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.1.4",
-    "ts-type": ">=2",
+    "array-hyper-unique": "^2.1.6",
+    "ts-type": "^3.0.1",
     "tslib": ">=2"
   },
   "publishConfig": {

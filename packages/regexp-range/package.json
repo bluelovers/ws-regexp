@@ -85,7 +85,7 @@
   "dependencies": {
     "@bluelovers/fill-range": "^7.0.2",
     "@lazy-cjk/regexp-range-table": "^1.0.7",
-    "array-hyper-unique": "^2.1.4"
+    "array-hyper-unique": "^2.1.6"
   },
   "packageManager": "yarn@1.22.19",
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

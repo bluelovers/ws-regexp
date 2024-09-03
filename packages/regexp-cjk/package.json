@@ -96,7 +96,7 @@
   },
   "dependencies": {
     "@lazy-cjk/zh-table-list": "^1.0.89",
-    "array-hyper-unique": "^2.1.4",
+    "array-hyper-unique": "^2.1.6",
     "lodash": "^4.17.21",
     "regexp-helper": "^1.0.41",
     "regexp-parser-event": "^1.1.46",

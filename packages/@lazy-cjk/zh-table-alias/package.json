@@ -84,9 +84,9 @@
   "dependencies": {
     "@lazy-cjk/jp-table-alias": "^1.0.45",
     "@lazy-cjk/zh-convert": "^1.0.53",
-    "array-hyper-unique": "^2.1.4",
+    "array-hyper-unique": "^2.1.6",
     "deepmerge-plus": "^3.0.2",
-    "ts-type": ">=2",
+    "ts-type": "^3.0.1",
     "tslib": ">=2"
   },
   "publishConfig": {

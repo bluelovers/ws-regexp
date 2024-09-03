@@ -35,7 +35,7 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@bluelovers/string-natural-compare": "^2.0.11",
+    "@bluelovers/string-natural-compare": "^2.0.13",
     "@lazy-cjk/zh-slugify": "^1.0.91",
     "tslib": ">=2"
   },

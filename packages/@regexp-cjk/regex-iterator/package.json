@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@regexp-cjk/clone-regexp": "^1.0.25",
-    "ts-type": ">=2",
+    "ts-type": "^3.0.1",
     "tslib": ">=2"
   },
   "devDependencies": {

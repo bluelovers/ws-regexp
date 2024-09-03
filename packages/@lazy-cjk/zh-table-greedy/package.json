@@ -86,7 +86,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.1.4",
+    "array-hyper-unique": "^2.1.6",
     "tslib": ">=2",
     "uni-string": "^2.0.7"
   },
