@@ -78,7 +78,12 @@ export interface ITranscribeNumberConfig
 
 export interface IOptionsTranscribeNumber extends ITranscribeNumberConfig
 {
-	configPreset: ITSTypeAndStringLiteral<EnumTranscribeNumberConfigsKeys>;
+	configPreset?: ITSTypeAndStringLiteral<EnumTranscribeNumberConfigsKeys>;
+
+	/**
+	 * Get sanitized unit name keys
+	 */
+	keysOfUnitNames?: number[]
 }
 
 export interface IOptionsTranscribeNumberRuntime extends ITSOverwrite<IOptionsTranscribeNumber, {

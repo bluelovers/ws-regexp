@@ -165,7 +165,7 @@ describe('japanese.transcribeNumber()', () =>
 			},
 		);
 
-		test.skip(
+		test(
 			'must perfectly transcribe negative numbers with facing "マイナス" string',
 			() =>
 			{
