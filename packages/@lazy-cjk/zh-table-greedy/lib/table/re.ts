@@ -408,4 +408,7 @@ export const _greedyTableCacheRegexp: readonly (readonly [RegExp, string])[] = [
 
 	[/[薫薰燻熏]/ug, '熏'],
 
+	// https://github.com/bluelovers/ws-regexp/pull/3
+	[/[暨曁及]/ug, '及'],
+
 ]

@@ -327,5 +327,7 @@ exports._greedyTableCacheRegexp = [
     [/[曵抴栧拽]/ug, '曳'],
     [/[捶搥椎槌錘鎚锤]/ug, '捶'],
     [/[薫薰燻熏]/ug, '熏'],
+    // https://github.com/bluelovers/ws-regexp/pull/3
+    [/[暨曁及]/ug, '及'],
 ];
 //# sourceMappingURL=re.js.map

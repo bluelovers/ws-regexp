@@ -6,6 +6,7 @@ describe(`simple check`, () =>
 
 	([
 		['候', '侯'],
+		['暨', '及'],
 	] as [string, string][]).forEach((ls) =>
 	{
 

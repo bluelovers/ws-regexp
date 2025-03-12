@@ -165,6 +165,8 @@ exports.table_same = [
     '熏',
     '薰',
     '燻',
+    // https://github.com/bluelovers/ws-regexp/pull/3
+    '暨',
 ];
 exports.default = exports.table_same;
 //# sourceMappingURL=table_same.js.map

@@ -1135,6 +1135,14 @@ exports[`validate char of map 叉|衩|釵|钗 1`] = `
 ]
 `;
 
+exports[`validate char of map 及|暨|曁 1`] = `
+[
+  "及",
+  "暨",
+  "曁",
+]
+`;
+
 exports[`validate char of map 反|返 1`] = `
 [
   "反",

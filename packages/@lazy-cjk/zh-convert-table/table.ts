@@ -2771,6 +2771,7 @@ export const table_cn2tw: ITable = {
 	"箇": "箇",
 	"猛": "猛",
 	"薰": "薰",
+	"暨": "暨",
 };
 
 export const table_tw2cn: ITable = {
@@ -5817,7 +5818,7 @@ export const table_tw2cn: ITable = {
 	"搵": "揾",
 	"撝": "㧑",
 	"擓": "㧟",
-	"暨": "及",
+	"暨": "暨",
 	"朮": "术",
 	"杴": "锨",
 	"梲": "棁",

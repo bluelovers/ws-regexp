@@ -395,6 +395,7 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'彪',
 	'尨',
 	'狵',
+
 ].forEach(function (v)
 {
 	delete table_tw2cn[v];

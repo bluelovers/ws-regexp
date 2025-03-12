@@ -199,6 +199,9 @@ export const table_same = [
 	'薰',
 	'燻',
 
+	// https://github.com/bluelovers/ws-regexp/pull/3
+	'暨',
+
 ];
 
 export default table_same
