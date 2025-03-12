@@ -29,5 +29,5 @@ export declare function commonSubstring(a: any, b: any, side?: 'start' | 'end'):
 /**
  * Creates a concatenation between expressions a and b
  */
-export declare function concat(a: Literal, b: Literal): Literal | Concatenation;
+export declare function concat(a: Literal, b: Literal): Concatenation | Literal;
 export default toRegex;
