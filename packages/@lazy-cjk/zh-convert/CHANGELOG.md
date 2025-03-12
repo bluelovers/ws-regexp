@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.55](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert@1.0.54...@lazy-cjk/zh-convert@1.0.55) (2025-03-12)
+
+
+
+### 🐛　Bug Fixes
+
+* cn2tw 暨 , tw2cn 暨 ([80b3600](https://github.com/bluelovers/ws-regexp/commit/80b3600a428dab251b53ae2abff9a42ec0e56be9))
+* tw2cn 暨 ([d14370e](https://github.com/bluelovers/ws-regexp/commit/d14370eaa453c982d9e65ad925079d905a79e8ec))
+* **dict:** 暨曁及 [#3](https://github.com/bluelovers/ws-regexp/issues/3) and add to greedy ([c74e543](https://github.com/bluelovers/ws-regexp/commit/c74e5430d6da9bbc911600757084fd5ac0f44eb4))
+
+
+
 ## [1.0.54](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-convert@1.0.53...@lazy-cjk/zh-convert@1.0.54) (2024-09-03)
 
 

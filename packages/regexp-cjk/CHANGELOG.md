@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.117](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.116...regexp-cjk@3.3.117) (2025-03-12)
+
+**Note:** Version bump only for package regexp-cjk
+
+
+
+
+
 ## [3.3.116](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.115...regexp-cjk@3.3.116) (2024-09-03)
 
 

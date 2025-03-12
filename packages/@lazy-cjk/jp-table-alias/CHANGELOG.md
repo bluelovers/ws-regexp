@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.47](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-alias@1.0.46...@lazy-cjk/jp-table-alias@1.0.47) (2025-03-12)
+
+**Note:** Version bump only for package @lazy-cjk/jp-table-alias
+
+
+
+
+
 ## [1.0.46](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-alias@1.0.45...@lazy-cjk/jp-table-alias@1.0.46) (2024-09-03)
 
 
