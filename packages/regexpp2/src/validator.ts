@@ -113,7 +113,7 @@ function isUnicodePropertyValueCharacter(cp: number): boolean {
 
 function isValidUnicodeProperty(name: string, value: string): boolean {
     //eslint-disable-next-line no-prototype-builtins
-    return PropertyData.hasOwnProperty(name) && PropertyData[name].has(value)
+    return PropertyData.hasOwnProperty(name) && PropertyData[name as keyof typeof PropertyData].has(value)
 }
 
 function isValidUnicodePropertyName(name: string): boolean {
