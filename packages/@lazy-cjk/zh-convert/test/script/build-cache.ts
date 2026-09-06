@@ -32,7 +32,7 @@ import { table_cn2tw, table_tw2cn } from '../raw/table';
 
 })();
 
-function printTable(table)
+function printTable(table: any)
 {
 	return JSON.stringify(table, null, `\t`);
 }

@@ -58,13 +58,10 @@
   "author": "bluelovers",
   "main": "index.js",
   "scripts": {
-    "coverage": "npx nyc pnpm run test",
-    "lint": "npx eslint **/*.ts",
     "pretest": "pnpm run build",
     "test": "pnpm run test:jest",
     "test:jest": "jest",
     "test:jest:snapshot": "pnpm run test:jest -- -u",
-    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:snapshot": "pnpm run test -u",
     "test:tsd": "ynpx tsd",
     "build": "tsx ./test/script/build-cache.ts",
@@ -72,11 +69,10 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
     "preversion": "pnpm run test",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly:lerna": "pnpm run test && pnpm run build:commit",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
-    "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
@@ -86,6 +82,9 @@
     "regexp-helper": "^1.0.43",
     "tslib": ">=2",
     "uni-string": "^2.0.7"
+  },
+  "devDependencies": {
+    "@git-lazy/spawn": "^2.0.3"
   },
   "publishConfig": {
     "access": "public"

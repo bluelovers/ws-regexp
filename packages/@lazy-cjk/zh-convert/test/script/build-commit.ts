@@ -1,6 +1,6 @@
 import { crossSpawnGitAsync } from '@git-lazy/spawn';
 import { join } from 'path';
-import { outputJSON, outputFile } from 'fs-extra';
+import { outputJSON, outputFile, readJSON } from 'fs-extra';
 import emitTsFiles from 'build-ts-file';
 import { ITable } from '../../lib/types';
 
@@ -21,26 +21,38 @@ interface IOldKeysCache
 	const _cache_file = join(__root, 'test', 'cache', 'keys.json');
 	const _old_cache_file = join(__root, 'test', 'cache', 'old_cache.json');
 
-	let old_keys: IOldKeysCache = await import(_cache_file)
+	let old_keys: IOldKeysCache = await readJSON(_cache_file)
 		// @ts-ignore
 		.then(m => m.default || m)
-		.catch(e => ({
-			table_cn2tw: [] as string[],
-			table_tw2cn: [] as string[],
-		}))
+		.catch(e => {
+			console.error(e);
+			return {
+				table_cn2tw: [] as string[],
+				table_tw2cn: [] as string[],
+			};
+		})
 	;
 
 	let old_cache: {
 			table_cn2tw: ITable,
 			table_tw2cn: ITable,
-		} = await import(_old_cache_file)
+		} = await readJSON(_old_cache_file)
 		// @ts-ignore
 		.then(m => m.default || m)
-		.catch(e => ({
-			table_cn2tw: {},
-			table_tw2cn: {},
-		}))
+		.catch(e => {
+			console.error(e);
+			return {
+				table_cn2tw: {},
+				table_tw2cn: {},
+			};
+		})
 	;
+
+	console.log('old_keys.table_cn2tw', old_keys.table_cn2tw.length);
+	console.log('old_keys.table_tw2cn', old_keys.table_tw2cn.length);
+
+	console.log('old_cache.table_cn2tw', Object.keys(old_cache.table_cn2tw).length);
+	console.log('old_cache.table_tw2cn', Object.keys(old_cache.table_tw2cn).length);
 
 	let new_keys: IOldKeysCache = {
 		table_cn2tw: [] as string[],
@@ -62,6 +74,9 @@ interface IOldKeysCache
 	})
 
 	const { table_cn2tw, table_tw2cn } = await import('../../lib/table');
+
+	console.log('table_cn2tw', Object.keys(table_cn2tw).length);
+	console.log('table_tw2cn', Object.keys(table_tw2cn).length);
 
 	Object.keys(table_cn2tw)
 		.forEach((key) =>
