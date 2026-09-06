@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.93](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.92...@lazy-cjk/zh-table-list@1.0.93) (2026-09-06)
+
+
+
+### ✨　Features
+
+* **@lazy-cjk/zh-table-list:** 新增 @lazy-cjk/jp-table-alias 依賴 ([4961f1b](https://github.com/bluelovers/ws-regexp/commit/4961f1be75f23f6966ade4749b9db4f3caabd100))
+
+
+### 🛠　Build System
+
+* **root:** 優化 CI 腳本並更新全域開發指令 ([c6ba247](https://github.com/bluelovers/ws-regexp/commit/c6ba24756fc04aa080880a6791fe4c539eeb8854))
+
+
+
 ## [1.0.92](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-list@1.0.91...@lazy-cjk/zh-table-list@1.0.92) (2026-09-06)
 
 

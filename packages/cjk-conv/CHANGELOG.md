@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.152](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.151...cjk-conv@1.2.152) (2026-09-06)
+
+
+
+### 🛠　Build System
+
+* **root:** 優化 CI 腳本並更新全域開發指令 ([c6ba247](https://github.com/bluelovers/ws-regexp/commit/c6ba24756fc04aa080880a6791fe4c539eeb8854))
+
+
+### ♻️　Chores
+
+* **deps:** 將多個套件的發佈腳本從 yarn-tool 改為 pnpm ([c25c766](https://github.com/bluelovers/ws-regexp/commit/c25c766757f526125cbd512d3af57d516647b468))
+
+
+
 ## [1.2.151](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.150...cjk-conv@1.2.151) (2026-09-06)
 
 

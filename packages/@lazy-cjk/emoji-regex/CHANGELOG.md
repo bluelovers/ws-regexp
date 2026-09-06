@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.24](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.23...@lazy-cjk/emoji-regex@1.0.24) (2026-09-06)
+
+
+
+### 🛠　Build System
+
+* **root:** 優化 CI 腳本並更新全域開發指令 ([c6ba247](https://github.com/bluelovers/ws-regexp/commit/c6ba24756fc04aa080880a6791fe4c539eeb8854))
+
+
+
 ## [1.0.23](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.22...@lazy-cjk/emoji-regex@1.0.23) (2026-09-06)
 
 

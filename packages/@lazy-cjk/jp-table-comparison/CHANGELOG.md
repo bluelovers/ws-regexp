@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.34](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.33...@lazy-cjk/jp-table-comparison@1.0.34) (2026-09-06)
+
+
+
+### 🛠　Build System
+
+* **root:** 優化 CI 腳本並更新全域開發指令 ([c6ba247](https://github.com/bluelovers/ws-regexp/commit/c6ba24756fc04aa080880a6791fe4c539eeb8854))
+
+
+### ♻️　Chores
+
+* **@lazy-cjk/jp-table-comparison:** 新增開發依賴套件 ([b1de6df](https://github.com/bluelovers/ws-regexp/commit/b1de6dfa7c598cc82ff8bbafcb6a05b6ceea4b21))
+
+
+
 ## [1.0.33](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-comparison@1.0.32...@lazy-cjk/jp-table-comparison@1.0.33) (2026-09-06)
 
 

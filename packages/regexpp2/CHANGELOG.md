@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.37](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.36...regexpp2@1.3.37) (2026-09-06)
+
+
+
+### ♻️　Chores
+
+* **deps:** 將多個套件的發佈腳本從 yarn-tool 改為 pnpm ([c25c766](https://github.com/bluelovers/ws-regexp/commit/c25c766757f526125cbd512d3af57d516647b468))
+
+
+
 ## [1.3.36](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.35...regexpp2@1.3.36) (2026-09-06)
 
 

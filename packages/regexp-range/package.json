@@ -1,6 +1,6 @@
 {
   "name": "regexp-range",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "create regex class range string `[一-十]` `[⓪-㊿]` ...",
   "keywords": [
     "chinese",
@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "@bluelovers/fill-range": "^7.0.2",
-    "@lazy-cjk/regexp-range-table": "^1.0.9",
+    "@lazy-cjk/regexp-range-table": "^1.0.10",
     "array-hyper-unique": "^2.1.8"
   },
   "gitHead": "2f4c49beba2a9840ad9c5730a13ede00355da70f"

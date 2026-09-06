@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.81](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.80...@node-novel/pattern-split@1.1.81) (2026-09-06)
+
+
+
+### 🛠　Build System
+
+* **root:** 優化 CI 腳本並更新全域開發指令 ([c6ba247](https://github.com/bluelovers/ws-regexp/commit/c6ba24756fc04aa080880a6791fe4c539eeb8854))
+
+
+
 ## [1.1.80](https://github.com/bluelovers/ws-regexp/compare/@node-novel/pattern-split@1.1.79...@node-novel/pattern-split@1.1.80) (2026-09-06)
 
 

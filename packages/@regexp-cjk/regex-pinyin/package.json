@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/regex-pinyin",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "check input text is pinyin like",
   "keywords": [
     "pinyin",
@@ -41,7 +41,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@lazy-cjk/cns-11643": "^1.0.35"
+    "@lazy-cjk/cns-11643": "^1.0.36"
   },
   "gitHead": "2f4c49beba2a9840ad9c5730a13ede00355da70f"
 }
