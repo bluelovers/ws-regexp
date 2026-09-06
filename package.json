@@ -134,7 +134,7 @@
     "ws:fix-all:resetStaticFiles": "pnpm run ws:fix-all -- --resetStaticFiles",
     "preversion": "pnpm run test",
     "version": "echo version",
-    "postversion": "yarn-tool fix-all",
+    "postversion": "echo yarn-tool fix-all",
     "prepublish": "echo prepublish",
     "prepublish:fix-links": "echo skip fix-ws-links (yarn-only)",
     "prepublish:lockfile": "npx sync-lockfile .",
