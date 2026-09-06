@@ -247,6 +247,10 @@ exports.mapEmoji = new Map([
         "sleeping face"
     ],
     [
+        "🫩",
+        "face with bags under eyes"
+    ],
+    [
         "😷",
         "face with medical mask"
     ],
@@ -6644,27 +6648,27 @@ exports.mapEmoji = new Map([
     ],
     [
         "🧑‍🎄",
-        "mx claus"
+        "Mx Claus"
     ],
     [
         "🧑🏻‍🎄",
-        "mx claus: light skin tone"
+        "Mx Claus: light skin tone"
     ],
     [
         "🧑🏼‍🎄",
-        "mx claus: medium-light skin tone"
+        "Mx Claus: medium-light skin tone"
     ],
     [
         "🧑🏽‍🎄",
-        "mx claus: medium skin tone"
+        "Mx Claus: medium skin tone"
     ],
     [
         "🧑🏾‍🎄",
-        "mx claus: medium-dark skin tone"
+        "Mx Claus: medium-dark skin tone"
     ],
     [
         "🧑🏿‍🎄",
-        "mx claus: dark skin tone"
+        "Mx Claus: dark skin tone"
     ],
     [
         "🦸",
@@ -13899,6 +13903,10 @@ exports.mapEmoji = new Map([
         "footprints"
     ],
     [
+        "🫆",
+        "fingerprint"
+    ],
+    [
         "🏻",
         "light skin tone"
     ],
@@ -14383,6 +14391,26 @@ exports.mapEmoji = new Map([
         "jellyfish"
     ],
     [
+        "🦀",
+        "crab"
+    ],
+    [
+        "🦞",
+        "lobster"
+    ],
+    [
+        "🦐",
+        "shrimp"
+    ],
+    [
+        "🦑",
+        "squid"
+    ],
+    [
+        "🦪",
+        "oyster"
+    ],
+    [
         "🐌",
         "snail"
     ],
@@ -14575,6 +14603,10 @@ exports.mapEmoji = new Map([
         "mushroom"
     ],
     [
+        "🪾",
+        "leafless tree"
+    ],
+    [
         "🍇",
         "grapes"
     ],
@@ -14729,6 +14761,10 @@ exports.mapEmoji = new Map([
     [
         "🍄‍🟫",
         "brown mushroom"
+    ],
+    [
+        "🫜",
+        "root vegetable"
     ],
     [
         "🍞",
@@ -14933,26 +14969,6 @@ exports.mapEmoji = new Map([
     [
         "🥡",
         "takeout box"
-    ],
-    [
-        "🦀",
-        "crab"
-    ],
-    [
-        "🦞",
-        "lobster"
-    ],
-    [
-        "🦐",
-        "shrimp"
-    ],
-    [
-        "🦑",
-        "squid"
-    ],
-    [
-        "🦪",
-        "oyster"
     ],
     [
         "🍦",
@@ -16903,6 +16919,10 @@ exports.mapEmoji = new Map([
         "flute"
     ],
     [
+        "🪉",
+        "harp"
+    ],
+    [
         "📱",
         "mobile phone"
     ],
@@ -17609,6 +17629,10 @@ exports.mapEmoji = new Map([
     [
         "🪜",
         "ladder"
+    ],
+    [
+        "🪏",
+        "shovel"
     ],
     [
         "⚗️",
@@ -18591,6 +18615,10 @@ exports.mapEmoji = new Map([
         "trade mark"
     ],
     [
+        "🫟",
+        "splatter"
+    ],
+    [
         "#️⃣",
         "keycap: #"
     ],
@@ -19297,6 +19325,10 @@ exports.mapEmoji = new Map([
     [
         "🇨🇵",
         "flag: Clipperton Island"
+    ],
+    [
+        "🇨🇶",
+        "flag: Sark"
     ],
     [
         "🇨🇷",

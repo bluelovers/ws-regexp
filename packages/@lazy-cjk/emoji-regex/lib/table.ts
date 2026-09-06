@@ -246,6 +246,10 @@ export const mapEmoji = new Map([
 		"sleeping face"
 	],
 	[
+		"🫩",
+		"face with bags under eyes"
+	],
+	[
 		"😷",
 		"face with medical mask"
 	],
@@ -6643,27 +6647,27 @@ export const mapEmoji = new Map([
 	],
 	[
 		"🧑‍🎄",
-		"mx claus"
+		"Mx Claus"
 	],
 	[
 		"🧑🏻‍🎄",
-		"mx claus: light skin tone"
+		"Mx Claus: light skin tone"
 	],
 	[
 		"🧑🏼‍🎄",
-		"mx claus: medium-light skin tone"
+		"Mx Claus: medium-light skin tone"
 	],
 	[
 		"🧑🏽‍🎄",
-		"mx claus: medium skin tone"
+		"Mx Claus: medium skin tone"
 	],
 	[
 		"🧑🏾‍🎄",
-		"mx claus: medium-dark skin tone"
+		"Mx Claus: medium-dark skin tone"
 	],
 	[
 		"🧑🏿‍🎄",
-		"mx claus: dark skin tone"
+		"Mx Claus: dark skin tone"
 	],
 	[
 		"🦸",
@@ -13898,6 +13902,10 @@ export const mapEmoji = new Map([
 		"footprints"
 	],
 	[
+		"🫆",
+		"fingerprint"
+	],
+	[
 		"🏻",
 		"light skin tone"
 	],
@@ -14382,6 +14390,26 @@ export const mapEmoji = new Map([
 		"jellyfish"
 	],
 	[
+		"🦀",
+		"crab"
+	],
+	[
+		"🦞",
+		"lobster"
+	],
+	[
+		"🦐",
+		"shrimp"
+	],
+	[
+		"🦑",
+		"squid"
+	],
+	[
+		"🦪",
+		"oyster"
+	],
+	[
 		"🐌",
 		"snail"
 	],
@@ -14574,6 +14602,10 @@ export const mapEmoji = new Map([
 		"mushroom"
 	],
 	[
+		"🪾",
+		"leafless tree"
+	],
+	[
 		"🍇",
 		"grapes"
 	],
@@ -14728,6 +14760,10 @@ export const mapEmoji = new Map([
 	[
 		"🍄‍🟫",
 		"brown mushroom"
+	],
+	[
+		"🫜",
+		"root vegetable"
 	],
 	[
 		"🍞",
@@ -14932,26 +14968,6 @@ export const mapEmoji = new Map([
 	[
 		"🥡",
 		"takeout box"
-	],
-	[
-		"🦀",
-		"crab"
-	],
-	[
-		"🦞",
-		"lobster"
-	],
-	[
-		"🦐",
-		"shrimp"
-	],
-	[
-		"🦑",
-		"squid"
-	],
-	[
-		"🦪",
-		"oyster"
 	],
 	[
 		"🍦",
@@ -16902,6 +16918,10 @@ export const mapEmoji = new Map([
 		"flute"
 	],
 	[
+		"🪉",
+		"harp"
+	],
+	[
 		"📱",
 		"mobile phone"
 	],
@@ -17608,6 +17628,10 @@ export const mapEmoji = new Map([
 	[
 		"🪜",
 		"ladder"
+	],
+	[
+		"🪏",
+		"shovel"
 	],
 	[
 		"⚗️",
@@ -18590,6 +18614,10 @@ export const mapEmoji = new Map([
 		"trade mark"
 	],
 	[
+		"🫟",
+		"splatter"
+	],
+	[
 		"#️⃣",
 		"keycap: #"
 	],
@@ -19296,6 +19324,10 @@ export const mapEmoji = new Map([
 	[
 		"🇨🇵",
 		"flag: Clipperton Island"
+	],
+	[
+		"🇨🇶",
+		"flag: Sark"
 	],
 	[
 		"🇨🇷",
