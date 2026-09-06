@@ -1,6 +1,12 @@
 {
   "extends": "@bluelovers/tsconfig/tsdx/index.json",
   "compilerOptions": {
-    "importHelpers": false,
+    "importHelpers": true,
+    "moduleResolution": "bundler",
+    "rootDir": "src",
+    "types": [
+      "jest",
+      "node"
+    ]
   }
 }
