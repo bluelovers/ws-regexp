@@ -365,6 +365,10 @@ importers:
       uni-string:
         specifier: ^2.0.7
         version: 2.0.7
+    devDependencies:
+      '@git-lazy/spawn':
+        specifier: ^2.0.3
+        version: 2.0.3(@types/bluebird@3.5.42)(@types/node@26.4.1)(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(ts-toolbelt@9.6.0)
 
   packages/@lazy-cjk/zh-convert-table:
     dependencies:
