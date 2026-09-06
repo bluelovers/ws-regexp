@@ -1,0 +1,24 @@
+packages:
+  - 'packages/*'
+  - 'packages/@lazy-cjk/*'
+  - 'packages/@regexp-cjk/*'
+  - 'packages/@node-novel/*'
+
+publicHoistPattern:
+  - 'regexp-cjk'
+  - '@lazy-cjk/sort'
+  - '@bluelovers/string-natural-compare'
+  - 'crlf-normalize'
+  - 'array-hyper-unique'
+  - '@lazy-cjk/zh-convert-table'
+
+linkWorkspacePackages: true
+saveWorkspaceProtocol: false
+#  設定決定了 當依賴版本重疊時，pnpm 該優先用「本地程式碼」還是「線上版本」。
+preferWorkspacePackages: true
+
+allowBuilds:
+  '@parcel/watcher': true
+  core-js-pure: true
+  unrs-resolver: true
+
