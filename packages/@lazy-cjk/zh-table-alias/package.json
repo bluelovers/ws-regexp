@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/zh-table-alias",
-  "version": "1.0.69",
+  "version": "1.0.70",
   "description": "",
   "keywords": [
     "char",
@@ -82,8 +82,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-alias": "^1.0.47",
-    "@lazy-cjk/zh-convert": "^1.0.55",
+    "@lazy-cjk/jp-table-alias": "^1.0.48",
+    "@lazy-cjk/zh-convert": "^1.0.56",
     "array-hyper-unique": "^2.1.8",
     "deepmerge-plus": "^4.0.1",
     "ts-type": "^3.0.13",

@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/regex-iterator",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "",
   "keywords": [
     "regex",
@@ -52,7 +52,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/clone-regexp": "^1.0.25",
+    "@regexp-cjk/clone-regexp": "^1.0.26",
     "ts-type": "^3.0.13",
     "tslib": ">=2"
   },

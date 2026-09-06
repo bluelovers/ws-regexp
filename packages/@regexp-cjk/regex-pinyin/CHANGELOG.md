@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-pinyin@1.0.12...@regexp-cjk/regex-pinyin@1.0.13) (2026-09-06)
+
+
+### BREAKING CHANGES
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本
+
+
+
+### 🚨　Tests
+
+* **jest:** 更新所有套件的 jest 設定檔 ([2af4687](https://github.com/bluelovers/ws-regexp/commit/2af4687d88cd0c68996da1a674dd1f7e5b3fdb5e))
+
+
+### 🛠　Build System
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本 ([be6b51d](https://github.com/bluelovers/ws-regexp/commit/be6b51d0a6b95c50c3cbd4c41141bce56f2e4461))
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/regex-pinyin@1.0.11...@regexp-cjk/regex-pinyin@1.0.12) (2024-08-24)
 
 

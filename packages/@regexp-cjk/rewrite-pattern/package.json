@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/rewrite-pattern",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "capable of translating Unicode regular expressions",
   "keywords": [
     "expression",
@@ -65,8 +65,8 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/regexpu-core-v4": "^1.0.10",
-    "@regexp-cjk/rewrite-flags": "^1.0.23",
+    "@regexp-cjk/regexpu-core-v4": "^1.0.11",
+    "@regexp-cjk/rewrite-flags": "^1.0.24",
     "lodash": "^4.18.1",
     "tslib": ">=2"
   },

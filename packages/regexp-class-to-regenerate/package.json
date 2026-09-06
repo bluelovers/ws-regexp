@@ -1,6 +1,6 @@
 {
   "name": "regexp-class-to-regenerate",
-  "version": "1.0.42",
+  "version": "1.0.43",
   "description": "convert Specified type RegExp to hacked regenerate object",
   "keywords": [
     "generator",
@@ -49,9 +49,9 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/regexpu-core-v4": "^1.0.10",
+    "@regexp-cjk/regexpu-core-v4": "^1.0.11",
     "regenerate": "^1.4.2",
-    "regexp-parser-event": "^1.1.47",
+    "regexp-parser-event": "^1.1.48",
     "tslib": ">=2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"

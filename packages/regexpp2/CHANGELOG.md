@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.36](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.35...regexpp2@1.3.36) (2026-09-06)
+
+
+### BREAKING CHANGES
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本
+
+
+
+### 🐛　Bug Fixes
+
+* **regexpp2:** 修復 TypeScript 型別檢查錯誤 ([e0511db](https://github.com/bluelovers/ws-regexp/commit/e0511dbcea9abf5a5d68eed0687d867bf8bc010e))
+
+
+### 🚨　Tests
+
+* **jest:** 更新所有套件的 jest 設定檔 ([2af4687](https://github.com/bluelovers/ws-regexp/commit/2af4687d88cd0c68996da1a674dd1f7e5b3fdb5e))
+
+
+### 🛠　Build System
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本 ([be6b51d](https://github.com/bluelovers/ws-regexp/commit/be6b51d0a6b95c50c3cbd4c41141bce56f2e4461))
+
+
+
 ## [1.3.35](https://github.com/bluelovers/ws-regexp/compare/regexpp2@1.3.34...regexpp2@1.3.35) (2024-08-24)
 
 

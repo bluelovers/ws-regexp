@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.11](https://github.com/bluelovers/ws-regexp/compare/regexp-helper-core@2.0.10...regexp-helper-core@2.0.11) (2026-09-06)
+
+
+### BREAKING CHANGES
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本
+
+
+
+### 🚨　Tests
+
+* **jest:** 更新所有套件的 jest 設定檔 ([2af4687](https://github.com/bluelovers/ws-regexp/commit/2af4687d88cd0c68996da1a674dd1f7e5b3fdb5e))
+* **snapshots:** 更新 Jest 快照文件標頭與內容 ([1f3a383](https://github.com/bluelovers/ws-regexp/commit/1f3a38347db198d4fb577cba58d1b31062a66b68))
+
+
+### 🛠　Build System
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本 ([be6b51d](https://github.com/bluelovers/ws-regexp/commit/be6b51d0a6b95c50c3cbd4c41141bce56f2e4461))
+* **dist:** 更新各套件的編譯輸出檔案 ([82ec015](https://github.com/bluelovers/ws-regexp/commit/82ec01548d53b41991f59e51605dcdf10f3c7bb1))
+* **tsconfig:** 優化各套件的 TypeScript 編譯配置 ([ec4cdcf](https://github.com/bluelovers/ws-regexp/commit/ec4cdcf6fc28a630d1c05a55c33cba6d5236031c))
+
+
+
 ## [2.0.10](https://github.com/bluelovers/ws-regexp/compare/regexp-helper-core@2.0.9...regexp-helper-core@2.0.10) (2024-08-24)
 
 

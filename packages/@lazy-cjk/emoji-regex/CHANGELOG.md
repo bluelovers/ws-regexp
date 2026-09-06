@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.22...@lazy-cjk/emoji-regex@1.0.23) (2026-09-06)
+
+
+### BREAKING CHANGES
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本
+
+
+
+### 🚨　Tests
+
+* **jest:** 更新所有套件的 jest 設定檔 ([2af4687](https://github.com/bluelovers/ws-regexp/commit/2af4687d88cd0c68996da1a674dd1f7e5b3fdb5e))
+
+
+### 🛠　Build System
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本 ([be6b51d](https://github.com/bluelovers/ws-regexp/commit/be6b51d0a6b95c50c3cbd4c41141bce56f2e4461))
+* **emoji:** update emoji cache ([6fa8fb2](https://github.com/bluelovers/ws-regexp/commit/6fa8fb27f60b9f2e89f0d5f778f99066c23ed8e5))
+
+
+
 ## [1.0.22](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/emoji-regex@1.0.21...@lazy-cjk/emoji-regex@1.0.22) (2025-03-12)
 
 **Note:** Version bump only for package @lazy-cjk/emoji-regex

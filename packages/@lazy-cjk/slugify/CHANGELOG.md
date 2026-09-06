@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.103](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.102...@lazy-cjk/slugify@1.0.103) (2026-09-06)
+
+
+### BREAKING CHANGES
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本
+
+
+
+### 🚨　Tests
+
+* 忽略測試失敗 ([c48a9bd](https://github.com/bluelovers/ws-regexp/commit/c48a9bd38e1145ee825900b68a7bb92bbda0d4da))
+* **jest:** 更新所有套件的 jest 設定檔 ([2af4687](https://github.com/bluelovers/ws-regexp/commit/2af4687d88cd0c68996da1a674dd1f7e5b3fdb5e))
+* **snapshots:** 更新 Jest 快照文件標頭與內容 ([1f3a383](https://github.com/bluelovers/ws-regexp/commit/1f3a38347db198d4fb577cba58d1b31062a66b68))
+
+
+### 🛠　Build System
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本 ([be6b51d](https://github.com/bluelovers/ws-regexp/commit/be6b51d0a6b95c50c3cbd4c41141bce56f2e4461))
+
+
+
 ## [1.0.102](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.101...@lazy-cjk/slugify@1.0.102) (2025-03-12)
 
 **Note:** Version bump only for package @lazy-cjk/slugify

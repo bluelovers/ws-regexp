@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/regexp-range-table@1.0.8...@lazy-cjk/regexp-range-table@1.0.9) (2026-09-06)
+
+
+### BREAKING CHANGES
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本
+
+
+
+### 🚨　Tests
+
+* **jest:** 更新所有套件的 jest 設定檔 ([2af4687](https://github.com/bluelovers/ws-regexp/commit/2af4687d88cd0c68996da1a674dd1f7e5b3fdb5e))
+
+
+### 🛠　Build System
+
+* **deps:** 將套件管理工具從 yarn 遷移至 pnpm 並更新依賴版本 ([be6b51d](https://github.com/bluelovers/ws-regexp/commit/be6b51d0a6b95c50c3cbd4c41141bce56f2e4461))
+* **tsconfig:** 優化各套件的 TypeScript 編譯配置 ([ec4cdcf](https://github.com/bluelovers/ws-regexp/commit/ec4cdcf6fc28a630d1c05a55c33cba6d5236031c))
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/regexp-range-table@1.0.7...@lazy-cjk/regexp-range-table@1.0.8) (2024-09-03)
 
 **Note:** Version bump only for package @lazy-cjk/regexp-range-table
