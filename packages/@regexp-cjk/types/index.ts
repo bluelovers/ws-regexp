@@ -93,6 +93,7 @@ declare global
 	{
 		// @ts-ignore
 		groups?: Record<K, string>
+		// @ts-ignore
 		indices?: IRegExpIndices<K>
 	}
 
@@ -100,6 +101,7 @@ declare global
 	{
 		// @ts-ignore
 		groups?: Record<K, string>
+		// @ts-ignore
 		indices?: IRegExpIndices<K>
 	}
 

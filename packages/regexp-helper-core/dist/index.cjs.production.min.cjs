@@ -16,9 +16,9 @@ function toUnicode(e, o, n) {
   if ("string" == typeof e && (t = e, e = t.codePointAt(0)), e > 0xffff && o) {
     let o;
     return o = "string" != typeof t ? surrogatePair(e) : [ t.charCodeAt(0), t.charCodeAt(1) ], 
-    o.map((function(e) {
+    o.map(function(e) {
       return _toUnicode(e, n);
-    })).join("");
+    }).join("");
   }
   return _toUnicode(e, n);
 }
@@ -49,7 +49,7 @@ function surrogatePair(e) {
 }
 
 function unicodeUnEscape(e, o) {
-  return e.replace(o ? /u\{([0-9a-fA-F]{1,8})\}/g : /\\u\{([0-9a-fA-F]{1,8})\}/g, ((e, o) => String.fromCodePoint(parseInt(o, 16))));
+  return e.replace(o ? /u\{([0-9a-fA-F]{1,8})\}/g : /\\u\{([0-9a-fA-F]{1,8})\}/g, (e, o) => String.fromCodePoint(parseInt(o, 16)));
 }
 
 function unicodeUnEscape2(e, o = {}) {
@@ -57,10 +57,10 @@ function unicodeUnEscape2(e, o = {}) {
 }
 
 function unicodeEscape(e, o, n, t, c = /./gu) {
-  return e.replace(c, (e => {
+  return e.replace(c, e => {
     const c = toUnicode(e, n, !t);
     return o ? c.replace(/\\/, "") : c;
-  }));
+  });
 }
 
 function unicodeEscape2(e, o = {}) {

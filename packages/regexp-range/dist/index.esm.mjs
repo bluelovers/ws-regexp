@@ -9,13 +9,13 @@ import { array_unique_overwrite as n } from "array-hyper-unique";
 function matchRange(e, t, r = {}) {
   r = getOptions(r);
   let a = e, i = t, l = [], g = !!r.findFirstOne;
-  return Object.keys(r.dataTables).some((function(e) {
+  return Object.keys(r.dataTables).some(function(e) {
     let t;
-    if (r.dataTables[e].some((function(e) {
+    if (r.dataTables[e].some(function(e) {
       let n = e.indexOf(a), r = e.indexOf(i, n);
       if (-1 !== n && -1 !== r) return l.push(...e.slice(n, r + 1)), t = !0, g;
-    })), t) return !0;
-  })), l && l.length ? (n(l), r.createRegExpString ? toRegExpString(l, r.createRegExpClass) : l) : null;
+    }), t) return !0;
+  }), l && l.length ? (n(l), r.createRegExpString ? toRegExpString(l, r.createRegExpClass) : l) : null;
 }
 
 function toRegExpString(e, t) {
@@ -32,7 +32,7 @@ function fillRange(t, n, r = {}) {
     t = "string" != typeof a || "string" != typeof i || a.charCodeAt(0) <= i.charCodeAt(0), 
     t && (l = e(a, i)), null !== (g = l) && void 0 !== g && g.length || (l = null);
   }
-  return Array.isArray(l) && (l = l.map((e => String(e)))), l;
+  return Array.isArray(l) && (l = l.map(e => String(e))), l;
 }
 
 function getOptions(e) {
