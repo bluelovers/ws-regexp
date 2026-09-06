@@ -129,6 +129,9 @@ importers:
       '@types/yargs':
         specifier: ^17.0.35
         version: 17.0.35
+      '@yarn-tool/require-resolve':
+        specifier: '*'
+        version: 3.0.2(ts-toolbelt@9.6.0)
       '@yarn-tool/ws-find-up-paths':
         specifier: ^1.0.21
         version: 1.0.21(ts-toolbelt@9.6.0)

@@ -1,12 +1,12 @@
 # README.md
 
-    <%= description %>
+    
 
 ## install
 
 ```bash
-yarn add <%= name %>
-yarn-tool add <%= name %>
-yt add <%= name %>
+yarn add @regexp-cjk/create-xregexp
+yarn-tool add @regexp-cjk/create-xregexp
+yt add @regexp-cjk/create-xregexp
 ```
 
