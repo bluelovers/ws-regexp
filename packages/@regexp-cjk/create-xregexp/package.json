@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/create-xregexp",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "建立 XRegExp 物件 (Create XRegExp object)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/create-xregexp#readme",
   "bugs": {
@@ -32,7 +32,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/is-xregexp": "^1.0.17",
+    "@regexp-cjk/is-xregexp": "^1.0.18",
     "tslib": ">=2"
   },
   "keywords": [

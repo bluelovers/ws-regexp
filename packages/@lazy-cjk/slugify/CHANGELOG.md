@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.105](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.104...@lazy-cjk/slugify@1.0.105) (2026-09-06)
+
+
+
+### 🚨　Tests
+
+* **@lazy-cjk/slugify:** 更新 emoji 轉換測試快照 ([2800097](https://github.com/bluelovers/ws-regexp/commit/28000972f3b28c17e31d58ba76aaf6e588c61fa0))
+
+
+
 ## [1.0.104](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/slugify@1.0.103...@lazy-cjk/slugify@1.0.104) (2026-09-06)
 
 

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.72](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.71...@lazy-cjk/zh-table-alias@1.0.72) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [1.0.71](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/zh-table-alias@1.0.70...@lazy-cjk/zh-table-alias@1.0.71) (2026-09-06)
 
 

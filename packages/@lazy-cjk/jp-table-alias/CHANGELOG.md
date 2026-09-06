@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.50](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-alias@1.0.49...@lazy-cjk/jp-table-alias@1.0.50) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [1.0.49](https://github.com/bluelovers/ws-regexp/compare/@lazy-cjk/jp-table-alias@1.0.48...@lazy-cjk/jp-table-alias@1.0.49) (2026-09-06)
 
 

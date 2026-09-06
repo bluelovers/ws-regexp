@@ -161,7 +161,7 @@ importers:
         specifier: ^16.0.0
         version: 16.0.0
       regexgen2:
-        specifier: ^1.3.30
+        specifier: ^1.3.31
         version: link:../../regexgen
 
   packages/@lazy-cjk/japanese:
@@ -182,7 +182,7 @@ importers:
   packages/@lazy-cjk/jp-table-alias:
     dependencies:
       '@lazy-cjk/jp-table-convert':
-        specifier: ^1.0.54
+        specifier: ^1.0.55
         version: link:../jp-table-convert
       array-hyper-unique:
         specifier: ^2.1.8
@@ -204,10 +204,10 @@ importers:
         version: 1.0.29
     devDependencies:
       '@lazy-cjk/jp-table-alias':
-        specifier: ^1.0.49
+        specifier: ^1.0.50
         version: link:../jp-table-alias
       '@lazy-cjk/sort':
-        specifier: ^1.0.74
+        specifier: ^1.0.75
         version: link:../sort
       crlf-normalize:
         specifier: ^1.0.20
@@ -216,10 +216,10 @@ importers:
   packages/@lazy-cjk/jp-table-convert:
     dependencies:
       '@lazy-cjk/jp-table-comparison':
-        specifier: ^1.0.34
+        specifier: ^1.0.35
         version: link:../jp-table-comparison
       regexp-helper:
-        specifier: ^1.0.45
+        specifier: ^1.0.46
         version: link:../../regexp-helper
       tslib:
         specifier: '>=2'
@@ -263,10 +263,10 @@ importers:
   packages/@lazy-cjk/novel-filename:
     dependencies:
       '@lazy-cjk/jp-table-convert':
-        specifier: ^1.0.54
+        specifier: ^1.0.55
         version: link:../jp-table-convert
       '@lazy-cjk/zh-convert':
-        specifier: ^1.0.57
+        specifier: ^1.0.58
         version: link:../zh-convert
       tslib:
         specifier: '>=2'
@@ -284,7 +284,7 @@ importers:
         specifier: ^1.0.36
         version: link:../cns-11643
       '@lazy-cjk/emoji-regex':
-        specifier: ^1.0.24
+        specifier: ^1.0.25
         version: link:../emoji-regex
       '@lazy-cjk/japanese':
         specifier: ^1.2.39
@@ -293,7 +293,7 @@ importers:
         specifier: ^1.0.33
         version: link:../korean-romanize
       '@lazy-cjk/zh-slugify':
-        specifier: ^1.0.95
+        specifier: ^1.0.96
         version: link:../zh-slugify
       '@regexp-cjk/regex-pinyin':
         specifier: ^1.0.14
@@ -308,7 +308,7 @@ importers:
         specifier: ^4.18.1
         version: 4.18.1
       regexp-helper:
-        specifier: ^1.0.45
+        specifier: ^1.0.46
         version: link:../../regexp-helper
       transliteration:
         specifier: ^2.6.1
@@ -330,7 +330,7 @@ importers:
         specifier: ^2.0.15
         version: 2.0.15
       '@lazy-cjk/zh-slugify':
-        specifier: ^1.0.95
+        specifier: ^1.0.96
         version: link:../zh-slugify
       tslib:
         specifier: '>=2'
@@ -343,10 +343,10 @@ importers:
         version: 2.8.1
     devDependencies:
       '@lazy-cjk/util':
-        specifier: ^1.0.22
+        specifier: ^1.0.23
         version: link:../util
       '@lazy-cjk/zh-convert':
-        specifier: ^1.0.57
+        specifier: ^1.0.58
         version: link:../zh-convert
       '@lazy-cjk/zh-convert-table':
         specifier: ^1.0.29
@@ -364,13 +364,13 @@ importers:
   packages/@lazy-cjk/zh-convert:
     dependencies:
       '@lazy-cjk/static-build-zh-convert':
-        specifier: ^1.0.60
+        specifier: ^1.0.61
         version: link:../static-build-zh-convert
       array-hyper-unique:
         specifier: ^2.1.8
         version: 2.1.8
       regexp-helper:
-        specifier: ^1.0.45
+        specifier: ^1.0.46
         version: link:../../regexp-helper
       tslib:
         specifier: '>=2'
@@ -399,7 +399,7 @@ importers:
         specifier: ^1.0.97
         version: link:../zh-table-greedy
       '@lazy-cjk/zh-table-list':
-        specifier: ^1.0.93
+        specifier: ^1.0.94
         version: link:../zh-table-list
       tslib:
         specifier: '>=2'
@@ -408,10 +408,10 @@ importers:
   packages/@lazy-cjk/zh-table-alias:
     dependencies:
       '@lazy-cjk/jp-table-alias':
-        specifier: ^1.0.49
+        specifier: ^1.0.50
         version: link:../jp-table-alias
       '@lazy-cjk/zh-convert':
-        specifier: ^1.0.57
+        specifier: ^1.0.58
         version: link:../zh-convert
       array-hyper-unique:
         specifier: ^2.1.8
@@ -441,16 +441,16 @@ importers:
   packages/@lazy-cjk/zh-table-list:
     dependencies:
       '@lazy-cjk/jp-table-alias':
-        specifier: ^1.0.49
+        specifier: ^1.0.50
         version: link:../jp-table-alias
       '@lazy-cjk/jp-table-convert':
-        specifier: ^1.0.54
+        specifier: ^1.0.55
         version: link:../jp-table-convert
       '@lazy-cjk/zh-convert':
-        specifier: ^1.0.57
+        specifier: ^1.0.58
         version: link:../zh-convert
       '@lazy-cjk/zh-table-alias':
-        specifier: ^1.0.71
+        specifier: ^1.0.72
         version: link:../zh-table-alias
       '@lazy-cjk/zh-table-greedy':
         specifier: ^1.0.97
@@ -468,13 +468,13 @@ importers:
         specifier: ^2.1.8
         version: 2.1.8
       regexp-cjk:
-        specifier: ^3.3.119
+        specifier: ^3.3.120
         version: link:../../regexp-cjk
       regexp-parser-literal:
-        specifier: ^1.1.42
+        specifier: ^1.1.43
         version: link:../../regexp-parser-literal
       regexpp2:
-        specifier: ^1.3.37
+        specifier: ^1.3.38
         version: link:../../regexpp2
       tslib:
         specifier: '>=2'
@@ -483,7 +483,7 @@ importers:
   packages/@regexp-cjk/clone-regexp:
     dependencies:
       '@regexp-cjk/rewrite-flags':
-        specifier: ^1.0.25
+        specifier: ^1.0.26
         version: link:../rewrite-flags
       clone-regexp:
         specifier: <3 >=2.2
@@ -495,7 +495,7 @@ importers:
   packages/@regexp-cjk/create-xregexp:
     dependencies:
       '@regexp-cjk/is-xregexp':
-        specifier: ^1.0.17
+        specifier: ^1.0.18
         version: link:../is-xregexp
       tslib:
         specifier: '>=2'
@@ -507,7 +507,7 @@ importers:
   packages/@regexp-cjk/escape-unicode-property:
     dependencies:
       '@regexp-cjk/rewrite-pattern':
-        specifier: ^1.0.36
+        specifier: ^1.0.37
         version: link:../rewrite-pattern
       lodash:
         specifier: ^4.18.1
@@ -517,7 +517,7 @@ importers:
         version: 2.8.1
     devDependencies:
       '@regexp-cjk/rewrite-flags':
-        specifier: ^1.0.25
+        specifier: ^1.0.26
         version: link:../rewrite-flags
 
   packages/@regexp-cjk/is-xregexp:
@@ -529,7 +529,7 @@ importers:
   packages/@regexp-cjk/regex-iterator:
     dependencies:
       '@regexp-cjk/clone-regexp':
-        specifier: ^1.0.27
+        specifier: ^1.0.28
         version: link:../clone-regexp
       ts-type:
         specifier: ^3.0.13
@@ -579,7 +579,7 @@ importers:
         specifier: ^1.0.12
         version: link:../regexpu-core-v4
       '@regexp-cjk/rewrite-flags':
-        specifier: ^1.0.25
+        specifier: ^1.0.26
         version: link:../rewrite-flags
       lodash:
         specifier: ^4.18.1
@@ -597,40 +597,40 @@ importers:
   packages/cjk-conv:
     dependencies:
       '@lazy-cjk/jp-table-alias':
-        specifier: ^1.0.49
+        specifier: ^1.0.50
         version: link:../@lazy-cjk/jp-table-alias
       '@lazy-cjk/jp-table-comparison':
-        specifier: ^1.0.34
+        specifier: ^1.0.35
         version: link:../@lazy-cjk/jp-table-comparison
       '@lazy-cjk/jp-table-convert':
-        specifier: ^1.0.54
+        specifier: ^1.0.55
         version: link:../@lazy-cjk/jp-table-convert
       '@lazy-cjk/jp-table-voice':
         specifier: ^1.0.42
         version: link:../@lazy-cjk/jp-table-voice
       '@lazy-cjk/novel-filename':
-        specifier: ^1.0.59
+        specifier: ^1.0.60
         version: link:../@lazy-cjk/novel-filename
       '@lazy-cjk/util':
-        specifier: ^1.0.22
+        specifier: ^1.0.23
         version: link:../@lazy-cjk/util
       '@lazy-cjk/zh-convert':
-        specifier: ^1.0.57
+        specifier: ^1.0.58
         version: link:../@lazy-cjk/zh-convert
       '@lazy-cjk/zh-convert-table':
         specifier: ^1.0.29
         version: link:../@lazy-cjk/zh-convert-table
       '@lazy-cjk/zh-slugify':
-        specifier: ^1.0.95
+        specifier: ^1.0.96
         version: link:../@lazy-cjk/zh-slugify
       '@lazy-cjk/zh-table-alias':
-        specifier: ^1.0.71
+        specifier: ^1.0.72
         version: link:../@lazy-cjk/zh-table-alias
       '@lazy-cjk/zh-table-greedy':
         specifier: ^1.0.97
         version: link:../@lazy-cjk/zh-table-greedy
       '@lazy-cjk/zh-table-list':
-        specifier: ^1.0.93
+        specifier: ^1.0.94
         version: link:../@lazy-cjk/zh-table-list
       tslib:
         specifier: '>=2'
@@ -645,7 +645,7 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4
       '@lazy-cjk/zh-convert':
-        specifier: ^1.0.57
+        specifier: ^1.0.58
         version: link:../@lazy-cjk/zh-convert
       array-hyper-unique:
         specifier: ^2.1.8
@@ -678,7 +678,7 @@ importers:
   packages/execall2:
     dependencies:
       '@regexp-cjk/clone-regexp':
-        specifier: ^1.0.27
+        specifier: ^1.0.28
         version: link:../@regexp-cjk/clone-regexp
       tslib:
         specifier: '>=2'
@@ -699,7 +699,7 @@ importers:
   packages/regexp-cjk:
     dependencies:
       '@lazy-cjk/zh-table-list':
-        specifier: ^1.0.93
+        specifier: ^1.0.94
         version: link:../@lazy-cjk/zh-table-list
       array-hyper-unique:
         specifier: ^2.1.8
@@ -708,16 +708,16 @@ importers:
         specifier: ^4.18.1
         version: 4.18.1
       regexp-helper:
-        specifier: ^1.0.45
+        specifier: ^1.0.46
         version: link:../regexp-helper
       regexp-parser-event:
-        specifier: ^1.1.49
+        specifier: ^1.1.50
         version: link:../regexp-parser-event
       regexp-parser-literal:
-        specifier: ^1.1.42
+        specifier: ^1.1.43
         version: link:../regexp-parser-literal
       regexp-range:
-        specifier: ^2.0.9
+        specifier: ^2.0.10
         version: link:../regexp-range
       tslib:
         specifier: '>=2'
@@ -726,7 +726,7 @@ importers:
   packages/regexp-cjk-plugin-escape-unicode-property:
     dependencies:
       '@regexp-cjk/escape-unicode-property':
-        specifier: ^1.0.31
+        specifier: ^1.0.32
         version: link:../@regexp-cjk/escape-unicode-property
       regexp-cjk:
         specifier: '*'
@@ -771,13 +771,13 @@ importers:
   packages/regexp-cjk-with-plugin-enabled:
     dependencies:
       regexp-cjk:
-        specifier: ^3.3.119
+        specifier: ^3.3.120
         version: link:../regexp-cjk
       regexp-cjk-plugin-escape-unicode-property:
-        specifier: ^1.0.41
+        specifier: ^1.0.42
         version: link:../regexp-cjk-plugin-escape-unicode-property
       regexp-cjk-plugin-extra:
-        specifier: ^1.0.47
+        specifier: ^1.0.48
         version: link:../regexp-cjk-plugin-extra
       tslib:
         specifier: '>=2'
@@ -792,7 +792,7 @@ importers:
         specifier: ^1.4.2
         version: 1.4.2
       regexp-parser-event:
-        specifier: ^1.1.49
+        specifier: ^1.1.50
         version: link:../regexp-parser-event
       tslib:
         specifier: '>=2'
@@ -801,10 +801,10 @@ importers:
   packages/regexp-helper:
     dependencies:
       regexp-helper-core:
-        specifier: ^2.0.12
+        specifier: ^2.0.13
         version: link:../regexp-helper-core
       regexp-support:
-        specifier: ^1.0.61
+        specifier: ^1.0.62
         version: link:../regexp-support
       tslib:
         specifier: '>=2'
@@ -818,10 +818,10 @@ importers:
         specifier: ^2.1.8
         version: 2.1.8
       regexp-parser-literal:
-        specifier: ^1.1.42
+        specifier: ^1.1.43
         version: link:../regexp-parser-literal
       regexpp2:
-        specifier: ^1.3.37
+        specifier: ^1.3.38
         version: link:../regexpp2
       ts-type:
         specifier: ^3.0.13
@@ -843,7 +843,7 @@ importers:
         specifier: ^10.6.0
         version: 10.6.0
       regexpp2:
-        specifier: ^1.3.37
+        specifier: ^1.3.38
         version: link:../regexpp2
       tslib:
         specifier: '>=2'
@@ -862,7 +862,7 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
       '@lazy-cjk/regexp-range-table':
-        specifier: ^1.0.10
+        specifier: ^1.0.11
         version: link:../@lazy-cjk/regexp-range-table
       array-hyper-unique:
         specifier: ^2.1.8
@@ -914,13 +914,13 @@ importers:
   packages/xregexp-plugin-hanzi-cjk:
     dependencies:
       '@lazy-cjk/zh-table-list':
-        specifier: ^1.0.93
+        specifier: ^1.0.94
         version: link:../@lazy-cjk/zh-table-list
       '@regexp-cjk/is-xregexp':
-        specifier: ^1.0.17
+        specifier: ^1.0.18
         version: link:../@regexp-cjk/is-xregexp
       regexp-helper:
-        specifier: ^1.0.45
+        specifier: ^1.0.46
         version: link:../regexp-helper
       tslib:
         specifier: '>=2'

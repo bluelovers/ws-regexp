@@ -1,6 +1,6 @@
 {
   "name": "execall2",
-  "version": "2.0.28",
+  "version": "2.0.29",
   "description": "Find multiple RegExp matches in a string",
   "keywords": [
     "all",
@@ -63,7 +63,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/clone-regexp": "^1.0.27",
+    "@regexp-cjk/clone-regexp": "^1.0.28",
     "tslib": ">=2"
   },
   "gitHead": "2f4c49beba2a9840ad9c5730a13ede00355da70f"

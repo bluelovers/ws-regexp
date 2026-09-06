@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/jp-table-name",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "日文姓名對照表 (Japanese name mapping table)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/jp-table-name#readme",
   "bugs": {

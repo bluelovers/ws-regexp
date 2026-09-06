@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.44](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.43...tieba-harmony@2.0.44) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [2.0.43](https://github.com/bluelovers/ws-regexp/compare/tieba-harmony@2.0.42...tieba-harmony@2.0.43) (2026-09-06)
 
 

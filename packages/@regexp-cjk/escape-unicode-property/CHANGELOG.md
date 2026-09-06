@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.32](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/escape-unicode-property@1.0.31...@regexp-cjk/escape-unicode-property@1.0.32) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [1.0.31](https://github.com/bluelovers/ws-regexp/compare/@regexp-cjk/escape-unicode-property@1.0.30...@regexp-cjk/escape-unicode-property@1.0.31) (2026-09-06)
 
 

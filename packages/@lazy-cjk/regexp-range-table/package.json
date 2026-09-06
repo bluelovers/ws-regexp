@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/regexp-range-table",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "正規表達式範圍對照表 (RegExp range mapping table)",
   "keywords": [
     "big5",

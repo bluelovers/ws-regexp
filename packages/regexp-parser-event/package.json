@@ -1,6 +1,6 @@
 {
   "name": "regexp-parser-event",
-  "version": "1.1.49",
+  "version": "1.1.50",
   "description": "正規表達式解析器事件處理 (RegExp parser event handling)",
   "keywords": [
     "build",
@@ -52,8 +52,8 @@
   },
   "dependencies": {
     "array-hyper-unique": "^2.1.8",
-    "regexp-parser-literal": "^1.1.42",
-    "regexpp2": "^1.3.37",
+    "regexp-parser-literal": "^1.1.43",
+    "regexpp2": "^1.3.38",
     "ts-type": "^3.0.13",
     "tslib": ">=2"
   },

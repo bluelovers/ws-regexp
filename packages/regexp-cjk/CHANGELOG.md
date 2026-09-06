@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.120](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.119...regexp-cjk@3.3.120) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [3.3.119](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk@3.3.118...regexp-cjk@3.3.119) (2026-09-06)
 
 

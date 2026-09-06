@@ -1,6 +1,6 @@
 {
   "name": "regexp-helper",
-  "version": "1.0.45",
+  "version": "1.0.46",
   "description": "regexp-helper",
   "keywords": [
     "check",
@@ -53,8 +53,8 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "regexp-helper-core": "^2.0.12",
-    "regexp-support": "^1.0.61",
+    "regexp-helper-core": "^2.0.13",
+    "regexp-support": "^1.0.62",
     "tslib": ">=2"
   },
   "gitHead": "2f4c49beba2a9840ad9c5730a13ede00355da70f"

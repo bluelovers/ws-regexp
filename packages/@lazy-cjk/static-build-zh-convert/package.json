@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/static-build-zh-convert",
-  "version": "1.0.60",
+  "version": "1.0.61",
   "description": "靜態建構中文轉換資料 (Static build Chinese conversion data)",
   "keywords": [
     "char",
@@ -84,8 +84,8 @@
     "tslib": ">=2"
   },
   "devDependencies": {
-    "@lazy-cjk/util": "^1.0.22",
-    "@lazy-cjk/zh-convert": "^1.0.57",
+    "@lazy-cjk/util": "^1.0.23",
+    "@lazy-cjk/zh-convert": "^1.0.58",
     "@lazy-cjk/zh-convert-table": "^1.0.29"
   },
   "publishConfig": {

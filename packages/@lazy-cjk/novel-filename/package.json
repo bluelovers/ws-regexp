@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/novel-filename",
-  "version": "1.0.59",
+  "version": "1.0.60",
   "description": "小說檔名處理工具 (Novel filename processing tool)",
   "keywords": [
     "char",
@@ -78,8 +78,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-convert": "^1.0.54",
-    "@lazy-cjk/zh-convert": "^1.0.57",
+    "@lazy-cjk/jp-table-convert": "^1.0.55",
+    "@lazy-cjk/zh-convert": "^1.0.58",
     "tslib": ">=2"
   },
   "publishConfig": {

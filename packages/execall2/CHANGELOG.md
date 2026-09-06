@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.29](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.28...execall2@2.0.29) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [2.0.28](https://github.com/bluelovers/ws-regexp/compare/execall2@2.0.27...execall2@2.0.28) (2026-09-06)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@lazy-cjk/util",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "中文處理工具函數庫 (Chinese processing utility library)",
   "keywords": [
     "char",

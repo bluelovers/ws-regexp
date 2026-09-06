@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.48](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.47...regexp-cjk-plugin-extra@1.0.48) (2026-09-06)
+
+
+
+### 📚　Documentation
+
+* **docs:** 更新多個套件的 README 與 package.json 說明 ([29a8f88](https://github.com/bluelovers/ws-regexp/commit/29a8f889fc1a6b1288b88531b2742083d0bdd241))
+
+
+
 ## [1.0.47](https://github.com/bluelovers/ws-regexp/compare/regexp-cjk-plugin-extra@1.0.46...regexp-cjk-plugin-extra@1.0.47) (2026-09-06)
 
 

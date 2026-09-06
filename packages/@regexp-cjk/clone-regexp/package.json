@@ -1,6 +1,6 @@
 {
   "name": "@regexp-cjk/clone-regexp",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "克隆正規表達式物件 (Clone RegExp object)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/clone-regexp#readme",
   "bugs": {
@@ -32,7 +32,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@regexp-cjk/rewrite-flags": "^1.0.25",
+    "@regexp-cjk/rewrite-flags": "^1.0.26",
     "clone-regexp": "<3 >=2.2",
     "tslib": ">=2"
   },
