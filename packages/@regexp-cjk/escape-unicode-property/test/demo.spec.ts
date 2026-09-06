@@ -50,7 +50,7 @@ describe(`escapeUnicodePropertyPattern`, () =>
 			test(inspect(source), () =>
 			{
 
-				expect(() => escapeUnicodePropertyPattern(source)).toThrowError()
+				expect(() => escapeUnicodePropertyPattern(source)).toThrow()
 
 			});
 		})

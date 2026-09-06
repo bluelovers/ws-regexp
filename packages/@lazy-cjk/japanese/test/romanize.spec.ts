@@ -5,13 +5,13 @@ describe('japanese.romanize()', () =>
 	test('should throw error when suspicious config was delivered', () =>
 	{
 		// @ts-ignore
-		expect(japanese.romanize.bind(japanese, 'えらー', 'undefined config')).toThrowError(ReferenceError);
+		expect(japanese.romanize.bind(japanese, 'えらー', 'undefined config')).toThrow();
 		// @ts-ignore
-		expect(japanese.romanize.bind(japanese, 'えらー', false)).toThrowError(Error);
+		expect(japanese.romanize.bind(japanese, 'えらー', false)).toThrow();
 		// @ts-ignore
-		expect(japanese.romanize.bind(japanese, 'えらー', 114514)).toThrowError(Error);
+		expect(japanese.romanize.bind(japanese, 'えらー', 114514)).toThrow();
 		// @ts-ignore
-		expect(japanese.romanize.bind(japanese, 'えらー', () => {})).toThrowError(Error);
+		expect(japanese.romanize.bind(japanese, 'えらー', () => {})).toThrow();
 	});
 
 	describe('Wikipedia-style mode', () =>

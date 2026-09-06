@@ -153,13 +153,13 @@ describe(`simple`, () =>
 			{
 				test(`throw error`, () =>
 				{
-					expect(() => rewritePattern(...args)).toThrowError();
+					expect(() => rewritePattern(...args)).toThrow();
 
 					let re = new RegExp(args[0], args[1])
 
-					expect(() => rewritePatternByRegExp(re, args[2])).toThrowError();
+					expect(() => rewritePatternByRegExp(re, args[2])).toThrow();
 
-					expect(() => rewriteRegExp(re, args[2])).toThrowError();
+					expect(() => rewriteRegExp(re, args[2])).toThrow();
 				})
 
 				return;

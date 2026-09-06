@@ -1,7 +1,7 @@
 //@noUnusedParameters:false
 /// <reference types="jest" />
 /// <reference types="node" />
-/// <reference types="expect" />
+
 
 import { basename, extname } from 'path';
 import romanize from '../lib/romanize';

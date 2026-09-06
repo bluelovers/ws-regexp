@@ -77,22 +77,22 @@ describe(`throw error`, () =>
 
 	test(`null`, () =>
 	{
-		expect(() => toVoice01(null)).toThrowError();
+		expect(() => toVoice01(null)).toThrow();
 	});
 
 	test(`undefined`, () =>
 	{
-		expect(() => toVoice01(void 0)).toThrowError();
+		expect(() => toVoice01(void 0)).toThrow();
 	});
 
 	test(`empty text`, () =>
 	{
-		expect(() => toVoice01('')).toThrowError();
+		expect(() => toVoice01('')).toThrow();
 	});
 
 	test(`k`, () =>
 	{
-		expect(() => toVoice01('k')).not.toThrowError();
+		expect(() => toVoice01('k')).not.toThrow();
 	});
 
 })
