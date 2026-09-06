@@ -880,6 +880,8 @@ exports[`emoji 🇨🇴 flag: Colombia 1`] = `"flag  Colombia"`;
 
 exports[`emoji 🇨🇵 flag: Clipperton Island 1`] = `"flag  Clipperton Island"`;
 
+exports[`emoji 🇨🇶 flag: Sark 1`] = `"flag  Sark"`;
+
 exports[`emoji 🇨🇷 flag: Costa Rica 1`] = `"flag  Costa Rica"`;
 
 exports[`emoji 🇨🇺 flag: Cuba 1`] = `"flag  Cuba"`;
@@ -9738,6 +9740,10 @@ exports[`emoji 🪇 maracas 1`] = `"maracas"`;
 
 exports[`emoji 🪈 flute 1`] = `"flute"`;
 
+exports[`emoji 🪉 harp 1`] = `"harp"`;
+
+exports[`emoji 🪏 shovel 1`] = `"shovel"`;
+
 exports[`emoji 🪐 ringed planet 1`] = `"ringed planet"`;
 
 exports[`emoji 🪑 chair 1`] = `"chair"`;
@@ -9830,6 +9836,8 @@ exports[`emoji 🪼 jellyfish 1`] = `"jellyfish"`;
 
 exports[`emoji 🪽 wing 1`] = `"wing"`;
 
+exports[`emoji 🪾 leafless tree 1`] = `"leafless tree"`;
+
 exports[`emoji 🪿 goose 1`] = `"goose"`;
 
 exports[`emoji 🫀 anatomical heart 1`] = `"anatomical heart"`;
@@ -9874,6 +9882,8 @@ exports[`emoji 🫅🏾 person with crown: medium-dark skin tone 1`] = `"person 
 
 exports[`emoji 🫅🏿 person with crown: dark skin tone 1`] = `"person with crown  dark skin tone"`;
 
+exports[`emoji 🫆 fingerprint 1`] = `"fingerprint"`;
+
 exports[`emoji 🫎 moose 1`] = `"moose"`;
 
 exports[`emoji 🫏 donkey 1`] = `"donkey"`;
@@ -9902,6 +9912,10 @@ exports[`emoji 🫚 ginger root 1`] = `"ginger root"`;
 
 exports[`emoji 🫛 pea pod 1`] = `"pea pod"`;
 
+exports[`emoji 🫜 root vegetable 1`] = `"root vegetable"`;
+
+exports[`emoji 🫟 splatter 1`] = `"splatter"`;
+
 exports[`emoji 🫠 melting face 1`] = `"melting face"`;
 
 exports[`emoji 🫡 saluting face 1`] = `"saluting face"`;
@@ -9919,6 +9933,8 @@ exports[`emoji 🫦 biting lip 1`] = `"biting lip"`;
 exports[`emoji 🫧 bubbles 1`] = `"bubbles"`;
 
 exports[`emoji 🫨 shaking face 1`] = `"shaking face"`;
+
+exports[`emoji 🫩 face with bags under eyes 1`] = `"face with bags under eyes"`;
 
 exports[`emoji 🫰 hand with index finger and thumb crossed 1`] = `"hand with index finger and thumb crossed"`;
 
