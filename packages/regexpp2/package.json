@@ -53,9 +53,9 @@
     "prepublishOnly_": "pnpm run ncu && pnpm run sort-package-json && pnpm run test",
     "postpublish": "pnpm run postpublishOnly:add",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
-    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add regexpp2",
-    "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort",
+    "postpublishOnly:add": "pnpm -w run postpublishOnly:add regexpp2",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p",
     "update:test": "tsx scripts/update-fixtures.ts",
     "update:ids": "tsx scripts/update-unicode-ids.ts"
@@ -66,7 +66,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771",
+  "gitHead": "2f4c49beba2a9840ad9c5730a13ede00355da70f",
   "_types": [
     "./index.d.ts"
   ]

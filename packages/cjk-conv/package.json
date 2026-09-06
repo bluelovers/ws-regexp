@@ -77,7 +77,7 @@
     "prepublishOnly_": "pnpm run test",
     "postpublish": "pnpm run postpublishOnly:add",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
-    "postpublishOnly:add": "yarn-tool root run postpublishOnly:add cjk-conv",
+    "postpublishOnly:add": "pnpm -w run postpublishOnly:add cjk-conv",
     "check": "pnpm run build-table && pnpm run check:list",
     "check:list": "tsx ./test/list.ts",
     "ncu": "yarn-tool ncu -u",

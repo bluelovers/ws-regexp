@@ -84,7 +84,7 @@
     "npm:publish": "npm publish",
     "preversion": "pnpm run test",
     "postpublish": "pnpm run postpublishOnly:add",
-    "postpublishOnly:add": "yarn-tool root run postpublishOnly:add regexp-cjk",
+    "postpublishOnly:add": "pnpm -w run postpublishOnly:add regexp-cjk",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort"
   },
