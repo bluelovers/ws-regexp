@@ -117,7 +117,7 @@
     "ci:install": "pnpm install --frozen-lockfile && pnpm add -w typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
     "ci:build": "echo ci:build",
     "lerna:publish": "pnpm run prepublishOnly:lerna && lerna publish && pnpm run postpublishOnly",
-    "lerna:publish:yes": "pnpm run prepublishOnly:check-bin && pnpm run prepublishOnly:lerna && npx lerna publish --yes --bump patch && pnpm run postpublishOnly",
+    "lerna:publish:yes": "pnpm run prepublishOnly:check-bin && pnpm run prepublishOnly:lerna && lerna publish --yes --bump patch && pnpm run postpublishOnly",
     "ws:fix-all": "yarn-tool fix-all  --overwriteHostedGitInfo",
     "ws:fix-all:resetStaticFiles": "pnpm run ws:fix-all -- --resetStaticFiles",
     "preversion": "pnpm run test",
@@ -148,7 +148,7 @@
     "ncu": "yarn-tool ncu -u --AA",
     "ncu:ws": "yarn-tool ncu -u --AA",
     "ncu:root": "yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort && npx yarn-tool ws exec yarn-tool sort",
+    "sort-package-json": "yarn-tool sort && yarn-tool ws exec yarn-tool sort",
     "sort-package-json:root": "yarn-tool sort",
     "sort-package-json:ws": "yarn-tool ws sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
