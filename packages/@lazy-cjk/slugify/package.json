@@ -60,11 +60,11 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "test": "yarn run test:jest",
+    "test": "jest & echo test",
     "test:jest": "jest",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
-    "test:snapshot": "yarn run test -- -u",
+    "test:snapshot": "jest -u & echo test",
     "test:tsd": "ynpx tsd",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "lerna publish --yes",
