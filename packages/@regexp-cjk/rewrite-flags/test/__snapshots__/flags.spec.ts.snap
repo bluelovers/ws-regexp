@@ -1,42 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`add {
-  dotAll: true,
-  multiline: true,
-  ignoreCase: true,
-  global: true,
-  hasIndices: true,
-  unicodeSets: true
-} 1`] = `"vdgims"`;
-
-exports[`add {
-  multiline: true,
-  ignoreCase: true,
-  global: true,
-  hasIndices: true,
-  unicodeSets: true
-} 1`] = `"vdgim"`;
-
-exports[`add {
-  sticky: true,
-  unicode: true,
-  dotAll: true,
-  multiline: true,
-  ignoreCase: true,
-  global: true,
-  hasIndices: true,
-  unicodeSets: true
-} 1`] = `"vdgimsuy"`;
-
-exports[`add {
-  unicode: true,
-  dotAll: true,
-  multiline: true,
-  ignoreCase: true,
-  global: true,
-  hasIndices: true,
-  unicodeSets: true
-} 1`] = `"vdgimsu"`;
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`add { global: true, hasIndices: true, unicodeSets: true } 1`] = `"vdg"`;
 
@@ -46,53 +8,26 @@ exports[`add { ignoreCase: true, global: true, hasIndices: true, unicodeSets: tr
 
 exports[`add { unicodeSets: true } 1`] = `"v"`;
 
-exports[`remove {
-  dotAll: false,
-  multiline: false,
-  ignoreCase: false,
-  global: false,
-  hasIndices: false,
-  unicodeSets: false
-} 1`] = `"yu"`;
+exports[`add {\\n  dotAll: true,\\n  multiline: true,\\n  ignoreCase: true,\\n  global: true,\\n  hasIndices: true,\\n  unicodeSets: true\\n} 1`] = `"vdgims"`;
 
-exports[`remove {
-  ignoreCase: false,
-  global: false,
-  hasIndices: false,
-  unicodeSets: false
-} 1`] = `"msyu"`;
+exports[`add {\\n  multiline: true,\\n  ignoreCase: true,\\n  global: true,\\n  hasIndices: true,\\n  unicodeSets: true\\n} 1`] = `"vdgim"`;
 
-exports[`remove {
-  multiline: false,
-  ignoreCase: false,
-  global: false,
-  hasIndices: false,
-  unicodeSets: false
-} 1`] = `"syu"`;
+exports[`add {\\n  sticky: true,\\n  unicode: true,\\n  dotAll: true,\\n  multiline: true,\\n  ignoreCase: true,\\n  global: true,\\n  hasIndices: true,\\n  unicodeSets: true\\n} 1`] = `"vdgimsuy"`;
 
-exports[`remove {
-  sticky: false,
-  unicode: false,
-  dotAll: false,
-  multiline: false,
-  ignoreCase: false,
-  global: false,
-  hasIndices: false,
-  unicodeSets: false
-} 1`] = `""`;
-
-exports[`remove {
-  unicode: false,
-  dotAll: false,
-  multiline: false,
-  ignoreCase: false,
-  global: false,
-  hasIndices: false,
-  unicodeSets: false
-} 1`] = `"y"`;
+exports[`add {\\n  unicode: true,\\n  dotAll: true,\\n  multiline: true,\\n  ignoreCase: true,\\n  global: true,\\n  hasIndices: true,\\n  unicodeSets: true\\n} 1`] = `"vdgimsu"`;
 
 exports[`remove { global: false, hasIndices: false, unicodeSets: false } 1`] = `"imsyu"`;
 
 exports[`remove { hasIndices: false, unicodeSets: false } 1`] = `"gimsyu"`;
 
 exports[`remove { unicodeSets: false } 1`] = `"gimsyud"`;
+
+exports[`remove {\\n  dotAll: false,\\n  multiline: false,\\n  ignoreCase: false,\\n  global: false,\\n  hasIndices: false,\\n  unicodeSets: false\\n} 1`] = `"yu"`;
+
+exports[`remove {\\n  ignoreCase: false,\\n  global: false,\\n  hasIndices: false,\\n  unicodeSets: false\\n} 1`] = `"msyu"`;
+
+exports[`remove {\\n  multiline: false,\\n  ignoreCase: false,\\n  global: false,\\n  hasIndices: false,\\n  unicodeSets: false\\n} 1`] = `"syu"`;
+
+exports[`remove {\\n  sticky: false,\\n  unicode: false,\\n  dotAll: false,\\n  multiline: false,\\n  ignoreCase: false,\\n  global: false,\\n  hasIndices: false,\\n  unicodeSets: false\\n} 1`] = `""`;
+
+exports[`remove {\\n  unicode: false,\\n  dotAll: false,\\n  multiline: false,\\n  ignoreCase: false,\\n  global: false,\\n  hasIndices: false,\\n  unicodeSets: false\\n} 1`] = `"y"`;

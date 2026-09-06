@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`base autoDeburr déjà vu / deja vu 1`] = `/d\\[eé\\]j\\[aà\\] vu/iu`;
 

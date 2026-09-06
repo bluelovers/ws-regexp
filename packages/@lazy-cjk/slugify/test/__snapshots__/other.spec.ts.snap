@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`emoji #⃣ keycap: # 1`] = `"keycap"`;
 
@@ -8414,7 +8414,7 @@ exports[`emoji 🧑‍🍳 cook 1`] = `"cook"`;
 
 exports[`emoji 🧑‍🍼 person feeding baby 1`] = `"person feeding baby"`;
 
-exports[`emoji 🧑‍🎄 mx claus 1`] = `"mx claus"`;
+exports[`emoji 🧑‍🎄 Mx Claus 1`] = `"mx claus"`;
 
 exports[`emoji 🧑‍🎓 student 1`] = `"student"`;
 
@@ -8526,7 +8526,7 @@ exports[`emoji 🧑🏻‍🍳 cook: light skin tone 1`] = `"cook  light skin to
 
 exports[`emoji 🧑🏻‍🍼 person feeding baby: light skin tone 1`] = `"person feeding baby  light skin tone"`;
 
-exports[`emoji 🧑🏻‍🎄 mx claus: light skin tone 1`] = `"mx claus  light skin tone"`;
+exports[`emoji 🧑🏻‍🎄 Mx Claus: light skin tone 1`] = `"mx claus  light skin tone"`;
 
 exports[`emoji 🧑🏻‍🎓 student: light skin tone 1`] = `"student  light skin tone"`;
 
@@ -8638,7 +8638,7 @@ exports[`emoji 🧑🏼‍🍳 cook: medium-light skin tone 1`] = `"cook  medium
 
 exports[`emoji 🧑🏼‍🍼 person feeding baby: medium-light skin tone 1`] = `"person feeding baby  medium light skin tone"`;
 
-exports[`emoji 🧑🏼‍🎄 mx claus: medium-light skin tone 1`] = `"mx claus  medium light skin tone"`;
+exports[`emoji 🧑🏼‍🎄 Mx Claus: medium-light skin tone 1`] = `"mx claus  medium light skin tone"`;
 
 exports[`emoji 🧑🏼‍🎓 student: medium-light skin tone 1`] = `"student  medium light skin tone"`;
 
@@ -8750,7 +8750,7 @@ exports[`emoji 🧑🏽‍🍳 cook: medium skin tone 1`] = `"cook  medium skin 
 
 exports[`emoji 🧑🏽‍🍼 person feeding baby: medium skin tone 1`] = `"person feeding baby  medium skin tone"`;
 
-exports[`emoji 🧑🏽‍🎄 mx claus: medium skin tone 1`] = `"mx claus  medium skin tone"`;
+exports[`emoji 🧑🏽‍🎄 Mx Claus: medium skin tone 1`] = `"mx claus  medium skin tone"`;
 
 exports[`emoji 🧑🏽‍🎓 student: medium skin tone 1`] = `"student  medium skin tone"`;
 
@@ -8862,7 +8862,7 @@ exports[`emoji 🧑🏾‍🍳 cook: medium-dark skin tone 1`] = `"cook  medium 
 
 exports[`emoji 🧑🏾‍🍼 person feeding baby: medium-dark skin tone 1`] = `"person feeding baby  medium dark skin tone"`;
 
-exports[`emoji 🧑🏾‍🎄 mx claus: medium-dark skin tone 1`] = `"mx claus  medium dark skin tone"`;
+exports[`emoji 🧑🏾‍🎄 Mx Claus: medium-dark skin tone 1`] = `"mx claus  medium dark skin tone"`;
 
 exports[`emoji 🧑🏾‍🎓 student: medium-dark skin tone 1`] = `"student  medium dark skin tone"`;
 
@@ -8974,7 +8974,7 @@ exports[`emoji 🧑🏿‍🍳 cook: dark skin tone 1`] = `"cook  dark skin tone
 
 exports[`emoji 🧑🏿‍🍼 person feeding baby: dark skin tone 1`] = `"person feeding baby  dark skin tone"`;
 
-exports[`emoji 🧑🏿‍🎄 mx claus: dark skin tone 1`] = `"mx claus  dark skin tone"`;
+exports[`emoji 🧑🏿‍🎄 Mx Claus: dark skin tone 1`] = `"mx claus  dark skin tone"`;
 
 exports[`emoji 🧑🏿‍🎓 student: dark skin tone 1`] = `"student  dark skin tone"`;
 

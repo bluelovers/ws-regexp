@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`describe  1`] = `"魔物解说　ランク等话　蚀蚀蚀王で触王 冒险者ギルド解说 蚀|蚀战|战马|马亚|亞國預中日汉字對照表"`;
 

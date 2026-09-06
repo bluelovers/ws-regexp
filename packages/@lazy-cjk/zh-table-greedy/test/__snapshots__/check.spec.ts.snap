@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`validate char of map ⻞|喰|蚀|蝕|食|飠|飧 1`] = `
 [

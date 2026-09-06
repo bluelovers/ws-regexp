@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`slugify: {"emoji":true} 1`] = `"bu zhi yuan  jí mǒu xín wèi shuò shàng   zhe lei zi hamburger pizza meat on bone poultry leg rice cracker rice ball cooked rice curry rice Pixiv  Judo yuforia  5026941 wu masahiro  gao fei che nasheng tu hui chang oapuridecong shun diao jiao   veevee     meu m     Whiskers"`;
 

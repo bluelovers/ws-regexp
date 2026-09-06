@@ -1,59 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`handleOptions {
-  options: { flags: 'usgi', rewriteFlags: { unicode: false } },
-  flags: 'us'
-} 1`] = `
-{
-  "flags": "sgi",
-  "options": {
-    "dotAllFlag": true,
-    "lookbehind": true,
-    "namedGroup": true,
-    "rewriteFlags": {
-      "unicode": false,
-    },
-    "useUnicodeFlag": false,
-  },
-}
-`;
-
-exports[`handleOptions {
-  options: { flags: 'usgi', rewriteFlags: { unicode: true } },
-  flags: 'us'
-} 1`] = `
-{
-  "flags": "usgi",
-  "options": {
-    "dotAllFlag": true,
-    "lookbehind": true,
-    "namedGroup": true,
-    "rewriteFlags": {
-      "unicode": true,
-    },
-    "useUnicodeFlag": true,
-  },
-}
-`;
-
-exports[`handleOptions {
-  options: { unicodePropertyEscape: false, rewriteFlags: { unicode: false } },
-  flags: undefined
-} 1`] = `
-{
-  "flags": "",
-  "options": {
-    "dotAllFlag": true,
-    "lookbehind": true,
-    "namedGroup": true,
-    "rewriteFlags": {
-      "unicode": false,
-    },
-    "unicodePropertyEscape": false,
-    "useUnicodeFlag": false,
-  },
-}
-`;
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`handleOptions { options: { rewriteFlags: { unicode: false } }, flags: 'u' } 1`] = `
 {
@@ -148,6 +93,52 @@ exports[`handleOptions { options: undefined, flags: undefined } 1`] = `
     "lookbehind": true,
     "namedGroup": true,
     "useUnicodeFlag": undefined,
+  },
+}
+`;
+
+exports[`handleOptions {\\n  options: { flags: 'usgi', rewriteFlags: { unicode: false } },\\n  flags: 'us'\\n} 1`] = `
+{
+  "flags": "sgi",
+  "options": {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": {
+      "unicode": false,
+    },
+    "useUnicodeFlag": false,
+  },
+}
+`;
+
+exports[`handleOptions {\\n  options: { flags: 'usgi', rewriteFlags: { unicode: true } },\\n  flags: 'us'\\n} 1`] = `
+{
+  "flags": "usgi",
+  "options": {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": {
+      "unicode": true,
+    },
+    "useUnicodeFlag": true,
+  },
+}
+`;
+
+exports[`handleOptions {\\n  options: { unicodePropertyEscape: false, rewriteFlags: { unicode: false } },\\n  flags: undefined\\n} 1`] = `
+{
+  "flags": "",
+  "options": {
+    "dotAllFlag": true,
+    "lookbehind": true,
+    "namedGroup": true,
+    "rewriteFlags": {
+      "unicode": false,
+    },
+    "unicodePropertyEscape": false,
+    "useUnicodeFlag": false,
   },
 }
 `;

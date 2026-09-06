@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`skip cn2tw 1`] = `"簡繁转换功能測試簡繁轉換功能測試"`;
 

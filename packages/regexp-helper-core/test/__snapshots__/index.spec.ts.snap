@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`𠮷 /^[\\u{20bb7}]$/u 1`] = `/\\^\\[\\\\u\\{20bb7\\}\\]\\$/u`;
 
