@@ -440,6 +440,9 @@ importers:
 
   packages/@lazy-cjk/zh-table-list:
     dependencies:
+      '@lazy-cjk/jp-table-alias':
+        specifier: ^1.0.48
+        version: link:../jp-table-alias
       '@lazy-cjk/jp-table-convert':
         specifier: ^1.0.53
         version: link:../jp-table-convert
