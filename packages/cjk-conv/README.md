@@ -2,7 +2,23 @@
 
 > convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )
 
-`npm install cjk-conv`
+## install
+
+```bash
+# 使用 yarn / Using yarn
+yarn add cjk-conv
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add cjk-conv
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add cjk-conv
+
+# 使用 pnpm / Using pnpm
+pnpm add cjk-conv
+
+# 使用 npm / Using npm
+npm install cjk-conv
+```
 
 [LIVE DEMO](https://demonovel.netlify.com/tool/cjk-conv)
 

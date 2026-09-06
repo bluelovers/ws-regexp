@@ -2,8 +2,25 @@
 
     add regexp-cjk plugin for xregexp, make xregexp auto match chinese/japanese hanzi.
 
-
 see [regexp-cjk](https://www.npmjs.com/package/regexp-cjk)
+
+## install
+
+```bash
+# 使用 yarn / Using yarn
+yarn add xregexp-plugin-hanzi-cjk
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add xregexp-plugin-hanzi-cjk
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add xregexp-plugin-hanzi-cjk
+
+# 使用 pnpm / Using pnpm
+pnpm add xregexp-plugin-hanzi-cjk
+
+# 使用 npm / Using npm
+npm install xregexp-plugin-hanzi-cjk
+```
 
 ## demo
 

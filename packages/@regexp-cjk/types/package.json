@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/types",
   "version": "1.0.9",
-  "description": "",
+  "description": "regexp-cjk 類型定義 (regexp-cjk type definitions)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/types#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"

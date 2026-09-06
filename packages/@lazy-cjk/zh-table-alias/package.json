@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/zh-table-alias",
   "version": "1.0.71",
-  "description": "",
+  "description": "中文漢字別名對照表 (Chinese character alias mapping table)",
   "keywords": [
     "char",
     "character",

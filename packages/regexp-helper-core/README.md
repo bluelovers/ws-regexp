@@ -1,5 +1,25 @@
 # regexp-helper-core
 
+> 正規表達式核心工具 (RegExp core utilities)
+
+## install
+
+```bash
+# 使用 yarn / Using yarn
+yarn add regexp-helper-core
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add regexp-helper-core
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add regexp-helper-core
+
+# 使用 pnpm / Using pnpm
+pnpm add regexp-helper-core
+
+# 使用 npm / Using npm
+npm install regexp-helper-core
+```
+
 ## API
 
 [index.d.ts](index.d.ts)

@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/rewrite-flags",
   "version": "1.0.25",
-  "description": "",
+  "description": "重寫正規表達式標誌 (Rewrite RegExp flags)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/rewrite-flags#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"
@@ -34,6 +34,14 @@
   "dependencies": {
     "tslib": ">=2"
   },
+  "keywords": [
+    "regexp",
+    "regex",
+    "flags",
+    "rewrite",
+    "unicode",
+    "cjk"
+  ],
   "publishConfig": {
     "access": "public"
   },

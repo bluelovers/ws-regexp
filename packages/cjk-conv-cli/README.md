@@ -6,7 +6,19 @@ https://www.npmjs.com/package/cjk-conv
 
 ## install
 
-```
+```bash
+# 使用 yarn / Using yarn
+yarn global add cjk-conv-cli
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool global add cjk-conv-cli
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt global add cjk-conv-cli
+
+# 使用 pnpm / Using pnpm
+pnpm add -g cjk-conv-cli
+
+# 使用 npm / Using npm
 npm install -g cjk-conv-cli
 ```
 

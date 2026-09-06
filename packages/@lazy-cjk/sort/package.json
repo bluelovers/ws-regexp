@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/sort",
   "version": "1.0.74",
-  "description": "",
+  "description": "中文排序工具 (Chinese sorting utility)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/sort#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"

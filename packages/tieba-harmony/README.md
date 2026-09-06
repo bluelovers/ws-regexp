@@ -3,7 +3,23 @@
 > 百度貼吧 關鍵字 和諧/反和諧
 > unescape / escape tieba harmony keywords
 
-`npm install tieba-harmony`
+## install
+
+```bash
+# 使用 yarn / Using yarn
+yarn add tieba-harmony
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add tieba-harmony
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add tieba-harmony
+
+# 使用 pnpm / Using pnpm
+pnpm add tieba-harmony
+
+# 使用 npm / Using npm
+npm install tieba-harmony
+```
 
 ## table
 

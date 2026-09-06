@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/zh-convert",
   "version": "1.0.57",
-  "description": "",
+  "description": "中文簡繁轉換工具 (Chinese simplified/traditional conversion tool)",
   "keywords": [
     "char",
     "character",

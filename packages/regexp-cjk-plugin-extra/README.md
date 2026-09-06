@@ -6,10 +6,20 @@
 
 ## install
 
-```
-npm install regexp-cjk-plugin-extra cjk-conv
+```bash
+# 使用 yarn / Using yarn
 yarn add regexp-cjk-plugin-extra cjk-conv
+
+# 使用 yarn-tool / Using yarn-tool
 yarn-tool add regexp-cjk-plugin-extra cjk-conv
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add regexp-cjk-plugin-extra cjk-conv
+
+# 使用 pnpm / Using pnpm
+pnpm add regexp-cjk-plugin-extra cjk-conv
+
+# 使用 npm / Using npm
+npm install regexp-cjk-plugin-extra cjk-conv
 ```
 
 ## usage

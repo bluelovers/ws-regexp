@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/novel-filename",
   "version": "1.0.59",
-  "description": "",
+  "description": "小說檔名處理工具 (Novel filename processing tool)",
   "keywords": [
     "char",
     "character",

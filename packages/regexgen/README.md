@@ -4,10 +4,20 @@ Generates regular expressions that match a set of strings.
 
 ## Installation
 
-`regexgen` can be installed using [npm](https://npmjs.com):
+```bash
+# 使用 yarn / Using yarn
+yarn add regexgen2
 
-```
-npm install regexgen
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add regexgen2
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add regexgen2
+
+# 使用 pnpm / Using pnpm
+pnpm add regexgen2
+
+# 使用 npm / Using npm
+npm install regexgen2
 ```
 
 ## Example

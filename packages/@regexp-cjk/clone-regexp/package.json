@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/clone-regexp",
   "version": "1.0.27",
-  "description": "",
+  "description": "克隆正規表達式物件 (Clone RegExp object)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/clone-regexp#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"

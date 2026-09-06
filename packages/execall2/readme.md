@@ -7,8 +7,20 @@ Instead of having to iterate over `RegExp#exec`, immutable, and with a nicer res
 
 ## Install
 
-```nodemon
-$ npm install execall2
+```bash
+# 使用 yarn / Using yarn
+yarn add execall2
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add execall2
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add execall2
+
+# 使用 pnpm / Using pnpm
+pnpm add execall2
+
+# 使用 npm / Using npm
+npm install execall2
 ```
 
 ## Usage

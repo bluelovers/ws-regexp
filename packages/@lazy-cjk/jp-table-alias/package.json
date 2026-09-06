@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/jp-table-alias",
   "version": "1.0.49",
-  "description": "",
+  "description": "日文漢字別名對照表 (Japanese kanji alias mapping table)",
   "keywords": [
     "char",
     "character",

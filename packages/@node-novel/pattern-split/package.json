@@ -2,7 +2,22 @@
   "name": "@node-novel/pattern-split",
   "version": "1.1.81",
   "description": "try output RegExp Pattern as readable string list",
-  "keywords": [],
+  "keywords": [
+    "regexp",
+    "regex",
+    "pattern",
+    "split",
+    "parser",
+    "ast",
+    "cjk",
+    "chinese",
+    "japanese",
+    "readable",
+    "string",
+    "node-novel",
+    "regexp-cjk",
+    "literal"
+  ],
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@node-novel/pattern-split#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"

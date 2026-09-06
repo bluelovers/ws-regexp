@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/regex-iterator",
   "version": "1.0.37",
-  "description": "",
+  "description": "正規表達式迭代器 (RegExp iterator)",
   "keywords": [
     "regex",
     "regexp",

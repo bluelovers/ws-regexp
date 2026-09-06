@@ -1,7 +1,7 @@
 {
   "name": "regexp-parser-event",
   "version": "1.1.49",
-  "description": "## API",
+  "description": "正規表達式解析器事件處理 (RegExp parser event handling)",
   "keywords": [
     "build",
     "emitter",

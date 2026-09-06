@@ -1,4 +1,24 @@
-# README
+# @lazy-cjk/static-build-zh-convert
+
+> 靜態建構中文轉換資料 (Static build Chinese conversion data)
+
+## install
+
+```bash
+# 使用 yarn / Using yarn
+yarn add @lazy-cjk/static-build-zh-convert
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add @lazy-cjk/static-build-zh-convert
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add @lazy-cjk/static-build-zh-convert
+
+# 使用 pnpm / Using pnpm
+pnpm add @lazy-cjk/static-build-zh-convert
+
+# 使用 npm / Using npm
+npm install @lazy-cjk/static-build-zh-convert
+```
 
 ## 繁簡轉換對應表
 

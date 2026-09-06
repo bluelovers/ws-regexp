@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/create-xregexp",
   "version": "1.0.22",
-  "description": "",
+  "description": "建立 XRegExp 物件 (Create XRegExp object)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/create-xregexp#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"
@@ -35,6 +35,16 @@
     "@regexp-cjk/is-xregexp": "^1.0.17",
     "tslib": ">=2"
   },
+  "keywords": [
+    "xregexp",
+    "create",
+    "regexp",
+    "regex",
+    "cjk",
+    "chinese",
+    "japanese",
+    "unicode"
+  ],
   "peerDependencies": {
     "xregexp": "*"
   },

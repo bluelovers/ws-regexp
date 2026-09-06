@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/escape-unicode-property",
   "version": "1.0.31",
-  "description": "",
+  "description": "轉義 Unicode 屬性 (Escape Unicode property)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/escape-unicode-property#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"
@@ -37,6 +37,16 @@
     "lodash": "^4.18.1",
     "tslib": ">=2"
   },
+  "keywords": [
+    "unicode",
+    "property",
+    "escape",
+    "regexp",
+    "regex",
+    "cjk",
+    "chinese",
+    "japanese"
+  ],
   "publishConfig": {
     "access": "public"
   },

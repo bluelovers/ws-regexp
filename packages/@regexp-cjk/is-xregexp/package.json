@@ -1,7 +1,7 @@
 {
   "name": "@regexp-cjk/is-xregexp",
   "version": "1.0.17",
-  "description": "",
+  "description": "檢查是否為 XRegExp 物件 (Check if object is XRegExp)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@regexp-cjk/is-xregexp#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"
@@ -34,6 +34,15 @@
   "dependencies": {
     "tslib": ">=2"
   },
+  "keywords": [
+    "xregexp",
+    "is",
+    "check",
+    "regexp",
+    "regex",
+    "type",
+    "instance"
+  ],
   "publishConfig": {
     "access": "public"
   },

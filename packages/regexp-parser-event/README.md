@@ -1,5 +1,25 @@
 # regexp-parser-event
 
+> 正規表達式解析器事件處理 (RegExp parser event handling)
+
+## install
+
+```bash
+# 使用 yarn / Using yarn
+yarn add regexp-parser-event
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add regexp-parser-event
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add regexp-parser-event
+
+# 使用 pnpm / Using pnpm
+pnpm add regexp-parser-event
+
+# 使用 npm / Using npm
+npm install regexp-parser-event
+```
+
 ## API
 
 [index.d.ts](index.d.ts)

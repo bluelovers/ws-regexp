@@ -4,7 +4,19 @@
 
 ## install
 
-```nodemon
+```bash
+# 使用 yarn / Using yarn
+yarn add @node-novel/pattern-split
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add @node-novel/pattern-split
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add @node-novel/pattern-split
+
+# 使用 pnpm / Using pnpm
+pnpm add @node-novel/pattern-split
+
+# 使用 npm / Using npm
 npm install @node-novel/pattern-split
 ```
 

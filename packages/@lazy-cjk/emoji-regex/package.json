@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/emoji-regex",
   "version": "1.0.24",
-  "description": "",
+  "description": "Emoji 正規表達式工具 (Emoji regex utility)",
   "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/@lazy-cjk/emoji-regex#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-regexp/issues"

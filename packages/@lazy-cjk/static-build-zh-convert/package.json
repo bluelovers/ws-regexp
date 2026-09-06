@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/static-build-zh-convert",
   "version": "1.0.60",
-  "description": "",
+  "description": "靜態建構中文轉換資料 (Static build Chinese conversion data)",
   "keywords": [
     "char",
     "character",

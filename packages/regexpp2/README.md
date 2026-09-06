@@ -11,7 +11,19 @@ The regular expression parser for ECMAScript.
 ## 💿 Installation
 
 ```bash
-$ npm install regexpp
+# 使用 yarn / Using yarn
+yarn add regexpp2
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add regexpp2
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add regexpp2
+
+# 使用 pnpm / Using pnpm
+pnpm add regexpp2
+
+# 使用 npm / Using npm
+npm install regexpp2
 ```
 
 - require Node.js 6.5.0 or newer.

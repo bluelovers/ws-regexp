@@ -1,7 +1,7 @@
 {
   "name": "@lazy-cjk/zh-table-list",
   "version": "1.0.93",
-  "description": "",
+  "description": "中文漢字對照表工具 (Chinese character mapping table tool)",
   "keywords": [
     "char",
     "character",
