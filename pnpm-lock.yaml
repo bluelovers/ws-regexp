@@ -202,6 +202,16 @@ importers:
       zero-width:
         specifier: ^1.0.29
         version: 1.0.29
+    devDependencies:
+      '@lazy-cjk/jp-table-alias':
+        specifier: ^1.0.48
+        version: link:../jp-table-alias
+      '@lazy-cjk/sort':
+        specifier: ^1.0.73
+        version: link:../sort
+      crlf-normalize:
+        specifier: ^1.0.20
+        version: 1.0.20(ts-toolbelt@9.6.0)
 
   packages/@lazy-cjk/jp-table-convert:
     dependencies:

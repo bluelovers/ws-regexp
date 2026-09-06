@@ -87,6 +87,11 @@
     "tslib": ">=2",
     "zero-width": "^1.0.29"
   },
+  "devDependencies": {
+    "@lazy-cjk/jp-table-alias": "^1.0.48",
+    "@lazy-cjk/sort": "^1.0.73",
+    "crlf-normalize": "^1.0.20"
+  },
   "publishConfig": {
     "access": "public"
   },
